@@ -1,5 +1,5 @@
 #!/bin/make
-# $Id: Algol68.mk,v 1.2.2.2 2004/09/26 15:04:03 teshields Exp $
+# $Id: Algol68.mk,v 1.2 2002-06-06 12:46:19 sian Exp $
 #
 # Other make variables used:-
 # CFLAGS, INCLUDES, LIBRARIES
@@ -55,7 +55,7 @@ A68_UNAMESEED=-uname $(shell cat nameseed)
 A68_FLAGS=-s -v
 #
 
-GCC=gcc -w -std=gnu99
+GCC=gcc
 
 %.a68: %.w68
 	web68 $<

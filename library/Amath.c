@@ -1,4 +1,4 @@
-/* $Id: Amath.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $ */
+/* $Id: Amath.c,v 1.2 2002-02-01 14:39:52 sian Exp $ */
 
 
 /* 
@@ -40,7 +40,7 @@
 
 #include <algol68/Asupport.h>
 
-static char rcs_id[] = "$Id: Amath.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $";
+static char rcs_id[] = "$Id: Amath.c,v 1.2 2002-02-01 14:39:52 sian Exp $";
 
 /* 
    long int to the power of an int, done by the binary method

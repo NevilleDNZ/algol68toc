@@ -1,6 +1,6 @@
 DECS  incoperfn  CONTEXT VOID:
 
-configinfo A68CONFIG "$Id: incoperfn.a68,v 1.1.2.1 2004/09/04 17:36:17 teshields Exp $";
+configinfo A68CONFIG "$Id: incoperfn.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $";
 
 
 COMMENT 

@@ -1,6 +1,6 @@
 DECS  a68config  CONTEXT  VOID:
 
-{A68CONFIG} VECTOR[]CHAR cfs = "$Id: a68config.a68,v 1.1.2.2 2004/09/05 03:44:34 teshields Exp $";
+{A68CONFIG} VECTOR[]CHAR cfs = "$Id: a68config.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $";
 
 
 COMMENT 
@@ -104,7 +104,7 @@ BEGIN
 END;
 
 
-{ Recover the Ctrans translation time configuration data }
+*4 {{{  { Recover the Ctrans translation time configuration data }
 
 MODE  CCHARPTR = REF CHAR,
       TRANSDETAILS = STRUCT (CCHARPTR  file, time, version, seed);
@@ -156,6 +156,10 @@ PROC  trans_config = (STR  c, s) RVC:
    FI;
 
 
+*4 }}}  PROC  trans_config = (STR  c, s) RVC:
+*4         IF UPB c = 0 THEN  STRTORVC s  ELSE  concat((s, "  ", c))  FI;
+
+
 OP  A68CONFIG = (STR c, s) VOID:
 BEGIN
    { Operator to be called at the top of each module with information supplied
@@ -194,6 +198,9 @@ BEGIN
    DO  show(data OF ptr);  ptr:= rest OF ptr  OD
 END;
 
+*4 STR  configinfo = "";
+*4 { NOT VAX ...
+
 { Use the ALIEN mechanism to pick up information injected by Ctrans - the text
   of the definiton of "configinfo" will also be injected into each Module that
   uses it - thus ensuring that the local definition is used.
@@ -214,15 +221,17 @@ STR  configinfo = ALIEN "ACONFIG"
 
 STR  a_configinfo = ALIEN "A_configinfo" "/* configinfo without ACONFIG */";
 
+*4 }
+
 { Procedure to place local config info on list - use form recognised by tools }
 
 PROC  init = VOID:
 BEGIN
-   STR  configinfo = a_configinfo;
-   { A_config is out of scope when this procedure is defined - use a_configinfo
-     but must alias to "configinfo" as the next line is generated automatically
-     by the configuration management tools
-   }
+%4 STR  configinfo = a_configinfo;
+%4 { A_config is out of scope when this procedure is defined - use a_configinfo
+%4   but must alias to "configinfo" as the next line is generated automatically
+%4   by the configuration management tools
+%4 }
 configinfo A68CONFIG cfs;
    SKIP
 END;
@@ -232,8 +241,9 @@ END;
 }
 
 CODE (init)
-"ACONFIG;       /* Invoke the macro to setup A_configinfo */"
-"init();"
+*4 16r"fb 00 9e"   { CALLS #0 @(SP)+ }
+%4 "ACONFIG;       /* Invoke the macro to setup A_configinfo */"
+%4 "init();"
 
 
 KEEP   STR,  RVC,  STRTORVC (STR),  MAKERVC (STR),  A68INIT (PROC VOID),

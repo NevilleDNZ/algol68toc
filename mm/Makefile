@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.1.2.1 2004/09/04 17:36:15 teshields Exp $
+# $Id: Makefile,v 1.1 2002-06-06 13:55:55 sian Exp $
 #-------------- Algol 68 sources ---------------
 mm_a := mm_actions.a68 mm_basics.a68 mm_oscommands.a68 mm_utilities.a68 \
         mm_version.a68 unixcomplink.a68 module_manage.a68

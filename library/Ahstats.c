@@ -1,4 +1,4 @@
-/* $Id: Ahstats.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $ */
+/* $Id: Ahstats.c,v 1.2 2002-02-23 17:50:44 sian Exp $ */
 
 
 /* 
@@ -46,7 +46,7 @@
 **   Allocation / garbage collection statistics
 */
 
-static char rcs_id[] = "$Id: Ahstats.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $";
+static char rcs_id[] = "$Id: Ahstats.c,v 1.2 2002-02-23 17:50:44 sian Exp $";
 
 #include <algol68/linux/Ahswitch.h>
 #include "Ahbasic.h"

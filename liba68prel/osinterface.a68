@@ -1,9 +1,10 @@
 DECS  osinterface  CONTEXT VOID  USE  putstrings,  messageproc,
-      cif, osif,
+*4    vmsif,
+%4    cif, osif,
       osmessages:
 
 { " Id: osinterface.sta,v 1.1 91/10/14 14:30:54 edcad Exp $" }
-configinfo A68CONFIG "$Id: osinterface.a68,v 1.1.2.2 2004/09/05 04:09:04 teshields Exp $";
+configinfo A68CONFIG "$Id: osinterface.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $";
 
 
 COMMENT 
@@ -52,6 +53,7 @@ COMMENT
 28:10:93  error_msg not good enough check in default_msg.  DCT
 29:11:93  MODE VERSION added.  DCT
 
+   Note:  *4 = VMS,  %4 = NOT VMS (ie UNIX),  *5 = UNIX / POSIX,   *D = DOS
 13:06:94  33.001  ELLA  NewConFig Entered in new config system previous version
                                   number  32.014 
 31:01:95  33.002  DCT   PCPort-1  Added fflush to write_stdout for OS/2 - maybe 				  a gcc 2.5.7 on emx problem.
@@ -62,6 +64,8 @@ COMMENT
 
 PROC  fail = (STR  name,  MESSAGEPROC  msg) IOSTATUS:
    ( msg(system, concat((name, ":  not yet implemented")));  io_error );
+
+*4 {{{
 
 INT  int_size = 4,  word_size = 32;
 
@@ -79,6 +83,8 @@ BEGIN
             "#define FFLUSH(file) A_int_INT(fflush(A_FILEPTR_fileptr(file)))";
    fflush(stdio file OF stdout)
 END;
+
+*4 }}}
 
 
 
@@ -152,13 +158,14 @@ BEGIN
 END;
 
 
-STR  os_string = "Linux";
-{STR  os_string = "UNIX"; (Phoenix Engineering -- SL BP21500-06-18)}
+*4 STR  os_string = "VMS";
+*5 STR  os_string = "Linux";
+{*5 STR  os_string = "UNIX"; (Phoenix Engineering -- SL BP21500-06-18)}
 
 
 {{{  Higher Level bits for ELLA  }}}
 
-PROC  interactive = BOOL:  is_terminal(stdin);
+%4  PROC  interactive = BOOL:  is_terminal(stdin);
 
 
 PROC  prompt = (STR  str) RVC:
@@ -266,6 +273,8 @@ END;
     but it is unclear that it should be used at present.  11:08:93  DCT
 }
 
+*4 {{{ VAX interrupts handled using ASTs or condition handlers
+
 INT  user_bored_threshold = 3;   { point at which hard interrupt is generated }
 INT  n_interrupts:= 0;           { count of user interrupts - ^C }
 
@@ -296,6 +305,8 @@ MESSAGEPROC  sig_msg = (MSGNO  no,  VECSTR  params) VOID:
 
 VECTOR [] INT  trap_signals = (sigfpe, sigbus, sigsegv, sigill, sigtrap);
 
+*4 }}}
+
 
 PROC  flt_if_interrupted = (MESSAGEPROC  msg) VOID:
    IF n_interrupts > 0
@@ -310,20 +321,20 @@ BEGIN
    { Obey procedure "action" intercepting any failures that occur }
 
    MESSAGEPROC  old_global = global_msg;
-   VECTOR [UPB trap_signals] MESSAGEPROC  old_sigs;
-   FORALL sig IN trap_signals,  old IN old_sigs
-   DO  old:= get_sigmsgproc(sig, msg)  OD;
+%4 VECTOR [UPB trap_signals] MESSAGEPROC  old_sigs;
+%4 FORALL sig IN trap_signals,  old IN old_sigs
+%4 DO  old:= get_sigmsgproc(sig, msg)  OD;
 
    PROC  reset_sigmsg = VOID:
    BEGIN
       { To ensure trap is reset before any kind of jump }
       global_msg:= old_global;
-      FORALL sig IN trap_signals, old IN old_sigs
-      DO  set_sigmsgproc(sig, old, msg)  OD;
+%4    FORALL sig IN trap_signals, old IN old_sigs
+%4    DO  set_sigmsgproc(sig, old, msg)  OD;
       SKIP
    END;
 
-   set_sigmsgproc(trap_signals, sig_msg, msg);
+%4 set_sigmsgproc(trap_signals, sig_msg, msg);
 
    global_msg:= (MSGNO  no,  VECSTR  params) VOID:
    BEGIN
@@ -331,7 +342,8 @@ BEGIN
       msg(no, params)
    END;
 
-   action(global_msg);
+%4 action(global_msg);
+*4 vms_trap(action, global_msg);
 
    reset_sigmsg
 END;
@@ -339,8 +351,11 @@ END;
 
 { HEAP management }
 
-PROC  mem_statistics = (PROC (STR) VOID  p) VOID:
-      p("No memory statistics available");
+%4 PROC  mem_statistics = (PROC (STR) VOID  p) VOID:
+%4       p("No memory statistics available");
+
+*4 MODE GCPARAM = STRUCT (STR  name,  INT  value);
+*4 PROC  set_gc_params = (VECTOR [] GCPARAM  p,  MESSAGEPROC  msg) VOID:  SKIP;
 
 
 { Miscellaneous stuff for ELLA }
@@ -349,7 +364,8 @@ PROC  mem_statistics = (PROC (STR) VOID  p) VOID:
 BOOL  os_debug:= FALSE;
 
 
-PROC (REAL) REAL sqrt = ALIEN "sqrt" "#include <math.h>";
+*4 PROC (REAL) REAL sqrt = ALIEN "MTH$DSQRT";
+*5 PROC (REAL) REAL sqrt = ALIEN "sqrt" "#include <math.h>";
 
 
 PROC  check_host_data = (RVC  input) RVC:  MAKERVC "No host details";
@@ -367,11 +383,14 @@ BEGIN
    version_msg:= MAKERVC msg OF version;
    sys_fault_message:= MAKERVC sys_fault OF version;
    global_msg:= default_msg;
-   out:= screen:= make_channel(80 { unbuffered }, write_stdout);
-   err:= make_channel( 80, (STR s) VOID:
+*4 out:= screen:= make_channel(HEAP VECTOR [81] CHAR, write_stdout);
+%4 out:= screen:= make_channel(80 { unbuffered }, write_stdout);
+*4 err:= make_channel( HEAP VECTOR [81] CHAR, (STR s) VOID:
+%4 err:= make_channel( 80, (STR s) VOID:
                        write_buffer(stderr, s, ignore_msg) );
    IF trap_user_interrupts
-   THEN  set_sigmsgproc(sigint, sig_msg, ignore_msg)
+%4 THEN  set_sigmsgproc(sigint, sig_msg, ignore_msg)
+*4 THEN  trap_interrupts
    FI
 END
 
@@ -499,11 +518,11 @@ parse_filename,       { PROC (STR, STR, MESSAGEPROC) FILENAME - parses the
 
 get_login_name,       { PROC STR - loggin user name string }
 
-prelude,              { INT  - this must not be used.  It must appear in the
-                        KEEP list of osinterface to give access to argsc and
-                        argsv for "get_args".  osinterface in turn must
-                        appear in the USE list of any PROGRAM module that
-                        wishes to use get_args or prompt_args }
+%4 prelude,           { INT  - this must not be used.  It must appear in the
+%4                      KEEP list of osinterface to give access to argsc and
+%4                      argsv for "get_args".  osinterface in turn must
+%4                      appear in the USE list of any PROGRAM module that
+%4                      wishes to use get_args or prompt_args }
 
 get_args,             { PROC VECSTR - return command arguments from shell or
                         those most recently defined by a call of prompt_args }

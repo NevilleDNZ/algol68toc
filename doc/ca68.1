@@ -1,5 +1,5 @@
 .\"
-.\" $Id: ca68.1,v 1.2.2.4 2004/09/05 08:24:57 teshields Exp $
+.\" $Id: ca68.1,v 1.2 2003-04-23 08:57:31 sian Exp $
 .
 .Dd 19th June 2002
 .Os "Debian GNU/Linux" 3.0
@@ -24,6 +24,7 @@
 .Op Fl l Ar lib
 .Op Fl M Ar lib-dir
 .Op Fl m Ar mod-lib
+.Op Fl s Ar staredit
 .Op Fl u Ar uname
 .Op Fl w Ar web68-dirs
 .Ar module-path Ns Op \&.a68 Ns | Ns \&.w68
@@ -82,7 +83,7 @@ to the list of directories containing \&.m files produced by
 .Xr a68toc 1
 for precompiled modules. The default value is
 .Bl -tag -width 10n -offset indent
-.It Pa /usr/local/share/algol68/ .
+.It Pa /usr/share/algol68/ .
 .El
 .Lp
 The last directory added will be searched first. This option may be
@@ -107,7 +108,7 @@ to the list of directories which
 .Xr gcc 1
 should search for included C files. The default value is
 .Bl -tag -width 10n -offset indent
-.It Li -I /usr/local/include/algol68 -I /usr/local/include
+.It Li -I /usr/include/algol68 -I /usr/include
 .El
 .Lp
 This option may be repeated.
@@ -121,7 +122,7 @@ will search for libraries for linking. It should be followed by
 .Fl l Ar link-lib
 parameters indicating the libraries to be searched. The default is
 .Bl -tag -width 10n -offset indent
-.It Li -L /usr/local/lib -L ${HOME}/lib
+.It Li -L /usr/lib -L ${HOME}/lib
 .El
 .Lp
 This option may be repeated.
@@ -160,13 +161,20 @@ declarations module, If the library does not exist, it will be
 created. This option may be repeated.
 .
 .
+.It Fl s Ar staredit
+Specifies the staredit characters to use for this compilation. The
+default value is taken from the
+.Ev A68_STAREDIT
+environment string.
+.
+.
 .It Fl u Ar uname
 Specifies the
 .Ar uname
 command for
 .Xr a68toc 1 .
 The default is
-.Ql AAAAAAA .
+.Ql seedfile .
 See
 .Xr a68toc 1
 for further details.
@@ -178,7 +186,7 @@ list of directories in which
 .Xr tang 1
 should look for Web 68 include files. The default value is
 .Bl -tag -width 10n -offset indent
-.It Pa /usr/local/include/algol68
+.It Pa /usr/include/algol68
 .El
 .
 .El
@@ -186,6 +194,56 @@ should look for Web 68 include files. The default value is
 .Sh FILES
 .
 None.
+.
+.
+.Sh ENVIRONMENT
+.Bl -tag -width Ds
+.
+.
+.It Ev A68_STAREDIT
+Should contain any number of single digits or upper-case letters. The
+staredit mechanism works as follows:
+.
+.
+.Bl -tag -width Ds -offset indent
+.It Ao Ns Ar cmd Ns Ac Ao Ns Ar tag Ns Ac
+A line subject to the the staredit mechanism should start with a
+single-character command
+.Ao Ns Ar cmd Ns Ac
+which can be
+.Ql \&*
+or
+.Ql \&%
+followed by a single-character
+.Ao Ns Ar tag Ns Ac
+which can be a digit or an upper-case letter.
+.
+.
+.It \&* Ar tag
+If
+.Ao Ns Ar tag Ns Ac
+appears in the
+.Em staredit
+option, include this line. If
+.Ao Ns Ar tag Ns Ac
+does not appear in the
+.Em staredit
+option, exclude this line.
+.
+.
+.It \&% Ar tag
+If
+.Ar tag
+appears in the
+.Em staredit
+option, exclude this line. If
+.Ar tag
+does not appear in the
+.Em staredit
+option, include this line.
+.El
+.
+.El
 .
 .
 .Sh EXAMPLES

@@ -3,12 +3,8 @@ USE spmodes:
 
 COMMENT
    $Log: spaliens.a68,v $
-   Revision 1.5.2.1  2004/09/04 17:36:15  teshields
-   LCSE Algol68toC initial revision
-   Default installation directory is '/usr/local/'
-
-   Revision 1.5  2004/09/04 03:14:30  teshields
-   Algol68toC v1.8 Public Baseline
+   Revision 1.6  2004-11-07 15:59:29  sian
+   Removed PLUS, MINUS and TIMES
 
    Revision 1.5  2002/02/23 17:50:44  sian
    Release 1.1
@@ -358,48 +354,13 @@ PROC(REF SHORT BITS)VOID get fpu cw = ALIEN "GET_FPU_CW"
    "#define GET_FPU_CW(cw) __asm__(""fnstcw %0"" : ""=m"" (*cw))";
 
 PROC(SHORT BITS)VOID set fpu cw = ALIEN "SET_FPU_CW"
-   "#define SET_FPU_CW(cw) __asm__(""fnclex; fldcw %0"" : : ""m"" (cw))";
+   "#define SET_FPU_CW(cw) __asm__(""fnclex; fldcw %0"" :: ""m"" (cw))";
 
 PROC(REAL,REF INT)VOID ph round = ALIEN "PH_ROUND"
    "#define PH_ROUND(r,res) \"
    "   __asm__(""fldl %1; fistpl %0; fwait"" : \"
                """=m"" (*res) : ""m"" (r))";
 
-PROC(LONG INT,LONG INT,REF LONG INT)VOID ph lplus = ALIEN "PH_LPLUS"
-   "#define PH_LPLUS(a,b,res) \"
-      "__asm__(""fildq %1;fildq %2;faddp;fistpq %0;fwait""\"
-               ": ""=m"" (*res) \"
-               ": ""m"" (a), ""m"" (b))";
-
-PROC(LONG INT,LONG INT,REF LONG INT)VOID ph lminus = ALIEN "PH_LMINUS"
-   "#define PH_LMINUS(a,b,res) \"
-      "__asm__(""fildq %2;fildq %1;fsubp;fistpq %0;fwait""\"
-               ": ""=m"" (*res) \"
-               ": ""m"" (a), ""m"" (b))";
-
-PROC(LONG INT,LONG INT,REF LONG INT)VOID ph ltimes = ALIEN "PH_LTIMES"
-   "#define PH_LTIMES(a,b,res) \"
-      "__asm__(""fildq %1;fildq %2;fmulp;fistpq %0;fwait""\"
-               ": ""=m"" (*res) \"
-               ": ""m"" (a), ""m"" (b))";
-
-PROC(INT,INT,REF INT)VOID ph plus = ALIEN "PH_PLUS"
-   "#define PH_PLUS(a,b,res) \"
-      "__asm__(""fildl %1;fildl %2;faddp;fistpl %0;fwait""\"
-               ": ""=m"" (*res) \"
-               ": ""m"" (a), ""m"" (b))";
-
-PROC(INT,INT,REF INT)VOID ph minus = ALIEN "PH_MINUS"
-   "#define PH_MINUS(a,b,res) \"
-      "__asm__(""fildl %2;fildl %1;fsubp;fistpl %0;fwait""\"
-               ": ""=m"" (*res) \"
-               ": ""m"" (a), ""m"" (b))";
-
-PROC(INT,INT,REF INT)VOID ph times = ALIEN "PH_TIMES"
-   "#define PH_TIMES(a,b,res) \"
-      "__asm__(""fildl %1;fildl %2;fmulp;fistpl %0;fwait""\"
-               ": ""=m"" (*res) \"
-               ": ""m"" (a), ""m"" (b))";
 SKIP
 
 KEEP
@@ -452,8 +413,6 @@ posix open,     posix read,       posix rename,
 posix strlen,   posix time,       posix unlink,
 posix write,
 
-get fpu cw, set fpu cw, ph round,
-ph lplus, ph lminus, ph ltimes,
-phplus, phminus, phtimes
+get fpu cw, set fpu cw, ph round
 
 FINISH

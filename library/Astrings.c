@@ -1,4 +1,4 @@
-/* $Id: Astrings.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $ */
+/* $Id: Astrings.c,v 1.2 2002-02-01 14:39:52 sian Exp $ */
 
 
 /* 
@@ -42,7 +42,7 @@
 
 #include <algol68/Asupport.h>
 
-static char rcs_id[] = "$Id: Astrings.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $";
+static char rcs_id[] = "$Id: Astrings.c,v 1.2 2002-02-01 14:39:52 sian Exp $";
 
 #ifdef __STDC__
 A68_BOOL A_PVCEQ(const A68_VC s, const A68_VC t)

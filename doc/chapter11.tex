@@ -1,10 +1,6 @@
 % $Log: chapter11.tex,v $
-% Revision 1.6.2.1  2004/09/04 17:36:11  teshields
-% LCSE Algol68toC initial revision
-% Default installation directory is '/usr/local/'
-%
-% Revision 1.6  2004/09/04 02:37:33  teshields
-% Algol68toC v1.8 Public Baseline
+% Revision 1.7  2004-11-07 16:00:10  sian
+% Removed all references to PLUS, MINUS and TIMES
 %
 % Revision 1.6  2003/05/31 13:02:41  sian
 % Removal of compiled libraries and binaries
@@ -396,12 +392,12 @@ bit-1 and the least significant bit is bit-32 in Algol~68.
 
 \hx{The}{shift operators} dyadic operators \ixtt{SHL} and \ixtt{SHR}
 shift a machine word to the left or to the right respectively by the
-number of bits specified by their right operand. To illustrate their
-action we shall suppose that they all operate on the \verb|BITS|
-value \verb|16r 89ab cdef|.  Both the shifts are by four bits which
-is equivalent to one hexadecimal digit (4 bits is half a byte and is
-commonly called a \ix{nibble}: yes, computer experts do possess a
-sense of humour!).
+number of bits specified by their right operand. Their priority is
+\verb|8|. To illustrate their action we shall suppose that they all
+operate on the \verb|BITS| value \verb|16r 89ab cdef|.  Both the shifts
+are by four bits which is equivalent to one hexadecimal digit (4 bits
+is half a byte and is commonly called a \ix{nibble}: yes, software
+engineers do possess a sense of humour!).
 
 The result of shifting the above value by 4 bits is given by the
 following table:

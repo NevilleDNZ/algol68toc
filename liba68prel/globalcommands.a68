@@ -2,7 +2,7 @@ DECS  globalcommands  CONTEXT VOID  USE  putstrings,  messageproc,  options,
       osinterface,  basics,  testmode,  ioprocs,  variables,  command,
       commandsyntax,  commandreader,  kernelreader,  commandcaller:
 
-configinfo A68CONFIG "$Id: globalcommands.a68,v 1.2.2.1 2004/09/04 17:36:13 teshields Exp $";
+configinfo A68CONFIG "$Id: globalcommands.a68,v 1.2 2001-09-27 13:06:03 sian Exp $";
 
 
 COMMENT 

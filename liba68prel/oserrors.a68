@@ -2,7 +2,7 @@ DECS  oserrors  CONTEXT VOID  USE  cif,  messageproc,  usefulops:
 
 {  Id: oserrors.a68,v 2.6 1993/08/17 16:00:38 aap Exp $ }
 
-configinfo A68CONFIG "$Id: oserrors.a68,v 1.1.2.1 2004/09/04 17:36:14 teshields Exp $";
+configinfo A68CONFIG "$Id: oserrors.a68,v 1.1.1.1 2001-05-07 10:16:12 sian Exp $";
 
 
 COMMENT 

@@ -4,7 +4,7 @@ help() {
   echo "Usage: setup.mm [--mm=dir] --bs=dir --sd=<7 uppercase-letters>"
   echo "where"
   echo "  --mm=directory of mm_default_database.mmd"
-  echo "       (default=/usr/local/share/algol68toc/)"
+  echo "       (default=/usr/share/algol68toc/)"
   echo "  --bs=base directory (no default)"
   echo "  --sd=nameseed start value"
   echo
@@ -17,7 +17,7 @@ if [ $# -lt 2 ]
 then help
 fi
 
-MMDIR=/usr/local/share/algol68toc
+MMDIR=/usr/share/algol68toc
 CTDIR=$(dirname $(which a68toc))
 BSDIR=
 

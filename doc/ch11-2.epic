@@ -1,14 +1,7 @@
 \setlength{\unitlength}{0.00087489in}
 %
 % $Log: ch11-2.epic,v $
-% Revision 1.2.2.1  2004/09/04 17:36:11  teshields
-% LCSE Algol68toC initial revision
-% Default installation directory is '/usr/local/'
-%
-% Revision 1.2  2004/09/04 02:36:54  teshields
-% Algol68toC v1.8 Public Baseline
-%
-% Revision 1.2  2002/06/20 11:49:28  sian
+% Revision 1.2  2002-06-20 11:49:28  sian
 % mm removed, padding removed, ca68 added
 %
 %

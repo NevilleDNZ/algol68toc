@@ -733,8 +733,8 @@ typedef struct A68t214  A68_214 ;    /* PROC(MODE143) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t215,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t215  A68_215 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,67,A68t216);
-typedef struct A68t216  A68_216 ;    /* STRUCT 67 CHAR */
+A_ISTRUCT(A68_CHAR ,62,A68t216);
+typedef struct A68t216  A68_216 ;    /* STRUCT 62 CHAR */
 A_ISTRUCT(A68_CHAR ,14,A68t217);
 typedef struct A68t217  A68_217 ;    /* STRUCT 14 CHAR */
 
@@ -813,67 +813,69 @@ A_ISTRUCT(A68_CHAR ,42,A68t249);
 typedef struct A68t249  A68_249 ;    /* STRUCT 42 CHAR */
 A_ISTRUCT(A68_CHAR ,36,A68t250);
 typedef struct A68t250  A68_250 ;    /* STRUCT 36 CHAR */
-A_ISTRUCT(A68_CHAR ,127,A68t251);
-typedef struct A68t251  A68_251 ;    /* STRUCT 127 CHAR */
-A_ISTRUCT(A68_CHAR ,23,A68t252);
-typedef struct A68t252  A68_252 ;    /* STRUCT 23 CHAR */
+A_ISTRUCT(A68_CHAR ,67,A68t251);
+typedef struct A68t251  A68_251 ;    /* STRUCT 67 CHAR */
+A_ISTRUCT(A68_CHAR ,127,A68t252);
+typedef struct A68t252  A68_252 ;    /* STRUCT 127 CHAR */
+A_ISTRUCT(A68_CHAR ,23,A68t253);
+typedef struct A68t253  A68_253 ;    /* STRUCT 23 CHAR */
 
-A_PROCEDURE(A68_VOID ,A68t253,(struct A68t177 ,A68_INT *,A68_VC ,struct A68t97 ,struct A68t158 *),(struct A68t177 ,A68_INT *,A68_VC ,struct A68t97 ,struct A68t158 *,void *));
-typedef struct A68t253  A68_253 ;    /* PROC(REF MODE177,REF INT,REF MODE26,MODE97) MODE158 */
-A_ISTRUCT(A68_CHAR ,98,A68t254);
-typedef struct A68t254  A68_254 ;    /* STRUCT 98 CHAR */
+A_PROCEDURE(A68_VOID ,A68t254,(struct A68t177 ,A68_INT *,A68_VC ,struct A68t97 ,struct A68t158 *),(struct A68t177 ,A68_INT *,A68_VC ,struct A68t97 ,struct A68t158 *,void *));
+typedef struct A68t254  A68_254 ;    /* PROC(REF MODE177,REF INT,REF MODE26,MODE97) MODE158 */
+A_ISTRUCT(A68_CHAR ,98,A68t255);
+typedef struct A68t255  A68_255 ;    /* STRUCT 98 CHAR */
 
-A_PROCEDURE(A68_VOID ,A68t255,(A68_BOOL ,struct A68t174 *),(A68_BOOL ,struct A68t174 *,void *));
-typedef struct A68t255  A68_255 ;    /* PROC(BOOL) MODE174 */
-A_ISTRUCT(A68_CHAR ,2,A68t256);
-typedef struct A68t256  A68_256 ;    /* STRUCT 2 CHAR */
+A_PROCEDURE(A68_VOID ,A68t256,(A68_BOOL ,struct A68t174 *),(A68_BOOL ,struct A68t174 *,void *));
+typedef struct A68t256  A68_256 ;    /* PROC(BOOL) MODE174 */
+A_ISTRUCT(A68_CHAR ,2,A68t257);
+typedef struct A68t257  A68_257 ;    /* STRUCT 2 CHAR */
 
-A_PROCEDURE(A68_VOID ,A68t257,(struct A68t176 ,A68_BOOL *,A68_VC ,struct A68t97 ,A68_VC *),(struct A68t176 ,A68_BOOL *,A68_VC ,struct A68t97 ,A68_VC *,void *));
-typedef struct A68t257  A68_257 ;    /* PROC(MODE176,REF BOOL,MODE26,MODE97) REF MODE26 */
-A_ISTRUCT(A68_CHAR ,30,A68t258);
-typedef struct A68t258  A68_258 ;    /* STRUCT 30 CHAR */
+A_PROCEDURE(A68_VOID ,A68t258,(struct A68t176 ,A68_BOOL *,A68_VC ,struct A68t97 ,A68_VC *),(struct A68t176 ,A68_BOOL *,A68_VC ,struct A68t97 ,A68_VC *,void *));
+typedef struct A68t258  A68_258 ;    /* PROC(MODE176,REF BOOL,MODE26,MODE97) REF MODE26 */
+A_ISTRUCT(A68_CHAR ,30,A68t259);
+typedef struct A68t259  A68_259 ;    /* STRUCT 30 CHAR */
 
-A_PROCEDURE(A68_INT ,A68t259,(struct A68t176 ,struct A68t97 ,struct A68t46 ),(struct A68t176 ,struct A68t97 ,struct A68t46 ,void *));
-typedef struct A68t259  A68_259 ;    /* PROC(MODE176,MODE97,MODE46) INT */
-A_ISTRUCT(A68_CHAR ,9,A68t260);
-typedef struct A68t260  A68_260 ;    /* STRUCT 9 CHAR */
-A_ISTRUCT(A68_CHAR ,210,A68t261);
-typedef struct A68t261  A68_261 ;    /* STRUCT 210 CHAR */
-A_ISTRUCT(A68_CHAR ,17,A68t262);
-typedef struct A68t262  A68_262 ;    /* STRUCT 17 CHAR */
-A_ISTRUCT(A68_CHAR ,16,A68t263);
-typedef struct A68t263  A68_263 ;    /* STRUCT 16 CHAR */
-A_ISTRUCT(A68_CHAR ,24,A68t264);
-typedef struct A68t264  A68_264 ;    /* STRUCT 24 CHAR */
-A_ISTRUCT(A68_CHAR ,31,A68t265);
-typedef struct A68t265  A68_265 ;    /* STRUCT 31 CHAR */
-struct A68t266{
+A_PROCEDURE(A68_INT ,A68t260,(struct A68t176 ,struct A68t97 ,struct A68t46 ),(struct A68t176 ,struct A68t97 ,struct A68t46 ,void *));
+typedef struct A68t260  A68_260 ;    /* PROC(MODE176,MODE97,MODE46) INT */
+A_ISTRUCT(A68_CHAR ,9,A68t261);
+typedef struct A68t261  A68_261 ;    /* STRUCT 9 CHAR */
+A_ISTRUCT(A68_CHAR ,210,A68t262);
+typedef struct A68t262  A68_262 ;    /* STRUCT 210 CHAR */
+A_ISTRUCT(A68_CHAR ,17,A68t263);
+typedef struct A68t263  A68_263 ;    /* STRUCT 17 CHAR */
+A_ISTRUCT(A68_CHAR ,16,A68t264);
+typedef struct A68t264  A68_264 ;    /* STRUCT 16 CHAR */
+A_ISTRUCT(A68_CHAR ,24,A68t265);
+typedef struct A68t265  A68_265 ;    /* STRUCT 24 CHAR */
+A_ISTRUCT(A68_CHAR ,31,A68t266);
+typedef struct A68t266  A68_266 ;    /* STRUCT 31 CHAR */
+struct A68t267{
 A68_INT  Lwb;
 A_PAD_INT(PAD_44)
 A68_INT  Upb;
 A_PAD_INT(PAD_45)
 };
-typedef struct A68t266  A68_266 ;    /* STRUCT(INT,INT)  */
+typedef struct A68t267  A68_267 ;    /* STRUCT(INT,INT)  */
 
-A_PROCEDURE(A68_VOID ,A68t267,(struct A68t176 ,struct A68t266 ,struct A68t97 ,struct A68t266 *),(struct A68t176 ,struct A68t266 ,struct A68t97 ,struct A68t266 *,void *));
-typedef struct A68t267  A68_267 ;    /* PROC(MODE176,MODE266,MODE97) MODE266 */
-A_ISTRUCT(A68_CHAR ,136,A68t268);
-typedef struct A68t268  A68_268 ;    /* STRUCT 136 CHAR */
+A_PROCEDURE(A68_VOID ,A68t268,(struct A68t176 ,struct A68t267 ,struct A68t97 ,struct A68t267 *),(struct A68t176 ,struct A68t267 ,struct A68t97 ,struct A68t267 *,void *));
+typedef struct A68t268  A68_268 ;    /* PROC(MODE176,MODE267,MODE97) MODE267 */
+A_ISTRUCT(A68_CHAR ,136,A68t269);
+typedef struct A68t269  A68_269 ;    /* STRUCT 136 CHAR */
 
-A_PROCEDURE(A68_VOID ,A68t269,(A68_CHAR ,A68_VC ,struct A68t97 ,A68_VC *),(A68_CHAR ,A68_VC ,struct A68t97 ,A68_VC *,void *));
-typedef struct A68t269  A68_269 ;    /* PROC(CHAR,MODE26,MODE97) REF MODE26 */
-A_ISTRUCT(A68_CHAR ,28,A68t270);
-typedef struct A68t270  A68_270 ;    /* STRUCT 28 CHAR */
+A_PROCEDURE(A68_VOID ,A68t270,(A68_CHAR ,A68_VC ,struct A68t97 ,A68_VC *),(A68_CHAR ,A68_VC ,struct A68t97 ,A68_VC *,void *));
+typedef struct A68t270  A68_270 ;    /* PROC(CHAR,MODE26,MODE97) REF MODE26 */
+A_ISTRUCT(A68_CHAR ,28,A68t271);
+typedef struct A68t271  A68_271 ;    /* STRUCT 28 CHAR */
 
-A_PROCEDURE(A68_CHAR ,A68t271,(struct A68t176 ,struct A68t97 ),(struct A68t176 ,struct A68t97 ,void *));
-typedef struct A68t271  A68_271 ;    /* PROC(MODE176,MODE97) CHAR */
+A_PROCEDURE(A68_CHAR ,A68t272,(struct A68t176 ,struct A68t97 ),(struct A68t176 ,struct A68t97 ,void *));
+typedef struct A68t272  A68_272 ;    /* PROC(MODE176,MODE97) CHAR */
 
-A_PROCEDURE(struct A68t184 *,A68t272,(void),(void *));
-typedef struct A68t272  A68_272 ;    /* PROC REF MODE184 */
-A_ISTRUCT(struct A68t175 ,2,A68t273);
-typedef struct A68t273  A68_273 ;    /* STRUCT 2 MODE175 */
-A_ISTRUCT(struct A68t193 ,22,A68t274);
-typedef struct A68t274  A68_274 ;    /* STRUCT 22 MODE193 */
+A_PROCEDURE(struct A68t184 *,A68t273,(void),(void *));
+typedef struct A68t273  A68_273 ;    /* PROC REF MODE184 */
+A_ISTRUCT(struct A68t175 ,2,A68t274);
+typedef struct A68t274  A68_274 ;    /* STRUCT 2 MODE175 */
+A_ISTRUCT(struct A68t193 ,22,A68t275);
+typedef struct A68t275  A68_275 ;    /* STRUCT 22 MODE193 */
 
 /* --- Imports from a68config --- */
 extern A68_VOID  UEAALIB_a68config(A68_VC ,A68_VC );
@@ -948,8 +950,7 @@ extern A68_113  RTBAOSF_update_truncate_access;
 extern A68_VOID  VFCAOSF_parse_filename(A68_VC ,A68_VC ,struct A68t97 ,A68_134 *);
 extern int A_argc;
 extern char **A_argv;
-extern char **A_envp;
-#define A_prelude(argc,argv,envp) A_argc=argc; A_argv=argv; A_envp=envp
+#define A_prelude(argc,argv) A_argc=argc; A_argv = argv
 
 #define XHCAOSF_prelude A_prelude
 #include <algol68/Alibrary.h>
@@ -985,8 +986,8 @@ extern void CQEAOSF(void);   /* osinterface */
 extern void ZRAAOSF(void);   /* messageproc */
 extern void KNDAOSF(void);   /* putstrings */
 /* --- end of DECS initialisation functions --- */
-static A68_216   JLJAOSF = {"$Id: kernelreader.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
-A_GISVEC(A68_VC ,KLJAOSF,JLJAOSF,67)
+static A68_216   JLJAOSF = {"$Id: kernelreader.c,v 1.5 2003-05-30 21:20:46 sian Exp $"}; 
+A_GISVEC(A68_VC ,KLJAOSF,JLJAOSF,62)
 static A68_217   LLJAOSF = {"+-*/%<>=:.$#^@"}; 
 A_GISVEC(A68_VC ,MLJAOSF,LLJAOSF,14)
 static A68_VC  NLJAOSF_opsymbols;
@@ -1169,31 +1170,31 @@ A68_VC  WCKAOSF_contextname_str;
 static A68_232   XCKAOSF = {"<importsname>"}; 
 A_GISVEC(A68_VC ,YCKAOSF,XCKAOSF,13)
 A68_VC  ZCKAOSF_importname_str;
-static A68_216   ADKAOSF = {"An ELLA contextname has the same syntax as an ELLA identifier name."}; 
+static A68_251   ADKAOSF = {"An ELLA contextname has the same syntax as an ELLA identifier name."}; 
 A_GISVEC(A68_VC ,BDKAOSF,ADKAOSF,67)
 static A68_VC  CDKAOSF_contextname_help;
-static A68_251   DDKAOSF = {"The name of an imports region.  This is specified by the \"/\" character immediately followed by an identifier (lower case) name."}; 
+static A68_252   DDKAOSF = {"The name of an imports region.  This is specified by the \"/\" character immediately followed by an identifier (lower case) name."}; 
 A_GISVEC(A68_VC ,EDKAOSF,DDKAOSF,127)
 static A68_VC  FDKAOSF_importname_help;
 static A68_INT  GDKAOSF_contextname_no;
 static A68_INT  HDKAOSF_importname_no;
 A68_175  JDKAOSF_contextname_syntax;
 A68_175  LDKAOSF_importname_syntax;
-static A68_252   BEKAOSF = {" expected after \"/\" in "}; 
+static A68_253   BEKAOSF = {" expected after \"/\" in "}; 
 A_GISVEC(A68_VC ,CEKAOSF,BEKAOSF,23)
 static A68_225   ZFKAOSF = {"ON | OFF"}; 
 A_GISVEC(A68_VC ,AGKAOSF,ZFKAOSF,8)
 A68_VC  BGKAOSF_switch_str;
-static A68_254   CGKAOSF = {"This is used by certain commands to set or reset a flag.\"ON\" or \"OFF\" may be given in either case."}; 
+static A68_255   CGKAOSF = {"This is used by certain commands to set or reset a flag.\"ON\" or \"OFF\" may be given in either case."}; 
 A_GISVEC(A68_VC ,DGKAOSF,CGKAOSF,98)
 static A68_VC  EGKAOSF_switch_help;
 static A68_INT  FGKAOSF_switch_no;
 A68_175  QGKAOSF_switch_syntax;
-static A68_256   TGKAOSF = {"ON"}; 
+static A68_257   TGKAOSF = {"ON"}; 
 A_GISVEC(A68_VC ,UGKAOSF,TGKAOSF,2)
 static A68_219   ZGKAOSF = {"OFF"}; 
 A_GISVEC(A68_VC ,AHKAOSF,ZGKAOSF,3)
-static A68_256   KHKAOSF = {"ON"}; 
+static A68_257   KHKAOSF = {"ON"}; 
 A_GISVEC(A68_VC ,LHKAOSF,KHKAOSF,2)
 static A68_114   SHKAOSF = {"= ON"}; 
 A_GISVEC(A68_VC ,THKAOSF,SHKAOSF,4)
@@ -1203,38 +1204,38 @@ static A68_219   NIKAOSF = {":= "};
 A_GISVEC(A68_VC ,OIKAOSF,NIKAOSF,3)
 static A68_219   RIKAOSF = {"OFF"}; 
 A_GISVEC(A68_VC ,SIKAOSF,RIKAOSF,3)
-static A68_256   VIKAOSF = {"ON"}; 
+static A68_257   VIKAOSF = {"ON"}; 
 A_GISVEC(A68_VC ,WIKAOSF,VIKAOSF,2)
 static A68_242   BJKAOSF = {"<word>"}; 
 A_GISVEC(A68_VC ,CJKAOSF,BJKAOSF,6)
 A68_VC  DJKAOSF_word_str;
-static A68_258   EJKAOSF = {"A word is like a command name."}; 
+static A68_259   EJKAOSF = {"A word is like a command name."}; 
 A_GISVEC(A68_VC ,FJKAOSF,EJKAOSF,30)
 static A68_VC  GJKAOSF_word_help;
 static A68_INT  HJKAOSF_word_no;
 A68_175  JJKAOSF_word_syntax;
 static A68_219   JKKAOSF = {" | "}; 
 A_GISVEC(A68_VC ,KKKAOSF,JKKAOSF,3)
-static A68_260   SKKAOSF = {" expected"}; 
+static A68_261   SKKAOSF = {" expected"}; 
 A_GISVEC(A68_VC ,TKKAOSF,SKKAOSF,9)
 static A68_242   ALKAOSF = {"<trim>"}; 
 A_GISVEC(A68_VC ,BLKAOSF,ALKAOSF,6)
 A68_VC  CLKAOSF_trim_str;
-static A68_261   DLKAOSF = {"Enclosed in square brackets (\"[ ]\") either: \"<number> .. <number>\", \"<number>\" implying a trim of size one, \".. <number>\" implying everything up to <number>, or, \"<number> ..\" implying everything from <number>."}; 
+static A68_262   DLKAOSF = {"Enclosed in square brackets (\"[ ]\") either: \"<number> .. <number>\", \"<number>\" implying a trim of size one, \".. <number>\" implying everything up to <number>, or, \"<number> ..\" implying everything from <number>."}; 
 A_GISVEC(A68_VC ,ELKAOSF,DLKAOSF,210)
 static A68_VC  FLKAOSF_trim_help;
 static A68_INT  GLKAOSF_trim_no;
 A68_175  ILKAOSF_trim_syntax;
 #define JLKAOSF_trimsep ','
-static A68_262   ULKAOSF = {"\"..\" expected in "}; 
+static A68_263   ULKAOSF = {"\"..\" expected in "}; 
 A_GISVEC(A68_VC ,VLKAOSF,ULKAOSF,17)
-static A68_263   SMKAOSF = {"\"]\" expected in "}; 
+static A68_264   SMKAOSF = {"\"]\" expected in "}; 
 A_GISVEC(A68_VC ,TMKAOSF,SMKAOSF,16)
-static A68_264   JNKAOSF = {"\"..\" or \"]\" expected in "}; 
+static A68_265   JNKAOSF = {"\"..\" or \"]\" expected in "}; 
 A_GISVEC(A68_VC ,KNKAOSF,JNKAOSF,24)
-static A68_265   TNKAOSF = {" or \"..\" expected after \"[\" in "}; 
+static A68_266   TNKAOSF = {" or \"..\" expected after \"[\" in "}; 
 A_GISVEC(A68_VC ,UNKAOSF,TNKAOSF,31)
-static A68_264   POKAOSF = {"get_trim:  illegal value"}; 
+static A68_265   POKAOSF = {"get_trim:  illegal value"}; 
 A_GISVEC(A68_VC ,QOKAOSF,POKAOSF,24)
 static A68_220   DPKAOSF = {" can't be less than "}; 
 A_GISVEC(A68_VC ,EPKAOSF,DPKAOSF,20)
@@ -1247,10 +1248,10 @@ A68_175  NQKAOSF_quoted_string_syntax;
 static A68_243   OQKAOSF = {"\"<string>\""}; 
 A_GISVEC(A68_VC ,PQKAOSF,OQKAOSF,10)
 A68_VC  QQKAOSF_quoted_string_str;
-static A68_268   RQKAOSF = {"Any characters enclosed in string quotes (\" \").  If the string quote character is required within the string it should be repeated (\"\")."}; 
+static A68_269   RQKAOSF = {"Any characters enclosed in string quotes (\" \").  If the string quote character is required within the string it should be repeated (\"\")."}; 
 A_GISVEC(A68_VC ,SQKAOSF,RQKAOSF,136)
 static A68_VC  TQKAOSF_quoted_string_help;
-static A68_270   URKAOSF = {" not finished at end of line"}; 
+static A68_271   URKAOSF = {" not finished at end of line"}; 
 A_GISVEC(A68_VC ,WRKAOSF,URKAOSF,28)
 static A68_INT  HSKAOSF_character_no;
 A68_175  JSKAOSF_character_syntax;
@@ -1410,7 +1411,7 @@ A_STATIC A68_VOID  LLKAOSF_read_trim(A68_97  Msg, A68_VC  *ReturnedValue);
 
 A68_BOOL  DOKAOSF_is_trim(A68_176  V);
 
-A68_VOID  IOKAOSF_get_trim(A68_176  V, A68_266  Bounds, A68_97  Msg, A68_266  *ReturnedValue);
+A68_VOID  IOKAOSF_get_trim(A68_176  V, A68_267  Bounds, A68_97  Msg, A68_267  *ReturnedValue);
 
 A68_VOID  XQKAOSF_delimited_read(A68_CHAR  Delim, A68_VC  Missing, A68_97  Msg, A68_VC  *ReturnedValue);
 
@@ -2513,21 +2514,21 @@ A68_VC  RZJAOSF;  /* OPERATORS - trim index */
 A68_VC  SZJAOSF;  /* avoid structure result */
 A68_VC  TZJAOSF;  /* avoid structure result */
 A_PROC_ENTRY(read_string_basic);
- /* line 457: */
- /* line 459: */
+ /* line 458: */
+ /* line 460: */
 { 
 OZJAOSF_c = GXFAOSF_first_char(Msg);
- /* line 460: */
-PZJAOSF_start = (*BVFAOSF_rdcharno);
  /* line 461: */
+PZJAOSF_start = (*BVFAOSF_rdcharno);
+ /* line 462: */
 for ( ;; )
 { 
- /* line 462: */
+ /* line 463: */
 if ( !(!YTFAOSF_separator(OZJAOSF_c)) ) break;
 OZJAOSF_c = DXFAOSF_next_char(Msg);
 }
- /* line 463: */
  /* line 464: */
+ /* line 465: */
 ZCAAOSF_makervc( A_VTRIM(RZJAOSF,((*ZUFAOSF_rdbuffer)),A_VTSCRIPT(&(RZJAOSF.upb),((*ZUFAOSF_rdbuffer)).upb,PZJAOSF_start,((*BVFAOSF_rdcharno)-1))), &SZJAOSF );
 LLGAOSF_check_read( SZJAOSF, EZJAOSF_string_str, Msg, &TZJAOSF );
 QZJAOSF = TZJAOSF;
@@ -2565,12 +2566,12 @@ A68_VOID  DAKAOSF_get_string(A68_176  V, A68_97  Msg, A68_VC  *ReturnedValue)
 { 
 A68_VC  EAKAOSF;  /* clause result */
 A_PROC_ENTRY(get_string);
- /* line 472: */
  /* line 473: */
+ /* line 474: */
 { 
 GMGAOSF_check_value(V, IZJAOSF_string_no, Msg);
- /* line 474: */
  /* line 475: */
+ /* line 476: */
 EAKAOSF = V.Value;
 } 
 A_PROC_EXIT(get_string);
@@ -2586,11 +2587,11 @@ A68_VC  JAKAOSF;  /* forall yield */
 A68_INT  KAKAOSF;  /* forall loop counter */
 A68_VC  LAKAOSF;  /* clause result */
 A_PROC_ENTRY(get_string_uc);
- /* line 479: */
  /* line 480: */
+ /* line 481: */
 { 
 GMGAOSF_check_value(V, IZJAOSF_string_no, Msg);
- /* line 481: */
+ /* line 482: */
 JAKAOSF = V.Value ;
 KAKAOSF = JAKAOSF.upb -1;
 IAKAOSF_c = JAKAOSF.data;
@@ -2603,8 +2604,8 @@ if ( JUFAOSF_letter((*IAKAOSF_c)) )
 (*IAKAOSF_c) = RUFAOSF_upper_case((*IAKAOSF_c));
 } 
 }
- /* line 482: */
  /* line 483: */
+ /* line 484: */
 LAKAOSF = V.Value;
 } 
 A_PROC_EXIT(get_string_uc);
@@ -2623,32 +2624,32 @@ A68_VC  BBKAOSF;  /* avoid structure result */
 A68_VC  CBKAOSF;  /* avoid structure result */
 A68_VC  DBKAOSF;  /* avoid structure result */
 A_PROC_ENTRY(read_filename);
- /* line 506: */
- /* line 508: */
+ /* line 507: */
+ /* line 509: */
 { 
 XAKAOSF_c = GXFAOSF_first_char(Msg);
- /* line 509: */
+ /* line 510: */
 YAKAOSF_start = (*BVFAOSF_rdcharno);
- /* line 511: */
+ /* line 513: */
 for ( ;; )
 { 
- /* line 512: */
+ /* line 514: */
 if ( !(!YTFAOSF_separator(XAKAOSF_c)) ) break;
 XAKAOSF_c = DXFAOSF_next_char(Msg);
 }
- /* line 513: */
- /* line 514: */
-if ( (((*BVFAOSF_rdcharno)-YAKAOSF_start)>0) )
-{ 
  /* line 515: */
  /* line 516: */
+if ( (((*BVFAOSF_rdcharno)-YAKAOSF_start)>0) )
+{ 
+ /* line 517: */
+ /* line 518: */
 ZCAAOSF_makervc( A_VTRIM(ABKAOSF,((*ZUFAOSF_rdbuffer)),A_VTSCRIPT(&(ABKAOSF.upb),((*ZUFAOSF_rdbuffer)).upb,YAKAOSF_start,((*BVFAOSF_rdcharno)-1))), &BBKAOSF );
 LLGAOSF_check_read( BBKAOSF, OAKAOSF_filename_str, Msg, &CBKAOSF );
 ZAKAOSF = CBKAOSF;
 } 
 else
 { 
- /* line 517: */
+ /* line 519: */
 ELGAOSF_nothing_read(  &DBKAOSF );
 ZAKAOSF = DBKAOSF;
 } 
@@ -2674,12 +2675,12 @@ A68_VOID  KBKAOSF_get_filename(A68_176  V, A68_VC  Default, A68_97  Msg, A68_134
 A68_134  LBKAOSF;  /* clause result */
 A68_134  MBKAOSF;  /* avoid structure result */
 A_PROC_ENTRY(get_filename);
- /* line 523: */
- /* line 524: */
-{ 
-GMGAOSF_check_value(V, SAKAOSF_filename_no, Msg);
  /* line 525: */
  /* line 526: */
+{ 
+GMGAOSF_check_value(V, SAKAOSF_filename_no, Msg);
+ /* line 527: */
+ /* line 528: */
 VFCAOSF_parse_filename( V.Value, Default, Msg, &MBKAOSF );
 LBKAOSF = MBKAOSF;
 } 
@@ -2705,44 +2706,44 @@ A68_VC  KCKAOSF;  /* OPERATORS - trim index */
 A68_VC  LCKAOSF;  /* avoid structure result */
 A68_VC  MCKAOSF_text;
 A_PROC_ENTRY(read_text);
- /* line 541: */
- /* line 542: */
+ /* line 543: */
+ /* line 544: */
 { 
 if ( ((*(&A_VINDEX((*ZUFAOSF_rdbuffer),(*BVFAOSF_rdcharno))))!=PTFAOSF_sp) )
 { 
 (*BVFAOSF_rdcharno)+=1;
 } 
- /* line 543: */
+ /* line 545: */
 (*CVFAOSF_start_of_word) = (*BVFAOSF_rdcharno);
- /* line 544: */
+ /* line 546: */
 for ( ;; )
 { 
 YBKAOSF = ((*BVFAOSF_rdcharno)<(*AVFAOSF_rdcharend));
 if ( YBKAOSF )
-{ /* line 545: */
+{ /* line 547: */
 YBKAOSF = VTFAOSF_space((*(&A_VINDEX((*ZUFAOSF_rdbuffer),(*BVFAOSF_rdcharno)))));
 }
 if ( !(YBKAOSF) ) break;
 (*BVFAOSF_rdcharno)+=1;
 }
- /* line 546: */
- /* line 547: */
+ /* line 548: */
+ /* line 549: */
 if ( ((*(&A_VINDEX((*ZUFAOSF_rdbuffer),(*AVFAOSF_rdcharend))))==PTFAOSF_sp) )
 { 
- /* line 548: */
+ /* line 550: */
 ZBKAOSF.data[0] = A_UNITE(ACKAOSF,mode7,7,PBKAOSF_text_str);
 ECKAOSF = CCKAOSF ;
 ZBKAOSF.data[1] = A_UNITE(DCKAOSF,mode7,7,ECKAOSF);
 SDEAOSF_oneline( A_HISVEC(FCKAOSF,ZBKAOSF,2,A68_52 ), &GCKAOSF );
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(HCKAOSF,GCKAOSF,A68_VC )),(MUAAOSF_user, A_HVEC(HCKAOSF,GCKAOSF,A68_VC ),(Msg).nonlocals));
- /* line 549: */
- /* line 550: */
+ /* line 551: */
+ /* line 552: */
 ICKAOSF = WHDAOSF_nilstr;
 } 
 else
 { 
- /* line 551: */
- /* line 552: */
+ /* line 553: */
+ /* line 554: */
 if ( ((*BVFAOSF_rdcharno)==(*AVFAOSF_rdcharend)) )
 { 
 ELGAOSF_nothing_read(  &JCKAOSF );
@@ -2752,11 +2753,11 @@ else
 { 
 ZCAAOSF_makervc( A_VTRIM(KCKAOSF,((*ZUFAOSF_rdbuffer)),A_VTSCRIPT(&(KCKAOSF.upb),((*ZUFAOSF_rdbuffer)).upb,(*BVFAOSF_rdcharno),((*AVFAOSF_rdcharend)-1))), &LCKAOSF );
 MCKAOSF_text = LCKAOSF;
- /* line 553: */
-(*BVFAOSF_rdcharno) = ((*AVFAOSF_rdcharend)-1);
- /* line 554: */
  /* line 555: */
+(*BVFAOSF_rdcharno) = ((*AVFAOSF_rdcharend)-1);
  /* line 556: */
+ /* line 557: */
+ /* line 558: */
 ICKAOSF = MCKAOSF_text;
 } 
 } 
@@ -2781,12 +2782,12 @@ A68_VOID  SCKAOSF_get_text(A68_176  V, A68_97  Msg, A68_VC  *ReturnedValue)
 { 
 A68_VC  TCKAOSF;  /* clause result */
 A_PROC_ENTRY(get_text);
- /* line 561: */
- /* line 562: */
-{ 
-GMGAOSF_check_value(V, TBKAOSF_text_no, Msg);
  /* line 563: */
  /* line 564: */
+{ 
+GMGAOSF_check_value(V, TBKAOSF_text_no, Msg);
+ /* line 565: */
+ /* line 566: */
 TCKAOSF = V.Value;
 } 
 A_PROC_EXIT(get_text);
@@ -2803,14 +2804,14 @@ A68_VC  UDKAOSF;  /* clause result */
 A68_196  VDKAOSF;  /* procedure value */
 A68_VC  WDKAOSF;  /* avoid structure result */
 A_PROC_ENTRY(read_contextname);
- /* line 586: */
- /* line 593: */
+ /* line 588: */
+ /* line 595: */
 { 
 CVJAOSF_read_ident_basic( UMGAOSF_get_first, WCKAOSF_contextname_str, Msg, &ODKAOSF );
 PDKAOSF_context = ODKAOSF;
- /* line 594: */
- /* line 595: */
  /* line 596: */
+ /* line 597: */
+ /* line 598: */
 VDKAOSF.fn.fn_global = RDKAOSF_anonymous;
 VDKAOSF.nonlocals = A68_NIL;
 RMJAOSF_check_separator( PDKAOSF_context, WCKAOSF_contextname_str, VDKAOSF, Msg, &WDKAOSF );
@@ -2832,23 +2833,23 @@ A68_196  IEKAOSF;  /* procedure value */
 A68_VC  JEKAOSF;  /* avoid structure result */
 A68_VC  KEKAOSF;  /* avoid structure result */
 A_PROC_ENTRY(read_importname);
- /* line 599: */
- /* line 600: */
+ /* line 601: */
+ /* line 602: */
 if ( (GXFAOSF_first_char(Msg)=='/') )
 { 
 CVJAOSF_read_ident_basic( YMGAOSF_not_first, ZCKAOSF_importname_str, Msg, &ZDKAOSF );
 AEKAOSF_import = ZDKAOSF;
- /* line 601: */
- /* line 602: */
-if ( !WMJAOSF_legal_read(AEKAOSF_import) )
-{ 
  /* line 603: */
  /* line 604: */
-A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(DEKAOSF,A_VC_PLUS(A_VC_PLUS(PVJAOSF_ident_str,CEKAOSF),ZCKAOSF_importname_str),A68_VC )),(MUAAOSF_user, A_HVEC(DEKAOSF,A_VC_PLUS(A_VC_PLUS(PVJAOSF_ident_str,CEKAOSF),ZCKAOSF_importname_str),A68_VC ),(Msg).nonlocals));
-} 
+if ( !WMJAOSF_legal_read(AEKAOSF_import) )
+{ 
  /* line 605: */
  /* line 606: */
+A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(DEKAOSF,A_VC_PLUS(A_VC_PLUS(PVJAOSF_ident_str,CEKAOSF),ZCKAOSF_importname_str),A68_VC )),(MUAAOSF_user, A_HVEC(DEKAOSF,A_VC_PLUS(A_VC_PLUS(PVJAOSF_ident_str,CEKAOSF),ZCKAOSF_importname_str),A68_VC ),(Msg).nonlocals));
+} 
  /* line 607: */
+ /* line 608: */
+ /* line 609: */
 IEKAOSF.fn.fn_global = FEKAOSF_anonymous;
 IEKAOSF.nonlocals = A68_NIL;
 RMJAOSF_check_separator( AEKAOSF_import, ZCKAOSF_importname_str, IEKAOSF, Msg, &JEKAOSF );
@@ -2890,7 +2891,7 @@ A68_BOOL  SEKAOSF_is_ctname(A68_176  V)
 A68_BOOL  TEKAOSF;  /* optbool result */
 A68_BOOL  UEKAOSF;  /* clause result */
 A_PROC_ENTRY(is_ctname);
- /* line 613: */
+ /* line 615: */
 TEKAOSF = (V.Sort==GDKAOSF_contextname_no);
 if ( ! TEKAOSF )
 {TEKAOSF = (V.Sort==HDKAOSF_importname_no);
@@ -2905,12 +2906,12 @@ A68_VOID  XEKAOSF_get_contextname(A68_176  V, A68_97  Msg, A68_VC  *ReturnedValu
 { 
 A68_VC  YEKAOSF;  /* clause result */
 A_PROC_ENTRY(get_contextname);
- /* line 617: */
- /* line 618: */
-{ 
-GMGAOSF_check_value(V, GDKAOSF_contextname_no, Msg);
  /* line 619: */
  /* line 620: */
+{ 
+GMGAOSF_check_value(V, GDKAOSF_contextname_no, Msg);
+ /* line 621: */
+ /* line 622: */
 YEKAOSF = V.Value;
 } 
 A_PROC_EXIT(get_contextname);
@@ -2923,12 +2924,12 @@ A68_VOID  BFKAOSF_get_importname(A68_176  V, A68_97  Msg, A68_VC  *ReturnedValue
 { 
 A68_VC  CFKAOSF;  /* clause result */
 A_PROC_ENTRY(get_importname);
- /* line 623: */
- /* line 624: */
-{ 
-GMGAOSF_check_value(V, HDKAOSF_importname_no, Msg);
  /* line 625: */
  /* line 626: */
+{ 
+GMGAOSF_check_value(V, HDKAOSF_importname_no, Msg);
+ /* line 627: */
+ /* line 628: */
 CFKAOSF = V.Value;
 } 
 A_PROC_EXIT(get_importname);
@@ -2936,7 +2937,7 @@ A_PROC_EXIT(get_importname);
 return;
 } 
 #undef NL
- /* line 629: */
+ /* line 631: */
 
 A68_VOID  HFKAOSF_get_ctname(A68_177  Values, A68_INT * Index, A68_VC  Default_contextname, A68_97  Msg, A68_158  *ReturnedValue)
 { 
@@ -2958,25 +2959,25 @@ A68_INT  WFKAOSF;  /* YIELD */
 A68_INT  XFKAOSF;  /* YIELD */
 A68_158  YFKAOSF;  /* collateral clause result */
 A_PROC_ENTRY(get_ctname);
- /* line 630: */
- /* line 637: */
+ /* line 632: */
+ /* line 639: */
 { 
 IFKAOSF = ((*Index)>=Values.upb);
 if ( ! IFKAOSF )
-{ /* line 638: */
+{ /* line 640: */
 JFKAOSF = ((*Index)+1) ;
 IFKAOSF = ((*(&((&A_VINDEX(Values,JFKAOSF))->Sort)))==0);
 }
 if ( IFKAOSF )
 { 
 KFKAOSF.Context = Default_contextname;
- /* line 639: */
+ /* line 641: */
 KFKAOSF.Import = CIDAOSF_nullstr;
 LFKAOSF = KFKAOSF;
 } 
 else
 { 
- /* line 640: */
+ /* line 642: */
 MFKAOSF = ((*Index)+1) ;
 if ( MEKAOSF_is_contextname((*(&A_VINDEX(Values,MFKAOSF)))) )
 { 
@@ -2984,32 +2985,32 @@ OFKAOSF = (*Index)+=1 ;
 NFKAOSF.Context = (*(&((&A_VINDEX(Values,OFKAOSF))->Value)));
 NFKAOSF.Import = CIDAOSF_nullstr;
 PFKAOSF_ans = NFKAOSF;
- /* line 641: */
+ /* line 643: */
 QFKAOSF = ((*Index)<Values.upb);
 if ( QFKAOSF )
-{ /* line 642: */
+{ /* line 644: */
 RFKAOSF = ((*Index)+1) ;
 QFKAOSF = PEKAOSF_is_importname((*(&A_VINDEX(Values,RFKAOSF))));
 }
 if ( QFKAOSF )
 { 
- /* line 643: */
+ /* line 645: */
 SFKAOSF = (*Index)+=1 ;
 TFKAOSF = (&((&PFKAOSF_ans)->Import)) ;
 (*TFKAOSF) = (*(&((&A_VINDEX(Values,SFKAOSF))->Value)));
 } 
- /* line 644: */
- /* line 645: */
+ /* line 646: */
+ /* line 647: */
 LFKAOSF = PFKAOSF_ans;
 } 
 else
 { 
- /* line 646: */
+ /* line 648: */
 UFKAOSF = ((*Index)+1) ;
 if ( PEKAOSF_is_importname((*(&A_VINDEX(Values,UFKAOSF)))) )
 { 
 VFKAOSF.Context = Default_contextname;
- /* line 647: */
+ /* line 649: */
 WFKAOSF = (*Index)+=1 ;
 VFKAOSF.Import = (*(&((&A_VINDEX(Values,WFKAOSF))->Value)));
 LFKAOSF = VFKAOSF;
@@ -3018,10 +3019,10 @@ else
 { 
 XFKAOSF = ((*Index)+1) ;
 GMGAOSF_check_value((*(&A_VINDEX(Values,XFKAOSF))), GDKAOSF_contextname_no, Msg);
- /* line 648: */
-YFKAOSF.Context = CIDAOSF_nullstr;
- /* line 649: */
  /* line 650: */
+YFKAOSF.Context = CIDAOSF_nullstr;
+ /* line 651: */
+ /* line 652: */
 YFKAOSF.Import = CIDAOSF_nullstr;
 LFKAOSF = YFKAOSF;
 } 
@@ -3056,13 +3057,13 @@ A68_BOOL  XGKAOSF;  /* clause result */
 A68_VC  YGKAOSF;  /* clause result */
 A68_VC  BHKAOSF;  /* avoid structure result */
 A_PROC_ENTRY(read_switch);
- /* line 667: */
+ /* line 669: */
 { 
 CNGAOSF_read_token( SMGAOSF_first_and_check, UGKAOSF, Msg, &VGKAOSF );
 WGKAOSF_first_try = VGKAOSF;
- /* line 668: */
- /* line 669: */
  /* line 670: */
+ /* line 671: */
+ /* line 672: */
 XGKAOSF = WMJAOSF_legal_read(WGKAOSF_first_try);
 if ( XGKAOSF )
 { 
@@ -3070,7 +3071,7 @@ YGKAOSF = WGKAOSF_first_try;
 } 
 else
 { 
- /* line 671: */
+ /* line 673: */
 CNGAOSF_read_token( SMGAOSF_first_and_check, AHKAOSF, Msg, &BHKAOSF );
 YGKAOSF = BHKAOSF;
 } 
@@ -3090,7 +3091,7 @@ A_PROC_EXIT(is_switch);
 return( EHKAOSF );
 } 
 #undef NL
- /* line 677: */
+ /* line 679: */
 
 A68_VOID  JHKAOSF_set_switch(A68_176  V, A68_BOOL * Flag, A68_VC  Name, A68_97  Msg, A68_VC  *ReturnedValue)
 { 
@@ -3126,16 +3127,16 @@ A68_VC  YIKAOSF;  /* YIELD */
 A68_85  ZIKAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  AJKAOSF;  /* avoid structure result */
 A_PROC_ENTRY(set_switch);
- /* line 679: */
- /* line 680: */
+ /* line 681: */
+ /* line 682: */
 if ( DHKAOSF_is_switch(V) )
 { 
- /* line 681: */
+ /* line 683: */
 if ( A_VC_EQ(V.Value,LHKAOSF) )
 { 
 MHKAOSF.data[0] = A_UNITE(NHKAOSF,mode7,7,Name);
- /* line 682: */
- /* line 683: */
+ /* line 684: */
+ /* line 685: */
 if ( (*Flag) )
 { 
 PHKAOSF = ' ' ;
@@ -3144,25 +3145,25 @@ MHKAOSF.data[1] = A_UNITE(OHKAOSF,mode6,6,PHKAOSF);
 else
 { 
 (*Flag) = A68_TRUE;
- /* line 684: */
+ /* line 686: */
 RHKAOSF = ':' ;
 MHKAOSF.data[1] = A_UNITE(QHKAOSF,mode6,6,RHKAOSF);
 } 
 VHKAOSF = THKAOSF ;
 MHKAOSF.data[2] = A_UNITE(UHKAOSF,mode7,7,VHKAOSF);
- /* line 685: */
+ /* line 687: */
 SDEAOSF_oneline( A_HISVEC(XHKAOSF,MHKAOSF,3,A68_52 ), &YHKAOSF );
 WHKAOSF = YHKAOSF;
 } 
 else
 { 
 ZHKAOSF.data[0] = A_UNITE(AIKAOSF,mode7,7,Name);
- /* line 686: */
+ /* line 688: */
 if ( (*Flag) )
 { 
 (*Flag) = A68_FALSE;
- /* line 687: */
- /* line 688: */
+ /* line 689: */
+ /* line 690: */
 CIKAOSF = ':' ;
 ZHKAOSF.data[1] = A_UNITE(BIKAOSF,mode6,6,CIKAOSF);
 } 
@@ -3173,8 +3174,8 @@ ZHKAOSF.data[1] = A_UNITE(DIKAOSF,mode6,6,EIKAOSF);
 } 
 IIKAOSF = GIKAOSF ;
 ZHKAOSF.data[2] = A_UNITE(HIKAOSF,mode7,7,IIKAOSF);
- /* line 689: */
- /* line 690: */
+ /* line 691: */
+ /* line 692: */
 SDEAOSF_oneline( A_HISVEC(JIKAOSF,ZHKAOSF,3,A68_52 ), &KIKAOSF );
 WHKAOSF = KIKAOSF;
 } 
@@ -3182,26 +3183,26 @@ WHKAOSF = KIKAOSF;
 else
 { 
 GMGAOSF_check_value(V, 0, Msg);
- /* line 691: */
+ /* line 693: */
 LIKAOSF.data[0] = A_UNITE(MIKAOSF,mode7,7,Name);
 QIKAOSF = OIKAOSF ;
 LIKAOSF.data[1] = A_UNITE(PIKAOSF,mode7,7,QIKAOSF);
- /* line 692: */
+ /* line 694: */
 if ( (*Flag) )
 { 
 (*Flag) = A68_FALSE;
- /* line 693: */
+ /* line 695: */
 UIKAOSF = SIKAOSF ;
 LIKAOSF.data[2] = A_UNITE(TIKAOSF,mode7,7,UIKAOSF);
 } 
 else
 { 
 (*Flag) = A68_TRUE;
- /* line 694: */
+ /* line 696: */
 YIKAOSF = WIKAOSF ;
 LIKAOSF.data[2] = A_UNITE(XIKAOSF,mode7,7,YIKAOSF);
 } 
- /* line 695: */
+ /* line 697: */
 SDEAOSF_oneline( A_HISVEC(ZIKAOSF,LIKAOSF,3,A68_52 ), &AJKAOSF );
 WHKAOSF = AJKAOSF;
 } 
@@ -3255,13 +3256,13 @@ A68_VC  XKKAOSF;  /* avoid structure result */
 A68_46  YKKAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_INT  ZKKAOSF;  /* clause result */
 A_PROC_ENTRY(get_word);
- /* line 713: */
- /* line 714: */
+ /* line 715: */
+ /* line 716: */
 { 
 RJKAOSF_index = 0;
 SJKAOSF_count = 0;
- /* line 715: */
- /* line 716: */
+ /* line 717: */
+ /* line 718: */
 if ( LJKAOSF_is_word(V) )
 { 
 VJKAOSF = Words.upb -1;
@@ -3271,27 +3272,27 @@ for (;VJKAOSF-- >= 0;
 ) )
 {
 TJKAOSF_test = *UJKAOSF;
- /* line 717: */
+ /* line 719: */
 if ( !((RJKAOSF_index==0)) ) break;
 SJKAOSF_count+=1;
- /* line 718: */
+ /* line 720: */
 if ( A_VC_EQ(TJKAOSF_test,V.Value) )
 { 
- /* line 719: */
+ /* line 721: */
 RJKAOSF_index = SJKAOSF_count;
 } 
 }
- /* line 720: */
-} 
- /* line 721: */
  /* line 722: */
+} 
+ /* line 723: */
+ /* line 724: */
 if ( (RJKAOSF_index==0) )
 { 
 XJKAOSF = 1 ;
 ZJKAOSF = A_VINDEX(Words,XJKAOSF) ;
 SDEAOSF_oneline( A_HVEC(AKKAOSF,A_UNITE(YJKAOSF,mode7,7,ZJKAOSF),A68_52 ), &BKKAOSF );
 WJKAOSF_str = BKKAOSF;
- /* line 723: */
+ /* line 725: */
 EKKAOSF = A_VTRIM(DKKAOSF,(Words),A_VTSCRIPT(&(DKKAOSF.upb),(Words).upb,2,(Words).upb)) ;
 GKKAOSF = EKKAOSF.upb -1;
 FKKAOSF = EKKAOSF.data;
@@ -3307,16 +3308,16 @@ HKKAOSF.data[2] = A_UNITE(NKKAOSF,mode7,7,CKKAOSF_w);
 SDEAOSF_oneline( A_HISVEC(OKKAOSF,HKKAOSF,3,A68_52 ), &PKKAOSF );
 WJKAOSF_str = PKKAOSF;
 }
- /* line 724: */
+ /* line 726: */
 QKKAOSF.data[0] = A_UNITE(RKKAOSF,mode7,7,WJKAOSF_str);
 VKKAOSF = TKKAOSF ;
 QKKAOSF.data[1] = A_UNITE(UKKAOSF,mode7,7,VKKAOSF);
- /* line 725: */
+ /* line 727: */
 SDEAOSF_oneline( A_HISVEC(WKKAOSF,QKKAOSF,2,A68_52 ), &XKKAOSF );
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(YKKAOSF,XKKAOSF,A68_VC )),(MUAAOSF_user, A_HVEC(YKKAOSF,XKKAOSF,A68_VC ),(Msg).nonlocals));
 } 
- /* line 726: */
- /* line 727: */
+ /* line 728: */
+ /* line 729: */
 ZKKAOSF = RJKAOSF_index;
 } 
 A_PROC_EXIT(get_word);
@@ -3387,22 +3388,22 @@ A68_VC  ZNKAOSF;  /* avoid structure result */
 A68_46  AOKAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_VC  BOKAOSF;  /* avoid structure result */
 A_PROC_ENTRY(read_trim);
- /* line 751: */
- /* line 752: */
+ /* line 753: */
+ /* line 754: */
 if ( (GXFAOSF_first_char(Msg)=='[') )
 { 
 { 
 CUJAOSF_read_int_basic( UMGAOSF_get_first, Msg, &MLKAOSF );
 NLKAOSF_int1 = MLKAOSF;
- /* line 753: */
- /* line 754: */
+ /* line 755: */
+ /* line 756: */
 OLKAOSF = WMJAOSF_legal_read(NLKAOSF_int1);
 if ( OLKAOSF )
 { 
 (*BVFAOSF_rdcharno)-=1;
- /* line 755: */
- /* line 756: */
  /* line 757: */
+ /* line 758: */
+ /* line 759: */
 PLKAOSF = NLKAOSF_int1;
 } 
 else
@@ -3412,14 +3413,14 @@ PLKAOSF = QLKAOSF;
 } 
 } 
 RLKAOSF_first = PLKAOSF;
- /* line 758: */
- /* line 759: */
+ /* line 760: */
+ /* line 761: */
 if ( (GXFAOSF_first_char(Msg)=='.') )
 { 
- /* line 760: */
+ /* line 762: */
 if ( (DXFAOSF_next_char(Msg)=='.') )
 { 
- /* line 761: */
+ /* line 763: */
 SLKAOSF = A68_TRUE;
 } 
 else
@@ -3429,19 +3430,19 @@ TLKAOSF.data[0] = A_UNITE(WLKAOSF,mode7,7,XLKAOSF);
 TLKAOSF.data[1] = A_UNITE(YLKAOSF,mode7,7,CLKAOSF_trim_str);
 SDEAOSF_oneline( A_HISVEC(ZLKAOSF,TLKAOSF,2,A68_52 ), &AMKAOSF );
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(BMKAOSF,AMKAOSF,A68_VC )),(MUAAOSF_user, A_HVEC(BMKAOSF,AMKAOSF,A68_VC ),(Msg).nonlocals));
- /* line 762: */
- /* line 763: */
  /* line 764: */
+ /* line 765: */
+ /* line 766: */
 SLKAOSF = A68_FALSE;
 } 
 } 
 else
 { 
 (*BVFAOSF_rdcharno)-=1;
- /* line 765: */
- /* line 766: */
  /* line 767: */
  /* line 768: */
+ /* line 769: */
+ /* line 770: */
 SLKAOSF = A68_FALSE;
 } 
 if ( SLKAOSF )
@@ -3449,15 +3450,15 @@ if ( SLKAOSF )
 { 
 CUJAOSF_read_int_basic( UMGAOSF_get_first, Msg, &CMKAOSF );
 DMKAOSF_int2 = CMKAOSF;
- /* line 769: */
- /* line 770: */
+ /* line 771: */
+ /* line 772: */
 EMKAOSF = WMJAOSF_legal_read(DMKAOSF_int2);
 if ( EMKAOSF )
 { 
 (*BVFAOSF_rdcharno)-=1;
- /* line 771: */
- /* line 772: */
  /* line 773: */
+ /* line 774: */
+ /* line 775: */
 FMKAOSF = DMKAOSF_int2;
 } 
 else
@@ -3467,8 +3468,8 @@ FMKAOSF = GMKAOSF;
 } 
 } 
 HMKAOSF_second = FMKAOSF;
- /* line 774: */
- /* line 775: */
+ /* line 776: */
+ /* line 777: */
 if ( (GXFAOSF_first_char(Msg)==']') )
 { 
 IMKAOSF.data[0] = A_UNITE(JMKAOSF,mode7,7,RLKAOSF_first);
@@ -3476,10 +3477,10 @@ IMKAOSF.data[1] = A_UNITE(KMKAOSF,mode6,6,JLKAOSF_trimsep);
 IMKAOSF.data[2] = A_UNITE(LMKAOSF,mode7,7,HMKAOSF_second);
 SDEAOSF_oneline( A_HISVEC(MMKAOSF,IMKAOSF,3,A68_52 ), &NMKAOSF );
 OMKAOSF_ans = NMKAOSF;
- /* line 776: */
-DXFAOSF_next_char(Msg);
- /* line 777: */
  /* line 778: */
+DXFAOSF_next_char(Msg);
+ /* line 779: */
+ /* line 780: */
 LLGAOSF_check_read( OMKAOSF_ans, CLKAOSF_trim_str, Msg, &QMKAOSF );
 PMKAOSF = QMKAOSF;
 } 
@@ -3490,59 +3491,59 @@ RMKAOSF.data[0] = A_UNITE(UMKAOSF,mode7,7,VMKAOSF);
 RMKAOSF.data[1] = A_UNITE(WMKAOSF,mode7,7,CLKAOSF_trim_str);
 SDEAOSF_oneline( A_HISVEC(XMKAOSF,RMKAOSF,2,A68_52 ), &YMKAOSF );
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(ZMKAOSF,YMKAOSF,A68_VC )),(MUAAOSF_user, A_HVEC(ZMKAOSF,YMKAOSF,A68_VC ),(Msg).nonlocals));
- /* line 779: */
- /* line 780: */
  /* line 781: */
+ /* line 782: */
+ /* line 783: */
 PMKAOSF = WHDAOSF_nilstr;
 } 
 } 
 else
 { 
- /* line 782: */
+ /* line 784: */
 if ( A_VC_NE(RLKAOSF_first,A_HVEC(ANKAOSF,'.',A68_CHAR )) )
 { 
- /* line 783: */
- /* line 784: */
+ /* line 785: */
+ /* line 786: */
 if ( (GXFAOSF_first_char(Msg)==']') )
 { 
 DXFAOSF_next_char(Msg);
- /* line 785: */
+ /* line 787: */
 BNKAOSF.data[0] = A_UNITE(CNKAOSF,mode7,7,RLKAOSF_first);
 BNKAOSF.data[1] = A_UNITE(DNKAOSF,mode6,6,JLKAOSF_trimsep);
 BNKAOSF.data[2] = A_UNITE(ENKAOSF,mode7,7,RLKAOSF_first);
- /* line 786: */
+ /* line 788: */
 SDEAOSF_oneline( A_HISVEC(FNKAOSF,BNKAOSF,3,A68_52 ), &GNKAOSF );
 LLGAOSF_check_read( GNKAOSF, CLKAOSF_trim_str, Msg, &HNKAOSF );
 PMKAOSF = HNKAOSF;
 } 
 else
 { 
- /* line 787: */
+ /* line 789: */
 MNKAOSF = KNKAOSF ;
 INKAOSF.data[0] = A_UNITE(LNKAOSF,mode7,7,MNKAOSF);
 INKAOSF.data[1] = A_UNITE(NNKAOSF,mode7,7,CLKAOSF_trim_str);
 SDEAOSF_oneline( A_HISVEC(ONKAOSF,INKAOSF,2,A68_52 ), &PNKAOSF );
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(QNKAOSF,PNKAOSF,A68_VC )),(MUAAOSF_user, A_HVEC(QNKAOSF,PNKAOSF,A68_VC ),(Msg).nonlocals));
- /* line 788: */
- /* line 789: */
  /* line 790: */
+ /* line 791: */
+ /* line 792: */
 PMKAOSF = WHDAOSF_nilstr;
 } 
 } 
 else
 { 
- /* line 791: */
+ /* line 793: */
 RNKAOSF.data[0] = A_UNITE(SNKAOSF,mode7,7,WQJAOSF_int_str);
- /* line 792: */
+ /* line 794: */
 WNKAOSF = UNKAOSF ;
 RNKAOSF.data[1] = A_UNITE(VNKAOSF,mode7,7,WNKAOSF);
 RNKAOSF.data[2] = A_UNITE(XNKAOSF,mode7,7,CLKAOSF_trim_str);
 SDEAOSF_oneline( A_HISVEC(YNKAOSF,RNKAOSF,3,A68_52 ), &ZNKAOSF );
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(AOKAOSF,ZNKAOSF,A68_VC )),(MUAAOSF_user, A_HVEC(AOKAOSF,ZNKAOSF,A68_VC ),(Msg).nonlocals));
- /* line 793: */
- /* line 794: */
  /* line 795: */
  /* line 796: */
+ /* line 797: */
+ /* line 798: */
 PMKAOSF = WHDAOSF_nilstr;
 } 
 } 
@@ -3568,9 +3569,9 @@ return( EOKAOSF );
 } 
 #undef NL
 
-A68_VOID  IOKAOSF_get_trim(A68_176  V, A68_266  Bounds, A68_97  Msg, A68_266  *ReturnedValue)
+A68_VOID  IOKAOSF_get_trim(A68_176  V, A68_267  Bounds, A68_97  Msg, A68_267  *ReturnedValue)
 { 
-A68_266  JOKAOSF_ans;
+A68_267  JOKAOSF_ans;
 A68_VC  KOKAOSF_trim;
 A68_INT  LOKAOSF_sep;
 A68_INT  MOKAOSF_count;
@@ -3615,90 +3616,90 @@ A68_INT  GQKAOSF;  /* YIELD */
 A68_85  HQKAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  IQKAOSF;  /* avoid structure result */
 A68_46  JQKAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_266  KQKAOSF;  /* clause result */
+A68_267  KQKAOSF;  /* clause result */
 A_PROC_ENTRY(get_trim);
- /* line 804: */
  /* line 806: */
+ /* line 808: */
 { 
 GMGAOSF_check_value(V, GLKAOSF_trim_no, Msg);
- /* line 807: */
-JOKAOSF_ans = Bounds;
- /* line 808: */
-KOKAOSF_trim = V.Value;
  /* line 809: */
+JOKAOSF_ans = Bounds;
+ /* line 810: */
+KOKAOSF_trim = V.Value;
+ /* line 811: */
 LOKAOSF_sep = 0;
 MOKAOSF_count = 0;
- /* line 810: */
+ /* line 812: */
 OOKAOSF = KOKAOSF_trim.upb -1;
 NOKAOSF_c = KOKAOSF_trim.data;
 for (;OOKAOSF-- >= 0;
 (NOKAOSF_c++
 ) )
 {
- /* line 811: */
+ /* line 813: */
 if ( !((LOKAOSF_sep==0)) ) break;
 MOKAOSF_count+=1;
- /* line 812: */
+ /* line 814: */
 if ( ((*NOKAOSF_c)==JLKAOSF_trimsep) )
 { 
- /* line 813: */
+ /* line 815: */
 LOKAOSF_sep = MOKAOSF_count;
 } 
 }
- /* line 814: */
+ /* line 816: */
 if ( (LOKAOSF_sep==0) )
 { 
 A_CALLPROC(Msg,(IUAAOSF_system, A_HVEC(ROKAOSF,QOKAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(ROKAOSF,QOKAOSF,A68_VC ),(Msg).nonlocals));
 } 
- /* line 815: */
+ /* line 817: */
 TOKAOSF_int1 = A_VTRIM(SOKAOSF,(KOKAOSF_trim),A_VTSCRIPT(&(SOKAOSF.upb),(KOKAOSF_trim).upb,1,(LOKAOSF_sep-1)));
 VOKAOSF_int2 = A_VTRIM(UOKAOSF,(KOKAOSF_trim),A_VTSCRIPT(&(UOKAOSF.upb),(KOKAOSF_trim).upb,(LOKAOSF_sep+1),(KOKAOSF_trim).upb));
- /* line 816: */
+ /* line 818: */
 if ( A_VC_NE(TOKAOSF_int1,A_HVEC(WOKAOSF,'.',A68_CHAR )) )
 { 
 XOKAOSF = (&((&JOKAOSF_ans)->Lwb)) ;
 (*XOKAOSF) = KJHAOSF_charstoint(TOKAOSF_int1, A_HEAP(A68_BOOL ));
 } 
- /* line 817: */
+ /* line 819: */
 if ( A_VC_NE(VOKAOSF_int2,A_HVEC(YOKAOSF,'.',A68_CHAR )) )
 { 
 ZOKAOSF = (&((&JOKAOSF_ans)->Upb)) ;
 (*ZOKAOSF) = KJHAOSF_charstoint(VOKAOSF_int2, A_HEAP(A68_BOOL ));
 } 
- /* line 818: */
- /* line 819: */
+ /* line 820: */
+ /* line 821: */
 if ( ((*(&((&JOKAOSF_ans)->Lwb)))<Bounds.Lwb) )
 { 
- /* line 820: */
+ /* line 822: */
 CPKAOSF = (*(&((&JOKAOSF_ans)->Lwb))) ;
 APKAOSF.data[0] = A_UNITE(BPKAOSF,mode1,1,CPKAOSF);
 GPKAOSF = EPKAOSF ;
 APKAOSF.data[1] = A_UNITE(FPKAOSF,mode7,7,GPKAOSF);
 IPKAOSF = Bounds.Lwb ;
 APKAOSF.data[2] = A_UNITE(HPKAOSF,mode1,1,IPKAOSF);
- /* line 821: */
+ /* line 823: */
 SDEAOSF_oneline( A_HISVEC(JPKAOSF,APKAOSF,3,A68_52 ), &KPKAOSF );
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(LPKAOSF,KPKAOSF,A68_VC )),(MUAAOSF_user, A_HVEC(LPKAOSF,KPKAOSF,A68_VC ),(Msg).nonlocals));
 } 
 else
 { 
- /* line 822: */
+ /* line 824: */
 if ( ((*(&((&JOKAOSF_ans)->Upb)))>Bounds.Upb) )
 { 
- /* line 823: */
+ /* line 825: */
 OPKAOSF = (*(&((&JOKAOSF_ans)->Upb))) ;
 MPKAOSF.data[0] = A_UNITE(NPKAOSF,mode1,1,OPKAOSF);
 SPKAOSF = QPKAOSF ;
 MPKAOSF.data[1] = A_UNITE(RPKAOSF,mode7,7,SPKAOSF);
 UPKAOSF = Bounds.Upb ;
 MPKAOSF.data[2] = A_UNITE(TPKAOSF,mode1,1,UPKAOSF);
- /* line 824: */
+ /* line 826: */
 SDEAOSF_oneline( A_HISVEC(VPKAOSF,MPKAOSF,3,A68_52 ), &WPKAOSF );
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(XPKAOSF,WPKAOSF,A68_VC )),(MUAAOSF_user, A_HVEC(XPKAOSF,WPKAOSF,A68_VC ),(Msg).nonlocals));
 } 
 else
 { 
- /* line 825: */
+ /* line 827: */
 if ( ((*(&((&JOKAOSF_ans)->Upb)))<(*(&((&JOKAOSF_ans)->Lwb)))) )
 { 
 AQKAOSF = (*(&((&JOKAOSF_ans)->Upb))) ;
@@ -3707,14 +3708,14 @@ EQKAOSF = CQKAOSF ;
 YPKAOSF.data[1] = A_UNITE(DQKAOSF,mode7,7,EQKAOSF);
 GQKAOSF = (*(&((&JOKAOSF_ans)->Lwb))) ;
 YPKAOSF.data[2] = A_UNITE(FQKAOSF,mode1,1,GQKAOSF);
- /* line 826: */
+ /* line 828: */
 SDEAOSF_oneline( A_HISVEC(HQKAOSF,YPKAOSF,3,A68_52 ), &IQKAOSF );
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(JQKAOSF,IQKAOSF,A68_VC )),(MUAAOSF_user, A_HVEC(JQKAOSF,IQKAOSF,A68_VC ),(Msg).nonlocals));
 } 
 } 
 } 
- /* line 827: */
- /* line 828: */
+ /* line 829: */
+ /* line 830: */
 KQKAOSF = JOKAOSF_ans;
 } 
 A_PROC_EXIT(get_trim);
@@ -3741,46 +3742,46 @@ A68_VC  PRKAOSF;  /* clause result */
 A68_VC  QRKAOSF;  /* OPERATORS - trim index */
 A68_VC  RRKAOSF;  /* avoid structure result */
 A_PROC_ENTRY(delimited_read);
- /* line 844: */
  /* line 846: */
+ /* line 848: */
 { 
 A_CLOSURE( ZQKAOSF_generator, ARKAOSF_generator, BRKAOSF_generator );
 A_CALLPROC(ZQKAOSF_generator,(A68_TRUE, &FRKAOSF),(A68_TRUE, &FRKAOSF,(ZQKAOSF_generator).nonlocals));
 ERKAOSF_ans = FRKAOSF;
- /* line 847: */
+ /* line 849: */
 GRKAOSF_index = 0;
- /* line 848: */
+ /* line 850: */
 for ( ;; )
 { 
- /* line 849: */
- /* line 850: */
+ /* line 851: */
+ /* line 852: */
 if ( ((*BVFAOSF_rdcharno)==(*AVFAOSF_rdcharend)) )
 { 
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(HRKAOSF,Missing,A68_VC )),(MUAAOSF_user, A_HVEC(HRKAOSF,Missing,A68_VC ),(Msg).nonlocals));
- /* line 851: */
+ /* line 853: */
 IRKAOSF = A68_FALSE;
 } 
 else
 { 
 JRKAOSF_c = DXFAOSF_next_char(Msg);
- /* line 852: */
- /* line 853: */
+ /* line 854: */
+ /* line 855: */
 if ( (JRKAOSF_c==Delim) )
 { 
- /* line 854: */
+ /* line 856: */
 if ( (DXFAOSF_next_char(Msg)==Delim) )
 { 
 KRKAOSF = GRKAOSF_index+=1 ;
 LRKAOSF = (&A_VINDEX(ERKAOSF_ans,KRKAOSF)) ;
 (*LRKAOSF) = JRKAOSF_c;
- /* line 855: */
- /* line 856: */
+ /* line 857: */
+ /* line 858: */
 IRKAOSF = A68_TRUE;
 } 
 else
 { 
- /* line 857: */
- /* line 858: */
+ /* line 859: */
+ /* line 860: */
 IRKAOSF = A68_FALSE;
 } 
 } 
@@ -3789,9 +3790,9 @@ else
 MRKAOSF = GRKAOSF_index+=1 ;
 NRKAOSF = (&A_VINDEX(ERKAOSF_ans,MRKAOSF)) ;
 (*NRKAOSF) = JRKAOSF_c;
- /* line 859: */
- /* line 860: */
  /* line 861: */
+ /* line 862: */
+ /* line 863: */
 IRKAOSF = A68_TRUE;
 } 
 } 
@@ -3799,8 +3800,8 @@ ORKAOSF = IRKAOSF;
 if ( !ORKAOSF ) break;
 /*SKIP*/;
 }
- /* line 862: */
- /* line 863: */
+ /* line 864: */
+ /* line 865: */
 ZCAAOSF_makervc( A_VTRIM(QRKAOSF,(ERKAOSF_ans),A_VTSCRIPT(&(QRKAOSF.upb),(ERKAOSF_ans).upb,1,GRKAOSF_index)), &RRKAOSF );
 PRKAOSF = RRKAOSF;
 } 
@@ -3817,14 +3818,14 @@ A68_VC  XRKAOSF;  /* avoid structure result */
 A68_VC  YRKAOSF;  /* avoid structure result */
 A68_VC  ZRKAOSF;  /* avoid structure result */
 A_PROC_ENTRY(read_quoted_string);
- /* line 867: */
- /* line 868: */
-if ( (GXFAOSF_first_char(Msg)=='\"') )
-{ 
  /* line 869: */
  /* line 870: */
+if ( (GXFAOSF_first_char(Msg)=='\"') )
+{ 
  /* line 871: */
  /* line 872: */
+ /* line 873: */
+ /* line 874: */
 XQKAOSF_delimited_read( '\"', A_VC_PLUS(QQKAOSF_quoted_string_str,WRKAOSF), Msg, &XRKAOSF );
 LLGAOSF_check_read( XRKAOSF, QQKAOSF_quoted_string_str, Msg, &YRKAOSF );
 VRKAOSF = YRKAOSF;
@@ -3854,12 +3855,12 @@ A68_VOID  FSKAOSF_get_quoted_string(A68_176  V, A68_97  Msg, A68_VC  *ReturnedVa
 { 
 A68_VC  GSKAOSF;  /* clause result */
 A_PROC_ENTRY(get_quoted_string);
- /* line 878: */
- /* line 879: */
-{ 
-GMGAOSF_check_value(V, LQKAOSF_quoted_string_no, Msg);
  /* line 880: */
  /* line 881: */
+{ 
+GMGAOSF_check_value(V, LQKAOSF_quoted_string_no, Msg);
+ /* line 882: */
+ /* line 883: */
 GSKAOSF = V.Value;
 } 
 A_PROC_EXIT(get_quoted_string);
@@ -3877,18 +3878,18 @@ A68_VC  VSKAOSF;  /* avoid structure result */
 A68_VC  WSKAOSF;  /* avoid structure result */
 A68_VC  XSKAOSF;  /* avoid structure result */
 A_PROC_ENTRY(read_character);
- /* line 894: */
+ /* line 896: */
 { 
 SSKAOSF_c = GXFAOSF_first_char(Msg);
- /* line 895: */
- /* line 896: */
+ /* line 897: */
+ /* line 898: */
 TSKAOSF = (SSKAOSF_c!=QTFAOSF_sep);
 if ( TSKAOSF )
 { 
 DXFAOSF_next_char(Msg);
- /* line 897: */
- /* line 898: */
  /* line 899: */
+ /* line 900: */
+ /* line 901: */
 NCAAOSF_makervc( SSKAOSF_c, &VSKAOSF );
 LLGAOSF_check_read( VSKAOSF, MSKAOSF_character_str, Msg, &WSKAOSF );
 USKAOSF = WSKAOSF;
@@ -3921,12 +3922,12 @@ A68_CHAR  ETKAOSF;  /* clause result */
 A68_VC  FTKAOSF;  /* OPERATORS - simple index */
 A68_INT  GTKAOSF;  /* YIELD */
 A_PROC_ENTRY(get_character);
- /* line 905: */
- /* line 906: */
-{ 
-GMGAOSF_check_value(V, HSKAOSF_character_no, Msg);
  /* line 907: */
  /* line 908: */
+{ 
+GMGAOSF_check_value(V, HSKAOSF_character_no, Msg);
+ /* line 909: */
+ /* line 910: */
 FTKAOSF = V.Value ;
 GTKAOSF = 1 ;
 ETKAOSF = (*(&A_VINDEX(FTKAOSF,GTKAOSF)));
@@ -3943,7 +3944,7 @@ A68_181  JTKAOSF;  /* OPERATORS - mode -> union mode */
 A68_182  KTKAOSF;  /* procedure value */
 A68_VC  LTKAOSF;  /* avoid structure result */
 A68_VC  MTKAOSF;  /* avoid structure result */
-A68_274  NTKAOSF;  /* collateral clause result */
+A68_275  NTKAOSF;  /* collateral clause result */
 A68_181  OTKAOSF;  /* OPERATORS - mode -> union mode */
 A68_182  PTKAOSF;  /* YIELD */
 A68_182  QTKAOSF;  /* procedure value */
@@ -3974,11 +3975,11 @@ A68_182  OUKAOSF;  /* procedure value */
 A68_181  PUKAOSF;  /* OPERATORS - mode -> union mode */
 A68_182  QUKAOSF;  /* YIELD */
 A68_182  RUKAOSF;  /* procedure value */
-A68_273  SUKAOSF;  /* collateral clause result */
+A68_274  SUKAOSF;  /* collateral clause result */
 A68_174  TUKAOSF;  /* OPERATORS - istruct -> vector */
 A68_173  UUKAOSF;  /* avoid structure result */
 A68_181  VUKAOSF;  /* OPERATORS - mode -> union mode */
-A68_273  WUKAOSF;  /* collateral clause result */
+A68_274  WUKAOSF;  /* collateral clause result */
 A68_174  XUKAOSF;  /* OPERATORS - istruct -> vector */
 A68_173  YUKAOSF;  /* avoid structure result */
 A68_181  ZUKAOSF;  /* OPERATORS - mode -> union mode */
@@ -4015,26 +4016,26 @@ A68_184 * DWKAOSF;  /* clause result */
 A68_192  EWKAOSF;  /* OPERATORS - istruct -> vector */
 A68_184 * FWKAOSF;  /* YIELD */
 A_PROC_ENTRY(make_kernel_readers);
- /* line 915: */
+ /* line 917: */
 ITKAOSF.Rule.Sort = (&EOGAOSF_command_name_no);
- /* line 916: */
+ /* line 918: */
 KTKAOSF.fn.fn_global = IOGAOSF_read_command_name;
 KTKAOSF.nonlocals = A68_NIL;
 ITKAOSF.Rule.Reader = A_UNITE(JTKAOSF,mode1,1,KTKAOSF);
 ZCAAOSF_makervc( AOGAOSF_command_name_str, &LTKAOSF );
 ITKAOSF.Rule.Description = LTKAOSF;
- /* line 917: */
+ /* line 919: */
 ZCAAOSF_makervc( DOGAOSF_command_name_help, &MTKAOSF );
 ITKAOSF.Rule.Help = MTKAOSF;
 ITKAOSF.Rest = (A68_184 *)A68_NIL;
- /* line 918: */
+ /* line 920: */
 NTKAOSF.data[0].No = (&SNJAOSF_plus_no);
 QTKAOSF.fn.fn_global = ROJAOSF_read_plus;
 QTKAOSF.nonlocals = A68_NIL;
 PTKAOSF = QTKAOSF ;
 NTKAOSF.data[0].New = A_UNITE(OTKAOSF,mode1,1,PTKAOSF);
 NTKAOSF.data[0].Name = DNJAOSF_plus_str;
- /* line 919: */
+ /* line 921: */
 NTKAOSF.data[0].Help = CIDAOSF_nullstr;
 NTKAOSF.data[1].No = (&TNJAOSF_minus_no);
 TTKAOSF.fn.fn_global = VOJAOSF_read_minus;
@@ -4042,7 +4043,7 @@ TTKAOSF.nonlocals = A68_NIL;
 STKAOSF = TTKAOSF ;
 NTKAOSF.data[1].New = A_UNITE(RTKAOSF,mode1,1,STKAOSF);
 NTKAOSF.data[1].Name = FNJAOSF_minus_str;
- /* line 920: */
+ /* line 922: */
 NTKAOSF.data[1].Help = CIDAOSF_nullstr;
 NTKAOSF.data[2].No = (&UNJAOSF_period_no);
 WTKAOSF.fn.fn_global = ZOJAOSF_read_period;
@@ -4050,7 +4051,7 @@ WTKAOSF.nonlocals = A68_NIL;
 VTKAOSF = WTKAOSF ;
 NTKAOSF.data[2].New = A_UNITE(UTKAOSF,mode1,1,VTKAOSF);
 NTKAOSF.data[2].Name = HNJAOSF_period_str;
- /* line 921: */
+ /* line 923: */
 NTKAOSF.data[2].Help = CIDAOSF_nullstr;
 NTKAOSF.data[3].No = (&VNJAOSF_semicolon_no);
 ZTKAOSF.fn.fn_global = DPJAOSF_read_semicolon;
@@ -4058,7 +4059,7 @@ ZTKAOSF.nonlocals = A68_NIL;
 YTKAOSF = ZTKAOSF ;
 NTKAOSF.data[3].New = A_UNITE(XTKAOSF,mode1,1,YTKAOSF);
 NTKAOSF.data[3].Name = JNJAOSF_semicolon_str;
- /* line 922: */
+ /* line 924: */
 NTKAOSF.data[3].Help = CIDAOSF_nullstr;
 NTKAOSF.data[4].No = (&XNJAOSF_openrnd_no);
 CUKAOSF.fn.fn_global = LPJAOSF_read_openrnd;
@@ -4066,7 +4067,7 @@ CUKAOSF.nonlocals = A68_NIL;
 BUKAOSF = CUKAOSF ;
 NTKAOSF.data[4].New = A_UNITE(AUKAOSF,mode1,1,BUKAOSF);
 NTKAOSF.data[4].Name = NNJAOSF_openrnd_str;
- /* line 923: */
+ /* line 925: */
 NTKAOSF.data[4].Help = CIDAOSF_nullstr;
 NTKAOSF.data[5].No = (&YNJAOSF_closernd_no);
 FUKAOSF.fn.fn_global = PPJAOSF_read_closernd;
@@ -4074,7 +4075,7 @@ FUKAOSF.nonlocals = A68_NIL;
 EUKAOSF = FUKAOSF ;
 NTKAOSF.data[5].New = A_UNITE(DUKAOSF,mode1,1,EUKAOSF);
 NTKAOSF.data[5].Name = PNJAOSF_closernd_str;
- /* line 924: */
+ /* line 926: */
 NTKAOSF.data[5].Help = CIDAOSF_nullstr;
 NTKAOSF.data[6].No = (&ZNJAOSF_ampersand_no);
 IUKAOSF.fn.fn_global = TPJAOSF_read_ampersand;
@@ -4082,7 +4083,7 @@ IUKAOSF.nonlocals = A68_NIL;
 HUKAOSF = IUKAOSF ;
 NTKAOSF.data[6].New = A_UNITE(GUKAOSF,mode1,1,HUKAOSF);
 NTKAOSF.data[6].Name = RNJAOSF_ampersand_str;
- /* line 925: */
+ /* line 927: */
 NTKAOSF.data[6].Help = CIDAOSF_nullstr;
 NTKAOSF.data[7].No = (&LUJAOSF_int_no);
 LUKAOSF.fn.fn_global = PUJAOSF_read_int;
@@ -4090,7 +4091,7 @@ LUKAOSF.nonlocals = A68_NIL;
 KUKAOSF = LUKAOSF ;
 NTKAOSF.data[7].New = A_UNITE(JUKAOSF,mode1,1,KUKAOSF);
 NTKAOSF.data[7].Name = WQJAOSF_int_str;
- /* line 926: */
+ /* line 928: */
 NTKAOSF.data[7].Help = ZQJAOSF_int_help;
 NTKAOSF.data[8].No = (&TVJAOSF_ident_no);
 OUKAOSF.fn.fn_global = XVJAOSF_read_ident;
@@ -4098,7 +4099,7 @@ OUKAOSF.nonlocals = A68_NIL;
 NUKAOSF = OUKAOSF ;
 NTKAOSF.data[8].New = A_UNITE(MUKAOSF,mode1,1,NUKAOSF);
 NTKAOSF.data[8].Name = PVJAOSF_ident_str;
- /* line 927: */
+ /* line 929: */
 NTKAOSF.data[8].Help = SVJAOSF_ident_help;
 NTKAOSF.data[9].No = (&NWJAOSF_fnname_no);
 RUKAOSF.fn.fn_global = QXJAOSF_read_fnname;
@@ -4106,25 +4107,25 @@ RUKAOSF.nonlocals = A68_NIL;
 QUKAOSF = RUKAOSF ;
 NTKAOSF.data[9].New = A_UNITE(PUKAOSF,mode1,1,QUKAOSF);
 NTKAOSF.data[9].Name = JWJAOSF_fnname_str;
- /* line 928: */
+ /* line 930: */
 NTKAOSF.data[9].Help = MWJAOSF_fnname_help;
 NTKAOSF.data[10].No = (&KYJAOSF_name_no);
 SUKAOSF.data[0] = VVJAOSF_ident_syntax;
 SUKAOSF.data[1] = PWJAOSF_fnname_syntax;
 CGFAOSF_alt( A_HISVEC(TUKAOSF,SUKAOSF,2,A68_175 ), &UUKAOSF );
 NTKAOSF.data[10].New = A_UNITE(VUKAOSF,mode3,3,UUKAOSF);
- /* line 929: */
+ /* line 931: */
 NTKAOSF.data[10].Name = CYJAOSF_name_str;
- /* line 930: */
+ /* line 932: */
 NTKAOSF.data[10].Help = IYJAOSF_name_help;
 NTKAOSF.data[11].No = (&LYJAOSF_declname_no);
 WUKAOSF.data[0] = VVJAOSF_ident_syntax;
 WUKAOSF.data[1] = PWJAOSF_fnname_syntax;
- /* line 931: */
+ /* line 933: */
 CGFAOSF_alt( A_HISVEC(XUKAOSF,WUKAOSF,2,A68_175 ), &YUKAOSF );
 NTKAOSF.data[11].New = A_UNITE(ZUKAOSF,mode3,3,YUKAOSF);
 NTKAOSF.data[11].Name = FYJAOSF_declname_str;
- /* line 932: */
+ /* line 934: */
 NTKAOSF.data[11].Help = JYJAOSF_declname_help;
 NTKAOSF.data[12].No = (&IZJAOSF_string_no);
 CVKAOSF.fn.fn_global = VZJAOSF_read_string;
@@ -4132,7 +4133,7 @@ CVKAOSF.nonlocals = A68_NIL;
 BVKAOSF = CVKAOSF ;
 NTKAOSF.data[12].New = A_UNITE(AVKAOSF,mode1,1,BVKAOSF);
 NTKAOSF.data[12].Name = EZJAOSF_string_str;
- /* line 933: */
+ /* line 935: */
 NTKAOSF.data[12].Help = HZJAOSF_string_help;
 NTKAOSF.data[13].No = (&SAKAOSF_filename_no);
 FVKAOSF.fn.fn_global = WAKAOSF_read_filename;
@@ -4140,7 +4141,7 @@ FVKAOSF.nonlocals = A68_NIL;
 EVKAOSF = FVKAOSF ;
 NTKAOSF.data[13].New = A_UNITE(DVKAOSF,mode1,1,EVKAOSF);
 NTKAOSF.data[13].Name = OAKAOSF_filename_str;
- /* line 934: */
+ /* line 936: */
 NTKAOSF.data[13].Help = RAKAOSF_filename_help;
 NTKAOSF.data[14].No = (&TBKAOSF_text_no);
 IVKAOSF.fn.fn_global = XBKAOSF_read_text;
@@ -4148,25 +4149,25 @@ IVKAOSF.nonlocals = A68_NIL;
 HVKAOSF = IVKAOSF ;
 NTKAOSF.data[14].New = A_UNITE(GVKAOSF,mode1,1,HVKAOSF);
 NTKAOSF.data[14].Name = PBKAOSF_text_str;
- /* line 935: */
+ /* line 937: */
 NTKAOSF.data[14].Help = SBKAOSF_text_help;
 NTKAOSF.data[15].No = (&GDKAOSF_contextname_no);
 LVKAOSF.fn.fn_global = NDKAOSF_read_contextname;
 LVKAOSF.nonlocals = A68_NIL;
 KVKAOSF = LVKAOSF ;
 NTKAOSF.data[15].New = A_UNITE(JVKAOSF,mode1,1,KVKAOSF);
- /* line 936: */
+ /* line 938: */
 NTKAOSF.data[15].Name = WCKAOSF_contextname_str;
- /* line 937: */
+ /* line 939: */
 NTKAOSF.data[15].Help = CDKAOSF_contextname_help;
 NTKAOSF.data[16].No = (&HDKAOSF_importname_no);
 OVKAOSF.fn.fn_global = YDKAOSF_read_importname;
 OVKAOSF.nonlocals = A68_NIL;
 NVKAOSF = OVKAOSF ;
 NTKAOSF.data[16].New = A_UNITE(MVKAOSF,mode1,1,NVKAOSF);
- /* line 938: */
+ /* line 940: */
 NTKAOSF.data[16].Name = ZCKAOSF_importname_str;
- /* line 939: */
+ /* line 941: */
 NTKAOSF.data[16].Help = FDKAOSF_importname_help;
 NTKAOSF.data[17].No = (&FGKAOSF_switch_no);
 RVKAOSF.fn.fn_global = SGKAOSF_read_switch;
@@ -4174,14 +4175,14 @@ RVKAOSF.nonlocals = A68_NIL;
 QVKAOSF = RVKAOSF ;
 NTKAOSF.data[17].New = A_UNITE(PVKAOSF,mode1,1,QVKAOSF);
 NTKAOSF.data[17].Name = BGKAOSF_switch_str;
- /* line 940: */
+ /* line 942: */
 NTKAOSF.data[17].Help = EGKAOSF_switch_help;
 NTKAOSF.data[18].No = (&HJKAOSF_word_no);
 TVKAOSF.fn.fn_global = IOGAOSF_read_command_name;
 TVKAOSF.nonlocals = A68_NIL;
 NTKAOSF.data[18].New = A_UNITE(SVKAOSF,mode1,1,TVKAOSF);
 NTKAOSF.data[18].Name = DJKAOSF_word_str;
- /* line 941: */
+ /* line 943: */
 NTKAOSF.data[18].Help = GJKAOSF_word_help;
 NTKAOSF.data[19].No = (&GLKAOSF_trim_no);
 WVKAOSF.fn.fn_global = LLKAOSF_read_trim;
@@ -4189,16 +4190,16 @@ WVKAOSF.nonlocals = A68_NIL;
 VVKAOSF = WVKAOSF ;
 NTKAOSF.data[19].New = A_UNITE(UVKAOSF,mode1,1,VVKAOSF);
 NTKAOSF.data[19].Name = CLKAOSF_trim_str;
- /* line 942: */
+ /* line 944: */
 NTKAOSF.data[19].Help = FLKAOSF_trim_help;
 NTKAOSF.data[20].No = (&LQKAOSF_quoted_string_no);
 ZVKAOSF.fn.fn_global = TRKAOSF_read_quoted_string;
 ZVKAOSF.nonlocals = A68_NIL;
 YVKAOSF = ZVKAOSF ;
 NTKAOSF.data[20].New = A_UNITE(XVKAOSF,mode1,1,YVKAOSF);
- /* line 943: */
+ /* line 945: */
 NTKAOSF.data[20].Name = QQKAOSF_quoted_string_str;
- /* line 944: */
+ /* line 946: */
 NTKAOSF.data[20].Help = TQKAOSF_quoted_string_help;
 NTKAOSF.data[21].No = (&HSKAOSF_character_no);
 CWKAOSF.fn.fn_global = RSKAOSF_read_character;
@@ -4206,9 +4207,9 @@ CWKAOSF.nonlocals = A68_NIL;
 BWKAOSF = CWKAOSF ;
 NTKAOSF.data[21].New = A_UNITE(AWKAOSF,mode1,1,BWKAOSF);
 NTKAOSF.data[21].Name = MSKAOSF_character_str;
- /* line 945: */
+ /* line 947: */
 NTKAOSF.data[21].Help = PSKAOSF_character_help;
- /* line 949: */
+ /* line 951: */
 FWKAOSF = A_HEAP(A68_184 ) ;
 (*FWKAOSF) = ITKAOSF ;
 DWKAOSF = RMFAOSF_add_readers(FWKAOSF, A_HISVEC(EWKAOSF,NTKAOSF,22,A68_193 ));
@@ -4224,9 +4225,9 @@ void GLJAOSF(void)   /* initialise DECS kernelreader */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","kernelreader.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/commandreader.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/commandsyntax.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/basics.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osinterface.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/messageproc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/putstrings.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","kernelreader.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/commandreader.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/commandsyntax.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/basics.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/osinterface.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/messageproc.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/putstrings.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_VC  CNJAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
@@ -4277,11 +4278,11 @@ CQEAOSF();   /* USE osinterface */
 ZRAAOSF();   /* USE messageproc */
 KNDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/kernelreader.a68";
-A_config.translation_time = "Sun Sep 26 21:50:32 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/liba68prel/kernelreader.a68";
+A_config.translation_time = "Fri May 30 22:15:16 2003";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "FLJAOSF (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:50:32 2004";
+A_config.spec_change_time = "Fri May 30 22:15:16 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -4409,119 +4410,119 @@ AZJAOSF_get_declname = (BZJAOSF);
 EZJAOSF_string_str = DZJAOSF;
  /* line 451: */
 HZJAOSF_string_help = GZJAOSF;
- /* line 452: */
  /* line 453: */
+ /* line 454: */
 KZJAOSF_string_syntax = A_UNITE(JZJAOSF,mode1,1,(&IZJAOSF_string_no));
- /* line 456: */
- /* line 467: */
- /* line 469: */
- /* line 471: */
- /* line 478: */
- /* line 498: */
+ /* line 457: */
+ /* line 468: */
+ /* line 470: */
+ /* line 472: */
+ /* line 479: */
+ /* line 499: */
 OAKAOSF_filename_str = NAKAOSF;
- /* line 500: */
-RAKAOSF_filename_help = QAKAOSF;
  /* line 501: */
+RAKAOSF_filename_help = QAKAOSF;
  /* line 502: */
+ /* line 503: */
 UAKAOSF_filename_syntax = A_UNITE(TAKAOSF,mode1,1,(&SAKAOSF_filename_no));
- /* line 505: */
- /* line 520: */
+ /* line 506: */
  /* line 522: */
- /* line 534: */
-PBKAOSF_text_str = OBKAOSF;
- /* line 535: */
-SBKAOSF_text_help = RBKAOSF;
+ /* line 524: */
  /* line 536: */
+PBKAOSF_text_str = OBKAOSF;
  /* line 537: */
+SBKAOSF_text_help = RBKAOSF;
+ /* line 538: */
+ /* line 539: */
 VBKAOSF_text_syntax = A_UNITE(UBKAOSF,mode1,1,(&TBKAOSF_text_no));
- /* line 540: */
- /* line 558: */
+ /* line 542: */
  /* line 560: */
- /* line 573: */
+ /* line 562: */
+ /* line 575: */
 WCKAOSF_contextname_str = VCKAOSF;
 ZCKAOSF_importname_str = YCKAOSF;
- /* line 575: */
-CDKAOSF_contextname_help = BDKAOSF;
  /* line 577: */
- /* line 578: */
-FDKAOSF_importname_help = EDKAOSF;
+CDKAOSF_contextname_help = BDKAOSF;
  /* line 579: */
  /* line 580: */
-JDKAOSF_contextname_syntax = A_UNITE(IDKAOSF,mode1,1,(&GDKAOSF_contextname_no));
+FDKAOSF_importname_help = EDKAOSF;
  /* line 581: */
+ /* line 582: */
+JDKAOSF_contextname_syntax = A_UNITE(IDKAOSF,mode1,1,(&GDKAOSF_contextname_no));
+ /* line 583: */
 LDKAOSF_importname_syntax = A_UNITE(KDKAOSF,mode1,1,(&HDKAOSF_importname_no));
- /* line 585: */
- /* line 598: */
- /* line 610: */
- /* line 611: */
+ /* line 587: */
+ /* line 600: */
  /* line 612: */
- /* line 616: */
- /* line 622: */
- /* line 628: */
- /* line 658: */
-BGKAOSF_switch_str = AGKAOSF;
+ /* line 613: */
+ /* line 614: */
+ /* line 618: */
+ /* line 624: */
+ /* line 630: */
  /* line 660: */
-EGKAOSF_switch_help = DGKAOSF;
- /* line 661: */
+BGKAOSF_switch_str = AGKAOSF;
  /* line 662: */
+EGKAOSF_switch_help = DGKAOSF;
  /* line 663: */
+ /* line 664: */
+ /* line 665: */
 GGKAOSF.Type = QFFAOSF_opt_syn;
 IGKAOSF_generator( A68_FALSE, &LGKAOSF );
 OGKAOSF = A_HVEC(NGKAOSF,A_UNITE(MGKAOSF,mode1,1,(&FGKAOSF_switch_no)),A68_175 ) ;
 A_VASSIGN2(OGKAOSF,LGKAOSF,A68_175 ) ;
 GGKAOSF.Elements = LGKAOSF;
 QGKAOSF_switch_syntax = A_UNITE(PGKAOSF,mode2,2,GGKAOSF);
- /* line 666: */
- /* line 674: */
+ /* line 668: */
  /* line 676: */
- /* line 703: */
-DJKAOSF_word_str = CJKAOSF;
- /* line 704: */
-GJKAOSF_word_help = FJKAOSF;
+ /* line 678: */
  /* line 705: */
+DJKAOSF_word_str = CJKAOSF;
  /* line 706: */
+GJKAOSF_word_help = FJKAOSF;
+ /* line 707: */
+ /* line 708: */
 JJKAOSF_word_syntax = A_UNITE(IJKAOSF,mode1,1,(&HJKAOSF_word_no));
- /* line 710: */
  /* line 712: */
- /* line 737: */
-CLKAOSF_trim_str = BLKAOSF;
+ /* line 714: */
  /* line 739: */
- /* line 740: */
+CLKAOSF_trim_str = BLKAOSF;
  /* line 741: */
-FLKAOSF_trim_help = ELKAOSF;
  /* line 742: */
  /* line 743: */
-ILKAOSF_trim_syntax = A_UNITE(HLKAOSF,mode1,1,(&GLKAOSF_trim_no));
+FLKAOSF_trim_help = ELKAOSF;
+ /* line 744: */
  /* line 745: */
- /* line 748: */
- /* line 799: */
+ILKAOSF_trim_syntax = A_UNITE(HLKAOSF,mode1,1,(&GLKAOSF_trim_no));
+ /* line 747: */
+ /* line 750: */
  /* line 801: */
  /* line 803: */
- /* line 835: */
- /* line 836: */
-NQKAOSF_quoted_string_syntax = A_UNITE(MQKAOSF,mode1,1,(&LQKAOSF_quoted_string_no));
+ /* line 805: */
  /* line 837: */
-QQKAOSF_quoted_string_str = PQKAOSF;
+ /* line 838: */
+NQKAOSF_quoted_string_syntax = A_UNITE(MQKAOSF,mode1,1,(&LQKAOSF_quoted_string_no));
  /* line 839: */
- /* line 840: */
+QQKAOSF_quoted_string_str = PQKAOSF;
+ /* line 841: */
+ /* line 842: */
 TQKAOSF_quoted_string_help = SQKAOSF;
- /* line 843: */
- /* line 866: */
- /* line 875: */
+ /* line 845: */
+ /* line 868: */
  /* line 877: */
- /* line 887: */
- /* line 888: */
-JSKAOSF_character_syntax = A_UNITE(ISKAOSF,mode1,1,(&HSKAOSF_character_no));
+ /* line 879: */
  /* line 889: */
-MSKAOSF_character_str = LSKAOSF;
+ /* line 890: */
+JSKAOSF_character_syntax = A_UNITE(ISKAOSF,mode1,1,(&HSKAOSF_character_no));
  /* line 891: */
-PSKAOSF_character_help = OSKAOSF;
+MSKAOSF_character_str = LSKAOSF;
  /* line 893: */
- /* line 902: */
+PSKAOSF_character_help = OSKAOSF;
+ /* line 895: */
  /* line 904: */
- /* line 913: */
- /* line 914: */
- /* line 986: */
+ /* line 906: */
+ /* line 915: */
+ /* line 916: */
+ /* line 988: */
 A_PROC_EXIT(DECS kernelreader);
 } 
 #undef NL

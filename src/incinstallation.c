@@ -21,8 +21,8 @@ typedef struct A68t36  A68_36 ;    /* PROC(MODE35) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t37,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t37  A68_37 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,70,A68t38);
-typedef struct A68t38  A68_38 ;    /* STRUCT 70 CHAR */
+A_ISTRUCT(A68_CHAR ,65,A68t38);
+typedef struct A68t38  A68_38 ;    /* STRUCT 65 CHAR */
 A_ISTRUCT(A68_CHAR ,32,A68t39);
 typedef struct A68t39  A68_39 ;    /* STRUCT 32 CHAR */
 A_ISTRUCT(A68_CHAR ,7,A68t40);
@@ -113,8 +113,8 @@ static A68_VC  A_configinfo;
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
 /* --- end of DECS initialisation functions --- */
-static A68_38   RDAACTR = {"$Id: incinstallation.c,v 1.5.2.4 2004/09/27 03:04:18 teshields Exp $"}; 
-A_GISVEC(A68_VC ,SDAACTR,RDAACTR,70)
+static A68_38   RDAACTR = {"$Id: incinstallation.c,v 1.4 2003-05-30 21:20:48 sian Exp $"}; 
+A_GISVEC(A68_VC ,SDAACTR,RDAACTR,65)
 #define TDAACTR_upbofmodes 1023
 #define UDAACTR_upbofsidstack 999
 #define VDAACTR_maxid 32
@@ -128,35 +128,35 @@ void ODAACTR(void)   /* initialise DECS incinstallation */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","-dir",".","incinstallation.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","-dir",".","incinstallation.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/src/incinstallation.a68";
-A_config.translation_time = "Sun Sep 26 21:50:38 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/src/incinstallation.a68";
+A_config.translation_time = "Fri May 30 22:15:20 2003";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "NDAACTR (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:50:38 2004";
+A_config.spec_change_time = "Fri May 30 22:15:20 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS incinstallation);
 UEAALIB_a68config(LGAALIB_configinfo, SDAACTR);
- /* line 79: */
+ /* line 72: */
+ /* line 105: */
+ /* line 107: */
+ /* line 108: */
+ /* line 109: */
+ /* line 110: */
+ /* line 111: */
  /* line 112: */
- /* line 114: */
  /* line 115: */
- /* line 116: */
- /* line 117: */
- /* line 118: */
  /* line 119: */
- /* line 122: */
- /* line 126: */
 A_PROC_EXIT(DECS incinstallation);
 } 
 #undef NL

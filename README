@@ -91,7 +91,7 @@ preludes:-
       time routines
 
 Half of the Web68 literate programming system is also available
-(tangle68). See also the man page for ca68(1).
+(tang). See also the man page for ca68(1).
 
 I am currently alpha testing an Algol 68 binding to the Xforms
 library which will provide a GUI for Algol 68 programs.
@@ -101,4 +101,4 @@ If any of these interest you, then do send me email.
 Dr Sian Leitch           Wed Jun 19 22:37:37 BST 2002
 Inverness
 Scotland
-<algol68@sleitch.nildram.co.uk>
+<poenikatu@operamail.com>

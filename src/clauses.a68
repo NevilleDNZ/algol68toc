@@ -1,9 +1,9 @@
 DECS  clauses  CONTEXT VOID  USE
-      usefulops,
+*L    usefulops,
       environ, environment, centities, coutput, values, idtable, moduletracer,
       tracer, evaluator, incmode, modes, unionaids, incimperatives:
 
-configinfo A68CONFIG "$Id: clauses.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
+configinfo A68CONFIG "$Id: clauses.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $";
 
 
 COMMENT 

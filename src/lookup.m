@@ -1,6 +1,6 @@
 8
 mod_info
-CSJACTR
+TTJACTR
 lookup                          
                                 
                                 
@@ -18,8 +18,8 @@ lookup
 1
 37
 070064000f02041a000701066c6f6f6b75700064010d6f7074626f6f6c6c6f6f6b75700064
-DSJACTR
-1096253456
+UTJACTR
+1054329334
 2
-BNKACTRfftfff
-QNKACTRfftfff
+SOKACTRfftfff
+HPKACTRfftfff
