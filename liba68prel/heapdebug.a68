@@ -2,7 +2,7 @@ DECS  heapdebug  CONTEXT VOID:
 
 { " Id: heapdebug.sta,v 1.1 91/10/14 14:27:03 edcad Exp $", }
 { This comment must not be removed - would cause recursive call of gc on VAX.
-configinfo A68CONFIG "$Id: heapdebug.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: heapdebug.a68,v 1.1.2.1 2004/09/04 17:36:14 teshields Exp $";
 }
 
 

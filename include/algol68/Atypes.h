@@ -1,4 +1,4 @@
-/* $Id: Atypes.h,v 1.4 2004/09/05 07:47:23 teshields Exp $ */
+/* $Id: Atypes.h,v 1.4.2.2 2004/09/27 01:03:49 teshields Exp $ */
 
 
 /* 
@@ -59,6 +59,10 @@
 #define A_STATIC	static
 #endif
 
+#ifdef __USE_ISOC99
+#define LONGLONGOPTION
+#endif
+
 /*
   conversions between ALGOL 68 and C types
   e.g. for use in portable ALIEN declarations 
@@ -91,11 +95,8 @@
 #define A_FILEPTR_fileptr(x) ((FILE *)(x))
 #define A_INT_int(x) ((int)(x))
 #define A_INT_size_t(x) ((size_t)(x))
-/* New definitions for Linux -- SL/PE61-09-25 */
-/*#define A_LBITS_ulong(x) ((unsigned long)(x)) SunOs */
-#define A_LBITS_ulong(x) ((unsigned long long)(x))
-/* #define A_LINT_long(x) ((long int)(x)) SunOs */
-#define A_LINT_long(x) ((long long int)(x))
+#define A_LBITS_ulong(x) ((unsigned long)(x))
+#define A_LINT_long(x) ((long int)(x))
 #define A_RLI_time_tptr(x) (time_t *)(x)
 /* New definition for Linux -- SL/PE62-01-18 */
 #define A_RI_time_tptr(x) (time_t *)(x)
@@ -105,8 +106,6 @@
 
 #define A_SZ_BYTE	CHAR_BIT
 
-#ifdef	LONGLONGOPTION
-#else
 /*
  * #define	A68_SSINT	unsigned char
  * #define	A68_MAX_SSINT   UCHAR_MAX
@@ -118,7 +117,6 @@
 /*#define A_PAD_SSINT(u)	char u##_a; char u##_b; char u##_c;
  *Next line altered by SL (Phoenix Engineering) BP21308-06-02 */
 #define A_PAD_SSINT(u)
-#endif
 
 #define	A68_SINT	short int
 #define A68_MAX_SINT    SHRT_MAX
@@ -132,29 +130,24 @@
 #define A_SZ_INT	A_SZ_BYTE*A_size_t_INT(sizeof(A68_INT))
 #define A_PAD_INT(u)
 
-/*
- * #define	A68_LINT	long int
- * #define A68_MAX_LINT    LONG_MAX
- * New definitions for Linux
- */
-#define	A68_LINT	long long int
-#define A68_MAX_LINT    9223372036854775807LL
+#define	A68_LINT	long int
+#define A68_MAX_LINT    LONG_MAX
 #define A_SZ_LINT	A_SZ_BYTE*A_size_t_INT(sizeof(A68_LINT))
 #define A_PAD_LINT(u)
 
 #ifdef	 LONGLONGOPTION
+#define	A68_LLINT	long long int
+#define A68_MAX_LLINT   LLONG_MAX
+#else
 #define	A68_LLINT	long int
 #define A68_MAX_LLINT   LONG_MAX
+#endif
 #define A_SZ_LLINT	A_SZ_BYTE*A_size_t_INT(sizeof(A68_LLINT))
 #define A_PAD_LLINT(u)
-#endif
 
-#ifdef	LONGLONGOPTION
-#else
 #define	A68_SSREAL	float
 #define A_SZ_SSREAL	A_SZ_BYTE*A_size_t_INT(sizeof(A68_SSREAL))
 #define A_PAD_SSREAL(u)
-#endif
 
 #define	A68_SREAL	float
 #define A_SZ_SREAL	A_SZ_BYTE*A_size_t_INT(sizeof(A68_SREAL))
@@ -169,21 +162,19 @@
 #define A_PAD_LREAL(u)
 
 #ifdef	LONGLONGOPTION
+#define	A68_LLREAL	long double
+#else
 #define	A68_LLREAL	double
+#endif
 #define A_SZ_LLREAL	A_SZ_BYTE*A_size_t_INT(sizeof(A68_LLREAL))
 #define A_PAD_LLREAL(u)
-#endif
 
-
-#ifdef	LONGLONGOPTION
-#else
 #define	A68_SSBITS	unsigned char
 #define A68_MAX_SSBITS  UCHAR_MAX
 #define A_SZ_SSBITS	A_SZ_BYTE*A_size_t_INT(sizeof(A68_SSBITS))
 /*#define A_PAD_SSBITS(u)	char u##_a; char u##_b; char u##_c;
  *Next line altered by SL (Phoenix Engineering) BP21308-06-02 */
 #define A_PAD_SSBITS(u)
-#endif
 
 #define	A68_SBITS	unsigned short int
 #define A68_MAX_SBITS   USHRT_MAX
@@ -197,27 +188,20 @@
 #define A_SZ_BITS	A_SZ_BYTE*A_size_t_INT(sizeof(A68_BITS))
 #define A_PAD_BITS(u)
 
-/*
- * #define	A68_LBITS	unsigned long int
- * #define A68_MAX_LBITS   ULONG_MAX
- * New definitions for Linux
- */
-#define	A68_LBITS	unsigned long long int
-#define A68_MAX_LBITS   18446744073709551615ULL
+#define	A68_LBITS	unsigned long int
+#define A68_MAX_LBITS   ULONG_MAX
 #define A_SZ_LBITS	A_SZ_BYTE*A_size_t_INT(sizeof(A68_LBITS))
 #define A_PAD_LBITS(u)
 
 #ifdef	LONGLONGOPTION
-/*
- * #define	A68_LLBITS	unsigned long int
- * #define A68_MAX_LLBITS  ULONG_MAX
- * New definitions for Linux
- */
 #define	A68_LLBITS	unsigned long long int
-#define A68_MAX_LLBITS  18446744073709551615ULL
+#define A68_MAX_LLBITS  ULLONG_MAX
+#else
+#define	A68_LLBITS	unsigned long int
+#define A68_MAX_LLBITS  ULONG_MAX
+#endif
 #define A_SZ_LLBITS	A_SZ_BYTE*A_size_t_INT(sizeof(A68_LLBITS))
 #define A_PAD_LLBITS(u)
-#endif
 
 #define	A68_BOOL	int
 #define A_SZ_BOOL	A_SZ_BYTE*A_size_t_INT(sizeof(A68_BOOL))
@@ -243,12 +227,9 @@
 
 /*      MODE COMPL     */
 
-#ifdef	LONGLONGOPTION
-#else
 typedef struct { A68_SSREAL Re, Im; } A68_SSCOMPL;
 #define A_SZ_SSCOMPL   A_SZ_BYTE*A_size_t_INT(sizeof(A68_SSCOMPL))
 #define A_PAD_SSCOMPL(u)
-#endif
 
 typedef struct { A68_SREAL  Re, Im; } A68_SCOMPL;
 #define A_SZ_SCOMPL    A_SZ_BYTE*A_size_t_INT(sizeof(A68_SCOMPL))
@@ -262,11 +243,9 @@ typedef struct { A68_LREAL  Re, Im; } A68_LCOMPL;
 #define A_SZ_LCOMPL    A_SZ_BYTE*A_size_t_INT(sizeof(A68_LCOMPL))
 #define A_PAD_LCOMPL(u)
 
-#ifdef LONGLONGOPTION
 typedef struct { A68_LLREAL Re, Im; } A68_LLCOMPL;
 #define A_SZ_LLCOMPL   A_SZ_BYTE*A_size_t_INT(sizeof(A68_LLCOMPL))
 #define A_PAD_LLCOMPL(u)
-#endif
 
 /*	the nil pointer		*/
 

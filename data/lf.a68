@@ -4,6 +4,10 @@ BEGIN
    COMMENT
       Prints an ASCII file.
       $Log: lf.a68,v $
+      Revision 1.1.2.1  2004/09/04 17:36:09  teshields
+      LCSE Algol68toC initial revision
+      Default installation directory is '/usr/local/'
+
       Revision 1.1  2004/09/04 13:58:25  teshields
       Algol68toC v1.8 Public Baseline
 
@@ -24,7 +28,7 @@ BEGIN
       Adapted to the LaserJet 6L
    COMMENT
 
-[]CHAR version = "$Id: lf.a68,v 1.1 2004/09/04 13:58:25 teshields Exp $";
+[]CHAR version = "$Id: lf.a68,v 1.1.2.1 2004/09/04 17:36:09 teshields Exp $";
 
 MODE
    PRINTER=STRUCT(INT max line length,max lines per page,

@@ -1,6 +1,6 @@
 DECS mm_basics CONTEXT VOID USE putstrings, osinterface, basics, messageproc :
 
-configinfo A68CONFIG "$Id: mm_basics.a68,v 1.3 2004/09/04 03:11:32 teshields Exp $";
+configinfo A68CONFIG "$Id: mm_basics.a68,v 1.3.2.1 2004/09/04 17:36:15 teshields Exp $";
 
 
 COMMENT 

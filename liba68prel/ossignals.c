@@ -229,8 +229,8 @@ typedef struct A68t99  A68_99 ;    /* PROC(MODE39) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t100,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t100  A68_100 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,60,A68t101);
-typedef struct A68t101  A68_101 ;    /* STRUCT 60 CHAR */
+A_ISTRUCT(A68_CHAR ,64,A68t101);
+typedef struct A68t101  A68_101 ;    /* STRUCT 64 CHAR */
 struct A68t102{
 A68_INT  Sigset;
 A_PAD_INT(PAD_6)
@@ -407,8 +407,8 @@ extern void MCBAOSF(void);   /* oserrors */
 extern void ZRAAOSF(void);   /* messageproc */
 extern void BAAAOSF(void);   /* cif */
 /* --- end of DECS initialisation functions --- */
-static A68_101   ALCAOSF = {"$Id: ossignals.c,v 1.6 2004/09/04 16:52:11 teshields Exp $"}; 
-A_GISVEC(A68_VC ,BLCAOSF,ALCAOSF,60)
+static A68_101   ALCAOSF = {"$Id: ossignals.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
+A_GISVEC(A68_VC ,BLCAOSF,ALCAOSF,64)
 #include <signal.h>
 #include <unistd.h>
 #define KILL(pid,sig) A_int_INT(kill(A_INT_pid_t(pid),A_INT_int(sig)))
@@ -1003,8 +1003,8 @@ void XKCAOSF(void)   /* initialise DECS ossignals */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","ossignals.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","ossignals.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/usefulops.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osgc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/oserrors.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/messageproc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/cif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
@@ -1024,10 +1024,10 @@ ZRAAOSF();   /* USE messageproc */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/ossignals.a68";
-A_config.translation_time = "Sat Sep  4 11:42:08 2004";
+A_config.translation_time = "Sun Sep 26 21:50:25 2004";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "WKCAOSF (from seed file) ";
-A_config.spec_change_time = "Sat Sep  4 11:42:08 2004";
+A_config.spec_change_time = "Sun Sep 26 21:50:25 2004";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

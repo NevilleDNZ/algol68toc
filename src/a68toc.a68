@@ -1,5 +1,5 @@
 PROGRAM  a68toc  CONTEXT VOID  USE
-*L       usefulops, osif,
+         usefulops, osif,
          centities,  {CCC must precede rscompiler to hide wrong LABEL decl }
          rscompiler, {CCC must be first to hide wrong IDDEC declaration}
          compiler, coutput, denotations, environ, environment, incid,
@@ -7,7 +7,7 @@ PROGRAM  a68toc  CONTEXT VOID  USE
          mnemonics, modes, modules, moduletracer, uniquenameserver
 BEGIN
 
-configinfo A68CONFIG "$Id: a68toc.a68,v 1.2 2004/09/04 03:23:00 teshields Exp $";
+configinfo A68CONFIG "$Id: a68toc.a68,v 1.2.2.2 2004/09/05 04:17:56 teshields Exp $";
 
 
 COMMENT 
@@ -171,30 +171,6 @@ ELSE { read_status is io_ok or io_no_newline }
 
   line_pending := TRUE;	{ we've just read a line, so 'output' will output a 'newline'
                           stream directive at next XCONTROL }
-
-  { staredit: }
-  IF size < 2
-  THEN
-    SKIP {not long enough for a staredit}
-  ELIF
-    REF CHAR first = line[1];
-    first /= "*" ANDTH first /= "%"
-  THEN
-    SKIP {not a staredit}
-  ELIF
-    {
-      process staredits
-      compiler's buffer already holds the current line -- all we have to do is either
-        set size to 0 to omit the line, or write spaces over the staredit characters
-        if we are passing it on
-    }
-    REF CHAR second = line[2];
-    stars[ABS second] = ( first = "*" )
-  THEN
-    first := second := " "
-  ELSE
-    size := 0
-  FI;
 
   TRUE { we succeeded in reading a line}
 FI;

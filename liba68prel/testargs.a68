@@ -1,12 +1,11 @@
 PROGRAM  testargs  CONTEXT VOID  USE  strops,
-%4  osif,
-*4  vmsif,
+    osif,
     cif,   { included as needed on VMS for simulator }
     osmessages  { included as needed by ostools and vmsif }
 BEGIN
 
 { " Id: " }
-configinfo A68CONFIG "$Id: testargs.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: testargs.a68,v 1.1.2.2 2004/09/05 04:09:04 teshields Exp $";
 
 
 COMMENT 

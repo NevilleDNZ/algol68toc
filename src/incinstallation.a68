@@ -1,6 +1,6 @@
 DECS  incinstallation  CONTEXT VOID:
 
-configinfo A68CONFIG "$Id: incinstallation.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: incinstallation.a68,v 1.1.2.1 2004/09/04 17:36:17 teshields Exp $";
 
 
 COMMENT 
@@ -41,6 +41,10 @@ COMMENT
 
 {
 $Log: incinstallation.a68,v $
+Revision 1.1.2.1  2004/09/04 17:36:17  teshields
+LCSE Algol68toC initial revision
+Default installation directory is '/usr/local/'
+
 Revision 1.1  2004/09/04 13:58:28  teshields
 Algol68toC v1.8 Public Baseline
 

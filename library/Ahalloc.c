@@ -1,4 +1,4 @@
-/* $Id: Ahalloc.c,v 1.3 2004/09/04 03:07:21 teshields Exp $ */
+/* $Id: Ahalloc.c,v 1.3.2.1 2004/09/04 17:36:15 teshields Exp $ */
 
 
 /* 
@@ -55,7 +55,7 @@
 **                       (ie treat vectors/arrays as single objects)
 */
 
-static char rcs_id[] = "$Id: Ahalloc.c,v 1.3 2004/09/04 03:07:21 teshields Exp $";
+static char rcs_id[] = "$Id: Ahalloc.c,v 1.3.2.1 2004/09/04 17:36:15 teshields Exp $";
 
 /*
 **     Imports

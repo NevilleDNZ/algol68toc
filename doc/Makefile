@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.7 2004/09/05 07:59:10 teshields Exp $
+# $Id: Makefile,v 1.7.2.1 2004/09/05 14:18:55 teshields Exp $
 #
 #-------------- Documentation sources ---------------
 ctrans_doc := HOWTO-pame.txt compl.taylour star.txt

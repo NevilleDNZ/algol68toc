@@ -1,4 +1,4 @@
-/* $Id: Ahpolicy.c,v 1.2 2004/09/04 03:06:21 teshields Exp $ */
+/* $Id: Ahpolicy.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $ */
 
 
 /* 
@@ -48,7 +48,7 @@
 **     
 */
 
-static char rcs_id[] = "$Id: Ahpolicy.c,v 1.2 2004/09/04 03:06:21 teshields Exp $";
+static char rcs_id[] = "$Id: Ahpolicy.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $";
 
 #include <algol68/linux/Ahswitch.h>
 #include "Ahbasic.h"

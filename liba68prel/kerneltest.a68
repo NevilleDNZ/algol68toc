@@ -4,7 +4,7 @@ PROGRAM  kerneltest  CONTEXT VOID  USE  putstrings,  messageproc,  osinterface,
          ioprocs,  commandcaller,  globalcommands,  printissue
 BEGIN
 
-configinfo A68CONFIG "$Id: kerneltest.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: kerneltest.a68,v 1.1.2.1 2004/09/04 17:36:14 teshields Exp $";
 
 
 COMMENT 

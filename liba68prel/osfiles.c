@@ -207,8 +207,8 @@ typedef struct A68t93  A68_93 ;    /* PROC(MODE92) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t94,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t94  A68_94 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,58,A68t95);
-typedef struct A68t95  A68_95 ;    /* STRUCT 58 CHAR */
+A_ISTRUCT(A68_CHAR ,62,A68t95);
+typedef struct A68t95  A68_95 ;    /* STRUCT 62 CHAR */
 
 A_PROCEDURE(A68_BITS *,A68t96,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t96  A68_96 ;    /* PROC(MODE26,MODE26) REF BITS */
@@ -448,8 +448,8 @@ extern void MCBAOSF(void);   /* oserrors */
 extern void ZRAAOSF(void);   /* messageproc */
 extern void BAAAOSF(void);   /* cif */
 /* --- end of DECS initialisation functions --- */
-static A68_95   PRBAOSF = {"$Id: osfiles.c,v 1.6 2004/09/04 16:52:11 teshields Exp $"}; 
-A_GISVEC(A68_VC ,QRBAOSF,PRBAOSF,58)
+static A68_95   PRBAOSF = {"$Id: osfiles.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
+A_GISVEC(A68_VC ,QRBAOSF,PRBAOSF,62)
 A68_BITS * RRBAOSF_null_cfileptr;
 A68_BITS * SRBAOSF_null_dirptr;
 #define TRBAOSF_null_ccharptr (A68_CHAR *)A68_NIL
@@ -495,7 +495,7 @@ extern size_t fwrite(); /* #include <stdio.h> */
 #define ASBAOSF_fwrite FWRITE
 extern int fseek(); /* #include <stdio.h> */
 #define FSEEK(stream,offset,whence) \
-  A_int_INT(fseek(A_FILEPTR_fileptr(stream),(long int)offset,A_INT_int(whence)))
+  A_int_INT(fseek(A_FILEPTR_fileptr(stream),A_LINT_long(offset),A_INT_int(whence)))
 
 #define BSBAOSF_fseek FSEEK
 #include <stdio.h>
@@ -737,7 +737,7 @@ A68_VOID  KVBAOSF_file_name(A68_112 * File, A68_VC  *ReturnedValue)
 { 
 A68_VC  MVBAOSF;  /* clause result */
 A_PROC_ENTRY(file_name);
- /* line 271: */
+ /* line 269: */
 if ( (File==TSBAOSF_nil_file) )
 { 
 MVBAOSF = NVBAOSF;
@@ -751,8 +751,8 @@ A_PROC_EXIT(file_name);
 return;
 } 
 #undef NL
- /* line 279: */
- /* line 280: */
+ /* line 277: */
+ /* line 278: */
 
 A68_112 * RVBAOSF_open_file(A68_VC  Name, A68_113  Access, A68_53  Msg)
 { 
@@ -769,8 +769,8 @@ A68_VC  EWBAOSF;  /* avoid structure result */
 A68_112 * FWBAOSF;  /* clause result */
 A68_112 * GWBAOSF;  /* YIELD */
 A_PROC_ENTRY(open_file);
- /* line 281: */
- /* line 282: */
+ /* line 279: */
+ /* line 280: */
 { 
 { 
 RCBAOSF_errno = 0;
@@ -778,32 +778,32 @@ XVBAOSF = Access.Access ;
 VVBAOSF = URBAOSF_fopen(A_VC_PLUS(Name,A_HVEC(YVBAOSF,'\000',A68_CHAR )), A_HISVEC(WVBAOSF,XVBAOSF,4,A68_CHAR ));
 } 
 ZVBAOSF_stdiofile = VVBAOSF;
+ /* line 282: */
+ /* line 283: */
  /* line 284: */
  /* line 285: */
- /* line 286: */
- /* line 287: */
 if ( (ZVBAOSF_stdiofile==RRBAOSF_null_cfileptr) )
 { 
 AWBAOSF.data[0] = Name;
 VHBAOSF_errnotext(  &BWBAOSF );
 AWBAOSF.data[1] = BWBAOSF;
 SEBAOSF_osifmessage(2, A_HISVEC(CWBAOSF,AWBAOSF,2,A68_VC ), Msg);
- /* line 288: */
- /* line 289: */
+ /* line 286: */
+ /* line 287: */
 goto UVBAOSF_fault;
 } 
- /* line 291: */
+ /* line 289: */
 ZCAAOSF_makervc( Name, &EWBAOSF );
 DWBAOSF.Name = EWBAOSF;
- /* line 292: */
+ /* line 290: */
 DWBAOSF.Stdiofile = ZVBAOSF_stdiofile;
- /* line 293: */
+ /* line 291: */
 GWBAOSF = A_HEAP(A68_112 ) ;
 (*GWBAOSF) = DWBAOSF ;
 FWBAOSF = GWBAOSF;
 goto SVBAOSF;
 UVBAOSF_fault:
- /* line 295: */
+ /* line 293: */
 FWBAOSF = TSBAOSF_nil_file;
 SVBAOSF: ;
 } 
@@ -811,7 +811,7 @@ A_PROC_EXIT(open_file);
 return( FWBAOSF );
 } 
 #undef NL
- /* line 304: */
+ /* line 302: */
 
 A68_VOID  JWBAOSF_close_file(A68_112 * File, A68_53  Msg)
 { 
@@ -821,29 +821,29 @@ A68_120  MWBAOSF;  /* collateral clause result */
 A68_VC  NWBAOSF;  /* avoid structure result */
 A68_51  OWBAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(close_file);
+ /* line 303: */
+ /* line 304: */
  /* line 305: */
  /* line 306: */
- /* line 307: */
- /* line 308: */
 if ( (File==TSBAOSF_nil_file) )
 { 
- /* line 309: */
- /* line 310: */
+ /* line 307: */
+ /* line 308: */
 SEBAOSF_osifmessage(12, A_VVAC(KWBAOSF), Msg);
 } 
 else
 { 
 RCBAOSF_errno = 0;
+ /* line 309: */
+ /* line 310: */
  /* line 311: */
- /* line 312: */
- /* line 313: */
 LWBAOSF = (VRBAOSF_fclose((*(&(File->Stdiofile))))!=0);
 if ( LWBAOSF )
 { 
 MWBAOSF.data[0] = (*(&(File->Name)));
 VHBAOSF_errnotext(  &NWBAOSF );
 MWBAOSF.data[1] = NWBAOSF;
- /* line 314: */
+ /* line 312: */
 SEBAOSF_osifmessage(11, A_HISVEC(OWBAOSF,MWBAOSF,2,A68_VC ), Msg);
 } 
 } 
@@ -851,9 +851,9 @@ A_PROC_EXIT(close_file);
 return;
 } 
 #undef NL
- /* line 326: */
+ /* line 324: */
+ /* line 325: */
  /* line 327: */
- /* line 329: */
 
 A68_VOID  TWBAOSF_read_buffer(A68_112 * File, A68_VC  Buffer, A68_INT * Charsread, A68_53  Msg, A68_115  *ReturnedValue)
 { 
@@ -864,39 +864,39 @@ A68_120  XWBAOSF;  /* collateral clause result */
 A68_VC  YWBAOSF;  /* avoid structure result */
 A68_51  ZWBAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(read_buffer);
+ /* line 328: */
+ /* line 329: */
  /* line 330: */
  /* line 331: */
- /* line 332: */
- /* line 333: */
 if ( (File==TSBAOSF_nil_file) )
 { 
 SEBAOSF_osifmessage(22, A_VVAC(UWBAOSF), Msg);
+ /* line 332: */
+ /* line 333: */
  /* line 334: */
- /* line 335: */
- /* line 336: */
 VWBAOSF = VUBAOSF_io_error;
 } 
 else
 { 
 RCBAOSF_errno = 0;
- /* line 337: */
+ /* line 335: */
 (*Charsread) = WRBAOSF_fread(Buffer, 1, Buffer.upb, (*(&(File->Stdiofile))));
- /* line 338: */
+ /* line 336: */
+ /* line 337: */
  /* line 339: */
- /* line 341: */
 WWBAOSF = ((*Charsread)==Buffer.upb);
 if ( WWBAOSF )
 { 
- /* line 342: */
+ /* line 340: */
 VWBAOSF = PUBAOSF_io_ok;
 } 
 else
 { 
+ /* line 341: */
  /* line 343: */
- /* line 345: */
 if ( (XRBAOSF_ferror((*(&(File->Stdiofile))))==0) )
 { 
- /* line 346: */
+ /* line 344: */
 VWBAOSF = SUBAOSF_io_eof;
 } 
 else
@@ -905,8 +905,8 @@ XWBAOSF.data[0] = (*(&(File->Name)));
 VHBAOSF_errnotext(  &YWBAOSF );
 XWBAOSF.data[1] = YWBAOSF;
 SEBAOSF_osifmessage(21, A_HISVEC(ZWBAOSF,XWBAOSF,2,A68_VC ), Msg);
- /* line 347: */
- /* line 348: */
+ /* line 345: */
+ /* line 346: */
 VWBAOSF = VUBAOSF_io_error;
 } 
 } 
@@ -916,9 +916,9 @@ A_PROC_EXIT(read_buffer);
 return;
 } 
 #undef NL
- /* line 362: */
+ /* line 360: */
+ /* line 361: */
  /* line 363: */
- /* line 365: */
 
 A68_VOID  EXBAOSF_read_line(A68_112 * File, A68_VC  Buffer, A68_INT * Charsread, A68_53  Msg, A68_115  *ReturnedValue)
 { 
@@ -936,27 +936,27 @@ A68_INT  PXBAOSF_ind;
 A68_CHAR * QXBAOSF_c;
 A68_INT  RXBAOSF;  /* forall loop counter */
 A_PROC_ENTRY(read_line);
+ /* line 364: */
+ /* line 365: */
  /* line 366: */
  /* line 367: */
- /* line 368: */
- /* line 369: */
 if ( (File==TSBAOSF_nil_file) )
 { 
 SEBAOSF_osifmessage(32, A_VVAC(FXBAOSF), Msg);
+ /* line 368: */
+ /* line 369: */
  /* line 370: */
- /* line 371: */
- /* line 372: */
 GXBAOSF = VUBAOSF_io_error;
 } 
 else
 { 
 { 
 RCBAOSF_errno = 0;
- /* line 373: */
+ /* line 371: */
 HXBAOSF_fgetsresult = ZRBAOSF_fgets(Buffer, Buffer.upb, (*(&(File->Stdiofile))));
+ /* line 372: */
+ /* line 373: */
  /* line 374: */
- /* line 375: */
- /* line 376: */
 IXBAOSF = (XRBAOSF_ferror((*(&(File->Stdiofile))))!=0);
 if ( IXBAOSF )
 { 
@@ -964,31 +964,31 @@ JXBAOSF.data[0] = (*(&(File->Name)));
 VHBAOSF_errnotext(  &KXBAOSF );
 JXBAOSF.data[1] = KXBAOSF;
 SEBAOSF_osifmessage(31, A_HISVEC(LXBAOSF,JXBAOSF,2,A68_VC ), Msg);
+ /* line 375: */
+ /* line 376: */
  /* line 377: */
- /* line 378: */
- /* line 379: */
 GXBAOSF = VUBAOSF_io_error;
 } 
 else
 { 
- /* line 380: */
- /* line 381: */
+ /* line 378: */
+ /* line 379: */
 if ( (HXBAOSF_fgetsresult==(A68_31 *)A68_NIL) )
 { 
 (*Charsread) = 0;
+ /* line 380: */
+ /* line 381: */
  /* line 382: */
- /* line 383: */
- /* line 384: */
 GXBAOSF = SUBAOSF_io_eof;
 } 
 else
 { 
+ /* line 383: */
  /* line 385: */
- /* line 387: */
 if ( (YRBAOSF_feof((*(&(File->Stdiofile))))!=0) )
 { 
 MXBAOSF_ind = 0;
- /* line 388: */
+ /* line 386: */
 OXBAOSF = Buffer.upb -1;
 NXBAOSF_c = Buffer.data;
 for (;OXBAOSF-- >= 0;
@@ -998,17 +998,17 @@ for (;OXBAOSF-- >= 0;
 if ( !(((*NXBAOSF_c)!=IVBAOSF_null_char)) ) break;
 MXBAOSF_ind+=1;
 }
- /* line 389: */
+ /* line 387: */
 (*Charsread) = MXBAOSF_ind;
- /* line 390: */
+ /* line 388: */
+ /* line 389: */
  /* line 391: */
- /* line 393: */
 GXBAOSF = PUBAOSF_io_ok;
 } 
 else
 { 
 PXBAOSF_ind = 0;
- /* line 394: */
+ /* line 392: */
 RXBAOSF = Buffer.upb -1;
 QXBAOSF_c = Buffer.data;
 for (;RXBAOSF-- >= 0;
@@ -1018,21 +1018,21 @@ for (;RXBAOSF-- >= 0;
 if ( !(((*QXBAOSF_c)!=HVBAOSF_newline_char)) ) break;
 PXBAOSF_ind+=1;
 }
- /* line 395: */
- /* line 396: */
+ /* line 393: */
+ /* line 394: */
 if ( (PXBAOSF_ind==Buffer.upb) )
 { 
 (*Charsread) = (PXBAOSF_ind-1);
- /* line 397: */
- /* line 398: */
+ /* line 395: */
+ /* line 396: */
 GXBAOSF = YUBAOSF_io_no_newline;
 } 
 else
 { 
 (*Charsread) = PXBAOSF_ind;
+ /* line 397: */
+ /* line 398: */
  /* line 399: */
- /* line 400: */
- /* line 401: */
 GXBAOSF = PUBAOSF_io_ok;
 } 
 } 
@@ -1045,8 +1045,8 @@ A_PROC_EXIT(read_line);
 return;
 } 
 #undef NL
+ /* line 408: */
  /* line 410: */
- /* line 412: */
 
 A68_VOID  VXBAOSF_write_buffer(A68_112 * File, A68_VC  Buffer, A68_53  Msg, A68_115  *ReturnedValue)
 { 
@@ -1057,37 +1057,37 @@ A68_120  ZXBAOSF;  /* collateral clause result */
 A68_VC  AYBAOSF;  /* avoid structure result */
 A68_51  BYBAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(write_buffer);
+ /* line 411: */
+ /* line 412: */
  /* line 413: */
  /* line 414: */
- /* line 415: */
- /* line 416: */
 if ( (File==TSBAOSF_nil_file) )
 { 
 SEBAOSF_osifmessage(42, A_VVAC(WXBAOSF), Msg);
+ /* line 415: */
+ /* line 416: */
  /* line 417: */
- /* line 418: */
- /* line 419: */
 XXBAOSF = VUBAOSF_io_error;
 } 
 else
 { 
+ /* line 418: */
  /* line 420: */
- /* line 422: */
 if ( (Buffer.upb==0) )
 { 
- /* line 423: */
+ /* line 421: */
 XXBAOSF = PUBAOSF_io_ok;
 } 
 else
 { 
 RCBAOSF_errno = 0;
- /* line 424: */
+ /* line 422: */
+ /* line 423: */
  /* line 425: */
- /* line 427: */
 YXBAOSF = (ASBAOSF_fwrite(Buffer, 1, Buffer.upb, (*(&(File->Stdiofile))))==Buffer.upb);
 if ( YXBAOSF )
 { 
- /* line 428: */
+ /* line 426: */
 XXBAOSF = PUBAOSF_io_ok;
 } 
 else
@@ -1096,8 +1096,8 @@ ZXBAOSF.data[0] = (*(&(File->Name)));
 VHBAOSF_errnotext(  &AYBAOSF );
 ZXBAOSF.data[1] = AYBAOSF;
 SEBAOSF_osifmessage(41, A_HISVEC(BYBAOSF,ZXBAOSF,2,A68_VC ), Msg);
- /* line 429: */
- /* line 430: */
+ /* line 427: */
+ /* line 428: */
 XXBAOSF = VUBAOSF_io_error;
 } 
 } 
@@ -1107,8 +1107,8 @@ A_PROC_EXIT(write_buffer);
 return;
 } 
 #undef NL
+ /* line 437: */
  /* line 439: */
- /* line 441: */
 
 A68_VOID  FYBAOSF_set_file_position(A68_112 * File, A68_LINT  Byteoffset, A68_53  Msg, A68_115  *ReturnedValue)
 { 
@@ -1118,25 +1118,25 @@ A68_120  IYBAOSF;  /* collateral clause result */
 A68_VC  JYBAOSF;  /* avoid structure result */
 A68_51  KYBAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(set_file_position);
+ /* line 440: */
+ /* line 441: */
  /* line 442: */
  /* line 443: */
- /* line 444: */
- /* line 445: */
 if ( (File==TSBAOSF_nil_file) )
 { 
 SEBAOSF_osifmessage(52, A_VVAC(GYBAOSF), Msg);
+ /* line 444: */
+ /* line 445: */
  /* line 446: */
- /* line 447: */
- /* line 448: */
 HYBAOSF = VUBAOSF_io_error;
 } 
 else
 { 
+ /* line 447: */
  /* line 449: */
- /* line 451: */
 if ( (BSBAOSF_fseek((*(&(File->Stdiofile))), Byteoffset, DSBAOSF_seek_set)==0) )
 { 
- /* line 452: */
+ /* line 450: */
 HYBAOSF = PUBAOSF_io_ok;
 } 
 else
@@ -1145,8 +1145,8 @@ IYBAOSF.data[0] = (*(&(File->Name)));
 VHBAOSF_errnotext(  &JYBAOSF );
 IYBAOSF.data[1] = JYBAOSF;
 SEBAOSF_osifmessage(51, A_HISVEC(KYBAOSF,IYBAOSF,2,A68_VC ), Msg);
- /* line 453: */
- /* line 454: */
+ /* line 451: */
+ /* line 452: */
 HYBAOSF = VUBAOSF_io_error;
 } 
 } 
@@ -1155,8 +1155,8 @@ A_PROC_EXIT(set_file_position);
 return;
 } 
 #undef NL
+ /* line 456: */
  /* line 458: */
- /* line 460: */
 
 A68_VOID  OYBAOSF_get_file_position(A68_112 * File, A68_LINT * Byteoffset, A68_53  Msg, A68_115  *ReturnedValue)
 { 
@@ -1165,35 +1165,35 @@ A68_115  SYBAOSF;  /* clause result */
 A68_BOOL  TYBAOSF;  /* clause result */
 A68_51  WYBAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(get_file_position);
+ /* line 459: */
+ /* line 460: */
  /* line 461: */
  /* line 462: */
- /* line 463: */
- /* line 464: */
 if ( (File==TSBAOSF_nil_file) )
 { 
 SEBAOSF_osifmessage(99, A_HVEC(RYBAOSF,QYBAOSF,A68_VC ), Msg);
+ /* line 463: */
+ /* line 464: */
  /* line 465: */
- /* line 466: */
- /* line 467: */
 SYBAOSF = VUBAOSF_io_error;
 } 
 else
 { 
 (*Byteoffset) = CSBAOSF_ftell((*(&(File->Stdiofile))));
- /* line 468: */
+ /* line 466: */
+ /* line 467: */
  /* line 469: */
- /* line 471: */
 TYBAOSF = ((*Byteoffset)!=(A68_LINT )(-1));
 if ( TYBAOSF )
 { 
- /* line 472: */
+ /* line 470: */
 SYBAOSF = PUBAOSF_io_ok;
 } 
 else
 { 
 SEBAOSF_osifmessage(99, A_HVEC(WYBAOSF,VYBAOSF,A68_VC ), Msg);
- /* line 473: */
- /* line 474: */
+ /* line 471: */
+ /* line 472: */
 SYBAOSF = VUBAOSF_io_error;
 } 
 } 
@@ -1202,7 +1202,7 @@ A_PROC_EXIT(get_file_position);
 return;
 } 
 #undef NL
- /* line 484: */
+ /* line 482: */
 
 A68_VOID  ZYBAOSF_update_disk(A68_112 * File, A68_53  Msg, A68_115  *ReturnedValue)
 { 
@@ -1212,25 +1212,25 @@ A68_120  CZBAOSF;  /* collateral clause result */
 A68_VC  DZBAOSF;  /* avoid structure result */
 A68_51  EZBAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(update_disk);
+ /* line 483: */
+ /* line 484: */
  /* line 485: */
  /* line 486: */
- /* line 487: */
- /* line 488: */
 if ( (File==TSBAOSF_nil_file) )
 { 
 SEBAOSF_osifmessage(62, A_VVAC(AZBAOSF), Msg);
+ /* line 487: */
+ /* line 488: */
  /* line 489: */
- /* line 490: */
- /* line 491: */
 BZBAOSF = VUBAOSF_io_error;
 } 
 else
 { 
+ /* line 490: */
  /* line 492: */
- /* line 494: */
 if ( (ESBAOSF_fflush((*(&(File->Stdiofile))))==0) )
 { 
- /* line 495: */
+ /* line 493: */
 BZBAOSF = PUBAOSF_io_ok;
 } 
 else
@@ -1239,8 +1239,8 @@ CZBAOSF.data[0] = (*(&(File->Name)));
 VHBAOSF_errnotext(  &DZBAOSF );
 CZBAOSF.data[1] = DZBAOSF;
 SEBAOSF_osifmessage(61, A_HISVEC(EZBAOSF,CZBAOSF,2,A68_VC ), Msg);
- /* line 496: */
- /* line 497: */
+ /* line 494: */
+ /* line 495: */
 BZBAOSF = VUBAOSF_io_error;
 } 
 } 
@@ -1249,7 +1249,7 @@ A_PROC_EXIT(update_disk);
 return;
 } 
 #undef NL
- /* line 506: */
+ /* line 504: */
 
 A68_VOID  HZBAOSF_delete_file(A68_VC  Filename, A68_53  Msg, A68_115  *ReturnedValue)
 { 
@@ -1259,13 +1259,13 @@ A68_120  KZBAOSF;  /* collateral clause result */
 A68_VC  LZBAOSF;  /* avoid structure result */
 A68_51  MZBAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(delete_file);
+ /* line 505: */
+ /* line 506: */
  /* line 507: */
- /* line 508: */
  /* line 509: */
- /* line 511: */
 if ( (FSBAOSF_unlink(A_VC_PLUS(Filename,A_HVEC(IZBAOSF,'\000',A68_CHAR )))==0) )
 { 
- /* line 512: */
+ /* line 510: */
 JZBAOSF = PUBAOSF_io_ok;
 } 
 else
@@ -1274,8 +1274,8 @@ KZBAOSF.data[0] = Filename;
 VHBAOSF_errnotext(  &LZBAOSF );
 KZBAOSF.data[1] = LZBAOSF;
 SEBAOSF_osifmessage(71, A_HISVEC(MZBAOSF,KZBAOSF,2,A68_VC ), Msg);
- /* line 513: */
- /* line 514: */
+ /* line 511: */
+ /* line 512: */
 JZBAOSF = VUBAOSF_io_error;
 } 
 A_PROC_EXIT(delete_file);
@@ -1283,8 +1283,8 @@ A_PROC_EXIT(delete_file);
 return;
 } 
 #undef NL
+ /* line 520: */
  /* line 522: */
- /* line 524: */
 
 A68_VOID  QZBAOSF_rename_file(A68_VC  Oldname, A68_VC  Newname, A68_53  Msg, A68_115  *ReturnedValue)
 { 
@@ -1295,13 +1295,13 @@ A68_120  UZBAOSF;  /* collateral clause result */
 A68_VC  XZBAOSF;  /* avoid structure result */
 A68_51  YZBAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(rename_file);
+ /* line 523: */
+ /* line 524: */
  /* line 525: */
- /* line 526: */
  /* line 527: */
- /* line 529: */
 if ( (GSBAOSF_rename(A_VC_PLUS(Oldname,A_HVEC(SZBAOSF,'\000',A68_CHAR )), A_VC_PLUS(Newname,A_HVEC(RZBAOSF,'\000',A68_CHAR )))==0) )
 { 
- /* line 530: */
+ /* line 528: */
 TZBAOSF = PUBAOSF_io_ok;
 } 
 else
@@ -1310,8 +1310,8 @@ UZBAOSF.data[0] = WZBAOSF;
 VHBAOSF_errnotext(  &XZBAOSF );
 UZBAOSF.data[1] = XZBAOSF;
 SEBAOSF_osifmessage(99, A_HISVEC(YZBAOSF,UZBAOSF,2,A68_VC ), Msg);
- /* line 531: */
- /* line 532: */
+ /* line 529: */
+ /* line 530: */
 TZBAOSF = VUBAOSF_io_error;
 } 
 A_PROC_EXIT(rename_file);
@@ -1319,8 +1319,8 @@ A_PROC_EXIT(rename_file);
 return;
 } 
 #undef NL
+ /* line 538: */
  /* line 540: */
- /* line 542: */
 
 A68_VOID  CACAOSF_make_temp_filename(A68_VC  Directory, A68_VC  File_prefix, A68_53  Msg, A68_VC  *ReturnedValue)
 { 
@@ -1336,13 +1336,13 @@ A68_VC  PACAOSF;  /* avoid structure result */
 A68_VC  QACAOSF;  /* avoid structure result */
 A68_VC  RACAOSF_result;
 A_PROC_ENTRY(make_temp_filename);
- /* line 543: */
- /* line 544: */
+ /* line 541: */
+ /* line 542: */
 { 
 FACAOSF_temp = HSBAOSF_tempnam(A_VC_PLUS(Directory,A_HVEC(EACAOSF,'\000',A68_CHAR )), A_VC_PLUS(File_prefix,A_HVEC(DACAOSF,'\000',A68_CHAR )));
+ /* line 543: */
+ /* line 544: */
  /* line 545: */
- /* line 546: */
- /* line 547: */
 GACAOSF = (FACAOSF_temp==(A68_31 *)A68_NIL);
 if ( GACAOSF )
 { 
@@ -1350,9 +1350,9 @@ HACAOSF.data[0] = JACAOSF;
 VHBAOSF_errnotext(  &KACAOSF );
 HACAOSF.data[1] = KACAOSF;
 SEBAOSF_osifmessage(99, A_HISVEC(LACAOSF,HACAOSF,2,A68_VC ), Msg);
+ /* line 546: */
+ /* line 547: */
  /* line 548: */
- /* line 549: */
- /* line 550: */
 NACAOSF = OACAOSF;
 } 
 else
@@ -1360,10 +1360,10 @@ else
 MAAAOSF_cstringtorvc( FACAOSF_temp, &PACAOSF );
 ZCAAOSF_makervc( PACAOSF, &QACAOSF );
 RACAOSF_result = QACAOSF;
- /* line 551: */
+ /* line 549: */
 ISBAOSF_free(FACAOSF_temp);
- /* line 552: */
- /* line 553: */
+ /* line 550: */
+ /* line 551: */
 NACAOSF = RACAOSF_result;
 } 
 } 
@@ -1377,9 +1377,11 @@ A_STATIC A68_133 * VACAOSF_(A68_133 * F)
 { 
 A68_133 * WACAOSF;  /* clause result */
 A_PROC_ENTRY(<<<);
+ /* line 583: */
+ /* line 584: */
+{ 
  /* line 585: */
  /* line 586: */
-{ 
  /* line 587: */
  /* line 588: */
  /* line 589: */
@@ -1388,8 +1390,6 @@ A_PROC_ENTRY(<<<);
  /* line 592: */
  /* line 593: */
  /* line 594: */
- /* line 595: */
- /* line 596: */
 #define f F
 #define statbuf TACAOSF_statbuf
 {f->Permissions = A_mode_t_SBITS(statbuf.st_mode);
@@ -1405,15 +1405,15 @@ f->Status_modified = A_time_t_LINT(statbuf.st_ctime);
 }
 #undef statbuf
 #undef f
- /* line 597: */
- /* line 598: */
+ /* line 595: */
+ /* line 596: */
 WACAOSF = F;
 } 
 A_PROC_EXIT(<<<);
 return( WACAOSF );
 } 
 #undef NL
- /* line 601: */
+ /* line 599: */
 
 A68_133 * ZACAOSF_get_file_details(A68_135  File, A68_53  Msg)
 { 
@@ -1440,54 +1440,54 @@ A68_51  ZBCAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_51  ACCAOSF;  /* OPERATORS - vacuum */
 A68_133 * BCCAOSF;  /* OPERATORS - skip to mode */
 A_PROC_ENTRY(get_file_details);
- /* line 602: */
- /* line 603: */
+ /* line 600: */
+ /* line 601: */
 ABCAOSF = File ;
 switch ( ABCAOSF.mode )
 { 
 case 1: /* REF STRUCT(REF MODE26,REF BITS)  */
 BBCAOSF_f = (ABCAOSF.data.mode1);
+ /* line 602: */
+ /* line 603: */
+{ 
  /* line 604: */
  /* line 605: */
-{ 
  /* line 606: */
- /* line 607: */
- /* line 608: */
 DBCAOSF = (KSBAOSF_fstat(JSBAOSF_fileno((*(&(BBCAOSF_f->Stdiofile)))), (&TACAOSF_statbuf))!=0);
 if ( DBCAOSF )
 { 
 A_CALLPROC(Msg,(IUAAOSF_system, A_HVEC(GBCAOSF,FBCAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(GBCAOSF,FBCAOSF,A68_VC ),(Msg).nonlocals));
- /* line 609: */
+ /* line 607: */
+ /* line 608: */
  /* line 610: */
- /* line 612: */
 HBCAOSF = SACAOSF_nil_file_details;
 } 
 else
 { 
- /* line 613: */
+ /* line 611: */
 HBCAOSF = VACAOSF_((&CBCAOSF_details));
 } 
 } 
 break;
 case 2: /* VECTOR [] CHAR */
 IBCAOSF_filename = (ABCAOSF.data.mode2);
+ /* line 612: */
+ /* line 613: */
+{ 
  /* line 614: */
  /* line 615: */
-{ 
  /* line 616: */
- /* line 617: */
- /* line 618: */
 KBCAOSF = (LSBAOSF_stat(IBCAOSF_filename, (&TACAOSF_statbuf))!=0);
 if ( KBCAOSF )
 { 
- /* line 619: */
+ /* line 617: */
 if ( (RCBAOSF_errno==QSBAOSF_eacces) )
 { 
- /* line 620: */
+ /* line 618: */
 LBCAOSF.data[0] = NBCAOSF;
 LBCAOSF.data[1] = IBCAOSF_filename;
 LBCAOSF.data[2] = A_HVEC(OBCAOSF,'\"',A68_CHAR );
- /* line 621: */
+ /* line 619: */
 JDAAOSF_concat( A_HISVEC(PBCAOSF,LBCAOSF,3,A68_VC ), &QBCAOSF );
 A_CALLPROC(Msg,(MUAAOSF_user, A_HVEC(RBCAOSF,QBCAOSF,A68_VC )),(MUAAOSF_user, A_HVEC(RBCAOSF,QBCAOSF,A68_VC ),(Msg).nonlocals));
 } 
@@ -1495,41 +1495,41 @@ else
 { 
 SBCAOSF = (RCBAOSF_errno==RSBAOSF_enoent);
 if ( ! SBCAOSF )
-{ /* line 622: */
+{ /* line 620: */
 SBCAOSF = (RCBAOSF_errno==SSBAOSF_enotdir);
 }
- /* line 623: */
+ /* line 621: */
 if ( SBCAOSF )
 { 
 /*SKIP*/;
 } 
 else
 { 
- /* line 624: */
+ /* line 622: */
 TBCAOSF.data[0] = VBCAOSF;
 TBCAOSF.data[1] = IBCAOSF_filename;
 TBCAOSF.data[2] = A_HVEC(WBCAOSF,'\"',A68_CHAR );
- /* line 625: */
+ /* line 623: */
 JDAAOSF_concat( A_HISVEC(XBCAOSF,TBCAOSF,3,A68_VC ), &YBCAOSF );
 A_CALLPROC(Msg,(IUAAOSF_system, A_HVEC(ZBCAOSF,YBCAOSF,A68_VC )),(IUAAOSF_system, A_HVEC(ZBCAOSF,YBCAOSF,A68_VC ),(Msg).nonlocals));
 } 
 } 
- /* line 626: */
+ /* line 624: */
+ /* line 625: */
  /* line 627: */
- /* line 629: */
 HBCAOSF = SACAOSF_nil_file_details;
 } 
 else
 { 
- /* line 631: */
+ /* line 629: */
 HBCAOSF = VACAOSF_((&JBCAOSF_details));
 } 
 } 
 break;
 default: 
 SEBAOSF_osifmessage(0, A_VVAC(ACCAOSF), Msg);
- /* line 632: */
- /* line 633: */
+ /* line 630: */
+ /* line 631: */
 HBCAOSF = BCCAOSF;
 break;
 } 
@@ -1542,8 +1542,8 @@ A68_BOOL  DCCAOSF_is_terminal(A68_112 * F)
 { 
 A68_BOOL  ECCAOSF;  /* clause result */
 A_PROC_ENTRY(is_terminal);
- /* line 642: */
- /* line 630: */
+ /* line 640: */
+ /* line 628: */
 ECCAOSF = (PSBAOSF_ttyname(JSBAOSF_fileno((*(&(F->Stdiofile)))))!=(A68_31 *)A68_NIL);
 A_PROC_EXIT(is_terminal);
 return( ECCAOSF );
@@ -1559,24 +1559,24 @@ A68_VC  LCCAOSF;  /* avoid structure result */
 A68_51  MCCAOSF;  /* OPERATORS - istruct -> vector */
 A68_BITS * NCCAOSF;  /* clause result */
 A_PROC_ENTRY(open_directory);
- /* line 655: */
- /* line 656: */
+ /* line 653: */
+ /* line 654: */
 { 
 JCCAOSF_dir = MSBAOSF_opendir(A_VC_PLUS(Name,A_HVEC(ICCAOSF,'\000',A68_CHAR )));
+ /* line 655: */
+ /* line 656: */
  /* line 657: */
  /* line 658: */
- /* line 659: */
- /* line 660: */
 if ( (JCCAOSF_dir==SRBAOSF_null_dirptr) )
 { 
 KCCAOSF.data[0] = Name;
 VHBAOSF_errnotext(  &LCCAOSF );
 KCCAOSF.data[1] = LCCAOSF;
- /* line 661: */
+ /* line 659: */
 SEBAOSF_osifmessage(100, A_HISVEC(MCCAOSF,KCCAOSF,2,A68_VC ), Msg);
 } 
- /* line 662: */
- /* line 663: */
+ /* line 660: */
+ /* line 661: */
 NCCAOSF = JCCAOSF_dir;
 } 
 A_PROC_EXIT(open_directory);
@@ -1590,23 +1590,23 @@ A68_51  RCCAOSF;  /* OPERATORS - vacuum */
 A68_VC  SCCAOSF;  /* avoid structure result */
 A68_51  TCCAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(close_directory);
+ /* line 664: */
+ /* line 665: */
  /* line 666: */
  /* line 667: */
- /* line 668: */
- /* line 669: */
 if ( (D==SRBAOSF_null_dirptr) )
 { 
- /* line 670: */
- /* line 671: */
+ /* line 668: */
+ /* line 669: */
 SEBAOSF_osifmessage(100, A_VVAC(RCCAOSF), Msg);
 } 
 else
 { 
- /* line 672: */
- /* line 673: */
+ /* line 670: */
+ /* line 671: */
 if ( (NSBAOSF_closedir(D)!=0) )
 { 
- /* line 674: */
+ /* line 672: */
 VHBAOSF_errnotext(  &SCCAOSF );
 SEBAOSF_osifmessage(100, A_HVEC(TCCAOSF,SCCAOSF,A68_VC ), Msg);
 } 
@@ -1632,15 +1632,15 @@ A68_51  HDCAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_VC  IDCAOSF;  /* OPERATORS - nil -> mode */
 A68_VC  JDCAOSF;  /* avoid structure result */
 A_PROC_ENTRY(get_next_dir_entry);
+ /* line 675: */
+ /* line 676: */
  /* line 677: */
- /* line 678: */
- /* line 679: */
 if ( (D==SRBAOSF_null_dirptr) )
 { 
 SEBAOSF_osifmessage(100, A_VVAC(XCCAOSF), Msg);
+ /* line 678: */
+ /* line 679: */
  /* line 680: */
- /* line 681: */
- /* line 682: */
 YCCAOSF = A_VVAC(ZCCAOSF);
 } 
 else
@@ -1648,22 +1648,22 @@ else
 { 
 MAAAOSF_cstringtorvc( OSBAOSF_readdir(D), &ADCAOSF );
 BDCAOSF_entry = ADCAOSF;
- /* line 683: */
+ /* line 681: */
 DDCAOSF = A_VVAC(CDCAOSF) ;
 EDCAOSF = A_VSTRUCTCOMP(BDCAOSF_entry,DDCAOSF);
 if ( ! EDCAOSF )
-{ /* line 684: */
+{ /* line 682: */
 EDCAOSF = (BDCAOSF_entry.upb==0);
 }
- /* line 685: */
+ /* line 683: */
 FDCAOSF = EDCAOSF;
 if ( FDCAOSF )
 { 
 VHBAOSF_errnotext(  &GDCAOSF );
 SEBAOSF_osifmessage(100, A_HVEC(HDCAOSF,GDCAOSF,A68_VC ), Msg);
- /* line 686: */
+ /* line 684: */
+ /* line 685: */
  /* line 687: */
- /* line 689: */
 YCCAOSF = A_VVAC(IDCAOSF);
 } 
 else
@@ -1692,34 +1692,34 @@ A68_VC  BECAOSF;  /* avoid structure result */
 A68_112 * CECAOSF;  /* YIELD */
 A_PROC_ENTRY(init_osfiles);
 { 
- /* line 703: */
+ /* line 701: */
+ /* line 702: */
  /* line 704: */
+ /* line 705: */
  /* line 706: */
  /* line 707: */
- /* line 708: */
  /* line 709: */
+ /* line 710: */
  /* line 711: */
  /* line 712: */
- /* line 713: */
  /* line 714: */
- /* line 716: */
 ZCAAOSF_makervc( QDCAOSF, &RDCAOSF );
 ODCAOSF.Name = RDCAOSF;
 ODCAOSF.Stdiofile = (&LDCAOSF_stdiostdin);
 SDCAOSF = A_HEAP(A68_112 ) ;
 (*SDCAOSF) = ODCAOSF ;
 USBAOSF_stdin = SDCAOSF;
- /* line 717: */
+ /* line 715: */
 ZCAAOSF_makervc( VDCAOSF, &WDCAOSF );
 TDCAOSF.Name = WDCAOSF;
 TDCAOSF.Stdiofile = (&MDCAOSF_stdiostdout);
 XDCAOSF = A_HEAP(A68_112 ) ;
 (*XDCAOSF) = TDCAOSF ;
 VSBAOSF_stdout = XDCAOSF;
- /* line 718: */
+ /* line 716: */
 ZCAAOSF_makervc( AECAOSF, &BECAOSF );
 YDCAOSF.Name = BECAOSF;
- /* line 719: */
+ /* line 717: */
 YDCAOSF.Stdiofile = (&NDCAOSF_stdiostderr);
 CECAOSF = A_HEAP(A68_112 ) ;
 (*CECAOSF) = YDCAOSF ;
@@ -1736,8 +1736,8 @@ void MRBAOSF(void)   /* initialise DECS osfiles */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","osfiles.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","osfiles.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/usefulops.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/oserrors.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/messageproc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/cif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
@@ -1771,10 +1771,10 @@ ZRAAOSF();   /* USE messageproc */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osfiles.a68";
-A_config.translation_time = "Sat Sep  4 11:42:07 2004";
+A_config.translation_time = "Sun Sep 26 21:50:24 2004";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "LRBAOSF (from seed file) ";
-A_config.spec_change_time = "Sat Sep  4 11:42:07 2004";
+A_config.spec_change_time = "Sun Sep 26 21:50:24 2004";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -1830,57 +1830,59 @@ SRBAOSF_null_dirptr = (A68_BITS *)A68_NIL;
  /* line 119: */
  /* line 120: */
  /* line 121: */
+ /* line 122: */
  /* line 124: */
+ /* line 125: */
  /* line 126: */
  /* line 127: */
- /* line 128: */
  /* line 129: */
+ /* line 130: */
  /* line 131: */
- /* line 132: */
  /* line 133: */
+ /* line 134: */
  /* line 135: */
  /* line 136: */
- /* line 137: */
  /* line 138: */
+ /* line 139: */
  /* line 140: */
  /* line 141: */
- /* line 142: */
  /* line 143: */
+ /* line 144: */
  /* line 145: */
  /* line 146: */
- /* line 147: */
  /* line 148: */
+ /* line 149: */
  /* line 150: */
  /* line 151: */
- /* line 152: */
  /* line 153: */
+ /* line 154: */
  /* line 155: */
- /* line 156: */
  /* line 157: */
+ /* line 158: */
  /* line 159: */
  /* line 160: */
- /* line 161: */
  /* line 162: */
+ /* line 163: */
  /* line 164: */
  /* line 165: */
- /* line 166: */
  /* line 167: */
- /* line 169: */
+ /* line 168: */
  /* line 170: */
+ /* line 171: */
  /* line 172: */
  /* line 173: */
- /* line 174: */
  /* line 175: */
+ /* line 176: */
  /* line 177: */
  /* line 178: */
  /* line 179: */
- /* line 180: */
  /* line 181: */
+ /* line 182: */
  /* line 183: */
  /* line 184: */
  /* line 185: */
- /* line 186: */
  /* line 187: */
+ /* line 188: */
  /* line 189: */
  /* line 190: */
  /* line 191: */
@@ -1889,146 +1891,144 @@ SRBAOSF_null_dirptr = (A68_BITS *)A68_NIL;
  /* line 194: */
  /* line 195: */
  /* line 196: */
- /* line 197: */
  /* line 198: */
+ /* line 199: */
  /* line 200: */
  /* line 201: */
- /* line 202: */
  /* line 203: */
+ /* line 204: */
  /* line 205: */
- /* line 206: */
- /* line 207: */
- /* line 212: */
- /* line 217: */
- /* line 223: */
+ /* line 210: */
+ /* line 215: */
+ /* line 221: */
 TSBAOSF_nil_file = (A68_112 *)A68_NIL;
- /* line 224: */
+ /* line 222: */
 USBAOSF_stdin = TSBAOSF_nil_file;
 VSBAOSF_stdout = TSBAOSF_nil_file;
 WSBAOSF_stderr = TSBAOSF_nil_file;
- /* line 232: */
+ /* line 230: */
+ /* line 231: */
  /* line 233: */
- /* line 235: */
- /* line 236: */
+ /* line 234: */
 { 
 ZSBAOSF = (&((&XSBAOSF_aa)->Access)) ;
 (*ZSBAOSF) = YSBAOSF;
 ATBAOSF = XSBAOSF_aa;
 } 
 BTBAOSF_read_access = ATBAOSF;
- /* line 237: */
+ /* line 235: */
 { 
 DTBAOSF = (&((&XSBAOSF_aa)->Access)) ;
 (*DTBAOSF) = CTBAOSF;
 ETBAOSF = XSBAOSF_aa;
 } 
 FTBAOSF_write_access = ETBAOSF;
- /* line 238: */
+ /* line 236: */
 { 
 HTBAOSF = (&((&XSBAOSF_aa)->Access)) ;
 (*HTBAOSF) = GTBAOSF;
 ITBAOSF = XSBAOSF_aa;
 } 
 JTBAOSF_append_access = ITBAOSF;
- /* line 239: */
+ /* line 237: */
 { 
 LTBAOSF = (&((&XSBAOSF_aa)->Access)) ;
 (*LTBAOSF) = KTBAOSF;
 MTBAOSF = XSBAOSF_aa;
 } 
 NTBAOSF_update_access = MTBAOSF;
- /* line 240: */
+ /* line 238: */
 { 
 PTBAOSF = (&((&XSBAOSF_aa)->Access)) ;
 (*PTBAOSF) = OTBAOSF;
 QTBAOSF = XSBAOSF_aa;
 } 
 RTBAOSF_update_truncate_access = QTBAOSF;
- /* line 241: */
+ /* line 239: */
 { 
 TTBAOSF = (&((&XSBAOSF_aa)->Access)) ;
 (*TTBAOSF) = STBAOSF;
 UTBAOSF = XSBAOSF_aa;
 } 
 VTBAOSF_update_append_access = UTBAOSF;
- /* line 243: */
- /* line 244: */
- /* line 248: */
- /* line 249: */
- /* line 252: */
- /* line 253: */
+ /* line 241: */
+ /* line 242: */
+ /* line 246: */
+ /* line 247: */
+ /* line 250: */
+ /* line 251: */
 { 
 NUBAOSF = (&((&MUBAOSF_tt)->Status)) ;
 (*NUBAOSF) = 1;
 OUBAOSF = MUBAOSF_tt;
 } 
 PUBAOSF_io_ok = OUBAOSF;
- /* line 254: */
+ /* line 252: */
 { 
 QUBAOSF = (&((&MUBAOSF_tt)->Status)) ;
 (*QUBAOSF) = 2;
 RUBAOSF = MUBAOSF_tt;
 } 
 SUBAOSF_io_eof = RUBAOSF;
- /* line 255: */
+ /* line 253: */
 { 
 TUBAOSF = (&((&MUBAOSF_tt)->Status)) ;
 (*TUBAOSF) = 3;
 UUBAOSF = MUBAOSF_tt;
 } 
 VUBAOSF_io_error = UUBAOSF;
- /* line 256: */
+ /* line 254: */
 { 
 WUBAOSF = (&((&MUBAOSF_tt)->Status)) ;
 (*WUBAOSF) = 4;
 XUBAOSF = MUBAOSF_tt;
 } 
 YUBAOSF_io_no_newline = XUBAOSF;
- /* line 258: */
- /* line 259: */
- /* line 263: */
- /* line 270: */
- /* line 277: */
- /* line 278: */
- /* line 301: */
- /* line 302: */
- /* line 324: */
- /* line 325: */
- /* line 360: */
- /* line 361: */
- /* line 408: */
- /* line 409: */
- /* line 437: */
- /* line 438: */
- /* line 456: */
- /* line 457: */
- /* line 481: */
- /* line 482: */
- /* line 503: */
- /* line 504: */
- /* line 520: */
- /* line 521: */
- /* line 538: */
- /* line 539: */
- /* line 565: */
+ /* line 256: */
+ /* line 257: */
+ /* line 261: */
+ /* line 268: */
+ /* line 275: */
+ /* line 276: */
+ /* line 299: */
+ /* line 300: */
+ /* line 322: */
+ /* line 323: */
+ /* line 358: */
+ /* line 359: */
+ /* line 406: */
+ /* line 407: */
+ /* line 435: */
+ /* line 436: */
+ /* line 454: */
+ /* line 455: */
+ /* line 479: */
+ /* line 480: */
+ /* line 501: */
+ /* line 502: */
+ /* line 518: */
+ /* line 519: */
+ /* line 536: */
+ /* line 537: */
+ /* line 563: */
+ /* line 574: */
  /* line 576: */
- /* line 578: */
 SACAOSF_nil_file_details = (A68_133 *)A68_NIL;
+ /* line 578: */
+ /* line 579: */
  /* line 580: */
- /* line 581: */
  /* line 582: */
- /* line 584: */
- /* line 600: */
- /* line 641: */
- /* line 654: */
- /* line 665: */
- /* line 676: */
- /* line 692: */
- /* line 693: */
- /* line 702: */
+ /* line 598: */
+ /* line 639: */
+ /* line 652: */
+ /* line 663: */
+ /* line 674: */
+ /* line 690: */
+ /* line 691: */
+ /* line 700: */
+ /* line 719: */
  /* line 721: */
- /* line 723: */
- /* line 741: */
+ /* line 739: */
 DECAOSF.fn.fn_global = KDCAOSF_init_osfiles;
 DECAOSF.nonlocals = A68_NIL;
 ABAALIB_a68init(DECAOSF);

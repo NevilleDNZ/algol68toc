@@ -1,8 +1,8 @@
 DECS  environment  CONTEXT VOID  USE
-*L    cif, osif, usefulops,
+      cif, osif, usefulops,
       incinstallation, moduletracer, message, ctrans_version:
 
-configinfo A68CONFIG "$Id: environment.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: environment.a68,v 1.1.2.3 2004/09/05 05:22:28 teshields Exp $";
 
 
 COMMENT 
@@ -121,10 +121,6 @@ REF DIRLIST cfile_dirlist := nil_dirlist;
 { directory containing modinfo files of library modules }
 REF DIRLIST library_directory := nil_dirlist;
 
-{ staredit flags }
-[ABS "0":ABS "Z"] BOOL stars;
-FORALL star IN stars DO star := FALSE OD;
-
 { unique name option and default }
 MODE
   FROMCFILE = STRUCT(INT cfile),
@@ -133,7 +129,7 @@ MODE
 
 FROMCFILE fromcfile;
 FROMSEEDFILE fromseedfile;
-NAMESEEDSPEC uname_option := fromseedfile;
+NAMESEEDSPEC uname_option := "AAAAAAA";
 
 { file name truncation for FAT (DOS) filestore &c }
 
@@ -470,23 +466,6 @@ BEGIN
         seed file name := a68_nameseed
       FI;
 
-      { staredit flags, may be overridden or added to by '-staredit' option }
-      IF
-        REF VECTOR [] CHAR a68_staredit = read env("A68_STAREDIT");
-        UPB a68_staredit > 0
-      THEN
-        pcomment(284,a68_staredit);
-        FORALL c IN a68_staredit
-        DO
-          IF NOT ( (c >= "0" ANDTH c <= "9") OREL (c >= "A" ANDTH c <= "Z"))
-          THEN
-            pterminal error(282,c)
-          ELSE
-            stars[ABS c] := TRUE
-          FI
-        OD
-      FI;
-
       { directories for finding modinfo files }
       IF
         PROC pushdir = (REF VECTOR [] CHAR dir) VOID:
@@ -609,32 +588,6 @@ BEGIN
       	  show_a68config(write_stdout);
           write_stdout("");
           filename_expected := FALSE
-
-        ELIF this arg = "-staredit"
-        THEN
-          VECTOR [] CHAR starflags = argv[arg index];
-          INT first flag; BOOL setting;
-
-          IF (starflags[1] = "+") OREL (starflags[1] = "-")
-          THEN { amend A68_STAREDIT setting }
-            first flag := 2;
-            setting := starflags[1] = "+"
-          ELSE { override A68_STAREDIT settings }
-            first flag := 1;
-            setting := TRUE;
-            FORALL b IN stars DO b := FALSE OD
-          FI;
-
-          FORALL c IN starflags[first flag:]
-          DO
-            IF NOT ( (c >= "0" ANDTH c <= "9") OREL (c >= "A" ANDTH c <= "Z"))
-            THEN
-              pterminal error(283,c)
-            ELSE
-              stars[ABS c] := setting
-            FI
-          OD;
-          arg index +:= 1
 
         ELIF this arg = "-dir"
         THEN
@@ -872,7 +825,7 @@ KEEP
 
     list, list_nonl,
     type line on terminal, 
-    stars, seed file name,
+    seed file name,
     config_info, MODINFOLIST, nil_modinfolist, ENVINFO, nil_envinfo,
     current_directory, find_and_open_file,
     DIRLIST, modinfo_dirlist, cfile_dirlist,

@@ -2,7 +2,7 @@ DECS  osfiles  CONTEXT VOID  USE  cif,  messageproc,  oserrors,  usefulops:
 
 {  Id: osfiles.a68,v 2.10 1993/07/16 10:23:20 aap Exp $ }
 
-configinfo A68CONFIG "$Id: osfiles.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: osfiles.a68,v 1.1.2.2 2004/09/27 00:29:29 teshields Exp $";
 
 
 COMMENT 
@@ -119,9 +119,7 @@ PROC (FILEPTR,LONG INT,INT) INT fseek =
   ALIEN "FSEEK"
         "extern int fseek(); /* #include <stdio.h> */"
         "#define FSEEK(stream,offset,whence) \"
-CO      "  A_int_INT(fseek(A_FILEPTR_fileptr(stream),A_LINT_long(offset),A_INT_int(whence)))";
-        New definition for Linux (see include/Atypes.h for long long int) CO
-        "  A_int_INT(fseek(A_FILEPTR_fileptr(stream),(long int)offset,A_INT_int(whence)))";
+        "  A_int_INT(fseek(A_FILEPTR_fileptr(stream),A_LINT_long(offset),A_INT_int(whence)))";
 
 PROC (FILEPTR) LONG INT ftell =
   ALIEN "FTELL"

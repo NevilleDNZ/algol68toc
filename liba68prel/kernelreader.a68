@@ -2,7 +2,7 @@ DECS  kernelreader  CONTEXT VOID  USE  putstrings,  messageproc,  osinterface,
       basics,  commandsyntax,  commandreader:
 
 { " Id: kernelreader.sta,v 1.1 91/10/14 14:30:00 edcad Exp $" }
-configinfo A68CONFIG "$Id: kernelreader.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: kernelreader.a68,v 1.1.2.2 2004/09/05 04:09:04 teshields Exp $";
 
 
 COMMENT 
@@ -448,8 +448,7 @@ PROC (VALUE, MESSAGEPROC) RVC  get_declname = get_name;
 
 STR  string_str = "<string>",
      string_help = "An arbitary string of printable characters excluding "
-%4                 " characters used as separators ("" "" and "","")";
-*4                 " characters used as separators ("" "", "","" and ""/"")";
+                   " characters used as separators ("" "" and "","")";
 INT  string_no;
 COMMANDSYNTAX  string_syntax = string_no;
 
@@ -508,9 +507,8 @@ BEGIN
    { Checks basic syntax only - must postpone more thorough check to later }
    CHAR  c:= first_char(msg);
    INT  start = rdcharno;
-*3 WHILE letter(c) OREL digit(c) OREL visible_space(c)
-*4 WHILE  NOT separator(c)  ANDTH  c /= "/"  { terminator for VAX/VMS }
-*5 WHILE  NOT separator(c)  { this is adequate for UNIX }
+{*3 WHILE letter(c) OREL digit(c) OREL visible_space(c)}
+   WHILE  NOT separator(c)  { this is adequate for UNIX }
    DO  c:= next_char(msg)  OD;
    IF rdcharno - start > 0
    THEN  check_read(MAKERVC rdbuffer[start : rdcharno - 1], filename_str, msg)

@@ -213,8 +213,8 @@ typedef struct A68t85  A68_85 ;    /* PROC(MODE75) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t86,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t86  A68_86 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,59,A68t87);
-typedef struct A68t87  A68_87 ;    /* STRUCT 59 CHAR */
+A_ISTRUCT(A68_CHAR ,63,A68t87);
+typedef struct A68t87  A68_87 ;    /* STRUCT 63 CHAR */
 
 A_PROCEDURE(A68_VOID ,A68t88,(A68_BOOL ,struct A68t72 *),(A68_BOOL ,struct A68t72 *,void *));
 typedef struct A68t88  A68_88 ;    /* PROC(BOOL) MODE72 */
@@ -405,8 +405,8 @@ extern char **A_envp;
 extern void BAAALIB(void);   /* a68config */
 extern void WSCAOSF(void);   /* osif */
 /* --- end of DECS initialisation functions --- */
-static A68_87   HHDAOSF = {"$Id: iobasics.c,v 1.6 2004/09/04 16:52:11 teshields Exp $"}; 
-A_GISVEC(A68_VC ,IHDAOSF,HHDAOSF,59)
+static A68_87   HHDAOSF = {"$Id: iobasics.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
+A_GISVEC(A68_VC ,IHDAOSF,HHDAOSF,63)
 A68_83  JHDAOSF_anonymous;
 A68_88  KHDAOSF_anonymous;
 A68_VC  WHDAOSF_nilstr;
@@ -1015,8 +1015,8 @@ void EHDAOSF(void)   /* initialise DECS iobasics */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","iobasics.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","iobasics.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
@@ -1034,10 +1034,10 @@ BAAALIB();   /* USE a68config */
 WSCAOSF();   /* USE osif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/iobasics.a68";
-A_config.translation_time = "Sat Sep  4 11:42:09 2004";
+A_config.translation_time = "Sun Sep 26 21:50:26 2004";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "DHDAOSF (from seed file) ";
-A_config.spec_change_time = "Sat Sep  4 11:42:09 2004";
+A_config.spec_change_time = "Sun Sep 26 21:50:26 2004";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

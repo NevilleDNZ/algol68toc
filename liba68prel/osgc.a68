@@ -1,8 +1,8 @@
-DECS  osgc  CONTEXT VOID  USE  cif,  oserrors,  usefulops:
+ [DECS  osgc  CONTEXT VOID  USE  cif,  oserrors,  usefulops0
 
 {  Id: osgc.a68,v 1.3 1993/11/18 11:21:17 aap Exp $ }
 
-configinfo A68CONFIG "$Id: osgc.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: osgc.a68,v 1.1.2.1 2004/09/04 17:36:14 teshields Exp $";
 
 
 COMMENT 

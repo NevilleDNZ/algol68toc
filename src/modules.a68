@@ -1,9 +1,9 @@
 DECS  modules  CONTEXT VOID  USE
-*L    usefulops, osif,
+      usefulops, osif,
       centities, common, coutput, environ, environment, idtable, incid,
       incinstallation, liblookup, moduletracer, uniquenameserver:
 
-configinfo A68CONFIG "$Id: modules.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: modules.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
 
 
 COMMENT 

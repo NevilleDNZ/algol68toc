@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.2 2004/09/04 02:45:13 teshields Exp $
+# $Id: Makefile,v 1.2.2.1 2004/09/04 17:36:11 teshields Exp $
 #
 #------------ Algol 68 sources -------------
 examples_a := client1.a68 client2.a68 server1.a68 server2.a68 \

@@ -1,6 +1,6 @@
 DECS  putstrings  CONTEXT VOID  USE  osif, strops,  numberstr,  iobasics:
 
-configinfo A68CONFIG "$Id: putstrings.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: putstrings.a68,v 1.1.2.1 2004/09/04 17:36:14 teshields Exp $";
 
 
 COMMENT 

@@ -720,8 +720,8 @@ typedef struct A68t208  A68_208 ;    /* PROC(MODE129) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t209,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t209  A68_209 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,58,A68t210);
-typedef struct A68t210  A68_210 ;    /* STRUCT 58 CHAR */
+A_ISTRUCT(A68_CHAR ,62,A68t210);
+typedef struct A68t210  A68_210 ;    /* STRUCT 62 CHAR */
 struct A68t211{
 struct A68t92 * File;
 A68_BOOL  Suspended;
@@ -914,8 +914,8 @@ extern void OCHAOSF(void);   /* testmode */
 extern void CQEAOSF(void);   /* osinterface */
 extern void KNDAOSF(void);   /* putstrings */
 /* --- end of DECS initialisation functions --- */
-static A68_210   JWKAOSF = {"$Id: ioprocs.c,v 1.6 2004/09/04 16:52:11 teshields Exp $"}; 
-A_GISVEC(A68_VC ,KWKAOSF,JWKAOSF,58)
+static A68_210   JWKAOSF = {"$Id: ioprocs.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
+A_GISVEC(A68_VC ,KWKAOSF,JWKAOSF,62)
 #define LWKAOSF_in_step 512
 #define MWKAOSF_default_width 80
 #define NWKAOSF_min_width 40
@@ -2638,8 +2638,8 @@ void GWKAOSF(void)   /* initialise DECS ioprocs */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","ioprocs.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","ioprocs.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/commandreader.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/iomessages.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/messageproc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/basics.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/testmode.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osinterface.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/putstrings.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
@@ -2659,10 +2659,10 @@ CQEAOSF();   /* USE osinterface */
 KNDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/ioprocs.a68";
-A_config.translation_time = "Sat Sep  4 11:42:16 2004";
+A_config.translation_time = "Sun Sep 26 21:50:33 2004";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "FWKAOSF (from seed file) ";
-A_config.spec_change_time = "Sat Sep  4 11:42:16 2004";
+A_config.spec_change_time = "Sun Sep 26 21:50:33 2004";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
