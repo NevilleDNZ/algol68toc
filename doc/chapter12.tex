@@ -1,10 +1,6 @@
 % $Log: chapter12.tex,v $
-% Revision 1.3.2.1  2004/09/04 17:36:11  teshields
-% LCSE Algol68toC initial revision
-% Default installation directory is '/usr/local/'
-%
-% Revision 1.3  2004/09/04 02:37:45  teshields
-% Algol68toC v1.8 Public Baseline
+% Revision 1.4  2004-11-07 16:00:10  sian
+% Removed all references to PLUS, MINUS and TIMES
 %
 % Revision 1.3  2002/06/20 11:49:28  sian
 % mm removed, padding removed, ca68 added
@@ -574,15 +570,9 @@ rare however.
 \pagebreak
 \Subsection{Arithmetic overflow}{dev-overflow}
 Sometimes your program will fail at the time of elaboration or
-``run-time'' due to \hx{arithmetic overflow}{overflow!arithmetic}.
-If, during a calculation, an intermediate result exceeds the capacity
-of an \verb|INT|, normally, no indication will be given other than
-erroneous results. In the standard prelude that comes with the
-\hx{a68toc}{a68toc!integer overflow} compiler, a number of special
-arithmetic operators are provided which check for integer overflow.
-These are \verb|PLUS|, \verb|MINUS| and \verb|TIMES|. They are
-defined for \verb|LONG INT|, \verb|INT|, \verb|SHORT INT| and
-\verb|SHORT SHORT INT| (see section \hyref{stan-fpov} for details).
+``run-time'' due to \hx{arithmetic overflow}{overflow!arithmetic}. If,
+during a calculation, an intermediate result exceeds the capacity of an
+\verb|INT|, no indication will be given other than erroneous results.
 
 Overflow of \verb|REAL| numbers can be detected by the floating-point
 unit. The standard prelude contains the value \verb|fpu| \verb|cw|
@@ -1036,7 +1026,6 @@ C~source, have a look at the files in the directories
    /usr/share/a68toc/Linux
    /usr/share/a68toc/include
 \end{verbatim}
-\newpage
 
 \Section{Summary}{dev-summ}
 In this chapter, we have covered most of the activities relating to

@@ -1,7 +1,7 @@
 DECS  usefulops  CONTEXT VOID  USE  cif,  strops:
 
 {  Id: usefulops.a68,v 2.10 1993/07/07 11:32:56 aap Exp $ }
-configinfo A68CONFIG "$Id: usefulops.a68,v 1.1.2.1 2004/09/04 17:36:14 teshields Exp $";
+configinfo A68CONFIG "$Id: usefulops.a68,v 1.1.1.1 2001-05-07 10:16:12 sian Exp $";
 
 
 COMMENT 

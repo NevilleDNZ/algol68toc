@@ -1,10 +1,9 @@
 % $Log: chapter9.tex,v $
-% Revision 1.6.2.1  2004/09/04 17:36:11  teshields
-% LCSE Algol68toC initial revision
-% Default installation directory is '/usr/local/'
+% Revision 1.8  2004-11-07 17:15:51  sian
+% Got rid of an editing bug in chapter 9
 %
-% Revision 1.6  2004/09/04 02:42:31  teshields
-% Algol68toC v1.8 Public Baseline
+% Revision 1.7  2004/11/07 16:00:10  sian
+% Removed all references to PLUS, MINUS and TIMES
 %
 % Revision 1.6  2003/05/31 13:02:41  sian
 % Removal of compiled libraries and binaries
@@ -497,13 +496,13 @@ is available for the next read---it has \emph{not} been read by the
 previous read (but see \hyref{trans-bin}).
 
 \begin{exercise}
-\item Write a program called \verb|copy| which copies its input text book
-to its output text book, stopping when a blank line is read (all blanks
-or zero length). The input book is called \verb|inbook| and the output
-book \verb|outbook|. \ans Notice that the processing of a line is
-done entirely within the \verb|WHILE| clause.\hylabel{trans-term-a}
+\item Write a program called \verb|copy| which copies its input text
+book to its output text book, stopping when a blank line is read (all
+blanks or zero length). The input book is called \verb|inbook| and the
+output book \verb|outbook|.\hylabel{trans-term-a}\ans Notice that the
+processing of a line is done entirely within the \verb|WHILE| clause.
 \begin{verbatim}
-   PROGRAM ex9 4 1 CONTEXT VOID
+   PROGRAM ex9 5 CONTEXT VOID
    USE standard
    BEGIN
       FILE inf, outf;
@@ -545,7 +544,7 @@ done entirely within the \verb|WHILE| clause.\hylabel{trans-term-a}
 to a line. Terminate the \verb|lines| with an asterisk (\verb|*|) on a
 line by itself. \ans \ %
 \begin{verbatim}
-   PROGRAM ex9 4 2 CONTEXT VOID
+   PROGRAM ex9 6 CONTEXT VOID
    USE transput
    BEGIN
       FILE inf, outf;
@@ -849,8 +848,8 @@ could be given the identifications of the books whenever you executed
 the program, then it could have a much wider applicability.
 
 The command line is available to the program via the channel
-\verb|arg channel|. Here is a small program which reads its first
-argument and prints it on the screen:
+\hxtt{arg channel}{arg channel}. Here is a small program which reads
+its first argument and prints it on the screen:
 \begin{verbatim}
    PROGRAM arg1 CONTEXT VOID
    USE standard
@@ -877,23 +876,23 @@ Some points to note:
 \item \verb|stand error| is an output \verb|FILE| which is usually used
 for error messages.
 \item The identification field in the call to \verb|open| is ignored
-by \verb|arg channel|. In the example, it is written as the empty
-string.
+by \hxtt{arg channel}{arg channel}. In the example, it is written as
+the empty string.
 \item \ixtt{stop} is equivalent to \verb|exit(0)|.
 \item In Linux, the first parameter is always the full path of the
 identification of the program.
 \end{enumerate}
-You can only read via the \verb|arg channel| (using \ixtt{get}).
-\ixtt{make term} has already been set to make the string terminator
-\ixtt{blank} (the last argument is always followed by a space) so you
-can read the individual parameters from the command line by reading
-strings.  However, you should note that when you have read a string,
-the next character will be the terminator of the string. So when you
-have read a string, you will need to skip all characters which could
-possibly terminate the reading of a string (known as
-\ix{terminators}) otherwise the next read of a string
-will yield the \ix{null string} (denoted by \verb|""|).
-The procedure \ixtt{skip terminators} with header
+You can only read via the \hxtt{arg channel}{arg channel} (using
+\ixtt{get}). \ixtt{make term} has already been set to make the string
+terminator \ixtt{blank} (the last argument is always followed by a
+space) so you can read the individual parameters from the command line
+by reading strings.  However, you should note that when you have read a
+string, the next character will be the terminator of the string. So
+when you have read a string, you will need to skip all characters which
+could possibly terminate the reading of a string (known as
+\ix{terminators}) otherwise the next read of a string will yield the
+\ix{null string} (denoted by \verb|""|). The procedure \ixtt{skip
+terminators} with header
 \begin{verbatim}
    PROC skip terminators=(REF FILE f)VOID:
 \end{verbatim}
@@ -901,7 +900,7 @@ The procedure \ixtt{skip terminators} with header
 is used for this purpose.
 
 \begin{exercise}
-\item Modify exercise \verb|ex9 4 1| (see \hyref{trans-term-a}) to
+\item Modify exercise \verb|ex9.5| (see \hyref{trans-term-a}) to
 get the identifiers of its input and output books from the command
 line (remember that the first argument is always the program id, so
 use a \verb|LOC STRING| for it).  Remember to cater for the end of
@@ -1039,7 +1038,7 @@ execute a program.
 
 Each string is identified by what is called an \textbf{environment
 variable} which behaves rather like a name of mode \verb|REF STRING|
-except that each string is terminated with a \verb|null ch|.
+except that each string is terminated with a \hxtt{nul ch}{nul ch}.
 You can open a book containing the environment string using
 \ixtt{env channel}. For example:
 \begin{verbatim}

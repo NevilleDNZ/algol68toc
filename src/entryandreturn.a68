@@ -1,9 +1,9 @@
 DECS  entryandreturn  CONTEXT VOID  USE
-      usefulops, osif,
+*L    usefulops, osif,
       centities, environ, coutput, modes, identifiers, environment, incid,
       incimperatives, incvalue, incmode, modules, uniquenameserver, values:
 
-configinfo A68CONFIG "$Id: entryandreturn.a68,v 1.2.2.2 2004/09/05 04:23:35 teshields Exp $";
+configinfo A68CONFIG "$Id: entryandreturn.a68,v 1.2 2003-06-10 14:03:55 sian Exp $";
 
 
 COMMENT

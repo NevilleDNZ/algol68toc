@@ -98,8 +98,8 @@ typedef struct A68t56  A68_56 ;    /* PROC(MODE55) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t57,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t57  A68_57 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,65,A68t58);
-typedef struct A68t58  A68_58 ;    /* STRUCT 65 CHAR */
+A_ISTRUCT(A68_CHAR ,60,A68t58);
+typedef struct A68t58  A68_58 ;    /* STRUCT 60 CHAR */
 A_ISTRUCT(A68_CHAR ,7,A68t59);
 typedef struct A68t59  A68_59 ;    /* STRUCT 7 CHAR */
 
@@ -183,8 +183,8 @@ extern A68_BOOL  YZAAOSF_is_facility_msg(struct A68t31 ,struct A68t39 );
 extern void BAAALIB(void);   /* a68config */
 extern void ZRAAOSF(void);   /* messageproc */
 /* --- end of DECS initialisation functions --- */
-static A68_58   NPFAOSF = {"$Id: iomessages.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
-A_GISVEC(A68_VC ,OPFAOSF,NPFAOSF,65)
+static A68_58   NPFAOSF = {"$Id: iomessages.c,v 1.5 2003-05-30 21:20:45 sian Exp $"}; 
+A_GISVEC(A68_VC ,OPFAOSF,NPFAOSF,60)
 #define PPFAOSF_max_io_messages 35
 static A68_59   RPFAOSF = {"ioprocs"}; 
 A_GISVEC(A68_VC ,SPFAOSF,RPFAOSF,7)
@@ -304,9 +304,9 @@ void KPFAOSF(void)   /* initialise DECS iomessages */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","iomessages.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/messageproc.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","iomessages.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/messageproc.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_39  QPFAOSF;  /* collateral clause result */
@@ -326,11 +326,11 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 ZRAAOSF();   /* USE messageproc */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/iomessages.a68";
-A_config.translation_time = "Sun Sep 26 21:50:28 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/liba68prel/iomessages.a68";
+A_config.translation_time = "Fri May 30 22:15:12 2003";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "JPFAOSF (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:50:28 2004";
+A_config.spec_change_time = "Fri May 30 22:15:12 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

@@ -1,5 +1,5 @@
 \input texinfo @c -*-texinfo-*-
-@c $Id: ctrans.texi,v 1.2.2.2 2004/09/05 14:58:21 teshields Exp $
+@c $Id: ctrans.texi,v 1.2 2002-06-06 12:46:19 sian Exp $
 @c %**start of header
 @setfilename ctrans.info
 @settitle Ctrans Portable ALGOL 68
@@ -58,7 +58,7 @@ notice identical to this one.
 @titlepage
 @title Ctrans: portable ALGOL 68 compiler
 @subtitle Algol 68 to C translator and run-time system
-@subtitle $Id: ctrans.texi,v 1.2.2.2 2004/09/05 14:58:21 teshields Exp $
+@subtitle $Id: ctrans.texi,v 1.2 2002-06-06 12:46:19 sian Exp $
 @author Praxis Systems plc, Bath, UK
 @page
 @vskip 0pt plus 1filll
@@ -114,6 +114,7 @@ Language restrictions
 Language extensions
 
 * First-class procedures::      
+* Star edit::                   
 
 Language differences
 
@@ -356,9 +357,10 @@ PROC p = REF [] INT: ( INT i ; i );
 
 @menu
 * First-class procedures::      
+* Star edit::                   
 @end menu
 
-@node First-class procedures, , Language extensions, Language extensions
+@node First-class procedures, Star edit, Language extensions, Language extensions
 @comment node-name, next, previous, up
 @subsection First-class procedures
 @cindex First-class procedures
@@ -390,6 +392,28 @@ amend the declaration of @code{k} to read
 @example
 HEAP INT k := i;
 @end example
+
+@node Star edit,  , First-class procedures, Language extensions
+@comment node-name, next, previous, up
+@subsection Star-edit preprocessor
+@cindex Star-edit preprocessor
+
+A simple conditional compilation feature is built into the translator.
+
+If a source line contains a @code{*} or @code{%} in the first column,
+then the next character is matched with the @dfn{starflags} for the
+current translation, which may be specified by the @code{-staredit}
+option (@pxref{Translator options}) or the @code{A68_STAREDIT}
+(@pxref{Environment variables}) environment variable.
+
+If a match is found, the source line is translated if the first
+character is @code{*}, and suppressed if the first character is
+@code{%}.
+
+If no match is found, the source line is suppressed if the first
+character is @code{*}, and translated if the first character is
+@code{%}.
+
 
 @node Language differences, C naming conventions, Language extensions, Language
 @comment node-name, next, previous, up
@@ -1032,8 +1056,16 @@ Causes closures to be (unsafely) stacked rather than heaped.
 Truncates module names to integer characters long when searching for USE
 and library modules. eg. -f 8 for DOS FAT files.
 
+@item -staredit @var{starflags}
+@findex -staredit
+Sets the required staredit characters to @var{starflags}.  The
+characters specified in the @code{A68_STAREDIT} environment variable are
+overriden unless @var{starflags} starts with @code{+} or @code{-} in
+which cases the @var{starflags} are added to, or removed from, those
+specifed in @code{A68_STAREDIT}
+
 @item -dir @var{directory}
-@findex -dir
+@findex -staredit
 Add @var{directory} to the front of the list of directories, specified
 in the @code{A68_DIR} environment variable, in which the translator
 searches for module information (@code{.m}) files.
@@ -1118,7 +1150,7 @@ Controls how the translator's unique name generator is seeded.
 @item seedfile
 @findex seedfile
 Read the seed from the file specifed by the @code{A68_NAMESEED}
-environment variable.  The specified file is
+environment variable.  This is the default.  The specified file is
 updated after translation.
 
 @item cfile
@@ -1136,7 +1168,6 @@ of seven uppercase letters.  It is an error if the specified unique name
 contains invalid characters.  If more than seven characters are specified, the
 extra ones are silently ignored.  If fewer than seven characters are
 specified, the unique name is padded on the right with 'A's.
-This is the default: @code{AAAAAAA}.
 @end table
 
 If any error is detected, a warning is issued, and the translator proceeds as
@@ -1174,6 +1205,11 @@ Outputs detailed configuration information to standard output.
 @item A68_NAMESEED
 @vindex A68_NAMESEED
 The name of the file containing the unique name seed.
+
+@item A68_STAREDIT
+@vindex A68_STAREDIT
+The set of required staredit characters.  This may be over-ridden or
+modified by the @code{-staredit} option.
 
 @item A68_DIR
 @vindex A68_DIR

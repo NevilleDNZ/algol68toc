@@ -2,7 +2,7 @@ PROGRAM teststrings CONTEXT VOID USE  osif,  putstrings,  getstrings,  time,
                                       mathslib,  numberstr,  iolib,  clear
 BEGIN
 
-configinfo A68CONFIG "$Id: teststrings.a68,v 1.1.2.1 2004/09/04 17:36:14 teshields Exp $";
+configinfo A68CONFIG "$Id: teststrings.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $";
 
 
 COMMENT 

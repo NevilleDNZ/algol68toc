@@ -1,19 +1,19 @@
 #!/usr/bin/make
 
-# $Id: Makefile,v 1.12.2.3 2004/09/26 17:31:19 teshields Exp $
+# $Id: Makefile,v 1.11 2004-08-06 23:48:41 sian Exp $
 #------------ Debug value -------------
 DEBUG=no
 #------------ Debian values -----------
 DESTDIR=
 VERSION=1.6
 NODEPENDS=
-PKGDIR=$(DESTDIR)/usr/local/share/algol68toc
-DOCDIR=$(DESTDIR)/usr/local/share/doc/algol68toc
-BINDIR=$(DESTDIR)/usr/local/bin
-LIBDIR=$(DESTDIR)/usr/local/lib
-INFODIR=$(DESTDIR)/usr/local/share/info
-MANDIR=$(DESTDIR)/usr/local/share/man/man1
-INCDIR=$(DESTDIR)/usr/local/include/algol68
+PKGDIR=$(DESTDIR)/usr/share/algol68toc
+DOCDIR=$(DESTDIR)/usr/share/doc/algol68toc
+BINDIR=$(DESTDIR)/usr/bin
+LIBDIR=$(DESTDIR)/usr/lib
+INFODIR=$(DESTDIR)/usr/share/info
+MANDIR=$(DESTDIR)/usr/share/man/man1
+INCDIR=$(DESTDIR)/usr/include/algol68
 
 #------------- Absolute directories ------------
 TOP:=$(shell pwd)
@@ -47,11 +47,13 @@ else
 override CFLAGS=-O0 -g
 endif
 NOR=$(CFLAGS) $(INCS)
-CTFLAGS=-v -uname seedfile
-QADFLAGS=-v -s -uname seedfile
+CTSTAR=59LR
+QADSTAR=1234ABCD
+CTFLAGS=-v -uname seedfile -staredit $(CTSTAR)
+QADFLAGS=-v -s -uname seedfile -staredit $(QADSTAR)
 
 #------------ Programs -----------
-CC=gcc -w -std=gnu99
+CC=gcc
 ALGOL=$(CTD)/a68toc
 SHELL=/bin/sh
 INSTALL=$(shell which install) -g root -o root
@@ -100,7 +102,7 @@ uninstall :
 	-$(RM) $(BINDIR)/a68toc $(BINDIR)/reset.ctrans $(BINDIR)/ca68
 	-install-info --quiet --remove $(INFODIR)/ctrans.info.gz
 	-$(RM) -rf $(PKGDIR) $(DOCDIR)
-	-$(RM) $(INFODIR)/ctrans.info*.gz \
+	-$(RM) $(INFODIR)/ctrans.info.gz $(INFODIR)/ctrans.info-1.gz $(INFODIR)/ctrans.info-2.gz \
            $(LIBDIR)/liba68.a $(LIBDIR)/liba68s.a $(AMNDIR)/a68toc.1.gz
 
 dist-clean: clean
@@ -125,25 +127,8 @@ clean:
 	-$(RM) qad/*.[cm]
 
 # $Log: Makefile,v $
-# Revision 1.12.2.3  2004/09/26 17:31:19  teshields
-# Added -w to gcc invocations to suppress warnings in generated C source.
-# Added -std=gnu99 to gcc invocations to enable access to 'long long' relevant defines in /usr/include/limits.h.
-#
-# Revision 1.12.2.2  2004/09/26 17:26:45  teshields
-# Deleted use of '-staredit' flag
-#
-# Revision 1.12.2.1  2004/09/26 17:21:44  teshields
-# LCSE Algol68toC initial revision
-# Default installation directory is '/usr/local/'
-#
-# Revision 1.12  2004/09/26 17:09:23  teshields
-# Corrected typo: CFALGS -> CFLAGS
-#
-# Revision 1.11  2004/09/05 14:34:57  teshields
-# Corrected make rules related to maintenance of 'ctrans.info'
-#
-# Revision 1.10  2004/09/03 11:34:55  teshields
-# Algol68toC v1.8 Public Baseline
+# Revision 1.11  2004-08-06 23:48:41  sian
+# *** empty log message ***
 #
 # Revision 1.10  2003/05/31 13:02:41  sian
 # Removal of compiled libraries and binaries

@@ -1,9 +1,9 @@
 DECS  modes  CONTEXT VOID  USE
-      usefulops,
+*L    usefulops,
       common, environ, environment, incinstallation, incmode, uniquenameserver,
       incvalue {for declare c temporary}, coutput, moduletracer, centities:
 
-configinfo A68CONFIG "$Id: modes.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
+configinfo A68CONFIG "$Id: modes.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $";
 
 
 COMMENT 

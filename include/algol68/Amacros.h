@@ -1,4 +1,4 @@
-/* $Id: Amacros.h,v 1.2.2.1 2004/09/04 17:36:12 teshields Exp $ */
+/* $Id: Amacros.h,v 1.2 2002-02-19 11:40:12 sian Exp $ */
 
 
 /* 

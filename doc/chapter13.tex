@@ -1,19 +1,22 @@
-% $Log: chapter13.tex,v $
-% Revision 1.7.2.1  2004/09/04 17:36:11  teshields
-% LCSE Algol68toC initial revision
-% Default installation directory is '/usr/local/'
+ $Log: chapter13.tex,v $
+ Revision 1.10  2005-01-28 20:26:18  sian
+ Minor changes.
+
+ Revision 1.9  2005/01/28 17:11:04  sian
+ Altered the description of `establish' for `client socket channel' and
+ `server socket channel' so that the `c' parameter is used as the MTU.
 %
-% Revision 1.7  2004/09/04 02:37:58  teshields
-% Algol68toC v1.8 Public Baseline
+ Revision 1.8  2004/11/07 16:00:10  sian
+ Removed all references to PLUS, MINUS and TIMES
 %
-% Revision 1.7  2003/05/31 13:02:41  sian
-% Removal of compiled libraries and binaries
+ Revision 1.7  2003/05/31 13:02:41  sian
+ Removal of compiled libraries and binaries
 %
-% Revision 1.6  2003/04/23 08:57:31  sian
-% Debian release 1.5
+ Revision 1.6  2003/04/23 08:57:31  sian
+ Debian release 1.5
 %
-% Revision 1.5  2002/06/20 11:49:28  sian
-% mm removed, padding removed, ca68 added
+ Revision 1.5  2002/06/20 11:49:28  sian
+ mm removed, padding removed, ca68 added
 %
 \Chapter{Standard Prelude}{chapxiii}\catcode`\%=12
 The function of this chapter is to describe all the facilities in the
@@ -303,7 +306,7 @@ bedevilled by the peculiar limitations of the C~programming language
 in which a character is actually an integer and indistinguishable
 from such. Furthermore, a~C `character' is a signed integer,
 equivalent to a value of mode \verb|SHORT SHORT INT|. Thus~C
-`characters' range from $-128$ to$+127$.  Algol~68, on the other
+`characters' range from $-128$ to $+127$.  Algol~68, on the other
 hand, has the mode \verb|CHAR| which, at a high level, is distinct
 from values of both mode \verb|INT| and mode \verb|SHORT SHORT INT|.
 The absolute value of Algol~68 characters range from $0$ to the value
@@ -357,7 +360,7 @@ $[\mbox{\texttt{REPR 27}}]$ \newline
 This character is mainly used to introduce ``escape sequences'' which
 control the format and colour of output on Linux virtual terminals
 (VTs) and \textit{xterm} windows.\footnote{See the file
-\texttt{/usr/share/doc/xterm/ctlseqs.ms.gz} for the latter.}
+\texttt{/usr/share/doc/xtermcontrol/ctlseqs.txt.gz} for the latter.}
 \item \hxtt{CHAR eof char}{eof char}
 $[\mbox{\texttt{REPR 26}}]$ \newline
 This character was used to denote the end of a plain text file in the
@@ -425,9 +428,9 @@ Revised Report. See section~\hyref{stan-cont} for their details.
 \item \ixtt{=}, \ixtt{/=}, \verb|EQ|, \verb|NE|
 \item \ixtt{<}, \ixtt{<=}, \ixtt{>=}, \ixtt{>} \newline
 \verb|LT|, \verb|LE|, \verb|GE|, \verb|GT|
-\item \ixtt{-}, \ixtt{+}, (\ixtt{PLUS}, \ixtt{MINUS})
+\item \ixtt{-}, \ixtt{+},
 \item \ixtt{*}, \ixtt{/}, \verb|%|, \verb|%*|,\newline
-\ixtt{OVER}, \ixtt{MOD}, \ixtt{ELEM}, (\ixtt{TIMES})
+\ixtt{OVER}, \ixtt{MOD}, \ixtt{ELEM},
 \item \ixtt{**}, \verb|UP|, \verb|DOWN|, \ixtt{SHL},
 \ixtt{SHR}, \ixtt{LWB}, \ixtt{UPB}
 \item \verb|+*|, \ixtt{I}, (\ixtt{MIN}, \ixtt{MAX})
@@ -505,17 +508,13 @@ shorthand is used. For operators with mixed operands, see
 section~\hyref{stan-mixed}.
 \begin{enumerate}
 \item \hx{\texttt{OP + = (L INT a,L INT b)L INT:}}{+@\texttt{+}!dyadic}\newline
-Arithmetic addition: $a+b$. No check is made for integer overflow. See the
-operator \verb|PLUS| in section \hyref{stan-othop} for addition with
-a check for overflow.
+Arithmetic addition: $a+b$. No check is made for integer overflow.
 \item \hx{\texttt{OP - = (L INT a,L INT b)L INT:}}{-@\texttt{-}!dyadic}\newline
 Arithmetic subtraction: $a-b$. No check is made for integer
-overflow. See the operator \verb|MINUS| in section \hyref{stan-othop} for
-subtraction with a check for overflow.
+overflow.
 \item \hxtt{OP * = (L INT a,L INT b)L INT:}{*}\newline
 Arithmetic multiplication: $a\times b$. No check is made for
-integer overflow. See the operator \verb|TIMES| in
-section \hyref{stan-othop} for multiplication with a check for overflow.
+integer overflow.
 \item \hxtt{OP / = (L INT a,L INT b)L REAL:}{/}\newline
 Arithmetic fractional division. Even if the result is a whole number
 (for example, $6/3$), the yield always has mode \verb|L REAL|. Where a
@@ -598,7 +597,7 @@ checking).
 \verb|OP LENG = (SHORT L REAL a)L REAL:| \newline
 Converts its operand to the next longer precision. Note that you cannot
 use both \verb|SHORT| and \verb|LONG| in the same mode.
-\item \hxtt{OP SHORTEN = (L REAL a)SHORT L REAL:}{SHORTEN} 
+\item \hxtt{OP SHORTEN = (L REAL a)SHORT L REAL:}{SHORTEN}
 \newline
 \verb|OP SHORTEN = (LONG L REAL a)L REAL:| \newline
 Converts its operand to the next shorter precision. If a value exceeds
@@ -891,7 +890,8 @@ The operator is a shorthand for \verb|b:=a+b|.\newline
   Left operand    &Right operand &Yield\\ \hline
   \texttt{STRING}      &\texttt{REF STRING}&\texttt{REF STRING}\\
   \texttt{CHAR}        &\texttt{REF STRING}&\texttt{REF STRING}\\ \hline
-\end{tabular} \newline
+\end{tabular}
+\newpage
 \item \verb|-:=| (synonym \ixtt{MINUSAB})\newline
 The operator is a shorthand for \verb|a:=a-b|.\newline
 \begin{tabular}{|l|l||l|}\hline
@@ -956,12 +956,6 @@ The lesser of the two operands.
 \verb|OP MAX = (L INT a,L REAL b)L REAL:| \newline
 \verb|OP MAX = (L REAL a,L INT b)L REAL:| \newline
 The greater of the two operands.
-\item \hxtt{OP MINUS = (L INT a,b)L INT:}{MINUS}\newline
-Subtracts \verb|b| from \verb|a|, checking for overflow.
-\item \hxtt{OP PLUS = (L INT a,b)L INT:}{PLUS}\newline
-Adds \verb|a| and \verb|b|, checking for overflow.
-\item \hxtt{OP TIMES = (L INT a,b)L INT:}{TIMES}\newline
-Multiplies \verb|a| by \verb|b|, checking for overflow.
 \item \hxtt{OP VALID = (REAL r)BOOL:}{VALID}\newline
 Whether the real value \verb|r| is a valid real in terms of the IEEE
 standard.
@@ -1031,7 +1025,7 @@ A call of \verb|next random(last random)|.
 As for \verb|random| with the yield shortened.
 \item \hxtt{PROC l random int = (L INT n)L INT:}{random int}\newline
 \hxrt{Yields}{long random int} \hxrt{a}{short random int}
-\hxrt{pseudo-random}{short short random int} sequence of 
+\hxrt{pseudo-random}{short short random int} sequence of
 integers in the range $1\leq x\leq n$.
 \end{enumerate}
 
@@ -1218,18 +1212,6 @@ Gets the control word of the floating point unit.
 Sets the control word of the floating point unit.
 \item \hxtt{PROC(REAL,REF INT)VOID ph round}{ph round}\newline
 Rounds a \verb|REAL| to an \verb|INT|.
-\item \hxtt{PROC(LONG INT,LONG INT,REF LONG INT)VOID ph lminus}{ph lminus}\newline
-Subtracts two long integers.
-\item \hxtt{PROC(LONG INT,LONG INT,REF LONG INT)VOID ph lplus}{ph lplus}\newline
-Adds two long integers.
-\item \hxtt{PROC(LONG INT,LONG INT,REF LONG INT)VOID ph ltimes}{ph ltimes}\newline
-Multiplies two long integers.
-\item \hxtt{PROC(INT,INT,REF INT)VOID ph minus}{ph minus}\newline
-Subtracts two integers.
-\item \hxtt{PROC(INT,INT,REF INT)VOID ph plus}{ph plus}\newline
-Adds two integers.
-\item \hxtt{PROC(INT,INT,REF INT)VOID ph times}{ph times}\newline
-Multiplies two integers.
 \end{enumerate}
 
 \Section{a68toc extensions}{stan-a68toc}
@@ -1561,7 +1543,7 @@ The FPU control word is also used to control whether overflow should
 be detectable. The standard mode of operation is to ignore integer
 overflow. The control word masks mentioned above ensure that integer
 overflow can be detected using a \bfix{signal}. The procedure
-\ixtt{on signal} is declared as follows:-
+\hxtt{on signal}{on signal} is declared as follows:-
 \begin{verbatim}
    PROC on signal=(INT sig,
                    PROC(INT)VOID handler)VOID:
@@ -1596,28 +1578,11 @@ anything you want in the procedure provided as a parameter to
 \verb|on signal|. You can also predeclare the procedure and simply
 provide its identifier in the \verb|on signal| call.
 
-Normally, integer overflow is ignored by the microprocessor. So the
-formula \verb|max int + 3| simply yields an incorrect value. If you
-want integer overflow to generate a trappable signal, use the integer
-operators \ixtt{PLUS}, \ixtt{MINUS} and \ixtt{TIMES}\hyref{stan-othop}
-which have the priorities associated with $+$, $-$ and $\times$ and
-have been declared for all the available distinguishable precisions of
-integers. Again, the example program \verb|testov.a68| shows how
-integer overflow can be detected.
+Integer overflow is ignored by the microprocessor. So the
+formula \verb|max int + 3| simply yields an incorrect value.
 
 The procedure \ixtt{ansi raise} will cause any specified signal to
-occur. For example, the declaration for \ixtt{PLUS} with
-\ixtt{SHORT INT} operands is
-\begin{verbatim}
-   OP PLUS = (SHORT INT a,b)SHORT INT:
-   IF INT res=LENG a+LENG b;
-      ABS res > LENG short max int
-   THEN SHORTEN ansi raise(sigfpe)
-   ELSE SHORTEN res
-   FI;
-\end{verbatim}
-\noindent
-Here is the mode of \ixtt{ansi raise}:
+occur. Here is the mode of \ixtt{ansi raise}:
 \begin{verbatim}
    PROC ansi raise = (INT sig)INT:
 \end{verbatim}
@@ -1646,7 +1611,7 @@ procedure (or $0$ for normal termination) and the second is a
 \verb|[]CHAR| which the procedure \verb|p| can use. \ixtt{on exit}
 yields $0$ for success and $-1$ for an error.
 \item \hxtt{PROC exit = (INT status)VOID:}{exit}\newline
-\hylabel{stan-pcexit}%
+\hylabel{stan-pcexit}
 This procedure terminates the program immediately. Any procedures
 registered using \ixtt{at exit} or \ixtt{on exit} will be elaborated in
 the reverse order of registration. Any open files will be closed, but
@@ -2040,9 +2005,12 @@ The channels have the following properties:-
 \begin{description}
 \item[\ixtt{establish}] The \verb|p| should be the family of socket (either
 \ixtt{af unix} or \ixtt{af inet}). If the latter, the \verb|l| should
-be the port. If \verb|p| is neither \verb|af unix| nor \verb|af inet|,
-the routine returns \ixtt{estab invalid parameters} as error value. The
-server socket should be established before the client socket.
+be the port. The \verb|c| should be the MTU (maximum transport unit).
+This governs the size of the buffer associated with the socket. No
+checks are performed on its value. If \verb|p| is neither \verb|af unix|
+nor \verb|af inet|, the routine returns \ixtt{estab invalid
+parameters} as error value. The server socket should be established
+before the client socket.
 \item[\ixtt{open}] Yields an error of \verb|open invalid parameters| for
 both channels.
 \item[\ixtt{create}] Inapplicable.
@@ -2062,8 +2030,9 @@ has the following header
    PROC accept = (REF FILE socket)REF FILE:
 \end{verbatim}
 \noindent
-and is used by the server to accept a client socket, thereby yielding a
-\verb|REF FILE| name which can be used to communicate with the client.
+and is used by the server to accept a \ixtt{client socket}, thereby
+yielding a \verb|REF FILE| name which can be used to communicate with
+the client.
 
 The example programs \verb|client1|, \verb|server1|, \verb|client2|
 and \verb|server2| (whose source can be found in the \verb|examples|
@@ -2100,12 +2069,14 @@ Three procedures are available for opening files:-
       \verb|    CHANNEL chann,INT p,l,c)INT:|\newline
 In standard Algol~68, this procedure creates a new file with \verb|p|
 pages, each page containing \verb|l| lines, each line containing
-\verb|c| characters. In the QAD standard prelude, only the
+\verb|c| characters. In the QAD standard prelude, the
 \ixtt{mem channel} (see section \hyref{stan-memch}) takes notice of
 \verb|p|, \verb|l| and \verb|c| and both \verb|p| and \verb|l| must
-be \verb|1|. For other channels, \verb|p|, \verb|l| and \verb|c| are
-ignored other than the socket channels (see section
-\hyref{stan-sockch}). The procedure yields zero on success, otherwise
+be \verb|1|. The socket channels (see section
+\hyref{stan-sockch}) use \verb|p| for the socket family, \verb|l| for
+the port if the family is \verb|af inet| and \verb|c| for the size of
+the MTU. For other channels, the values of \verb|p|, \verb|l| and
+\verb|c| are ignored. The procedure yields zero on success, otherwise
 an integer denoting an error (see section \hyref{stan-trchan}).
 \item \hxtt{PROC open=(REF FILE f,}{open}\newline
       \verb|           UNION(CHAR,STRING,RVC) idf,|\newline

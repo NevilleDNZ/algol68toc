@@ -2,7 +2,7 @@ DECS  osmisc  CONTEXT VOID  USE  cif,  oserrors,  usefulops:
 
 {  Id: osmisc.a68,v 2.10 1993/08/18 13:28:51 aap Exp $ }
 
-configinfo A68CONFIG "$Id: osmisc.a68,v 1.2.2.1 2004/09/04 17:36:14 teshields Exp $";
+configinfo A68CONFIG "$Id: osmisc.a68,v 1.2 2001-09-27 13:06:01 sian Exp $";
 
 
 COMMENT 

@@ -1,9 +1,9 @@
 DECS  operators  CONTEXT VOID  USE
-      usefulops, cif,
+*L    usefulops, cif,
       centities, coutput, denotations, environ, environment, evalbase, idtable,
       incoperfn, uniquenameserver, unionaids, incmode, modes, incvalue, values:
 
-configinfo A68CONFIG "$Id: operators.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
+configinfo A68CONFIG "$Id: operators.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $";
 
 
 COMMENT 

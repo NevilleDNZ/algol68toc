@@ -46,6 +46,15 @@ Causes closures to be (unsafely) stacked rather than heaped.
 Truncates module names to integer characters long when searching for USE and
 library modules. eg. -f 8 for DOS FAT files.
 .TP
+.BI -staredit " starflags"
+Sets the required staredit characters to \fIstarflags\fR.  The characters specified
+in the
+.SB A68_STAREDIT
+environment variable are overriden unless \fIstarflags\fR starts with
+"\fC+\fR" or "\fC-\fR" in which cases the \fIstarflags\fR are added to, or
+removed from, those specifed in
+.SB A68_STAREDIT .
+.TP
 .BI -dir " directory"
 Add 
 .I directory
@@ -125,6 +134,7 @@ The possible values of \fIuname-option\fP are
 .B seedfile
 Read the seed from the file
 .SB $A68_NAMESEED .
+This is the default.
 The specified file is updated after translation.
 .TP
 .B cfile
@@ -142,7 +152,6 @@ of seven uppercase letters.  It is an error if the specified unique name
 contains invalid characters.  If more than seven characters are specified, the
 extra ones are silently ignored.  If fewer than seven characters are
 specified, the unique name is padded on the right with 'A's.
-This is the default: AAAAAAA.
 .RE
 .TP
 .B -tmp
@@ -187,6 +196,12 @@ The name of the file containing the unique name seed.  The environment
 variable
 .SB CTRANS_NAMESEED
 may also be used for backwards compatibility.
+.TP
+.B A68_STAREDIT
+The set of required staredit characters.  This may be over-riden or modified
+by the
+.B -staredit
+option.
 .TP
 .B A68_DIR
 A colon-separated list of directories in which the translator will look for

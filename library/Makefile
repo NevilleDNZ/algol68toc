@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.1.2.1 2004/09/04 17:36:15 teshields Exp $
+# $Id: Makefile,v 1.1 2002-02-19 11:40:12 sian Exp $
 
 # ------------ C source --------------
 library_c := Aassign.c Acoerce.c Aerror.c Ah1alloc.c Ahalloc.c \

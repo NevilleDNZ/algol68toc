@@ -1044,8 +1044,8 @@ typedef struct A68t283  A68_283 ;    /* PROC(MODE149) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t284,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t284  A68_284 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,69,A68t285);
-typedef struct A68t285  A68_285 ;    /* STRUCT 69 CHAR */
+A_ISTRUCT(A68_CHAR ,60,A68t285);
+typedef struct A68t285  A68_285 ;    /* STRUCT 60 CHAR */
 A_ISTRUCT(A68_CHAR ,8,A68t286);
 typedef struct A68t286  A68_286 ;    /* STRUCT 8 CHAR */
 
@@ -1130,40 +1130,40 @@ A_ISTRUCT(A68_CHAR ,75,A68t319);
 typedef struct A68t319  A68_319 ;    /* STRUCT 75 CHAR */
 A_ISTRUCT(A68_CHAR ,73,A68t320);
 typedef struct A68t320  A68_320 ;    /* STRUCT 73 CHAR */
-A_ISTRUCT(A68_CHAR ,60,A68t321);
-typedef struct A68t321  A68_321 ;    /* STRUCT 60 CHAR */
-A_ISTRUCT(A68_CHAR ,35,A68t322);
-typedef struct A68t322  A68_322 ;    /* STRUCT 35 CHAR */
-A_ISTRUCT(struct A68t52 ,3,A68t323);
-typedef struct A68t323  A68_323 ;    /* STRUCT 3 MODE52 */
-A_ISTRUCT(A68_CHAR ,50,A68t324);
-typedef struct A68t324  A68_324 ;    /* STRUCT 50 CHAR */
-A_ISTRUCT(struct A68t208 ,3,A68t325);
-typedef struct A68t325  A68_325 ;    /* STRUCT 3 MODE208 */
-A_ISTRUCT(A68_CHAR ,37,A68t326);
-typedef struct A68t326  A68_326 ;    /* STRUCT 37 CHAR */
-A_ISTRUCT(A68_CHAR ,24,A68t327);
-typedef struct A68t327  A68_327 ;    /* STRUCT 24 CHAR */
-A_ISTRUCT(A68_CHAR ,3,A68t328);
-typedef struct A68t328  A68_328 ;    /* STRUCT 3 CHAR */
-A_ISTRUCT(A68_CHAR ,41,A68t329);
-typedef struct A68t329  A68_329 ;    /* STRUCT 41 CHAR */
-A_ISTRUCT(A68_CHAR ,74,A68t330);
-typedef struct A68t330  A68_330 ;    /* STRUCT 74 CHAR */
-A_ISTRUCT(A68_CHAR ,52,A68t331);
-typedef struct A68t331  A68_331 ;    /* STRUCT 52 CHAR */
-A_ISTRUCT(A68_CHAR ,29,A68t332);
-typedef struct A68t332  A68_332 ;    /* STRUCT 29 CHAR */
-A_ISTRUCT(A68_CHAR ,45,A68t333);
-typedef struct A68t333  A68_333 ;    /* STRUCT 45 CHAR */
-A_ISTRUCT(A68_CHAR ,59,A68t334);
-typedef struct A68t334  A68_334 ;    /* STRUCT 59 CHAR */
-A_ISTRUCT(A68_CHAR ,42,A68t335);
-typedef struct A68t335  A68_335 ;    /* STRUCT 42 CHAR */
-A_ISTRUCT(struct A68t208 ,6,A68t336);
-typedef struct A68t336  A68_336 ;    /* STRUCT 6 MODE208 */
-A_ISTRUCT(A68_CHAR ,51,A68t337);
-typedef struct A68t337  A68_337 ;    /* STRUCT 51 CHAR */
+A_ISTRUCT(A68_CHAR ,35,A68t321);
+typedef struct A68t321  A68_321 ;    /* STRUCT 35 CHAR */
+A_ISTRUCT(struct A68t52 ,3,A68t322);
+typedef struct A68t322  A68_322 ;    /* STRUCT 3 MODE52 */
+A_ISTRUCT(A68_CHAR ,50,A68t323);
+typedef struct A68t323  A68_323 ;    /* STRUCT 50 CHAR */
+A_ISTRUCT(struct A68t208 ,3,A68t324);
+typedef struct A68t324  A68_324 ;    /* STRUCT 3 MODE208 */
+A_ISTRUCT(A68_CHAR ,37,A68t325);
+typedef struct A68t325  A68_325 ;    /* STRUCT 37 CHAR */
+A_ISTRUCT(A68_CHAR ,24,A68t326);
+typedef struct A68t326  A68_326 ;    /* STRUCT 24 CHAR */
+A_ISTRUCT(A68_CHAR ,3,A68t327);
+typedef struct A68t327  A68_327 ;    /* STRUCT 3 CHAR */
+A_ISTRUCT(A68_CHAR ,41,A68t328);
+typedef struct A68t328  A68_328 ;    /* STRUCT 41 CHAR */
+A_ISTRUCT(A68_CHAR ,74,A68t329);
+typedef struct A68t329  A68_329 ;    /* STRUCT 74 CHAR */
+A_ISTRUCT(A68_CHAR ,52,A68t330);
+typedef struct A68t330  A68_330 ;    /* STRUCT 52 CHAR */
+A_ISTRUCT(A68_CHAR ,29,A68t331);
+typedef struct A68t331  A68_331 ;    /* STRUCT 29 CHAR */
+A_ISTRUCT(A68_CHAR ,45,A68t332);
+typedef struct A68t332  A68_332 ;    /* STRUCT 45 CHAR */
+A_ISTRUCT(A68_CHAR ,59,A68t333);
+typedef struct A68t333  A68_333 ;    /* STRUCT 59 CHAR */
+A_ISTRUCT(A68_CHAR ,42,A68t334);
+typedef struct A68t334  A68_334 ;    /* STRUCT 42 CHAR */
+A_ISTRUCT(struct A68t208 ,6,A68t335);
+typedef struct A68t335  A68_335 ;    /* STRUCT 6 MODE208 */
+A_ISTRUCT(A68_CHAR ,51,A68t336);
+typedef struct A68t336  A68_336 ;    /* STRUCT 51 CHAR */
+A_ISTRUCT(A68_CHAR ,69,A68t337);
+typedef struct A68t337  A68_337 ;    /* STRUCT 69 CHAR */
 A_ISTRUCT(A68_CHAR ,16,A68t338);
 typedef struct A68t338  A68_338 ;    /* STRUCT 16 CHAR */
 A_ISTRUCT(A68_CHAR ,47,A68t339);
@@ -1424,8 +1424,7 @@ extern A68_INT  HQBAOSF_execute_os_command(A68_VC ,struct A68t97 );
 extern A68_VOID  ERBAOSF_get_login_name(A68_VC *);
 extern int A_argc;
 extern char **A_argv;
-extern char **A_envp;
-#define A_prelude(argc,argv,envp) A_argc=argc; A_argv=argv; A_envp=envp
+#define A_prelude(argc,argv) A_argc=argc; A_argv = argv
 
 #define XHCAOSF_prelude A_prelude
 #include <algol68/Alibrary.h>
@@ -1492,8 +1491,8 @@ extern void ONEAOSF(void);   /* options */
 extern void ZRAAOSF(void);   /* messageproc */
 extern void KNDAOSF(void);   /* putstrings */
 /* --- end of DECS initialisation functions --- */
-static A68_285   TOLAOSF = {"$Id: globalcommands.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
-A_GISVEC(A68_VC ,UOLAOSF,TOLAOSF,69)
+static A68_285   TOLAOSF = {"$Id: globalcommands.c,v 1.5 2003-05-30 21:20:45 sian Exp $"}; 
+A_GISVEC(A68_VC ,UOLAOSF,TOLAOSF,60)
 static A68_120   VOLAOSF = {"edit"}; 
 A_GISVEC(A68_VC ,WOLAOSF,VOLAOSF,4)
 static A68_VC  XOLAOSF_edit_var;
@@ -1599,13 +1598,13 @@ static A68_290   PEMAOSF = {"OSdebug"};
 A_GISVEC(A68_VC ,QEMAOSF,PEMAOSF,7)
 static A68_120   ZEMAOSF = {"HEAP"}; 
 A_GISVEC(A68_VC ,AFMAOSF,ZEMAOSF,4)
-static A68_321   DFMAOSF = {"Sets the diagnostics level for the ALGOL68 garbage collector"}; 
+static A68_285   DFMAOSF = {"Sets the diagnostics level for the ALGOL68 garbage collector"}; 
 A_GISVEC(A68_VC ,EFMAOSF,DFMAOSF,60)
-static A68_322   NFMAOSF = {"Heap diagnostic setting changed to "}; 
+static A68_321   NFMAOSF = {"Heap diagnostic setting changed to "}; 
 A_GISVEC(A68_VC ,OFMAOSF,NFMAOSF,35)
 static A68_317   MGMAOSF = {"READER"}; 
 A_GISVEC(A68_VC ,NGMAOSF,MGMAOSF,6)
-static A68_324   QGMAOSF = {"Enables trace of command parameter syntax analysis"}; 
+static A68_323   QGMAOSF = {"Enables trace of command parameter syntax analysis"}; 
 A_GISVEC(A68_VC ,RGMAOSF,QGMAOSF,50)
 static A68_297   YGMAOSF = {"Debug_reader"}; 
 A_GISVEC(A68_VC ,ZGMAOSF,YGMAOSF,12)
@@ -1615,48 +1614,48 @@ static A68_313   UHMAOSF = {"CHECKSYNTAX"};
 A_GISVEC(A68_VC ,VHMAOSF,UHMAOSF,11)
 static A68_291   XHMAOSF = {"CS"}; 
 A_GISVEC(A68_VC ,YHMAOSF,XHMAOSF,2)
-static A68_326   AIMAOSF = {"Disables command line syntax checking"}; 
+static A68_325   AIMAOSF = {"Disables command line syntax checking"}; 
 A_GISVEC(A68_VC ,BIMAOSF,AIMAOSF,37)
-static A68_327   JIMAOSF = {"Syntax checking finished"}; 
+static A68_326   JIMAOSF = {"Syntax checking finished"}; 
 A_GISVEC(A68_VC ,KIMAOSF,JIMAOSF,24)
-static A68_326   RIMAOSF = {"You haven't requested syntax checking"}; 
+static A68_325   RIMAOSF = {"You haven't requested syntax checking"}; 
 A_GISVEC(A68_VC ,SIMAOSF,RIMAOSF,37)
-static A68_328   EJMAOSF = {"LOG"}; 
+static A68_327   EJMAOSF = {"LOG"}; 
 A_GISVEC(A68_VC ,FJMAOSF,EJMAOSF,3)
-static A68_328   HJMAOSF = {"LOG"}; 
+static A68_327   HJMAOSF = {"LOG"}; 
 A_GISVEC(A68_VC ,IJMAOSF,HJMAOSF,3)
-static A68_329   KJMAOSF = {"Stops recording a log-file and closes it."}; 
+static A68_328   KJMAOSF = {"Stops recording a log-file and closes it."}; 
 A_GISVEC(A68_VC ,LJMAOSF,KJMAOSF,41)
 static A68_317   XJMAOSF = {"OUTPUT"}; 
 A_GISVEC(A68_VC ,YJMAOSF,XJMAOSF,6)
-static A68_328   AKMAOSF = {"OUT"}; 
+static A68_327   AKMAOSF = {"OUT"}; 
 A_GISVEC(A68_VC ,BKMAOSF,AKMAOSF,3)
-static A68_330   DKMAOSF = {"Closes the current output file and resumes sending output to the terminal."}; 
+static A68_329   DKMAOSF = {"Closes the current output file and resumes sending output to the terminal."}; 
 A_GISVEC(A68_VC ,EKMAOSF,DKMAOSF,74)
-static A68_327   QKMAOSF = {"MONITORCOMMANDPARAMETERS"}; 
+static A68_326   QKMAOSF = {"MONITORCOMMANDPARAMETERS"}; 
 A_GISVEC(A68_VC ,RKMAOSF,QKMAOSF,24)
-static A68_328   TKMAOSF = {"MCP"}; 
+static A68_327   TKMAOSF = {"MCP"}; 
 A_GISVEC(A68_VC ,UKMAOSF,TKMAOSF,3)
-static A68_331   WKMAOSF = {"Stops the monitoring of parameters given to commands"}; 
+static A68_330   WKMAOSF = {"Stops the monitoring of parameters given to commands"}; 
 A_GISVEC(A68_VC ,XKMAOSF,WKMAOSF,52)
-static A68_332   ELMAOSF = {"Parameter monitoring disabled"}; 
+static A68_331   ELMAOSF = {"Parameter monitoring disabled"}; 
 A_GISVEC(A68_VC ,FLMAOSF,ELMAOSF,29)
 static A68_120   QLMAOSF = {"SHOW"}; 
 static A68_296   TLMAOSF = {"INPUT"}; 
 A_GISVEC(A68_VC ,ULMAOSF,TLMAOSF,5)
 static A68_291   WLMAOSF = {"IN"}; 
 A_GISVEC(A68_VC ,XLMAOSF,WLMAOSF,2)
-static A68_333   ZLMAOSF = {"Switches off screen-echoing of offline input."}; 
+static A68_332   ZLMAOSF = {"Switches off screen-echoing of offline input."}; 
 A_GISVEC(A68_VC ,AMMAOSF,ZLMAOSF,45)
 static A68_317   MMMAOSF = {"OUTPUT"}; 
 A_GISVEC(A68_VC ,NMMAOSF,MMMAOSF,6)
-static A68_328   PMMAOSF = {"OUT"}; 
+static A68_327   PMMAOSF = {"OUT"}; 
 A_GISVEC(A68_VC ,QMMAOSF,PMMAOSF,3)
-static A68_331   SMMAOSF = {"Switches off screen-echoing of file-directed output."}; 
+static A68_330   SMMAOSF = {"Switches off screen-echoing of file-directed output."}; 
 A_GISVEC(A68_VC ,TMMAOSF,SMMAOSF,52)
 static A68_120   FNMAOSF = {"TIME"}; 
 A_GISVEC(A68_VC ,GNMAOSF,FNMAOSF,4)
-static A68_334   KNMAOSF = {"Stops including the time-of-day and CPU-time used with the "}; 
+static A68_333   KNMAOSF = {"Stops including the time-of-day and CPU-time used with the "}; 
 A_GISVEC(A68_VC ,LNMAOSF,KNMAOSF,59)
 static A68_286   NNMAOSF = {" prompt."}; 
 A_GISVEC(A68_VC ,ONMAOSF,NNMAOSF,8)
@@ -1665,16 +1664,16 @@ static A68_120   GOMAOSF = {"PAGE"};
 A_GISVEC(A68_VC ,HOMAOSF,GOMAOSF,4)
 static A68_120   JOMAOSF = {"PAGE"}; 
 A_GISVEC(A68_VC ,KOMAOSF,JOMAOSF,4)
-static A68_335   MOMAOSF = {"Switches off paged mode for screen output."}; 
+static A68_334   MOMAOSF = {"Switches off paged mode for screen output."}; 
 A_GISVEC(A68_VC ,NOMAOSF,MOMAOSF,42)
 A_GISVEC(A68_VC ,APMAOSF,RHMAOSF,4)
 static A68_120   EPMAOSF = {"EDIT"}; 
 A_GISVEC(A68_VC ,FPMAOSF,EPMAOSF,4)
 static A68_291   HPMAOSF = {"ED"}; 
 A_GISVEC(A68_VC ,IPMAOSF,HPMAOSF,2)
-static A68_337   LPMAOSF = {"Invokes the operating system editor defined by the "}; 
+static A68_336   LPMAOSF = {"Invokes the operating system editor defined by the "}; 
 A_GISVEC(A68_VC ,MPMAOSF,LPMAOSF,51)
-static A68_285   OPMAOSF = {" mm environment variable \"edit_command\" on the module name parameter."}; 
+static A68_337   OPMAOSF = {" mm environment variable \"edit_command\" on the module name parameter."}; 
 A_GISVEC(A68_VC ,PPMAOSF,OPMAOSF,69)
 static A68_305   XPMAOSF = {"command \""}; 
 A_GISVEC(A68_VC ,YPMAOSF,XPMAOSF,9)
@@ -1684,13 +1683,13 @@ static A68_286   UQMAOSF = {"\033\014\025\025\031\034\025\021"};
 A_GISVEC(A68_VC ,VQMAOSF,UQMAOSF,8)
 static A68_339   BRMAOSF = {"Gives details of all the commands avaliable in "}; 
 A_GISVEC(A68_VC ,CRMAOSF,BRMAOSF,47)
-static A68_335   LRMAOSF = {"LOW       display command names once only."}; 
+static A68_334   LRMAOSF = {"LOW       display command names once only."}; 
 A_GISVEC(A68_VC ,MRMAOSF,LRMAOSF,42)
 static A68_340   RRMAOSF = {"MEDIUM    display command names in the contexts in which they occur marking those encountered elsewhere by \"***\""}; 
 A_GISVEC(A68_VC ,SRMAOSF,RRMAOSF,112)
 static A68_339   XRMAOSF = {"HIGH      output help message for each command."}; 
 A_GISVEC(A68_VC ,YRMAOSF,XRMAOSF,47)
-static A68_328   JSMAOSF = {"LOW"}; 
+static A68_327   JSMAOSF = {"LOW"}; 
 A_GISVEC(A68_VC ,KSMAOSF,JSMAOSF,3)
 static A68_317   LSMAOSF = {"MEDIUM"}; 
 A_GISVEC(A68_VC ,MSMAOSF,LSMAOSF,6)
@@ -1700,7 +1699,7 @@ static A68_342   YSMAOSF = {"GARBAGECOLLECT"};
 A_GISVEC(A68_VC ,ZSMAOSF,YSMAOSF,14)
 static A68_291   BTMAOSF = {"GC"}; 
 A_GISVEC(A68_VC ,CTMAOSF,BTMAOSF,2)
-static A68_322   ETMAOSF = {"Calls the ALGOL68 garbage collector"}; 
+static A68_321   ETMAOSF = {"Calls the ALGOL68 garbage collector"}; 
 A_GISVEC(A68_VC ,FTMAOSF,ETMAOSF,35)
 static A68_343   OTMAOSF = {"Garbage collecting..."}; 
 A_GISVEC(A68_VC ,PTMAOSF,OTMAOSF,21)
@@ -1764,7 +1763,7 @@ static A68_343   NXMAOSF = {"Extra parameter found"};
 A_GISVEC(A68_VC ,OXMAOSF,NXMAOSF,21)
 static A68_317   ZXMAOSF = {"HIDDEN"}; 
 A_GISVEC(A68_VC ,AYMAOSF,ZXMAOSF,6)
-static A68_333   CYMAOSF = {"Enables help of test and withdrawn facilities"}; 
+static A68_332   CYMAOSF = {"Enables help of test and withdrawn facilities"}; 
 A_GISVEC(A68_VC ,DYMAOSF,CYMAOSF,45)
 static A68_317   KYMAOSF = {"Hidden"}; 
 A_GISVEC(A68_VC ,LYMAOSF,KYMAOSF,6)
@@ -1774,7 +1773,7 @@ static A68_291   BZMAOSF = {"IN"};
 A_GISVEC(A68_VC ,CZMAOSF,BZMAOSF,2)
 static A68_319   EZMAOSF = {"Adds the specified file to the input-file stack and starts reading from it."}; 
 A_GISVEC(A68_VC ,FZMAOSF,EZMAOSF,75)
-static A68_328   TZMAOSF = {"LOG"}; 
+static A68_327   TZMAOSF = {"LOG"}; 
 A_GISVEC(A68_VC ,UZMAOSF,TZMAOSF,3)
 static A68_350   WZMAOSF = {"Opens a log-file and starts recording all input and output in it."}; 
 A_GISVEC(A68_VC ,XZMAOSF,WZMAOSF,65)
@@ -1784,9 +1783,9 @@ static A68_291   OANAOSF = {"ME"};
 A_GISVEC(A68_VC ,PANAOSF,OANAOSF,2)
 static A68_351   TANAOSF = {"Outputs a message."}; 
 A_GISVEC(A68_VC ,UANAOSF,TANAOSF,18)
-static A68_327   JBNAOSF = {"MONITORCOMMANDPARAMETERS"}; 
+static A68_326   JBNAOSF = {"MONITORCOMMANDPARAMETERS"}; 
 A_GISVEC(A68_VC ,KBNAOSF,JBNAOSF,24)
-static A68_328   MBNAOSF = {"MCP"}; 
+static A68_327   MBNAOSF = {"MCP"}; 
 A_GISVEC(A68_VC ,NBNAOSF,MBNAOSF,3)
 static A68_352   PBNAOSF = {"Monitors parameters given to commands by displaying them before the command is obeyed indicating which readers were used."}; 
 A_GISVEC(A68_VC ,QBNAOSF,PBNAOSF,121)
@@ -1808,7 +1807,7 @@ static A68_353   MENAOSF = {" and executes the specified "};
 A_GISVEC(A68_VC ,NENAOSF,MENAOSF,28)
 static A68_316   OENAOSF = {" operating system command, or launches a sub-process in which a sequence of "}; 
 A_GISVEC(A68_VC ,PENAOSF,OENAOSF,76)
-static A68_326   QENAOSF = {" commands may be given.  The current "}; 
+static A68_325   QENAOSF = {" commands may be given.  The current "}; 
 A_GISVEC(A68_VC ,RENAOSF,QENAOSF,37)
 static A68_358   TENAOSF = {" session resumes on completion."}; 
 A_GISVEC(A68_VC ,UENAOSF,TENAOSF,31)
@@ -1818,7 +1817,7 @@ static A68_360   OFNAOSF = {"See the \"obey\" command"};
 A_GISVEC(A68_VC ,PFNAOSF,OFNAOSF,22)
 static A68_290   CGNAOSF = {"OFFLINE"}; 
 A_GISVEC(A68_VC ,DGNAOSF,CGNAOSF,7)
-static A68_328   FGNAOSF = {"OFF"}; 
+static A68_327   FGNAOSF = {"OFF"}; 
 A_GISVEC(A68_VC ,GGNAOSF,FGNAOSF,3)
 static A68_350   IGNAOSF = {"Resumes reading from the file at the top of the input-file stack."}; 
 A_GISVEC(A68_VC ,JGNAOSF,IGNAOSF,65)
@@ -1830,14 +1829,14 @@ static A68_361   BHNAOSF = {"Specifies a break-point in an input-file at which c
 A_GISVEC(A68_VC ,CHNAOSF,BHNAOSF,78)
 static A68_317   OHNAOSF = {"OUTPUT"}; 
 A_GISVEC(A68_VC ,PHNAOSF,OHNAOSF,6)
-static A68_328   RHNAOSF = {"OUT"}; 
+static A68_327   RHNAOSF = {"OUT"}; 
 A_GISVEC(A68_VC ,SHNAOSF,RHNAOSF,3)
-static A68_326   UHNAOSF = {"Directs output to the specified file."}; 
+static A68_325   UHNAOSF = {"Directs output to the specified file."}; 
 A_GISVEC(A68_VC ,VHNAOSF,UHNAOSF,37)
 static A68_305   IINAOSF = {"OVERWRITE"}; 
 static A68_296   LINAOSF = {"STACK"}; 
 A_GISVEC(A68_VC ,MINAOSF,LINAOSF,5)
-static A68_335   PINAOSF = {"Overwrites <int> * 10 K Bytes of the stack"}; 
+static A68_334   PINAOSF = {"Overwrites <int> * 10 K Bytes of the stack"}; 
 A_GISVEC(A68_VC ,QINAOSF,PINAOSF,42)
 static A68_120   OJNAOSF = {"HEAP"}; 
 A_GISVEC(A68_VC ,PJNAOSF,OJNAOSF,4)
@@ -1847,7 +1846,7 @@ static A68_120   DKNAOSF = {"####"};
 A_GISVEC(A68_VC ,MKNAOSF,IINAOSF,9)
 static A68_120   QKNAOSF = {"PAGE"}; 
 A_GISVEC(A68_VC ,RKNAOSF,QKNAOSF,4)
-static A68_331   VKNAOSF = {"Sets paged mode (and page length) for screen output."}; 
+static A68_330   VKNAOSF = {"Sets paged mode (and page length) for screen output."}; 
 A_GISVEC(A68_VC ,WKNAOSF,VKNAOSF,52)
 static A68_296   HLNAOSF = {"PRINT"}; 
 static A68_363   KLNAOSF = {"CONFIGURATION"}; 
@@ -1868,7 +1867,7 @@ static A68_366   FNNAOSF = {"Gives a summary of the ALGOL68 HEAP memory statisti
 A_GISVEC(A68_VC ,GNNAOSF,FNNAOSF,53)
 static A68_317   AONAOSF = {"MEMORY"}; 
 A_GISVEC(A68_VC ,BONAOSF,AONAOSF,6)
-static A68_328   DONAOSF = {"MEM"}; 
+static A68_327   DONAOSF = {"MEM"}; 
 A_GISVEC(A68_VC ,EONAOSF,DONAOSF,3)
 static A68_366   GONAOSF = {"Gives a summary of the ALGOL68 HEAP memory statistics"}; 
 A_GISVEC(A68_VC ,HONAOSF,GONAOSF,53)
@@ -1880,11 +1879,11 @@ static A68_367   HPNAOSF = {"Displays time-of-day and CPU-time used."};
 A_GISVEC(A68_VC ,IPNAOSF,HPNAOSF,39)
 static A68_286   UPNAOSF = {"VARIABLE"}; 
 A_GISVEC(A68_VC ,VPNAOSF,UPNAOSF,8)
-static A68_327   DQNAOSF = {"Print the values of the "}; 
+static A68_326   DQNAOSF = {"Print the values of the "}; 
 A_GISVEC(A68_VC ,EQNAOSF,DQNAOSF,24)
 static A68_368   GQNAOSF = {" variables, or all "}; 
 A_GISVEC(A68_VC ,HQNAOSF,GQNAOSF,19)
-static A68_322   JQNAOSF = {" variables if none are specified.  "}; 
+static A68_321   JQNAOSF = {" variables if none are specified.  "}; 
 A_GISVEC(A68_VC ,KQNAOSF,JQNAOSF,35)
 static A68_369   MQNAOSF = {" variables are used to define operating system commands and certain working environment parameters within "}; 
 A_GISVEC(A68_VC ,NQNAOSF,MQNAOSF,106)
@@ -1892,7 +1891,7 @@ static A68_307   ARNAOSF = {""};
 A_GISVEC(A68_VC ,BRNAOSF,ARNAOSF,0)
 A_GISVEC(A68_VC ,JRNAOSF,HLNAOSF,5)
 static A68_290   MRNAOSF = {"\021\017\030\013 \015\034"}; 
-static A68_328   PRNAOSF = {"\022\033\033"}; 
+static A68_327   PRNAOSF = {"\022\033\033"}; 
 A_GISVEC(A68_VC ,QRNAOSF,PRNAOSF,3)
 static A68_313   YRNAOSF = {"Private OFF"}; 
 A_GISVEC(A68_VC ,ZRNAOSF,YRNAOSF,11)
@@ -1913,7 +1912,7 @@ static A68_317   TUNAOSF = {"REPORT"};
 A_GISVEC(A68_VC ,UUNAOSF,TUNAOSF,6)
 static A68_372   WUNAOSF = {"Passes the rest of the line as a message to a central log file.  This command is designed for reporting bugs, comments, suggestions and general insults."}; 
 A_GISVEC(A68_VC ,XUNAOSF,WUNAOSF,152)
-static A68_332   MVNAOSF = {"REPORT facility not available"}; 
+static A68_331   MVNAOSF = {"REPORT facility not available"}; 
 A_GISVEC(A68_VC ,NVNAOSF,MVNAOSF,29)
 static A68_307   PVNAOSF = {""}; 
 A_GISVEC(A68_VC ,QVNAOSF,PVNAOSF,0)
@@ -1965,15 +1964,15 @@ static A68_317   XEOAOSF = {"RETURN"};
 A_GISVEC(A68_VC ,YEOAOSF,XEOAOSF,6)
 static A68_377   EFOAOSF = {"Returns from the current "}; 
 A_GISVEC(A68_VC ,FFOAOSF,EFOAOSF,25)
-static A68_322   KFOAOSF = {" session to the calling environment"}; 
+static A68_321   KFOAOSF = {" session to the calling environment"}; 
 A_GISVEC(A68_VC ,LFOAOSF,KFOAOSF,35)
 static A68_317   ZFOAOSF = {"SECRET"}; 
 A_GISVEC(A68_VC ,AGOAOSF,ZFOAOSF,6)
-static A68_333   CGOAOSF = {"Enables help of test and withdrawn facilities"}; 
+static A68_332   CGOAOSF = {"Enables help of test and withdrawn facilities"}; 
 A_GISVEC(A68_VC ,DGOAOSF,CGOAOSF,45)
 static A68_317   KGOAOSF = {"Secret"}; 
 A_GISVEC(A68_VC ,LGOAOSF,KGOAOSF,6)
-static A68_328   XGOAOSF = {"SET"}; 
+static A68_327   XGOAOSF = {"SET"}; 
 static A68_378   AHOAOSF = {"DIAGNOSTICLEVEL"}; 
 A_GISVEC(A68_VC ,BHOAOSF,AHOAOSF,15)
 static A68_291   DHOAOSF = {"DL"}; 
@@ -2053,7 +2052,7 @@ static A68_384   UMOAOSF = {"Switches on screen-echoing of offline input."};
 A_GISVEC(A68_VC ,VMOAOSF,UMOAOSF,44)
 static A68_317   HNOAOSF = {"OUTPUT"}; 
 A_GISVEC(A68_VC ,INOAOSF,HNOAOSF,6)
-static A68_328   KNOAOSF = {"OUT"}; 
+static A68_327   KNOAOSF = {"OUT"}; 
 A_GISVEC(A68_VC ,LNOAOSF,KNOAOSF,3)
 static A68_318   NNOAOSF = {"Switches on the screen-echoing of file-directed output."}; 
 A_GISVEC(A68_VC ,ONOAOSF,NNOAOSF,55)
@@ -2941,7 +2940,7 @@ A_STATIC A68_VOID  JFMAOSF_anonymous(A68_207  Params, A68_97  Msg)
 { 
 A68_INT  KFMAOSF;  /* YIELD */
 A68_BITS  LFMAOSF_heapdebug;
-A68_323  MFMAOSF;  /* collateral clause result */
+A68_322  MFMAOSF;  /* collateral clause result */
 A68_52  PFMAOSF;  /* OPERATORS - mode -> union mode */
 A68_VC  QFMAOSF;  /* YIELD */
 A68_52  RFMAOSF;  /* OPERATORS - mode -> union mode */
@@ -3310,7 +3309,7 @@ return;
 
 A_STATIC A68_VOID  KTMAOSF_anonymous(A68_207  V, A68_97  Msg)
 { 
-A68_323  LTMAOSF;  /* collateral clause result */
+A68_322  LTMAOSF;  /* collateral clause result */
 A68_VC  MTMAOSF;  /* avoid structure result */
 A68_52  NTMAOSF;  /* OPERATORS - mode -> union mode */
 A68_52  QTMAOSF;  /* OPERATORS - mode -> union mode */
@@ -3318,7 +3317,7 @@ A68_VC  RTMAOSF;  /* YIELD */
 A68_52  STMAOSF;  /* OPERATORS - mode -> union mode */
 A68_56  TTMAOSF;  /* procedure value */
 A68_85  UTMAOSF;  /* OPERATORS - istruct -> vector */
-A68_323  VTMAOSF;  /* collateral clause result */
+A68_322  VTMAOSF;  /* collateral clause result */
 A68_VC  WTMAOSF;  /* avoid structure result */
 A68_52  XTMAOSF;  /* OPERATORS - mode -> union mode */
 A68_52  AUMAOSF;  /* OPERATORS - mode -> union mode */
@@ -3361,7 +3360,7 @@ return;
 
 A_STATIC A68_VOID  DVMAOSF_anonymous(A68_209 * S, A68_34 * Ch)
 { 
-A68_323  EVMAOSF;  /* collateral clause result */
+A68_322  EVMAOSF;  /* collateral clause result */
 A68_52  FVMAOSF;  /* OPERATORS - mode -> union mode */
 A68_56  GVMAOSF;  /* procedure value */
 A68_347  HVMAOSF;  /* collateral clause result */
@@ -4275,7 +4274,7 @@ return;
 
 A_STATIC A68_VOID  MHOAOSF_anonymous(A68_207  V, A68_97  Msg)
 { 
-A68_323  NHOAOSF;  /* collateral clause result */
+A68_322  NHOAOSF;  /* collateral clause result */
 A68_52  QHOAOSF;  /* OPERATORS - mode -> union mode */
 A68_VC  RHOAOSF;  /* YIELD */
 A68_INT  SHOAOSF;  /* YIELD */
@@ -4994,7 +4993,7 @@ A68_206  YDMAOSF;  /* YIELD */
 A68_206  ZDMAOSF;  /* procedure value */
 A68_209 * AEMAOSF;  /* YIELD */
 A68_208  BEMAOSF;  /* OPERATORS - mode -> union mode */
-A68_325  DEMAOSF;  /* collateral clause result */
+A68_324  DEMAOSF;  /* collateral clause result */
 A68_209  EEMAOSF;  /* collateral clause result */
 A68_VC  HEMAOSF;  /* avoid structure result */
 A68_VC  KEMAOSF;  /* avoid structure result */
@@ -5029,7 +5028,7 @@ A68_VC  MHMAOSF;  /* avoid structure result */
 A68_VC  OHMAOSF;  /* avoid structure result */
 A68_208  PHMAOSF;  /* OPERATORS - mode -> union mode */
 A68_210 * QHMAOSF;  /* YIELD */
-A68_336  SHMAOSF;  /* collateral clause result */
+A68_335  SHMAOSF;  /* collateral clause result */
 A68_209  THMAOSF;  /* collateral clause result */
 A68_VC  WHMAOSF;  /* avoid structure result */
 A68_VC  ZHMAOSF;  /* avoid structure result */
@@ -5070,7 +5069,7 @@ A68_206  MLMAOSF;  /* YIELD */
 A68_206  NLMAOSF;  /* procedure value */
 A68_209 * OLMAOSF;  /* YIELD */
 A68_208  PLMAOSF;  /* OPERATORS - mode -> union mode */
-A68_325  RLMAOSF;  /* collateral clause result */
+A68_324  RLMAOSF;  /* collateral clause result */
 A68_209  SLMAOSF;  /* collateral clause result */
 A68_VC  VLMAOSF;  /* avoid structure result */
 A68_VC  YLMAOSF;  /* avoid structure result */
@@ -5356,7 +5355,7 @@ A68_206  DLNAOSF;  /* YIELD */
 A68_206  ELNAOSF;  /* procedure value */
 A68_209 * FLNAOSF;  /* YIELD */
 A68_208  GLNAOSF;  /* OPERATORS - mode -> union mode */
-A68_336  ILNAOSF;  /* collateral clause result */
+A68_335  ILNAOSF;  /* collateral clause result */
 A68_209  JLNAOSF;  /* collateral clause result */
 A68_VC  MLNAOSF;  /* avoid structure result */
 A68_VC  PLNAOSF;  /* avoid structure result */
@@ -5506,7 +5505,7 @@ A68_208  JAOAOSF;  /* OPERATORS - mode -> union mode */
 A68_209  KAOAOSF;  /* collateral clause result */
 A68_VC  NAOAOSF;  /* avoid structure result */
 A68_VC  QAOAOSF;  /* avoid structure result */
-A68_323  RAOAOSF;  /* collateral clause result */
+A68_322  RAOAOSF;  /* collateral clause result */
 A68_52  UAOAOSF;  /* OPERATORS - mode -> union mode */
 A68_VC  VAOAOSF;  /* YIELD */
 A68_52  WAOAOSF;  /* OPERATORS - mode -> union mode */
@@ -5565,7 +5564,7 @@ A68_206  TGOAOSF;  /* YIELD */
 A68_206  UGOAOSF;  /* procedure value */
 A68_209 * VGOAOSF;  /* YIELD */
 A68_208  WGOAOSF;  /* OPERATORS - mode -> union mode */
-A68_325  YGOAOSF;  /* collateral clause result */
+A68_324  YGOAOSF;  /* collateral clause result */
 A68_209  ZGOAOSF;  /* collateral clause result */
 A68_VC  CHOAOSF;  /* avoid structure result */
 A68_VC  FHOAOSF;  /* avoid structure result */
@@ -7190,9 +7189,9 @@ void QOLAOSF(void)   /* initialise DECS globalcommands */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","globalcommands.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/commandcaller.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/kernelreader.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/commandreader.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/commandsyntax.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/command.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/variables.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/ioprocs.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/testmode.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/basics.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osinterface.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/options.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/messageproc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/putstrings.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","globalcommands.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/commandcaller.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/kernelreader.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/commandreader.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/commandsyntax.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/command.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/variables.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/ioprocs.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/testmode.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/basics.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/osinterface.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/options.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/messageproc.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/putstrings.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_VC  CPLAOSF;  /* OPERATORS - nil -> mode */
@@ -7215,11 +7214,11 @@ ONEAOSF();   /* USE options */
 ZRAAOSF();   /* USE messageproc */
 KNDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/globalcommands.a68";
-A_config.translation_time = "Sun Sep 26 21:50:34 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/liba68prel/globalcommands.a68";
+A_config.translation_time = "Fri May 30 22:15:18 2003";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "POLAOSF (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:50:34 2004";
+A_config.spec_change_time = "Fri May 30 22:15:18 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
