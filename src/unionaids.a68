@@ -1,6 +1,6 @@
 DECS  unionaids  CONTEXT VOID  USE  environment, modes, values:
 
-configinfo A68CONFIG "$Id: unionaids.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: unionaids.a68,v 1.1.2.1 2004/09/04 17:36:20 teshields Exp $";
 
 
 COMMENT 

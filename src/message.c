@@ -86,8 +86,8 @@ typedef struct A68t58  A68_58 ;    /* PROC(MODE57) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t59,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t59  A68_59 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,58,A68t60);
-typedef struct A68t60  A68_60 ;    /* STRUCT 58 CHAR */
+A_ISTRUCT(A68_CHAR ,62,A68t60);
+typedef struct A68t60  A68_60 ;    /* STRUCT 62 CHAR */
 
 A_PROCEDURE(A68_VOID ,A68t61,(A68_INT ,A68_VC *),(A68_INT ,A68_VC *,void *));
 typedef struct A68t61  A68_61 ;    /* PROC(INT) REF MODE26 */
@@ -195,14 +195,14 @@ A_ISTRUCT(A68_CHAR ,20,A68t112);
 typedef struct A68t112  A68_112 ;    /* STRUCT 20 CHAR */
 A_ISTRUCT(A68_CHAR ,56,A68t113);
 typedef struct A68t113  A68_113 ;    /* STRUCT 56 CHAR */
-A_ISTRUCT(A68_CHAR ,69,A68t114);
-typedef struct A68t114  A68_114 ;    /* STRUCT 69 CHAR */
-A_ISTRUCT(A68_CHAR ,71,A68t115);
-typedef struct A68t115  A68_115 ;    /* STRUCT 71 CHAR */
-A_ISTRUCT(A68_CHAR ,70,A68t116);
-typedef struct A68t116  A68_116 ;    /* STRUCT 70 CHAR */
-A_ISTRUCT(A68_CHAR ,62,A68t117);
-typedef struct A68t117  A68_117 ;    /* STRUCT 62 CHAR */
+A_ISTRUCT(A68_CHAR ,58,A68t114);
+typedef struct A68t114  A68_114 ;    /* STRUCT 58 CHAR */
+A_ISTRUCT(A68_CHAR ,69,A68t115);
+typedef struct A68t115  A68_115 ;    /* STRUCT 69 CHAR */
+A_ISTRUCT(A68_CHAR ,71,A68t116);
+typedef struct A68t116  A68_116 ;    /* STRUCT 71 CHAR */
+A_ISTRUCT(A68_CHAR ,70,A68t117);
+typedef struct A68t117  A68_117 ;    /* STRUCT 70 CHAR */
 A_ISTRUCT(A68_CHAR ,66,A68t118);
 typedef struct A68t118  A68_118 ;    /* STRUCT 66 CHAR */
 A_ISTRUCT(A68_CHAR ,53,A68t119);
@@ -279,8 +279,8 @@ extern A68_VOID  ROAAOSF_whole(A68_INT ,A68_INT ,A68_VC *);
 extern void BAAALIB(void);   /* a68config */
 extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
-static A68_60   GDHACTR = {"$Id: message.c,v 1.5 2004/09/04 16:52:12 teshields Exp $"}; 
-A_GISVEC(A68_VC ,HDHACTR,GDHACTR,58)
+static A68_60   GDHACTR = {"$Id: message.c,v 1.5.2.4 2004/09/27 03:04:19 teshields Exp $"}; 
+A_GISVEC(A68_VC ,HDHACTR,GDHACTR,62)
 static A68_BOOL  IDHACTR_longlongoption;
 static A68_62   NDHACTR = {"] "}; 
 A_GISVEC(A68_VC ,ODHACTR,NDHACTR,2)
@@ -598,7 +598,7 @@ static A68_99   RPHACTR = {"(192) INT or UNION required after CASE"};
 A_GISVEC(A68_VC ,SPHACTR,RPHACTR,38)
 static A68_81   TPHACTR = {"(193) BOOL required after IF"}; 
 A_GISVEC(A68_VC ,UPHACTR,TPHACTR,28)
-static A68_60   VPHACTR = {"(194) decs module restriction - label .4 is in outer level"}; 
+static A68_114   VPHACTR = {"(194) decs module restriction - label .4 is in outer level"}; 
 A_GISVEC(A68_VC ,WPHACTR,VPHACTR,58)
 static A68_89   XPHACTR = {"(195) istruct too large"}; 
 A_GISVEC(A68_VC ,YPHACTR,XPHACTR,23)
@@ -646,7 +646,7 @@ static A68_71   NRHACTR = {"(251) "};
 A_GISVEC(A68_VC ,ORHACTR,NRHACTR,6)
 static A68_71   PRHACTR = {"(252) "}; 
 A_GISVEC(A68_VC ,QRHACTR,PRHACTR,6)
-static A68_114   RRHACTR = {"(253) This line is longer than 160 characters - it has been truncated"}; 
+static A68_115   RRHACTR = {"(253) This line is longer than 160 characters - it has been truncated"}; 
 A_GISVEC(A68_VC ,SRHACTR,RRHACTR,69)
 static A68_71   TRHACTR = {"(254) "}; 
 A_GISVEC(A68_VC ,URHACTR,TRHACTR,6)
@@ -664,9 +664,9 @@ static A68_71   FSHACTR = {"(260) "};
 A_GISVEC(A68_VC ,GSHACTR,FSHACTR,6)
 static A68_106   HSHACTR = {"(261) Invalid module keeplist information"}; 
 A_GISVEC(A68_VC ,ISHACTR,HSHACTR,41)
-static A68_115   JSHACTR = {"(262) An existing version of module '^a' has invalid module information"}; 
+static A68_116   JSHACTR = {"(262) An existing version of module '^a' has invalid module information"}; 
 A_GISVEC(A68_VC ,KSHACTR,JSHACTR,71)
-static A68_116   LSHACTR = {"(263) Call of PROC ^a has ^a parameters, ^a with possible side effects"}; 
+static A68_117   LSHACTR = {"(263) Call of PROC ^a has ^a parameters, ^a with possible side effects"}; 
 A_GISVEC(A68_VC ,MSHACTR,LSHACTR,70)
 static A68_92   NSHACTR = {"(264) Trimscript of ^a has possible side effects"}; 
 A_GISVEC(A68_VC ,OSHACTR,NSHACTR,48)
@@ -694,7 +694,7 @@ static A68_80   JTHACTR = {"(280) Unknown debug module \"^a\" ignored"};
 A_GISVEC(A68_VC ,KTHACTR,JTHACTR,39)
 static A68_98   LTHACTR = {"(281) Unspecified debug_modules"}; 
 A_GISVEC(A68_VC ,MTHACTR,LTHACTR,31)
-static A68_117   NTHACTR = {"(282) Staredit flag \"^a\" (from A68_STAREDIT) not in [0-9][A-Z]"}; 
+static A68_60   NTHACTR = {"(282) Staredit flag \"^a\" (from A68_STAREDIT) not in [0-9][A-Z]"}; 
 A_GISVEC(A68_VC ,OTHACTR,NTHACTR,62)
 static A68_118   PTHACTR = {"(283) Staredit flag \"^a\" (from -staredit option) not in [0-9][A-Z]"}; 
 A_GISVEC(A68_VC ,QTHACTR,PTHACTR,66)
@@ -722,7 +722,7 @@ static A68_93   LUHACTR = {"(307) Skip used for a value of a non-void mode"};
 A_GISVEC(A68_VC ,MUHACTR,LUHACTR,46)
 static A68_86   NUHACTR = {"(308) Bool voided, ':=' mistyped perhaps"}; 
 A_GISVEC(A68_VC ,OUHACTR,NUHACTR,40)
-static A68_115   PUHACTR = {"(309) Proc with parameters voided, parameters of call forgotten perhaps"}; 
+static A68_116   PUHACTR = {"(309) Proc with parameters voided, parameters of call forgotten perhaps"}; 
 A_GISVEC(A68_VC ,QUHACTR,PUHACTR,71)
 static A68_100   RUHACTR = {"(310) A result has been voided here"}; 
 A_GISVEC(A68_VC ,SUHACTR,RUHACTR,35)
@@ -1062,7 +1062,7 @@ static A68_71   SHIACTR = {"(627) "};
 A_GISVEC(A68_VC ,THIACTR,SHIACTR,6)
 static A68_133   UHIACTR = {"(628) Compiler error: TRANSLATOR (module) - cc module compiled as proc module"}; 
 A_GISVEC(A68_VC ,VHIACTR,UHIACTR,77)
-static A68_117   WHIACTR = {"(629) Compiler error: IDENTIFIERS (labdec) - setting non label"}; 
+static A68_60   WHIACTR = {"(629) Compiler error: IDENTIFIERS (labdec) - setting non label"}; 
 A_GISVEC(A68_VC ,XHIACTR,WHIACTR,62)
 static A68_134   YHIACTR = {"(630) Compiler error: MODES (initialise mode) - invalid mode in REF [] MDES"}; 
 A_GISVEC(A68_VC ,ZHIACTR,YHIACTR,75)
@@ -1104,7 +1104,7 @@ static A68_92   IJIACTR = {"(648) Compiler error: internal assertion failure"};
 A_GISVEC(A68_VC ,JJIACTR,IJIACTR,48)
 static A68_108   KJIACTR = {"(649) Compiler error: table overflow"}; 
 A_GISVEC(A68_VC ,LJIACTR,KJIACTR,36)
-static A68_114   MJIACTR = {"(650) Compiler error: (Various evaluation procs) - Only opers allowed"}; 
+static A68_115   MJIACTR = {"(650) Compiler error: (Various evaluation procs) - Only opers allowed"}; 
 A_GISVEC(A68_VC ,NJIACTR,MJIACTR,69)
 static A68_65   OJIACTR = {""}; 
 A_GISVEC(A68_VC ,PJIACTR,OJIACTR,0)
@@ -1126,7 +1126,7 @@ static A68_128   EKIACTR = {"(659) Compiler error: CLAUSES (evaluate result) - e
 A_GISVEC(A68_VC ,FKIACTR,EKIACTR,89)
 static A68_71   GKIACTR = {"(660) "}; 
 A_GISVEC(A68_VC ,HKIACTR,GKIACTR,6)
-static A68_117   IKIACTR = {"(661) Compiler error: ENVIRONMENT (ASSERT) - assertion failure"}; 
+static A68_60   IKIACTR = {"(661) Compiler error: ENVIRONMENT (ASSERT) - assertion failure"}; 
 A_GISVEC(A68_VC ,JKIACTR,IKIACTR,62)
 static A68_71   KKIACTR = {"(662) "}; 
 A_GISVEC(A68_VC ,LKIACTR,KKIACTR,6)
@@ -1134,9 +1134,9 @@ static A68_71   MKIACTR = {"(663) "};
 A_GISVEC(A68_VC ,NKIACTR,MKIACTR,6)
 static A68_71   OKIACTR = {"(664) "}; 
 A_GISVEC(A68_VC ,PKIACTR,OKIACTR,6)
-static A68_115   QKIACTR = {"(665) Compiler error: TRANSLATOR - invalid separator in <choice clause>"}; 
+static A68_116   QKIACTR = {"(665) Compiler error: TRANSLATOR - invalid separator in <choice clause>"}; 
 A_GISVEC(A68_VC ,RKIACTR,QKIACTR,71)
-static A68_116   SKIACTR = {"(666) Compiler error: TRANSLATOR - invalid imperative in <loop clause>"}; 
+static A68_117   SKIACTR = {"(666) Compiler error: TRANSLATOR - invalid imperative in <loop clause>"}; 
 A_GISVEC(A68_VC ,TKIACTR,SKIACTR,70)
 static A68_71   UKIACTR = {"(667) "}; 
 A_GISVEC(A68_VC ,VKIACTR,UKIACTR,6)
@@ -1288,143 +1288,143 @@ A68_54  YOIACTR_generator;   /* proc value of non-global proc */
 A68_VC  DPIACTR;  /* clause result */
 A68_VC  EPIACTR;  /* avoid structure result */
 A_PROC_ENTRY(message);
- /* line 47: */
- /* line 49: */
+ /* line 46: */
+ /* line 48: */
 { 
+ /* line 49: */
  /* line 50: */
- /* line 51: */
 switch ( (Messagenumber-42) )
 { 
 case 1: 
- /* line 52: */
+ /* line 51: */
 LDHACTR = A_HVEC(MDHACTR,'[',A68_CHAR );
 break;
 case 2: 
- /* line 53: */
+ /* line 52: */
 LDHACTR = ODHACTR;
 break;
 case 3: 
- /* line 54: */
+ /* line 53: */
 LDHACTR = QDHACTR;
 break;
 case 4: 
- /* line 55: */
+ /* line 54: */
 LDHACTR = SDHACTR;
 break;
 case 5: 
- /* line 56: */
+ /* line 55: */
 LDHACTR = UDHACTR;
 break;
 case 6: 
- /* line 57: */
+ /* line 56: */
 LDHACTR = A_HVEC(VDHACTR,'!',A68_CHAR );
 break;
 case 7: 
- /* line 58: */
+ /* line 57: */
 LDHACTR = XDHACTR;
 break;
 case 8: 
- /* line 59: */
+ /* line 58: */
 LDHACTR = ZDHACTR;
 break;
 case 9: 
- /* line 60: */
+ /* line 59: */
 LDHACTR = BEHACTR;
 break;
 case 10: 
- /* line 61: */
+ /* line 60: */
 LDHACTR = DEHACTR;
 break;
 case 11: 
- /* line 62: */
+ /* line 61: */
 LDHACTR = A_HVEC(EEHACTR,')',A68_CHAR );
 break;
 case 12: 
- /* line 63: */
+ /* line 62: */
 LDHACTR = GEHACTR;
 break;
 case 13: 
- /* line 64: */
+ /* line 63: */
 LDHACTR = IEHACTR;
 break;
 case 14: 
- /* line 65: */
+ /* line 64: */
 LDHACTR = KEHACTR;
 break;
 case 15: 
- /* line 66: */
+ /* line 65: */
 LDHACTR = MEHACTR;
 break;
 case 16: 
- /* line 67: */
+ /* line 66: */
 LDHACTR = A_HVEC(NEHACTR,'$',A68_CHAR );
 break;
 case 17: 
- /* line 68: */
+ /* line 67: */
 LDHACTR = PEHACTR;
 break;
 case 18: 
- /* line 69: */
+ /* line 68: */
 LDHACTR = REHACTR;
 break;
 case 19: 
- /* line 70: */
+ /* line 69: */
 LDHACTR = TEHACTR;
 break;
 case 20: 
- /* line 71: */
+ /* line 70: */
 LDHACTR = VEHACTR;
 break;
 case 21: 
- /* line 72: */
+ /* line 71: */
 LDHACTR = XEHACTR;
 break;
 case 22: 
- /* line 73: */
+ /* line 72: */
 LDHACTR = A_HVEC(YEHACTR,' ',A68_CHAR );
 break;
 case 23: 
- /* line 74: */
+ /* line 73: */
 LDHACTR = AFHACTR;
 break;
 case 24: 
- /* line 75: */
+ /* line 74: */
 LDHACTR = CFHACTR;
 break;
 case 25: 
- /* line 76: */
+ /* line 75: */
 LDHACTR = EFHACTR;
 break;
 case 26: 
- /* line 77: */
+ /* line 76: */
 LDHACTR = GFHACTR;
 break;
 case 27: 
- /* line 78: */
+ /* line 77: */
 LDHACTR = IFHACTR;
 break;
 case 28: 
- /* line 79: */
+ /* line 78: */
 LDHACTR = KFHACTR;
 break;
 case 29: 
- /* line 80: */
+ /* line 79: */
 LDHACTR = MFHACTR;
 break;
 case 30: 
- /* line 81: */
+ /* line 80: */
 LDHACTR = OFHACTR;
 break;
 case 31: 
- /* line 82: */
+ /* line 81: */
 LDHACTR = QFHACTR;
 break;
 case 32: 
- /* line 83: */
+ /* line 82: */
 LDHACTR = SFHACTR;
 break;
 case 33: 
- /* line 84: */
+ /* line 83: */
 LDHACTR = UFHACTR;
 break;
 case 34: 
@@ -1434,12 +1434,12 @@ LDHACTR = WFHACTR;
 } 
 else
 { 
- /* line 85: */
+ /* line 84: */
 LDHACTR = YFHACTR;
 } 
 break;
 case 35: 
- /* line 86: */
+ /* line 85: */
 LDHACTR = AGHACTR;
 break;
 case 36: 
@@ -1449,7 +1449,7 @@ LDHACTR = CGHACTR;
 } 
 else
 { 
- /* line 87: */
+ /* line 86: */
 LDHACTR = EGHACTR;
 } 
 break;
@@ -1460,7 +1460,7 @@ LDHACTR = GGHACTR;
 } 
 else
 { 
- /* line 88: */
+ /* line 87: */
 LDHACTR = IGHACTR;
 } 
 break;
@@ -1471,12 +1471,12 @@ LDHACTR = KGHACTR;
 } 
 else
 { 
- /* line 89: */
+ /* line 88: */
 LDHACTR = MGHACTR;
 } 
 break;
 case 39: 
- /* line 90: */
+ /* line 89: */
 LDHACTR = OGHACTR;
 break;
 case 40: 
@@ -1486,7 +1486,7 @@ LDHACTR = QGHACTR;
 } 
 else
 { 
- /* line 91: */
+ /* line 90: */
 LDHACTR = SGHACTR;
 } 
 break;
@@ -1497,7 +1497,7 @@ LDHACTR = UGHACTR;
 } 
 else
 { 
- /* line 92: */
+ /* line 91: */
 LDHACTR = WGHACTR;
 } 
 break;
@@ -1508,12 +1508,12 @@ LDHACTR = YGHACTR;
 } 
 else
 { 
- /* line 93: */
+ /* line 92: */
 LDHACTR = AHHACTR;
 } 
 break;
 case 43: 
- /* line 94: */
+ /* line 93: */
 LDHACTR = CHHACTR;
 break;
 case 44: 
@@ -1523,7 +1523,7 @@ LDHACTR = EHHACTR;
 } 
 else
 { 
- /* line 95: */
+ /* line 94: */
 LDHACTR = GHHACTR;
 } 
 break;
@@ -1534,7 +1534,7 @@ LDHACTR = IHHACTR;
 } 
 else
 { 
- /* line 96: */
+ /* line 95: */
 LDHACTR = KHHACTR;
 } 
 break;
@@ -1545,12 +1545,12 @@ LDHACTR = MHHACTR;
 } 
 else
 { 
- /* line 97: */
+ /* line 96: */
 LDHACTR = OHHACTR;
 } 
 break;
 case 47: 
- /* line 98: */
+ /* line 97: */
 LDHACTR = QHHACTR;
 break;
 case 48: 
@@ -1560,7 +1560,7 @@ LDHACTR = SHHACTR;
 } 
 else
 { 
- /* line 99: */
+ /* line 98: */
 LDHACTR = UHHACTR;
 } 
 break;
@@ -1571,1760 +1571,1760 @@ LDHACTR = WHHACTR;
 } 
 else
 { 
- /* line 100: */
+ /* line 99: */
 LDHACTR = YHHACTR;
 } 
 break;
 case 50: 
- /* line 101: */
+ /* line 100: */
 LDHACTR = AIHACTR;
 break;
 case 51: 
- /* line 102: */
+ /* line 101: */
 LDHACTR = CIHACTR;
 break;
 case 52: 
- /* line 103: */
+ /* line 102: */
 LDHACTR = EIHACTR;
 break;
 case 53: 
- /* line 104: */
+ /* line 103: */
 LDHACTR = GIHACTR;
 break;
 case 54: 
- /* line 105: */
+ /* line 104: */
 LDHACTR = IIHACTR;
 break;
 case 55: 
- /* line 106: */
+ /* line 105: */
 LDHACTR = KIHACTR;
 break;
 case 56: 
- /* line 107: */
+ /* line 106: */
 LDHACTR = MIHACTR;
 break;
 case 57: 
- /* line 108: */
+ /* line 107: */
 LDHACTR = OIHACTR;
 break;
 case 58: 
- /* line 109: */
+ /* line 108: */
 LDHACTR = QIHACTR;
 break;
 case 59: 
- /* line 110: */
+ /* line 109: */
 LDHACTR = SIHACTR;
 break;
 case 60: 
- /* line 111: */
+ /* line 110: */
 LDHACTR = UIHACTR;
 break;
 case 61: 
- /* line 112: */
+ /* line 111: */
 LDHACTR = WIHACTR;
 break;
 case 62: 
- /* line 113: */
+ /* line 112: */
 LDHACTR = YIHACTR;
 break;
 case 63: 
- /* line 114: */
+ /* line 113: */
 LDHACTR = AJHACTR;
 break;
 case 64: 
- /* line 115: */
+ /* line 114: */
 LDHACTR = CJHACTR;
 break;
 case 65: 
- /* line 116: */
+ /* line 115: */
 LDHACTR = EJHACTR;
 break;
 case 66: 
- /* line 117: */
+ /* line 116: */
 LDHACTR = GJHACTR;
 break;
 case 67: 
- /* line 118: */
+ /* line 117: */
 LDHACTR = IJHACTR;
 break;
 case 68: 
- /* line 119: */
+ /* line 118: */
 LDHACTR = KJHACTR;
 break;
 case 69: 
- /* line 120: */
+ /* line 119: */
 LDHACTR = MJHACTR;
 break;
 case 70: 
- /* line 121: */
+ /* line 120: */
 LDHACTR = OJHACTR;
 break;
 case 71: 
- /* line 122: */
+ /* line 121: */
 LDHACTR = QJHACTR;
 break;
 case 72: 
- /* line 123: */
+ /* line 122: */
 LDHACTR = SJHACTR;
 break;
 case 73: 
- /* line 124: */
+ /* line 123: */
 LDHACTR = UJHACTR;
 break;
 case 74: 
- /* line 125: */
+ /* line 124: */
 LDHACTR = WJHACTR;
 break;
 case 75: 
- /* line 126: */
+ /* line 125: */
 LDHACTR = YJHACTR;
 break;
 case 76: 
- /* line 127: */
+ /* line 126: */
 LDHACTR = AKHACTR;
 break;
 case 77: 
- /* line 128: */
+ /* line 127: */
 LDHACTR = CKHACTR;
 break;
 case 78: 
- /* line 129: */
+ /* line 128: */
 LDHACTR = EKHACTR;
 break;
 case 79: 
- /* line 130: */
+ /* line 129: */
 LDHACTR = GKHACTR;
 break;
 case 80: 
- /* line 131: */
+ /* line 130: */
 LDHACTR = IKHACTR;
 break;
 case 81: 
- /* line 132: */
+ /* line 131: */
 LDHACTR = KKHACTR;
 break;
 case 82: 
- /* line 133: */
+ /* line 132: */
 LDHACTR = MKHACTR;
 break;
 case 83: 
- /* line 134: */
+ /* line 133: */
 LDHACTR = OKHACTR;
 break;
 case 84: 
- /* line 135: */
+ /* line 134: */
 LDHACTR = QKHACTR;
 break;
 case 85: 
- /* line 136: */
+ /* line 135: */
 LDHACTR = SKHACTR;
 break;
 case 86: 
- /* line 137: */
+ /* line 136: */
 LDHACTR = UKHACTR;
 break;
 case 87: 
- /* line 138: */
+ /* line 137: */
 LDHACTR = WKHACTR;
 break;
 case 88: 
- /* line 139: */
+ /* line 138: */
 LDHACTR = YKHACTR;
 break;
 case 89: 
- /* line 140: */
+ /* line 139: */
 LDHACTR = ALHACTR;
 break;
 case 90: 
- /* line 141: */
+ /* line 140: */
 LDHACTR = CLHACTR;
 break;
 case 91: 
- /* line 142: */
+ /* line 141: */
 LDHACTR = ELHACTR;
 break;
 case 92: 
- /* line 143: */
+ /* line 142: */
 LDHACTR = GLHACTR;
 break;
 case 93: 
- /* line 144: */
+ /* line 143: */
 LDHACTR = ILHACTR;
 break;
 case 94: 
- /* line 145: */
+ /* line 144: */
 LDHACTR = KLHACTR;
 break;
 case 95: 
- /* line 146: */
+ /* line 145: */
 LDHACTR = MLHACTR;
 break;
 case 96: 
- /* line 147: */
+ /* line 146: */
 LDHACTR = OLHACTR;
 break;
 case 97: 
- /* line 148: */
+ /* line 147: */
 LDHACTR = QLHACTR;
 break;
 case 98: 
- /* line 149: */
+ /* line 148: */
 LDHACTR = SLHACTR;
 break;
 case 99: 
- /* line 150: */
+ /* line 149: */
 LDHACTR = ULHACTR;
 break;
 case 100: 
- /* line 151: */
+ /* line 150: */
 LDHACTR = WLHACTR;
 break;
 case 101: 
- /* line 152: */
+ /* line 151: */
 LDHACTR = YLHACTR;
 break;
 case 102: 
- /* line 153: */
+ /* line 152: */
 LDHACTR = AMHACTR;
 break;
 case 103: 
- /* line 154: */
+ /* line 153: */
 LDHACTR = CMHACTR;
 break;
 case 104: 
- /* line 155: */
+ /* line 154: */
 LDHACTR = EMHACTR;
 break;
 case 105: 
- /* line 156: */
+ /* line 155: */
 LDHACTR = GMHACTR;
 break;
 case 106: 
- /* line 157: */
+ /* line 156: */
 LDHACTR = IMHACTR;
 break;
 case 107: 
- /* line 158: */
+ /* line 157: */
 LDHACTR = KMHACTR;
 break;
 case 108: 
- /* line 159: */
+ /* line 158: */
 LDHACTR = MMHACTR;
 break;
 case 109: 
- /* line 160: */
+ /* line 159: */
 LDHACTR = OMHACTR;
 break;
 case 110: 
- /* line 161: */
+ /* line 160: */
 LDHACTR = QMHACTR;
 break;
 case 111: 
- /* line 162: */
+ /* line 161: */
 LDHACTR = SMHACTR;
 break;
 case 112: 
- /* line 163: */
+ /* line 162: */
 LDHACTR = UMHACTR;
 break;
 case 113: 
- /* line 164: */
+ /* line 163: */
 LDHACTR = WMHACTR;
 break;
 case 114: 
- /* line 165: */
+ /* line 164: */
 LDHACTR = YMHACTR;
 break;
 case 115: 
- /* line 166: */
+ /* line 165: */
 LDHACTR = ANHACTR;
 break;
 case 116: 
- /* line 167: */
+ /* line 166: */
 LDHACTR = CNHACTR;
 break;
 case 117: 
- /* line 168: */
+ /* line 167: */
 LDHACTR = ENHACTR;
 break;
 case 118: 
- /* line 169: */
+ /* line 168: */
 LDHACTR = GNHACTR;
 break;
 case 119: 
- /* line 170: */
+ /* line 169: */
 LDHACTR = INHACTR;
 break;
 case 120: 
- /* line 171: */
+ /* line 170: */
 LDHACTR = KNHACTR;
 break;
 case 121: 
- /* line 172: */
+ /* line 171: */
 LDHACTR = MNHACTR;
 break;
 case 122: 
- /* line 173: */
+ /* line 172: */
 LDHACTR = ONHACTR;
 break;
 case 123: 
- /* line 174: */
+ /* line 173: */
 LDHACTR = QNHACTR;
 break;
 case 124: 
- /* line 175: */
+ /* line 174: */
 LDHACTR = SNHACTR;
 break;
 case 125: 
- /* line 176: */
+ /* line 175: */
 LDHACTR = UNHACTR;
 break;
 case 126: 
- /* line 177: */
+ /* line 176: */
 LDHACTR = WNHACTR;
 break;
 case 127: 
- /* line 178: */
+ /* line 177: */
 LDHACTR = YNHACTR;
 break;
 case 128: 
- /* line 179: */
+ /* line 178: */
 LDHACTR = AOHACTR;
 break;
 case 129: 
- /* line 180: */
+ /* line 179: */
 LDHACTR = COHACTR;
 break;
 case 130: 
- /* line 181: */
+ /* line 180: */
 LDHACTR = EOHACTR;
 break;
 case 131: 
- /* line 182: */
+ /* line 181: */
 LDHACTR = GOHACTR;
 break;
 case 132: 
- /* line 185: */
+ /* line 184: */
 LDHACTR = IOHACTR;
 break;
 case 133: 
- /* line 186: */
+ /* line 185: */
 LDHACTR = KOHACTR;
 break;
 case 134: 
- /* line 187: */
+ /* line 186: */
 LDHACTR = MOHACTR;
 break;
 case 135: 
- /* line 188: */
+ /* line 187: */
 LDHACTR = OOHACTR;
 break;
 case 136: 
- /* line 189: */
+ /* line 188: */
 LDHACTR = QOHACTR;
 break;
 case 137: 
- /* line 190: */
+ /* line 189: */
 LDHACTR = SOHACTR;
 break;
 case 138: 
- /* line 191: */
+ /* line 190: */
 LDHACTR = UOHACTR;
 break;
 case 139: 
- /* line 192: */
+ /* line 191: */
 LDHACTR = WOHACTR;
 break;
 case 140: 
- /* line 193: */
+ /* line 192: */
 LDHACTR = YOHACTR;
 break;
 case 141: 
- /* line 194: */
+ /* line 193: */
 LDHACTR = APHACTR;
 break;
 case 142: 
- /* line 195: */
+ /* line 194: */
 LDHACTR = CPHACTR;
 break;
 case 143: 
- /* line 196: */
+ /* line 195: */
 LDHACTR = EPHACTR;
 break;
 case 144: 
- /* line 197: */
+ /* line 196: */
 LDHACTR = GPHACTR;
 break;
 case 145: 
- /* line 198: */
+ /* line 197: */
 LDHACTR = IPHACTR;
 break;
 case 146: 
- /* line 199: */
+ /* line 198: */
 LDHACTR = KPHACTR;
 break;
 case 147: 
- /* line 200: */
+ /* line 199: */
 LDHACTR = MPHACTR;
 break;
 case 148: 
- /* line 201: */
+ /* line 200: */
 LDHACTR = OPHACTR;
 break;
 case 149: 
- /* line 202: */
+ /* line 201: */
 LDHACTR = QPHACTR;
 break;
 case 150: 
- /* line 203: */
+ /* line 202: */
 LDHACTR = SPHACTR;
 break;
 case 151: 
- /* line 204: */
+ /* line 203: */
 LDHACTR = UPHACTR;
 break;
 case 152: 
- /* line 205: */
+ /* line 204: */
 LDHACTR = WPHACTR;
 break;
 case 153: 
- /* line 206: */
+ /* line 205: */
 LDHACTR = YPHACTR;
 break;
 case 154: 
- /* line 207: */
+ /* line 206: */
 LDHACTR = AQHACTR;
 break;
 case 155: 
- /* line 208: */
+ /* line 207: */
 LDHACTR = CQHACTR;
 break;
 case 156: 
- /* line 209: */
+ /* line 208: */
 LDHACTR = EQHACTR;
 break;
 case 157: 
- /* line 210: */
+ /* line 209: */
 LDHACTR = GQHACTR;
 break;
 case 158: 
- /* line 211: */
+ /* line 210: */
 LDHACTR = IQHACTR;
 break;
 case 159: 
- /* line 212: */
+ /* line 211: */
 LDHACTR = KQHACTR;
 break;
 case 160: 
- /* line 213: */
+ /* line 212: */
 LDHACTR = MQHACTR;
 break;
 case 161: 
- /* line 214: */
+ /* line 213: */
 LDHACTR = OQHACTR;
 break;
 case 162: 
- /* line 215: */
+ /* line 214: */
 LDHACTR = QQHACTR;
 break;
 case 163: 
- /* line 216: */
+ /* line 215: */
 LDHACTR = SQHACTR;
 break;
 case 164: 
- /* line 217: */
+ /* line 216: */
 LDHACTR = UQHACTR;
 break;
 case 165: 
- /* line 218: */
+ /* line 217: */
 LDHACTR = WQHACTR;
 break;
 case 166: 
- /* line 219: */
+ /* line 218: */
 LDHACTR = YQHACTR;
 break;
 case 167: 
- /* line 220: */
+ /* line 219: */
 LDHACTR = ARHACTR;
 break;
 case 168: 
- /* line 221: */
+ /* line 220: */
 LDHACTR = CRHACTR;
 break;
 case 169: 
- /* line 222: */
+ /* line 221: */
 LDHACTR = ERHACTR;
 break;
 case 170: 
- /* line 223: */
+ /* line 222: */
 LDHACTR = GRHACTR;
 break;
 case 171: 
- /* line 225: */
+ /* line 224: */
 LDHACTR = IRHACTR;
 break;
 case 172: 
 LDHACTR = KRHACTR;
 break;
 default: 
+ /* line 225: */
  /* line 226: */
- /* line 227: */
 switch ( (Messagenumber-249) )
 { 
 case 1: 
- /* line 228: */
+ /* line 227: */
 LDHACTR = MRHACTR;
 break;
 case 2: 
- /* line 229: */
+ /* line 228: */
 LDHACTR = ORHACTR;
 break;
 case 3: 
- /* line 230: */
+ /* line 229: */
 LDHACTR = QRHACTR;
 break;
 case 4: 
- /* line 231: */
+ /* line 230: */
 LDHACTR = SRHACTR;
 break;
 case 5: 
- /* line 232: */
+ /* line 231: */
 LDHACTR = URHACTR;
 break;
 case 6: 
- /* line 233: */
+ /* line 232: */
 LDHACTR = WRHACTR;
 break;
 case 7: 
- /* line 234: */
+ /* line 233: */
 LDHACTR = YRHACTR;
 break;
 case 8: 
- /* line 235: */
+ /* line 234: */
 LDHACTR = ASHACTR;
 break;
 case 9: 
- /* line 236: */
+ /* line 235: */
 LDHACTR = CSHACTR;
 break;
 case 10: 
- /* line 237: */
+ /* line 236: */
 LDHACTR = ESHACTR;
 break;
 case 11: 
- /* line 238: */
+ /* line 237: */
 LDHACTR = GSHACTR;
 break;
 case 12: 
- /* line 239: */
+ /* line 238: */
 LDHACTR = ISHACTR;
 break;
 case 13: 
- /* line 240: */
+ /* line 239: */
 LDHACTR = KSHACTR;
 break;
 case 14: 
- /* line 242: */
+ /* line 241: */
 LDHACTR = MSHACTR;
 break;
 case 15: 
 LDHACTR = OSHACTR;
 break;
 default: 
- /* line 243: */
- /* line 245: */
+ /* line 242: */
+ /* line 244: */
 switch ( (Messagenumber-269) )
 { 
 case 1: 
- /* line 246: */
+ /* line 245: */
 LDHACTR = QSHACTR;
 break;
 case 2: 
- /* line 247: */
+ /* line 246: */
 LDHACTR = SSHACTR;
 break;
 case 3: 
- /* line 248: */
+ /* line 247: */
 LDHACTR = USHACTR;
 break;
 case 4: 
- /* line 249: */
+ /* line 248: */
 LDHACTR = WSHACTR;
 break;
 case 5: 
- /* line 250: */
+ /* line 249: */
 LDHACTR = YSHACTR;
 break;
 case 6: 
- /* line 251: */
+ /* line 250: */
 LDHACTR = ATHACTR;
 break;
 case 7: 
- /* line 252: */
+ /* line 251: */
 LDHACTR = CTHACTR;
 break;
 case 8: 
- /* line 253: */
+ /* line 252: */
 LDHACTR = ETHACTR;
 break;
 case 9: 
- /* line 254: */
+ /* line 253: */
 LDHACTR = GTHACTR;
 break;
 case 10: 
- /* line 255: */
+ /* line 254: */
 LDHACTR = ITHACTR;
 break;
 case 11: 
- /* line 256: */
+ /* line 255: */
 LDHACTR = KTHACTR;
 break;
 case 12: 
- /* line 257: */
+ /* line 256: */
 LDHACTR = MTHACTR;
 break;
 case 13: 
- /* line 258: */
+ /* line 257: */
 LDHACTR = OTHACTR;
 break;
 case 14: 
- /* line 259: */
+ /* line 258: */
 LDHACTR = QTHACTR;
 break;
 case 15: 
- /* line 260: */
+ /* line 259: */
 LDHACTR = STHACTR;
 break;
 case 16: 
- /* line 262: */
+ /* line 261: */
 LDHACTR = UTHACTR;
 break;
 case 17: 
 LDHACTR = WTHACTR;
 break;
 default: 
+ /* line 262: */
  /* line 263: */
- /* line 264: */
 switch ( (Messagenumber-299) )
 { 
 case 1: 
- /* line 265: */
+ /* line 264: */
 LDHACTR = YTHACTR;
 break;
 case 2: 
- /* line 266: */
+ /* line 265: */
 LDHACTR = AUHACTR;
 break;
 case 3: 
- /* line 267: */
+ /* line 266: */
 LDHACTR = CUHACTR;
 break;
 case 4: 
- /* line 268: */
+ /* line 267: */
 LDHACTR = EUHACTR;
 break;
 case 5: 
- /* line 269: */
+ /* line 268: */
 LDHACTR = GUHACTR;
 break;
 case 6: 
- /* line 270: */
+ /* line 269: */
 LDHACTR = IUHACTR;
 break;
 case 7: 
- /* line 271: */
+ /* line 270: */
 LDHACTR = KUHACTR;
 break;
 case 8: 
- /* line 272: */
+ /* line 271: */
 LDHACTR = MUHACTR;
 break;
 case 9: 
- /* line 273: */
+ /* line 272: */
 LDHACTR = OUHACTR;
 break;
 case 10: 
- /* line 274: */
+ /* line 273: */
 LDHACTR = QUHACTR;
 break;
 case 11: 
- /* line 275: */
+ /* line 274: */
 LDHACTR = SUHACTR;
 break;
 case 12: 
- /* line 276: */
+ /* line 275: */
 LDHACTR = UUHACTR;
 break;
 case 13: 
- /* line 277: */
+ /* line 276: */
 LDHACTR = WUHACTR;
 break;
 case 14: 
- /* line 278: */
+ /* line 277: */
 LDHACTR = YUHACTR;
 break;
 case 15: 
- /* line 279: */
+ /* line 278: */
 LDHACTR = AVHACTR;
 break;
 case 16: 
- /* line 280: */
+ /* line 279: */
 LDHACTR = CVHACTR;
 break;
 case 17: 
- /* line 281: */
+ /* line 280: */
 LDHACTR = EVHACTR;
 break;
 case 18: 
- /* line 282: */
+ /* line 281: */
 LDHACTR = GVHACTR;
 break;
 case 19: 
- /* line 283: */
+ /* line 282: */
 LDHACTR = IVHACTR;
 break;
 case 20: 
- /* line 284: */
+ /* line 283: */
 LDHACTR = KVHACTR;
 break;
 case 21: 
- /* line 285: */
+ /* line 284: */
 LDHACTR = MVHACTR;
 break;
 case 22: 
- /* line 286: */
+ /* line 285: */
 LDHACTR = OVHACTR;
 break;
 case 23: 
- /* line 287: */
+ /* line 286: */
 LDHACTR = QVHACTR;
 break;
 case 24: 
- /* line 288: */
+ /* line 287: */
 LDHACTR = SVHACTR;
 break;
 case 25: 
- /* line 289: */
+ /* line 288: */
 LDHACTR = UVHACTR;
 break;
 case 26: 
- /* line 290: */
+ /* line 289: */
 LDHACTR = WVHACTR;
 break;
 case 27: 
- /* line 291: */
+ /* line 290: */
 LDHACTR = YVHACTR;
 break;
 case 28: 
- /* line 292: */
+ /* line 291: */
 LDHACTR = AWHACTR;
 break;
 case 29: 
- /* line 293: */
+ /* line 292: */
 LDHACTR = CWHACTR;
 break;
 case 30: 
- /* line 294: */
+ /* line 293: */
 LDHACTR = EWHACTR;
 break;
 case 31: 
- /* line 295: */
+ /* line 294: */
 LDHACTR = GWHACTR;
 break;
 case 32: 
- /* line 296: */
+ /* line 295: */
 LDHACTR = IWHACTR;
 break;
 case 33: 
- /* line 297: */
+ /* line 296: */
 LDHACTR = KWHACTR;
 break;
 case 34: 
- /* line 298: */
+ /* line 297: */
 LDHACTR = MWHACTR;
 break;
 case 35: 
- /* line 299: */
+ /* line 298: */
 LDHACTR = OWHACTR;
 break;
 case 36: 
- /* line 300: */
+ /* line 299: */
 LDHACTR = QWHACTR;
 break;
 case 37: 
- /* line 301: */
+ /* line 300: */
 LDHACTR = SWHACTR;
 break;
 case 38: 
- /* line 302: */
+ /* line 301: */
 LDHACTR = UWHACTR;
 break;
 case 39: 
- /* line 303: */
+ /* line 302: */
 LDHACTR = WWHACTR;
 break;
 case 40: 
- /* line 304: */
+ /* line 303: */
 LDHACTR = YWHACTR;
 break;
 case 41: 
- /* line 305: */
+ /* line 304: */
 LDHACTR = AXHACTR;
 break;
 case 42: 
- /* line 306: */
+ /* line 305: */
 LDHACTR = CXHACTR;
 break;
 case 43: 
- /* line 307: */
+ /* line 306: */
 LDHACTR = EXHACTR;
 break;
 case 44: 
- /* line 308: */
+ /* line 307: */
 LDHACTR = GXHACTR;
 break;
 case 45: 
- /* line 309: */
+ /* line 308: */
 LDHACTR = IXHACTR;
 break;
 case 46: 
- /* line 310: */
+ /* line 309: */
 LDHACTR = KXHACTR;
 break;
 case 47: 
- /* line 311: */
+ /* line 310: */
 LDHACTR = MXHACTR;
 break;
 case 48: 
- /* line 312: */
+ /* line 311: */
 LDHACTR = OXHACTR;
 break;
 case 49: 
- /* line 313: */
+ /* line 312: */
 LDHACTR = QXHACTR;
 break;
 case 50: 
- /* line 314: */
+ /* line 313: */
 LDHACTR = SXHACTR;
 break;
 case 51: 
- /* line 315: */
+ /* line 314: */
 LDHACTR = UXHACTR;
 break;
 case 52: 
- /* line 316: */
+ /* line 315: */
 LDHACTR = WXHACTR;
 break;
 case 53: 
- /* line 317: */
+ /* line 316: */
 LDHACTR = YXHACTR;
 break;
 case 54: 
- /* line 318: */
+ /* line 317: */
 LDHACTR = AYHACTR;
 break;
 case 55: 
- /* line 320: */
+ /* line 319: */
 LDHACTR = CYHACTR;
 break;
 case 56: 
 LDHACTR = EYHACTR;
 break;
 default: 
+ /* line 320: */
  /* line 321: */
- /* line 322: */
 switch ( (Messagenumber-500) )
 { 
 case 1: 
- /* line 323: */
+ /* line 322: */
 LDHACTR = GYHACTR;
 break;
 case 2: 
- /* line 324: */
+ /* line 323: */
 LDHACTR = IYHACTR;
 break;
 case 3: 
- /* line 325: */
+ /* line 324: */
 LDHACTR = KYHACTR;
 break;
 case 4: 
- /* line 326: */
+ /* line 325: */
 LDHACTR = MYHACTR;
 break;
 case 5: 
- /* line 327: */
+ /* line 326: */
 LDHACTR = OYHACTR;
 break;
 case 6: 
- /* line 328: */
+ /* line 327: */
 LDHACTR = QYHACTR;
 break;
 case 7: 
- /* line 329: */
+ /* line 328: */
 LDHACTR = A_HVEC(RYHACTR,'(',A68_CHAR );
 break;
 case 8: 
- /* line 330: */
+ /* line 329: */
 LDHACTR = TYHACTR;
 break;
 case 9: 
- /* line 331: */
+ /* line 330: */
 LDHACTR = VYHACTR;
 break;
 case 10: 
- /* line 332: */
+ /* line 331: */
 LDHACTR = XYHACTR;
 break;
 case 11: 
- /* line 333: */
+ /* line 332: */
 LDHACTR = ZYHACTR;
 break;
 case 12: 
- /* line 334: */
+ /* line 333: */
 LDHACTR = BZHACTR;
 break;
 case 13: 
- /* line 335: */
+ /* line 334: */
 LDHACTR = DZHACTR;
 break;
 case 14: 
- /* line 336: */
+ /* line 335: */
 LDHACTR = FZHACTR;
 break;
 case 15: 
- /* line 337: */
+ /* line 336: */
 LDHACTR = HZHACTR;
 break;
 case 16: 
- /* line 338: */
+ /* line 337: */
 LDHACTR = JZHACTR;
 break;
 case 17: 
- /* line 339: */
+ /* line 338: */
 LDHACTR = LZHACTR;
 break;
 case 18: 
- /* line 340: */
+ /* line 339: */
 LDHACTR = NZHACTR;
 break;
 case 19: 
- /* line 341: */
+ /* line 340: */
 LDHACTR = A_HVEC(OZHACTR,',',A68_CHAR );
 break;
 case 20: 
- /* line 342: */
+ /* line 341: */
 LDHACTR = A_HVEC(PZHACTR,';',A68_CHAR );
 break;
 case 21: 
- /* line 343: */
+ /* line 342: */
 LDHACTR = RZHACTR;
 break;
 case 22: 
- /* line 344: */
+ /* line 343: */
 LDHACTR = TZHACTR;
 break;
 case 23: 
- /* line 345: */
+ /* line 344: */
 LDHACTR = VZHACTR;
 break;
 case 24: 
- /* line 346: */
+ /* line 345: */
 LDHACTR = XZHACTR;
 break;
 case 25: 
- /* line 347: */
+ /* line 346: */
 LDHACTR = ZZHACTR;
 break;
 case 26: 
- /* line 348: */
+ /* line 347: */
 LDHACTR = BAIACTR;
 break;
 case 27: 
- /* line 349: */
+ /* line 348: */
 LDHACTR = A_HVEC(CAIACTR,')',A68_CHAR );
 break;
 case 28: 
- /* line 350: */
+ /* line 349: */
 LDHACTR = EAIACTR;
 break;
 case 29: 
- /* line 351: */
+ /* line 350: */
 LDHACTR = GAIACTR;
 break;
 case 30: 
- /* line 352: */
+ /* line 351: */
 LDHACTR = IAIACTR;
 break;
 case 31: 
- /* line 353: */
+ /* line 352: */
 LDHACTR = KAIACTR;
 break;
 case 32: 
- /* line 354: */
+ /* line 353: */
 LDHACTR = MAIACTR;
 break;
 case 33: 
- /* line 355: */
+ /* line 354: */
 LDHACTR = OAIACTR;
 break;
 case 34: 
- /* line 356: */
+ /* line 355: */
 LDHACTR = QAIACTR;
 break;
 case 35: 
- /* line 357: */
+ /* line 356: */
 LDHACTR = SAIACTR;
 break;
 case 36: 
- /* line 358: */
+ /* line 357: */
 LDHACTR = UAIACTR;
 break;
 case 37: 
- /* line 359: */
+ /* line 358: */
 LDHACTR = WAIACTR;
 break;
 case 38: 
- /* line 360: */
+ /* line 359: */
 LDHACTR = YAIACTR;
 break;
 case 39: 
- /* line 361: */
+ /* line 360: */
 LDHACTR = ABIACTR;
 break;
 case 40: 
- /* line 362: */
+ /* line 361: */
 LDHACTR = CBIACTR;
 break;
 case 41: 
- /* line 363: */
+ /* line 362: */
 LDHACTR = EBIACTR;
 break;
 case 42: 
- /* line 364: */
+ /* line 363: */
 LDHACTR = GBIACTR;
 break;
 case 43: 
- /* line 365: */
+ /* line 364: */
 LDHACTR = IBIACTR;
 break;
 case 44: 
- /* line 366: */
+ /* line 365: */
 LDHACTR = KBIACTR;
 break;
 case 45: 
- /* line 367: */
+ /* line 366: */
 LDHACTR = MBIACTR;
 break;
 case 46: 
- /* line 368: */
+ /* line 367: */
 LDHACTR = OBIACTR;
 break;
 case 47: 
- /* line 369: */
+ /* line 368: */
 LDHACTR = QBIACTR;
 break;
 case 48: 
- /* line 370: */
+ /* line 369: */
 LDHACTR = SBIACTR;
 break;
 case 49: 
- /* line 372: */
+ /* line 371: */
 LDHACTR = UBIACTR;
 break;
 case 50: 
- /* line 373: */
+ /* line 372: */
 LDHACTR = WBIACTR;
 break;
 case 51: 
- /* line 374: */
+ /* line 373: */
 LDHACTR = YBIACTR;
 break;
 case 52: 
- /* line 375: */
+ /* line 374: */
 LDHACTR = ACIACTR;
 break;
 case 53: 
- /* line 376: */
+ /* line 375: */
 LDHACTR = CCIACTR;
 break;
 case 54: 
- /* line 377: */
+ /* line 376: */
 LDHACTR = ECIACTR;
 break;
 case 55: 
- /* line 378: */
+ /* line 377: */
 LDHACTR = GCIACTR;
 break;
 case 56: 
- /* line 379: */
+ /* line 378: */
 LDHACTR = ICIACTR;
 break;
 case 57: 
- /* line 380: */
+ /* line 379: */
 LDHACTR = A_HVEC(JCIACTR,'[',A68_CHAR );
 break;
 case 58: 
- /* line 381: */
+ /* line 380: */
 LDHACTR = LCIACTR;
 break;
 case 59: 
- /* line 382: */
+ /* line 381: */
 LDHACTR = NCIACTR;
 break;
 case 60: 
- /* line 383: */
+ /* line 382: */
 LDHACTR = PCIACTR;
 break;
 case 61: 
- /* line 384: */
+ /* line 383: */
 LDHACTR = RCIACTR;
 break;
 case 62: 
- /* line 385: */
+ /* line 384: */
 LDHACTR = TCIACTR;
 break;
 case 63: 
- /* line 386: */
+ /* line 385: */
 LDHACTR = VCIACTR;
 break;
 case 64: 
- /* line 387: */
+ /* line 386: */
 LDHACTR = XCIACTR;
 break;
 case 65: 
- /* line 388: */
+ /* line 387: */
 LDHACTR = ZCIACTR;
 break;
 case 66: 
- /* line 389: */
+ /* line 388: */
 LDHACTR = BDIACTR;
 break;
 case 67: 
- /* line 390: */
+ /* line 389: */
 LDHACTR = DDIACTR;
 break;
 case 68: 
- /* line 391: */
+ /* line 390: */
 LDHACTR = FDIACTR;
 break;
 case 69: 
- /* line 392: */
+ /* line 391: */
 LDHACTR = HDIACTR;
 break;
 case 70: 
- /* line 393: */
+ /* line 392: */
 LDHACTR = JDIACTR;
 break;
 case 71: 
- /* line 394: */
+ /* line 393: */
 LDHACTR = LDIACTR;
 break;
 case 72: 
- /* line 395: */
+ /* line 394: */
 LDHACTR = NDIACTR;
 break;
 case 73: 
- /* line 396: */
+ /* line 395: */
 LDHACTR = PDIACTR;
 break;
 case 74: 
- /* line 397: */
+ /* line 396: */
 LDHACTR = RDIACTR;
 break;
 case 75: 
- /* line 398: */
+ /* line 397: */
 LDHACTR = TDIACTR;
 break;
 case 76: 
- /* line 399: */
+ /* line 398: */
 LDHACTR = VDIACTR;
 break;
 case 77: 
- /* line 400: */
+ /* line 399: */
 LDHACTR = XDIACTR;
 break;
 case 78: 
- /* line 401: */
+ /* line 400: */
 LDHACTR = ZDIACTR;
 break;
 case 79: 
- /* line 402: */
+ /* line 401: */
 LDHACTR = BEIACTR;
 break;
 case 80: 
- /* line 403: */
+ /* line 402: */
 LDHACTR = DEIACTR;
 break;
 case 81: 
- /* line 404: */
+ /* line 403: */
 LDHACTR = FEIACTR;
 break;
 case 82: 
- /* line 405: */
+ /* line 404: */
 LDHACTR = HEIACTR;
 break;
 case 83: 
- /* line 406: */
+ /* line 405: */
 LDHACTR = JEIACTR;
 break;
 case 84: 
- /* line 407: */
+ /* line 406: */
 LDHACTR = LEIACTR;
 break;
 case 85: 
- /* line 408: */
+ /* line 407: */
 LDHACTR = NEIACTR;
 break;
 case 86: 
- /* line 409: */
+ /* line 408: */
 LDHACTR = PEIACTR;
 break;
 case 87: 
- /* line 410: */
+ /* line 409: */
 LDHACTR = REIACTR;
 break;
 case 88: 
- /* line 411: */
+ /* line 410: */
 LDHACTR = TEIACTR;
 break;
 case 89: 
- /* line 412: */
+ /* line 411: */
 LDHACTR = VEIACTR;
 break;
 case 90: 
- /* line 413: */
+ /* line 412: */
 LDHACTR = XEIACTR;
 break;
 case 91: 
- /* line 414: */
+ /* line 413: */
 LDHACTR = ZEIACTR;
 break;
 case 92: 
- /* line 415: */
+ /* line 414: */
 LDHACTR = BFIACTR;
 break;
 case 93: 
- /* line 416: */
+ /* line 415: */
 LDHACTR = DFIACTR;
 break;
 case 94: 
- /* line 417: */
+ /* line 416: */
 LDHACTR = FFIACTR;
 break;
 case 95: 
- /* line 418: */
+ /* line 417: */
 LDHACTR = HFIACTR;
 break;
 case 96: 
- /* line 419: */
+ /* line 418: */
 LDHACTR = JFIACTR;
 break;
 case 97: 
- /* line 420: */
+ /* line 419: */
 LDHACTR = LFIACTR;
 break;
 case 98: 
- /* line 421: */
+ /* line 420: */
 LDHACTR = NFIACTR;
 break;
 case 99: 
- /* line 422: */
+ /* line 421: */
 LDHACTR = PFIACTR;
 break;
 case 100: 
- /* line 423: */
+ /* line 422: */
 LDHACTR = RFIACTR;
 break;
 case 101: 
- /* line 424: */
+ /* line 423: */
 LDHACTR = TFIACTR;
 break;
 case 102: 
- /* line 425: */
+ /* line 424: */
 LDHACTR = VFIACTR;
 break;
 case 103: 
- /* line 426: */
+ /* line 425: */
 LDHACTR = XFIACTR;
 break;
 case 104: 
- /* line 427: */
+ /* line 426: */
 LDHACTR = ZFIACTR;
 break;
 case 105: 
- /* line 428: */
+ /* line 427: */
 LDHACTR = BGIACTR;
 break;
 case 106: 
- /* line 429: */
+ /* line 428: */
 LDHACTR = DGIACTR;
 break;
 case 107: 
- /* line 430: */
+ /* line 429: */
 LDHACTR = FGIACTR;
 break;
 case 108: 
- /* line 431: */
+ /* line 430: */
 LDHACTR = HGIACTR;
 break;
 case 109: 
- /* line 432: */
+ /* line 431: */
 LDHACTR = JGIACTR;
 break;
 case 110: 
- /* line 433: */
+ /* line 432: */
 LDHACTR = LGIACTR;
 break;
 case 111: 
- /* line 434: */
+ /* line 433: */
 LDHACTR = NGIACTR;
 break;
 case 112: 
- /* line 435: */
+ /* line 434: */
 LDHACTR = PGIACTR;
 break;
 case 113: 
- /* line 436: */
+ /* line 435: */
 LDHACTR = RGIACTR;
 break;
 case 114: 
- /* line 437: */
+ /* line 436: */
 LDHACTR = TGIACTR;
 break;
 case 115: 
- /* line 438: */
+ /* line 437: */
 LDHACTR = VGIACTR;
 break;
 case 116: 
- /* line 439: */
+ /* line 438: */
 LDHACTR = XGIACTR;
 break;
 case 117: 
- /* line 440: */
+ /* line 439: */
 LDHACTR = ZGIACTR;
 break;
 case 118: 
- /* line 441: */
+ /* line 440: */
 LDHACTR = BHIACTR;
 break;
 case 119: 
- /* line 442: */
+ /* line 441: */
 LDHACTR = DHIACTR;
 break;
 case 120: 
- /* line 443: */
+ /* line 442: */
 LDHACTR = FHIACTR;
 break;
 case 121: 
- /* line 444: */
+ /* line 443: */
 LDHACTR = HHIACTR;
 break;
 case 122: 
- /* line 445: */
+ /* line 444: */
 LDHACTR = JHIACTR;
 break;
 case 123: 
- /* line 446: */
+ /* line 445: */
 LDHACTR = LHIACTR;
 break;
 case 124: 
- /* line 447: */
+ /* line 446: */
 LDHACTR = NHIACTR;
 break;
 case 125: 
- /* line 448: */
+ /* line 447: */
 LDHACTR = PHIACTR;
 break;
 case 126: 
- /* line 449: */
+ /* line 448: */
 LDHACTR = RHIACTR;
 break;
 case 127: 
- /* line 450: */
+ /* line 449: */
 LDHACTR = THIACTR;
 break;
 case 128: 
- /* line 451: */
+ /* line 450: */
 LDHACTR = VHIACTR;
 break;
 case 129: 
- /* line 452: */
+ /* line 451: */
 LDHACTR = XHIACTR;
 break;
 case 130: 
- /* line 453: */
+ /* line 452: */
 LDHACTR = ZHIACTR;
 break;
 case 131: 
- /* line 454: */
+ /* line 453: */
 LDHACTR = BIIACTR;
 break;
 case 132: 
- /* line 455: */
+ /* line 454: */
 LDHACTR = DIIACTR;
 break;
 case 133: 
- /* line 456: */
+ /* line 455: */
 LDHACTR = FIIACTR;
 break;
 case 134: 
- /* line 457: */
+ /* line 456: */
 LDHACTR = HIIACTR;
 break;
 case 135: 
- /* line 458: */
+ /* line 457: */
 LDHACTR = JIIACTR;
 break;
 case 136: 
- /* line 459: */
+ /* line 458: */
 LDHACTR = LIIACTR;
 break;
 case 137: 
- /* line 460: */
+ /* line 459: */
 LDHACTR = NIIACTR;
 break;
 case 138: 
- /* line 461: */
+ /* line 460: */
 LDHACTR = PIIACTR;
 break;
 case 139: 
- /* line 462: */
+ /* line 461: */
 LDHACTR = RIIACTR;
 break;
 case 140: 
- /* line 463: */
+ /* line 462: */
 LDHACTR = TIIACTR;
 break;
 case 141: 
- /* line 464: */
+ /* line 463: */
 LDHACTR = VIIACTR;
 break;
 case 142: 
- /* line 465: */
+ /* line 464: */
 LDHACTR = XIIACTR;
 break;
 case 143: 
- /* line 466: */
+ /* line 465: */
 LDHACTR = ZIIACTR;
 break;
 case 144: 
- /* line 467: */
+ /* line 466: */
 LDHACTR = BJIACTR;
 break;
 case 145: 
- /* line 468: */
+ /* line 467: */
 LDHACTR = DJIACTR;
 break;
 case 146: 
- /* line 469: */
+ /* line 468: */
 LDHACTR = FJIACTR;
 break;
 case 147: 
- /* line 470: */
+ /* line 469: */
 LDHACTR = HJIACTR;
 break;
 case 148: 
- /* line 471: */
+ /* line 470: */
 LDHACTR = JJIACTR;
 break;
 case 149: 
- /* line 472: */
+ /* line 471: */
 LDHACTR = LJIACTR;
 break;
 case 150: 
- /* line 473: */
+ /* line 472: */
 LDHACTR = NJIACTR;
 break;
 case 151: 
- /* line 474: */
+ /* line 473: */
 LDHACTR = PJIACTR;
 break;
 case 152: 
- /* line 475: */
+ /* line 474: */
 LDHACTR = RJIACTR;
 break;
 case 153: 
- /* line 476: */
+ /* line 475: */
 LDHACTR = TJIACTR;
 break;
 case 154: 
- /* line 477: */
+ /* line 476: */
 LDHACTR = VJIACTR;
 break;
 case 155: 
- /* line 478: */
+ /* line 477: */
 LDHACTR = XJIACTR;
 break;
 case 156: 
- /* line 479: */
+ /* line 478: */
 LDHACTR = ZJIACTR;
 break;
 case 157: 
- /* line 480: */
+ /* line 479: */
 LDHACTR = BKIACTR;
 break;
 case 158: 
- /* line 481: */
+ /* line 480: */
 LDHACTR = DKIACTR;
 break;
 case 159: 
- /* line 482: */
+ /* line 481: */
 LDHACTR = FKIACTR;
 break;
 case 160: 
- /* line 483: */
+ /* line 482: */
 LDHACTR = HKIACTR;
 break;
 case 161: 
- /* line 484: */
+ /* line 483: */
 LDHACTR = JKIACTR;
 break;
 case 162: 
- /* line 485: */
+ /* line 484: */
 LDHACTR = LKIACTR;
 break;
 case 163: 
- /* line 486: */
+ /* line 485: */
 LDHACTR = NKIACTR;
 break;
 case 164: 
- /* line 487: */
+ /* line 486: */
 LDHACTR = PKIACTR;
 break;
 case 165: 
- /* line 488: */
+ /* line 487: */
 LDHACTR = RKIACTR;
 break;
 case 166: 
- /* line 489: */
+ /* line 488: */
 LDHACTR = TKIACTR;
 break;
 case 167: 
- /* line 490: */
+ /* line 489: */
 LDHACTR = VKIACTR;
 break;
 case 168: 
- /* line 491: */
+ /* line 490: */
 LDHACTR = XKIACTR;
 break;
 case 169: 
- /* line 492: */
+ /* line 491: */
 LDHACTR = ZKIACTR;
 break;
 case 170: 
- /* line 493: */
+ /* line 492: */
 LDHACTR = BLIACTR;
 break;
 case 171: 
- /* line 494: */
+ /* line 493: */
 LDHACTR = DLIACTR;
 break;
 case 172: 
- /* line 496: */
+ /* line 495: */
 LDHACTR = FLIACTR;
 break;
 case 173: 
 LDHACTR = HLIACTR;
 break;
 default: 
+ /* line 496: */
  /* line 497: */
- /* line 498: */
 switch ( (Messagenumber-699) )
 { 
 case 1: 
- /* line 499: */
+ /* line 498: */
 LDHACTR = JLIACTR;
 break;
 case 2: 
- /* line 500: */
+ /* line 499: */
 LDHACTR = LLIACTR;
 break;
 case 3: 
- /* line 501: */
+ /* line 500: */
 LDHACTR = NLIACTR;
 break;
 case 4: 
- /* line 502: */
+ /* line 501: */
 LDHACTR = PLIACTR;
 break;
 case 5: 
- /* line 503: */
+ /* line 502: */
 LDHACTR = RLIACTR;
 break;
 case 6: 
- /* line 504: */
+ /* line 503: */
 LDHACTR = TLIACTR;
 break;
 case 7: 
- /* line 505: */
+ /* line 504: */
 LDHACTR = VLIACTR;
 break;
 case 8: 
- /* line 506: */
+ /* line 505: */
 LDHACTR = XLIACTR;
 break;
 case 9: 
- /* line 507: */
+ /* line 506: */
 LDHACTR = ZLIACTR;
 break;
 case 10: 
- /* line 508: */
+ /* line 507: */
 LDHACTR = BMIACTR;
 break;
 case 11: 
- /* line 509: */
+ /* line 508: */
 LDHACTR = DMIACTR;
 break;
 case 12: 
- /* line 510: */
+ /* line 509: */
 LDHACTR = FMIACTR;
 break;
 case 13: 
- /* line 511: */
+ /* line 510: */
 LDHACTR = HMIACTR;
 break;
 case 14: 
- /* line 512: */
+ /* line 511: */
 LDHACTR = JMIACTR;
 break;
 case 15: 
- /* line 513: */
+ /* line 512: */
 LDHACTR = LMIACTR;
 break;
 case 16: 
- /* line 515: */
+ /* line 514: */
 LDHACTR = NMIACTR;
 break;
 case 17: 
 LDHACTR = PMIACTR;
 break;
 default: 
- /* line 516: */
- /* line 518: */
+ /* line 515: */
+ /* line 517: */
 switch ( (Messagenumber-719) )
 { 
 case 1: 
 LDHACTR = RMIACTR;
 break;
 default: 
+ /* line 518: */
  /* line 519: */
- /* line 520: */
 switch ( (Messagenumber-749) )
 { 
 case 1: 
- /* line 522: */
+ /* line 521: */
 LDHACTR = TMIACTR;
 break;
 case 2: 
 LDHACTR = VMIACTR;
 break;
 default: 
+ /* line 522: */
  /* line 523: */
- /* line 524: */
 switch ( (Messagenumber-798) )
 { 
 case 1: 
- /* line 525: */
+ /* line 524: */
 LDHACTR = XMIACTR;
 break;
 case 2: 
- /* line 526: */
+ /* line 525: */
 LDHACTR = ZMIACTR;
 break;
 case 3: 
- /* line 527: */
+ /* line 526: */
 LDHACTR = BNIACTR;
 break;
 case 4: 
- /* line 528: */
+ /* line 527: */
 LDHACTR = DNIACTR;
 break;
 case 5: 
- /* line 529: */
+ /* line 528: */
 LDHACTR = FNIACTR;
 break;
 case 6: 
- /* line 530: */
+ /* line 529: */
 LDHACTR = HNIACTR;
 break;
 case 7: 
- /* line 531: */
+ /* line 530: */
 LDHACTR = JNIACTR;
 break;
 case 8: 
- /* line 532: */
+ /* line 531: */
 LDHACTR = LNIACTR;
 break;
 case 9: 
- /* line 533: */
+ /* line 532: */
 LDHACTR = NNIACTR;
 break;
 case 10: 
- /* line 534: */
+ /* line 533: */
 LDHACTR = PNIACTR;
 break;
 case 11: 
- /* line 537: */
+ /* line 536: */
 LDHACTR = RNIACTR;
 break;
 case 12: 
- /* line 538: */
+ /* line 537: */
 LDHACTR = TNIACTR;
 break;
 case 13: 
- /* line 539: */
+ /* line 538: */
 LDHACTR = VNIACTR;
 break;
 case 14: 
- /* line 540: */
+ /* line 539: */
 LDHACTR = XNIACTR;
 break;
 case 15: 
- /* line 541: */
+ /* line 540: */
 LDHACTR = ZNIACTR;
 break;
 case 16: 
- /* line 542: */
+ /* line 541: */
 LDHACTR = BOIACTR;
 break;
 case 17: 
- /* line 543: */
+ /* line 542: */
 LDHACTR = DOIACTR;
 break;
 case 18: 
- /* line 545: */
+ /* line 544: */
 LDHACTR = FOIACTR;
 break;
 case 19: 
 LDHACTR = HOIACTR;
 break;
 default: 
+ /* line 545: */
  /* line 546: */
- /* line 547: */
 switch ( (Messagenumber-899) )
 { 
 case 1: 
- /* line 548: */
+ /* line 547: */
 LDHACTR = JOIACTR;
 break;
 case 2: 
- /* line 549: */
+ /* line 548: */
 LDHACTR = LOIACTR;
 break;
 case 3: 
- /* line 550: */
+ /* line 549: */
 LDHACTR = NOIACTR;
 break;
 case 4: 
- /* line 552: */
+ /* line 551: */
 LDHACTR = POIACTR;
 break;
 case 5: 
- /* line 553: */
+ /* line 552: */
 LDHACTR = ROIACTR;
 break;
 default: 
- /* line 554: */
+ /* line 553: */
 ROAAOSF_whole( Messagenumber, 0, &UOIACTR );
 LDHACTR = A_VC_PLUS(A_VC_PLUS(A_HVEC(TOIACTR,'(',A68_CHAR ),UOIACTR),VOIACTR);
 break;
@@ -3348,10 +3348,10 @@ break;
 break;
 } 
 WOIACTR_mess = LDHACTR;
- /* line 556: */
+ /* line 555: */
 A_CLOSURE( YOIACTR_generator, ZOIACTR_generator, APIACTR_generator );
 (( APIACTR_generator * ) ( YOIACTR_generator.nonlocals )) -> WOIACTR_mess = WOIACTR_mess;
- /* line 557: */
+ /* line 556: */
 A_CALLPROC(YOIACTR_generator,(A68_FALSE, &EPIACTR),(A68_FALSE, &EPIACTR,(YOIACTR_generator).nonlocals));
 A_VASSIGN2(WOIACTR_mess,EPIACTR,A68_CHAR ) ;
 DPIACTR = EPIACTR;
@@ -3371,14 +3371,14 @@ return;
 } 
 #undef NL
  /* line 2: */
- /* line 5: */
+ /* line 4: */
 void DDHACTR(void)   /* initialise DECS message */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","-dir",".","message.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","-dir",".","message.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/usefulops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
@@ -3388,22 +3388,22 @@ BAAALIB();   /* USE a68config */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/src/message.a68";
-A_config.translation_time = "Sat Sep  4 11:42:35 2004";
+A_config.translation_time = "Sun Sep 26 21:50:55 2004";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "CDHACTR (from seed file) ";
-A_config.spec_change_time = "Sat Sep  4 11:42:35 2004";
+A_config.spec_change_time = "Sun Sep 26 21:50:55 2004";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS message);
 UEAALIB_a68config(LGAALIB_configinfo, HDHACTR);
- /* line 44: */
+ /* line 43: */
 IDHACTR_longlongoption = A68_FALSE;
- /* line 46: */
- /* line 560: */
- /* line 562: */
- /* line 564: */
- /* line 566: */
+ /* line 45: */
+ /* line 559: */
+ /* line 561: */
+ /* line 563: */
+ /* line 565: */
 /*SKIP*/;
 A_PROC_EXIT(DECS message);
 } 

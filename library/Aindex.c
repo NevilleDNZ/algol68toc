@@ -1,4 +1,4 @@
-/* $Id: Aindex.c,v 1.2 2004/09/04 03:06:21 teshields Exp $ */
+/* $Id: Aindex.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $ */
 
 
 /* 
@@ -45,7 +45,7 @@
 
 #include <algol68/Asupport.h>
 
-static char rcs_id[] = "$Id: Aindex.c,v 1.2 2004/09/04 03:06:21 teshields Exp $";
+static char rcs_id[] = "$Id: Aindex.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $";
 
 #ifdef __STDC__
 A68_INT A_B1CHECK(const A_DIM  *dim, const A68_INT i)

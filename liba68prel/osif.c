@@ -303,8 +303,8 @@ typedef struct A68t113  A68_113 ;    /* PROC(MODE39) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t114,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t114  A68_114 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,55,A68t115);
-typedef struct A68t115  A68_115 ;    /* STRUCT 55 CHAR */
+A_ISTRUCT(A68_CHAR ,59,A68t115);
+typedef struct A68t115  A68_115 ;    /* STRUCT 59 CHAR */
 
 /* --- Imports from a68config --- */
 extern A68_VOID  ABAALIB_a68init(struct A68t39 );
@@ -512,8 +512,8 @@ extern void MRBAOSF(void);   /* osfiles */
 extern void ZRAAOSF(void);   /* messageproc */
 extern void BAAAOSF(void);   /* cif */
 /* --- end of DECS initialisation functions --- */
-static A68_115   ZSCAOSF = {"$Id: osif.c,v 1.6 2004/09/04 16:52:11 teshields Exp $"}; 
-A_GISVEC(A68_VC ,ATCAOSF,ZSCAOSF,55)
+static A68_115   ZSCAOSF = {"$Id: osif.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
+A_GISVEC(A68_VC ,ATCAOSF,ZSCAOSF,59)
 
 A68_VOID  DTCAOSF_generic_msg(A68_46  Msgno, A68_51  Params);
 
@@ -540,43 +540,43 @@ A68_63  TTCAOSF;  /* OPERATORS - mode -> union mode */
 A68_VC  UTCAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
 A68_69  VTCAOSF;  /* avoid structure result */
 A_PROC_ENTRY(generic_msg);
- /* line 63: */
- /* line 64: */
+ /* line 56: */
+ /* line 57: */
 { 
 EABAOSF_translate_msg( Msgno, Params, &ETCAOSF );
 FTCAOSF_message = ETCAOSF;
- /* line 66: */
- /* line 67: */
+ /* line 59: */
+ /* line 60: */
 if ( JXAAOSF_error_msg(A_UNITE(GTCAOSF,mode2,2,FTCAOSF_message)) )
 { 
 VXBAOSF_write_buffer( WSBAOSF_stderr, FTCAOSF_message.Text, RIBAOSF_ignore_msg, &HTCAOSF );
 HTCAOSF;
- /* line 68: */
- /* line 69: */
+ /* line 61: */
+ /* line 62: */
 if ( JYAAOSF_newline_msg(A_UNITE(ITCAOSF,mode2,2,FTCAOSF_message)) )
 { 
- /* line 70: */
+ /* line 63: */
 VXBAOSF_write_buffer( WSBAOSF_stderr, A_HVEC(JTCAOSF,HVBAOSF_newline_char,A68_CHAR ), RIBAOSF_ignore_msg, &KTCAOSF );
 KTCAOSF;
 } 
- /* line 72: */
+ /* line 65: */
 MTCAOSF = UXAAOSF_cli_msg(A_UNITE(LTCAOSF,mode2,2,FTCAOSF_message));
 if ( ! MTCAOSF )
-{ /* line 73: */
+{ /* line 66: */
 MTCAOSF = PXAAOSF_abort_msg(A_UNITE(NTCAOSF,mode2,2,FTCAOSF_message));
 }
 if ( MTCAOSF )
 { 
- /* line 74: */
+ /* line 67: */
 APBAOSF_exit((-2));
 } 
 else
 { 
- /* line 75: */
+ /* line 68: */
 if ( FXAAOSF_sysfault_msg(A_UNITE(OTCAOSF,mode2,2,FTCAOSF_message)) )
 { 
- /* line 76: */
- /* line 77: */
+ /* line 69: */
+ /* line 70: */
 APBAOSF_exit((-1));
 } 
 } 
@@ -585,20 +585,20 @@ else
 { 
 QTCAOSF = EYAAOSF_out_msg(A_UNITE(PTCAOSF,mode2,2,FTCAOSF_message));
 if ( ! QTCAOSF )
-{ /* line 78: */
+{ /* line 71: */
 QTCAOSF = ZXAAOSF_log_msg(A_UNITE(RTCAOSF,mode2,2,FTCAOSF_message));
 }
 if ( QTCAOSF )
 { 
 VXBAOSF_write_buffer( VSBAOSF_stdout, FTCAOSF_message.Text, RIBAOSF_ignore_msg, &STCAOSF );
 STCAOSF;
- /* line 79: */
- /* line 80: */
+ /* line 72: */
+ /* line 73: */
 if ( JYAAOSF_newline_msg(A_UNITE(TTCAOSF,mode2,2,FTCAOSF_message)) )
 { 
- /* line 81: */
- /* line 82: */
- /* line 83: */
+ /* line 74: */
+ /* line 75: */
+ /* line 76: */
 VXBAOSF_write_buffer( VSBAOSF_stdout, A_HVEC(UTCAOSF,HVBAOSF_newline_char,A68_CHAR ), RIBAOSF_ignore_msg, &VTCAOSF );
 VTCAOSF;
 } 
@@ -618,8 +618,8 @@ A_PROC_ENTRY(init_osif);
 XTCAOSF.fn.fn_global = DTCAOSF_generic_msg;
 XTCAOSF.nonlocals = A68_NIL;
 TIBAOSF_global_msg = XTCAOSF;
- /* line 92: */
- /* line 93: */
+ /* line 85: */
+ /* line 86: */
 TSCAOSF_init_ossignals();
 } 
 A_PROC_EXIT(init_osif);
@@ -634,8 +634,8 @@ void WSCAOSF(void)   /* initialise DECS osif */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","osif.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","osif.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osgc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osshell.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osmisc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/ossignals.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/oserrors.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osfiles.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/messageproc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/cif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
@@ -653,22 +653,22 @@ ZRAAOSF();   /* USE messageproc */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osif.a68";
-A_config.translation_time = "Sat Sep  4 11:42:08 2004";
+A_config.translation_time = "Sun Sep 26 21:50:25 2004";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "VSCAOSF (from seed file) ";
-A_config.spec_change_time = "Sat Sep  4 11:42:08 2004";
+A_config.spec_change_time = "Sun Sep 26 21:50:25 2004";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS osif);
 UEAALIB_a68config(LGAALIB_configinfo, ATCAOSF);
- /* line 62: */
- /* line 87: */
+ /* line 55: */
+ /* line 80: */
+ /* line 81: */
+ /* line 83: */
  /* line 88: */
  /* line 90: */
- /* line 95: */
- /* line 97: */
- /* line 177: */
+ /* line 170: */
 YTCAOSF.fn.fn_global = WTCAOSF_init_osif;
 YTCAOSF.nonlocals = A68_NIL;
 ABAALIB_a68init(YTCAOSF);

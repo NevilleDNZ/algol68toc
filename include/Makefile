@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.2 2004/09/04 02:45:38 teshields Exp $
+# $Id: Makefile,v 1.2.2.1 2004/09/04 17:36:12 teshields Exp $
 #
 #--------------------Sources--------------------
 algol68_inc := algol68/Aalloc.h algol68/Aassign.h algol68/Acoerce.h \

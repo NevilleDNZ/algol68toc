@@ -1,7 +1,7 @@
 DECS  oscommon  CONTEXT VOID  USE  strops:
 
 { " Id: " }
-configinfo A68CONFIG "$Id: oscommon.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: oscommon.a68,v 1.1.2.2 2004/09/05 04:09:04 teshields Exp $";
 
 
 COMMENT 
@@ -62,20 +62,15 @@ PROC  parse_basic = (RVC  name) FILENAME:
 BEGIN
    { Operating system dependent }
    FILENAME  ans:= (name, nullstr, nullstr, nullstr);
-*4 CHAR  typec = ".",  dirc = "]",  devc = ":";          { VMS }
-*5 CHAR  typec = ".",  dirc = "/";                       { UNIX }
-*D CHAR  typec = ".",  dirc = "\",  devc = ":";          { DOS }
+   CHAR  typec = ".",  dirc = "/";                       { UNIX }
+{  CHAR  typec = ".",  dirc = "\",  devc = ":";          { DOS }}
    INT  typepos:= -1,  dirpos:= -1,  typemax:= UPB name;
    FOR i FROM UPB name BY -1 TO 1 WHILE dirpos < 0
    DO  CHAR  c = name[i];
        IF dirpos < 0  ANDTH  c = typec  { accept first occurence after dir }
        THEN  typepos:= i
-       ELIF c = dirc
-%5                    OREL  c = devc
+       ELIF c = dirc { OREL  c = devc                    { DOS } }
        THEN  dirpos:= i
-*4     ELIF c = ";"
-*4     THEN  { Must remove version number from type for VMS }
-*4           typemax:= i - 1
        FI
    OD;
    IF typepos > 0
@@ -151,10 +146,7 @@ BEGIN
       MAKERVC buffer[: end]
    END;
 
-%4  OP  LOWER = (CHAR  c) CHAR:  c;
-*4  OP  LOWER = (CHAR  c) CHAR:
-*4    { VAX upper cases the command line - lower case to follow convention }
-*4    IF  c >= "A"  ANDTH  c <= "Z"  THEN  REPR (ABS c - diff)  ELSE  c  FI;
+   OP  LOWER = (CHAR  c) CHAR:  c;
 
    { simple state machine for separating arguments }
    INT  { possible states }

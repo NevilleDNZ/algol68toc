@@ -1,7 +1,7 @@
 DECS  commandsyntax  CONTEXT VOID  USE  putstrings,  messageproc:
 
 { " Id: commandsyntax.sta,v 1.1 91/10/14 14:26:16 edcad Exp $" }
-configinfo A68CONFIG "$Id: commandsyntax.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: commandsyntax.a68,v 1.1.2.1 2004/09/04 17:36:13 teshields Exp $";
 
 
 COMMENT 

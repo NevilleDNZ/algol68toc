@@ -1,8 +1,8 @@
 DECS  uniquenameserver  CONTEXT VOID  USE
-*L    usefulops, cif, osif,
+      usefulops, cif, osif,
       centities, coutput, environ, incinstallation, environment:
 
-configinfo A68CONFIG "$Id: uniquenameserver.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: uniquenameserver.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
 
 
 COMMENT 

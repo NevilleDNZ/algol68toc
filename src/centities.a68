@@ -1,6 +1,6 @@
 DECS  centities  CONTEXT VOID  USE  incinstallation:
 
-configinfo A68CONFIG "$Id: centities.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: centities.a68,v 1.1.2.1 2004/09/04 17:36:16 teshields Exp $";
 
 
 COMMENT 

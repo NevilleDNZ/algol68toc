@@ -3,7 +3,7 @@ DECS  osshell  CONTEXT VOID USE  cif,  oserrors,  messageproc,  usefulops,
 
 {  Id: osshell.a68,v 1.3 1993/11/05 12:05:59 aap Exp $ }
 
-configinfo A68CONFIG "$Id: osshell.a68,v 1.2 2004/09/04 15:44:31 teshields Exp $";
+configinfo A68CONFIG "$Id: osshell.a68,v 1.2.2.1 2004/09/04 17:36:14 teshields Exp $";
 
 
 COMMENT 
