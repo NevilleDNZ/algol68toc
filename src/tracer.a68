@@ -1,9 +1,9 @@
 DECS  tracer  CONTEXT VOID  USE
-*L    usefulops,
+      usefulops,
       centities, environment, evaluator, identifiers, incimperatives, incmode,
       idtable, incoperfn, incvalue, modes, values:
 
-configinfo A68CONFIG "$Id: tracer.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: tracer.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
 
 
 COMMENT 

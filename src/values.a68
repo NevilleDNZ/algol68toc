@@ -1,12 +1,12 @@
 DECS  values  CONTEXT VOID  USE
-*L    usefulops,
+      usefulops,
       centities, environ, environment,
       coutput, { required by GETCFRAGMENT to emit proc values }
       idtable, { required for id ref level }
       incmode, incoperfn, incid, { incid is only required for GETCFRAGMENT }
       incvalue, modes:
 
-configinfo A68CONFIG "$Id: values.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: values.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
 
 
 COMMENT 

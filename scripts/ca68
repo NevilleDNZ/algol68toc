@@ -7,12 +7,12 @@
 #set -x
 
 DESTDIR=
-INCLUDES="-I/usr/include/algol68 -I/usr/include"
-ROOT=/usr/share/algol68toc
-LIBRARIES=-L${HOME}/lib
+INCLUDES="-I/usr/local/include/algol68 -I/usr/local/include"
+WEBINCLUDE="-I/usr/local/include/algol68"
+ROOT=/usr/local/share/algol68toc
+LIBRARIES="-L/usr/local/lib -L${HOME}/lib"
 A68DIRS="-dir ${ROOT}"
-STARS="-staredit ${A68_STAREDIT}"
-UNAME="-uname seedfile"
+UNAME="-uname AAAAAAA"
 DEBUG=n
 CHECK=-DA68_CHECK
 
@@ -21,7 +21,7 @@ usage() {
     echo "    ca68 [-c] [-d m-files-dir] [-g] [-h|--help] [-I include-dir]"
     echo "         [-L library-dir] [-l link library]"
     echo "         [-M module-library-dir] [-m module-library]"
-    echo "         [-s staredit] [-u uname] [-w web-include-dirs]"
+    echo "         [-u uname] [-w web-include-dirs]"
     echo "            file[.a68|.w68]"
     echo
     echo "Defaults:"
@@ -29,15 +29,12 @@ usage() {
     echo "            Use -d to add to this"
     echo "   INCLUDES =${INCLUDES}"
     echo "            Use -I to add to this"
+    echo "   WEBINCLUDE =${WEBINCLUDE}"
+    echo "            Use -w to add to this"
     echo "   LIBRARIES=${LIBRARIES}"
     echo "            Use -L and -l to add to this"
-    echo "   STARS    =${STARS}"
-    echo "            Use -s to replace this"
     echo "   UNAME    =${UNAME}"
     echo "            Use -u to replace this"
-    echo
-    echo "If the file is a DECS module, store the .o object file into"
-    echo "the library specified by -m in the directory specified by -M"
     echo
     exit 1
 }
@@ -106,10 +103,6 @@ do
 	  add_to DESTDIR $2
 	  shift 2
 	  ;;
-      -s)
-	  STARS="-staredit $2"
-	  shift 2
-	  ;;
       -u)
 	  UNAME="-uname $2"
 	  shift 2
@@ -161,7 +154,7 @@ else
 fi
 
 # Translate to C and compile
-a68toc -s -v -lib ${ROOT} ${A68DIRS} ${UNAME} ${STARS} ${A68S}.a68
+a68toc -s -v -lib ${ROOT} ${A68DIRS} ${UNAME} ${A68S}.a68
 RES=$?
 
 if [ ${RES} -eq 0 ]
@@ -169,7 +162,7 @@ then
     if [ ! -z "${D68S}" ] && [ "${D68S}" != "./" ] && [ "${D68S}" != "." ]
     then mv $(basename ${A68S}).c ${D68S}
     fi
-    gcc -O0 ${CHECK} ${CFLAGS} ${INCLUDES} -o ${A68S}.o -c ${A68S}.c
+    gcc -w -std=gnu99 -O0 ${CHECK} ${CFLAGS} ${INCLUDES} -o ${A68S}.o -c ${A68S}.c
 else
     rm -f $(basename ${A68S}).c
     exit ${RES}
@@ -177,7 +170,7 @@ fi
 
 if [ "${TYPE}" == "p" ]
 then # Link the program
-    gcc -o ${A68S} ${ROOT}/Afirst.o ${A68S}.o ${LIBRARIES} -la68s -la68 -lm -lc
+    gcc -w -std=gnu99 -o ${A68S} ${ROOT}/Afirst.o ${A68S}.o ${LIBRARIES} -la68s -la68 -lm -lc
     RES=$?
     if [ ${RES} -ne 0 ]
     then exit ${RES}

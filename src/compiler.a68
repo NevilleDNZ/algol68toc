@@ -1,11 +1,11 @@
 DECS  compiler  CONTEXT VOID  USE
-*L    usefulops,
+      usefulops,
       centities, clauses, common, entryandreturn, environ, environment,
       identifiers, incimperatives, incoperfn, incvalue,  initialiser, loads,
       loops, incmode, modes, modules, moduletracer, oper, uniquenameserver,
       coutput, values:
 
-configinfo A68CONFIG "$Id: compiler.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: compiler.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
 
 
 COMMENT 

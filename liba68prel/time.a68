@@ -1,6 +1,6 @@
 DECS  time  CONTEXT VOID  USE  strops, messageproc, osif:
 
-configinfo A68CONFIG "$Id: time.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: time.a68,v 1.1.2.1 2004/09/04 17:36:14 teshields Exp $";
 
 
 COMMENT 

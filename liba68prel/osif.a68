@@ -3,7 +3,7 @@ DECS  osif  CONTEXT VOID  USE  cif,  messageproc,  osfiles,  oserrors,
 
 {  Id: osif.a68,v 2.13 1993/07/16 10:23:22 aap Exp $ }
 
-configinfo A68CONFIG "$Id: osif.a68,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+configinfo A68CONFIG "$Id: osif.a68,v 1.1.2.2 2004/09/05 04:09:04 teshields Exp $";
 
 
 COMMENT 
@@ -49,13 +49,6 @@ COMMENT
 { Low level operating system interface.
 
   Low level routines for accessing OS facilities, defined with POSIX.1 in mind.
-  Staredits for deviations from POSIX are:
-    to be supplied.
-  Note:  by convention *4 => VAX/VMS with the native mode compiler.  Therefore
-         %4 => Ctrans.  *5 = UNIX, *D = DOS.
-         *0 is always a comment.
-         ELLA stars:  6 = VAX, R = SPARC, 9/P = diagnostic, 8/X = security
-         ? = 680x0, T = ?.
 }
 
 

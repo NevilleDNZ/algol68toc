@@ -2,7 +2,7 @@ DECS  commandcaller  CONTEXT VOID  USE  putstrings,  messageproc,  osinterface,
       commandsyntax,  command,  ioprocs:
 
 { " Id: commandcaller.sta,v 1.1 91/10/14 14:26:12 edcad Exp $" }
-configinfo A68CONFIG "$Id: commandcaller.a68,v 1.1 2004/09/04 13:58:26 teshields Exp $";
+configinfo A68CONFIG "$Id: commandcaller.a68,v 1.1.2.1 2004/09/04 17:36:13 teshields Exp $";
 
 
 COMMENT 

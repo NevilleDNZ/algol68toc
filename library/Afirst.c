@@ -1,4 +1,4 @@
-/* $Id: Afirst.c,v 1.1 2004/09/04 13:58:27 teshields Exp $ */
+/* $Id: Afirst.c,v 1.1.2.1 2004/09/04 17:36:15 teshields Exp $ */
 
 
 /* 
@@ -50,7 +50,7 @@
 **	unless another similar pointer is within the area, or on the stack.
 */
 
-static char rcs_id[] = "$Id: Afirst.c,v 1.1 2004/09/04 13:58:27 teshields Exp $";
+static char rcs_id[] = "$Id: Afirst.c,v 1.1.2.1 2004/09/04 17:36:15 teshields Exp $";
 
 /* uninitialised static */
 static int _Agc_stat;

@@ -1,4 +1,4 @@
-/* $Id: Aindex.h,v 1.2 2004/09/04 02:46:32 teshields Exp $ */
+/* $Id: Aindex.h,v 1.2.2.1 2004/09/04 17:36:12 teshields Exp $ */
 
 
 /* 

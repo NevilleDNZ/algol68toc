@@ -1,8 +1,7 @@
 DECS vmscomplink CONTEXT VOID USE putstrings,
-*4                                vmsinterface,
                                   osinterface, basics, messageproc :
 
-configinfo A68CONFIG "$Id: vmscomplink.a68,v 1.3 2004/09/04 03:11:32 teshields Exp $";
+configinfo A68CONFIG "$Id: vmscomplink.a68,v 1.3.2.2 2004/09/05 04:11:31 teshields Exp $";
 
 
 COMMENT 
@@ -41,7 +40,7 @@ COMMENT
 ??:??:??   ?.???  ????
 COMMENT
 
-*5{ VMS version
+{ { VMS version }
 BITS ss__normal = ALIEN "SS$_NORMAL",
      ss__supersede = ALIEN "SS$_SUPERSEDE",
      ss__nolognam = ALIEN "SS$_NOLOGNAM";
@@ -101,8 +100,8 @@ INT status = ABS spawn( command, msg ); { execute_os_command( command, msg );
 
     ( BIN status AND 2r1 ) = 2r1
 END;
-*5 }
-*4 { UNIX version
+}
+   { UNIX version }
 PROC set_logical = (VECTOR[ ]CHAR name,
                                   value,
                     BOOL diagnose )BOOL:
@@ -124,7 +123,6 @@ BEGIN
     put( screen, ( "Obey UNIX command :- ", command, newline ));
     TRUE
 END;
-*4 }
 
 PROC (VECTOR[ ]CHAR )VOID insert_oscommand_item;
 PROC (MESSAGEPROC )BOOL obey_oscommand;

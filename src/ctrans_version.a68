@@ -1,6 +1,6 @@
 DECS  ctrans_version  CONTEXT VOID:
 
-configinfo A68CONFIG "$Id: ctrans_version.a68,v 1.2 2004/09/04 03:23:00 teshields Exp $";
+configinfo A68CONFIG "$Id: ctrans_version.a68,v 1.2.2.1 2004/09/04 17:36:16 teshields Exp $";
 
 
 COMMENT 

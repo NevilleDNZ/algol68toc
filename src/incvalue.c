@@ -1,4 +1,4 @@
-/* UNAME:FKJACTR */
+/* UNAME:OIJACTR */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_VOID ,A68t31,(A68_BOOL ,A68_VC *),(A68_BOOL ,A68_VC *,void *));
@@ -111,8 +111,8 @@ typedef struct A68t51  A68_51 ;    /* PROC(MODE50) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t52,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t52  A68_52 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,59,A68t53);
-typedef struct A68t53  A68_53 ;    /* STRUCT 59 CHAR */
+A_ISTRUCT(A68_CHAR ,63,A68t53);
+typedef struct A68t53  A68_53 ;    /* STRUCT 63 CHAR */
 struct A68t55{
 A68_INT  Fn;
 A_PAD_INT(PAD_22)
@@ -201,46 +201,46 @@ extern void BAAALIB(void);   /* a68config */
 extern void ODAACTR(void);   /* incinstallation */
 extern void THAACTR(void);   /* centities */
 /* --- end of DECS initialisation functions --- */
-static A68_53   JKJACTR = {"$Id: incvalue.c,v 1.5 2004/09/04 16:52:12 teshields Exp $"}; 
-A_GISVEC(A68_VC ,KKJACTR,JKJACTR,59)
-A68_61 * LKJACTR_nilvalue;
-A68_62 * MKJACTR_nilvaluelist;
-#define NKJACTR_noidno 0
-#define OKJACTR_faultmode 6
-A68_BITS  PKJACTR_defaultinfo;
-#define QKJACTR_constant 0X1U
-#define RKJACTR_atomic 0X2U
-#define SKJACTR_effects 0X4U
-#define TKJACTR_nonloc 0X8U
-#define UKJACTR_voided 0X10U
-#define VKJACTR_lvalue 0X20U
-#define WKJACTR_isnil 0X40U
-#define XKJACTR_fxwarn 0X80U
-static A68_64   ZKJACTR = {"/* SKIP VALUE */"}; 
-A_GISVEC(A68_VC ,ALJACTR,ZKJACTR,16)
-A68_61  DLJACTR_skipvalue;
-#define ELJACTR_voidresult 0
-#define FLJACTR_memoryresult 1
-#define GLJACTR_registerresult 2
-#define HLJACTR_routineresult 3
-#define ILJACTR_enquiryresult 4
-#define JLJACTR_optboolresult 5
-#define KLJACTR_noparticularresult 6
+static A68_53   SIJACTR = {"$Id: incvalue.c,v 1.5.2.4 2004/09/27 03:04:18 teshields Exp $"}; 
+A_GISVEC(A68_VC ,TIJACTR,SIJACTR,63)
+A68_61 * UIJACTR_nilvalue;
+A68_62 * VIJACTR_nilvaluelist;
+#define WIJACTR_noidno 0
+#define XIJACTR_faultmode 6
+A68_BITS  YIJACTR_defaultinfo;
+#define ZIJACTR_constant 0X1U
+#define AJJACTR_atomic 0X2U
+#define BJJACTR_effects 0X4U
+#define CJJACTR_nonloc 0X8U
+#define DJJACTR_voided 0X10U
+#define EJJACTR_lvalue 0X20U
+#define FJJACTR_isnil 0X40U
+#define GJJACTR_fxwarn 0X80U
+static A68_64   IJJACTR = {"/* SKIP VALUE */"}; 
+A_GISVEC(A68_VC ,JJJACTR,IJJACTR,16)
+A68_61  MJJACTR_skipvalue;
+#define NJJACTR_voidresult 0
+#define OJJACTR_memoryresult 1
+#define PJJACTR_registerresult 2
+#define QJJACTR_routineresult 3
+#define RJJACTR_enquiryresult 4
+#define SJJACTR_optboolresult 5
+#define TJJACTR_noparticularresult 6
  /* line 1: */
  /* line 3: */
-void GKJACTR(void)   /* initialise DECS incvalue */
+void PIJACTR(void)   /* initialise DECS incvalue */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","-dir",".","incvalue.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","-dir",".","incvalue.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","./incinstallation.m","./centities.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
-A68_61  YKJACTR;  /* collateral clause result */
-A68_60  BLJACTR;  /* OPERATORS - mode -> union mode */
-A68_VC  CLJACTR;  /* YIELD */
+A68_61  HJJACTR;  /* collateral clause result */
+A68_60  KJJACTR;  /* OPERATORS - mode -> union mode */
+A68_VC  LJJACTR;  /* YIELD */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
@@ -248,24 +248,24 @@ ODAACTR();   /* USE incinstallation */
 THAACTR();   /* USE centities */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/src/incvalue.a68";
-A_config.translation_time = "Sat Sep  4 11:42:37 2004";
+A_config.translation_time = "Sun Sep 26 21:50:56 2004";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "FKJACTR (from seed file) ";
-A_config.spec_change_time = "Sat Sep  4 11:42:37 2004";
+A_config.name_seed = "OIJACTR (from seed file) ";
+A_config.spec_change_time = "Sun Sep 26 21:50:56 2004";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS incvalue);
-UEAALIB_a68config(LGAALIB_configinfo, KKJACTR);
+UEAALIB_a68config(LGAALIB_configinfo, TIJACTR);
  /* line 42: */
  /* line 67: */
  /* line 69: */
-LKJACTR_nilvalue = (A68_61 *)A68_NIL;
+UIJACTR_nilvalue = (A68_61 *)A68_NIL;
  /* line 70: */
-MKJACTR_nilvaluelist = (A68_62 *)A68_NIL;
+VIJACTR_nilvaluelist = (A68_62 *)A68_NIL;
  /* line 72: */
  /* line 77: */
-PKJACTR_defaultinfo = (A68_BITS )0;
+YIJACTR_defaultinfo = (A68_BITS )0;
  /* line 79: */
  /* line 80: */
  /* line 81: */
@@ -275,11 +275,11 @@ PKJACTR_defaultinfo = (A68_BITS )0;
  /* line 85: */
  /* line 86: */
  /* line 88: */
-YKJACTR.Mode = OKJACTR_faultmode;
-YKJACTR.Info = PKJACTR_defaultinfo;
-CLJACTR = ALJACTR ;
-YKJACTR.Extra = A_UNITE(BLJACTR,mode6,6,CLJACTR);
-DLJACTR_skipvalue = YKJACTR;
+HJJACTR.Mode = XIJACTR_faultmode;
+HJJACTR.Info = YIJACTR_defaultinfo;
+LJJACTR = JJJACTR ;
+HJJACTR.Extra = A_UNITE(KJJACTR,mode6,6,LJJACTR);
+MJJACTR_skipvalue = HJJACTR;
  /* line 90: */
  /* line 91: */
  /* line 92: */

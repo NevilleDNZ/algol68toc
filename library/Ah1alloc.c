@@ -1,5 +1,5 @@
 /*
-** $Id: Ah1alloc.c,v 1.3 2004/09/04 03:07:21 teshields Exp $
+** $Id: Ah1alloc.c,v 1.3.2.1 2004/09/04 17:36:15 teshields Exp $
 */
 
 
@@ -54,7 +54,7 @@
 ** It is assumed that allocations are rounded up to at least the next word boundary.
 */
 
-static char rcs_id[] = "$Id: Ah1alloc.c,v 1.3 2004/09/04 03:07:21 teshields Exp $";
+static char rcs_id[] = "$Id: Ah1alloc.c,v 1.3.2.1 2004/09/04 17:36:15 teshields Exp $";
 #include <algol68/Alibrary.h>
 
 #ifdef A_MAX_CACHE

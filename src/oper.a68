@@ -1,7 +1,7 @@
 DECS  oper  CONTEXT VOID  USE
       environment, incimperatives, incmode, incoperfn, values:
 
-configinfo A68CONFIG "$Id: oper.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: oper.a68,v 1.1.2.1 2004/09/04 17:36:18 teshields Exp $";
 
 
 COMMENT 

@@ -1,8 +1,7 @@
 DECS rscompiler CONTEXT VOID
-%4   USE  incid,  incinstallation :
-*4 :
+     USE  incid,  incinstallation :
 
-configinfo A68CONFIG "$Id: rscompiler.a68,v 1.1 2004/09/04 13:58:28 teshields Exp $";
+configinfo A68CONFIG "$Id: rscompiler.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
 
 
 COMMENT 
@@ -251,26 +250,12 @@ COMMENT
 
 COMMENT implementation dependent declarations COMMENT
 
-*5 { Some of these objects are defined in external Modules }
-*4 MODE ID = STRUCT 32 CHAR;
+{ Some of these objects are defined in external Modules }
 
-*4 INT maxid = 32;
-*4 INT maxchar = 256;
+INT startrd = min rdno - 1, startlib = min libid - 1,
+    startkmp = kept generator proc correction;
 
-*4 MODE YM = INT;
-*4 MODE YS = INT;
-
-*4 INT startrd = 1000, startlib = 2000, startkmp = 3000;
-*5 INT startrd = min rdno - 1, startlib = min libid - 1,
-*5     startkmp = kept generator proc correction;
-
-*4 INT upbofmodes = 1023;
-CO upbofmodes must be less than 952 CO   { - origin ???  DCT 25:05:89 }
-
-
-*4 INT maxistruct = 100000;
-
-   CHAR dchar = ".", pchar = "+", nchar = "-";
+CHAR dchar = ".", pchar = "+", nchar = "-";
 CO These characters represent the decimal point, positive exponent and
    negative exponent of a real denotation in stream language.  They may
    be altered to any non-digit character

@@ -1,7 +1,7 @@
 DECS  algolrms CONTEXT VOID:
 
 { " Id: algolrms.sta,v 1.1 91/10/14 14:25:20 edcad Exp $" }
-configinfo A68CONFIG "$Id: algolrms.a68,v 1.1 2004/09/04 13:58:26 teshields Exp $";
+configinfo A68CONFIG "$Id: algolrms.a68,v 1.1.2.1 2004/09/04 17:36:12 teshields Exp $";
 
 
 COMMENT 

@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.3 2004/09/04 15:53:51 teshields Exp $
+# $Id: Makefile,v 1.3.2.1 2004/09/04 17:36:16 teshields Exp $
 #------------ Algol 68 sources -------------
 a68toc_a:=incid.a68 incimperatives.a68 incinstallation.a68 \
         incmode.a68 incoperfn.a68 incenviron.a68 ctrans_version.a68 \

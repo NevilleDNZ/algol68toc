@@ -1,7 +1,7 @@
 /* UNAME:AAAALIB */
 #include <algol68/Asupport.h>
-A_ISTRUCT(A68_CHAR ,60,A68t31);
-typedef struct A68t31  A68_31 ;    /* STRUCT 60 CHAR */
+A_ISTRUCT(A68_CHAR ,64,A68t31);
+typedef struct A68t31  A68_31 ;    /* STRUCT 64 CHAR */
 struct A68t32{
 A68_VC  Data;
 struct A68t32 * Rest;
@@ -76,8 +76,8 @@ A_PROCEDURE(A68_VOID ,A68t56,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t56  A68_56 ;    /* PROC(MODE26,MODE26) VOID */
 A_ISTRUCT(A68_CHAR ,4,A68t57);
 typedef struct A68t57  A68_57 ;    /* STRUCT 4 CHAR */
-static A68_31   EAAALIB = {"$Id: a68config.c,v 1.6 2004/09/04 16:52:00 teshields Exp $"}; 
-A_GISVEC(A68_VC ,FAAALIB,EAAALIB,60)
+static A68_31   EAAALIB = {"$Id: a68config.c,v 1.6.2.4 2004/09/27 03:04:13 teshields Exp $"}; 
+A_GISVEC(A68_VC ,FAAALIB,EAAALIB,64)
 static A68_VC  GAAALIB_cfs;
 A68_33  HAAALIB_anonymous;
 A68_34  XAAALIB_makervc;
@@ -583,14 +583,14 @@ A68_VC  FGAALIB_str;
 A68_32  GGAALIB;  /* collateral clause result */
 A68_32 * HGAALIB;  /* YIELD */
 A_PROC_ENTRY(a68config);
+ /* line 160: */
  /* line 164: */
- /* line 168: */
 { 
 VEAALIB_top = S.upb;
- /* line 169: */
+ /* line 165: */
 WEAALIB = (VEAALIB_top>4);
 if ( WEAALIB )
-{ /* line 170: */
+{ /* line 166: */
 WEAALIB = A_VC_EQ(A_VTRIM(YEAALIB,(S),A_VTSCRIPT(&(YEAALIB.upb),(S).upb,1,4)),ZEAALIB);
 }
 if ( WEAALIB )
@@ -600,15 +600,15 @@ A_CLOSURE( BFAALIB_generator, CFAALIB_generator, DFAALIB_generator );
 A_CALLPROC(BFAALIB_generator,(A68_TRUE, &HFAALIB),(A68_TRUE, &HFAALIB,(BFAALIB_generator).nonlocals));
 GFAALIB_ns = HFAALIB;
 A_VASSIGN2(S,GFAALIB_ns,A68_CHAR );
- /* line 171: */
+ /* line 167: */
 IFAALIB_p1 = 4;
 JFAALIB_p2 = 4;
- /* line 172: */
- /* line 173: */
+ /* line 168: */
+ /* line 169: */
 OFAALIB = A_VTRIM(MFAALIB,(GFAALIB_ns),A_VTSCRIPT(&(MFAALIB.upb),(GFAALIB_ns).upb,1,4)) ;
 PFAALIB = NFAALIB ;
 A_VASSIGN2(PFAALIB,OFAALIB,A68_CHAR );
- /* line 175: */
+ /* line 171: */
 for ( ;; )
 { 
 QFAALIB = (JFAALIB_p2<VEAALIB_top);
@@ -619,9 +619,9 @@ QFAALIB = (A_VINDEX(S,RFAALIB)!='.');
 if ( !(QFAALIB) ) break;
 /*SKIP*/;
 }
- /* line 176: */
+ /* line 172: */
 IFAALIB_p1 = (JFAALIB_p2-1);
- /* line 177: */
+ /* line 173: */
 for ( ;; )
 { 
 SFAALIB = (JFAALIB_p2<VEAALIB_top);
@@ -632,57 +632,57 @@ SFAALIB = (A_VINDEX(S,TFAALIB)!=' ');
 if ( !(SFAALIB) ) break;
 /*SKIP*/;
 }
- /* line 178: */
+ /* line 174: */
 KFAALIB_ch = ' ';
- /* line 179: */
- /* line 180: */
+ /* line 175: */
+ /* line 176: */
 for ( UFAALIB = 1;
 UFAALIB <= 2;
 UFAALIB += 1 )
 { 
- /* line 181: */
+ /* line 177: */
 for ( ;; )
 { 
 { 
 VFAALIB = IFAALIB_p1+=1 ;
 WFAALIB = (&A_VINDEX(GFAALIB_ns,VFAALIB)) ;
 (*WFAALIB) = KFAALIB_ch;
- /* line 182: */
+ /* line 178: */
 XFAALIB = (JFAALIB_p2<VEAALIB_top);
 if ( XFAALIB )
 {YFAALIB = JFAALIB_p2+=1 ;
 XFAALIB = ((KFAALIB_ch = A_VINDEX(S,YFAALIB))!=':');
 }
- /* line 183: */
+ /* line 179: */
 ZFAALIB = XFAALIB;
 } 
 AGAALIB = ZFAALIB;
 if ( !AGAALIB ) break;
 /*SKIP*/;
 }
- /* line 184: */
+ /* line 180: */
 }
- /* line 185: */
- /* line 186: */
+ /* line 181: */
+ /* line 182: */
 WDAALIB_trans_config( C, A_VTRIM(CGAALIB,(GFAALIB_ns),A_VTSCRIPT(&(CGAALIB.upb),(GFAALIB_ns).upb,1,IFAALIB_p1)), &DGAALIB );
 BGAALIB = DGAALIB;
 } 
 else
 { 
- /* line 187: */
+ /* line 183: */
 WDAALIB_trans_config( C, S, &EGAALIB );
 BGAALIB = EGAALIB;
 } 
 FGAALIB_str = BGAALIB;
- /* line 188: */
- /* line 189: */
+ /* line 184: */
+ /* line 185: */
 GGAALIB.Data = FGAALIB_str;
 GGAALIB.Rest = BBAALIB_nilconfigdata;
 HGAALIB = A_HEAP(A68_32 ) ;
 (*HGAALIB) = GGAALIB ;
 HBAALIB_tail = (&(((*HBAALIB_tail) = HGAALIB)->Rest));
- /* line 190: */
- /* line 191: */
+ /* line 186: */
+ /* line 187: */
 A_CALLPROC(KBAALIB_show_proc,(FGAALIB_str),(FGAALIB_str,(KBAALIB_show_proc).nonlocals));
 } 
 A_PROC_EXIT(a68config);
@@ -694,19 +694,19 @@ A68_VOID  JGAALIB_show_a68config(A68_38  Show)
 { 
 A68_32 * KGAALIB_ptr;
 A_PROC_ENTRY(show_a68config);
- /* line 194: */
- /* line 196: */
+ /* line 190: */
+ /* line 192: */
 { 
 KGAALIB_ptr = (&GBAALIB_configdata);
- /* line 197: */
+ /* line 193: */
 for ( ;; )
 { 
- /* line 198: */
+ /* line 194: */
 if ( !((KGAALIB_ptr!=BBAALIB_nilconfigdata)) ) break;
 A_CALLPROC(Show,((*(&(KGAALIB_ptr->Data)))),((*(&(KGAALIB_ptr->Data))),(Show).nonlocals));
 KGAALIB_ptr = (*(&(KGAALIB_ptr->Rest)));
 }
- /* line 199: */
+ /* line 195: */
 } 
 A_PROC_EXIT(show_a68config);
 return;
@@ -717,10 +717,10 @@ A_STATIC A68_VOID  NGAALIB_init(void)
 { 
 A_PROC_ENTRY(init);
 { 
- /* line 235: */
+ /* line 226: */
 UEAALIB_a68config(OGAALIB_configinfo, GAAALIB_cfs);
- /* line 236: */
- /* line 237: */
+ /* line 227: */
+ /* line 228: */
 /*SKIP*/;
 } 
 A_PROC_EXIT(init);
@@ -734,8 +734,8 @@ void BAAALIB(void)   /* initialise DECS a68config */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir",".","a68config.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir",".","a68config.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
@@ -751,10 +751,10 @@ if( A_invoked ) return;
 A_invoked = A68_TRUE;
 /* --- Initialise configuration information */
 A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.a68";
-A_config.translation_time = "Sat Sep  4 11:42:06 2004";
+A_config.translation_time = "Sun Sep 26 21:50:22 2004";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "AAAALIB (from seed file) ";
-A_config.spec_change_time = "Sat Sep  4 11:42:06 2004";
+A_config.spec_change_time = "Sun Sep 26 21:50:22 2004";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -797,27 +797,27 @@ KBAALIB_show_proc = (LBAALIB);
  /* line 135: */
  /* line 141: */
  /* line 147: */
- /* line 163: */
- /* line 193: */
- /* line 209: */
- /* line 210: */
- /* line 211: */
- /* line 212: */
- /* line 213: */
- /* line 222: */
- /* line 228: */
- /* line 229: */
- /* line 230: */
- /* line 243: */
- /* line 245: */
- /* line 246: */
- /* line 249: */
+ /* line 159: */
+ /* line 189: */
+ /* line 202: */
+ /* line 203: */
+ /* line 204: */
+ /* line 205: */
+ /* line 206: */
+ /* line 215: */
+ /* line 219: */
+ /* line 220: */
+ /* line 221: */
+ /* line 234: */
+ /* line 235: */
+ /* line 236: */
+ /* line 239: */
 #define init NGAALIB_init
 {ACONFIG;       /* Invoke the macro to setup A_configinfo */
 init();
 }
 #undef init
- /* line 252: */
+ /* line 242: */
 A_PROC_EXIT(DECS a68config);
 } 
 #undef NL

@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.1 2004/09/04 02:27:36 teshields Exp $
+# $Id: Makefile,v 1.1.2.1 2004/09/04 17:36:09 teshields Exp $
 #
 #------------ Algol 68 sources -------------
 data_f := algol68.ssh lf.a68 m_algol.fte main.fte sheets.map \

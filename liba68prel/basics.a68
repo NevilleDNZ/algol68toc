@@ -1,8 +1,8 @@
-DECS  basics  CONTEXT VOID  USE   putstrings,  messageproc,  osinterface,
+ DECS  basics  CONTEXT VOID  USE   putstrings,  messageproc,  osinterface0
       testmode:
 
 { " Id: basics.sta,v 1.1 91/10/14 14:26:04 edcad Exp $" }
-configinfo A68CONFIG "$Id: basics.a68,v 1.1 2004/09/04 13:58:26 teshields Exp $";
+configinfo A68CONFIG "$Id: basics.a68,v 1.1.2.1 2004/09/04 17:36:12 teshields Exp $";
 
 
 COMMENT 

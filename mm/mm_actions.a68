@@ -4,7 +4,7 @@ DECS mm_actions CONTEXT VOID USE putstrings, osinterface, basics, messageproc,
                                  mm_basics, mm_oscommands, mm_utilities,
                                  mm_version :
 
-configinfo A68CONFIG "$Id: mm_actions.a68,v 1.3 2004/09/04 03:11:32 teshields Exp $";
+configinfo A68CONFIG "$Id: mm_actions.a68,v 1.3.2.1 2004/09/04 17:36:15 teshields Exp $";
 
 
 COMMENT 

@@ -158,8 +158,8 @@ typedef struct A68t79  A68_79 ;    /* PROC(MODE78) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t80,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t80  A68_80 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,57,A68t81);
-typedef struct A68t81  A68_81 ;    /* STRUCT 57 CHAR */
+A_ISTRUCT(A68_CHAR ,61,A68t81);
+typedef struct A68t81  A68_81 ;    /* STRUCT 61 CHAR */
 
 A_PROCEDURE(struct A68t31 *,A68t82,(A68_VC ,A68_INT ),(A68_VC ,A68_INT ,void *));
 typedef struct A68t82  A68_82 ;    /* PROC(REF MODE26,INT) REF MODE31 */
@@ -260,8 +260,8 @@ extern void IKAAOSF(void);   /* usefulops */
 extern void MCBAOSF(void);   /* oserrors */
 extern void BAAAOSF(void);   /* cif */
 /* --- end of DECS initialisation functions --- */
-static A68_81   UOBAOSF = {"$Id: osmisc.c,v 1.6 2004/09/04 16:52:11 teshields Exp $"}; 
-A_GISVEC(A68_VC ,VOBAOSF,UOBAOSF,57)
+static A68_81   UOBAOSF = {"$Id: osmisc.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
+A_GISVEC(A68_VC ,VOBAOSF,UOBAOSF,61)
 #include <unistd.h>
 #define GETCWD(buf,size) \
    ((void *)(getcwd(A_VC_charptr(buf),A_INT_size_t(size))))
@@ -565,8 +565,8 @@ void ROBAOSF(void)   /* initialise DECS osmisc */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","osmisc.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","osmisc.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
 static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/usefulops.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/oserrors.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/cif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
@@ -579,10 +579,10 @@ MCBAOSF();   /* USE oserrors */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
 A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osmisc.a68";
-A_config.translation_time = "Sat Sep  4 11:42:07 2004";
+A_config.translation_time = "Sun Sep 26 21:50:24 2004";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "QOBAOSF (from seed file) ";
-A_config.spec_change_time = "Sat Sep  4 11:42:07 2004";
+A_config.spec_change_time = "Sun Sep 26 21:50:24 2004";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

@@ -1,4 +1,4 @@
-/* $Id: Acoerce.c,v 1.2 2004/09/04 03:06:21 teshields Exp $ */
+/* $Id: Acoerce.c,v 1.2.2.2 2004/09/26 15:10:47 teshields Exp $ */
 
 
 /* 
@@ -48,7 +48,7 @@
 
 #include <algol68/Asupport.h>
 
-static char rcs_id[] = "$Id: Acoerce.c,v 1.2 2004/09/04 03:06:21 teshields Exp $";
+static char rcs_id[] = "$Id: Acoerce.c,v 1.2.2.2 2004/09/26 15:10:47 teshields Exp $";
 
 #define  A_WBVB_routine(name,widebits,widesize)\
 A68_VOID  name( A_VBOOL *vec, const widebits bits )\
@@ -65,10 +65,8 @@ A68_VOID  name( A_VBOOL *vec, const widebits bits )\
 */
 #ifdef LONGLONGOPTION
 A_WBVB_routine(A_PWLLBVB,A68_LLBITS,A_SZ_LLBITS)
-#else
-A_WBVB_routine(A_PWSSBVB,A68_SSBITS,A_SZ_SSBITS)
 #endif
-
+A_WBVB_routine(A_PWSSBVB,A68_SSBITS,A_SZ_SSBITS)
 A_WBVB_routine(A_PWSBVB,A68_SBITS,A_SZ_SBITS)
 A_WBVB_routine(A_PWBVB,A68_BITS,A_SZ_BITS)
 A_WBVB_routine(A_PWLBVB,A68_LBITS,A_SZ_LBITS)

@@ -2,7 +2,7 @@ DECS  command  CONTEXT VOID  USE  putstrings,  messageproc,  osinterface,
       basics,  commandsyntax,  commandreader:
 
 { " Id: command.sta,v 1.1 91/10/14 14:26:10 edcad Exp $" }
-configinfo A68CONFIG "$Id: command.a68,v 1.1 2004/09/04 13:58:26 teshields Exp $";
+configinfo A68CONFIG "$Id: command.a68,v 1.1.2.2 2004/09/05 04:09:04 teshields Exp $";
 
 
 COMMENT 
@@ -1011,8 +1011,8 @@ restart:                                                { ++++||++++ }
         cause the global msg proc to be re-assigned to a (global) default. }
       (set_default_msg OF env)(msg);                    { ----||---- }
 
-*3    c OF (continuation:= apply(shell, msg)) = c OF continue
-%3    c OF (continuation:= shell) = c OF continue
+{*3   c OF (continuation:= apply(shell, msg)) = c OF continue }
+      c OF (continuation:= shell) = c OF continue
    DO  SKIP  OD;
 
    (set_default_msg OF env)(EMPTY);                     { ----||---- }

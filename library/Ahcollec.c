@@ -1,4 +1,4 @@
-/* $Id: Ahcollec.c,v 1.3 2004/09/04 03:07:21 teshields Exp $ */
+/* $Id: Ahcollec.c,v 1.3.2.1 2004/09/04 17:36:15 teshields Exp $ */
 
 
 /* 
@@ -48,7 +48,7 @@
  *		Richard Wendland	Tue May  2 22:30:35 BST 1989
  */
 
-static char rcs_id[] = "$Id: Ahcollec.c,v 1.3 2004/09/04 03:07:21 teshields Exp $";
+static char rcs_id[] = "$Id: Ahcollec.c,v 1.3.2.1 2004/09/04 17:36:15 teshields Exp $";
 
 /*
  * Edited for Objective-C demo.

@@ -4,6 +4,10 @@ BEGIN
 
 COMMENT
    $Log: tt1.a68,v $
+   Revision 1.1.2.1  2004/09/04 17:36:11  teshields
+   LCSE Algol68toC initial revision
+   Default installation directory is '/usr/local/'
+
    Revision 1.1  2004/09/04 13:58:26  teshields
    Algol68toC v1.8 Public Baseline
 
