@@ -1,8 +1,8 @@
-[DECS  denotations  CONTEXT VOID  US0
-      usefulops, cif,
+DECS  denotations  CONTEXT VOID  USE
+*L    usefulops, cif,
       centities, environment:
 
-configinfo A68CONFIG "$Id: denotations.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
+configinfo A68CONFIG "$Id: denotations.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $";
 
 
 COMMENT 

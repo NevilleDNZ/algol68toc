@@ -4,12 +4,8 @@ USE
 
 COMMENT
    $Log: standard.a68,v $
-   Revision 1.6.2.1  2004/09/04 17:36:15  teshields
-   LCSE Algol68toC initial revision
-   Default installation directory is '/usr/local/'
-
-   Revision 1.6  2004/09/04 03:14:58  teshields
-   Algol68toC v1.8 Public Baseline
+   Revision 1.7  2004-11-07 16:48:42  sian
+   Removed PLUS, MINUS, TIMES
 
    Revision 1.6  2003/06/10 14:32:26  sian
    Added envp to the KEEP list in transput and standard
@@ -130,20 +126,6 @@ FLATRVLB(RVC),          FLATRVB(RVC), FLATRVSB(RVC), FLATRVSSB(RVC),
 Z(STR),                 CPTRTORVC(CPTR),
 
 ROUND(REAL), ENTIER(REAL),
-PLUS(LONG INT,LONG INT), MINUS(LONG INT,LONG INT),
-TIMES(LONG INT,LONG INT),
-
-PLUS(INT,INT),
-MINUS(INT,INT),
-TIMES(INT,INT),
-
-PLUS(SHORT INT,SHORT INT),
-MINUS(SHORT INT,SHORT INT),
-TIMES(SHORT INT,SHORT INT),
-
-PLUS(SHORT SHORT INT,SHORT SHORT INT),
-MINUS(SHORT SHORT INT,SHORT SHORT INT),
-TIMES(SHORT SHORT INT,SHORT SHORT INT),
 
 MIN(SHORT SHORT INT,SHORT SHORT INT),
 MIN(SHORT INT,SHORT INT), MIN(INT,INT), MIN(LONG INT,LONG INT),

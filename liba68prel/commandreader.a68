@@ -2,7 +2,7 @@ DECS  commandreader  CONTEXT VOID  USE  putstrings,  messageproc,  osinterface,
       commandsyntax:
 
 { " Id: commandreader.sta,v 1.1 91/10/14 14:26:14 edcad Exp $" }
-configinfo A68CONFIG "$Id: commandreader.a68,v 1.1.2.1 2004/09/04 17:36:13 teshields Exp $";
+configinfo A68CONFIG "$Id: commandreader.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $";
 
 
 COMMENT 

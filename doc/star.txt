@@ -2,17 +2,14 @@ Note
 ====
 By convention
  	*4 => VAX/VMS with the native mode compiler.
-	%4 => Ctrans. (NOT VMS)
-        *5 => UNIX / POSIX
+	%4 => Ctrans.
+        *5 => UNIX
         *D => DOS
         *0 is always a comment. 
 ELLA stars:
 	6 => VAX
-	L => LINUX
         R => SPARC
         9/P => diagnostic
         8/X => security
-	? => 680x0
-	T => ?
 
 

@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.1.2.1 2004/09/04 17:36:15 teshields Exp $
+# $Id: Makefile,v 1.1 2002-02-19 11:40:12 sian Exp $
 #-------------- Algol 68 sources ---------------
 qad_a := spmodes.a68 spaliens.a68 spops.a68 spplain.a68 \
         spconvert.a68 transput.a68 standard.a68

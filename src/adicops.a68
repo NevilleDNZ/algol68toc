@@ -1,9 +1,9 @@
 DECS  adicops  CONTEXT VOID  USE
-      usefulops,
+*L    usefulops,
       biops, centities, coutput, environ, environment,
       evalbase, incoperfn, idtable, incmode, modes, uniquenameserver, values:
 
-configinfo A68CONFIG "$Id: adicops.a68,v 1.2.2.2 2004/09/05 04:23:35 teshields Exp $";
+configinfo A68CONFIG "$Id: adicops.a68,v 1.2 2002-02-04 09:26:51 sian Exp $";
 
 
 COMMENT 

@@ -3,12 +3,8 @@ USE spmodes, spaliens:
 
 COMMENT
    $Log: spops.a68,v $
-   Revision 1.3.2.1  2004/09/04 17:36:15  teshields
-   LCSE Algol68toC initial revision
-   Default installation directory is '/usr/local/'
-
-   Revision 1.3  2004/09/04 03:14:47  teshields
-   Algol68toC v1.8 Public Baseline
+   Revision 1.4  2004-11-07 15:59:29  sian
+   Removed PLUS, MINUS and TIMES
 
    Revision 1.3  2001/06/18 11:04:27  sian
    1. Replaced non-standard hexadecimal string denotations with REPR n.
@@ -120,104 +116,6 @@ OP ENTIER = (REAL r)INT:
    set fpu cw(ocw);
    n
 );
-
-PRIO PLUS = 6, MINUS = 6, TIMES = 7;
-OP PLUS = (LONG INT a,b)LONG INT:
-(
-   LONG INT res;
-   SHORT BITS ocw;  get fpu cw(ocw);
-   set fpu cw(ocw & fpu cw algol68 round);
-   ph lplus(a,b,res);
-   set fpu cw(ocw);
-   res
-);
-   
-OP MINUS= (LONG INT a,b)LONG INT:
-(
-   LONG INT res;
-   SHORT BITS ocw;  get fpu cw(ocw);
-   set fpu cw(ocw & fpu cw algol68 round);
-   ph lminus(a,b,res);
-   set fpu cw(ocw);
-   res
-);
-   
-OP TIMES= (LONG INT a,b)LONG INT:
-(
-   LONG INT res;
-   SHORT BITS ocw;  get fpu cw(ocw);
-   set fpu cw(ocw & fpu cw algol68 round);
-   ph ltimes(a,b,res);
-   set fpu cw(ocw);
-   res
-);
-
-OP PLUS = (INT a,b)INT:
-(
-   INT res;
-   SHORT BITS ocw;  get fpu cw(ocw);
-   set fpu cw(ocw & fpu cw algol68 round);
-   ph plus(a,b,res);
-   set fpu cw(ocw);
-   res
-);
-   
-OP MINUS= (INT a,b)INT:
-(
-   INT res;
-   SHORT BITS ocw;  get fpu cw(ocw);
-   set fpu cw(ocw & fpu cw algol68 round);
-   ph minus(a,b,res);
-   set fpu cw(ocw);
-   res
-);
-   
-OP TIMES= (INT a,b)INT:
-(
-   INT res;
-   SHORT BITS ocw;  get fpu cw(ocw);
-   set fpu cw(ocw & fpu cw algol68 round);
-   ph times(a,b,res);
-   set fpu cw(ocw);
-   res
-);
-
-OP PLUS = (SHORT INT a,b)SHORT INT:
-IF INT res=LENG a+LENG b;  ABS res > LENG short max int
-THEN SHORTEN ansi raise(sigfpe)
-ELSE SHORTEN res
-FI;
-
-OP MINUS = (SHORT INT a,b)SHORT INT:
-IF INT res=LENG a-LENG b;  ABS res > LENG short max int
-THEN SHORTEN ansi raise(sigfpe)
-ELSE SHORTEN res
-FI;
-
-OP TIMES = (SHORT INT a,b)SHORT INT:
-IF INT res=LENG a*LENG b;  ABS res > LENG short max int
-THEN SHORTEN ansi raise(sigfpe)
-ELSE SHORTEN res
-FI;
-
-OP PLUS = (SHORT SHORT INT a,b)SHORT SHORT INT:
-IF INT res=LENG LENG a+LENG LENG b;  ABS res > LENG LENG short short max int
-THEN SHORTEN SHORTEN ansi raise(sigfpe)
-ELSE SHORTEN SHORTEN res
-FI;
-
-OP MINUS = (SHORT SHORT INT a,b)SHORT SHORT INT:
-IF INT res=LENG LENG a-LENG LENG b;  ABS res > LENG LENG short short max int
-THEN SHORTEN SHORTEN ansi raise(sigfpe)
-ELSE SHORTEN SHORTEN res
-FI;
-
-OP TIMES = (SHORT SHORT INT a,b)SHORT SHORT INT:
-IF INT res=LENG LENG a*LENG LENG b;  ABS res > LENG LENG short short max int
-THEN SHORTEN SHORTEN ansi raise(sigfpe)
-ELSE SHORTEN SHORTEN res
-FI;
-
 
 OP VALID = (REAL x)BOOL:
 BEGIN #Algol 68 equivalent of the C library "finite"#
@@ -427,15 +325,6 @@ fp64 bits after exp, fp64 mant word, fp64 exp word,
 fpu cw ieee, fpu cw algol68 round, fpu cw algol68 entier,
 
 ROUND(REAL), ENTIER(REAL),
-PLUS(LONG INT,LONG INT), MINUS(LONG INT,LONG INT),
-TIMES(LONG INT,LONG INT),
-
-PLUS(INT,INT), MINUS(INT,INT), TIMES(INT,INT),
-PLUS(SHORT INT,SHORT INT), MINUS(SHORT INT,SHORT INT),
-TIMES(SHORT INT,SHORT INT),
-PLUS(SHORT SHORT INT,SHORT SHORT INT),
-MINUS(SHORT SHORT INT,SHORT SHORT INT),
-TIMES(SHORT SHORT INT,SHORT SHORT INT),
 
 VALID(REAL), **(COMPL,INT), &*(REAL,INT),
 MAKERVC(CHAR), MAKERVC(STR), MAKERVC([]CHAR),

@@ -321,8 +321,8 @@ typedef struct A68t119  A68_119 ;    /* PROC(MODE118) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t120,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t120  A68_120 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,62,A68t121);
-typedef struct A68t121  A68_121 ;    /* STRUCT 62 CHAR */
+A_ISTRUCT(A68_CHAR ,57,A68t121);
+typedef struct A68t121  A68_121 ;    /* STRUCT 57 CHAR */
 
 A_PROCEDURE(A68_INT ,A68t122,(A68_VC ,struct A68t31 **),(A68_VC ,struct A68t31 **,void *));
 typedef struct A68t122  A68_122 ;    /* PROC(MODE26,REF REF MODE31) INT */
@@ -453,8 +453,8 @@ extern void ZRAAOSF(void);   /* messageproc */
 extern void MCBAOSF(void);   /* oserrors */
 extern void BAAAOSF(void);   /* cif */
 /* --- end of DECS initialisation functions --- */
-static A68_121   HECAOSF = {"$Id: osshell.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
-A_GISVEC(A68_VC ,IECAOSF,HECAOSF,62)
+static A68_121   HECAOSF = {"$Id: osshell.c,v 1.5 2003-05-30 21:20:46 sian Exp $"}; 
+A_GISVEC(A68_VC ,IECAOSF,HECAOSF,57)
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
@@ -586,15 +586,13 @@ static A68_134   QHCAOSF = {"Null file name \""};
 A_GISVEC(A68_VC ,RHCAOSF,QHCAOSF,16)
 extern int A_argc;
 extern char **A_argv;
-extern char **A_envp;
-#define A_prelude(argc,argv,envp) A_argc=argc; A_argv=argv; A_envp=envp
+#define A_prelude(argc,argv) A_argc=argc; A_argv = argv
 
 #define XHCAOSF_prelude A_prelude
 int A_argc = 0;
 char **A_argv = NULL;
-char **A_envp = NULL;
 
-#define YHCAOSF_define_argc_argv_envp dummy
+#define YHCAOSF_define_argc_argv dummy
 static A68_BOOL  ZHCAOSF_args_initialised;
 static A68_77   EICAOSF = {"Anon"}; 
 static A68_61  FICAOSF_arguments;
@@ -818,24 +816,24 @@ A_PROC_ENTRY(read);
 A_CLOSURE( SJCAOSF_generator, TJCAOSF_generator, UJCAOSF_generator );
 A_CALLPROC(SJCAOSF_generator,(A68_FALSE, &XJCAOSF),(A68_FALSE, &XJCAOSF,(SJCAOSF_generator).nonlocals));
 YJCAOSF_ans = XJCAOSF;
- /* line 294: */
+ /* line 292: */
 ZJCAOSF_l = 0;
- /* line 295: */
- /* line 296: */
+ /* line 293: */
+ /* line 294: */
 EXBAOSF_read_line( USBAOSF_stdin, YJCAOSF_ans, (&ZJCAOSF_l), TIBAOSF_global_msg, &AKCAOSF );
 if ( BVBAOSF_(AKCAOSF, YUBAOSF_io_no_newline) )
 { 
 BKCAOSF.data[0] = A_VTRIM(CKCAOSF,(YJCAOSF_ans),A_VTSCRIPT(&(CKCAOSF.upb),(YJCAOSF_ans).upb,1,ZJCAOSF_l));
 A_CALLPROC(NL(OJCAOSF_read),( &DKCAOSF),( &DKCAOSF,(NL(OJCAOSF_read)).nonlocals));
 BKCAOSF.data[1] = DKCAOSF;
- /* line 297: */
+ /* line 295: */
 JDAAOSF_concat( A_HISVEC(FKCAOSF,BKCAOSF,2,A68_VC ), &GKCAOSF );
 EKCAOSF = GKCAOSF;
 } 
 else
 { 
- /* line 298: */
- /* line 299: */
+ /* line 296: */
+ /* line 297: */
 EKCAOSF = A_VTRIM(HKCAOSF,(YJCAOSF_ans),A_VTSCRIPT(&(HKCAOSF.upb),(YJCAOSF_ans).upb,1,ZJCAOSF_l));
 } 
 } 
@@ -1014,8 +1012,8 @@ A68_48   destination;
 } KJCAOSF; 
 A_PROC_ENTRY(get_args);
 { 
- /* line 270: */
- /* line 271: */
+ /* line 268: */
+ /* line 269: */
 if ( !ZHCAOSF_args_initialised )
 { 
 #define RESULT MICAOSF
@@ -1023,12 +1021,12 @@ if ( !ZHCAOSF_args_initialised )
 }
 #undef RESULT
 NICAOSF_upb = MICAOSF;
- /* line 273: */
- /* line 274: */
+ /* line 271: */
+ /* line 272: */
 if ( (NICAOSF_upb==0) )
 { 
- /* line 275: */
- /* line 276: */
+ /* line 273: */
+ /* line 274: */
 A_CALLPROC(TIBAOSF_global_msg,(OUAAOSF_error, A_HVEC(QICAOSF,PICAOSF,A68_VC )),(OUAAOSF_error, A_HVEC(QICAOSF,PICAOSF,A68_VC ),(TIBAOSF_global_msg).nonlocals));
 } 
 else
@@ -1037,14 +1035,14 @@ A_CLOSURE( SICAOSF_generator, TICAOSF_generator, UICAOSF_generator );
 (( UICAOSF_generator * ) ( SICAOSF_generator.nonlocals )) -> NICAOSF_upb = NICAOSF_upb;
 A_CALLPROC(SICAOSF_generator,(A68_FALSE, &XICAOSF),(A68_FALSE, &XICAOSF,(SICAOSF_generator).nonlocals));
 FICAOSF_arguments = XICAOSF;
- /* line 278: */
+ /* line 276: */
 #define RESULT YICAOSF
 {RESULT = (void *)A_argv;
 }
 #undef RESULT
 ZICAOSF_myargv = YICAOSF;
- /* line 280: */
- /* line 281: */
+ /* line 278: */
+ /* line 279: */
 DJCAOSF = A_ISVEC(CJCAOSF,ZICAOSF_myargv,16000000,A68_31 *) ;
 FJCAOSF = A_VTRIM(EJCAOSF,(DJCAOSF),A_VTSCRIPT(&(EJCAOSF.upb),(DJCAOSF).upb,1,NICAOSF_upb)) ;
 GJCAOSF = FJCAOSF.upb -1;
@@ -1061,14 +1059,14 @@ MAAAOSF_cstringtorvc( (*AJCAOSF_new), &HJCAOSF );
 ZCAAOSF_makervc( HJCAOSF, &IJCAOSF );
 (*BJCAOSF_arg) = IJCAOSF;
 }
- /* line 282: */
+ /* line 280: */
 } 
- /* line 283: */
- /* line 284: */
+ /* line 281: */
+ /* line 282: */
 ZHCAOSF_args_initialised = A68_TRUE;
 } 
- /* line 286: */
- /* line 287: */
+ /* line 284: */
+ /* line 285: */
 KJCAOSF.source = FICAOSF_arguments ;
 JJCAOSF = (KJCAOSF.destination);
 } 
@@ -1085,18 +1083,18 @@ A68_92  IKCAOSF;  /* avoid structure result */
 A68_VC  JKCAOSF;  /* clause result */
 A68_VC  KKCAOSF;  /* avoid structure result */
 A_PROC_ENTRY(read_prompt);
+ /* line 288: */
+ /* line 289: */
+{ 
  /* line 290: */
  /* line 291: */
-{ 
- /* line 292: */
- /* line 293: */
 A_CLOSURE( OJCAOSF_read, PJCAOSF_read, QJCAOSF_read );
 (( QJCAOSF_read * ) ( OJCAOSF_read.nonlocals )) -> OJCAOSF_read = OJCAOSF_read;
- /* line 300: */
+ /* line 298: */
 VXBAOSF_write_buffer( VSBAOSF_stdout, Prompt, TIBAOSF_global_msg, &IKCAOSF );
 IKCAOSF;
- /* line 301: */
- /* line 302: */
+ /* line 299: */
+ /* line 300: */
 A_CALLPROC(OJCAOSF_read,( &KKCAOSF),( &KKCAOSF,(OJCAOSF_read).nonlocals));
 JKCAOSF = KKCAOSF;
 } 
@@ -1121,28 +1119,28 @@ A68_61   source;
 A68_48   destination;
 } WKCAOSF; 
 A_PROC_ENTRY(prompt_args);
- /* line 315: */
- /* line 316: */
+ /* line 313: */
+ /* line 314: */
 { 
 if ( !ZHCAOSF_args_initialised )
 { 
 LICAOSF_get_args(  &OKCAOSF );
 OKCAOSF;
 } 
- /* line 317: */
+ /* line 315: */
 MJCAOSF_read_prompt( Prompt, &PKCAOSF );
 QKCAOSF_buffer = PKCAOSF;
- /* line 318: */
+ /* line 316: */
 RKCAOSF_expanded = (A_VVAC(SKCAOSF));
- /* line 319: */
+ /* line 317: */
 NECAOSF_expand(QKCAOSF_buffer, (&RKCAOSF_expanded), Msg);
- /* line 320: */
+ /* line 318: */
 TKCAOSF = 1 ;
 QHAAOSF_parse_prompt( (*(&A_VINDEX(FICAOSF_arguments,TKCAOSF))), RKCAOSF_expanded, &UKCAOSF );
 FICAOSF_arguments = UKCAOSF;
- /* line 321: */
- /* line 322: */
- /* line 325: */
+ /* line 319: */
+ /* line 320: */
+ /* line 323: */
 WKCAOSF.source = FICAOSF_arguments ;
 VKCAOSF = (WKCAOSF.destination);
 } 
@@ -1159,9 +1157,9 @@ void EECAOSF(void)   /* initialise DECS osshell */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","osshell.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/oscommon.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osfiles.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/usefulops.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/messageproc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/oserrors.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/cif.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","osshell.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/oscommon.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/osfiles.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/usefulops.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/messageproc.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/oserrors.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/cif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_61  GICAOSF;  /* avoid structure result */
@@ -1179,11 +1177,11 @@ ZRAAOSF();   /* USE messageproc */
 MCBAOSF();   /* USE oserrors */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osshell.a68";
-A_config.translation_time = "Sun Sep 26 21:50:24 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/liba68prel/osshell.a68";
+A_config.translation_time = "Fri May 30 22:15:09 2003";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "DECAOSF (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:50:24 2004";
+A_config.spec_change_time = "Fri May 30 22:15:09 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
@@ -1301,27 +1299,25 @@ UEAALIB_a68config(LGAALIB_configinfo, IECAOSF);
  /* line 249: */
  /* line 250: */
  /* line 251: */
- /* line 252: */
+ /* line 254: */
  /* line 255: */
  /* line 256: */
  /* line 257: */
- /* line 258: */
  /* line 259: */
- /* line 261: */
 ZHCAOSF_args_initialised = A68_FALSE;
- /* line 262: */
+ /* line 260: */
 BICAOSF_generator( A68_TRUE, &GICAOSF );
 HICAOSF = A_LOC(A68_77 ) ;
 (*HICAOSF) = EICAOSF ;
 KICAOSF = A_HVEC(JICAOSF,A_ISVEC(IICAOSF,HICAOSF,4,A68_CHAR ),A68_VC ) ;
 A_VASSIGN2(KICAOSF,GICAOSF,A68_VC ) ;
 FICAOSF_arguments = GICAOSF;
- /* line 264: */
- /* line 268: */
- /* line 269: */
- /* line 289: */
- /* line 305: */
- /* line 326: */
+ /* line 262: */
+ /* line 266: */
+ /* line 267: */
+ /* line 287: */
+ /* line 303: */
+ /* line 324: */
 A_PROC_EXIT(DECS osshell);
 } 
 #undef NL

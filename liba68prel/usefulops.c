@@ -74,8 +74,8 @@ typedef struct A68t54  A68_54 ;    /* PROC(MODE53) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t55,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t55  A68_55 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,64,A68t56);
-typedef struct A68t56  A68_56 ;    /* STRUCT 64 CHAR */
+A_ISTRUCT(A68_CHAR ,59,A68t56);
+typedef struct A68t56  A68_56 ;    /* STRUCT 59 CHAR */
 A_ISTRUCT(A68_CHAR ,4,A68t57);
 typedef struct A68t57  A68_57 ;    /* STRUCT 4 CHAR */
 
@@ -199,8 +199,8 @@ extern void BAAALIB(void);   /* a68config */
 extern void BCAAOSF(void);   /* strops */
 extern void BAAAOSF(void);   /* cif */
 /* --- end of DECS initialisation functions --- */
-static A68_56   LKAAOSF = {"$Id: usefulops.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
-A_GISVEC(A68_VC ,MKAAOSF,LKAAOSF,64)
+static A68_56   LKAAOSF = {"$Id: usefulops.c,v 1.5 2003-05-30 21:20:47 sian Exp $"}; 
+A_GISVEC(A68_VC ,MKAAOSF,LKAAOSF,59)
 #include <stdio.h>
 #define SPRINTF(s,format,p1,p2) \
   A_int_INT(sprintf(A_VC_charptr(s),A_VC_charptr(format),A_INT_int(p1),A_INT_int(p2)))
@@ -1067,9 +1067,9 @@ void IKAAOSF(void)   /* initialise DECS usefulops */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","usefulops.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/strops.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/cif.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","usefulops.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/strops.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/cif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 if( A_invoked ) return;
@@ -1078,11 +1078,11 @@ BAAALIB();   /* USE a68config */
 BCAAOSF();   /* USE strops */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/usefulops.a68";
-A_config.translation_time = "Sun Sep 26 21:50:22 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/liba68prel/usefulops.a68";
+A_config.translation_time = "Fri May 30 22:15:07 2003";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "HKAAOSF (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:50:22 2004";
+A_config.spec_change_time = "Fri May 30 22:15:07 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

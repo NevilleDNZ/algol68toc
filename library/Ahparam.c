@@ -1,4 +1,4 @@
-/* $Id: Ahparam.c,v 1.3.2.1 2004/09/04 17:36:15 teshields Exp $ */
+/* $Id: Ahparam.c,v 1.3 2002-02-23 17:50:44 sian Exp $ */
 
 
 /* 
@@ -59,7 +59,7 @@
 **	ported to machines with only 7 character significance in external identifiers.
 */
 
-static char rcs_id[] = "$Id: Ahparam.c,v 1.3.2.1 2004/09/04 17:36:15 teshields Exp $";
+static char rcs_id[] = "$Id: Ahparam.c,v 1.3 2002-02-23 17:50:44 sian Exp $";
 
 #include <algol68/Asupport.h>
 

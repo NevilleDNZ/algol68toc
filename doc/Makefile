@@ -1,9 +1,9 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.7.2.1 2004/09/05 14:18:55 teshields Exp $
+# $Id: Makefile,v 1.7 2004-11-27 09:06:27 sian Exp $
 #
 #-------------- Documentation sources ---------------
-ctrans_doc := HOWTO-pame.txt compl.taylour star.txt
+ctrans_doc := HOWTO-PAME compl.taylour star.txt
 
 pame_tex := pame.tex title.tex preface.tex \
         chapter1.tex chapter2.tex chapter3.tex chapter4.tex \
@@ -45,8 +45,7 @@ ca68.1.gz : ca68.1
 	gzip -9c $< >$@
 
 install :
-	$(INSTALLDATA) -p rscompiler.dvi pame.dvi HOWTO-pame.txt \
+	$(INSTALLDATA) -p rscompiler.dvi pame.dvi HOWTO-PAME \
 	   compl.taylour star.txt $(DOCDIR)
-	$(INSTALLDATA) -p ctrans.info*.gz \
-	   $(INFODIR)
+	$(INSTALLDATA) -p ctrans.info.gz $(INFODIR)
 	$(INSTALLDATA) -p a68toc.1.gz ca68.1.gz $(MANDIR)

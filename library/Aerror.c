@@ -1,4 +1,4 @@
-/* $Id: Aerror.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $ */
+/* $Id: Aerror.c,v 1.2 2002-02-01 14:39:52 sian Exp $ */
 
 
 
@@ -45,7 +45,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-static char rcs_id[] = "$Id: Aerror.c,v 1.2.2.1 2004/09/04 17:36:15 teshields Exp $";
+static char rcs_id[] = "$Id: Aerror.c,v 1.2 2002-02-01 14:39:52 sian Exp $";
 
 A68_VOID A68_ERROR(const char *message)
 {

@@ -3,7 +3,7 @@ DECS  osshell  CONTEXT VOID USE  cif,  oserrors,  messageproc,  usefulops,
 
 {  Id: osshell.a68,v 1.3 1993/11/05 12:05:59 aap Exp $ }
 
-configinfo A68CONFIG "$Id: osshell.a68,v 1.2.2.1 2004/09/04 17:36:14 teshields Exp $";
+configinfo A68CONFIG "$Id: osshell.a68,v 1.1.1.1 2001-05-07 10:16:12 sian Exp $";
 
 
 COMMENT 
@@ -248,15 +248,13 @@ INT prelude =
   ALIEN "A_prelude"
         "extern int A_argc;"
         "extern char **A_argv;"
-        "extern char **A_envp;"
-        "#define A_prelude(argc,argv,envp) A_argc=argc; A_argv=argv; A_envp=envp";
+        "#define A_prelude(argc,argv) A_argc=argc; A_argv = argv";
 
 { but don't keep this ... }
-INT define_argc_argv_envp =
+INT define_argc_argv =
   ALIEN "dummy"
         "int A_argc = 0;"
-        "char **A_argv = NULL;"
-        "char **A_envp = NULL;";
+        "char **A_argv = NULL;";
 
 BOOL args_initialised := FALSE;
 REF VECTOR [] RVC  arguments:= LOC VECTOR [1] RVC:= LOC STRUCT 4 CHAR:= "Anon";

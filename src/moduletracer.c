@@ -86,8 +86,8 @@ typedef struct A68t58  A68_58 ;    /* PROC(MODE57) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t59,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t59  A68_59 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,67,A68t60);
-typedef struct A68t60  A68_60 ;    /* STRUCT 67 CHAR */
+A_ISTRUCT(A68_CHAR ,62,A68t60);
+typedef struct A68t60  A68_60 ;    /* STRUCT 62 CHAR */
 struct A68t61{
 A68_VC  Name;
 A68_INT  Tracelevel;
@@ -124,8 +124,8 @@ extern A68_VOID  ZCAAOSF_makervc(A68_VC ,A68_VC *);
 extern void BAAALIB(void);   /* a68config */
 extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
-static A68_60   ECHACTR = {"$Id: moduletracer.c,v 1.5.2.4 2004/09/27 03:04:20 teshields Exp $"}; 
-A_GISVEC(A68_VC ,FCHACTR,ECHACTR,67)
+static A68_60   ECHACTR = {"$Id: moduletracer.c,v 1.4 2003-05-30 21:20:49 sian Exp $"}; 
+A_GISVEC(A68_VC ,FCHACTR,ECHACTR,62)
 #define GCHACTR_niltraceinfo (A68_61 *)A68_NIL
 static A68_61 * HCHACTR_traceinfo;
 static A68_63   OCHACTR = {"all"}; 
@@ -145,41 +145,41 @@ A68_BOOL  MCHACTR;  /* optbool result */
 A68_BOOL  NCHACTR;  /* optbool result */
 A68_61 * QCHACTR;  /* clause result */
 A_PROC_ENTRY(findtraceinfo);
- /* line 56: */
  /* line 57: */
+ /* line 58: */
 { 
 KCHACTR_t = HCHACTR_traceinfo;
- /* line 58: */
+ /* line 59: */
 LCHACTR_found = A68_FALSE;
- /* line 60: */
+ /* line 61: */
 for ( ;; )
 { 
- /* line 61: */
+ /* line 62: */
 MCHACTR = (KCHACTR_t!=GCHACTR_niltraceinfo);
 if ( MCHACTR )
 {MCHACTR = !LCHACTR_found;
 }
- /* line 62: */
+ /* line 63: */
 if ( !(MCHACTR) ) break;
 NCHACTR = A_VC_EQ((*(&(KCHACTR_t->Name))),Keyword);
 if ( ! NCHACTR )
-{ /* line 63: */
+{ /* line 64: */
 NCHACTR = A_VC_EQ((*(&(KCHACTR_t->Name))),PCHACTR);
 }
 if ( NCHACTR )
 { 
- /* line 64: */
+ /* line 65: */
 LCHACTR_found = A68_TRUE;
 } 
 else
 { 
- /* line 65: */
  /* line 66: */
+ /* line 67: */
 KCHACTR_t = (*(&(KCHACTR_t->Next)));
 } 
 }
- /* line 68: */
  /* line 69: */
+ /* line 70: */
 QCHACTR = KCHACTR_t;
 } 
 A_PROC_EXIT(findtraceinfo);
@@ -194,8 +194,8 @@ A68_VC  VCHACTR;  /* avoid structure result */
 A68_61 * WCHACTR;  /* YIELD */
 A68_BOOL  XCHACTR;  /* clause result */
 A_PROC_ENTRY(settracelevel);
- /* line 72: */
  /* line 73: */
+ /* line 74: */
 { 
 ZCAAOSF_makervc( Keyword, &VCHACTR );
 UCHACTR.Name = VCHACTR;
@@ -204,8 +204,8 @@ UCHACTR.Next = HCHACTR_traceinfo;
 WCHACTR = A_HEAP(A68_61 ) ;
 (*WCHACTR) = UCHACTR ;
 HCHACTR_traceinfo = WCHACTR;
- /* line 74: */
  /* line 75: */
+ /* line 76: */
 XCHACTR = A68_TRUE;
 } 
 A_PROC_EXIT(settracelevel);
@@ -219,17 +219,17 @@ A68_61 * ADHACTR_t;
 A68_BOOL  BDHACTR;  /* clause result */
 A68_INT  CDHACTR;  /* clause result */
 A_PROC_ENTRY(tracelevel);
- /* line 78: */
  /* line 79: */
+ /* line 80: */
 { 
 ADHACTR_t = JCHACTR_findtraceinfo(Keyword);
- /* line 80: */
  /* line 81: */
  /* line 82: */
+ /* line 83: */
 BDHACTR = (ADHACTR_t==GCHACTR_niltraceinfo);
 if ( BDHACTR )
 { 
- /* line 83: */
+ /* line 84: */
 CDHACTR = 0;
 } 
 else
@@ -242,15 +242,15 @@ return( CDHACTR );
 } 
 #undef NL
  /* line 2: */
- /* line 4: */
+ /* line 5: */
 void BCHACTR(void)   /* initialise DECS moduletracer */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","-dir",".","moduletracer.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/usefulops.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","-dir",".","moduletracer.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/usefulops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 if( A_invoked ) return;
@@ -258,27 +258,27 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/src/moduletracer.a68";
-A_config.translation_time = "Sun Sep 26 21:50:55 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/src/moduletracer.a68";
+A_config.translation_time = "Fri May 30 22:15:32 2003";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ACHACTR (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:50:55 2004";
+A_config.spec_change_time = "Fri May 30 22:15:32 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS moduletracer);
 UEAALIB_a68config(LGAALIB_configinfo, FCHACTR);
- /* line 43: */
- /* line 48: */
- /* line 50: */
- /* line 52: */
+ /* line 44: */
+ /* line 49: */
+ /* line 51: */
+ /* line 53: */
 HCHACTR_traceinfo = GCHACTR_niltraceinfo;
- /* line 54: */
- /* line 71: */
- /* line 77: */
- /* line 85: */
- /* line 87: */
- /* line 90: */
+ /* line 55: */
+ /* line 72: */
+ /* line 78: */
+ /* line 86: */
+ /* line 88: */
+ /* line 91: */
 /*SKIP*/;
 A_PROC_EXIT(DECS moduletracer);
 } 

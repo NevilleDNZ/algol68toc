@@ -21,8 +21,8 @@ typedef struct A68t36  A68_36 ;    /* PROC(MODE35) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t37,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t37  A68_37 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,58,A68t38);
-typedef struct A68t38  A68_38 ;    /* STRUCT 58 CHAR */
+A_ISTRUCT(A68_CHAR ,53,A68t38);
+typedef struct A68t38  A68_38 ;    /* STRUCT 53 CHAR */
 A_ISTRUCT(A68_CHAR ,16000000,A68t40);
 typedef struct A68t40  A68_40 ;    /* STRUCT 16000000 CHAR */
 A_ISTRUCT(struct A68t40 *,16000000,A68t42);
@@ -107,8 +107,8 @@ static A68_VC  A_configinfo;
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
 /* --- end of DECS initialisation functions --- */
-static A68_38   EAAAOSF = {"$Id: cif.c,v 1.6.2.4 2004/09/27 03:04:14 teshields Exp $"}; 
-A_GISVEC(A68_VC ,FAAAOSF,EAAAOSF,58)
+static A68_38   EAAAOSF = {"$Id: cif.c,v 1.5 2003-05-30 21:20:44 sian Exp $"}; 
+A_GISVEC(A68_VC ,FAAAOSF,EAAAOSF,53)
 #define GAAAOSF_newline_char '\012'
 #define HAAAOSF_null_char '\000'
 #include <stdio.h>
@@ -175,20 +175,20 @@ A68_VC  QAAAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  RAAAOSF;  /* OPERATORS - trim index */
 A68_VC  SAAAOSF;  /* OPERATORS - trim index */
 A_PROC_ENTRY(cstringtorvc);
- /* line 103: */
- /* line 105: */
-{ 
- /* line 106: */
- /* line 107: */
- /* line 108: */
  /* line 109: */
+ /* line 111: */
+{ 
+ /* line 112: */
+ /* line 113: */
+ /* line 114: */
+ /* line 115: */
 if ( (S==(A68_40 *)A68_NIL) )
 { 
 OAAAOSF = A_VVAC(PAAAOSF);
 } 
 else
 { 
- /* line 110: */
+ /* line 116: */
 RAAAOSF = A_ISVEC(QAAAOSF,S,16000000,A68_CHAR ) ;
 OAAAOSF = A_VTRIM(SAAAOSF,(RAAAOSF),A_VTSCRIPT(&(SAAAOSF.upb),(RAAAOSF).upb,1,NAAAOSF_strlen(S)));
 } 
@@ -207,7 +207,7 @@ A68_VC   source;
 A68_44   destination;
 } WAAAOSF; 
 A_PROC_ENTRY(vctocharptr);
- /* line 123: */
+ /* line 129: */
 WAAAOSF.source = Buf ;
 VAAAOSF = (WAAAOSF.destination).Ptr;
 A_PROC_EXIT(vctocharptr);
@@ -223,7 +223,7 @@ A68_47   source;
 A68_45   destination;
 } ABAAOSF; 
 A_PROC_ENTRY(vitointptr);
- /* line 126: */
+ /* line 132: */
 ABAAOSF.source = Buf ;
 ZAAAOSF = (ABAAOSF.destination).Ptr;
 A_PROC_EXIT(vitointptr);
@@ -250,14 +250,14 @@ A68_VC  SBAAOSF;  /* YIELD */
 A68_INT  TBAAOSF;  /* YIELD */
 A68_CHAR * UBAAOSF;  /* YIELD */
 A_PROC_ENTRY(nullstr);
- /* line 132: */
- /* line 141: */
+ /* line 138: */
+ /* line 147: */
 { 
 DBAAOSF.source = UAAAOSF_vctocharptr(Str) ;
 EBAAOSF_ptr = (DBAAOSF.destination);
- /* line 142: */
- /* line 143: */
- /* line 144: */
+ /* line 148: */
+ /* line 149: */
+ /* line 150: */
 GBAAOSF = A_ISVEC(FBAAOSF,EBAAOSF_ptr,16000000,A68_CHAR ) ;
 HBAAOSF = (Str.upb+1) ;
 if ( ((*(&A_VINDEX(GBAAOSF,HBAAOSF)))==HAAAOSF_null_char) )
@@ -270,16 +270,16 @@ A_CLOSURE( KBAAOSF_generator, LBAAOSF_generator, MBAAOSF_generator );
 (( MBAAOSF_generator * ) ( KBAAOSF_generator.nonlocals )) -> Str = Str;
 A_CALLPROC(KBAAOSF_generator,(A68_TRUE, &QBAAOSF),(A68_TRUE, &QBAAOSF,(KBAAOSF_generator).nonlocals));
 PBAAOSF_ans = QBAAOSF;
- /* line 145: */
+ /* line 151: */
 SBAAOSF = A_VTRIM(RBAAOSF,(PBAAOSF_ans),A_VTSCRIPT(&(RBAAOSF.upb),(PBAAOSF_ans).upb,1,Str.upb)) ;
 A_VASSIGN2(Str,SBAAOSF,A68_CHAR );
- /* line 146: */
+ /* line 152: */
 TBAAOSF = PBAAOSF_ans.upb ;
 UBAAOSF = (&A_VINDEX(PBAAOSF_ans,TBAAOSF)) ;
 (*UBAAOSF) = HAAAOSF_null_char;
- /* line 147: */
- /* line 148: */
- /* line 149: */
+ /* line 153: */
+ /* line 154: */
+ /* line 155: */
 IBAAOSF = PBAAOSF_ans;
 } 
 } 
@@ -295,9 +295,9 @@ void BAAAOSF(void)   /* initialise DECS cif */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","cif.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","cif.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 union {  /* BIOP 99 */
@@ -308,49 +308,49 @@ if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/cif.a68";
-A_config.translation_time = "Sun Sep 26 21:50:22 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/liba68prel/cif.a68";
+A_config.translation_time = "Fri May 30 22:15:07 2003";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "AAAAOSF (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:50:22 2004";
+A_config.spec_change_time = "Fri May 30 22:15:07 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS cif);
 UEAALIB_a68config(LGAALIB_configinfo, FAAAOSF);
  /* line 60: */
- /* line 65: */
- /* line 73: */
- /* line 74: */
+ /* line 66: */
+ /* line 75: */
  /* line 76: */
  /* line 78: */
  /* line 80: */
+ /* line 83: */
 JAAAOSF.source = (-1) ;
 KAAAOSF_nilfuncptr = (JAAAOSF.destination);
- /* line 81: */
  /* line 84: */
- /* line 85: */
  /* line 87: */
- /* line 88: */
- /* line 90: */
+ /* line 89: */
  /* line 92: */
  /* line 93: */
- /* line 94: */
- /* line 96: */
- /* line 112: */
- /* line 125: */
- /* line 128: */
- /* line 129: */
+ /* line 95: */
+ /* line 98: */
+ /* line 99: */
+ /* line 100: */
+ /* line 102: */
+ /* line 118: */
  /* line 131: */
- /* line 151: */
- /* line 152: */
- /* line 153: */
- /* line 154: */
- /* line 156: */
- /* line 158: */
- /* line 160: */
- /* line 162: */
- /* line 191: */
+ /* line 134: */
+ /* line 135: */
+ /* line 137: */
+ /* line 157: */
+ /* line 159: */
+ /* line 161: */
+ /* line 163: */
+ /* line 166: */
+ /* line 169: */
+ /* line 172: */
+ /* line 174: */
+ /* line 203: */
 /*SKIP*/;
 A_PROC_EXIT(DECS cif);
 } 

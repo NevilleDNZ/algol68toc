@@ -335,8 +335,8 @@ typedef struct A68t113  A68_113 ;    /* PROC(MODE95) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t114,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t114  A68_114 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,63,A68t115);
-typedef struct A68t115  A68_115 ;    /* STRUCT 63 CHAR */
+A_ISTRUCT(A68_CHAR ,58,A68t115);
+typedef struct A68t115  A68_115 ;    /* STRUCT 58 CHAR */
 A_ISTRUCT(A68_CHAR ,45,A68t116);
 typedef struct A68t116  A68_116 ;    /* STRUCT 45 CHAR */
 A_ISTRUCT(A68_CHAR ,46,A68t117);
@@ -387,8 +387,7 @@ extern A68_VOID  KVBAOSF_file_name(struct A68t62 *,A68_VC *);
 #define APBAOSF_exit EXIT
 extern int A_argc;
 extern char **A_argv;
-extern char **A_envp;
-#define A_prelude(argc,argv,envp) A_argc=argc; A_argv=argv; A_envp=envp
+#define A_prelude(argc,argv) A_argc=argc; A_argv = argv
 
 #define XHCAOSF_prelude A_prelude
 #include <algol68/Alibrary.h>
@@ -426,8 +425,8 @@ extern void ONEAOSF(void);   /* options */
 extern void ZRAAOSF(void);   /* messageproc */
 extern void BCAAOSF(void);   /* strops */
 /* --- end of DECS initialisation functions --- */
-static A68_115   RCHAOSF = {"$Id: testmode.c,v 1.6.2.4 2004/09/27 03:04:15 teshields Exp $"}; 
-A_GISVEC(A68_VC ,SCHAOSF,RCHAOSF,63)
+static A68_115   RCHAOSF = {"$Id: testmode.c,v 1.5 2003-05-30 21:20:47 sian Exp $"}; 
+A_GISVEC(A68_VC ,SCHAOSF,RCHAOSF,58)
 static A68_116   UCHAOSF = {"Suppress input file suspension after an error"}; 
 A_GISVEC(A68_VC ,VCHAOSF,UCHAOSF,45)
 static A68_117   WCHAOSF = {"Suppress the output of library version numbers"}; 
@@ -671,9 +670,9 @@ void OCHAOSF(void)   /* initialise DECS testmode */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","testmode.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osinterface.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/options.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/messageproc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/strops.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","testmode.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/osinterface.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/options.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/messageproc.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/strops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_120  TCHAOSF;  /* collateral clause result */
@@ -698,11 +697,11 @@ ONEAOSF();   /* USE options */
 ZRAAOSF();   /* USE messageproc */
 BCAAOSF();   /* USE strops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/testmode.a68";
-A_config.translation_time = "Sun Sep 26 21:50:30 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/liba68prel/testmode.a68";
+A_config.translation_time = "Fri May 30 22:15:14 2003";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "NCHAOSF (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:50:30 2004";
+A_config.spec_change_time = "Fri May 30 22:15:14 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

@@ -835,8 +835,8 @@ typedef struct A68t224  A68_224 ;    /* PROC(MODE143) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t225,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t225  A68_225 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,68,A68t226);
-typedef struct A68t226  A68_226 ;    /* STRUCT 68 CHAR */
+A_ISTRUCT(A68_CHAR ,63,A68t226);
+typedef struct A68t226  A68_226 ;    /* STRUCT 63 CHAR */
 A_ISTRUCT(struct A68t52 ,2,A68t227);
 typedef struct A68t227  A68_227 ;    /* STRUCT 2 MODE52 */
 A_ISTRUCT(struct A68t52 ,6,A68t228);
@@ -889,8 +889,7 @@ extern A68_113  RTBAOSF_update_truncate_access;
 #define APBAOSF_exit EXIT
 extern int A_argc;
 extern char **A_argv;
-extern char **A_envp;
-#define A_prelude(argc,argv,envp) A_argc=argc; A_argv=argv; A_envp=envp
+#define A_prelude(argc,argv) A_argc=argc; A_argv = argv
 
 #define XHCAOSF_prelude A_prelude
 #include <algol68/Alibrary.h>
@@ -931,8 +930,8 @@ extern void CQEAOSF(void);   /* osinterface */
 extern void ZRAAOSF(void);   /* messageproc */
 extern void KNDAOSF(void);   /* putstrings */
 /* --- end of DECS initialisation functions --- */
-static A68_226   QLLAOSF = {"$Id: commandcaller.c,v 1.6.2.4 2004/09/27 03:04:14 teshields Exp $"}; 
-A_GISVEC(A68_VC ,RLLAOSF,QLLAOSF,68)
+static A68_226   QLLAOSF = {"$Id: commandcaller.c,v 1.5 2003-05-30 21:20:44 sian Exp $"}; 
+A_GISVEC(A68_VC ,RLLAOSF,QLLAOSF,63)
 A68_BOOL  SLLAOSF_check_syntax;
 A68_BOOL  TLLAOSF_show_parameters;
 static A68_229   TNLAOSF = {"CHECKSYNTAX"}; 
@@ -1215,9 +1214,9 @@ void NLLAOSF(void)   /* initialise DECS commandcaller */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","commandcaller.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/ioprocs.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/command.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/commandsyntax.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/osinterface.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/messageproc.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/putstrings.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","commandcaller.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/ioprocs.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/command.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/commandsyntax.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/osinterface.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/messageproc.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/putstrings.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 if( A_invoked ) return;
@@ -1230,11 +1229,11 @@ CQEAOSF();   /* USE osinterface */
 ZRAAOSF();   /* USE messageproc */
 KNDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/commandcaller.a68";
-A_config.translation_time = "Sun Sep 26 21:50:34 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/liba68prel/commandcaller.a68";
+A_config.translation_time = "Fri May 30 22:15:17 2003";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "MLLAOSF (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:50:34 2004";
+A_config.spec_change_time = "Fri May 30 22:15:17 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

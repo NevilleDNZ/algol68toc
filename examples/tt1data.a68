@@ -5,14 +5,7 @@ BEGIN
 
 COMMENT
    $Log: tt1data.a68,v $
-   Revision 1.1.2.1  2004/09/04 17:36:11  teshields
-   LCSE Algol68toC initial revision
-   Default installation directory is '/usr/local/'
-
-   Revision 1.1  2004/09/04 13:58:26  teshields
-   Algol68toC v1.8 Public Baseline
-
-   Revision 1.1.1.1  2001/05/07 10:16:10  sian
+   Revision 1.1.1.1  2001-05-07 10:16:10  sian
    Import of Ctrans v1.0.4
 
    Revision 1.1  2000/01/15 11:11:15  sian

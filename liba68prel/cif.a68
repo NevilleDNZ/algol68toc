@@ -2,7 +2,7 @@ DECS  cif  CONTEXT VOID:
 
 {  Id: cif.a68,v 2.10 1993/08/24 13:35:19 aap Exp $ }
 
-configinfo A68CONFIG "$Id: cif.a68,v 1.1.2.2 2004/09/05 04:02:26 teshields Exp $";
+configinfo A68CONFIG "$Id: cif.a68,v 1.1.1.1 2001-05-07 10:16:12 sian Exp $";
 
 
 COMMENT 
@@ -61,8 +61,10 @@ MODE
    CPOINTER    = REF BITS,                        { generic pointer () * }
    CCHARPTR    = REF CHAR,                        { A68_CHAR * == char * }
    CINTPTR     = REF INT,                         { A68_INT * }
-   CSTRING     = REF STRUCT 16000000 CHAR,        { char * }
-   CCHARPTRPTR = REF STRUCT 16000000 CSTRING;     { char ** }
+%4 CSTRING     = REF STRUCT 16000000 CHAR,        { char * }
+*4 CSTRING     = REF STRUCT 1600 CHAR,            { char * }
+%4 CCHARPTRPTR = REF STRUCT 16000000 CSTRING;     { char ** }
+*4 CCHARPTRPTR = REF STRUCT 1600 CSTRING;         { char ** }
 
 
 {
@@ -75,19 +77,23 @@ OP (INT) CFUNCPTR TOCFUNCPTR = BIOP 99;
 
 CHAR newline_char = 16r"0a", null_char = 16r"0";
 
-CCHARPTR null c charptr = ALIEN "NULL" "#include <stdio.h>";
+%4 CCHARPTR null c charptr = ALIEN "NULL" "#include <stdio.h>";
+*4 CCHARPTR null c charptr = NIL;
 
 CFUNCPTR nilfuncptr  = TOCFUNCPTR -1;
 MODE RVC = REF VECTOR [] CHAR;
 
-{ This description should match the one in "a68_types.h" }
-MODE VDESC = STRUCT (CCHARPTR  ptr,  BITS  gcmark,  INT  upb);
-MODE VIDESC = STRUCT (CINTPTR  ptr,  BITS  gcmark,  INT  upb);
+%4 { This description should match the one in "a68_types.h" }
+%4 MODE VDESC = STRUCT (CCHARPTR  ptr,  BITS  gcmark,  INT  upb);
+*4 MODE VDESC = STRUCT (INT  upb,  CCHARPTR  ptr);
+%4 MODE VIDESC = STRUCT (CINTPTR  ptr,  BITS  gcmark,  INT  upb);
+*4 MODE VIDESC = STRUCT (INT  upb,  CINTPTR  ptr);
 
 OP ( VECTOR [] CHAR ) VDESC TOVDESC = BIOP 99;
 OP ( VECTOR [] INT  ) VIDESC TOVIDESC = BIOP 99;
 
-MODE PDESC = STRUCT(CFUNCPTR cp, CSTRING env);
+%4 MODE PDESC = STRUCT(CFUNCPTR cp, CSTRING env);
+*4 MODE PDESC = CFUNCPTR;
 
 OP (REF PROC VOID) REF PDESC TOREFPDESC = BIOP 99;
 OP (PROC VOID) PDESC TOPDESC = BIOP 99;
@@ -103,8 +109,8 @@ OP  CSTRINGTORVC = ( CSTRING s ) RVC:
 BEGIN
   PROC ( CSTRING ) INT strlen =
   ALIEN "STRLEN"
-    "#include <string.h>"
-    "#define STRLEN(s) strlen((char *)s)"
+%4  "#include <string.h>"
+%4  "#define STRLEN(s) strlen((char *)s)"
   ;
   ( s IS NIL | NIL | s[ : strlen(s) ] )
 END;
@@ -148,14 +154,20 @@ BEGIN
    FI
 END;
 
-SHORT SHORT INT short short maxint = ALIEN "(A68_SSINT)A68_MAX_SSINT" "/**/";
-SHORT INT       short maxint       = ALIEN "(A68_SINT)A68_MAX_SINT" "/**/";
-INT             maxint             = ALIEN "(A68_INT)A68_MAX_INT" "/**/";
-LONG INT        long maxint        = ALIEN "(A68_LINT)A68_MAX_LINT" "/**/";
+%4 SHORT SHORT INT short short maxint = ALIEN "(A68_SSINT)A68_MAX_SSINT" "/**/";
+*4 SHORT SHORT INT short short maxint = SHORT SHORT 127;
+%4 SHORT INT       short maxint       = ALIEN "(A68_SINT)A68_MAX_SINT" "/**/";
+*4 SHORT INT       short maxint       = SHORT 32767;
+%4 INT             maxint             = ALIEN "(A68_INT)A68_MAX_INT" "/**/";
+*4 INT             maxint             = ABS 16r7fffffff;
+%4 LONG INT        long maxint        = ALIEN "(A68_LINT)A68_MAX_LINT" "/**/";
+*4 LONG INT        long maxint        = LENG maxint;
 
-INT max abs char = ALIEN "(A68_INT)A68_MAX_CHAR" "/**/";
+%4 INT max abs char = ALIEN "(A68_INT)A68_MAX_CHAR" "/**/";
+*4 INT max abs char = 255;
 
-INT bits width = ALIEN "A_SZ_BITS" "/**/";
+%4 INT bits width = ALIEN "A_SZ_BITS" "/**/";
+*4 INT bits width = 32;
 
 SKIP
 

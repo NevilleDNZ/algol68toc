@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.3.2.1 2004/09/04 17:36:16 teshields Exp $
+# $Id: Makefile,v 1.2 2002-02-23 17:50:44 sian Exp $
 #------------ Algol 68 sources -------------
 a68toc_a:=incid.a68 incimperatives.a68 incinstallation.a68 \
         incmode.a68 incoperfn.a68 incenviron.a68 ctrans_version.a68 \
@@ -28,8 +28,8 @@ A68_LIBS=-L$(LPD) -la68prel -L$(LBD) -la68
 
 all : a68toc
 
-a68toc : $(LBD)/Afirst.o $(ACD)/a68config.o $(a68toc_o) \
-         a68toc.o $(LPD)/liba68prel.a $(LBD)/liba68.a
+a68toc : $(LBD)/Afirst.o $(ACD)/a68config.o a68toc.o \
+         $(a68toc_o) $(LPD)/liba68prel.a $(LBD)/liba68.a
 	$(CC) -o $@ $< a68toc.o $(a68toc_o) $(A68_LIBS) -lm -lc
 
 Translate : $(a68toc_c) a68toc.c

@@ -1,4 +1,4 @@
-/* UNAME:VWABCTR */
+/* UNAME:MYABCTR */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_INT *,A68t31,(A68_INT *,A68_VC ),(A68_INT *,A68_VC ,void *));
@@ -1211,8 +1211,8 @@ typedef struct A68t261  A68_261 ;    /* PROC(MODE148) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t262,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t262  A68_262 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,63,A68t263);
-typedef struct A68t263  A68_263 ;    /* STRUCT 63 CHAR */
+A_ISTRUCT(A68_CHAR ,58,A68t263);
+typedef struct A68t263  A68_263 ;    /* STRUCT 58 CHAR */
 
 A_PROCEDURE(A68_VOID ,A68t264,(struct A68t180 *),(struct A68t180 *,void *));
 typedef struct A68t264  A68_264 ;    /* PROC MODE180 */
@@ -1326,10 +1326,10 @@ static A68_VC  A_configinfo;
 
 
 /* --- Imports from values --- */
-extern A68_VOID  PWPACTR_getcfragment(struct A68t64 *,A68_VC *);
-extern A68_BITS  YIJACTR_defaultinfo;
-extern A68_71 * VIJACTR_nilvaluelist;
-extern A68_64  MJJACTR_skipvalue;
+extern A68_VOID  GYPACTR_getcfragment(struct A68t64 *,A68_VC *);
+extern A68_BITS  PKJACTR_defaultinfo;
+extern A68_71 * MKJACTR_nilvaluelist;
+extern A68_64  DLJACTR_skipvalue;
 /* --- End of imports from values --- */
 
 
@@ -1338,12 +1338,12 @@ extern A68_64  MJJACTR_skipvalue;
 
 
 /* --- Imports from uniquenameserver --- */
-extern A68_56  ZGMACTR_newuniquename(void);
+extern A68_56  QIMACTR_newuniquename(void);
 /* --- End of imports from uniquenameserver --- */
 
 
 /* --- Imports from oper --- */
-extern A68_VOID  VOQACTR_oper(struct A68t184 ,struct A68t71 **,struct A68t71 *);
+extern A68_VOID  MQQACTR_oper(struct A68t184 ,struct A68t71 **,struct A68t71 *);
 /* --- End of imports from oper --- */
 
 
@@ -1352,23 +1352,23 @@ extern A68_VOID  VOQACTR_oper(struct A68t184 ,struct A68t71 **,struct A68t71 *);
 
 
 /* --- Imports from modules --- */
-extern A68_115 * KZOACTR_currentmodinfo;
-extern A68_BOOL  FLOACTR_composition;
-extern A68_214  JZOACTR_currentmodule;
-extern A68_VOID  RCPACTR_initialiseunames(void);
+extern A68_115 * BBPACTR_currentmodinfo;
+extern A68_BOOL  WMOACTR_composition;
+extern A68_214  ABPACTR_currentmodule;
+extern A68_VOID  IEPACTR_initialiseunames(void);
 /* --- End of imports from modules --- */
 
 
 /* --- Imports from modes --- */
-extern A68_201  HUMACTR_constituents;
-extern A68_VOID  AENACTR_cfieldname(struct A68t200 *,A68_VC *);
-extern A68_VOID  UIOACTR_declarectemporary(A68_INT ,A68_VC ,A68_68 *);
-extern A68_BOOL  XRMACTR_dynamic(A68_INT );
-extern A68_INT  RMMACTR_modetype(A68_INT );
-extern A68_201  JUMACTR_parameters;
-extern A68_VOID  BSMACTR_procinfo(A68_INT ,A68_199 *);
-extern A68_VOID  NTMACTR_structfields(A68_INT ,A68_208 *);
-extern A68_INT  QANACTR_finddeflexmode(A68_INT );
+extern A68_201  YVMACTR_constituents;
+extern A68_VOID  RFNACTR_cfieldname(struct A68t200 *,A68_VC *);
+extern A68_VOID  LKOACTR_declarectemporary(A68_INT ,A68_VC ,A68_68 *);
+extern A68_BOOL  OTMACTR_dynamic(A68_INT );
+extern A68_INT  IOMACTR_modetype(A68_INT );
+extern A68_201  AWMACTR_parameters;
+extern A68_VOID  STMACTR_procinfo(A68_INT ,A68_199 *);
+extern A68_VOID  EVMACTR_structfields(A68_INT ,A68_208 *);
+extern A68_INT  HCNACTR_finddeflexmode(A68_INT );
 /* --- End of imports from modes --- */
 
 
@@ -1385,32 +1385,32 @@ extern A68_INT  QANACTR_finddeflexmode(A68_INT );
 
 
 /* --- Imports from loops --- */
-extern A68_VOID  KBABCTR_for(struct A68t194 *,A68_INT ,struct A68t71 **);
-extern A68_VOID  YKABCTR_forall(struct A68t198 ,struct A68t71 **);
-extern A68_VOID  SVABCTR_while(void);
-extern A68_VOID  UVABCTR_whiledo(struct A68t64 *);
-extern A68_VOID  NWABCTR_whileod(void);
-extern A68_75  UWABCTR_od;
+extern A68_VOID  BDABCTR_for(struct A68t194 *,A68_INT ,struct A68t71 **);
+extern A68_VOID  PMABCTR_forall(struct A68t198 ,struct A68t71 **);
+extern A68_VOID  JXABCTR_while(void);
+extern A68_VOID  LXABCTR_whiledo(struct A68t64 *);
+extern A68_VOID  EYABCTR_whileod(void);
+extern A68_75  LYABCTR_od;
 /* --- End of imports from loops --- */
 
 
 /* --- Imports from loads --- */
-extern A68_VOID  HUZACTR_load(struct A68t190 ,A68_64 *);
+extern A68_VOID  YVZACTR_load(struct A68t190 ,A68_64 *);
 /* --- End of imports from loads --- */
 
 
 /* --- Imports from initialiser --- */
-extern A68_VOID  DSZACTR_initialise(struct A68t116 *,struct A68t180 *,struct A68t171 );
+extern A68_VOID  UTZACTR_initialise(struct A68t116 *,struct A68t180 *,struct A68t171 );
 /* --- End of imports from initialiser --- */
 
 
 /* --- Imports from incvalue --- */
-#define NJJACTR_voidresult 0
-#define OJJACTR_memoryresult 1
-#define QJJACTR_routineresult 3
-#define RJJACTR_enquiryresult 4
-#define SJJACTR_optboolresult 5
-#define TJJACTR_noparticularresult 6
+#define ELJACTR_voidresult 0
+#define FLJACTR_memoryresult 1
+#define HLJACTR_routineresult 3
+#define ILJACTR_enquiryresult 4
+#define JLJACTR_optboolresult 5
+#define KLJACTR_noparticularresult 6
 /* --- End of imports from incvalue --- */
 
 
@@ -1457,65 +1457,65 @@ extern A68_INT  ZBAACTR_terminatoroffset;
 
 
 /* --- Imports from identifiers --- */
-extern A68_VOID  CUVACTR_ccdec(struct A68t156 ,struct A68t64 *,A68_INT );
-extern A68_VOID  OUWACTR_environoflabel(A68_INT ,A68_123 *);
-extern A68_VOID  LSVACTR_iddec(struct A68t156 ,struct A68t71 **);
-extern A68_160  FOKACTR_ids;
-extern A68_VOID  MJVACTR_initialdummydec(struct A68t156 );
-extern A68_VOID  ZNWACTR_labdec(struct A68t164 );
+extern A68_VOID  TVVACTR_ccdec(struct A68t156 ,struct A68t64 *,A68_INT );
+extern A68_VOID  FWWACTR_environoflabel(A68_INT ,A68_123 *);
+extern A68_VOID  CUVACTR_iddec(struct A68t156 ,struct A68t71 **);
+extern A68_160  WPKACTR_ids;
+extern A68_VOID  DLVACTR_initialdummydec(struct A68t156 );
+extern A68_VOID  QPWACTR_labdec(struct A68t164 );
 /* --- End of imports from identifiers --- */
 
 
 /* --- Imports from environment --- */
-extern A68_VOID  PXIACTR_assert(A68_VC ,A68_BOOL );
-extern A68_VOID  IXIACTR_error(A68_INT );
+extern A68_VOID  WXIACTR_assert(A68_VC ,A68_BOOL );
+extern A68_VOID  PXIACTR_error(A68_INT );
 extern A68_VOID  KDHACTR_message(A68_INT ,A68_VC *);
-extern A68_VOID  LXIACTR_terminalerror(A68_INT );
+extern A68_VOID  SXIACTR_terminalerror(A68_INT );
 /* --- End of imports from environment --- */
 
 
 /* --- Imports from environ --- */
-extern A68_VOID  HQLACTR_startnewlevel(A68_INT );
-extern A68_75  KQLACTR_reverttopreviouslevel;
-extern A68_BOOL  CQLACTR_isnewerthan(struct A68t123 ,struct A68t123 );
+extern A68_VOID  YRLACTR_startnewlevel(A68_INT );
+extern A68_75  BSLACTR_reverttopreviouslevel;
+extern A68_BOOL  TRLACTR_isnewerthan(struct A68t123 ,struct A68t123 );
 /* --- End of imports from environ --- */
 
 
 /* --- Imports from entryandreturn --- */
-extern A68_VOID  SNYACTR_startmodule(A68_VC ,A68_VC );
-extern A68_VOID  ERYACTR_endmodule(void);
-extern A68_VOID  BLYACTR_startroutine(struct A68t122 ,struct A68t123 ,struct A68t124 ,A68_INT ,struct A68t64 *);
-extern A68_VOID  ULYACTR_endroutine(struct A68t122 ,struct A68t64 *);
-extern A68_VOID  DPYACTR_startdecsmodule(A68_VC ,A68_VC );
-extern A68_VOID  ZQYACTR_startprocmodule(struct A68t122 ,A68_VC ,A68_VC ,struct A68t64 *);
-extern A68_VOID  ESYACTR_enddecsmodule(A68_VC );
+extern A68_VOID  JPYACTR_startmodule(A68_VC ,A68_VC );
+extern A68_VOID  VSYACTR_endmodule(void);
+extern A68_VOID  SMYACTR_startroutine(struct A68t122 ,struct A68t123 ,struct A68t124 ,A68_INT ,struct A68t64 *);
+extern A68_VOID  LNYACTR_endroutine(struct A68t122 ,struct A68t64 *);
+extern A68_VOID  UQYACTR_startdecsmodule(A68_VC ,A68_VC );
+extern A68_VOID  QSYACTR_startprocmodule(struct A68t122 ,A68_VC ,A68_VC ,struct A68t64 *);
+extern A68_VOID  VTYACTR_enddecsmodule(A68_VC );
 /* --- End of imports from entryandreturn --- */
 
 
 /* --- Imports from clauses --- */
-extern A68_VOID  TOZACTR_exit(A68_BOOL ,A68_BOOL ,struct A68t63 );
-extern A68_VOID  POZACTR_semi(A68_BOOL ,A68_BOOL );
-extern A68_VOID  IBZACTR_begin(A68_BOOL ,A68_BOOL );
-extern A68_VOID  UBZACTR_end(A68_BOOL ,A68_BOOL ,A68_BOOL ,struct A68t55 *);
-extern A68_VOID  SEZACTR_then(struct A68t64 *);
-extern A68_VOID  PFZACTR_else(void);
-extern A68_VOID  MLZACTR_fi(A68_BOOL ,struct A68t63 );
-extern A68_VOID  IGZACTR_casein(struct A68t64 *);
-extern A68_VOID  PIZACTR_comma(A68_INT );
-extern A68_VOID  UJZACTR_out(void);
-extern A68_VOID  MKZACTR_esac(A68_BOOL ,struct A68t63 );
-extern A68_VOID  NHZACTR_inu(struct A68t79 ,struct A68t64 *,struct A68t80 );
-extern A68_VOID  LJZACTR_commau(struct A68t79 ,struct A68t64 ,struct A68t80 );
-extern A68_75  IKZACTR_outu;
-extern A68_76  ILZACTR_esacu;
-extern A68_VOID  FMZACTR_optboolwarning(A68_BOOL ,struct A68t64 *);
-extern A68_VOID  YNZACTR_optbooloper(void);
-extern A68_60  EOZACTR_startseries;
-extern A68_VOID  MOZACTR_endseries(struct A68t59 ,struct A68t63 ,struct A68t55 *,A68_BOOL ,A68_BOOL ,A68_BOOL );
-extern A68_VOID  CZYACTR_evaluateresult(struct A68t71 **,struct A68t63 );
-extern A68_VOID  EYYACTR_evaluatenoresult(struct A68t71 **);
-extern A68_VOID  ABZACTR_evaluatesimpleenquiry(struct A68t71 **,struct A68t63 );
-extern A68_VOID  MPZACTR_codeinsert(A68_VC ,A68_INT ,struct A68t71 *,A68_68 *);
+extern A68_VOID  KQZACTR_exit(A68_BOOL ,A68_BOOL ,struct A68t63 );
+extern A68_VOID  GQZACTR_semi(A68_BOOL ,A68_BOOL );
+extern A68_VOID  ZCZACTR_begin(A68_BOOL ,A68_BOOL );
+extern A68_VOID  LDZACTR_end(A68_BOOL ,A68_BOOL ,A68_BOOL ,struct A68t55 *);
+extern A68_VOID  JGZACTR_then(struct A68t64 *);
+extern A68_VOID  GHZACTR_else(void);
+extern A68_VOID  DNZACTR_fi(A68_BOOL ,struct A68t63 );
+extern A68_VOID  ZHZACTR_casein(struct A68t64 *);
+extern A68_VOID  GKZACTR_comma(A68_INT );
+extern A68_VOID  LLZACTR_out(void);
+extern A68_VOID  DMZACTR_esac(A68_BOOL ,struct A68t63 );
+extern A68_VOID  EJZACTR_inu(struct A68t79 ,struct A68t64 *,struct A68t80 );
+extern A68_VOID  CLZACTR_commau(struct A68t79 ,struct A68t64 ,struct A68t80 );
+extern A68_75  ZLZACTR_outu;
+extern A68_76  ZMZACTR_esacu;
+extern A68_VOID  WNZACTR_optboolwarning(A68_BOOL ,struct A68t64 *);
+extern A68_VOID  PPZACTR_optbooloper(void);
+extern A68_60  VPZACTR_startseries;
+extern A68_VOID  DQZACTR_endseries(struct A68t59 ,struct A68t63 ,struct A68t55 *,A68_BOOL ,A68_BOOL ,A68_BOOL );
+extern A68_VOID  TAZACTR_evaluateresult(struct A68t71 **,struct A68t63 );
+extern A68_VOID  VZYACTR_evaluatenoresult(struct A68t71 **);
+extern A68_VOID  RCZACTR_evaluatesimpleenquiry(struct A68t71 **,struct A68t63 );
+extern A68_VOID  DRZACTR_codeinsert(A68_VC ,A68_INT ,struct A68t71 *,A68_68 *);
 /* --- End of imports from clauses --- */
 
 
@@ -1532,344 +1532,344 @@ extern A68_VOID  ROAAOSF_whole(A68_INT ,A68_INT ,A68_VC *);
 
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
-extern void JRPACTR(void);   /* values */
-extern void YRLACTR(void);   /* coutput */
-extern void AGMACTR(void);   /* uniquenameserver */
-extern void LNQACTR(void);   /* oper */
+extern void ATPACTR(void);   /* values */
+extern void PTLACTR(void);   /* coutput */
+extern void RHMACTR(void);   /* uniquenameserver */
+extern void CPQACTR(void);   /* oper */
 extern void BCHACTR(void);   /* moduletracer */
-extern void VJOACTR(void);   /* modules */
-extern void MLMACTR(void);   /* modes */
+extern void MLOACTR(void);   /* modules */
+extern void DNMACTR(void);   /* modes */
 extern void ZDAACTR(void);   /* incmode */
-extern void KAABCTR(void);   /* loops */
-extern void ISZACTR(void);   /* loads */
-extern void URZACTR(void);   /* initialiser */
-extern void PIJACTR(void);   /* incvalue */
+extern void BCABCTR(void);   /* loops */
+extern void ZTZACTR(void);   /* loads */
+extern void LTZACTR(void);   /* initialiser */
+extern void GKJACTR(void);   /* incvalue */
 extern void XFAACTR(void);   /* incoperfn */
 extern void UAAACTR(void);   /* incimperatives */
-extern void WIVACTR(void);   /* identifiers */
+extern void NKVACTR(void);   /* identifiers */
 extern void HPIACTR(void);   /* environment */
-extern void KNLACTR(void);   /* environ */
-extern void KBYACTR(void);   /* entryandreturn */
-extern void KXYACTR(void);   /* clauses */
+extern void BPLACTR(void);   /* environ */
+extern void BDYACTR(void);   /* entryandreturn */
+extern void BZYACTR(void);   /* clauses */
 extern void THAACTR(void);   /* centities */
 extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
-static A68_263   ZWABCTR = {"$Id: compiler.c,v 1.5.2.4 2004/09/27 03:04:17 teshields Exp $"}; 
-A_GISVEC(A68_VC ,AXABCTR,ZWABCTR,63)
-static A68_266   VXABCTR = {"Composition modules not supported"}; 
-A_GISVEC(A68_VC ,WXABCTR,VXABCTR,33)
-static A68_270   XYABCTR = {"generator routine"}; 
-static A68_271   YYABCTR = {"!generator"}; 
-A_GISVEC(A68_VC ,ZYABCTR,YYABCTR,10)
-A_GISVEC(A68_VC ,AZABCTR,XYABCTR,17)
-static A68_273   EABBCTR = {"COMPILER: fdec expected"}; 
-A_GISVEC(A68_VC ,FABBCTR,EABBCTR,23)
-static A68_274   GABBCTR = {"COMPILER: fdec has unexpected mode"}; 
-A_GISVEC(A68_VC ,HABBCTR,GABBCTR,34)
-static A68_275   JABBCTR = {"COMPILER: TRANSIDDEC (fdec) expected here"}; 
-A_GISVEC(A68_VC ,KABBCTR,JABBCTR,41)
-static A68_277   CBBBCTR = {"end OF answer ISNT NIL"}; 
-A_GISVEC(A68_VC ,DBBBCTR,CBBBCTR,22)
-static A68_279   RBBBCTR = {"exit not permitted in <enquiry clause>"}; 
-A_GISVEC(A68_VC ,SBBBCTR,RBBBCTR,38)
-static A68_286   XEBBCTR = {"fn OF starter = caseu fn"}; 
-A_GISVEC(A68_VC ,YEBBCTR,XEBBCTR,24)
-static A68_291   TGBBCTR = {".data["}; 
-A_GISVEC(A68_VC ,UGBBCTR,TGBBCTR,6)
-static A68_292   XGBBCTR = {""}; 
-A_GISVEC(A68_VC ,YGBBCTR,XGBBCTR,0)
-static A68_293   ZGBBCTR = {"compiler:collateral clause - unknown selector"}; 
-A_GISVEC(A68_VC ,AHBBCTR,ZGBBCTR,45)
-static A68_292   BHBBCTR = {""}; 
-A_GISVEC(A68_VC ,CHBBCTR,BHBBCTR,0)
-static A68_294   JHBBCTR = {"compiler: collateral clause result is neither struct nor istruct nor void"}; 
-A_GISVEC(A68_VC ,KHBBCTR,JHBBCTR,73)
-static A68_292   OHBBCTR = {""}; 
-A_GISVEC(A68_VC ,QHBBCTR,OHBBCTR,0)
-static A68_286   SHBBCTR = {"collateral clause result"}; 
-A_GISVEC(A68_VC ,THBBCTR,SHBBCTR,24)
-static A68_273   QIBBCTR = {"fn OF s = coll comma fn"}; 
-A_GISVEC(A68_VC ,RIBBCTR,QIBBCTR,23)
-static A68_295   FJBBCTR = {"fn OF t = end coll fn"}; 
-A_GISVEC(A68_VC ,GJBBCTR,FJBBCTR,21)
-static A68_296   ZJBBCTR = {"fn OF s = do fn"}; 
-A_GISVEC(A68_VC ,AKBBCTR,ZJBBCTR,15)
-static A68_89   SMBBCTR = {"no closed clause OPTBOOL results"}; 
-A_GISVEC(A68_VC ,TMBBCTR,SMBBCTR,32)
-static A68_89   QNBBCTR = {"no choice clause OPTBOOL results"}; 
-A_GISVEC(A68_VC ,RNBBCTR,QNBBCTR,32)
-static A68_300   OPBBCTR = {"PROC modules not supported"}; 
-A_GISVEC(A68_VC ,PPBBCTR,OPBBCTR,26)
-static A68_301   SPBBCTR = {"rest OF value stack IS nil value list"}; 
-A_GISVEC(A68_VC ,TPBBCTR,SPBBCTR,37)
-static A68_302   WPBBCTR = {"invalid imperative in 'phrase'"}; 
-A_GISVEC(A68_VC ,XPBBCTR,WPBBCTR,30)
-static A68_296   TQBBCTR = {"module: ROUTINE"}; 
-A_GISVEC(A68_VC ,UQBBCTR,TQBBCTR,15)
-static A68_270   ZQBBCTR = {"generator routine"}; 
-static A68_271   ARBBCTR = {"!generator"}; 
-A_GISVEC(A68_VC ,BRBBCTR,ARBBCTR,10)
-A_GISVEC(A68_VC ,CRBBCTR,ZQBBCTR,17)
+static A68_263   QYABCTR = {"$Id: compiler.c,v 1.4 2003-05-30 21:20:47 sian Exp $"}; 
+A_GISVEC(A68_VC ,RYABCTR,QYABCTR,58)
+static A68_266   MZABCTR = {"Composition modules not supported"}; 
+A_GISVEC(A68_VC ,NZABCTR,MZABCTR,33)
+static A68_270   OABBCTR = {"generator routine"}; 
+static A68_271   PABBCTR = {"!generator"}; 
+A_GISVEC(A68_VC ,QABBCTR,PABBCTR,10)
+A_GISVEC(A68_VC ,RABBCTR,OABBCTR,17)
+static A68_273   VBBBCTR = {"COMPILER: fdec expected"}; 
+A_GISVEC(A68_VC ,WBBBCTR,VBBBCTR,23)
+static A68_274   XBBBCTR = {"COMPILER: fdec has unexpected mode"}; 
+A_GISVEC(A68_VC ,YBBBCTR,XBBBCTR,34)
+static A68_275   ACBBCTR = {"COMPILER: TRANSIDDEC (fdec) expected here"}; 
+A_GISVEC(A68_VC ,BCBBCTR,ACBBCTR,41)
+static A68_277   TCBBCTR = {"end OF answer ISNT NIL"}; 
+A_GISVEC(A68_VC ,UCBBCTR,TCBBCTR,22)
+static A68_279   IDBBCTR = {"exit not permitted in <enquiry clause>"}; 
+A_GISVEC(A68_VC ,JDBBCTR,IDBBCTR,38)
+static A68_286   OGBBCTR = {"fn OF starter = caseu fn"}; 
+A_GISVEC(A68_VC ,PGBBCTR,OGBBCTR,24)
+static A68_291   KIBBCTR = {".data["}; 
+A_GISVEC(A68_VC ,LIBBCTR,KIBBCTR,6)
+static A68_292   OIBBCTR = {""}; 
+A_GISVEC(A68_VC ,PIBBCTR,OIBBCTR,0)
+static A68_293   QIBBCTR = {"compiler:collateral clause - unknown selector"}; 
+A_GISVEC(A68_VC ,RIBBCTR,QIBBCTR,45)
+static A68_292   SIBBCTR = {""}; 
+A_GISVEC(A68_VC ,TIBBCTR,SIBBCTR,0)
+static A68_294   AJBBCTR = {"compiler: collateral clause result is neither struct nor istruct nor void"}; 
+A_GISVEC(A68_VC ,BJBBCTR,AJBBCTR,73)
+static A68_292   FJBBCTR = {""}; 
+A_GISVEC(A68_VC ,HJBBCTR,FJBBCTR,0)
+static A68_286   JJBBCTR = {"collateral clause result"}; 
+A_GISVEC(A68_VC ,KJBBCTR,JJBBCTR,24)
+static A68_273   HKBBCTR = {"fn OF s = coll comma fn"}; 
+A_GISVEC(A68_VC ,IKBBCTR,HKBBCTR,23)
+static A68_295   WKBBCTR = {"fn OF t = end coll fn"}; 
+A_GISVEC(A68_VC ,XKBBCTR,WKBBCTR,21)
+static A68_296   QLBBCTR = {"fn OF s = do fn"}; 
+A_GISVEC(A68_VC ,RLBBCTR,QLBBCTR,15)
+static A68_89   JOBBCTR = {"no closed clause OPTBOOL results"}; 
+A_GISVEC(A68_VC ,KOBBCTR,JOBBCTR,32)
+static A68_89   HPBBCTR = {"no choice clause OPTBOOL results"}; 
+A_GISVEC(A68_VC ,IPBBCTR,HPBBCTR,32)
+static A68_300   FRBBCTR = {"PROC modules not supported"}; 
+A_GISVEC(A68_VC ,GRBBCTR,FRBBCTR,26)
+static A68_301   JRBBCTR = {"rest OF value stack IS nil value list"}; 
+A_GISVEC(A68_VC ,KRBBCTR,JRBBCTR,37)
+static A68_302   NRBBCTR = {"invalid imperative in 'phrase'"}; 
+A_GISVEC(A68_VC ,ORBBCTR,NRBBCTR,30)
+static A68_296   KSBBCTR = {"module: ROUTINE"}; 
+A_GISVEC(A68_VC ,LSBBCTR,KSBBCTR,15)
+static A68_270   QSBBCTR = {"generator routine"}; 
+static A68_271   RSBBCTR = {"!generator"}; 
+A_GISVEC(A68_VC ,SSBBCTR,RSBBCTR,10)
+A_GISVEC(A68_VC ,TSBBCTR,QSBBCTR,17)
 typedef struct   /* env of non-global proc */
 {
-A68_180 * HXABCTR_nextimperative;
-A68_180 * FXABCTR_currentimperative;
+A68_180 * YYABCTR_nextimperative;
+A68_180 * WYABCTR_currentimperative;
 A68_264  Nextstreamimperative;
-} LXABCTR_read;
+} CZABCTR_read;
 typedef struct   /* env of non-global proc */
 {
-A68_180 * HXABCTR_nextimperative;
+A68_180 * YYABCTR_nextimperative;
 A68_264  Nextstreamimperative;
-} RXABCTR_lookahead;
+} IZABCTR_lookahead;
 typedef struct   /* env of non-global proc */
 {
-A68_75  JXABCTR_read;
-A68_180 * FXABCTR_currentimperative;
-A68_75  PXABCTR_lookahead;
-A68_180 * HXABCTR_nextimperative;
-} CYABCTR_module;
+A68_75  AZABCTR_read;
+A68_180 * WYABCTR_currentimperative;
+A68_75  GZABCTR_lookahead;
+A68_180 * YYABCTR_nextimperative;
+} TZABCTR_module;
 typedef struct   /* env of non-global proc */
 {
-A68_75  JXABCTR_read;
-A68_180 * FXABCTR_currentimperative;
-A68_75  EYABCTR_skiproutine;
-} GYABCTR_skiproutine;
+A68_75  AZABCTR_read;
+A68_180 * WYABCTR_currentimperative;
+A68_75  VZABCTR_skiproutine;
+} XZABCTR_skiproutine;
 typedef struct   /* env of non-global proc */
 {
-A68_75  PXABCTR_lookahead;
-A68_180 * HXABCTR_nextimperative;
-A68_75  JXABCTR_read;
-A68_75  EYABCTR_skiproutine;
-A68_180 * FXABCTR_currentimperative;
-A68_268 * DYABCTR_phrase_;
-} OYABCTR_routine;
+A68_75  GZABCTR_lookahead;
+A68_180 * YYABCTR_nextimperative;
+A68_75  AZABCTR_read;
+A68_75  VZABCTR_skiproutine;
+A68_180 * WYABCTR_currentimperative;
+A68_268 * UZABCTR_phrase_;
+} FABBCTR_routine;
 typedef struct   /* env of non-global proc */
 {
-A68_268 * DYABCTR_phrase_;
-A68_180 * FXABCTR_currentimperative;
-} RABBCTR_serialclause;
+A68_268 * UZABCTR_phrase_;
+A68_180 * WYABCTR_currentimperative;
+} ICBBCTR_serialclause;
 typedef struct   /* env of non-global proc */
 {
-A68_268 * DYABCTR_phrase_;
-A68_180 * FXABCTR_currentimperative;
-} LBBBCTR_enquiryclause;
+A68_268 * UZABCTR_phrase_;
+A68_180 * WYABCTR_currentimperative;
+} CDBBCTR_enquiryclause;
 typedef struct   /* env of non-global proc */
 {
-A68_276  PABBCTR_serialclause;
-A68_75  JXABCTR_read;
-A68_180 * FXABCTR_currentimperative;
-A68_278  JBBBCTR_enquiryclause;
-A68_268  XBBBCTR_phrase;
-A68_269  MYABCTR_routine;
-} ZBBBCTR_phrase;
+A68_276  GCBBCTR_serialclause;
+A68_75  AZABCTR_read;
+A68_180 * WYABCTR_currentimperative;
+A68_278  ADBBCTR_enquiryclause;
+A68_268  ODBBCTR_phrase;
+A68_269  DABBCTR_routine;
+} QDBBCTR_phrase;
 typedef struct   /* env of non-global proc */
 {
 int dummy;
-} LZABCTR_generator;
+} CBBBCTR_generator;
 typedef struct   /* env of non-global proc */
 {
-A68_INT  HZABCTR_paramcount;
+A68_INT  YABBCTR_paramcount;
 A_PAD_INT(PAD_174)
-} WZABCTR_generator;
+} NBBBCTR_generator;
 typedef struct   /* env of non-global proc */
 {
-A68_276  PABBCTR_serialclause;
-A68_75  JXABCTR_read;
-A68_180 * FXABCTR_currentimperative;
-A68_278  JBBBCTR_enquiryclause;
-A68_268  XBBBCTR_phrase;
-A68_71 ** ACBBCTR_valuestack;
-} HCBBCTR_enclosedclause;
+A68_276  GCBBCTR_serialclause;
+A68_75  AZABCTR_read;
+A68_180 * WYABCTR_currentimperative;
+A68_278  ADBBCTR_enquiryclause;
+A68_268  ODBBCTR_phrase;
+A68_71 ** RDBBCTR_valuestack;
+} YDBBCTR_enclosedclause;
 typedef struct   /* env of non-global proc */
 {
-A68_71 ** ACBBCTR_valuestack;
-A68_268  XBBBCTR_phrase;
-} XNBBCTR_optboolexpression;
+A68_71 ** RDBBCTR_valuestack;
+A68_268  ODBBCTR_phrase;
+} OPBBCTR_optboolexpression;
 typedef struct   /* env of non-global proc */
 {
-A68_276  PABBCTR_serialclause;
-} OCBBCTR_closedclause;
+A68_276  GCBBCTR_serialclause;
+} FEBBCTR_closedclause;
 typedef struct   /* env of non-global proc */
 {
-A68_75  JXABCTR_read;
-A68_180 * FXABCTR_currentimperative;
-A68_278  JBBBCTR_enquiryclause;
-A68_276  PABBCTR_serialclause;
-} FDBBCTR_choiceclause;
+A68_75  AZABCTR_read;
+A68_180 * WYABCTR_currentimperative;
+A68_278  ADBBCTR_enquiryclause;
+A68_276  GCBBCTR_serialclause;
+} WEBBCTR_choiceclause;
 typedef struct   /* env of non-global proc */
 {
-A68_268  XBBBCTR_phrase;
-A68_180 * FXABCTR_currentimperative;
-} IGBBCTR_collateralclause;
+A68_268  ODBBCTR_phrase;
+A68_180 * WYABCTR_currentimperative;
+} ZHBBCTR_collateralclause;
 typedef struct   /* env of non-global proc */
 {
-A68_75  JXABCTR_read;
-A68_180 * FXABCTR_currentimperative;
-A68_278  JBBBCTR_enquiryclause;
-A68_276  PABBCTR_serialclause;
-} MJBBCTR_loopbody;
+A68_75  AZABCTR_read;
+A68_180 * WYABCTR_currentimperative;
+A68_278  ADBBCTR_enquiryclause;
+A68_276  GCBBCTR_serialclause;
+} DLBBCTR_loopbody;
 typedef struct   /* env of non-global proc */
 {
-A68_75  JXABCTR_read;
-A68_180 * FXABCTR_currentimperative;
-A68_76  KJBBCTR_loopbody;
-} MKBBCTR_loopclause;
+A68_75  AZABCTR_read;
+A68_180 * WYABCTR_currentimperative;
+A68_76  BLBBCTR_loopbody;
+} DMBBCTR_loopclause;
 typedef struct   /* env of non-global proc */
 {
-A68_75  JXABCTR_read;
-A68_180 * FXABCTR_currentimperative;
-A68_76  KJBBCTR_loopbody;
-} KLBBCTR_forallclause;
+A68_75  AZABCTR_read;
+A68_180 * WYABCTR_currentimperative;
+A68_76  BLBBCTR_loopbody;
+} BNBBCTR_forallclause;
 typedef struct   /* env of non-global proc */
 {
-A68_75  JXABCTR_read;
-A68_180 * FXABCTR_currentimperative;
-A68_79 * GDBBCTR_uchoice;
-} JDBBCTR_readuchoiceimperative;
+A68_75  AZABCTR_read;
+A68_180 * WYABCTR_currentimperative;
+A68_79 * XEBBCTR_uchoice;
+} AFBBCTR_readuchoiceimperative;
 typedef struct   /* env of non-global proc */
 {
-A68_75  JXABCTR_read;
-A68_180 * FXABCTR_currentimperative;
-} RDBBCTR_iddecimperative;
+A68_75  AZABCTR_read;
+A68_180 * WYABCTR_currentimperative;
+} IFBBCTR_iddecimperative;
 typedef struct   /* env of non-global proc */
 {
-A68_124  KFBBCTR_cons;
-} OFBBCTR_generator;
+A68_124  BHBBCTR_cons;
+} FHBBCTR_generator;
 typedef struct   /* env of non-global proc */
 {
-A68_INT  NLBBCTR_controlcount;
+A68_INT  ENBBCTR_controlcount;
 A_PAD_INT(PAD_175)
-} RLBBCTR_generator;
+} INBBCTR_generator;
 
-A68_VOID  EXABCTR_translator(A68_264  Nextstreamimperative, A68_116 * Xsizes, A68_171  Keptdecnos);
+A68_VOID  VYABCTR_translator(A68_264  Nextstreamimperative, A68_116 * Xsizes, A68_171  Keptdecnos);
 
-A_STATIC A68_VOID  KXABCTR_read(void *NonLocals);
+A_STATIC A68_VOID  BZABCTR_read(void *NonLocals);
 
-A_STATIC A68_VOID  QXABCTR_lookahead(void *NonLocals);
+A_STATIC A68_VOID  HZABCTR_lookahead(void *NonLocals);
 
-A_STATIC A68_VOID  UXABCTR_compositionmodule(void);
+A_STATIC A68_VOID  LZABCTR_compositionmodule(void);
 
-A_STATIC A68_VOID  BYABCTR_module(A68_VC  Modulename, A68_BOOL  Decsmodule, A68_BOOL  Prelude, void *NonLocals);
+A_STATIC A68_VOID  SZABCTR_module(A68_VC  Modulename, A68_BOOL  Decsmodule, A68_BOOL  Prelude, void *NonLocals);
 
-A_STATIC A68_VOID  FYABCTR_skiproutine(void *NonLocals);
+A_STATIC A68_VOID  WZABCTR_skiproutine(void *NonLocals);
 
-A_STATIC A68_VOID  NYABCTR_routine(A68_122  Routine, void *NonLocals);
+A_STATIC A68_VOID  EABBCTR_routine(A68_122  Routine, void *NonLocals);
 
-A_STATIC A68_VOID  KZABCTR_generator(A68_BOOL  IZABCTR_anonymous, A68_124  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  BBBBCTR_generator(A68_BOOL  ZABBCTR_anonymous, A68_124  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_VOID  VZABCTR_generator(A68_BOOL  TZABCTR_anonymous, A68_124  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  MBBBCTR_generator(A68_BOOL  KBBBCTR_anonymous, A68_124  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_VOID  QABBCTR_serialclause(A68_59  Properties, A68_63  Answer, void *NonLocals);
+A_STATIC A68_VOID  HCBBCTR_serialclause(A68_59  Properties, A68_63  Answer, void *NonLocals);
 
-A_STATIC A68_VOID  KBBBCTR_enquiryclause(A68_63  Answer, void *NonLocals);
+A_STATIC A68_VOID  BDBBCTR_enquiryclause(A68_63  Answer, void *NonLocals);
 
-A_STATIC A68_VOID  YBBBCTR_phrase(A68_BOOL  Body, A68_63  Answer, A68_BOOL  Simple, void *NonLocals);
+A_STATIC A68_VOID  PDBBCTR_phrase(A68_BOOL  Body, A68_63  Answer, A68_BOOL  Simple, void *NonLocals);
 
-A_STATIC A68_VOID  GCBBCTR_enclosedclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 * Newvalue, void *NonLocals);
+A_STATIC A68_VOID  XDBBCTR_enclosedclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 * Newvalue, void *NonLocals);
 
-A_STATIC A68_VOID  NCBBCTR_closedclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, void *NonLocals);
+A_STATIC A68_VOID  EEBBCTR_closedclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, void *NonLocals);
 
-A_STATIC A68_VOID  EDBBCTR_choiceclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, void *NonLocals);
+A_STATIC A68_VOID  VEBBCTR_choiceclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, void *NonLocals);
 
-A_STATIC A68_VOID  IDBBCTR_readuchoiceimperative(void *NonLocals);
+A_STATIC A68_VOID  ZEBBCTR_readuchoiceimperative(void *NonLocals);
 
-A_STATIC A68_VOID  QDBBCTR_iddecimperative(A68_156  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  HFBBCTR_iddecimperative(A68_156  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_64 * JEBBCTR_assignment(A68_64 * HEBBCTR_anonymous, A68_64  IEBBCTR_anonymous);
+A_STATIC A68_64 * AGBBCTR_assignment(A68_64 * YFBBCTR_anonymous, A68_64  ZFBBCTR_anonymous);
 
-A_STATIC A68_65 * OEBBCTR_assignment(A68_65 * MEBBCTR_anonymous, A68_65  NEBBCTR_anonymous);
+A_STATIC A68_65 * FGBBCTR_assignment(A68_65 * DGBBCTR_anonymous, A68_65  EGBBCTR_anonymous);
 
-A_STATIC A68_VOID  NFBBCTR_generator(A68_BOOL  LFBBCTR_anonymous, A68_80  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  EHBBCTR_generator(A68_BOOL  CHBBCTR_anonymous, A68_80  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_VOID  HGBBCTR_collateralclause(A68_188  Starter, A68_63  Answer, void *NonLocals);
+A_STATIC A68_VOID  YHBBCTR_collateralclause(A68_188  Starter, A68_63  Answer, void *NonLocals);
 
-A_STATIC A68_VOID  MGBBCTR_collateralunitassignee(A68_VC  Temp, A68_289  Selector, A68_VC  *ReturnedValue);
+A_STATIC A68_VOID  DIBBCTR_collateralunitassignee(A68_VC  Temp, A68_289  Selector, A68_VC  *ReturnedValue);
 
-A_STATIC A68_VOID  LJBBCTR_loopbody(A68_BOOL  Body, A68_63  Answer, void *NonLocals);
+A_STATIC A68_VOID  CLBBCTR_loopbody(A68_BOOL  Body, A68_63  Answer, void *NonLocals);
 
-A_STATIC A68_VOID  LKBBCTR_loopclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 ** Frobytlist, void *NonLocals);
+A_STATIC A68_VOID  CMBBCTR_loopclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 ** Frobytlist, void *NonLocals);
 
-A_STATIC A68_VOID  JLBBCTR_forallclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 ** Foralllist, void *NonLocals);
+A_STATIC A68_VOID  ANBBCTR_forallclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 ** Foralllist, void *NonLocals);
 
-A_STATIC A68_VOID  QLBBCTR_generator(A68_BOOL  OLBBCTR_anonymous, A68_198  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  HNBBCTR_generator(A68_BOOL  FNBBCTR_anonymous, A68_198  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_71 * OMBBCTR_assignment(A68_71 * MMBBCTR_anonymous, A68_71  NMBBCTR_anonymous);
+A_STATIC A68_71 * FOBBCTR_assignment(A68_71 * DOBBCTR_anonymous, A68_71  EOBBCTR_anonymous);
 
-A_STATIC A68_VOID  WNBBCTR_optboolexpression(A68_INT  Warn, void *NonLocals);
+A_STATIC A68_VOID  NPBBCTR_optboolexpression(A68_INT  Warn, void *NonLocals);
 
-A_STATIC A68_65 * OEBBCTR_assignment(A68_65 * MEBBCTR_anonymous, A68_65  NEBBCTR_anonymous)
+A_STATIC A68_65 * FGBBCTR_assignment(A68_65 * DGBBCTR_anonymous, A68_65  EGBBCTR_anonymous)
 { 
-A68_65  PEBBCTR;  /* united object - for case conformity */
-A68_VC  QEBBCTR_anonymous;
-A68_VC  REBBCTR;  /* OPERATORS - copy to flex */
-A68_285 * SEBBCTR;  /* YIELD */
-A68_65 * TEBBCTR;  /* clause result */
+A68_65  GGBBCTR;  /* united object - for case conformity */
+A68_VC  HGBBCTR_anonymous;
+A68_VC  IGBBCTR;  /* OPERATORS - copy to flex */
+A68_285 * JGBBCTR;  /* YIELD */
+A68_65 * KGBBCTR;  /* clause result */
 { 
-(*MEBBCTR_anonymous) = NEBBCTR_anonymous;
-PEBBCTR = NEBBCTR_anonymous ;
-switch ( PEBBCTR.mode )
+(*DGBBCTR_anonymous) = EGBBCTR_anonymous;
+GGBBCTR = EGBBCTR_anonymous ;
+switch ( GGBBCTR.mode )
 { 
 case 6: /* VECTOR [] CHAR */
-QEBBCTR_anonymous = (PEBBCTR.data.mode6);
-SEBBCTR = &(MEBBCTR_anonymous-> data.mode6) ;
-(*SEBBCTR) = A_VCOPY(QEBBCTR_anonymous,REBBCTR,A68_CHAR );
+HGBBCTR_anonymous = (GGBBCTR.data.mode6);
+JGBBCTR = &(DGBBCTR_anonymous-> data.mode6) ;
+(*JGBBCTR) = A_VCOPY(HGBBCTR_anonymous,IGBBCTR,A68_CHAR );
 break;
 default: 
 /*SKIP*/;
 break;
 } 
-TEBBCTR = MEBBCTR_anonymous;
+KGBBCTR = DGBBCTR_anonymous;
 } 
-return( TEBBCTR );
+return( KGBBCTR );
 } 
 #undef NL
 
-A_STATIC A68_VOID  IDBBCTR_readuchoiceimperative(void *NonLocals)
-#define NL(x) (((JDBBCTR_readuchoiceimperative *)NonLocals)->x)
+A_STATIC A68_VOID  ZEBBCTR_readuchoiceimperative(void *NonLocals)
+#define NL(x) (((AFBBCTR_readuchoiceimperative *)NonLocals)->x)
 { 
-A68_180  KDBBCTR;  /* united object - for case conformity */
-A68_79  LDBBCTR_u;
-A68_BOOL  MDBBCTR;  /* clause result */
-A68_164  NDBBCTR_l;
-A68_BOOL  ODBBCTR;  /* clause result */
+A68_180  BFBBCTR;  /* united object - for case conformity */
+A68_79  CFBBCTR_u;
+A68_BOOL  DFBBCTR;  /* clause result */
+A68_164  EFBBCTR_l;
+A68_BOOL  FFBBCTR;  /* clause result */
 A_PROC_ENTRY(readuchoiceimperative);
 for ( ;; )
 { 
  /* line 460: */
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 461: */
  /* line 462: */
-KDBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( KDBBCTR.mode )
+BFBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( BFBBCTR.mode )
 { 
 case 15: /* STRUCT(INT,BITS,INT)  */
-LDBBCTR_u = (KDBBCTR.data.mode15);
+CFBBCTR_u = (BFBBCTR.data.mode15);
 { 
-(*NL(GDBBCTR_uchoice)) = LDBBCTR_u;
+(*NL(XEBBCTR_uchoice)) = CFBBCTR_u;
  /* line 463: */
-MDBBCTR = A68_FALSE;
+DFBBCTR = A68_FALSE;
 } 
 break;
 case 14: /* STRUCT(REF MODE26,INT,INT,BOOL)  */
-NDBBCTR_l = (KDBBCTR.data.mode14);
+EFBBCTR_l = (BFBBCTR.data.mode14);
 { 
-ZNWACTR_labdec(NDBBCTR_l);
+QPWACTR_labdec(EFBBCTR_l);
  /* line 464: */
  /* line 465: */
-MDBBCTR = A68_TRUE;
+DFBBCTR = A68_TRUE;
 } 
 break;
 default: 
-LXIACTR_terminalerror(668);
+SXIACTR_terminalerror(668);
  /* line 466: */
  /* line 467: */
  /* line 468: */
-MDBBCTR = A68_FALSE;
+DFBBCTR = A68_FALSE;
 break;
 } 
  /* line 469: */
-ODBBCTR = MDBBCTR;
-if ( !ODBBCTR ) break;
+FFBBCTR = DFBBCTR;
+if ( !FFBBCTR ) break;
 /*SKIP*/;
 }
 A_PROC_EXIT(readuchoiceimperative);
@@ -1877,200 +1877,200 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  QDBBCTR_iddecimperative(A68_156  *ReturnedValue, void *NonLocals)
-#define NL(x) (((RDBBCTR_iddecimperative *)NonLocals)->x)
+A_STATIC A68_VOID  HFBBCTR_iddecimperative(A68_156  *ReturnedValue, void *NonLocals)
+#define NL(x) (((IFBBCTR_iddecimperative *)NonLocals)->x)
 { 
-A68_180  SDBBCTR;  /* united object - for case conformity */
-A68_156  TDBBCTR_iddec;
-A68_156  UDBBCTR;  /* clause result */
-A68_156  VDBBCTR;  /* OPERATORS - skip to mode */
+A68_180  JFBBCTR;  /* united object - for case conformity */
+A68_156  KFBBCTR_iddec;
+A68_156  LFBBCTR;  /* clause result */
+A68_156  MFBBCTR;  /* OPERATORS - skip to mode */
 A_PROC_ENTRY(iddecimperative);
 { 
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 476: */
  /* line 477: */
-SDBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( SDBBCTR.mode )
+JFBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( JFBBCTR.mode )
 { 
 case 11: /* STRUCT(INT,REF MODE26,INT,INT)  */
-TDBBCTR_iddec = (SDBBCTR.data.mode11);
+KFBBCTR_iddec = (JFBBCTR.data.mode11);
  /* line 478: */
  /* line 479: */
-UDBBCTR = TDBBCTR_iddec;
+LFBBCTR = KFBBCTR_iddec;
 break;
 default: 
-LXIACTR_terminalerror(669);
+SXIACTR_terminalerror(669);
  /* line 480: */
  /* line 481: */
-UDBBCTR = VDBBCTR;
+LFBBCTR = MFBBCTR;
 break;
 } 
 } 
 A_PROC_EXIT(iddecimperative);
-*ReturnedValue = (UDBBCTR);
+*ReturnedValue = (LFBBCTR);
 return;
 } 
 #undef NL
 
-A_STATIC A68_64 * JEBBCTR_assignment(A68_64 * HEBBCTR_anonymous, A68_64  IEBBCTR_anonymous)
+A_STATIC A68_64 * AGBBCTR_assignment(A68_64 * YFBBCTR_anonymous, A68_64  ZFBBCTR_anonymous)
 { 
-A68_INT * KEBBCTR;  /* YIELD */
-A68_BITS * LEBBCTR;  /* YIELD */
-A68_64 * UEBBCTR;  /* clause result */
+A68_INT * BGBBCTR;  /* YIELD */
+A68_BITS * CGBBCTR;  /* YIELD */
+A68_64 * LGBBCTR;  /* clause result */
 { 
-KEBBCTR = (&(HEBBCTR_anonymous->Mode)) ;
-(*KEBBCTR) = IEBBCTR_anonymous.Mode;
-LEBBCTR = (&(HEBBCTR_anonymous->Info)) ;
-(*LEBBCTR) = IEBBCTR_anonymous.Info;
-OEBBCTR_assignment((&(HEBBCTR_anonymous->Extra)), IEBBCTR_anonymous.Extra);
-UEBBCTR = HEBBCTR_anonymous;
+BGBBCTR = (&(YFBBCTR_anonymous->Mode)) ;
+(*BGBBCTR) = ZFBBCTR_anonymous.Mode;
+CGBBCTR = (&(YFBBCTR_anonymous->Info)) ;
+(*CGBBCTR) = ZFBBCTR_anonymous.Info;
+FGBBCTR_assignment((&(YFBBCTR_anonymous->Extra)), ZFBBCTR_anonymous.Extra);
+LGBBCTR = YFBBCTR_anonymous;
 } 
-return( UEBBCTR );
+return( LGBBCTR );
 } 
 #undef NL
 
-A_STATIC A68_VOID  NFBBCTR_generator(A68_BOOL  LFBBCTR_anonymous, A68_80  *ReturnedValue, void *NonLocals)
-#define NL(x) (((OFBBCTR_generator *)NonLocals)->x)
+A_STATIC A68_VOID  EHBBCTR_generator(A68_BOOL  CHBBCTR_anonymous, A68_80  *ReturnedValue, void *NonLocals)
+#define NL(x) (((FHBBCTR_generator *)NonLocals)->x)
 { 
-A68_80  PFBBCTR;  /* clause result */
-A68_80  QFBBCTR;  /* OPERATORS - dynamic generator */
+A68_80  GHBBCTR;  /* clause result */
+A68_80  HHBBCTR;  /* OPERATORS - dynamic generator */
 { 
-QFBBCTR.dim[0].upb = NL(KFBBCTR_cons).upb ;
-QFBBCTR.dim[0].lwb = 1 ;
-A_1INITSTRIDES(QFBBCTR) ;
-( LFBBCTR_anonymous? A_R1LOC(A68_BOOL ,QFBBCTR): A_R1HEAP(A68_BOOL ,QFBBCTR) );
-PFBBCTR = QFBBCTR;
+HHBBCTR.dim[0].upb = NL(BHBBCTR_cons).upb ;
+HHBBCTR.dim[0].lwb = 1 ;
+A_1INITSTRIDES(HHBBCTR) ;
+( CHBBCTR_anonymous? A_R1LOC(A68_BOOL ,HHBBCTR): A_R1HEAP(A68_BOOL ,HHBBCTR) );
+GHBBCTR = HHBBCTR;
 } 
-*ReturnedValue = (PFBBCTR);
+*ReturnedValue = (GHBBCTR);
 return;
 } 
 #undef NL
  /* line 628: */
 
-A_STATIC A68_VOID  MGBBCTR_collateralunitassignee(A68_VC  Temp, A68_289  Selector, A68_VC  *ReturnedValue)
+A_STATIC A68_VOID  DIBBCTR_collateralunitassignee(A68_VC  Temp, A68_289  Selector, A68_VC  *ReturnedValue)
 { 
-A68_289  NGBBCTR;  /* united object - for case conformity */
-A68_200 * OGBBCTR_sf;
-A68_VC  PGBBCTR;  /* clause result */
-A68_VC  QGBBCTR;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_VC  RGBBCTR;  /* avoid structure result */
-A68_INT  SGBBCTR_i;
-A68_VC  VGBBCTR;  /* avoid structure result */
-A68_VC  WGBBCTR;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_289  EIBBCTR;  /* united object - for case conformity */
+A68_200 * FIBBCTR_sf;
+A68_VC  GIBBCTR;  /* clause result */
+A68_VC  HIBBCTR;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_VC  IIBBCTR;  /* avoid structure result */
+A68_INT  JIBBCTR_i;
+A68_VC  MIBBCTR;  /* avoid structure result */
+A68_VC  NIBBCTR;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(collateralunitassignee);
  /* line 635: */
  /* line 636: */
-NGBBCTR = Selector ;
-switch ( NGBBCTR.mode )
+EIBBCTR = Selector ;
+switch ( EIBBCTR.mode )
 { 
 case 1: /* REF STRUCT(INT,INT,MODE89)  */
-OGBBCTR_sf = (NGBBCTR.data.mode1);
+FIBBCTR_sf = (EIBBCTR.data.mode1);
  /* line 637: */
  /* line 638: */
-AENACTR_cfieldname( OGBBCTR_sf, &RGBBCTR );
-PGBBCTR = A_VC_PLUS(A_VC_PLUS(Temp,A_HVEC(QGBBCTR,'.',A68_CHAR )),RGBBCTR);
+RFNACTR_cfieldname( FIBBCTR_sf, &IIBBCTR );
+GIBBCTR = A_VC_PLUS(A_VC_PLUS(Temp,A_HVEC(HIBBCTR,'.',A68_CHAR )),IIBBCTR);
 break;
 case 2: /* INT */
-SGBBCTR_i = (NGBBCTR.data.mode2);
+JIBBCTR_i = (EIBBCTR.data.mode2);
  /* line 639: */
  /* line 640: */
-ROAAOSF_whole( (SGBBCTR_i-1), 0, &VGBBCTR );
-PGBBCTR = A_VC_PLUS(A_VC_PLUS(A_VC_PLUS(Temp,UGBBCTR),VGBBCTR),A_HVEC(WGBBCTR,']',A68_CHAR ));
+ROAAOSF_whole( (JIBBCTR_i-1), 0, &MIBBCTR );
+GIBBCTR = A_VC_PLUS(A_VC_PLUS(A_VC_PLUS(Temp,LIBBCTR),MIBBCTR),A_HVEC(NIBBCTR,']',A68_CHAR ));
 break;
 case 3: /* VOID */
  /* line 641: */
  /* line 642: */
-PGBBCTR = YGBBCTR;
+GIBBCTR = PIBBCTR;
 break;
 default: 
-PXIACTR_assert(AHBBCTR, A68_FALSE);
+WXIACTR_assert(RIBBCTR, A68_FALSE);
  /* line 643: */
-PGBBCTR = CHBBCTR;
+GIBBCTR = TIBBCTR;
 break;
 } 
 A_PROC_EXIT(collateralunitassignee);
-*ReturnedValue = (PGBBCTR);
+*ReturnedValue = (GIBBCTR);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  QLBBCTR_generator(A68_BOOL  OLBBCTR_anonymous, A68_198  *ReturnedValue, void *NonLocals)
-#define NL(x) (((RLBBCTR_generator *)NonLocals)->x)
+A_STATIC A68_VOID  HNBBCTR_generator(A68_BOOL  FNBBCTR_anonymous, A68_198  *ReturnedValue, void *NonLocals)
+#define NL(x) (((INBBCTR_generator *)NonLocals)->x)
 { 
-A68_198  SLBBCTR;  /* clause result */
-A68_198  TLBBCTR;  /* OPERATORS - dynamic generator */
+A68_198  JNBBCTR;  /* clause result */
+A68_198  KNBBCTR;  /* OPERATORS - dynamic generator */
 { 
-TLBBCTR.upb = NL(NLBBCTR_controlcount) ;
-( OLBBCTR_anonymous? A_VLOC(A68_195 ,TLBBCTR): A_VHEAP(A68_195 ,TLBBCTR) );
-SLBBCTR = TLBBCTR;
+KNBBCTR.upb = NL(ENBBCTR_controlcount) ;
+( FNBBCTR_anonymous? A_VLOC(A68_195 ,KNBBCTR): A_VHEAP(A68_195 ,KNBBCTR) );
+JNBBCTR = KNBBCTR;
 } 
-*ReturnedValue = (SLBBCTR);
+*ReturnedValue = (JNBBCTR);
 return;
 } 
 #undef NL
  /* line 396: */
  /* line 398: */
 
-A_STATIC A68_VOID  NCBBCTR_closedclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, void *NonLocals)
-#define NL(x) (((OCBBCTR_closedclause *)NonLocals)->x)
+A_STATIC A68_VOID  EEBBCTR_closedclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, void *NonLocals)
+#define NL(x) (((FEBBCTR_closedclause *)NonLocals)->x)
 { 
-A68_59  PCBBCTR;  /* collateral clause result */
-A68_BITS  QCBBCTR;  /* ADICOPS - >= */
-A68_INT  RCBBCTR;  /* ADICOPS - ABS INT */
-A68_59  SCBBCTR_properties;
-A68_63  TCBBCTR_ccanswer;
-A68_BITS  UCBBCTR;  /* ADICOPS - >= */
-A68_BOOL  VCBBCTR_seriescontainsexit;
-A68_55  WCBBCTR;  /* collateral clause result */
-A68_55 * XCBBCTR;  /* YIELD */
-A68_55 ** YCBBCTR;  /* YIELD */
-A68_BITS  ZCBBCTR;  /* ADICOPS - >= */
+A68_59  GEBBCTR;  /* collateral clause result */
+A68_BITS  HEBBCTR;  /* ADICOPS - >= */
+A68_INT  IEBBCTR;  /* ADICOPS - ABS INT */
+A68_59  JEBBCTR_properties;
+A68_63  KEBBCTR_ccanswer;
+A68_BITS  LEBBCTR;  /* ADICOPS - >= */
+A68_BOOL  MEBBCTR_seriescontainsexit;
+A68_55  NEBBCTR;  /* collateral clause result */
+A68_55 * OEBBCTR;  /* YIELD */
+A68_55 ** PEBBCTR;  /* YIELD */
+A68_BITS  QEBBCTR;  /* ADICOPS - >= */
 A_PROC_ENTRY(closedclause);
  /* line 404: */
  /* line 406: */
 { 
  /* line 407: */
-QCBBCTR = Starter.Props ;
-PCBBCTR.Block = (A_LB_GE(QCBBCTR,WCAACTR_decbit)&!Body);
+HEBBCTR = Starter.Props ;
+GEBBCTR.Block = (A_LB_GE(HEBBCTR,WCAACTR_decbit)&!Body);
  /* line 408: */
-RCBBCTR = Starter.Resultmode ;
-PCBBCTR.Dynamicresult = XRMACTR_dynamic(A_ABS(RCBBCTR));
+IEBBCTR = Starter.Resultmode ;
+GEBBCTR.Dynamicresult = OTMACTR_dynamic(A_ABS(IEBBCTR));
  /* line 410: */
-PCBBCTR.Discardeddynamicresult = ((A68_BITS )(Starter.Props&MDAACTR_dybits)!=0X0U);
-PCBBCTR.Type = Starter.Fn;
-SCBBCTR_properties = PCBBCTR;
+GEBBCTR.Discardeddynamicresult = ((A68_BITS )(Starter.Props&MDAACTR_dybits)!=0X0U);
+GEBBCTR.Type = Starter.Fn;
+JEBBCTR_properties = GEBBCTR;
  /* line 411: */
-TCBBCTR_ccanswer = Answer;
+KEBBCTR_ccanswer = Answer;
  /* line 412: */
  /* line 413: */
-UCBBCTR = Starter.Props ;
-VCBBCTR_seriescontainsexit = A_LB_GE(UCBBCTR,TCAACTR_exitbit);
+LEBBCTR = Starter.Props ;
+MEBBCTR_seriescontainsexit = A_LB_GE(LEBBCTR,TCAACTR_exitbit);
  /* line 414: */
  /* line 415: */
  /* line 416: */
-if ( VCBBCTR_seriescontainsexit )
+if ( MEBBCTR_seriescontainsexit )
 { 
  /* line 417: */
-WCBBCTR.Name = ZGMACTR_newuniquename();
+NEBBCTR.Name = QIMACTR_newuniquename();
  /* line 418: */
-WCBBCTR.Set = A68_TRUE;
-XCBBCTR = A_HEAP(A68_55 ) ;
-(*XCBBCTR) = WCBBCTR ;
-YCBBCTR = (&((&TCBBCTR_ccanswer)->End)) ;
-(*YCBBCTR) = XCBBCTR;
+NEBBCTR.Set = A68_TRUE;
+OEBBCTR = A_HEAP(A68_55 ) ;
+(*OEBBCTR) = NEBBCTR ;
+PEBBCTR = (&((&KEBBCTR_ccanswer)->End)) ;
+(*PEBBCTR) = OEBBCTR;
 } 
  /* line 419: */
-ZCBBCTR = Starter.Props ;
-IBZACTR_begin(A_LB_GE(ZCBBCTR,ADAACTR_labbit), Body);
+QEBBCTR = Starter.Props ;
+ZCZACTR_begin(A_LB_GE(QEBBCTR,ADAACTR_labbit), Body);
  /* line 420: */
-A_CALLPROC(NL(PABBCTR_serialclause),(SCBBCTR_properties, TCBBCTR_ccanswer),(SCBBCTR_properties, TCBBCTR_ccanswer,(NL(PABBCTR_serialclause)).nonlocals));
+A_CALLPROC(NL(GCBBCTR_serialclause),(JEBBCTR_properties, KEBBCTR_ccanswer),(JEBBCTR_properties, KEBBCTR_ccanswer,(NL(GCBBCTR_serialclause)).nonlocals));
  /* line 421: */
  /* line 422: */
  /* line 423: */
  /* line 424: */
  /* line 426: */
  /* line 427: */
-UBZACTR_end(SCBBCTR_properties.Dynamicresult, VCBBCTR_seriescontainsexit, Body, (*(&((&TCBBCTR_ccanswer)->End))));
+LDZACTR_end(JEBBCTR_properties.Dynamicresult, MEBBCTR_seriescontainsexit, Body, (*(&((&KEBBCTR_ccanswer)->End))));
 } 
 A_PROC_EXIT(closedclause);
 return;
@@ -2079,332 +2079,332 @@ return;
  /* line 431: */
  /* line 433: */
 
-A_STATIC A68_VOID  EDBBCTR_choiceclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, void *NonLocals)
-#define NL(x) (((FDBBCTR_choiceclause *)NonLocals)->x)
+A_STATIC A68_VOID  VEBBCTR_choiceclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, void *NonLocals)
+#define NL(x) (((WEBBCTR_choiceclause *)NonLocals)->x)
 { 
-A68_79  GDBBCTR_uchoice;
-A68_75  HDBBCTR_readuchoiceimperative;   /* proc value of non-global proc */
-A68_282  PDBBCTR_iddecimperative;   /* proc value of non-global proc */
-A68_INT  WDBBCTR;  /* ADICOPS - ABS INT */
-A68_INT  XDBBCTR_resultmode;
-A68_BOOL  YDBBCTR_discardlevelactivated;
-A68_INT  ZDBBCTR_enquirytype;
-A68_64  AEBBCTR_enquiry;
-A68_80  BEBBCTR_case;
-A68_55 * CEBBCTR_endofchoiceclause;
-A68_BOOL  DEBBCTR_elsepart;
-A68_BOOL  EEBBCTR_outpart;
-A68_64  FEBBCTR;  /* collateral clause result */
-A68_65  GEBBCTR;  /* OPERATORS - mode -> union mode */
-A68_64  VEBBCTR;  /* collateral clause result */
-A68_65  WEBBCTR;  /* OPERATORS - mode -> union mode */
-A68_INT  ZEBBCTR;  /* ADICOPS - ABS INT */
-A68_INT  AFBBCTR_umode;
-A68_64  BFBBCTR;  /* collateral clause result */
-A68_65  CFBBCTR;  /* OPERATORS - mode -> union mode */
-A68_63  DFBBCTR;  /* collateral clause result */
-A68_63  EFBBCTR;  /* collateral clause result */
-A68_63  FFBBCTR_seriesanswer;
-A68_59  GFBBCTR_seriesproperties;
-A68_180  HFBBCTR;  /* united object - for case conformity */
-A68_187  IFBBCTR_s;
-A68_124  JFBBCTR;  /* avoid structure result */
-A68_124  KFBBCTR_cons;
-A68_287  MFBBCTR_generator;   /* proc value of non-global proc */
-A68_80  RFBBCTR;  /* avoid structure result */
-A68_BOOL * SFBBCTR_c;
-A68_INT  TFBBCTR;  /* forall loop counter */
-A68_BITS  UFBBCTR;  /* ADICOPS - >= */
-A68_156  VFBBCTR;  /* avoid structure result */
-A68_BITS  WFBBCTR;  /* ADICOPS - >= */
-A68_156  XFBBCTR;  /* avoid structure result */
-A68_59  YFBBCTR;  /* collateral clause result */
-A68_BITS  ZFBBCTR;  /* ADICOPS - >= */
-A68_INT  AGBBCTR;  /* ADICOPS - ABS INT */
-A68_BOOL  BGBBCTR;  /* clause result */
-A68_189  CGBBCTR_t;
-A68_BOOL  DGBBCTR;  /* clause result */
+A68_79  XEBBCTR_uchoice;
+A68_75  YEBBCTR_readuchoiceimperative;   /* proc value of non-global proc */
+A68_282  GFBBCTR_iddecimperative;   /* proc value of non-global proc */
+A68_INT  NFBBCTR;  /* ADICOPS - ABS INT */
+A68_INT  OFBBCTR_resultmode;
+A68_BOOL  PFBBCTR_discardlevelactivated;
+A68_INT  QFBBCTR_enquirytype;
+A68_64  RFBBCTR_enquiry;
+A68_80  SFBBCTR_case;
+A68_55 * TFBBCTR_endofchoiceclause;
+A68_BOOL  UFBBCTR_elsepart;
+A68_BOOL  VFBBCTR_outpart;
+A68_64  WFBBCTR;  /* collateral clause result */
+A68_65  XFBBCTR;  /* OPERATORS - mode -> union mode */
+A68_64  MGBBCTR;  /* collateral clause result */
+A68_65  NGBBCTR;  /* OPERATORS - mode -> union mode */
+A68_INT  QGBBCTR;  /* ADICOPS - ABS INT */
+A68_INT  RGBBCTR_umode;
+A68_64  SGBBCTR;  /* collateral clause result */
+A68_65  TGBBCTR;  /* OPERATORS - mode -> union mode */
+A68_63  UGBBCTR;  /* collateral clause result */
+A68_63  VGBBCTR;  /* collateral clause result */
+A68_63  WGBBCTR_seriesanswer;
+A68_59  XGBBCTR_seriesproperties;
+A68_180  YGBBCTR;  /* united object - for case conformity */
+A68_187  ZGBBCTR_s;
+A68_124  AHBBCTR;  /* avoid structure result */
+A68_124  BHBBCTR_cons;
+A68_287  DHBBCTR_generator;   /* proc value of non-global proc */
+A68_80  IHBBCTR;  /* avoid structure result */
+A68_BOOL * JHBBCTR_c;
+A68_INT  KHBBCTR;  /* forall loop counter */
+A68_BITS  LHBBCTR;  /* ADICOPS - >= */
+A68_156  MHBBCTR;  /* avoid structure result */
+A68_BITS  NHBBCTR;  /* ADICOPS - >= */
+A68_156  OHBBCTR;  /* avoid structure result */
+A68_59  PHBBCTR;  /* collateral clause result */
+A68_BITS  QHBBCTR;  /* ADICOPS - >= */
+A68_INT  RHBBCTR;  /* ADICOPS - ABS INT */
+A68_BOOL  SHBBCTR;  /* clause result */
+A68_189  THBBCTR_t;
+A68_BOOL  UHBBCTR;  /* clause result */
 A_PROC_ENTRY(choiceclause);
  /* line 445: */
  /* line 447: */
 { 
  /* line 452: */
  /* line 459: */
-A_CLOSURE( HDBBCTR_readuchoiceimperative, IDBBCTR_readuchoiceimperative, JDBBCTR_readuchoiceimperative );
-(( JDBBCTR_readuchoiceimperative * ) ( HDBBCTR_readuchoiceimperative.nonlocals )) -> JXABCTR_read = NL(JXABCTR_read);
-(( JDBBCTR_readuchoiceimperative * ) ( HDBBCTR_readuchoiceimperative.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
-(( JDBBCTR_readuchoiceimperative * ) ( HDBBCTR_readuchoiceimperative.nonlocals )) -> GDBBCTR_uchoice = (&GDBBCTR_uchoice);
+A_CLOSURE( YEBBCTR_readuchoiceimperative, ZEBBCTR_readuchoiceimperative, AFBBCTR_readuchoiceimperative );
+(( AFBBCTR_readuchoiceimperative * ) ( YEBBCTR_readuchoiceimperative.nonlocals )) -> AZABCTR_read = NL(AZABCTR_read);
+(( AFBBCTR_readuchoiceimperative * ) ( YEBBCTR_readuchoiceimperative.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
+(( AFBBCTR_readuchoiceimperative * ) ( YEBBCTR_readuchoiceimperative.nonlocals )) -> XEBBCTR_uchoice = (&XEBBCTR_uchoice);
  /* line 471: */
  /* line 475: */
-A_CLOSURE( PDBBCTR_iddecimperative, QDBBCTR_iddecimperative, RDBBCTR_iddecimperative );
-(( RDBBCTR_iddecimperative * ) ( PDBBCTR_iddecimperative.nonlocals )) -> JXABCTR_read = NL(JXABCTR_read);
-(( RDBBCTR_iddecimperative * ) ( PDBBCTR_iddecimperative.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
+A_CLOSURE( GFBBCTR_iddecimperative, HFBBCTR_iddecimperative, IFBBCTR_iddecimperative );
+(( IFBBCTR_iddecimperative * ) ( GFBBCTR_iddecimperative.nonlocals )) -> AZABCTR_read = NL(AZABCTR_read);
+(( IFBBCTR_iddecimperative * ) ( GFBBCTR_iddecimperative.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
  /* line 483: */
-WDBBCTR = Starter.Resultmode ;
-XDBBCTR_resultmode = A_ABS(WDBBCTR);
+NFBBCTR = Starter.Resultmode ;
+OFBBCTR_resultmode = A_ABS(NFBBCTR);
  /* line 484: */
-YDBBCTR_discardlevelactivated = A68_FALSE;
+PFBBCTR_discardlevelactivated = A68_FALSE;
  /* line 485: */
  /* line 486: */
  /* line 487: */
  /* line 488: */
-CEBBCTR_endofchoiceclause = Answer.End;
+TFBBCTR_endofchoiceclause = Answer.End;
  /* line 489: */
-DEBBCTR_elsepart = A68_FALSE;
+UFBBCTR_elsepart = A68_FALSE;
  /* line 490: */
-EEBBCTR_outpart = A68_FALSE;
+VFBBCTR_outpart = A68_FALSE;
  /* line 492: */
  /* line 493: */
 if ( (Starter.Fn==EBAACTR_iffn) )
 { 
-FEBBCTR.Mode = WEAACTR_boolmode;
-FEBBCTR.Info = YIJACTR_defaultinfo;
-FEBBCTR.Extra = A_EMPTY(GEBBCTR,3);
-JEBBCTR_assignment((&AEBBCTR_enquiry), FEBBCTR);
+WFBBCTR.Mode = WEAACTR_boolmode;
+WFBBCTR.Info = PKJACTR_defaultinfo;
+WFBBCTR.Extra = A_EMPTY(XFBBCTR,3);
+AGBBCTR_assignment((&RFBBCTR_enquiry), WFBBCTR);
  /* line 494: */
  /* line 496: */
-ZDBBCTR_enquirytype = RJJACTR_enquiryresult;
+QFBBCTR_enquirytype = ILJACTR_enquiryresult;
 } 
 else
 { 
  /* line 497: */
 if ( (Starter.Fn==FBAACTR_casefn) )
 { 
-VEBBCTR.Mode = EFAACTR_intmode;
-VEBBCTR.Info = YIJACTR_defaultinfo;
-VEBBCTR.Extra = A_EMPTY(WEBBCTR,3);
-JEBBCTR_assignment((&AEBBCTR_enquiry), VEBBCTR);
+MGBBCTR.Mode = EFAACTR_intmode;
+MGBBCTR.Info = PKJACTR_defaultinfo;
+MGBBCTR.Extra = A_EMPTY(NGBBCTR,3);
+AGBBCTR_assignment((&RFBBCTR_enquiry), MGBBCTR);
  /* line 498: */
  /* line 500: */
-ZDBBCTR_enquirytype = RJJACTR_enquiryresult;
+QFBBCTR_enquirytype = ILJACTR_enquiryresult;
 } 
 else
 { 
-PXIACTR_assert(YEBBCTR, (Starter.Fn==GBAACTR_caseufn));
+WXIACTR_assert(PGBBCTR, (Starter.Fn==GBAACTR_caseufn));
  /* line 501: */
-ZEBBCTR = Starter.Mode ;
-AFBBCTR_umode = A_ABS(ZEBBCTR);
+QGBBCTR = Starter.Mode ;
+RGBBCTR_umode = A_ABS(QGBBCTR);
  /* line 502: */
-BFBBCTR.Mode = AFBBCTR_umode;
-BFBBCTR.Info = YIJACTR_defaultinfo;
-BFBBCTR.Extra = A_EMPTY(CFBBCTR,3);
-JEBBCTR_assignment((&AEBBCTR_enquiry), BFBBCTR);
+SGBBCTR.Mode = RGBBCTR_umode;
+SGBBCTR.Info = PKJACTR_defaultinfo;
+SGBBCTR.Extra = A_EMPTY(TGBBCTR,3);
+AGBBCTR_assignment((&RFBBCTR_enquiry), SGBBCTR);
  /* line 503: */
  /* line 505: */
-ZDBBCTR_enquirytype = RJJACTR_enquiryresult;
+QFBBCTR_enquirytype = ILJACTR_enquiryresult;
 } 
 } 
  /* line 507: */
-DFBBCTR.Value = (&AEBBCTR_enquiry);
-DFBBCTR.End = (A68_55 *)A68_NIL;
-DFBBCTR.Type = ZDBBCTR_enquirytype;
-A_CALLPROC(NL(JBBBCTR_enquiryclause),(DFBBCTR),(DFBBCTR,(NL(JBBBCTR_enquiryclause)).nonlocals));
+UGBBCTR.Value = (&RFBBCTR_enquiry);
+UGBBCTR.End = (A68_55 *)A68_NIL;
+UGBBCTR.Type = QFBBCTR_enquirytype;
+A_CALLPROC(NL(ADBBCTR_enquiryclause),(UGBBCTR),(UGBBCTR,(NL(ADBBCTR_enquiryclause)).nonlocals));
  /* line 509: */
  /* line 510: */
  /* line 511: */
-EFBBCTR.Value = Answer.Value;
+VGBBCTR.Value = Answer.Value;
  /* line 513: */
-EFBBCTR.End = CEBBCTR_endofchoiceclause;
-EFBBCTR.Type = Answer.Type;
-FFBBCTR_seriesanswer = EFBBCTR;
+VGBBCTR.End = TFBBCTR_endofchoiceclause;
+VGBBCTR.Type = Answer.Type;
+WGBBCTR_seriesanswer = VGBBCTR;
  /* line 514: */
  /* line 516: */
 for ( ;; )
 { 
  /* line 517: */
-HFBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( HFBBCTR.mode )
+YGBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( YGBBCTR.mode )
 { 
 case 20: /* STRUCT(INT,INT,BITS,INT)  */
-IFBBCTR_s = (HFBBCTR.data.mode20);
+ZGBBCTR_s = (YGBBCTR.data.mode20);
  /* line 518: */
 { 
  /* line 519: */
  /* line 521: */
-switch ( IFBBCTR_s.Fn )
+switch ( ZGBBCTR_s.Fn )
 { 
 case 1: 
  /* line 522: */
 { 
-DEBBCTR_elsepart = (IFBBCTR_s.Param==2);
+UFBBCTR_elsepart = (ZGBBCTR_s.Param==2);
  /* line 523: */
  /* line 524: */
  /* line 527: */
-SEZACTR_then((&AEBBCTR_enquiry));
+JGZACTR_then((&RFBBCTR_enquiry));
 } 
 break;
 case 2: 
  /* line 528: */
 { 
-EEBBCTR_outpart = (IFBBCTR_s.Param<0);
+VFBBCTR_outpart = (ZGBBCTR_s.Param<0);
  /* line 529: */
  /* line 530: */
  /* line 533: */
-IGZACTR_casein((&AEBBCTR_enquiry));
+ZHZACTR_casein((&RFBBCTR_enquiry));
 } 
 break;
 case 3: 
  /* line 534: */
 { 
-EEBBCTR_outpart = (IFBBCTR_s.Param<0);
+VFBBCTR_outpart = (ZGBBCTR_s.Param<0);
  /* line 535: */
-A_CALLPROC(HDBBCTR_readuchoiceimperative,(),((HDBBCTR_readuchoiceimperative).nonlocals));
+A_CALLPROC(YEBBCTR_readuchoiceimperative,(),((YEBBCTR_readuchoiceimperative).nonlocals));
  /* line 536: */
-A_CALLPROC(HUMACTR_constituents,((*(&((&AEBBCTR_enquiry)->Mode))), &JFBBCTR),((*(&((&AEBBCTR_enquiry)->Mode))), &JFBBCTR,(HUMACTR_constituents).nonlocals));
-KFBBCTR_cons = JFBBCTR;
+A_CALLPROC(YVMACTR_constituents,((*(&((&RFBBCTR_enquiry)->Mode))), &AHBBCTR),((*(&((&RFBBCTR_enquiry)->Mode))), &AHBBCTR,(YVMACTR_constituents).nonlocals));
+BHBBCTR_cons = AHBBCTR;
  /* line 537: */
  /* line 538: */
-A_CLOSURE( MFBBCTR_generator, NFBBCTR_generator, OFBBCTR_generator );
-(( OFBBCTR_generator * ) ( MFBBCTR_generator.nonlocals )) -> KFBBCTR_cons = KFBBCTR_cons;
-A_CALLPROC(MFBBCTR_generator,(A68_TRUE, &RFBBCTR),(A68_TRUE, &RFBBCTR,(MFBBCTR_generator).nonlocals));
-BEBBCTR_case = RFBBCTR;
+A_CLOSURE( DHBBCTR_generator, EHBBCTR_generator, FHBBCTR_generator );
+(( FHBBCTR_generator * ) ( DHBBCTR_generator.nonlocals )) -> BHBBCTR_cons = BHBBCTR_cons;
+A_CALLPROC(DHBBCTR_generator,(A68_TRUE, &IHBBCTR),(A68_TRUE, &IHBBCTR,(DHBBCTR_generator).nonlocals));
+SFBBCTR_case = IHBBCTR;
  /* line 539: */
  /* line 540: */
-TFBBCTR = BEBBCTR_case.dim[0].upb - BEBBCTR_case.dim[0].lwb;
-SFBBCTR_c = BEBBCTR_case.data;
-for (;TFBBCTR-- >= 0;
-(SFBBCTR_c += BEBBCTR_case.dim[0].stride
+KHBBCTR = SFBBCTR_case.dim[0].upb - SFBBCTR_case.dim[0].lwb;
+JHBBCTR_c = SFBBCTR_case.data;
+for (;KHBBCTR-- >= 0;
+(JHBBCTR_c += SFBBCTR_case.dim[0].stride
 ) )
 {
-(*SFBBCTR_c) = A68_FALSE;
+(*JHBBCTR_c) = A68_FALSE;
 }
  /* line 541: */
  /* line 542: */
  /* line 543: */
  /* line 545: */
-NHZACTR_inu(GDBBCTR_uchoice, (&AEBBCTR_enquiry), BEBBCTR_case);
+EJZACTR_inu(XEBBCTR_uchoice, (&RFBBCTR_enquiry), SFBBCTR_case);
  /* line 546: */
  /* line 547: */
  /* line 548: */
-UFBBCTR = (*(&((&GDBBCTR_uchoice)->Props))) ;
-if ( A_LB_GE(UFBBCTR,WCAACTR_decbit) )
+LHBBCTR = (*(&((&XEBBCTR_uchoice)->Props))) ;
+if ( A_LB_GE(LHBBCTR,WCAACTR_decbit) )
 { 
  /* line 549: */
  /* line 551: */
  /* line 552: */
  /* line 553: */
  /* line 556: */
-A_CALLPROC(PDBBCTR_iddecimperative,( &VFBBCTR),( &VFBBCTR,(PDBBCTR_iddecimperative).nonlocals));
-CUVACTR_ccdec(VFBBCTR, (&AEBBCTR_enquiry), (*(&((&GDBBCTR_uchoice)->Param))));
+A_CALLPROC(GFBBCTR_iddecimperative,( &MHBBCTR),( &MHBBCTR,(GFBBCTR_iddecimperative).nonlocals));
+TVVACTR_ccdec(MHBBCTR, (&RFBBCTR_enquiry), (*(&((&XEBBCTR_uchoice)->Param))));
 } 
 } 
 break;
 case 4: 
  /* line 558: */
-PIZACTR_comma(IFBBCTR_s.Param);
+GKZACTR_comma(ZGBBCTR_s.Param);
 break;
 case 5: 
  /* line 559: */
 { 
-A_CALLPROC(HDBBCTR_readuchoiceimperative,(),((HDBBCTR_readuchoiceimperative).nonlocals));
+A_CALLPROC(YEBBCTR_readuchoiceimperative,(),((YEBBCTR_readuchoiceimperative).nonlocals));
  /* line 560: */
  /* line 561: */
  /* line 562: */
  /* line 564: */
-LJZACTR_commau(GDBBCTR_uchoice, AEBBCTR_enquiry, BEBBCTR_case);
+CLZACTR_commau(XEBBCTR_uchoice, RFBBCTR_enquiry, SFBBCTR_case);
  /* line 565: */
  /* line 566: */
  /* line 567: */
-WFBBCTR = (*(&((&GDBBCTR_uchoice)->Props))) ;
-if ( A_LB_GE(WFBBCTR,WCAACTR_decbit) )
+NHBBCTR = (*(&((&XEBBCTR_uchoice)->Props))) ;
+if ( A_LB_GE(NHBBCTR,WCAACTR_decbit) )
 { 
  /* line 568: */
  /* line 570: */
  /* line 571: */
  /* line 572: */
  /* line 575: */
-A_CALLPROC(PDBBCTR_iddecimperative,( &XFBBCTR),( &XFBBCTR,(PDBBCTR_iddecimperative).nonlocals));
-CUVACTR_ccdec(XFBBCTR, (&AEBBCTR_enquiry), (*(&((&GDBBCTR_uchoice)->Param))));
+A_CALLPROC(GFBBCTR_iddecimperative,( &OHBBCTR),( &OHBBCTR,(GFBBCTR_iddecimperative).nonlocals));
+TVVACTR_ccdec(OHBBCTR, (&RFBBCTR_enquiry), (*(&((&XEBBCTR_uchoice)->Param))));
 } 
 } 
 break;
 case 6: 
  /* line 577: */
-LXIACTR_terminalerror(665);
+SXIACTR_terminalerror(665);
 break;
 case 7: 
  /* line 579: */
-UJZACTR_out();
+LLZACTR_out();
 break;
 case 8: 
  /* line 583: */
-A_CALLPROC(IKZACTR_outu,(),((IKZACTR_outu).nonlocals));
+A_CALLPROC(ZLZACTR_outu,(),((ZLZACTR_outu).nonlocals));
 break;
 case 9: 
  /* line 584: */
-PFZACTR_else();
+GHZACTR_else();
 break;
 default: 
  /* line 585: */
-LXIACTR_terminalerror(665);
+SXIACTR_terminalerror(665);
 break;
 } 
  /* line 587: */
  /* line 588: */
  /* line 589: */
-ZFBBCTR = IFBBCTR_s.Props ;
-YFBBCTR.Block = A_LB_GE(ZFBBCTR,WCAACTR_decbit);
+QHBBCTR = ZGBBCTR_s.Props ;
+PHBBCTR.Block = A_LB_GE(QHBBCTR,WCAACTR_decbit);
  /* line 590: */
-AGBBCTR = IFBBCTR_s.Mode ;
-YFBBCTR.Dynamicresult = XRMACTR_dynamic(A_ABS(AGBBCTR));
+RHBBCTR = ZGBBCTR_s.Mode ;
+PHBBCTR.Dynamicresult = OTMACTR_dynamic(A_ABS(RHBBCTR));
  /* line 591: */
-YFBBCTR.Discardeddynamicresult = ((A68_BITS )(IFBBCTR_s.Props&MDAACTR_dybits)!=0X0U);
+PHBBCTR.Discardeddynamicresult = ((A68_BITS )(ZGBBCTR_s.Props&MDAACTR_dybits)!=0X0U);
  /* line 592: */
-YFBBCTR.Type = (IFBBCTR_s.Fn+LBAACTR_separatoroffset);
-GFBBCTR_seriesproperties = YFBBCTR;
+PHBBCTR.Type = (ZGBBCTR_s.Fn+LBAACTR_separatoroffset);
+XGBBCTR_seriesproperties = PHBBCTR;
  /* line 593: */
  /* line 594: */
  /* line 596: */
-BGBBCTR = A68_TRUE;
+SHBBCTR = A68_TRUE;
 } 
 break;
 case 22: /* STRUCT(INT,BITS)  */
-CGBBCTR_t = (HFBBCTR.data.mode22);
+THBBCTR_t = (YGBBCTR.data.mode22);
  /* line 597: */
 { 
  /* line 598: */
  /* line 599: */
-if ( (CGBBCTR_t.Fn==CCAACTR_esacufn) )
+if ( (THBBCTR_t.Fn==CCAACTR_esacufn) )
 { 
  /* line 600: */
-A_CALLPROC(ILZACTR_esacu,(EEBBCTR_outpart, Answer),(EEBBCTR_outpart, Answer,(ILZACTR_esacu).nonlocals));
+A_CALLPROC(ZMZACTR_esacu,(VFBBCTR_outpart, Answer),(VFBBCTR_outpart, Answer,(ZMZACTR_esacu).nonlocals));
 } 
 else
 { 
  /* line 601: */
  /* line 602: */
-if ( (CGBBCTR_t.Fn==BCAACTR_esacfn) )
+if ( (THBBCTR_t.Fn==BCAACTR_esacfn) )
 { 
  /* line 603: */
  /* line 604: */
-MKZACTR_esac(EEBBCTR_outpart, Answer);
+DMZACTR_esac(VFBBCTR_outpart, Answer);
 } 
 else
 { 
  /* line 605: */
-MLZACTR_fi(DEBBCTR_elsepart, Answer);
+DNZACTR_fi(UFBBCTR_elsepart, Answer);
 } 
 } 
  /* line 607: */
  /* line 608: */
  /* line 609: */
  /* line 610: */
-BGBBCTR = A68_FALSE;
+SHBBCTR = A68_FALSE;
 } 
 break;
 default: 
-LXIACTR_terminalerror(657);
+SXIACTR_terminalerror(657);
  /* line 611: */
  /* line 612: */
  /* line 613: */
-BGBBCTR = A68_FALSE;
+SHBBCTR = A68_FALSE;
 break;
 } 
  /* line 614: */
-DGBBCTR = BGBBCTR;
-if ( !DGBBCTR ) break;
+UHBBCTR = SHBBCTR;
+if ( !UHBBCTR ) break;
  /* line 615: */
-A_CALLPROC(NL(PABBCTR_serialclause),(GFBBCTR_seriesproperties, FFBBCTR_seriesanswer),(GFBBCTR_seriesproperties, FFBBCTR_seriesanswer,(NL(PABBCTR_serialclause)).nonlocals));
+A_CALLPROC(NL(GCBBCTR_serialclause),(XGBBCTR_seriesproperties, WGBBCTR_seriesanswer),(XGBBCTR_seriesproperties, WGBBCTR_seriesanswer,(NL(GCBBCTR_serialclause)).nonlocals));
 }
  /* line 616: */
 } 
@@ -2413,56 +2413,56 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  HGBBCTR_collateralclause(A68_188  Starter, A68_63  Answer, void *NonLocals)
-#define NL(x) (((IGBBCTR_collateralclause *)NonLocals)->x)
+A_STATIC A68_VOID  YHBBCTR_collateralclause(A68_188  Starter, A68_63  Answer, void *NonLocals)
+#define NL(x) (((ZHBBCTR_collateralclause *)NonLocals)->x)
 { 
-A68_INT  DHBBCTR;  /* ADICOPS - ABS INT */
-A68_INT  EHBBCTR_resultmode;
-A68_INT  FHBBCTR_resulttype;
-A68_BOOL  GHBBCTR_structure;
-A68_BOOL  HHBBCTR_istruct;
-A68_BOOL  IHBBCTR_void;
-A68_208  LHBBCTR_fields;
-A68_208  MHBBCTR;  /* avoid structure result */
-A68_64 * NHBBCTR_collateralvalue;
-A68_VC  PHBBCTR;  /* clause result */
-A68_65  RHBBCTR;  /* united object - for case conformity */
-A68_68  UHBBCTR;  /* avoid structure result */
-A68_65  VHBBCTR;  /* OPERATORS - mode -> union mode */
-A68_VC  WHBBCTR;  /* avoid structure result */
-A68_VC  XHBBCTR_collateraltemp;
-A68_64  YHBBCTR;  /* collateral clause result */
-A68_INT  ZHBBCTR;  /* ADICOPS - ABS INT */
-A68_289  AIBBCTR;  /* clause result */
-A68_INT  BIBBCTR;  /* YIELD */
-A68_289  CIBBCTR;  /* OPERATORS - mode -> union mode */
-A68_200 * DIBBCTR;  /* YIELD */
-A68_289  EIBBCTR;  /* OPERATORS - mode -> union mode */
-A68_INT  FIBBCTR;  /* YIELD */
-A68_289  GIBBCTR;  /* OPERATORS - mode -> union mode */
-A68_VC  HIBBCTR;  /* avoid structure result */
-A68_65  IIBBCTR;  /* OPERATORS - mode -> union mode */
-A68_64  JIBBCTR_phrasevalue;
-A68_55  KIBBCTR_endofphrase;
-A68_63  LIBBCTR;  /* collateral clause result */
-A68_63  MIBBCTR_phraseanswer;
-A68_INT  NIBBCTR_i;
-A68_180  OIBBCTR;  /* united object - for case conformity */
-A68_187  PIBBCTR_s;
-A68_64  SIBBCTR;  /* collateral clause result */
-A68_INT  TIBBCTR;  /* ADICOPS - ABS INT */
-A68_289  UIBBCTR;  /* clause result */
-A68_INT  VIBBCTR;  /* YIELD */
-A68_289  WIBBCTR;  /* OPERATORS - mode -> union mode */
-A68_200 * XIBBCTR;  /* YIELD */
-A68_289  YIBBCTR;  /* OPERATORS - mode -> union mode */
-A68_INT  ZIBBCTR;  /* YIELD */
-A68_289  AJBBCTR;  /* OPERATORS - mode -> union mode */
-A68_VC  BJBBCTR;  /* avoid structure result */
-A68_65  CJBBCTR;  /* OPERATORS - mode -> union mode */
-A68_BOOL  DJBBCTR;  /* clause result */
-A68_189  EJBBCTR_t;
-A68_BOOL  HJBBCTR;  /* clause result */
+A68_INT  UIBBCTR;  /* ADICOPS - ABS INT */
+A68_INT  VIBBCTR_resultmode;
+A68_INT  WIBBCTR_resulttype;
+A68_BOOL  XIBBCTR_structure;
+A68_BOOL  YIBBCTR_istruct;
+A68_BOOL  ZIBBCTR_void;
+A68_208  CJBBCTR_fields;
+A68_208  DJBBCTR;  /* avoid structure result */
+A68_64 * EJBBCTR_collateralvalue;
+A68_VC  GJBBCTR;  /* clause result */
+A68_65  IJBBCTR;  /* united object - for case conformity */
+A68_68  LJBBCTR;  /* avoid structure result */
+A68_65  MJBBCTR;  /* OPERATORS - mode -> union mode */
+A68_VC  NJBBCTR;  /* avoid structure result */
+A68_VC  OJBBCTR_collateraltemp;
+A68_64  PJBBCTR;  /* collateral clause result */
+A68_INT  QJBBCTR;  /* ADICOPS - ABS INT */
+A68_289  RJBBCTR;  /* clause result */
+A68_INT  SJBBCTR;  /* YIELD */
+A68_289  TJBBCTR;  /* OPERATORS - mode -> union mode */
+A68_200 * UJBBCTR;  /* YIELD */
+A68_289  VJBBCTR;  /* OPERATORS - mode -> union mode */
+A68_INT  WJBBCTR;  /* YIELD */
+A68_289  XJBBCTR;  /* OPERATORS - mode -> union mode */
+A68_VC  YJBBCTR;  /* avoid structure result */
+A68_65  ZJBBCTR;  /* OPERATORS - mode -> union mode */
+A68_64  AKBBCTR_phrasevalue;
+A68_55  BKBBCTR_endofphrase;
+A68_63  CKBBCTR;  /* collateral clause result */
+A68_63  DKBBCTR_phraseanswer;
+A68_INT  EKBBCTR_i;
+A68_180  FKBBCTR;  /* united object - for case conformity */
+A68_187  GKBBCTR_s;
+A68_64  JKBBCTR;  /* collateral clause result */
+A68_INT  KKBBCTR;  /* ADICOPS - ABS INT */
+A68_289  LKBBCTR;  /* clause result */
+A68_INT  MKBBCTR;  /* YIELD */
+A68_289  NKBBCTR;  /* OPERATORS - mode -> union mode */
+A68_200 * OKBBCTR;  /* YIELD */
+A68_289  PKBBCTR;  /* OPERATORS - mode -> union mode */
+A68_INT  QKBBCTR;  /* YIELD */
+A68_289  RKBBCTR;  /* OPERATORS - mode -> union mode */
+A68_VC  SKBBCTR;  /* avoid structure result */
+A68_65  TKBBCTR;  /* OPERATORS - mode -> union mode */
+A68_BOOL  UKBBCTR;  /* clause result */
+A68_189  VKBBCTR_t;
+A68_BOOL  YKBBCTR;  /* clause result */
 A_PROC_ENTRY(collateralclause);
  /* line 623: */
  /* line 624: */
@@ -2470,52 +2470,52 @@ A_PROC_ENTRY(collateralclause);
  /* line 625: */
  /* line 626: */
  /* line 645: */
-DHBBCTR = Starter.Resultmode ;
-EHBBCTR_resultmode = A_ABS(DHBBCTR);
+UIBBCTR = Starter.Resultmode ;
+VIBBCTR_resultmode = A_ABS(UIBBCTR);
  /* line 646: */
-FHBBCTR_resulttype = RMMACTR_modetype(EHBBCTR_resultmode);
+WIBBCTR_resulttype = IOMACTR_modetype(VIBBCTR_resultmode);
  /* line 647: */
-GHBBCTR_structure = (FHBBCTR_resulttype==IEAACTR_struct);
+XIBBCTR_structure = (WIBBCTR_resulttype==IEAACTR_struct);
  /* line 648: */
-HHBBCTR_istruct = (FHBBCTR_resulttype==JEAACTR_istruct);
+YIBBCTR_istruct = (WIBBCTR_resulttype==JEAACTR_istruct);
  /* line 649: */
-IHBBCTR_void = (EHBBCTR_resultmode==UEAACTR_voidmode);
+ZIBBCTR_void = (VIBBCTR_resultmode==UEAACTR_voidmode);
  /* line 651: */
  /* line 652: */
  /* line 653: */
-PXIACTR_assert(KHBBCTR, ((GHBBCTR_structure|HHBBCTR_istruct)|IHBBCTR_void));
+WXIACTR_assert(BJBBCTR, ((XIBBCTR_structure|YIBBCTR_istruct)|ZIBBCTR_void));
  /* line 655: */
  /* line 656: */
  /* line 657: */
-if ( GHBBCTR_structure )
+if ( XIBBCTR_structure )
 { 
  /* line 658: */
-NTMACTR_structfields( EHBBCTR_resultmode, &MHBBCTR );
-LHBBCTR_fields = MHBBCTR;
+EVMACTR_structfields( VIBBCTR_resultmode, &DJBBCTR );
+CJBBCTR_fields = DJBBCTR;
 } 
  /* line 660: */
-NHBBCTR_collateralvalue = Answer.Value;
+EJBBCTR_collateralvalue = Answer.Value;
  /* line 667: */
  /* line 668: */
  /* line 669: */
  /* line 670: */
-if ( ((*(&(NHBBCTR_collateralvalue->Mode)))==UEAACTR_voidmode) )
+if ( ((*(&(EJBBCTR_collateralvalue->Mode)))==UEAACTR_voidmode) )
 { 
-PHBBCTR = QHBBCTR;
+GJBBCTR = HJBBCTR;
 } 
 else
 { 
  /* line 671: */
-RHBBCTR = (*(&(NHBBCTR_collateralvalue->Extra))) ;
-switch ( RHBBCTR.mode )
+IJBBCTR = (*(&(EJBBCTR_collateralvalue->Extra))) ;
+switch ( IJBBCTR.mode )
 { 
 case 3: /* VOID */
  /* line 673: */
  /* line 675: */
  /* line 676: */
  /* line 677: */
-UIOACTR_declarectemporary( (*(&(NHBBCTR_collateralvalue->Mode))), THBBCTR, &UHBBCTR );
-OEBBCTR_assignment((&(NHBBCTR_collateralvalue->Extra)), A_UNITE(VHBBCTR,mode5,5,UHBBCTR));
+LKOACTR_declarectemporary( (*(&(EJBBCTR_collateralvalue->Mode))), KJBBCTR, &LJBBCTR );
+FGBBCTR_assignment((&(EJBBCTR_collateralvalue->Extra)), A_UNITE(MJBBCTR,mode5,5,LJBBCTR));
 break;
 default: 
 /*SKIP*/;
@@ -2523,133 +2523,133 @@ break;
 } 
  /* line 678: */
  /* line 679: */
-PWPACTR_getcfragment( NHBBCTR_collateralvalue, &WHBBCTR );
-PHBBCTR = WHBBCTR;
+GYPACTR_getcfragment( EJBBCTR_collateralvalue, &NJBBCTR );
+GJBBCTR = NJBBCTR;
 } 
-XHBBCTR_collateraltemp = PHBBCTR;
+OJBBCTR_collateraltemp = GJBBCTR;
  /* line 682: */
  /* line 683: */
  /* line 684: */
-ZHBBCTR = Starter.Mode ;
-YHBBCTR.Mode = A_ABS(ZHBBCTR);
+QJBBCTR = Starter.Mode ;
+PJBBCTR.Mode = A_ABS(QJBBCTR);
  /* line 686: */
-YHBBCTR.Info = YIJACTR_defaultinfo;
+PJBBCTR.Info = PKJACTR_defaultinfo;
  /* line 687: */
-if ( GHBBCTR_structure )
+if ( XIBBCTR_structure )
 { 
  /* line 688: */
-BIBBCTR = 1 ;
-DIBBCTR = (&A_VINDEX(LHBBCTR_fields,BIBBCTR)) ;
-AIBBCTR = A_UNITE(CIBBCTR,mode1,1,DIBBCTR);
+SJBBCTR = 1 ;
+UJBBCTR = (&A_VINDEX(CJBBCTR_fields,SJBBCTR)) ;
+RJBBCTR = A_UNITE(TJBBCTR,mode1,1,UJBBCTR);
 } 
 else
 { 
  /* line 689: */
-if ( HHBBCTR_istruct )
+if ( YIBBCTR_istruct )
 { 
  /* line 690: */
-FIBBCTR = 1 ;
-AIBBCTR = A_UNITE(EIBBCTR,mode2,2,FIBBCTR);
+WJBBCTR = 1 ;
+RJBBCTR = A_UNITE(VJBBCTR,mode2,2,WJBBCTR);
 } 
 else
 { 
  /* line 691: */
-AIBBCTR = A_EMPTY(GIBBCTR,3);
+RJBBCTR = A_EMPTY(XJBBCTR,3);
 } 
 } 
  /* line 692: */
-MGBBCTR_collateralunitassignee( XHBBCTR_collateraltemp, AIBBCTR, &HIBBCTR );
-YHBBCTR.Extra = A_UNITE(IIBBCTR,mode6,6,HIBBCTR);
-JIBBCTR_phrasevalue = YHBBCTR;
+DIBBCTR_collateralunitassignee( OJBBCTR_collateraltemp, RJBBCTR, &YJBBCTR );
+PJBBCTR.Extra = A_UNITE(ZJBBCTR,mode6,6,YJBBCTR);
+AKBBCTR_phrasevalue = PJBBCTR;
  /* line 694: */
-KIBBCTR_endofphrase = HIAACTR_unsetlabel;
+BKBBCTR_endofphrase = HIAACTR_unsetlabel;
  /* line 696: */
  /* line 697: */
-LIBBCTR.Value = (&JIBBCTR_phrasevalue);
-LIBBCTR.End = (&KIBBCTR_endofphrase);
-LIBBCTR.Type = Answer.Type;
-MIBBCTR_phraseanswer = LIBBCTR;
+CKBBCTR.Value = (&AKBBCTR_phrasevalue);
+CKBBCTR.End = (&BKBBCTR_endofphrase);
+CKBBCTR.Type = Answer.Type;
+DKBBCTR_phraseanswer = CKBBCTR;
  /* line 699: */
  /* line 700: */
-for ( NIBBCTR_i = 1;;
-NIBBCTR_i += 1 ) 
+for ( EKBBCTR_i = 1;;
+EKBBCTR_i += 1 ) 
 { 
-A_CALLPROC(NL(XBBBCTR_phrase),(A68_FALSE, MIBBCTR_phraseanswer, A68_FALSE),(A68_FALSE, MIBBCTR_phraseanswer, A68_FALSE,(NL(XBBBCTR_phrase)).nonlocals));
+A_CALLPROC(NL(ODBBCTR_phrase),(A68_FALSE, DKBBCTR_phraseanswer, A68_FALSE),(A68_FALSE, DKBBCTR_phraseanswer, A68_FALSE,(NL(ODBBCTR_phrase)).nonlocals));
  /* line 701: */
  /* line 702: */
-OIBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( OIBBCTR.mode )
+FKBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( FKBBCTR.mode )
 { 
 case 20: /* STRUCT(INT,INT,BITS,INT)  */
-PIBBCTR_s = (OIBBCTR.data.mode20);
+GKBBCTR_s = (FKBBCTR.data.mode20);
  /* line 703: */
  /* line 704: */
 { 
-PXIACTR_assert(RIBBCTR, (PIBBCTR_s.Fn==VBAACTR_collcommafn));
+WXIACTR_assert(IKBBCTR, (GKBBCTR_s.Fn==VBAACTR_collcommafn));
  /* line 706: */
  /* line 707: */
  /* line 708: */
-TIBBCTR = PIBBCTR_s.Mode ;
-SIBBCTR.Mode = A_ABS(TIBBCTR);
+KKBBCTR = GKBBCTR_s.Mode ;
+JKBBCTR.Mode = A_ABS(KKBBCTR);
  /* line 710: */
-SIBBCTR.Info = YIJACTR_defaultinfo;
+JKBBCTR.Info = PKJACTR_defaultinfo;
  /* line 711: */
-if ( GHBBCTR_structure )
+if ( XIBBCTR_structure )
 { 
  /* line 712: */
-VIBBCTR = PIBBCTR_s.Param ;
-XIBBCTR = (&A_VINDEX(LHBBCTR_fields,VIBBCTR)) ;
-UIBBCTR = A_UNITE(WIBBCTR,mode1,1,XIBBCTR);
+MKBBCTR = GKBBCTR_s.Param ;
+OKBBCTR = (&A_VINDEX(CJBBCTR_fields,MKBBCTR)) ;
+LKBBCTR = A_UNITE(NKBBCTR,mode1,1,OKBBCTR);
 } 
 else
 { 
  /* line 713: */
-if ( HHBBCTR_istruct )
+if ( YIBBCTR_istruct )
 { 
  /* line 714: */
-ZIBBCTR = PIBBCTR_s.Param ;
-UIBBCTR = A_UNITE(YIBBCTR,mode2,2,ZIBBCTR);
+QKBBCTR = GKBBCTR_s.Param ;
+LKBBCTR = A_UNITE(PKBBCTR,mode2,2,QKBBCTR);
 } 
 else
 { 
  /* line 715: */
-UIBBCTR = A_EMPTY(AJBBCTR,3);
+LKBBCTR = A_EMPTY(RKBBCTR,3);
 } 
 } 
  /* line 716: */
-MGBBCTR_collateralunitassignee( XHBBCTR_collateraltemp, UIBBCTR, &BJBBCTR );
-SIBBCTR.Extra = A_UNITE(CJBBCTR,mode6,6,BJBBCTR);
-JEBBCTR_assignment((&JIBBCTR_phrasevalue), SIBBCTR);
+DIBBCTR_collateralunitassignee( OJBBCTR_collateraltemp, LKBBCTR, &SKBBCTR );
+JKBBCTR.Extra = A_UNITE(TKBBCTR,mode6,6,SKBBCTR);
+AGBBCTR_assignment((&AKBBCTR_phrasevalue), JKBBCTR);
  /* line 717: */
  /* line 718: */
  /* line 720: */
-DJBBCTR = A68_TRUE;
+UKBBCTR = A68_TRUE;
 } 
 break;
 case 22: /* STRUCT(INT,BITS)  */
-EJBBCTR_t = (OIBBCTR.data.mode22);
+VKBBCTR_t = (FKBBCTR.data.mode22);
  /* line 721: */
  /* line 722: */
 { 
-PXIACTR_assert(GJBBCTR, (EJBBCTR_t.Fn==ECAACTR_endcollfn));
+WXIACTR_assert(XKBBCTR, (VKBBCTR_t.Fn==ECAACTR_endcollfn));
  /* line 723: */
  /* line 724: */
  /* line 725: */
  /* line 726: */
-DJBBCTR = A68_FALSE;
+UKBBCTR = A68_FALSE;
 } 
 break;
 default: 
-LXIACTR_terminalerror(658);
+SXIACTR_terminalerror(658);
  /* line 727: */
  /* line 728: */
  /* line 729: */
-DJBBCTR = A68_FALSE;
+UKBBCTR = A68_FALSE;
 break;
 } 
  /* line 731: */
-HJBBCTR = DJBBCTR;
-if ( !HJBBCTR ) break;
+YKBBCTR = UKBBCTR;
+if ( !YKBBCTR ) break;
 /*SKIP*/;
 }
  /* line 732: */
@@ -2660,140 +2660,140 @@ return;
 #undef NL
  /* line 737: */
 
-A_STATIC A68_VOID  LJBBCTR_loopbody(A68_BOOL  Body, A68_63  Answer, void *NonLocals)
-#define NL(x) (((MJBBCTR_loopbody *)NonLocals)->x)
+A_STATIC A68_VOID  CLBBCTR_loopbody(A68_BOOL  Body, A68_63  Answer, void *NonLocals)
+#define NL(x) (((DLBBCTR_loopbody *)NonLocals)->x)
 { 
-A68_55  NJBBCTR_endofseries;
-A68_180  OJBBCTR;  /* united object - for case conformity */
-A68_187  PJBBCTR_whileordo;
-A68_59  QJBBCTR;  /* collateral clause result */
-A68_BITS  RJBBCTR;  /* ADICOPS - >= */
-A68_59  SJBBCTR_loopproperties;
-A68_64  TJBBCTR;  /* collateral clause result */
-A68_65  UJBBCTR;  /* OPERATORS - mode -> union mode */
-A68_64  VJBBCTR_enquiry;
-A68_63  WJBBCTR;  /* collateral clause result */
-A68_180  XJBBCTR;  /* united object - for case conformity */
-A68_187  YJBBCTR_s;
-A68_59  BKBBCTR;  /* collateral clause result */
-A68_BITS  CKBBCTR;  /* ADICOPS - >= */
-A68_59  DKBBCTR_seriesproperties;
-A68_63  EKBBCTR;  /* collateral clause result */
-A68_63  FKBBCTR;  /* collateral clause result */
+A68_55  ELBBCTR_endofseries;
+A68_180  FLBBCTR;  /* united object - for case conformity */
+A68_187  GLBBCTR_whileordo;
+A68_59  HLBBCTR;  /* collateral clause result */
+A68_BITS  ILBBCTR;  /* ADICOPS - >= */
+A68_59  JLBBCTR_loopproperties;
+A68_64  KLBBCTR;  /* collateral clause result */
+A68_65  LLBBCTR;  /* OPERATORS - mode -> union mode */
+A68_64  MLBBCTR_enquiry;
+A68_63  NLBBCTR;  /* collateral clause result */
+A68_180  OLBBCTR;  /* united object - for case conformity */
+A68_187  PLBBCTR_s;
+A68_59  SLBBCTR;  /* collateral clause result */
+A68_BITS  TLBBCTR;  /* ADICOPS - >= */
+A68_59  ULBBCTR_seriesproperties;
+A68_63  VLBBCTR;  /* collateral clause result */
+A68_63  WLBBCTR;  /* collateral clause result */
 A_PROC_ENTRY(loopbody);
  /* line 742: */
  /* line 743: */
 { 
-NJBBCTR_endofseries = HIAACTR_unsetlabel;
+ELBBCTR_endofseries = HIAACTR_unsetlabel;
  /* line 744: */
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 745: */
  /* line 746: */
-OJBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( OJBBCTR.mode )
+FLBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( FLBBCTR.mode )
 { 
 case 20: /* STRUCT(INT,INT,BITS,INT)  */
-PJBBCTR_whileordo = (OJBBCTR.data.mode20);
+GLBBCTR_whileordo = (FLBBCTR.data.mode20);
  /* line 747: */
  /* line 748: */
 { 
  /* line 749: */
-RJBBCTR = PJBBCTR_whileordo.Props ;
-QJBBCTR.Block = (A_LB_GE(RJBBCTR,WCAACTR_decbit)&!Body);
+ILBBCTR = GLBBCTR_whileordo.Props ;
+HLBBCTR.Block = (A_LB_GE(ILBBCTR,WCAACTR_decbit)&!Body);
  /* line 750: */
-QJBBCTR.Dynamicresult = A68_FALSE;
+HLBBCTR.Dynamicresult = A68_FALSE;
  /* line 751: */
-QJBBCTR.Discardeddynamicresult = ((A68_BITS )(PJBBCTR_whileordo.Props&MDAACTR_dybits)!=0X0U);
+HLBBCTR.Discardeddynamicresult = ((A68_BITS )(GLBBCTR_whileordo.Props&MDAACTR_dybits)!=0X0U);
  /* line 752: */
-QJBBCTR.Type = (PJBBCTR_whileordo.Fn+LBAACTR_separatoroffset);
-SJBBCTR_loopproperties = QJBBCTR;
+HLBBCTR.Type = (GLBBCTR_whileordo.Fn+LBAACTR_separatoroffset);
+JLBBCTR_loopproperties = HLBBCTR;
  /* line 754: */
  /* line 755: */
  /* line 756: */
-if ( (PJBBCTR_whileordo.Fn==YBAACTR_whilefn) )
+if ( (GLBBCTR_whileordo.Fn==YBAACTR_whilefn) )
 { 
-TJBBCTR.Mode = WEAACTR_boolmode;
-TJBBCTR.Info = YIJACTR_defaultinfo;
-TJBBCTR.Extra = A_EMPTY(UJBBCTR,3);
-VJBBCTR_enquiry = TJBBCTR;
+KLBBCTR.Mode = WEAACTR_boolmode;
+KLBBCTR.Info = PKJACTR_defaultinfo;
+KLBBCTR.Extra = A_EMPTY(LLBBCTR,3);
+MLBBCTR_enquiry = KLBBCTR;
  /* line 757: */
-SVABCTR_while();
+JXABCTR_while();
  /* line 758: */
  /* line 759: */
-WJBBCTR.Value = (&VJBBCTR_enquiry);
-WJBBCTR.End = (A68_55 *)A68_NIL;
-WJBBCTR.Type = RJJACTR_enquiryresult;
-A_CALLPROC(NL(JBBBCTR_enquiryclause),(WJBBCTR),(WJBBCTR,(NL(JBBBCTR_enquiryclause)).nonlocals));
+NLBBCTR.Value = (&MLBBCTR_enquiry);
+NLBBCTR.End = (A68_55 *)A68_NIL;
+NLBBCTR.Type = ILJACTR_enquiryresult;
+A_CALLPROC(NL(ADBBCTR_enquiryclause),(NLBBCTR),(NLBBCTR,(NL(ADBBCTR_enquiryclause)).nonlocals));
  /* line 760: */
-UVABCTR_whiledo((&VJBBCTR_enquiry));
+LXABCTR_whiledo((&MLBBCTR_enquiry));
  /* line 762: */
  /* line 763: */
-XJBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( XJBBCTR.mode )
+OLBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( OLBBCTR.mode )
 { 
 case 20: /* STRUCT(INT,INT,BITS,INT)  */
-YJBBCTR_s = (XJBBCTR.data.mode20);
+PLBBCTR_s = (OLBBCTR.data.mode20);
  /* line 764: */
  /* line 765: */
 { 
-PXIACTR_assert(AKBBCTR, (YJBBCTR_s.Fn==XBAACTR_dofn));
+WXIACTR_assert(RLBBCTR, (PLBBCTR_s.Fn==XBAACTR_dofn));
  /* line 766: */
  /* line 767: */
  /* line 768: */
  /* line 769: */
-CKBBCTR = YJBBCTR_s.Props ;
-BKBBCTR.Block = (A_LB_GE(CKBBCTR,WCAACTR_decbit)&!SJBBCTR_loopproperties.Block);
+TLBBCTR = PLBBCTR_s.Props ;
+SLBBCTR.Block = (A_LB_GE(TLBBCTR,WCAACTR_decbit)&!JLBBCTR_loopproperties.Block);
  /* line 770: */
-BKBBCTR.Dynamicresult = A68_FALSE;
+SLBBCTR.Dynamicresult = A68_FALSE;
  /* line 771: */
-BKBBCTR.Discardeddynamicresult = ((A68_BITS )(YJBBCTR_s.Props&MDAACTR_dybits)!=0X0U);
+SLBBCTR.Discardeddynamicresult = ((A68_BITS )(PLBBCTR_s.Props&MDAACTR_dybits)!=0X0U);
  /* line 772: */
-BKBBCTR.Type = (YJBBCTR_s.Fn+LBAACTR_separatoroffset);
-DKBBCTR_seriesproperties = BKBBCTR;
+SLBBCTR.Type = (PLBBCTR_s.Fn+LBAACTR_separatoroffset);
+ULBBCTR_seriesproperties = SLBBCTR;
  /* line 773: */
  /* line 774: */
  /* line 775: */
-EKBBCTR.Value = Answer.Value;
-EKBBCTR.End = (&NJBBCTR_endofseries);
+VLBBCTR.Value = Answer.Value;
+VLBBCTR.End = (&ELBBCTR_endofseries);
  /* line 776: */
-EKBBCTR.Type = NJJACTR_voidresult;
+VLBBCTR.Type = ELJACTR_voidresult;
  /* line 777: */
  /* line 778: */
  /* line 779: */
-A_CALLPROC(NL(PABBCTR_serialclause),(DKBBCTR_seriesproperties, EKBBCTR),(DKBBCTR_seriesproperties, EKBBCTR,(NL(PABBCTR_serialclause)).nonlocals));
+A_CALLPROC(NL(GCBBCTR_serialclause),(ULBBCTR_seriesproperties, VLBBCTR),(ULBBCTR_seriesproperties, VLBBCTR,(NL(GCBBCTR_serialclause)).nonlocals));
 } 
 break;
 default: 
  /* line 780: */
-LXIACTR_terminalerror(666);
+SXIACTR_terminalerror(666);
 break;
 } 
  /* line 782: */
  /* line 784: */
  /* line 786: */
-NWABCTR_whileod();
+EYABCTR_whileod();
 } 
 else
 { 
  /* line 787: */
-FKBBCTR.Value = Answer.Value;
-FKBBCTR.End = (&NJBBCTR_endofseries);
+WLBBCTR.Value = Answer.Value;
+WLBBCTR.End = (&ELBBCTR_endofseries);
  /* line 788: */
-FKBBCTR.Type = NJJACTR_voidresult;
-A_CALLPROC(NL(PABBCTR_serialclause),(SJBBCTR_loopproperties, FKBBCTR),(SJBBCTR_loopproperties, FKBBCTR,(NL(PABBCTR_serialclause)).nonlocals));
+WLBBCTR.Type = ELJACTR_voidresult;
+A_CALLPROC(NL(GCBBCTR_serialclause),(JLBBCTR_loopproperties, WLBBCTR),(JLBBCTR_loopproperties, WLBBCTR,(NL(GCBBCTR_serialclause)).nonlocals));
  /* line 789: */
  /* line 790: */
  /* line 791: */
  /* line 792: */
  /* line 793: */
-A_CALLPROC(UWABCTR_od,(),((UWABCTR_od).nonlocals));
+A_CALLPROC(LYABCTR_od,(),((LYABCTR_od).nonlocals));
 } 
 } 
 break;
 default: 
  /* line 794: */
  /* line 795: */
-LXIACTR_terminalerror(666);
+SXIACTR_terminalerror(666);
 break;
 } 
 } 
@@ -2805,103 +2805,103 @@ return;
  /* line 800: */
  /* line 802: */
 
-A_STATIC A68_VOID  LKBBCTR_loopclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 ** Frobytlist, void *NonLocals)
-#define NL(x) (((MKBBCTR_loopclause *)NonLocals)->x)
+A_STATIC A68_VOID  CMBBCTR_loopclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 ** Frobytlist, void *NonLocals)
+#define NL(x) (((DMBBCTR_loopclause *)NonLocals)->x)
 { 
-A68_55  NKBBCTR_startofloop;
-A68_55 * OKBBCTR_endofloop;
-A68_64  PKBBCTR_control;
-A68_64  QKBBCTR_step;
-A68_194  RKBBCTR;  /* collateral clause result */
-A68_BITS  SKBBCTR;  /* ADICOPS - >= */
-A68_BITS  TKBBCTR;  /* ADICOPS - >= */
-A68_BITS  UKBBCTR;  /* ADICOPS - >= */
-A68_BITS  VKBBCTR;  /* ADICOPS - >= */
-A68_194  WKBBCTR_loop;
-A68_180  XKBBCTR;  /* united object - for case conformity */
-A68_156  YKBBCTR_id;
-A68_64  ZKBBCTR;  /* collateral clause result */
-A68_INT  ALBBCTR;  /* YIELD */
-A68_67  BLBBCTR_iden;
-A68_INT * CLBBCTR;  /* YIELD */
-A68_65  DLBBCTR;  /* OPERATORS - mode -> union mode */
+A68_55  EMBBCTR_startofloop;
+A68_55 * FMBBCTR_endofloop;
+A68_64  GMBBCTR_control;
+A68_64  HMBBCTR_step;
+A68_194  IMBBCTR;  /* collateral clause result */
+A68_BITS  JMBBCTR;  /* ADICOPS - >= */
+A68_BITS  KMBBCTR;  /* ADICOPS - >= */
+A68_BITS  LMBBCTR;  /* ADICOPS - >= */
+A68_BITS  MMBBCTR;  /* ADICOPS - >= */
+A68_194  NMBBCTR_loop;
+A68_180  OMBBCTR;  /* united object - for case conformity */
+A68_156  PMBBCTR_id;
+A68_64  QMBBCTR;  /* collateral clause result */
+A68_INT  RMBBCTR;  /* YIELD */
+A68_67  SMBBCTR_iden;
+A68_INT * TMBBCTR;  /* YIELD */
+A68_65  UMBBCTR;  /* OPERATORS - mode -> union mode */
 A_PROC_ENTRY(loopclause);
  /* line 806: */
  /* line 807: */
 { 
-NKBBCTR_startofloop = HIAACTR_unsetlabel;
+EMBBCTR_startofloop = HIAACTR_unsetlabel;
  /* line 808: */
-OKBBCTR_endofloop = Answer.End;
+FMBBCTR_endofloop = Answer.End;
  /* line 809: */
-PKBBCTR_control = MJJACTR_skipvalue;
+GMBBCTR_control = DLJACTR_skipvalue;
  /* line 810: */
-QKBBCTR_step = MJJACTR_skipvalue;
+HMBBCTR_step = DLJACTR_skipvalue;
  /* line 812: */
  /* line 813: */
-RKBBCTR.Control = (&PKBBCTR_control);
+IMBBCTR.Control = (&GMBBCTR_control);
  /* line 814: */
-RKBBCTR.Step = (&QKBBCTR_step);
+IMBBCTR.Step = (&HMBBCTR_step);
  /* line 815: */
-SKBBCTR = Starter.Props ;
-RKBBCTR.Forpart = A_LB_GE(SKBBCTR,IDAACTR_forpartbit);
+JMBBCTR = Starter.Props ;
+IMBBCTR.Forpart = A_LB_GE(JMBBCTR,IDAACTR_forpartbit);
  /* line 816: */
-TKBBCTR = Starter.Props ;
-RKBBCTR.Frompart = A_LB_GE(TKBBCTR,JDAACTR_frompartbit);
+KMBBCTR = Starter.Props ;
+IMBBCTR.Frompart = A_LB_GE(KMBBCTR,JDAACTR_frompartbit);
  /* line 817: */
-UKBBCTR = Starter.Props ;
-RKBBCTR.Bypart = A_LB_GE(UKBBCTR,KDAACTR_bypartbit);
+LMBBCTR = Starter.Props ;
+IMBBCTR.Bypart = A_LB_GE(LMBBCTR,KDAACTR_bypartbit);
  /* line 818: */
-VKBBCTR = Starter.Props ;
-RKBBCTR.Topart = A_LB_GE(VKBBCTR,LDAACTR_topartbit);
-WKBBCTR_loop = RKBBCTR;
+MMBBCTR = Starter.Props ;
+IMBBCTR.Topart = A_LB_GE(MMBBCTR,LDAACTR_topartbit);
+NMBBCTR_loop = IMBBCTR;
  /* line 820: */
  /* line 821: */
-if ( (*(&((&WKBBCTR_loop)->Forpart))) )
+if ( (*(&((&NMBBCTR_loop)->Forpart))) )
 { 
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 822: */
  /* line 823: */
-XKBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( XKBBCTR.mode )
+OMBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( OMBBCTR.mode )
 { 
 case 11: /* STRUCT(INT,REF MODE26,INT,INT)  */
-YKBBCTR_id = (XKBBCTR.data.mode11);
+PMBBCTR_id = (OMBBCTR.data.mode11);
  /* line 824: */
 { 
-LSVACTR_iddec(YKBBCTR_id, (A68_71 **)A68_NIL);
+CUVACTR_iddec(PMBBCTR_id, (A68_71 **)A68_NIL);
  /* line 825: */
  /* line 826: */
  /* line 827: */
-ALBBCTR = YKBBCTR_id.Decno ;
-ZKBBCTR.Mode = (*(&((&A_R1INDEX(FOKACTR_ids,ALBBCTR))->Mode)));
+RMBBCTR = PMBBCTR_id.Decno ;
+QMBBCTR.Mode = (*(&((&A_R1INDEX(WPKACTR_ids,RMBBCTR))->Mode)));
  /* line 828: */
-ZKBBCTR.Info = YIJACTR_defaultinfo;
+QMBBCTR.Info = PKJACTR_defaultinfo;
 { 
  /* line 829: */
-CLBBCTR = (&((&BLBBCTR_iden)->Idno)) ;
-(*CLBBCTR) = YKBBCTR_id.Decno;
+TMBBCTR = (&((&SMBBCTR_iden)->Idno)) ;
+(*TMBBCTR) = PMBBCTR_id.Decno;
  /* line 830: */
  /* line 831: */
  /* line 832: */
-ZKBBCTR.Extra = A_UNITE(DLBBCTR,mode4,4,BLBBCTR_iden);
+QMBBCTR.Extra = A_UNITE(UMBBCTR,mode4,4,SMBBCTR_iden);
 } 
  /* line 833: */
  /* line 834: */
-JEBBCTR_assignment((&PKBBCTR_control), ZKBBCTR);
+AGBBCTR_assignment((&GMBBCTR_control), QMBBCTR);
 } 
 break;
 default: 
  /* line 835: */
  /* line 836: */
-LXIACTR_terminalerror(666);
+SXIACTR_terminalerror(666);
 break;
 } 
 } 
  /* line 838: */
-KBABCTR_for((&WKBBCTR_loop), Starter.Resultmode, Frobytlist);
+BDABCTR_for((&NMBBCTR_loop), Starter.Resultmode, Frobytlist);
  /* line 839: */
  /* line 840: */
-A_CALLPROC(NL(KJBBCTR_loopbody),(Body, Answer),(Body, Answer,(NL(KJBBCTR_loopbody)).nonlocals));
+A_CALLPROC(NL(BLBBCTR_loopbody),(Body, Answer),(Body, Answer,(NL(BLBBCTR_loopbody)).nonlocals));
 } 
 A_PROC_EXIT(loopclause);
 return;
@@ -2911,143 +2911,143 @@ return;
  /* line 845: */
  /* line 847: */
 
-A_STATIC A68_VOID  JLBBCTR_forallclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 ** Foralllist, void *NonLocals)
-#define NL(x) (((KLBBCTR_forallclause *)NonLocals)->x)
+A_STATIC A68_VOID  ANBBCTR_forallclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 ** Foralllist, void *NonLocals)
+#define NL(x) (((BNBBCTR_forallclause *)NonLocals)->x)
 { 
-A68_55  LLBBCTR_startofloop;
-A68_55 * MLBBCTR_endofloop;
-A68_INT  NLBBCTR_controlcount;
-A68_298  PLBBCTR_generator;   /* proc value of non-global proc */
-A68_198  VLBBCTR;  /* avoid structure result */
-A68_198  ULBBCTR_controls;
-A68_71 ** WLBBCTR_thisforalllist;
-A68_195 * XLBBCTR_control;
-A68_INT  YLBBCTR;  /* forall loop counter */
-A68_180  ZLBBCTR;  /* united object - for case conformity */
-A68_156  AMBBCTR_id;
-A68_64  BMBBCTR;  /* collateral clause result */
-A68_INT  CMBBCTR;  /* YIELD */
-A68_67  DMBBCTR_iden;
-A68_INT * EMBBCTR;  /* YIELD */
-A68_65  FMBBCTR;  /* OPERATORS - mode -> union mode */
+A68_55  CNBBCTR_startofloop;
+A68_55 * DNBBCTR_endofloop;
+A68_INT  ENBBCTR_controlcount;
+A68_298  GNBBCTR_generator;   /* proc value of non-global proc */
+A68_198  MNBBCTR;  /* avoid structure result */
+A68_198  LNBBCTR_controls;
+A68_71 ** NNBBCTR_thisforalllist;
+A68_195 * ONBBCTR_control;
+A68_INT  PNBBCTR;  /* forall loop counter */
+A68_180  QNBBCTR;  /* united object - for case conformity */
+A68_156  RNBBCTR_id;
+A68_64  SNBBCTR;  /* collateral clause result */
+A68_INT  TNBBCTR;  /* YIELD */
+A68_67  UNBBCTR_iden;
+A68_INT * VNBBCTR;  /* YIELD */
+A68_65  WNBBCTR;  /* OPERATORS - mode -> union mode */
 A_PROC_ENTRY(forallclause);
  /* line 851: */
  /* line 852: */
 { 
-LLBBCTR_startofloop = HIAACTR_unsetlabel;
+CNBBCTR_startofloop = HIAACTR_unsetlabel;
  /* line 853: */
-MLBBCTR_endofloop = Answer.End;
+DNBBCTR_endofloop = Answer.End;
  /* line 854: */
-NLBBCTR_controlcount = Starter.Resultmode;
+ENBBCTR_controlcount = Starter.Resultmode;
  /* line 855: */
-A_CLOSURE( PLBBCTR_generator, QLBBCTR_generator, RLBBCTR_generator );
-(( RLBBCTR_generator * ) ( PLBBCTR_generator.nonlocals )) -> NLBBCTR_controlcount = NLBBCTR_controlcount;
-A_CALLPROC(PLBBCTR_generator,(A68_TRUE, &VLBBCTR),(A68_TRUE, &VLBBCTR,(PLBBCTR_generator).nonlocals));
-ULBBCTR_controls = VLBBCTR;
+A_CLOSURE( GNBBCTR_generator, HNBBCTR_generator, INBBCTR_generator );
+(( INBBCTR_generator * ) ( GNBBCTR_generator.nonlocals )) -> ENBBCTR_controlcount = ENBBCTR_controlcount;
+A_CALLPROC(GNBBCTR_generator,(A68_TRUE, &MNBBCTR),(A68_TRUE, &MNBBCTR,(GNBBCTR_generator).nonlocals));
+LNBBCTR_controls = MNBBCTR;
  /* line 857: */
-WLBBCTR_thisforalllist = Foralllist;
+NNBBCTR_thisforalllist = Foralllist;
  /* line 859: */
  /* line 860: */
-YLBBCTR = ULBBCTR_controls.upb -1;
-XLBBCTR_control = ULBBCTR_controls.data;
-for (;YLBBCTR-- >= 0;
-(XLBBCTR_control++
+PNBBCTR = LNBBCTR_controls.upb -1;
+ONBBCTR_control = LNBBCTR_controls.data;
+for (;PNBBCTR-- >= 0;
+(ONBBCTR_control++
 ) )
 {
  /* line 861: */
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 862: */
  /* line 863: */
-ZLBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( ZLBBCTR.mode )
+QNBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( QNBBCTR.mode )
 { 
 case 11: /* STRUCT(INT,REF MODE26,INT,INT)  */
-AMBBCTR_id = (ZLBBCTR.data.mode11);
+RNBBCTR_id = (QNBBCTR.data.mode11);
  /* line 864: */
  /* line 871: */
 { 
-LSVACTR_iddec(AMBBCTR_id, WLBBCTR_thisforalllist);
+CUVACTR_iddec(RNBBCTR_id, NNBBCTR_thisforalllist);
  /* line 872: */
-WLBBCTR_thisforalllist = (&((*WLBBCTR_thisforalllist)->Rest));
+NNBBCTR_thisforalllist = (&((*NNBBCTR_thisforalllist)->Rest));
  /* line 874: */
  /* line 875: */
  /* line 876: */
-CMBBCTR = AMBBCTR_id.Decno ;
-BMBBCTR.Mode = (*(&((&A_R1INDEX(FOKACTR_ids,CMBBCTR))->Mode)));
+TNBBCTR = RNBBCTR_id.Decno ;
+SNBBCTR.Mode = (*(&((&A_R1INDEX(WPKACTR_ids,TNBBCTR))->Mode)));
  /* line 877: */
-BMBBCTR.Info = YIJACTR_defaultinfo;
+SNBBCTR.Info = PKJACTR_defaultinfo;
 { 
  /* line 878: */
-EMBBCTR = (&((&DMBBCTR_iden)->Idno)) ;
-(*EMBBCTR) = AMBBCTR_id.Decno;
+VNBBCTR = (&((&UNBBCTR_iden)->Idno)) ;
+(*VNBBCTR) = RNBBCTR_id.Decno;
  /* line 879: */
  /* line 880: */
  /* line 881: */
-BMBBCTR.Extra = A_UNITE(FMBBCTR,mode4,4,DMBBCTR_iden);
+SNBBCTR.Extra = A_UNITE(WNBBCTR,mode4,4,UNBBCTR_iden);
 } 
  /* line 882: */
  /* line 883: */
-JEBBCTR_assignment((&(XLBBCTR_control->Ident)), BMBBCTR);
+AGBBCTR_assignment((&(ONBBCTR_control->Ident)), SNBBCTR);
 } 
 break;
 default: 
  /* line 884: */
  /* line 885: */
-LXIACTR_terminalerror(666);
+SXIACTR_terminalerror(666);
 break;
 } 
 }
  /* line 887: */
-YKABCTR_forall(ULBBCTR_controls, Foralllist);
+PMABCTR_forall(LNBBCTR_controls, Foralllist);
  /* line 888: */
  /* line 889: */
-A_CALLPROC(NL(KJBBCTR_loopbody),(Body, Answer),(Body, Answer,(NL(KJBBCTR_loopbody)).nonlocals));
+A_CALLPROC(NL(BLBBCTR_loopbody),(Body, Answer),(Body, Answer,(NL(BLBBCTR_loopbody)).nonlocals));
 } 
 A_PROC_EXIT(forallclause);
 return;
 } 
 #undef NL
 
-A_STATIC A68_71 * OMBBCTR_assignment(A68_71 * MMBBCTR_anonymous, A68_71  NMBBCTR_anonymous)
+A_STATIC A68_71 * FOBBCTR_assignment(A68_71 * DOBBCTR_anonymous, A68_71  EOBBCTR_anonymous)
 { 
-A68_71 ** PMBBCTR;  /* YIELD */
-A68_71 * QMBBCTR;  /* clause result */
+A68_71 ** GOBBCTR;  /* YIELD */
+A68_71 * HOBBCTR;  /* clause result */
 { 
-JEBBCTR_assignment((&(MMBBCTR_anonymous->Value)), NMBBCTR_anonymous.Value);
-PMBBCTR = (&(MMBBCTR_anonymous->Rest)) ;
-(*PMBBCTR) = NMBBCTR_anonymous.Rest;
-QMBBCTR = MMBBCTR_anonymous;
+AGBBCTR_assignment((&(DOBBCTR_anonymous->Value)), EOBBCTR_anonymous.Value);
+GOBBCTR = (&(DOBBCTR_anonymous->Rest)) ;
+(*GOBBCTR) = EOBBCTR_anonymous.Rest;
+HOBBCTR = DOBBCTR_anonymous;
 } 
-return( QMBBCTR );
+return( HOBBCTR );
 } 
 #undef NL
 
-A_STATIC A68_VOID  KZABCTR_generator(A68_BOOL  IZABCTR_anonymous, A68_124  *ReturnedValue, void *NonLocals)
-#define NL(x) (((LZABCTR_generator *)NonLocals)->x)
+A_STATIC A68_VOID  BBBBCTR_generator(A68_BOOL  ZABBCTR_anonymous, A68_124  *ReturnedValue, void *NonLocals)
+#define NL(x) (((CBBBCTR_generator *)NonLocals)->x)
 { 
-A68_124  MZABCTR;  /* clause result */
-A68_124  NZABCTR;  /* OPERATORS - dynamic generator */
+A68_124  DBBBCTR;  /* clause result */
+A68_124  EBBBCTR;  /* OPERATORS - dynamic generator */
 { 
-NZABCTR.upb = 0 ;
-( IZABCTR_anonymous? A_VLOC(A68_INT ,NZABCTR): A_VHEAP(A68_INT ,NZABCTR) );
-MZABCTR = NZABCTR;
+EBBBCTR.upb = 0 ;
+( ZABBCTR_anonymous? A_VLOC(A68_INT ,EBBBCTR): A_VHEAP(A68_INT ,EBBBCTR) );
+DBBBCTR = EBBBCTR;
 } 
-*ReturnedValue = (MZABCTR);
+*ReturnedValue = (DBBBCTR);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  VZABCTR_generator(A68_BOOL  TZABCTR_anonymous, A68_124  *ReturnedValue, void *NonLocals)
-#define NL(x) (((WZABCTR_generator *)NonLocals)->x)
+A_STATIC A68_VOID  MBBBCTR_generator(A68_BOOL  KBBBCTR_anonymous, A68_124  *ReturnedValue, void *NonLocals)
+#define NL(x) (((NBBBCTR_generator *)NonLocals)->x)
 { 
-A68_124  XZABCTR;  /* clause result */
-A68_124  YZABCTR;  /* OPERATORS - dynamic generator */
+A68_124  OBBBCTR;  /* clause result */
+A68_124  PBBBCTR;  /* OPERATORS - dynamic generator */
 { 
-YZABCTR.upb = NL(HZABCTR_paramcount) ;
-( TZABCTR_anonymous? A_VLOC(A68_INT ,YZABCTR): A_VHEAP(A68_INT ,YZABCTR) );
-XZABCTR = YZABCTR;
+PBBBCTR.upb = NL(YABBCTR_paramcount) ;
+( KBBBCTR_anonymous? A_VLOC(A68_INT ,PBBBCTR): A_VHEAP(A68_INT ,PBBBCTR) );
+OBBBCTR = PBBBCTR;
 } 
-*ReturnedValue = (XZABCTR);
+*ReturnedValue = (OBBBCTR);
 return;
 } 
 #undef NL
@@ -3055,85 +3055,85 @@ return;
  /* line 370: */
  /* line 372: */
 
-A_STATIC A68_VOID  GCBBCTR_enclosedclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 * Newvalue, void *NonLocals)
-#define NL(x) (((HCBBCTR_enclosedclause *)NonLocals)->x)
+A_STATIC A68_VOID  XDBBCTR_enclosedclause(A68_188  Starter, A68_BOOL  Body, A68_63  Answer, A68_71 * Newvalue, void *NonLocals)
+#define NL(x) (((YDBBCTR_enclosedclause *)NonLocals)->x)
 { 
-A68_281  MCBBCTR_closedclause;   /* proc value of non-global proc */
-A68_281  DDBBCTR_choiceclause;   /* proc value of non-global proc */
-A68_288  GGBBCTR_collateralclause;   /* proc value of non-global proc */
-A68_76  KJBBCTR_loopbody;   /* proc value of non-global proc */
-A68_297  KKBBCTR_loopclause;   /* proc value of non-global proc */
-A68_297  ILBBCTR_forallclause;   /* proc value of non-global proc */
-A68_55  GMBBCTR_endofclause;
-A68_INT  HMBBCTR;  /* ADICOPS - ABS INT */
-A68_INT  IMBBCTR_resultmode;
-A68_INT  JMBBCTR_type;
-A68_71  KMBBCTR;  /* collateral clause result */
-A68_65  LMBBCTR;  /* OPERATORS - mode -> union mode */
-A68_63  RMBBCTR;  /* collateral clause result */
-A68_63  UMBBCTR;  /* collateral clause result */
-A68_BITS  VMBBCTR;  /* ADICOPS - >= */
-A68_INT  WMBBCTR;  /* ADICOPS - ABS INT */
-A68_INT  XMBBCTR;  /* ADICOPS - ABS INT */
-A68_INT  YMBBCTR_resultmode;
-A68_BOOL  ZMBBCTR_newanswer;
-A68_71  ANBBCTR;  /* collateral clause result */
-A68_65  BNBBCTR;  /* OPERATORS - mode -> union mode */
-A68_63  CNBBCTR;  /* collateral clause result */
-A68_63  DNBBCTR;  /* collateral clause result */
-A68_71 * ENBBCTR_valuelist;
-A68_INT  FNBBCTR;  /* to part of loop */
-A68_INT  GNBBCTR;  /* loop control */
-A68_71  HNBBCTR;  /* collateral clause result */
-A68_65  INBBCTR;  /* OPERATORS - mode -> union mode */
-A68_297  JNBBCTR;  /* clause result */
-A68_63  KNBBCTR;  /* collateral clause result */
-A68_INT  LNBBCTR;  /* ADICOPS - ABS INT */
-A68_INT  MNBBCTR_resultmode;
-A68_71  NNBBCTR;  /* collateral clause result */
-A68_65  ONBBCTR;  /* OPERATORS - mode -> union mode */
-A68_63  PNBBCTR;  /* collateral clause result */
-A68_63  SNBBCTR;  /* collateral clause result */
-A68_INT  TNBBCTR;  /* ADICOPS - ABS INT */
+A68_281  DEBBCTR_closedclause;   /* proc value of non-global proc */
+A68_281  UEBBCTR_choiceclause;   /* proc value of non-global proc */
+A68_288  XHBBCTR_collateralclause;   /* proc value of non-global proc */
+A68_76  BLBBCTR_loopbody;   /* proc value of non-global proc */
+A68_297  BMBBCTR_loopclause;   /* proc value of non-global proc */
+A68_297  ZMBBCTR_forallclause;   /* proc value of non-global proc */
+A68_55  XNBBCTR_endofclause;
+A68_INT  YNBBCTR;  /* ADICOPS - ABS INT */
+A68_INT  ZNBBCTR_resultmode;
+A68_INT  AOBBCTR_type;
+A68_71  BOBBCTR;  /* collateral clause result */
+A68_65  COBBCTR;  /* OPERATORS - mode -> union mode */
+A68_63  IOBBCTR;  /* collateral clause result */
+A68_63  LOBBCTR;  /* collateral clause result */
+A68_BITS  MOBBCTR;  /* ADICOPS - >= */
+A68_INT  NOBBCTR;  /* ADICOPS - ABS INT */
+A68_INT  OOBBCTR;  /* ADICOPS - ABS INT */
+A68_INT  POBBCTR_resultmode;
+A68_BOOL  QOBBCTR_newanswer;
+A68_71  ROBBCTR;  /* collateral clause result */
+A68_65  SOBBCTR;  /* OPERATORS - mode -> union mode */
+A68_63  TOBBCTR;  /* collateral clause result */
+A68_63  UOBBCTR;  /* collateral clause result */
+A68_71 * VOBBCTR_valuelist;
+A68_INT  WOBBCTR;  /* to part of loop */
+A68_INT  XOBBCTR;  /* loop control */
+A68_71  YOBBCTR;  /* collateral clause result */
+A68_65  ZOBBCTR;  /* OPERATORS - mode -> union mode */
+A68_297  APBBCTR;  /* clause result */
+A68_63  BPBBCTR;  /* collateral clause result */
+A68_INT  CPBBCTR;  /* ADICOPS - ABS INT */
+A68_INT  DPBBCTR_resultmode;
+A68_71  EPBBCTR;  /* collateral clause result */
+A68_65  FPBBCTR;  /* OPERATORS - mode -> union mode */
+A68_63  GPBBCTR;  /* collateral clause result */
+A68_63  JPBBCTR;  /* collateral clause result */
+A68_INT  KPBBCTR;  /* ADICOPS - ABS INT */
 A_PROC_ENTRY(enclosedclause);
  /* line 392: */
  /* line 394: */
 { 
  /* line 395: */
-A_CLOSURE( MCBBCTR_closedclause, NCBBCTR_closedclause, OCBBCTR_closedclause );
-(( OCBBCTR_closedclause * ) ( MCBBCTR_closedclause.nonlocals )) -> PABBCTR_serialclause = NL(PABBCTR_serialclause);
+A_CLOSURE( DEBBCTR_closedclause, EEBBCTR_closedclause, FEBBCTR_closedclause );
+(( FEBBCTR_closedclause * ) ( DEBBCTR_closedclause.nonlocals )) -> GCBBCTR_serialclause = NL(GCBBCTR_serialclause);
  /* line 429: */
  /* line 430: */
-A_CLOSURE( DDBBCTR_choiceclause, EDBBCTR_choiceclause, FDBBCTR_choiceclause );
-(( FDBBCTR_choiceclause * ) ( DDBBCTR_choiceclause.nonlocals )) -> JXABCTR_read = NL(JXABCTR_read);
-(( FDBBCTR_choiceclause * ) ( DDBBCTR_choiceclause.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
-(( FDBBCTR_choiceclause * ) ( DDBBCTR_choiceclause.nonlocals )) -> JBBBCTR_enquiryclause = NL(JBBBCTR_enquiryclause);
-(( FDBBCTR_choiceclause * ) ( DDBBCTR_choiceclause.nonlocals )) -> PABBCTR_serialclause = NL(PABBCTR_serialclause);
+A_CLOSURE( UEBBCTR_choiceclause, VEBBCTR_choiceclause, WEBBCTR_choiceclause );
+(( WEBBCTR_choiceclause * ) ( UEBBCTR_choiceclause.nonlocals )) -> AZABCTR_read = NL(AZABCTR_read);
+(( WEBBCTR_choiceclause * ) ( UEBBCTR_choiceclause.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
+(( WEBBCTR_choiceclause * ) ( UEBBCTR_choiceclause.nonlocals )) -> ADBBCTR_enquiryclause = NL(ADBBCTR_enquiryclause);
+(( WEBBCTR_choiceclause * ) ( UEBBCTR_choiceclause.nonlocals )) -> GCBBCTR_serialclause = NL(GCBBCTR_serialclause);
  /* line 618: */
-A_CLOSURE( GGBBCTR_collateralclause, HGBBCTR_collateralclause, IGBBCTR_collateralclause );
-(( IGBBCTR_collateralclause * ) ( GGBBCTR_collateralclause.nonlocals )) -> XBBBCTR_phrase = NL(XBBBCTR_phrase);
-(( IGBBCTR_collateralclause * ) ( GGBBCTR_collateralclause.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
+A_CLOSURE( XHBBCTR_collateralclause, YHBBCTR_collateralclause, ZHBBCTR_collateralclause );
+(( ZHBBCTR_collateralclause * ) ( XHBBCTR_collateralclause.nonlocals )) -> ODBBCTR_phrase = NL(ODBBCTR_phrase);
+(( ZHBBCTR_collateralclause * ) ( XHBBCTR_collateralclause.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
  /* line 734: */
  /* line 735: */
-A_CLOSURE( KJBBCTR_loopbody, LJBBCTR_loopbody, MJBBCTR_loopbody );
-(( MJBBCTR_loopbody * ) ( KJBBCTR_loopbody.nonlocals )) -> JXABCTR_read = NL(JXABCTR_read);
-(( MJBBCTR_loopbody * ) ( KJBBCTR_loopbody.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
-(( MJBBCTR_loopbody * ) ( KJBBCTR_loopbody.nonlocals )) -> JBBBCTR_enquiryclause = NL(JBBBCTR_enquiryclause);
-(( MJBBCTR_loopbody * ) ( KJBBCTR_loopbody.nonlocals )) -> PABBCTR_serialclause = NL(PABBCTR_serialclause);
+A_CLOSURE( BLBBCTR_loopbody, CLBBCTR_loopbody, DLBBCTR_loopbody );
+(( DLBBCTR_loopbody * ) ( BLBBCTR_loopbody.nonlocals )) -> AZABCTR_read = NL(AZABCTR_read);
+(( DLBBCTR_loopbody * ) ( BLBBCTR_loopbody.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
+(( DLBBCTR_loopbody * ) ( BLBBCTR_loopbody.nonlocals )) -> ADBBCTR_enquiryclause = NL(ADBBCTR_enquiryclause);
+(( DLBBCTR_loopbody * ) ( BLBBCTR_loopbody.nonlocals )) -> GCBBCTR_serialclause = NL(GCBBCTR_serialclause);
  /* line 797: */
  /* line 798: */
-A_CLOSURE( KKBBCTR_loopclause, LKBBCTR_loopclause, MKBBCTR_loopclause );
-(( MKBBCTR_loopclause * ) ( KKBBCTR_loopclause.nonlocals )) -> JXABCTR_read = NL(JXABCTR_read);
-(( MKBBCTR_loopclause * ) ( KKBBCTR_loopclause.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
-(( MKBBCTR_loopclause * ) ( KKBBCTR_loopclause.nonlocals )) -> KJBBCTR_loopbody = KJBBCTR_loopbody;
+A_CLOSURE( BMBBCTR_loopclause, CMBBCTR_loopclause, DMBBCTR_loopclause );
+(( DMBBCTR_loopclause * ) ( BMBBCTR_loopclause.nonlocals )) -> AZABCTR_read = NL(AZABCTR_read);
+(( DMBBCTR_loopclause * ) ( BMBBCTR_loopclause.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
+(( DMBBCTR_loopclause * ) ( BMBBCTR_loopclause.nonlocals )) -> BLBBCTR_loopbody = BLBBCTR_loopbody;
  /* line 842: */
  /* line 843: */
-A_CLOSURE( ILBBCTR_forallclause, JLBBCTR_forallclause, KLBBCTR_forallclause );
-(( KLBBCTR_forallclause * ) ( ILBBCTR_forallclause.nonlocals )) -> JXABCTR_read = NL(JXABCTR_read);
-(( KLBBCTR_forallclause * ) ( ILBBCTR_forallclause.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
-(( KLBBCTR_forallclause * ) ( ILBBCTR_forallclause.nonlocals )) -> KJBBCTR_loopbody = KJBBCTR_loopbody;
+A_CLOSURE( ZMBBCTR_forallclause, ANBBCTR_forallclause, BNBBCTR_forallclause );
+(( BNBBCTR_forallclause * ) ( ZMBBCTR_forallclause.nonlocals )) -> AZABCTR_read = NL(AZABCTR_read);
+(( BNBBCTR_forallclause * ) ( ZMBBCTR_forallclause.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
+(( BNBBCTR_forallclause * ) ( ZMBBCTR_forallclause.nonlocals )) -> BLBBCTR_loopbody = BLBBCTR_loopbody;
  /* line 893: */
-GMBBCTR_endofclause = HIAACTR_unsetlabel;
+XNBBCTR_endofclause = HIAACTR_unsetlabel;
  /* line 895: */
  /* line 896: */
 if ( (Starter.Fn==HBAACTR_beginfn) )
@@ -3141,70 +3141,70 @@ if ( (Starter.Fn==HBAACTR_beginfn) )
  /* line 897: */
 if ( ((Starter.Mode>0)&!Body) )
 { 
-HMBBCTR = Starter.Resultmode ;
-IMBBCTR_resultmode = A_ABS(HMBBCTR);
+YNBBCTR = Starter.Resultmode ;
+ZNBBCTR_resultmode = A_ABS(YNBBCTR);
  /* line 898: */
-JMBBCTR_type = TJJACTR_noparticularresult;
+AOBBCTR_type = KLJACTR_noparticularresult;
  /* line 900: */
  /* line 901: */
-KMBBCTR.Value.Mode = IMBBCTR_resultmode;
-KMBBCTR.Value.Info = YIJACTR_defaultinfo;
-KMBBCTR.Value.Extra = A_EMPTY(LMBBCTR,3);
-KMBBCTR.Rest = (*NL(ACBBCTR_valuestack));
-(*NL(ACBBCTR_valuestack)) = OMBBCTR_assignment(Newvalue, KMBBCTR);
+BOBBCTR.Value.Mode = ZNBBCTR_resultmode;
+BOBBCTR.Value.Info = PKJACTR_defaultinfo;
+BOBBCTR.Value.Extra = A_EMPTY(COBBCTR,3);
+BOBBCTR.Rest = (*NL(RDBBCTR_valuestack));
+(*NL(RDBBCTR_valuestack)) = FOBBCTR_assignment(Newvalue, BOBBCTR);
  /* line 903: */
  /* line 904: */
  /* line 905: */
  /* line 906: */
  /* line 907: */
-RMBBCTR.Value = (&((*NL(ACBBCTR_valuestack))->Value));
+IOBBCTR.Value = (&((*NL(RDBBCTR_valuestack))->Value));
  /* line 909: */
-RMBBCTR.End = (&GMBBCTR_endofclause);
+IOBBCTR.End = (&XNBBCTR_endofclause);
  /* line 910: */
-RMBBCTR.Type = Answer.Type;
+IOBBCTR.Type = Answer.Type;
  /* line 911: */
  /* line 912: */
-A_CALLPROC(MCBBCTR_closedclause,(Starter, Body, RMBBCTR),(Starter, Body, RMBBCTR,(MCBBCTR_closedclause).nonlocals));
+A_CALLPROC(DEBBCTR_closedclause,(Starter, Body, IOBBCTR),(Starter, Body, IOBBCTR,(DEBBCTR_closedclause).nonlocals));
 } 
 else
 { 
-PXIACTR_assert(TMBBCTR, (Answer.Type!=SJJACTR_optboolresult));
+WXIACTR_assert(KOBBCTR, (Answer.Type!=JLJACTR_optboolresult));
  /* line 913: */
  /* line 914: */
  /* line 915: */
  /* line 916: */
  /* line 917: */
-UMBBCTR.Value = Answer.Value;
+LOBBCTR.Value = Answer.Value;
  /* line 918: */
  /* line 919: */
 if ( (Answer.End==(A68_55 *)A68_NIL) )
 { 
  /* line 920: */
-UMBBCTR.End = (&GMBBCTR_endofclause);
+LOBBCTR.End = (&XNBBCTR_endofclause);
 } 
 else
 { 
  /* line 921: */
-UMBBCTR.End = Answer.End;
+LOBBCTR.End = Answer.End;
 } 
  /* line 922: */
  /* line 923: */
-VMBBCTR = Starter.Props ;
-if ( A_LB_GE(VMBBCTR,TCAACTR_exitbit) )
+MOBBCTR = Starter.Props ;
+if ( A_LB_GE(MOBBCTR,TCAACTR_exitbit) )
 { 
  /* line 924: */
-WMBBCTR = Answer.Type ;
-UMBBCTR.Type = A_ABS(WMBBCTR);
+NOBBCTR = Answer.Type ;
+LOBBCTR.Type = A_ABS(NOBBCTR);
 } 
 else
 { 
  /* line 925: */
  /* line 926: */
-UMBBCTR.Type = Answer.Type;
+LOBBCTR.Type = Answer.Type;
 } 
  /* line 927: */
  /* line 928: */
-A_CALLPROC(MCBBCTR_closedclause,(Starter, Body, UMBBCTR),(Starter, Body, UMBBCTR,(MCBBCTR_closedclause).nonlocals));
+A_CALLPROC(DEBBCTR_closedclause,(Starter, Body, LOBBCTR),(Starter, Body, LOBBCTR,(DEBBCTR_closedclause).nonlocals));
 } 
 } 
 else
@@ -3212,47 +3212,47 @@ else
  /* line 929: */
 if ( (Starter.Fn==IBAACTR_collbeginfn) )
 { 
-XMBBCTR = Starter.Resultmode ;
-YMBBCTR_resultmode = A_ABS(XMBBCTR);
+OOBBCTR = Starter.Resultmode ;
+POBBCTR_resultmode = A_ABS(OOBBCTR);
  /* line 930: */
-ZMBBCTR_newanswer = (Starter.Mode>0);
+QOBBCTR_newanswer = (Starter.Mode>0);
  /* line 932: */
  /* line 933: */
  /* line 934: */
-if ( (ZMBBCTR_newanswer|(Answer.Type==QJJACTR_routineresult)) )
+if ( (QOBBCTR_newanswer|(Answer.Type==HLJACTR_routineresult)) )
 { 
  /* line 935: */
  /* line 936: */
-ANBBCTR.Value.Mode = YMBBCTR_resultmode;
+ROBBCTR.Value.Mode = POBBCTR_resultmode;
  /* line 938: */
-ANBBCTR.Value.Info = YIJACTR_defaultinfo;
+ROBBCTR.Value.Info = PKJACTR_defaultinfo;
  /* line 940: */
-ANBBCTR.Value.Extra = A_EMPTY(BNBBCTR,3);
-ANBBCTR.Rest = (*NL(ACBBCTR_valuestack));
-(*NL(ACBBCTR_valuestack)) = OMBBCTR_assignment(Newvalue, ANBBCTR);
+ROBBCTR.Value.Extra = A_EMPTY(SOBBCTR,3);
+ROBBCTR.Rest = (*NL(RDBBCTR_valuestack));
+(*NL(RDBBCTR_valuestack)) = FOBBCTR_assignment(Newvalue, ROBBCTR);
  /* line 941: */
  /* line 942: */
  /* line 943: */
  /* line 944: */
-CNBBCTR.Value = (&((*NL(ACBBCTR_valuestack))->Value));
-CNBBCTR.End = (A68_55 *)A68_NIL;
+TOBBCTR.Value = (&((*NL(RDBBCTR_valuestack))->Value));
+TOBBCTR.End = (A68_55 *)A68_NIL;
  /* line 945: */
-CNBBCTR.Type = TJJACTR_noparticularresult;
+TOBBCTR.Type = KLJACTR_noparticularresult;
  /* line 946: */
  /* line 948: */
-A_CALLPROC(GGBBCTR_collateralclause,(Starter, CNBBCTR),(Starter, CNBBCTR,(GGBBCTR_collateralclause).nonlocals));
+A_CALLPROC(XHBBCTR_collateralclause,(Starter, TOBBCTR),(Starter, TOBBCTR,(XHBBCTR_collateralclause).nonlocals));
 } 
 else
 { 
  /* line 949: */
  /* line 950: */
-DNBBCTR.Value = Answer.Value;
-DNBBCTR.End = (A68_55 *)A68_NIL;
+UOBBCTR.Value = Answer.Value;
+UOBBCTR.End = (A68_55 *)A68_NIL;
  /* line 951: */
-DNBBCTR.Type = TJJACTR_noparticularresult;
+UOBBCTR.Type = KLJACTR_noparticularresult;
  /* line 952: */
  /* line 953: */
-A_CALLPROC(GGBBCTR_collateralclause,(Starter, DNBBCTR),(Starter, DNBBCTR,(GGBBCTR_collateralclause).nonlocals));
+A_CALLPROC(XHBBCTR_collateralclause,(Starter, UOBBCTR),(Starter, UOBBCTR,(XHBBCTR_collateralclause).nonlocals));
 } 
 } 
 else
@@ -3261,45 +3261,45 @@ else
  /* line 955: */
 if ( ((Starter.Fn==JBAACTR_forfn)|(Starter.Fn==KBAACTR_forallfn)) )
 { 
-ENBBCTR_valuelist = (*NL(ACBBCTR_valuestack));
+VOBBCTR_valuelist = (*NL(RDBBCTR_valuestack));
  /* line 957: */
  /* line 958: */
-FNBBCTR = Starter.Resultmode;
-for ( GNBBCTR = 1;
-GNBBCTR <= FNBBCTR;
-GNBBCTR += 1 )
+WOBBCTR = Starter.Resultmode;
+for ( XOBBCTR = 1;
+XOBBCTR <= WOBBCTR;
+XOBBCTR += 1 )
 { 
  /* line 959: */
-(*NL(ACBBCTR_valuestack)) = (*(&((*NL(ACBBCTR_valuestack))->Rest)));
+(*NL(RDBBCTR_valuestack)) = (*(&((*NL(RDBBCTR_valuestack))->Rest)));
 }
  /* line 961: */
  /* line 962: */
-HNBBCTR.Value.Mode = UEAACTR_voidmode;
-HNBBCTR.Value.Info = YIJACTR_defaultinfo;
-HNBBCTR.Value.Extra = A_EMPTY(INBBCTR,3);
-HNBBCTR.Rest = (*NL(ACBBCTR_valuestack));
-(*NL(ACBBCTR_valuestack)) = OMBBCTR_assignment(Newvalue, HNBBCTR);
+YOBBCTR.Value.Mode = UEAACTR_voidmode;
+YOBBCTR.Value.Info = PKJACTR_defaultinfo;
+YOBBCTR.Value.Extra = A_EMPTY(ZOBBCTR,3);
+YOBBCTR.Rest = (*NL(RDBBCTR_valuestack));
+(*NL(RDBBCTR_valuestack)) = FOBBCTR_assignment(Newvalue, YOBBCTR);
  /* line 964: */
  /* line 965: */
  /* line 966: */
 if ( (Starter.Fn==JBAACTR_forfn) )
 { 
  /* line 967: */
-JNBBCTR = KKBBCTR_loopclause;
+APBBCTR = BMBBCTR_loopclause;
 } 
 else
 { 
-JNBBCTR = ILBBCTR_forallclause;
+APBBCTR = ZMBBCTR_forallclause;
 } 
  /* line 968: */
  /* line 969: */
-KNBBCTR.Value = (&((*NL(ACBBCTR_valuestack))->Value));
-KNBBCTR.End = (&GMBBCTR_endofclause);
-KNBBCTR.Type = NJJACTR_voidresult;
+BPBBCTR.Value = (&((*NL(RDBBCTR_valuestack))->Value));
+BPBBCTR.End = (&XNBBCTR_endofclause);
+BPBBCTR.Type = ELJACTR_voidresult;
  /* line 971: */
  /* line 973: */
  /* line 974: */
-A_CALLPROC(JNBBCTR,(Starter, Body, KNBBCTR, (&ENBBCTR_valuelist)),(Starter, Body, KNBBCTR, (&ENBBCTR_valuelist),(JNBBCTR).nonlocals));
+A_CALLPROC(APBBCTR,(Starter, Body, BPBBCTR, (&VOBBCTR_valuelist)),(Starter, Body, BPBBCTR, (&VOBBCTR_valuelist),(APBBCTR).nonlocals));
 } 
 else
 { 
@@ -3307,56 +3307,56 @@ else
  /* line 976: */
 if ( ((Starter.Mode>0)&!Body) )
 { 
-LNBBCTR = Starter.Resultmode ;
-MNBBCTR_resultmode = A_ABS(LNBBCTR);
+CPBBCTR = Starter.Resultmode ;
+DPBBCTR_resultmode = A_ABS(CPBBCTR);
  /* line 978: */
  /* line 979: */
-NNBBCTR.Value.Mode = MNBBCTR_resultmode;
-NNBBCTR.Value.Info = YIJACTR_defaultinfo;
-NNBBCTR.Value.Extra = A_EMPTY(ONBBCTR,3);
-NNBBCTR.Rest = (*NL(ACBBCTR_valuestack));
-(*NL(ACBBCTR_valuestack)) = OMBBCTR_assignment(Newvalue, NNBBCTR);
+EPBBCTR.Value.Mode = DPBBCTR_resultmode;
+EPBBCTR.Value.Info = PKJACTR_defaultinfo;
+EPBBCTR.Value.Extra = A_EMPTY(FPBBCTR,3);
+EPBBCTR.Rest = (*NL(RDBBCTR_valuestack));
+(*NL(RDBBCTR_valuestack)) = FOBBCTR_assignment(Newvalue, EPBBCTR);
  /* line 981: */
  /* line 982: */
  /* line 983: */
  /* line 984: */
  /* line 985: */
-PNBBCTR.Value = (&((*NL(ACBBCTR_valuestack))->Value));
+GPBBCTR.Value = (&((*NL(RDBBCTR_valuestack))->Value));
  /* line 987: */
-PNBBCTR.End = (&GMBBCTR_endofclause);
+GPBBCTR.End = (&XNBBCTR_endofclause);
  /* line 988: */
-PNBBCTR.Type = OJJACTR_memoryresult;
+GPBBCTR.Type = FLJACTR_memoryresult;
  /* line 989: */
  /* line 990: */
-A_CALLPROC(DDBBCTR_choiceclause,(Starter, Body, PNBBCTR),(Starter, Body, PNBBCTR,(DDBBCTR_choiceclause).nonlocals));
+A_CALLPROC(UEBBCTR_choiceclause,(Starter, Body, GPBBCTR),(Starter, Body, GPBBCTR,(UEBBCTR_choiceclause).nonlocals));
 } 
 else
 { 
-PXIACTR_assert(RNBBCTR, (Answer.Type!=SJJACTR_optboolresult));
+WXIACTR_assert(IPBBCTR, (Answer.Type!=JLJACTR_optboolresult));
  /* line 991: */
  /* line 992: */
  /* line 993: */
  /* line 994: */
  /* line 995: */
-SNBBCTR.Value = Answer.Value;
+JPBBCTR.Value = Answer.Value;
  /* line 996: */
  /* line 997: */
 if ( (Answer.End==(A68_55 *)A68_NIL) )
 { 
  /* line 998: */
-SNBBCTR.End = (&GMBBCTR_endofclause);
+JPBBCTR.End = (&XNBBCTR_endofclause);
 } 
 else
 { 
  /* line 1000: */
-SNBBCTR.End = Answer.End;
+JPBBCTR.End = Answer.End;
 } 
  /* line 1001: */
-TNBBCTR = Answer.Type ;
-SNBBCTR.Type = A_ABS(TNBBCTR);
+KPBBCTR = Answer.Type ;
+JPBBCTR.Type = A_ABS(KPBBCTR);
  /* line 1002: */
  /* line 1003: */
-A_CALLPROC(DDBBCTR_choiceclause,(Starter, Body, SNBBCTR),(Starter, Body, SNBBCTR,(DDBBCTR_choiceclause).nonlocals));
+A_CALLPROC(UEBBCTR_choiceclause,(Starter, Body, JPBBCTR),(Starter, Body, JPBBCTR,(UEBBCTR_choiceclause).nonlocals));
 } 
 } 
 } 
@@ -3367,76 +3367,76 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  WNBBCTR_optboolexpression(A68_INT  Warn, void *NonLocals)
-#define NL(x) (((XNBBCTR_optboolexpression *)NonLocals)->x)
+A_STATIC A68_VOID  NPBBCTR_optboolexpression(A68_INT  Warn, void *NonLocals)
+#define NL(x) (((OPBBCTR_optboolexpression *)NonLocals)->x)
 { 
-A68_64 * YNBBCTR_operand;
-A68_BOOL  ZNBBCTR_orel;
-A68_63  AOBBCTR;  /* collateral clause result */
+A68_64 * PPBBCTR_operand;
+A68_BOOL  QPBBCTR_orel;
+A68_63  RPBBCTR;  /* collateral clause result */
 A_PROC_ENTRY(optboolexpression);
  /* line 1009: */
  /* line 1010: */
 { 
-YNBBCTR_operand = (&((*NL(ACBBCTR_valuestack))->Value));
+PPBBCTR_operand = (&((*NL(RDBBCTR_valuestack))->Value));
  /* line 1011: */
-ZNBBCTR_orel = (Warn==KCAACTR_orelwarn);
+QPBBCTR_orel = (Warn==KCAACTR_orelwarn);
  /* line 1012: */
-FMZACTR_optboolwarning(ZNBBCTR_orel, YNBBCTR_operand);
+WNZACTR_optboolwarning(QPBBCTR_orel, PPBBCTR_operand);
  /* line 1014: */
  /* line 1015: */
  /* line 1016: */
-AOBBCTR.Value = YNBBCTR_operand;
-AOBBCTR.End = (A68_55 *)A68_NIL;
-AOBBCTR.Type = TJJACTR_noparticularresult;
+RPBBCTR.Value = PPBBCTR_operand;
+RPBBCTR.End = (A68_55 *)A68_NIL;
+RPBBCTR.Type = KLJACTR_noparticularresult;
  /* line 1017: */
  /* line 1018: */
-A_CALLPROC(NL(XBBBCTR_phrase),(A68_FALSE, AOBBCTR, A68_FALSE),(A68_FALSE, AOBBCTR, A68_FALSE,(NL(XBBBCTR_phrase)).nonlocals));
+A_CALLPROC(NL(ODBBCTR_phrase),(A68_FALSE, RPBBCTR, A68_FALSE),(A68_FALSE, RPBBCTR, A68_FALSE,(NL(ODBBCTR_phrase)).nonlocals));
  /* line 1019: */
  /* line 1020: */
-YNZACTR_optbooloper();
+PPZACTR_optbooloper();
 } 
 A_PROC_EXIT(optboolexpression);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  FYABCTR_skiproutine(void *NonLocals)
-#define NL(x) (((GYABCTR_skiproutine *)NonLocals)->x)
+A_STATIC A68_VOID  WZABCTR_skiproutine(void *NonLocals)
+#define NL(x) (((XZABCTR_skiproutine *)NonLocals)->x)
 { 
-A68_180  HYABCTR;  /* united object - for case conformity */
-A68_BOOL  IYABCTR;  /* clause result */
-A68_189  JYABCTR_t;
-A68_BOOL  KYABCTR;  /* clause result */
+A68_180  YZABCTR;  /* united object - for case conformity */
+A68_BOOL  ZZABCTR;  /* clause result */
+A68_189  AABBCTR_t;
+A68_BOOL  BABBCTR;  /* clause result */
 A_PROC_ENTRY(skiproutine);
 for ( ;; )
 { 
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 133: */
  /* line 134: */
-HYABCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( HYABCTR.mode )
+YZABCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( YZABCTR.mode )
 { 
 case 12: /* STRUCT(REF MODE26,BITS,INT,INT,INT)  */
 { 
-A_CALLPROC(NL(EYABCTR_skiproutine),(),((NL(EYABCTR_skiproutine)).nonlocals));
+A_CALLPROC(NL(VZABCTR_skiproutine),(),((NL(VZABCTR_skiproutine)).nonlocals));
  /* line 135: */
-IYABCTR = A68_TRUE;
+ZZABCTR = A68_TRUE;
 } 
 break;
 case 22: /* STRUCT(INT,BITS)  */
-JYABCTR_t = (HYABCTR.data.mode22);
+AABBCTR_t = (YZABCTR.data.mode22);
  /* line 136: */
-IYABCTR = (JYABCTR_t.Fn!=GCAACTR_routinendfn);
+ZZABCTR = (AABBCTR_t.Fn!=GCAACTR_routinendfn);
 break;
 default: 
  /* line 137: */
  /* line 138: */
-IYABCTR = A68_TRUE;
+ZZABCTR = A68_TRUE;
 break;
 } 
  /* line 140: */
-KYABCTR = IYABCTR;
-if ( !KYABCTR ) break;
+BABBCTR = ZZABCTR;
+if ( !BABBCTR ) break;
 /*SKIP*/;
 }
 A_PROC_EXIT(skiproutine);
@@ -3444,179 +3444,179 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  NYABCTR_routine(A68_122  Routine, void *NonLocals)
-#define NL(x) (((OYABCTR_routine *)NonLocals)->x)
+A_STATIC A68_VOID  EABBCTR_routine(A68_122  Routine, void *NonLocals)
+#define NL(x) (((FABBCTR_routine *)NonLocals)->x)
 { 
-A68_INT  QYABCTR;  /* YIELD */
-A68_123  PYABCTR_environ;
-A68_180  RYABCTR;  /* united object - for case conformity */
-A68_164  SYABCTR_label;
-A68_123  TYABCTR;  /* avoid structure result */
-A68_123  UYABCTR_labelenviron;
-A68_BOOL  VYABCTR;  /* clause result */
-A68_122  WYABCTR_r;
-A68_BOOL  BZABCTR;  /* clause result */
-A68_INT  CZABCTR_resulttype;
-A68_64  DZABCTR_result;
-A68_55 * EZABCTR_endofroutine;
-A68_199  FZABCTR;  /* avoid structure result */
-A68_199  GZABCTR_proc;
-A68_INT  HZABCTR_paramcount;
-A68_272  JZABCTR_generator;   /* proc value of non-global proc */
-A68_124  OZABCTR;  /* avoid structure result */
-A68_124  PZABCTR_nulllist;
-A68_124  QZABCTR_parammodes;
-A68_124  RZABCTR_paramdecnos;
-A68_124  SZABCTR;  /* avoid structure result */
-A68_272  UZABCTR_generator;   /* proc value of non-global proc */
-A68_124  ZZABCTR;  /* avoid structure result */
-A68_INT  AABBCTR_i;
-A68_INT  BABBCTR;  /* to part of loop */
-A68_180  CABBCTR;  /* united object - for case conformity */
-A68_156  DABBCTR_id;
-A68_INT * IABBCTR;  /* YIELD */
-A68_63  LABBCTR;  /* collateral clause result */
-A68_BITS  MABBCTR;  /* ADICOPS - >= */
+A68_INT  HABBCTR;  /* YIELD */
+A68_123  GABBCTR_environ;
+A68_180  IABBCTR;  /* united object - for case conformity */
+A68_164  JABBCTR_label;
+A68_123  KABBCTR;  /* avoid structure result */
+A68_123  LABBCTR_labelenviron;
+A68_BOOL  MABBCTR;  /* clause result */
+A68_122  NABBCTR_r;
+A68_BOOL  SABBCTR;  /* clause result */
+A68_INT  TABBCTR_resulttype;
+A68_64  UABBCTR_result;
+A68_55 * VABBCTR_endofroutine;
+A68_199  WABBCTR;  /* avoid structure result */
+A68_199  XABBCTR_proc;
+A68_INT  YABBCTR_paramcount;
+A68_272  ABBBCTR_generator;   /* proc value of non-global proc */
+A68_124  FBBBCTR;  /* avoid structure result */
+A68_124  GBBBCTR_nulllist;
+A68_124  HBBBCTR_parammodes;
+A68_124  IBBBCTR_paramdecnos;
+A68_124  JBBBCTR;  /* avoid structure result */
+A68_272  LBBBCTR_generator;   /* proc value of non-global proc */
+A68_124  QBBBCTR;  /* avoid structure result */
+A68_INT  RBBBCTR_i;
+A68_INT  SBBBCTR;  /* to part of loop */
+A68_180  TBBBCTR;  /* united object - for case conformity */
+A68_156  UBBBCTR_id;
+A68_INT * ZBBBCTR;  /* YIELD */
+A68_63  CCBBCTR;  /* collateral clause result */
+A68_BITS  DCBBCTR;  /* ADICOPS - >= */
 A_PROC_ENTRY(routine);
  /* line 147: */
  /* line 148: */
 { 
-QYABCTR = Routine.Maxname ;
-PYABCTR_environ = (*(&((&A_R1INDEX(FOKACTR_ids,QYABCTR))->Environ)));
+HABBCTR = Routine.Maxname ;
+GABBCTR_environ = (*(&((&A_R1INDEX(WPKACTR_ids,HABBCTR))->Environ)));
  /* line 150: */
 for ( ;; )
 { 
-A_CALLPROC(NL(PXABCTR_lookahead),(),((NL(PXABCTR_lookahead)).nonlocals));
+A_CALLPROC(NL(GZABCTR_lookahead),(),((NL(GZABCTR_lookahead)).nonlocals));
  /* line 151: */
  /* line 152: */
-RYABCTR = (*NL(HXABCTR_nextimperative)) ;
-switch ( RYABCTR.mode )
+IABBCTR = (*NL(YYABCTR_nextimperative)) ;
+switch ( IABBCTR.mode )
 { 
 case 14: /* STRUCT(REF MODE26,INT,INT,BOOL)  */
-SYABCTR_label = (RYABCTR.data.mode14);
+JABBCTR_label = (IABBCTR.data.mode14);
  /* line 153: */
  /* line 154: */
 { 
-ZNWACTR_labdec(SYABCTR_label);
+QPWACTR_labdec(JABBCTR_label);
  /* line 155: */
  /* line 156: */
-OUWACTR_environoflabel( SYABCTR_label.Labno, &TYABCTR );
-UYABCTR_labelenviron = TYABCTR;
+FWWACTR_environoflabel( JABBCTR_label.Labno, &KABBCTR );
+LABBCTR_labelenviron = KABBCTR;
  /* line 157: */
  /* line 158: */
-if ( CQLACTR_isnewerthan(UYABCTR_labelenviron, PYABCTR_environ) )
+if ( TRLACTR_isnewerthan(LABBCTR_labelenviron, GABBCTR_environ) )
 { 
  /* line 159: */
-PYABCTR_environ = UYABCTR_labelenviron;
+GABBCTR_environ = LABBCTR_labelenviron;
 } 
  /* line 160: */
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 161: */
  /* line 163: */
-VYABCTR = A68_TRUE;
+MABBCTR = A68_TRUE;
 } 
 break;
 case 12: /* STRUCT(REF MODE26,BITS,INT,INT,INT)  */
-WYABCTR_r = (RYABCTR.data.mode12);
+NABBCTR_r = (IABBCTR.data.mode12);
  /* line 164: */
  /* line 165: */
  /* line 167: */
-if ( (RMMACTR_modetype(Routine.Mode)==GEAACTR_procp) )
+if ( (IOMACTR_modetype(Routine.Mode)==GEAACTR_procp) )
 { 
-PXIACTR_assert(AZABCTR, A_VC_EQ(WYABCTR_r.Name,ZYABCTR));
+WXIACTR_assert(RABBCTR, A_VC_EQ(NABBCTR_r.Name,QABBCTR));
  /* line 168: */
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 169: */
-A_CALLPROC(NL(EYABCTR_skiproutine),(),((NL(EYABCTR_skiproutine)).nonlocals));
+A_CALLPROC(NL(VZABCTR_skiproutine),(),((NL(VZABCTR_skiproutine)).nonlocals));
  /* line 170: */
  /* line 171: */
-VYABCTR = A68_TRUE;
+MABBCTR = A68_TRUE;
 } 
 else
 { 
  /* line 172: */
  /* line 173: */
-VYABCTR = A68_FALSE;
+MABBCTR = A68_FALSE;
 } 
 break;
 default: 
  /* line 174: */
  /* line 175: */
-VYABCTR = A68_FALSE;
+MABBCTR = A68_FALSE;
 break;
 } 
  /* line 177: */
-BZABCTR = VYABCTR;
-if ( !BZABCTR ) break;
+SABBCTR = MABBCTR;
+if ( !SABBCTR ) break;
 /*SKIP*/;
 }
  /* line 179: */
-CZABCTR_resulttype = QJJACTR_routineresult;
+TABBCTR_resulttype = HLJACTR_routineresult;
  /* line 180: */
  /* line 181: */
  /* line 183: */
-HQLACTR_startnewlevel(Routine.Rdenno);
+YRLACTR_startnewlevel(Routine.Rdenno);
  /* line 185: */
-BSMACTR_procinfo( Routine.Mode, &FZABCTR );
-GZABCTR_proc = FZABCTR;
+STMACTR_procinfo( Routine.Mode, &WABBCTR );
+XABBCTR_proc = WABBCTR;
  /* line 186: */
-HZABCTR_paramcount = GZABCTR_proc.Parameters;
+YABBCTR_paramcount = XABBCTR_proc.Parameters;
  /* line 187: */
-A_CLOSURE( JZABCTR_generator, KZABCTR_generator, LZABCTR_generator );
-A_CALLPROC(JZABCTR_generator,(A68_FALSE, &OZABCTR),(A68_FALSE, &OZABCTR,(JZABCTR_generator).nonlocals));
-PZABCTR_nulllist = OZABCTR;
+A_CLOSURE( ABBBCTR_generator, BBBBCTR_generator, CBBBCTR_generator );
+A_CALLPROC(ABBBCTR_generator,(A68_FALSE, &FBBBCTR),(A68_FALSE, &FBBBCTR,(ABBBCTR_generator).nonlocals));
+GBBBCTR_nulllist = FBBBCTR;
  /* line 188: */
  /* line 189: */
  /* line 191: */
  /* line 192: */
  /* line 193: */
-if ( (HZABCTR_paramcount>0) )
+if ( (YABBCTR_paramcount>0) )
 { 
-A_CALLPROC(JUMACTR_parameters,(Routine.Mode, &SZABCTR),(Routine.Mode, &SZABCTR,(JUMACTR_parameters).nonlocals));
-QZABCTR_parammodes = SZABCTR;
+A_CALLPROC(AWMACTR_parameters,(Routine.Mode, &JBBBCTR),(Routine.Mode, &JBBBCTR,(AWMACTR_parameters).nonlocals));
+HBBBCTR_parammodes = JBBBCTR;
  /* line 194: */
-A_CLOSURE( UZABCTR_generator, VZABCTR_generator, WZABCTR_generator );
-(( WZABCTR_generator * ) ( UZABCTR_generator.nonlocals )) -> HZABCTR_paramcount = HZABCTR_paramcount;
-A_CALLPROC(UZABCTR_generator,(A68_FALSE, &ZZABCTR),(A68_FALSE, &ZZABCTR,(UZABCTR_generator).nonlocals));
-RZABCTR_paramdecnos = ZZABCTR;
+A_CLOSURE( LBBBCTR_generator, MBBBCTR_generator, NBBBCTR_generator );
+(( NBBBCTR_generator * ) ( LBBBCTR_generator.nonlocals )) -> YABBCTR_paramcount = YABBCTR_paramcount;
+A_CALLPROC(LBBBCTR_generator,(A68_FALSE, &QBBBCTR),(A68_FALSE, &QBBBCTR,(LBBBCTR_generator).nonlocals));
+IBBBCTR_paramdecnos = QBBBCTR;
  /* line 195: */
  /* line 196: */
-BABBCTR = HZABCTR_paramcount;
-for ( AABBCTR_i = 1;
-AABBCTR_i <= BABBCTR;
-AABBCTR_i += 1 )
+SBBBCTR = YABBCTR_paramcount;
+for ( RBBBCTR_i = 1;
+RBBBCTR_i <= SBBBCTR;
+RBBBCTR_i += 1 )
 { 
  /* line 197: */
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 198: */
  /* line 199: */
-CABBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( CABBCTR.mode )
+TBBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( TBBBCTR.mode )
 { 
 case 11: /* STRUCT(INT,REF MODE26,INT,INT)  */
-DABBCTR_id = (CABBCTR.data.mode11);
+UBBBCTR_id = (TBBBCTR.data.mode11);
  /* line 200: */
  /* line 201: */
 { 
  /* line 202: */
-PXIACTR_assert(FABBCTR, (DABBCTR_id.Type==3));
+WXIACTR_assert(WBBBCTR, (UBBBCTR_id.Type==3));
  /* line 203: */
  /* line 204: */
-PXIACTR_assert(HABBCTR, (QANACTR_finddeflexmode(DABBCTR_id.Mode)==QANACTR_finddeflexmode((*(&A_VINDEX(QZABCTR_parammodes,AABBCTR_i))))));
+WXIACTR_assert(YBBBCTR, (HCNACTR_finddeflexmode(UBBBCTR_id.Mode)==HCNACTR_finddeflexmode((*(&A_VINDEX(HBBBCTR_parammodes,RBBBCTR_i))))));
  /* line 205: */
-IABBCTR = (&A_VINDEX(RZABCTR_paramdecnos,AABBCTR_i)) ;
-(*IABBCTR) = DABBCTR_id.Decno;
+ZBBBCTR = (&A_VINDEX(IBBBCTR_paramdecnos,RBBBCTR_i)) ;
+(*ZBBBCTR) = UBBBCTR_id.Decno;
  /* line 206: */
  /* line 207: */
  /* line 208: */
  /* line 210: */
-LSVACTR_iddec(DABBCTR_id, (A68_71 **)A68_NIL);
+CUVACTR_iddec(UBBBCTR_id, (A68_71 **)A68_NIL);
 } 
 break;
 default: 
  /* line 211: */
  /* line 212: */
-PXIACTR_assert(KABBCTR, A68_FALSE);
+WXIACTR_assert(BCBBCTR, A68_FALSE);
 break;
 } 
 }
@@ -3626,7 +3626,7 @@ break;
 else
 { 
  /* line 215: */
-RZABCTR_paramdecnos = PZABCTR_nulllist;
+IBBBCTR_paramdecnos = GBBBCTR_nulllist;
 } 
  /* line 217: */
  /* line 218: */
@@ -3634,110 +3634,110 @@ RZABCTR_paramdecnos = PZABCTR_nulllist;
  /* line 220: */
  /* line 221: */
  /* line 223: */
-BLYACTR_startroutine(Routine, PYABCTR_environ, RZABCTR_paramdecnos, GZABCTR_proc.Result, (&DZABCTR_result));
+SMYACTR_startroutine(Routine, GABBCTR_environ, IBBBCTR_paramdecnos, XABBCTR_proc.Result, (&UABBCTR_result));
  /* line 228: */
  /* line 229: */
  /* line 230: */
-LABBCTR.Value = (&DZABCTR_result);
-LABBCTR.End = EZABCTR_endofroutine;
-LABBCTR.Type = CZABCTR_resulttype;
+CCBBCTR.Value = (&UABBCTR_result);
+CCBBCTR.End = VABBCTR_endofroutine;
+CCBBCTR.Type = TABBCTR_resulttype;
  /* line 231: */
  /* line 232: */
-MABBCTR = Routine.Props ;
-A_CALLPROC((*NL(DYABCTR_phrase_)),(A_LB_GE(MABBCTR,NCAACTR_ccbit), LABBCTR, A68_FALSE),(A_LB_GE(MABBCTR,NCAACTR_ccbit), LABBCTR, A68_FALSE,((*NL(DYABCTR_phrase_))).nonlocals));
+DCBBCTR = Routine.Props ;
+A_CALLPROC((*NL(UZABCTR_phrase_)),(A_LB_GE(DCBBCTR,NCAACTR_ccbit), CCBBCTR, A68_FALSE),(A_LB_GE(DCBBCTR,NCAACTR_ccbit), CCBBCTR, A68_FALSE,((*NL(UZABCTR_phrase_))).nonlocals));
  /* line 235: */
-ULYACTR_endroutine(Routine, (&DZABCTR_result));
+LNYACTR_endroutine(Routine, (&UABBCTR_result));
  /* line 236: */
  /* line 237: */
-A_CALLPROC(KQLACTR_reverttopreviouslevel,(),((KQLACTR_reverttopreviouslevel).nonlocals));
+A_CALLPROC(BSLACTR_reverttopreviouslevel,(),((BSLACTR_reverttopreviouslevel).nonlocals));
 } 
 A_PROC_EXIT(routine);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  QABBCTR_serialclause(A68_59  Properties, A68_63  Answer, void *NonLocals)
-#define NL(x) (((RABBCTR_serialclause *)NonLocals)->x)
+A_STATIC A68_VOID  HCBBCTR_serialclause(A68_59  Properties, A68_63  Answer, void *NonLocals)
+#define NL(x) (((ICBBCTR_serialclause *)NonLocals)->x)
 { 
-A68_55 * SABBCTR_endofseries;
-A68_BOOL  TABBCTR_discardlevelactivated;
-A68_BOOL  UABBCTR_firstexit;
-A68_63  VABBCTR;  /* collateral clause result */
-A68_63  WABBCTR_seriesanswer;
-A68_180  XABBCTR;  /* united object - for case conformity */
-A68_187  YABBCTR_s;
-A68_BITS  ZABBCTR;  /* ADICOPS - >= */
-A68_BOOL  ABBBCTR_dontpullbitset;
-A68_BOOL  BBBBCTR;  /* clause result */
-A68_189  EBBBCTR_t;
-A68_59  FBBBCTR;  /* collateral clause result */
-A68_BITS  GBBBCTR;  /* ADICOPS - >= */
-A68_BOOL  HBBBCTR;  /* clause result */
+A68_55 * JCBBCTR_endofseries;
+A68_BOOL  KCBBCTR_discardlevelactivated;
+A68_BOOL  LCBBCTR_firstexit;
+A68_63  MCBBCTR;  /* collateral clause result */
+A68_63  NCBBCTR_seriesanswer;
+A68_180  OCBBCTR;  /* united object - for case conformity */
+A68_187  PCBBCTR_s;
+A68_BITS  QCBBCTR;  /* ADICOPS - >= */
+A68_BOOL  RCBBCTR_dontpullbitset;
+A68_BOOL  SCBBCTR;  /* clause result */
+A68_189  VCBBCTR_t;
+A68_59  WCBBCTR;  /* collateral clause result */
+A68_BITS  XCBBCTR;  /* ADICOPS - >= */
+A68_BOOL  YCBBCTR;  /* clause result */
 A_PROC_ENTRY(serialclause);
  /* line 246: */
  /* line 247: */
 { 
-SABBCTR_endofseries = Answer.End;
+JCBBCTR_endofseries = Answer.End;
  /* line 248: */
-TABBCTR_discardlevelactivated = A68_FALSE;
+KCBBCTR_discardlevelactivated = A68_FALSE;
  /* line 249: */
-UABBCTR_firstexit = A68_TRUE;
+LCBBCTR_firstexit = A68_TRUE;
  /* line 251: */
  /* line 252: */
  /* line 253: */
  /* line 255: */
-A_CALLPROC(EOZACTR_startseries,(Properties, (&SABBCTR_endofseries), (&TABBCTR_discardlevelactivated)),(Properties, (&SABBCTR_endofseries), (&TABBCTR_discardlevelactivated),(EOZACTR_startseries).nonlocals));
+A_CALLPROC(VPZACTR_startseries,(Properties, (&JCBBCTR_endofseries), (&KCBBCTR_discardlevelactivated)),(Properties, (&JCBBCTR_endofseries), (&KCBBCTR_discardlevelactivated),(VPZACTR_startseries).nonlocals));
  /* line 257: */
  /* line 258: */
-VABBCTR.Value = Answer.Value;
-VABBCTR.End = SABBCTR_endofseries;
-VABBCTR.Type = Answer.Type;
-WABBCTR_seriesanswer = VABBCTR;
+MCBBCTR.Value = Answer.Value;
+MCBBCTR.End = JCBBCTR_endofseries;
+MCBBCTR.Type = Answer.Type;
+NCBBCTR_seriesanswer = MCBBCTR;
  /* line 260: */
 for ( ;; )
 { 
-A_CALLPROC((*NL(DYABCTR_phrase_)),(A68_FALSE, WABBCTR_seriesanswer, A68_FALSE),(A68_FALSE, WABBCTR_seriesanswer, A68_FALSE,((*NL(DYABCTR_phrase_))).nonlocals));
+A_CALLPROC((*NL(UZABCTR_phrase_)),(A68_FALSE, NCBBCTR_seriesanswer, A68_FALSE),(A68_FALSE, NCBBCTR_seriesanswer, A68_FALSE,((*NL(UZABCTR_phrase_))).nonlocals));
  /* line 262: */
  /* line 263: */
-XABBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( XABBCTR.mode )
+OCBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( OCBBCTR.mode )
 { 
 case 20: /* STRUCT(INT,INT,BITS,INT)  */
-YABBCTR_s = (XABBCTR.data.mode20);
+PCBBCTR_s = (OCBBCTR.data.mode20);
  /* line 264: */
  /* line 266: */
 { 
-ZABBCTR = YABBCTR_s.Props ;
-ABBBCTR_dontpullbitset = A_LB_GE(ZABBCTR,BDAACTR_dontpullbit);
+QCBBCTR = PCBBCTR_s.Props ;
+RCBBCTR_dontpullbitset = A_LB_GE(QCBBCTR,BDAACTR_dontpullbit);
  /* line 267: */
  /* line 268: */
  /* line 269: */
-if ( (YABBCTR_s.Fn==WBAACTR_semifn) )
+if ( (PCBBCTR_s.Fn==WBAACTR_semifn) )
 { 
  /* line 271: */
-POZACTR_semi(((A68_BITS )(YABBCTR_s.Props&MDAACTR_dybits)!=0X0U), ABBBCTR_dontpullbitset);
+GQZACTR_semi(((A68_BITS )(PCBBCTR_s.Props&MDAACTR_dybits)!=0X0U), RCBBCTR_dontpullbitset);
  /* line 272: */
  /* line 273: */
-BBBBCTR = A68_TRUE;
+SCBBCTR = A68_TRUE;
 } 
 else
 { 
  /* line 274: */
  /* line 275: */
-if ( (YABBCTR_s.Fn==RBAACTR_exitfn) )
+if ( (PCBBCTR_s.Fn==RBAACTR_exitfn) )
 { 
-PXIACTR_assert(DBBBCTR, (Answer.End!=(A68_55 *)A68_NIL));
+WXIACTR_assert(UCBBCTR, (Answer.End!=(A68_55 *)A68_NIL));
  /* line 276: */
  /* line 277: */
  /* line 278: */
  /* line 280: */
-TOZACTR_exit(ABBBCTR_dontpullbitset, UABBCTR_firstexit, WABBCTR_seriesanswer);
+KQZACTR_exit(RCBBCTR_dontpullbitset, LCBBCTR_firstexit, NCBBCTR_seriesanswer);
  /* line 281: */
-UABBCTR_firstexit = A68_FALSE;
+LCBBCTR_firstexit = A68_FALSE;
  /* line 282: */
  /* line 283: */
  /* line 284: */
-BBBBCTR = A68_TRUE;
+SCBBCTR = A68_TRUE;
 } 
 else
 { 
@@ -3746,54 +3746,54 @@ else
  /* line 287: */
  /* line 288: */
  /* line 290: */
-MOZACTR_endseries(Properties, Answer, SABBCTR_endofseries, TABBCTR_discardlevelactivated, ABBBCTR_dontpullbitset, !UABBCTR_firstexit);
+DQZACTR_endseries(Properties, Answer, JCBBCTR_endofseries, KCBBCTR_discardlevelactivated, RCBBCTR_dontpullbitset, !LCBBCTR_firstexit);
  /* line 291: */
  /* line 292: */
  /* line 293: */
  /* line 295: */
-BBBBCTR = A68_FALSE;
+SCBBCTR = A68_FALSE;
 } 
 } 
 } 
 break;
 case 22: /* STRUCT(INT,BITS)  */
-EBBBCTR_t = (XABBCTR.data.mode22);
+VCBBCTR_t = (OCBBCTR.data.mode22);
  /* line 296: */
  /* line 298: */
 { 
  /* line 299: */
-FBBBCTR.Block = Properties.Block;
+WCBBCTR.Block = Properties.Block;
  /* line 300: */
-FBBBCTR.Dynamicresult = Properties.Dynamicresult;
+WCBBCTR.Dynamicresult = Properties.Dynamicresult;
  /* line 301: */
-FBBBCTR.Discardeddynamicresult = Properties.Discardeddynamicresult;
+WCBBCTR.Discardeddynamicresult = Properties.Discardeddynamicresult;
  /* line 302: */
-FBBBCTR.Type = (EBBBCTR_t.Fn+ZBAACTR_terminatoroffset);
+WCBBCTR.Type = (VCBBCTR_t.Fn+ZBAACTR_terminatoroffset);
  /* line 303: */
  /* line 304: */
  /* line 305: */
  /* line 306: */
  /* line 308: */
-GBBBCTR = ~EBBBCTR_t.Props ;
-MOZACTR_endseries(FBBBCTR, Answer, SABBCTR_endofseries, TABBCTR_discardlevelactivated, A_LB_GE(GBBBCTR,BDAACTR_dontpullbit), !UABBCTR_firstexit);
+XCBBCTR = ~VCBBCTR_t.Props ;
+DQZACTR_endseries(WCBBCTR, Answer, JCBBCTR_endofseries, KCBBCTR_discardlevelactivated, A_LB_GE(XCBBCTR,BDAACTR_dontpullbit), !LCBBCTR_firstexit);
  /* line 309: */
  /* line 310: */
  /* line 311: */
  /* line 312: */
-BBBBCTR = A68_FALSE;
+SCBBCTR = A68_FALSE;
 } 
 break;
 default: 
-LXIACTR_terminalerror(656);
+SXIACTR_terminalerror(656);
  /* line 313: */
  /* line 314: */
  /* line 315: */
-BBBBCTR = A68_FALSE;
+SCBBCTR = A68_FALSE;
 break;
 } 
  /* line 317: */
-HBBBCTR = BBBBCTR;
-if ( !HBBBCTR ) break;
+YCBBCTR = SCBBCTR;
+if ( !YCBBCTR ) break;
 /*SKIP*/;
 }
  /* line 318: */
@@ -3803,64 +3803,64 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  KBBBCTR_enquiryclause(A68_63  Answer, void *NonLocals)
-#define NL(x) (((LBBBCTR_enquiryclause *)NonLocals)->x)
+A_STATIC A68_VOID  BDBBCTR_enquiryclause(A68_63  Answer, void *NonLocals)
+#define NL(x) (((CDBBCTR_enquiryclause *)NonLocals)->x)
 { 
-A68_BOOL  MBBBCTR_simple;
-A68_180  NBBBCTR;  /* united object - for case conformity */
-A68_187  OBBBCTR_s;
-A68_BITS  PBBBCTR;  /* ADICOPS - >= */
-A68_BOOL  QBBBCTR;  /* clause result */
-A68_BOOL  TBBBCTR;  /* clause result */
+A68_BOOL  DDBBCTR_simple;
+A68_180  EDBBCTR;  /* united object - for case conformity */
+A68_187  FDBBCTR_s;
+A68_BITS  GDBBCTR;  /* ADICOPS - >= */
+A68_BOOL  HDBBCTR;  /* clause result */
+A68_BOOL  KDBBCTR;  /* clause result */
 A_PROC_ENTRY(enquiryclause);
  /* line 330: */
  /* line 331: */
 { 
-MBBBCTR_simple = A68_TRUE;
+DDBBCTR_simple = A68_TRUE;
  /* line 332: */
 for ( ;; )
 { 
-A_CALLPROC((*NL(DYABCTR_phrase_)),(A68_FALSE, Answer, MBBBCTR_simple),(A68_FALSE, Answer, MBBBCTR_simple,((*NL(DYABCTR_phrase_))).nonlocals));
+A_CALLPROC((*NL(UZABCTR_phrase_)),(A68_FALSE, Answer, DDBBCTR_simple),(A68_FALSE, Answer, DDBBCTR_simple,((*NL(UZABCTR_phrase_))).nonlocals));
  /* line 333: */
  /* line 334: */
-NBBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( NBBBCTR.mode )
+EDBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( EDBBCTR.mode )
 { 
 case 20: /* STRUCT(INT,INT,BITS,INT)  */
-OBBBCTR_s = (NBBBCTR.data.mode20);
+FDBBCTR_s = (EDBBCTR.data.mode20);
  /* line 335: */
  /* line 336: */
  /* line 337: */
-if ( (OBBBCTR_s.Fn==WBAACTR_semifn) )
+if ( (FDBBCTR_s.Fn==WBAACTR_semifn) )
 { 
  /* line 338: */
  /* line 339: */
-PBBBCTR = OBBBCTR_s.Props ;
-POZACTR_semi(((A68_BITS )(OBBBCTR_s.Props&MDAACTR_dybits)!=0X0U), A_LB_GE(PBBBCTR,BDAACTR_dontpullbit));
+GDBBCTR = FDBBCTR_s.Props ;
+GQZACTR_semi(((A68_BITS )(FDBBCTR_s.Props&MDAACTR_dybits)!=0X0U), A_LB_GE(GDBBCTR,BDAACTR_dontpullbit));
  /* line 340: */
  /* line 341: */
  /* line 342: */
-QBBBCTR = A68_TRUE;
+HDBBCTR = A68_TRUE;
 } 
 else
 { 
-PXIACTR_assert(SBBBCTR, (OBBBCTR_s.Fn!=RBAACTR_exitfn));
+WXIACTR_assert(JDBBCTR, (FDBBCTR_s.Fn!=RBAACTR_exitfn));
  /* line 343: */
  /* line 344: */
  /* line 345: */
-QBBBCTR = A68_FALSE;
+HDBBCTR = A68_FALSE;
 } 
 break;
 default: 
  /* line 346: */
  /* line 347: */
-QBBBCTR = A68_FALSE;
+HDBBCTR = A68_FALSE;
 break;
 } 
  /* line 348: */
-TBBBCTR = QBBBCTR;
-if ( !TBBBCTR ) break;
-MBBBCTR_simple = A68_FALSE;
+KDBBCTR = HDBBCTR;
+if ( !KDBBCTR ) break;
+DDBBCTR_simple = A68_FALSE;
  /* line 349: */
  /* line 350: */
 /*SKIP*/;
@@ -3872,84 +3872,84 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  YBBBCTR_phrase(A68_BOOL  Body, A68_63  Answer, A68_BOOL  Simple, void *NonLocals)
-#define NL(x) (((ZBBBCTR_phrase *)NonLocals)->x)
+A_STATIC A68_VOID  PDBBCTR_phrase(A68_BOOL  Body, A68_63  Answer, A68_BOOL  Simple, void *NonLocals)
+#define NL(x) (((QDBBCTR_phrase *)NonLocals)->x)
 { 
-A68_71 * ACBBCTR_valuestack;
-A68_280  FCBBCTR_enclosedclause;   /* proc value of non-global proc */
-A68_77  VNBBCTR_optboolexpression;   /* proc value of non-global proc */
-A68_BOOL  BOBBCTR_simpleenquiry;
-A68_180  COBBCTR;  /* united object - for case conformity */
-A68_191  DOBBCTR_p;
-A68_191  EOBBCTR;  /* united object - for case conformity */
-A68_190  FOBBCTR_l;
-A68_71  GOBBCTR;  /* collateral clause result */
-A68_64  HOBBCTR;  /* avoid structure result */
-A68_184  IOBBCTR_op;
-A68_156  JOBBCTR_id;
-A68_172  KOBBCTR_c;
-A68_71 * LOBBCTR_visible;
-A68_INT  MOBBCTR_i;
-A68_INT  NOBBCTR;  /* to part of loop */
-A68_71  OOBBCTR;  /* collateral clause result */
-A68_68  POBBCTR;  /* avoid structure result */
-A68_68  QOBBCTR_temp;
-A68_71  ROBBCTR;  /* collateral clause result */
-A68_65  SOBBCTR;  /* OPERATORS - mode -> union mode */
-A68_177  TOBBCTR_format;
-A68_71  UOBBCTR;  /* collateral clause result */
-A68_183  VOBBCTR;  /* collateral clause result */
-A68_190  WOBBCTR;  /* OPERATORS - mode -> union mode */
-A68_64  XOBBCTR;  /* avoid structure result */
-A68_71  YOBBCTR;  /* collateral clause result */
-A68_182  ZOBBCTR;  /* collateral clause result */
-A68_190  APBBCTR;  /* OPERATORS - mode -> union mode */
-A68_64  BPBBCTR;  /* avoid structure result */
-A68_184  CPBBCTR;  /* collateral clause result */
-A68_122  DPBBCTR_r;
-A68_122  EPBBCTR_savedr;
-A68_BITS  FPBBCTR;  /* ADICOPS - >= */
-A68_71  GPBBCTR;  /* collateral clause result */
-A68_190  HPBBCTR;  /* OPERATORS - mode -> union mode */
-A68_INT  IPBBCTR;  /* YIELD */
-A68_64  JPBBCTR;  /* avoid structure result */
-A68_185  KPBBCTR_w;
-A68_164  LPBBCTR_l;
-A68_79  MPBBCTR_u;
-A68_169  NPBBCTR_c;
-A68_BOOL  QPBBCTR;  /* clause result */
-A68_187  RPBBCTR_s;
-A68_BOOL  UPBBCTR;  /* optbool result */
-A68_188  VPBBCTR_s;
-A68_BOOL  YPBBCTR;  /* clause result */
+A68_71 * RDBBCTR_valuestack;
+A68_280  WDBBCTR_enclosedclause;   /* proc value of non-global proc */
+A68_77  MPBBCTR_optboolexpression;   /* proc value of non-global proc */
+A68_BOOL  SPBBCTR_simpleenquiry;
+A68_180  TPBBCTR;  /* united object - for case conformity */
+A68_191  UPBBCTR_p;
+A68_191  VPBBCTR;  /* united object - for case conformity */
+A68_190  WPBBCTR_l;
+A68_71  XPBBCTR;  /* collateral clause result */
+A68_64  YPBBCTR;  /* avoid structure result */
+A68_184  ZPBBCTR_op;
+A68_156  AQBBCTR_id;
+A68_172  BQBBCTR_c;
+A68_71 * CQBBCTR_visible;
+A68_INT  DQBBCTR_i;
+A68_INT  EQBBCTR;  /* to part of loop */
+A68_71  FQBBCTR;  /* collateral clause result */
+A68_68  GQBBCTR;  /* avoid structure result */
+A68_68  HQBBCTR_temp;
+A68_71  IQBBCTR;  /* collateral clause result */
+A68_65  JQBBCTR;  /* OPERATORS - mode -> union mode */
+A68_177  KQBBCTR_format;
+A68_71  LQBBCTR;  /* collateral clause result */
+A68_183  MQBBCTR;  /* collateral clause result */
+A68_190  NQBBCTR;  /* OPERATORS - mode -> union mode */
+A68_64  OQBBCTR;  /* avoid structure result */
+A68_71  PQBBCTR;  /* collateral clause result */
+A68_182  QQBBCTR;  /* collateral clause result */
+A68_190  RQBBCTR;  /* OPERATORS - mode -> union mode */
+A68_64  SQBBCTR;  /* avoid structure result */
+A68_184  TQBBCTR;  /* collateral clause result */
+A68_122  UQBBCTR_r;
+A68_122  VQBBCTR_savedr;
+A68_BITS  WQBBCTR;  /* ADICOPS - >= */
+A68_71  XQBBCTR;  /* collateral clause result */
+A68_190  YQBBCTR;  /* OPERATORS - mode -> union mode */
+A68_INT  ZQBBCTR;  /* YIELD */
+A68_64  ARBBCTR;  /* avoid structure result */
+A68_185  BRBBCTR_w;
+A68_164  CRBBCTR_l;
+A68_79  DRBBCTR_u;
+A68_169  ERBBCTR_c;
+A68_BOOL  HRBBCTR;  /* clause result */
+A68_187  IRBBCTR_s;
+A68_BOOL  LRBBCTR;  /* optbool result */
+A68_188  MRBBCTR_s;
+A68_BOOL  PRBBCTR;  /* clause result */
 A_PROC_ENTRY(phrase);
  /* line 364: */
  /* line 365: */
 { 
-ACBBCTR_valuestack = (A68_71 *)A68_NIL;
+RDBBCTR_valuestack = (A68_71 *)A68_NIL;
  /* line 367: */
  /* line 368: */
-A_CLOSURE( FCBBCTR_enclosedclause, GCBBCTR_enclosedclause, HCBBCTR_enclosedclause );
-(( HCBBCTR_enclosedclause * ) ( FCBBCTR_enclosedclause.nonlocals )) -> PABBCTR_serialclause = NL(PABBCTR_serialclause);
-(( HCBBCTR_enclosedclause * ) ( FCBBCTR_enclosedclause.nonlocals )) -> JXABCTR_read = NL(JXABCTR_read);
-(( HCBBCTR_enclosedclause * ) ( FCBBCTR_enclosedclause.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
-(( HCBBCTR_enclosedclause * ) ( FCBBCTR_enclosedclause.nonlocals )) -> JBBBCTR_enquiryclause = NL(JBBBCTR_enquiryclause);
-(( HCBBCTR_enclosedclause * ) ( FCBBCTR_enclosedclause.nonlocals )) -> XBBBCTR_phrase = NL(XBBBCTR_phrase);
-(( HCBBCTR_enclosedclause * ) ( FCBBCTR_enclosedclause.nonlocals )) -> ACBBCTR_valuestack = (&ACBBCTR_valuestack);
+A_CLOSURE( WDBBCTR_enclosedclause, XDBBCTR_enclosedclause, YDBBCTR_enclosedclause );
+(( YDBBCTR_enclosedclause * ) ( WDBBCTR_enclosedclause.nonlocals )) -> GCBBCTR_serialclause = NL(GCBBCTR_serialclause);
+(( YDBBCTR_enclosedclause * ) ( WDBBCTR_enclosedclause.nonlocals )) -> AZABCTR_read = NL(AZABCTR_read);
+(( YDBBCTR_enclosedclause * ) ( WDBBCTR_enclosedclause.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
+(( YDBBCTR_enclosedclause * ) ( WDBBCTR_enclosedclause.nonlocals )) -> ADBBCTR_enquiryclause = NL(ADBBCTR_enquiryclause);
+(( YDBBCTR_enclosedclause * ) ( WDBBCTR_enclosedclause.nonlocals )) -> ODBBCTR_phrase = NL(ODBBCTR_phrase);
+(( YDBBCTR_enclosedclause * ) ( WDBBCTR_enclosedclause.nonlocals )) -> RDBBCTR_valuestack = (&RDBBCTR_valuestack);
  /* line 1005: */
-A_CLOSURE( VNBBCTR_optboolexpression, WNBBCTR_optboolexpression, XNBBCTR_optboolexpression );
-(( XNBBCTR_optboolexpression * ) ( VNBBCTR_optboolexpression.nonlocals )) -> ACBBCTR_valuestack = (&ACBBCTR_valuestack);
-(( XNBBCTR_optboolexpression * ) ( VNBBCTR_optboolexpression.nonlocals )) -> XBBBCTR_phrase = NL(XBBBCTR_phrase);
+A_CLOSURE( MPBBCTR_optboolexpression, NPBBCTR_optboolexpression, OPBBCTR_optboolexpression );
+(( OPBBCTR_optboolexpression * ) ( MPBBCTR_optboolexpression.nonlocals )) -> RDBBCTR_valuestack = (&RDBBCTR_valuestack);
+(( OPBBCTR_optboolexpression * ) ( MPBBCTR_optboolexpression.nonlocals )) -> ODBBCTR_phrase = NL(ODBBCTR_phrase);
  /* line 1024: */
-BOBBCTR_simpleenquiry = Simple;
+SPBBCTR_simpleenquiry = Simple;
  /* line 1025: */
 for ( ;; )
 { 
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 1026: */
  /* line 1027: */
-COBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( COBBCTR.mode )
+TPBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( TPBBCTR.mode )
 { 
 case 1: /* STRUCT(INT)  */
 case 2: /* INT */
@@ -3970,12 +3970,12 @@ case 16: /* STRUCT(INT)  */
 case 17: /* STRUCT(BOOL)  */
 case 18: /* STRUCT(MODE178,REF MODE26)  */
 case 19: /* STRUCT(INT,INT,REF MODE26)  */
-A_UNCPY(DOBBCTR_p,COBBCTR);
+A_UNCPY(UPBBCTR_p,TPBBCTR);
  /* line 1028: */
 { 
  /* line 1029: */
-EOBBCTR = DOBBCTR_p ;
-switch ( EOBBCTR.mode )
+VPBBCTR = UPBBCTR_p ;
+switch ( VPBBCTR.mode )
 { 
 case 1: /* STRUCT(INT)  */
 case 2: /* INT */
@@ -3986,70 +3986,70 @@ case 6: /* STRUCT(INT,REF MODE26)  */
 case 7: /* STRUCT(INT,REF MODE26)  */
 case 8: /* STRUCT(INT,LONG BITS)  */
 case 9: /* STRUCT(INT,REF MODE26)  */
-A_UNCPY(FOBBCTR_l,EOBBCTR);
+A_UNCPY(WPBBCTR_l,VPBBCTR);
  /* line 1030: */
  /* line 1031: */
-HUZACTR_load( FOBBCTR_l, &HOBBCTR );
-GOBBCTR.Value = HOBBCTR;
-GOBBCTR.Rest = ACBBCTR_valuestack;
+YVZACTR_load( WPBBCTR_l, &YPBBCTR );
+XPBBCTR.Value = YPBBCTR;
+XPBBCTR.Rest = RDBBCTR_valuestack;
  /* line 1032: */
-ACBBCTR_valuestack = OMBBCTR_assignment(A_LOC(A68_71 ), GOBBCTR);
+RDBBCTR_valuestack = FOBBCTR_assignment(A_LOC(A68_71 ), XPBBCTR);
 break;
 case 10: /* STRUCT(INT,INT,INT)  */
-IOBBCTR_op = (EOBBCTR.data.mode10);
+ZPBBCTR_op = (VPBBCTR.data.mode10);
  /* line 1033: */
  /* line 1034: */
-VOQACTR_oper(IOBBCTR_op, (&ACBBCTR_valuestack), A_LOC(A68_71 ));
+MQQACTR_oper(ZPBBCTR_op, (&RDBBCTR_valuestack), A_LOC(A68_71 ));
 break;
 case 11: /* STRUCT(INT,REF MODE26,INT,INT)  */
-JOBBCTR_id = (EOBBCTR.data.mode11);
+AQBBCTR_id = (VPBBCTR.data.mode11);
  /* line 1035: */
  /* line 1037: */
-LSVACTR_iddec(JOBBCTR_id, (&ACBBCTR_valuestack));
+CUVACTR_iddec(AQBBCTR_id, (&RDBBCTR_valuestack));
 break;
 case 19: /* STRUCT(INT,INT,REF MODE26)  */
-KOBBCTR_c = (EOBBCTR.data.mode19);
+BQBBCTR_c = (VPBBCTR.data.mode19);
  /* line 1038: */
  /* line 1039: */
 { 
-LOBBCTR_visible = VIJACTR_nilvaluelist;
+CQBBCTR_visible = MKJACTR_nilvaluelist;
  /* line 1040: */
  /* line 1041: */
-NOBBCTR = KOBBCTR_c.Number;
-for ( MOBBCTR_i = 1;
-MOBBCTR_i <= NOBBCTR;
-MOBBCTR_i += 1 )
+EQBBCTR = BQBBCTR_c.Number;
+for ( DQBBCTR_i = 1;
+DQBBCTR_i <= EQBBCTR;
+DQBBCTR_i += 1 )
 { 
  /* line 1042: */
-OOBBCTR.Value = (*(&(ACBBCTR_valuestack->Value)));
-OOBBCTR.Rest = LOBBCTR_visible;
-LOBBCTR_visible = OMBBCTR_assignment(A_LOC(A68_71 ), OOBBCTR);
+FQBBCTR.Value = (*(&(RDBBCTR_valuestack->Value)));
+FQBBCTR.Rest = CQBBCTR_visible;
+CQBBCTR_visible = FOBBCTR_assignment(A_LOC(A68_71 ), FQBBCTR);
  /* line 1043: */
  /* line 1044: */
-ACBBCTR_valuestack = (*(&(ACBBCTR_valuestack->Rest)));
+RDBBCTR_valuestack = (*(&(RDBBCTR_valuestack->Rest)));
 }
  /* line 1045: */
  /* line 1046: */
-MPZACTR_codeinsert( KOBBCTR_c.Insert, KOBBCTR_c.Mode, LOBBCTR_visible, &POBBCTR );
-QOBBCTR_temp = POBBCTR;
+DRZACTR_codeinsert( BQBBCTR_c.Insert, BQBBCTR_c.Mode, CQBBCTR_visible, &GQBBCTR );
+HQBBCTR_temp = GQBBCTR;
  /* line 1047: */
  /* line 1048: */
-if ( (KOBBCTR_c.Mode!=UEAACTR_voidmode) )
+if ( (BQBBCTR_c.Mode!=UEAACTR_voidmode) )
 { 
  /* line 1049: */
-ROBBCTR.Value.Mode = KOBBCTR_c.Mode;
-ROBBCTR.Value.Info = YIJACTR_defaultinfo;
-ROBBCTR.Value.Extra = A_UNITE(SOBBCTR,mode5,5,QOBBCTR_temp);
+IQBBCTR.Value.Mode = BQBBCTR_c.Mode;
+IQBBCTR.Value.Info = PKJACTR_defaultinfo;
+IQBBCTR.Value.Extra = A_UNITE(JQBBCTR,mode5,5,HQBBCTR_temp);
  /* line 1050: */
-ROBBCTR.Rest = ACBBCTR_valuestack;
+IQBBCTR.Rest = RDBBCTR_valuestack;
  /* line 1051: */
  /* line 1052: */
-ACBBCTR_valuestack = OMBBCTR_assignment(A_LOC(A68_71 ), ROBBCTR);
+RDBBCTR_valuestack = FOBBCTR_assignment(A_LOC(A68_71 ), IQBBCTR);
 } 
 } 
 break;
 case 18: /* STRUCT(MODE178,REF MODE26)  */
-TOBBCTR_format = (EOBBCTR.data.mode18);
+KQBBCTR_format = (VPBBCTR.data.mode18);
  /* line 1053: */
  /* line 1054: */
 { 
@@ -4057,95 +4057,95 @@ TOBBCTR_format = (EOBBCTR.data.mode18);
  /* line 1056: */
  /* line 1057: */
  /* line 1058: */
-VOBBCTR.Mode = YEAACTR_formatmode;
+MQBBCTR.Mode = YEAACTR_formatmode;
  /* line 1059: */
-VOBBCTR.Denotation = TOBBCTR_format.Text;
+MQBBCTR.Denotation = KQBBCTR_format.Text;
  /* line 1060: */
-HUZACTR_load( A_UNITE(WOBBCTR,mode9,9,VOBBCTR), &XOBBCTR );
-UOBBCTR.Value = XOBBCTR;
+YVZACTR_load( A_UNITE(NQBBCTR,mode9,9,MQBBCTR), &OQBBCTR );
+LQBBCTR.Value = OQBBCTR;
  /* line 1061: */
  /* line 1062: */
  /* line 1063: */
-ZOBBCTR.Mode = EFAACTR_intmode;
+QQBBCTR.Mode = EFAACTR_intmode;
  /* line 1064: */
  /* line 1065: */
-ZOBBCTR.Denotation = (A68_LBITS )(A68_BITS )TOBBCTR_format.Info.W;
+QQBBCTR.Denotation = (A68_LBITS )(A68_BITS )KQBBCTR_format.Info.W;
  /* line 1067: */
-HUZACTR_load( A_UNITE(APBBCTR,mode8,8,ZOBBCTR), &BPBBCTR );
-YOBBCTR.Value = BPBBCTR;
+YVZACTR_load( A_UNITE(RQBBCTR,mode8,8,QQBBCTR), &SQBBCTR );
+PQBBCTR.Value = SQBBCTR;
  /* line 1068: */
-YOBBCTR.Rest = ACBBCTR_valuestack;
-UOBBCTR.Rest = OMBBCTR_assignment(A_LOC(A68_71 ), YOBBCTR);
-ACBBCTR_valuestack = OMBBCTR_assignment(A_LOC(A68_71 ), UOBBCTR);
+PQBBCTR.Rest = RDBBCTR_valuestack;
+LQBBCTR.Rest = FOBBCTR_assignment(A_LOC(A68_71 ), PQBBCTR);
+RDBBCTR_valuestack = FOBBCTR_assignment(A_LOC(A68_71 ), LQBBCTR);
  /* line 1070: */
  /* line 1071: */
  /* line 1072: */
  /* line 1073: */
-CPBBCTR.Fn = QGAACTR_formatfn;
+TQBBCTR.Fn = QGAACTR_formatfn;
  /* line 1075: */
-CPBBCTR.Mode = YEAACTR_formatmode;
-CPBBCTR.Param = TOBBCTR_format.Info.Nocases;
+TQBBCTR.Mode = YEAACTR_formatmode;
+TQBBCTR.Param = KQBBCTR_format.Info.Nocases;
  /* line 1076: */
  /* line 1078: */
  /* line 1079: */
  /* line 1081: */
-VOQACTR_oper(CPBBCTR, (&ACBBCTR_valuestack), A_LOC(A68_71 ));
+MQQACTR_oper(TQBBCTR, (&RDBBCTR_valuestack), A_LOC(A68_71 ));
 } 
 break;
 case 12: /* STRUCT(REF MODE26,BITS,INT,INT,INT)  */
-DPBBCTR_r = (EOBBCTR.data.mode12);
+UQBBCTR_r = (VPBBCTR.data.mode12);
  /* line 1092: */
  /* line 1093: */
 { 
-EPBBCTR_savedr = DPBBCTR_r;
+VQBBCTR_savedr = UQBBCTR_r;
  /* line 1094: */
-A_CALLPROC(NL(MYABCTR_routine),(DPBBCTR_r),(DPBBCTR_r,(NL(MYABCTR_routine)).nonlocals));
+A_CALLPROC(NL(DABBCTR_routine),(UQBBCTR_r),(UQBBCTR_r,(NL(DABBCTR_routine)).nonlocals));
  /* line 1095: */
  /* line 1096: */
-FPBBCTR = (*(&((&EPBBCTR_savedr)->Props))) ;
-if ( A_LB_GE(FPBBCTR,PCAACTR_valbit) )
+WQBBCTR = (*(&((&VQBBCTR_savedr)->Props))) ;
+if ( A_LB_GE(WQBBCTR,PCAACTR_valbit) )
 { 
  /* line 1097: */
-IPBBCTR = (*(&((&EPBBCTR_savedr)->Rdenno))) ;
-HUZACTR_load( A_UNITE(HPBBCTR,mode2,2,IPBBCTR), &JPBBCTR );
-GPBBCTR.Value = JPBBCTR;
+ZQBBCTR = (*(&((&VQBBCTR_savedr)->Rdenno))) ;
+YVZACTR_load( A_UNITE(YQBBCTR,mode2,2,ZQBBCTR), &ARBBCTR );
+XQBBCTR.Value = ARBBCTR;
  /* line 1098: */
-GPBBCTR.Rest = ACBBCTR_valuestack;
+XQBBCTR.Rest = RDBBCTR_valuestack;
  /* line 1099: */
  /* line 1101: */
-ACBBCTR_valuestack = OMBBCTR_assignment(A_LOC(A68_71 ), GPBBCTR);
+RDBBCTR_valuestack = FOBBCTR_assignment(A_LOC(A68_71 ), XQBBCTR);
 } 
 } 
 break;
 case 13: /* STRUCT(INT)  */
-KPBBCTR_w = (EOBBCTR.data.mode13);
+BRBBCTR_w = (VPBBCTR.data.mode13);
  /* line 1102: */
  /* line 1103: */
  /* line 1104: */
-if ( ((KPBBCTR_w.W==KCAACTR_orelwarn)|(KPBBCTR_w.W==JCAACTR_andthwarn)) )
+if ( ((BRBBCTR_w.W==KCAACTR_orelwarn)|(BRBBCTR_w.W==JCAACTR_andthwarn)) )
 { 
  /* line 1105: */
  /* line 1107: */
-A_CALLPROC(VNBBCTR_optboolexpression,(KPBBCTR_w.W),(KPBBCTR_w.W,(VNBBCTR_optboolexpression).nonlocals));
+A_CALLPROC(MPBBCTR_optboolexpression,(BRBBCTR_w.W),(BRBBCTR_w.W,(MPBBCTR_optboolexpression).nonlocals));
 } 
 break;
 case 14: /* STRUCT(REF MODE26,INT,INT,BOOL)  */
-LPBBCTR_l = (EOBBCTR.data.mode14);
+CRBBCTR_l = (VPBBCTR.data.mode14);
  /* line 1108: */
  /* line 1110: */
-ZNWACTR_labdec(LPBBCTR_l);
+QPWACTR_labdec(CRBBCTR_l);
 break;
 case 15: /* STRUCT(INT,BITS,INT)  */
-MPBBCTR_u = (EOBBCTR.data.mode15);
+DRBBCTR_u = (VPBBCTR.data.mode15);
  /* line 1112: */
  /* line 1114: */
-LXIACTR_terminalerror(670);
+SXIACTR_terminalerror(670);
 break;
 case 16: /* STRUCT(INT)  */
-NPBBCTR_c = (EOBBCTR.data.mode16);
+ERBBCTR_c = (VPBBCTR.data.mode16);
  /* line 1115: */
  /* line 1117: */
-PXIACTR_assert(PPBBCTR, A68_FALSE);
+WXIACTR_assert(GRBBCTR, A68_FALSE);
 break;
 default: 
 A_IMP_SKIP ;
@@ -4154,92 +4154,92 @@ break;
  /* line 1118: */
  /* line 1119: */
  /* line 1121: */
-QPBBCTR = A68_TRUE;
+HRBBCTR = A68_TRUE;
 } 
 break;
 case 20: /* STRUCT(INT,INT,BITS,INT)  */
-RPBBCTR_s = (COBBCTR.data.mode20);
+IRBBCTR_s = (TPBBCTR.data.mode20);
  /* line 1122: */
 { 
  /* line 1123: */
  /* line 1124: */
-if ( (ACBBCTR_valuestack!=VIJACTR_nilvaluelist) )
+if ( (RDBBCTR_valuestack!=MKJACTR_nilvaluelist) )
 { 
-PXIACTR_assert(TPBBCTR, ((*(&(ACBBCTR_valuestack->Rest)))==VIJACTR_nilvaluelist));
+WXIACTR_assert(KRBBCTR, ((*(&(RDBBCTR_valuestack->Rest)))==MKJACTR_nilvaluelist));
  /* line 1125: */
  /* line 1126: */
-if ( (RPBBCTR_s.Fn==WBAACTR_semifn) )
+if ( (IRBBCTR_s.Fn==WBAACTR_semifn) )
 { 
  /* line 1127: */
-EYYACTR_evaluatenoresult((&ACBBCTR_valuestack));
+VZYACTR_evaluatenoresult((&RDBBCTR_valuestack));
 } 
 else
 { 
  /* line 1128: */
  /* line 1129: */
-UPBBCTR = (Answer.Type==RJJACTR_enquiryresult);
-if ( UPBBCTR )
-{UPBBCTR = BOBBCTR_simpleenquiry;
+LRBBCTR = (Answer.Type==ILJACTR_enquiryresult);
+if ( LRBBCTR )
+{LRBBCTR = SPBBCTR_simpleenquiry;
 }
  /* line 1130: */
-if ( UPBBCTR )
+if ( LRBBCTR )
 { 
  /* line 1131: */
-ABZACTR_evaluatesimpleenquiry((&ACBBCTR_valuestack), Answer);
+RCZACTR_evaluatesimpleenquiry((&RDBBCTR_valuestack), Answer);
 } 
 else
 { 
  /* line 1132: */
  /* line 1133: */
-CZYACTR_evaluateresult((&ACBBCTR_valuestack), Answer);
+TAZACTR_evaluateresult((&RDBBCTR_valuestack), Answer);
 } 
 } 
 } 
  /* line 1134: */
  /* line 1135: */
  /* line 1137: */
-QPBBCTR = A68_FALSE;
+HRBBCTR = A68_FALSE;
 } 
 break;
 case 22: /* STRUCT(INT,BITS)  */
  /* line 1138: */
 { 
  /* line 1139: */
-if ( (ACBBCTR_valuestack!=VIJACTR_nilvaluelist) )
+if ( (RDBBCTR_valuestack!=MKJACTR_nilvaluelist) )
 { 
  /* line 1140: */
-CZYACTR_evaluateresult((&ACBBCTR_valuestack), Answer);
+TAZACTR_evaluateresult((&RDBBCTR_valuestack), Answer);
 } 
  /* line 1141: */
  /* line 1142: */
  /* line 1144: */
-QPBBCTR = A68_FALSE;
+HRBBCTR = A68_FALSE;
 } 
 break;
 case 21: /* STRUCT(INT,INT,BITS,INT)  */
-VPBBCTR_s = (COBBCTR.data.mode21);
+MRBBCTR_s = (TPBBCTR.data.mode21);
  /* line 1145: */
 { 
-A_CALLPROC(FCBBCTR_enclosedclause,(VPBBCTR_s, Body, Answer, A_LOC(A68_71 )),(VPBBCTR_s, Body, Answer, A_LOC(A68_71 ),(FCBBCTR_enclosedclause).nonlocals));
+A_CALLPROC(WDBBCTR_enclosedclause,(MRBBCTR_s, Body, Answer, A_LOC(A68_71 )),(MRBBCTR_s, Body, Answer, A_LOC(A68_71 ),(WDBBCTR_enclosedclause).nonlocals));
  /* line 1146: */
-BOBBCTR_simpleenquiry = A68_FALSE;
+SPBBCTR_simpleenquiry = A68_FALSE;
  /* line 1147: */
  /* line 1148: */
  /* line 1150: */
-QPBBCTR = A68_TRUE;
+HRBBCTR = A68_TRUE;
 } 
 break;
 default: 
-PXIACTR_assert(XPBBCTR, A68_FALSE);
+WXIACTR_assert(ORBBCTR, A68_FALSE);
  /* line 1151: */
  /* line 1152: */
  /* line 1153: */
-QPBBCTR = A68_FALSE;
+HRBBCTR = A68_FALSE;
 break;
 } 
  /* line 1155: */
-YPBBCTR = QPBBCTR;
-if ( !YPBBCTR ) break;
+PRBBCTR = HRBBCTR;
+if ( !PRBBCTR ) break;
 /*SKIP*/;
 }
  /* line 1157: */
@@ -4249,28 +4249,28 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  KXABCTR_read(void *NonLocals)
-#define NL(x) (((LXABCTR_read *)NonLocals)->x)
+A_STATIC A68_VOID  BZABCTR_read(void *NonLocals)
+#define NL(x) (((CZABCTR_read *)NonLocals)->x)
 { 
-A68_180  MXABCTR;  /* united object - for case conformity */
-A68_180  NXABCTR;  /* avoid structure result */
-A68_180  OXABCTR;  /* OPERATORS - mode -> union mode */
+A68_180  DZABCTR;  /* united object - for case conformity */
+A68_180  EZABCTR;  /* avoid structure result */
+A68_180  FZABCTR;  /* OPERATORS - mode -> union mode */
 A_PROC_ENTRY(read);
  /* line 75: */
-MXABCTR = (*NL(HXABCTR_nextimperative)) ;
-switch ( MXABCTR.mode )
+DZABCTR = (*NL(YYABCTR_nextimperative)) ;
+switch ( DZABCTR.mode )
 { 
 case 26: /* VOID */
  /* line 76: */
  /* line 77: */
-A_CALLPROC(NL(Nextstreamimperative),( &NXABCTR),( &NXABCTR,(NL(Nextstreamimperative)).nonlocals));
-(*NL(FXABCTR_currentimperative)) = NXABCTR;
+A_CALLPROC(NL(Nextstreamimperative),( &EZABCTR),( &EZABCTR,(NL(Nextstreamimperative)).nonlocals));
+(*NL(WYABCTR_currentimperative)) = EZABCTR;
 break;
 default: 
-(*NL(FXABCTR_currentimperative)) = (*NL(HXABCTR_nextimperative));
+(*NL(WYABCTR_currentimperative)) = (*NL(YYABCTR_nextimperative));
  /* line 78: */
  /* line 79: */
-(*NL(HXABCTR_nextimperative)) = A_EMPTY(OXABCTR,26);
+(*NL(YYABCTR_nextimperative)) = A_EMPTY(FZABCTR,26);
 break;
 } 
 A_PROC_EXIT(read);
@@ -4278,25 +4278,25 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  QXABCTR_lookahead(void *NonLocals)
-#define NL(x) (((RXABCTR_lookahead *)NonLocals)->x)
+A_STATIC A68_VOID  HZABCTR_lookahead(void *NonLocals)
+#define NL(x) (((IZABCTR_lookahead *)NonLocals)->x)
 { 
-A68_180  SXABCTR;  /* united object - for case conformity */
-A68_180  TXABCTR;  /* avoid structure result */
+A68_180  JZABCTR;  /* united object - for case conformity */
+A68_180  KZABCTR;  /* avoid structure result */
 A_PROC_ENTRY(lookahead);
  /* line 89: */
-SXABCTR = (*NL(HXABCTR_nextimperative)) ;
-switch ( SXABCTR.mode )
+JZABCTR = (*NL(YYABCTR_nextimperative)) ;
+switch ( JZABCTR.mode )
 { 
 case 26: /* VOID */
  /* line 90: */
  /* line 91: */
-A_CALLPROC(NL(Nextstreamimperative),( &TXABCTR),( &TXABCTR,(NL(Nextstreamimperative)).nonlocals));
-(*NL(HXABCTR_nextimperative)) = TXABCTR;
+A_CALLPROC(NL(Nextstreamimperative),( &KZABCTR),( &KZABCTR,(NL(Nextstreamimperative)).nonlocals));
+(*NL(YYABCTR_nextimperative)) = KZABCTR;
 break;
 default: 
  /* line 92: */
-LXIACTR_terminalerror(602);
+SXIACTR_terminalerror(602);
 break;
 } 
 A_PROC_EXIT(lookahead);
@@ -4304,10 +4304,10 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  UXABCTR_compositionmodule(void)
+A_STATIC A68_VOID  LZABCTR_compositionmodule(void)
 { 
 A_PROC_ENTRY(compositionmodule);
-PXIACTR_assert(WXABCTR, A68_FALSE);
+WXIACTR_assert(NZABCTR, A68_FALSE);
 A_PROC_EXIT(compositionmodule);
 return;
 } 
@@ -4315,230 +4315,230 @@ return;
  /* line 105: */
  /* line 106: */
 
-A_STATIC A68_VOID  BYABCTR_module(A68_VC  Modulename, A68_BOOL  Decsmodule, A68_BOOL  Prelude, void *NonLocals)
-#define NL(x) (((CYABCTR_module *)NonLocals)->x)
+A_STATIC A68_VOID  SZABCTR_module(A68_VC  Modulename, A68_BOOL  Decsmodule, A68_BOOL  Prelude, void *NonLocals)
+#define NL(x) (((TZABCTR_module *)NonLocals)->x)
 { 
-A68_268  DYABCTR_phrase_;
-A68_75  EYABCTR_skiproutine;   /* proc value of non-global proc */
-A68_269  MYABCTR_routine;   /* proc value of non-global proc */
-A68_276  PABBCTR_serialclause;   /* proc value of non-global proc */
-A68_278  JBBBCTR_enquiryclause;   /* proc value of non-global proc */
-A68_268  XBBBCTR_phrase;   /* proc value of non-global proc */
-A68_55 * ZPBBCTR_endofmodule;
-A68_64 * AQBBCTR_result;
-A68_59  BQBBCTR;  /* collateral clause result */
-A68_59  CQBBCTR_properties;
-A68_VC  DQBBCTR;  /* OPERATORS - istruct -> vector */
-A68_56 * EQBBCTR;  /* OPERATORS - istruct -> vector */
-A68_64  FQBBCTR;  /* collateral clause result */
-A68_65  GQBBCTR;  /* OPERATORS - mode -> union mode */
-A68_63  HQBBCTR;  /* collateral clause result */
-A68_180  IQBBCTR;  /* united object - for case conformity */
-A68_156  JQBBCTR_id;
-A68_180  KQBBCTR;  /* united object - for case conformity */
-A68_122  LQBBCTR_r;
-A68_BOOL  MQBBCTR;  /* clause result */
-A68_VC  NQBBCTR;  /* avoid structure result */
-A68_122  OQBBCTR_r;
-A68_VC  PQBBCTR;  /* avoid structure result */
-A68_180  QQBBCTR;  /* united object - for case conformity */
-A68_122  RQBBCTR_r;
-A68_122  SQBBCTR;  /* clause result */
-A68_122  VQBBCTR;  /* OPERATORS - skip to mode */
-A68_122  WQBBCTR_routine;
-A68_180  XQBBCTR;  /* united object - for case conformity */
-A68_122  YQBBCTR_r;
-A68_BOOL  DRBBCTR;  /* clause result */
-A68_BOOL  ERBBCTR;  /* clause result */
-A68_VC  FRBBCTR;  /* OPERATORS - istruct -> vector */
-A68_56 * GRBBCTR;  /* OPERATORS - istruct -> vector */
-A68_63  HRBBCTR;  /* collateral clause result */
-A68_BITS  IRBBCTR;  /* ADICOPS - >= */
-A68_180  JRBBCTR;  /* united object - for case conformity */
-A68_189  KRBBCTR_t;
-A68_BOOL  LRBBCTR;  /* clause result */
-A68_VC  MRBBCTR;  /* OPERATORS - istruct -> vector */
-A68_56 * NRBBCTR;  /* OPERATORS - istruct -> vector */
-A68_64  ORBBCTR;  /* collateral clause result */
-A68_65  PRBBCTR;  /* OPERATORS - mode -> union mode */
-A68_63  QRBBCTR;  /* collateral clause result */
+A68_268  UZABCTR_phrase_;
+A68_75  VZABCTR_skiproutine;   /* proc value of non-global proc */
+A68_269  DABBCTR_routine;   /* proc value of non-global proc */
+A68_276  GCBBCTR_serialclause;   /* proc value of non-global proc */
+A68_278  ADBBCTR_enquiryclause;   /* proc value of non-global proc */
+A68_268  ODBBCTR_phrase;   /* proc value of non-global proc */
+A68_55 * QRBBCTR_endofmodule;
+A68_64 * RRBBCTR_result;
+A68_59  SRBBCTR;  /* collateral clause result */
+A68_59  TRBBCTR_properties;
+A68_VC  URBBCTR;  /* OPERATORS - istruct -> vector */
+A68_56 * VRBBCTR;  /* OPERATORS - istruct -> vector */
+A68_64  WRBBCTR;  /* collateral clause result */
+A68_65  XRBBCTR;  /* OPERATORS - mode -> union mode */
+A68_63  YRBBCTR;  /* collateral clause result */
+A68_180  ZRBBCTR;  /* united object - for case conformity */
+A68_156  ASBBCTR_id;
+A68_180  BSBBCTR;  /* united object - for case conformity */
+A68_122  CSBBCTR_r;
+A68_BOOL  DSBBCTR;  /* clause result */
+A68_VC  ESBBCTR;  /* avoid structure result */
+A68_122  FSBBCTR_r;
+A68_VC  GSBBCTR;  /* avoid structure result */
+A68_180  HSBBCTR;  /* united object - for case conformity */
+A68_122  ISBBCTR_r;
+A68_122  JSBBCTR;  /* clause result */
+A68_122  MSBBCTR;  /* OPERATORS - skip to mode */
+A68_122  NSBBCTR_routine;
+A68_180  OSBBCTR;  /* united object - for case conformity */
+A68_122  PSBBCTR_r;
+A68_BOOL  USBBCTR;  /* clause result */
+A68_BOOL  VSBBCTR;  /* clause result */
+A68_VC  WSBBCTR;  /* OPERATORS - istruct -> vector */
+A68_56 * XSBBCTR;  /* OPERATORS - istruct -> vector */
+A68_63  YSBBCTR;  /* collateral clause result */
+A68_BITS  ZSBBCTR;  /* ADICOPS - >= */
+A68_180  ATBBCTR;  /* united object - for case conformity */
+A68_189  BTBBCTR_t;
+A68_BOOL  CTBBCTR;  /* clause result */
+A68_VC  DTBBCTR;  /* OPERATORS - istruct -> vector */
+A68_56 * ETBBCTR;  /* OPERATORS - istruct -> vector */
+A68_64  FTBBCTR;  /* collateral clause result */
+A68_65  GTBBCTR;  /* OPERATORS - mode -> union mode */
+A68_63  HTBBCTR;  /* collateral clause result */
 A_PROC_ENTRY(module);
  /* line 122: */
  /* line 123: */
 { 
  /* line 128: */
  /* line 132: */
-A_CLOSURE( EYABCTR_skiproutine, FYABCTR_skiproutine, GYABCTR_skiproutine );
-(( GYABCTR_skiproutine * ) ( EYABCTR_skiproutine.nonlocals )) -> JXABCTR_read = NL(JXABCTR_read);
-(( GYABCTR_skiproutine * ) ( EYABCTR_skiproutine.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
-(( GYABCTR_skiproutine * ) ( EYABCTR_skiproutine.nonlocals )) -> EYABCTR_skiproutine = EYABCTR_skiproutine;
+A_CLOSURE( VZABCTR_skiproutine, WZABCTR_skiproutine, XZABCTR_skiproutine );
+(( XZABCTR_skiproutine * ) ( VZABCTR_skiproutine.nonlocals )) -> AZABCTR_read = NL(AZABCTR_read);
+(( XZABCTR_skiproutine * ) ( VZABCTR_skiproutine.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
+(( XZABCTR_skiproutine * ) ( VZABCTR_skiproutine.nonlocals )) -> VZABCTR_skiproutine = VZABCTR_skiproutine;
  /* line 142: */
-A_CLOSURE( MYABCTR_routine, NYABCTR_routine, OYABCTR_routine );
-(( OYABCTR_routine * ) ( MYABCTR_routine.nonlocals )) -> PXABCTR_lookahead = NL(PXABCTR_lookahead);
-(( OYABCTR_routine * ) ( MYABCTR_routine.nonlocals )) -> HXABCTR_nextimperative = NL(HXABCTR_nextimperative);
-(( OYABCTR_routine * ) ( MYABCTR_routine.nonlocals )) -> JXABCTR_read = NL(JXABCTR_read);
-(( OYABCTR_routine * ) ( MYABCTR_routine.nonlocals )) -> EYABCTR_skiproutine = EYABCTR_skiproutine;
-(( OYABCTR_routine * ) ( MYABCTR_routine.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
-(( OYABCTR_routine * ) ( MYABCTR_routine.nonlocals )) -> DYABCTR_phrase_ = (&DYABCTR_phrase_);
+A_CLOSURE( DABBCTR_routine, EABBCTR_routine, FABBCTR_routine );
+(( FABBCTR_routine * ) ( DABBCTR_routine.nonlocals )) -> GZABCTR_lookahead = NL(GZABCTR_lookahead);
+(( FABBCTR_routine * ) ( DABBCTR_routine.nonlocals )) -> YYABCTR_nextimperative = NL(YYABCTR_nextimperative);
+(( FABBCTR_routine * ) ( DABBCTR_routine.nonlocals )) -> AZABCTR_read = NL(AZABCTR_read);
+(( FABBCTR_routine * ) ( DABBCTR_routine.nonlocals )) -> VZABCTR_skiproutine = VZABCTR_skiproutine;
+(( FABBCTR_routine * ) ( DABBCTR_routine.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
+(( FABBCTR_routine * ) ( DABBCTR_routine.nonlocals )) -> UZABCTR_phrase_ = (&UZABCTR_phrase_);
  /* line 239: */
-A_CLOSURE( PABBCTR_serialclause, QABBCTR_serialclause, RABBCTR_serialclause );
-(( RABBCTR_serialclause * ) ( PABBCTR_serialclause.nonlocals )) -> DYABCTR_phrase_ = (&DYABCTR_phrase_);
-(( RABBCTR_serialclause * ) ( PABBCTR_serialclause.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
+A_CLOSURE( GCBBCTR_serialclause, HCBBCTR_serialclause, ICBBCTR_serialclause );
+(( ICBBCTR_serialclause * ) ( GCBBCTR_serialclause.nonlocals )) -> UZABCTR_phrase_ = (&UZABCTR_phrase_);
+(( ICBBCTR_serialclause * ) ( GCBBCTR_serialclause.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
  /* line 320: */
-A_CLOSURE( JBBBCTR_enquiryclause, KBBBCTR_enquiryclause, LBBBCTR_enquiryclause );
-(( LBBBCTR_enquiryclause * ) ( JBBBCTR_enquiryclause.nonlocals )) -> DYABCTR_phrase_ = (&DYABCTR_phrase_);
-(( LBBBCTR_enquiryclause * ) ( JBBBCTR_enquiryclause.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
+A_CLOSURE( ADBBCTR_enquiryclause, BDBBCTR_enquiryclause, CDBBCTR_enquiryclause );
+(( CDBBCTR_enquiryclause * ) ( ADBBCTR_enquiryclause.nonlocals )) -> UZABCTR_phrase_ = (&UZABCTR_phrase_);
+(( CDBBCTR_enquiryclause * ) ( ADBBCTR_enquiryclause.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
  /* line 353: */
-A_CLOSURE( XBBBCTR_phrase, YBBBCTR_phrase, ZBBBCTR_phrase );
-(( ZBBBCTR_phrase * ) ( XBBBCTR_phrase.nonlocals )) -> PABBCTR_serialclause = PABBCTR_serialclause;
-(( ZBBBCTR_phrase * ) ( XBBBCTR_phrase.nonlocals )) -> JXABCTR_read = NL(JXABCTR_read);
-(( ZBBBCTR_phrase * ) ( XBBBCTR_phrase.nonlocals )) -> FXABCTR_currentimperative = NL(FXABCTR_currentimperative);
-(( ZBBBCTR_phrase * ) ( XBBBCTR_phrase.nonlocals )) -> JBBBCTR_enquiryclause = JBBBCTR_enquiryclause;
-(( ZBBBCTR_phrase * ) ( XBBBCTR_phrase.nonlocals )) -> XBBBCTR_phrase = XBBBCTR_phrase;
-(( ZBBBCTR_phrase * ) ( XBBBCTR_phrase.nonlocals )) -> MYABCTR_routine = MYABCTR_routine;
+A_CLOSURE( ODBBCTR_phrase, PDBBCTR_phrase, QDBBCTR_phrase );
+(( QDBBCTR_phrase * ) ( ODBBCTR_phrase.nonlocals )) -> GCBBCTR_serialclause = GCBBCTR_serialclause;
+(( QDBBCTR_phrase * ) ( ODBBCTR_phrase.nonlocals )) -> AZABCTR_read = NL(AZABCTR_read);
+(( QDBBCTR_phrase * ) ( ODBBCTR_phrase.nonlocals )) -> WYABCTR_currentimperative = NL(WYABCTR_currentimperative);
+(( QDBBCTR_phrase * ) ( ODBBCTR_phrase.nonlocals )) -> ADBBCTR_enquiryclause = ADBBCTR_enquiryclause;
+(( QDBBCTR_phrase * ) ( ODBBCTR_phrase.nonlocals )) -> ODBBCTR_phrase = ODBBCTR_phrase;
+(( QDBBCTR_phrase * ) ( ODBBCTR_phrase.nonlocals )) -> DABBCTR_routine = DABBCTR_routine;
  /* line 1159: */
-DYABCTR_phrase_ = XBBBCTR_phrase;
+UZABCTR_phrase_ = ODBBCTR_phrase;
  /* line 1164: */
  /* line 1165: */
  /* line 1167: */
-A_CALLPROC(NL(PXABCTR_lookahead),(),((NL(PXABCTR_lookahead)).nonlocals));
+A_CALLPROC(NL(GZABCTR_lookahead),(),((NL(GZABCTR_lookahead)).nonlocals));
  /* line 1169: */
  /* line 1170: */
  /* line 1171: */
 if ( Decsmodule )
 { 
-BQBBCTR.Block = A68_FALSE;
-BQBBCTR.Dynamicresult = A68_FALSE;
-BQBBCTR.Discardeddynamicresult = A68_TRUE;
-BQBBCTR.Type = DBAACTR_decsfn;
-CQBBCTR_properties = BQBBCTR;
+SRBBCTR.Block = A68_FALSE;
+SRBBCTR.Dynamicresult = A68_FALSE;
+SRBBCTR.Discardeddynamicresult = A68_TRUE;
+SRBBCTR.Type = DBAACTR_decsfn;
+TRBBCTR_properties = SRBBCTR;
  /* line 1173: */
-EQBBCTR = (&((&JZOACTR_currentmodule)->Uname)) ;
-DPYACTR_startdecsmodule(A_ISVEC(DQBBCTR,EQBBCTR,7,A68_CHAR ), Modulename);
+VRBBCTR = (&((&ABPACTR_currentmodule)->Uname)) ;
+UQYACTR_startdecsmodule(A_ISVEC(URBBCTR,VRBBCTR,7,A68_CHAR ), Modulename);
  /* line 1175: */
-FQBBCTR.Mode = UEAACTR_voidmode;
-FQBBCTR.Info = YIJACTR_defaultinfo;
-FQBBCTR.Extra = A_EMPTY(GQBBCTR,3);
-AQBBCTR_result = JEBBCTR_assignment(A_LOC(A68_64 ), FQBBCTR);
+WRBBCTR.Mode = UEAACTR_voidmode;
+WRBBCTR.Info = PKJACTR_defaultinfo;
+WRBBCTR.Extra = A_EMPTY(XRBBCTR,3);
+RRBBCTR_result = AGBBCTR_assignment(A_LOC(A68_64 ), WRBBCTR);
  /* line 1177: */
  /* line 1178: */
-HQBBCTR.Value = AQBBCTR_result;
-HQBBCTR.End = ZPBBCTR_endofmodule;
-HQBBCTR.Type = NJJACTR_voidresult;
-A_CALLPROC(PABBCTR_serialclause,(CQBBCTR_properties, HQBBCTR),(CQBBCTR_properties, HQBBCTR,(PABBCTR_serialclause).nonlocals));
+YRBBCTR.Value = RRBBCTR_result;
+YRBBCTR.End = QRBBCTR_endofmodule;
+YRBBCTR.Type = ELJACTR_voidresult;
+A_CALLPROC(GCBBCTR_serialclause,(TRBBCTR_properties, YRBBCTR),(TRBBCTR_properties, YRBBCTR,(GCBBCTR_serialclause).nonlocals));
  /* line 1180: */
  /* line 1181: */
  /* line 1182: */
-ESYACTR_enddecsmodule(Modulename);
+VTYACTR_enddecsmodule(Modulename);
 } 
 else
 { 
  /* line 1183: */
-IQBBCTR = (*NL(HXABCTR_nextimperative)) ;
-switch ( IQBBCTR.mode )
+ZRBBCTR = (*NL(YYABCTR_nextimperative)) ;
+switch ( ZRBBCTR.mode )
 { 
 case 11: /* STRUCT(INT,REF MODE26,INT,INT)  */
-JQBBCTR_id = (IQBBCTR.data.mode11);
+ASBBCTR_id = (ZRBBCTR.data.mode11);
  /* line 1184: */
 { 
-MJVACTR_initialdummydec(JQBBCTR_id);
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
-A_CALLPROC(NL(PXABCTR_lookahead),(),((NL(PXABCTR_lookahead)).nonlocals));
+DLVACTR_initialdummydec(ASBBCTR_id);
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
+A_CALLPROC(NL(GZABCTR_lookahead),(),((NL(GZABCTR_lookahead)).nonlocals));
  /* line 1185: */
  /* line 1186: */
-KQBBCTR = (*NL(HXABCTR_nextimperative)) ;
-switch ( KQBBCTR.mode )
+BSBBCTR = (*NL(YYABCTR_nextimperative)) ;
+switch ( BSBBCTR.mode )
 { 
 case 12: /* STRUCT(REF MODE26,BITS,INT,INT,INT)  */
-LQBBCTR_r = (KQBBCTR.data.mode12);
+CSBBCTR_r = (BSBBCTR.data.mode12);
  /* line 1187: */
-KDHACTR_message( 59, &NQBBCTR );
-MQBBCTR = A_VC_EQ(LQBBCTR_r.Name,NQBBCTR);
+KDHACTR_message( 59, &ESBBCTR );
+DSBBCTR = A_VC_EQ(CSBBCTR_r.Name,ESBBCTR);
 break;
 default: 
  /* line 1188: */
  /* line 1189: */
  /* line 1190: */
-MQBBCTR = A68_FALSE;
+DSBBCTR = A68_FALSE;
 break;
 } 
 } 
 break;
 case 12: /* STRUCT(REF MODE26,BITS,INT,INT,INT)  */
-OQBBCTR_r = (IQBBCTR.data.mode12);
+FSBBCTR_r = (ZRBBCTR.data.mode12);
  /* line 1191: */
  /* line 1192: */
-KDHACTR_message( 59, &PQBBCTR );
-MQBBCTR = A_VC_EQ(OQBBCTR_r.Name,PQBBCTR);
+KDHACTR_message( 59, &GSBBCTR );
+DSBBCTR = A_VC_EQ(FSBBCTR_r.Name,GSBBCTR);
 break;
 default: 
  /* line 1193: */
  /* line 1194: */
  /* line 1196: */
-MQBBCTR = A68_FALSE;
+DSBBCTR = A68_FALSE;
 break;
 } 
-if ( MQBBCTR )
+if ( DSBBCTR )
 { 
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 1197: */
  /* line 1198: */
  /* line 1199: */
-QQBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( QQBBCTR.mode )
+HSBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( HSBBCTR.mode )
 { 
 case 12: /* STRUCT(REF MODE26,BITS,INT,INT,INT)  */
-RQBBCTR_r = (QQBBCTR.data.mode12);
+ISBBCTR_r = (HSBBCTR.data.mode12);
  /* line 1200: */
-SQBBCTR = RQBBCTR_r;
+JSBBCTR = ISBBCTR_r;
 break;
 default: 
-PXIACTR_assert(UQBBCTR, A68_FALSE);
+WXIACTR_assert(LSBBCTR, A68_FALSE);
  /* line 1201: */
-SQBBCTR = VQBBCTR;
+JSBBCTR = MSBBCTR;
 break;
 } 
-WQBBCTR_routine = SQBBCTR;
+NSBBCTR_routine = JSBBCTR;
  /* line 1203: */
  /* line 1204: */
  /* line 1206: */
-if ( (RMMACTR_modetype(WQBBCTR_routine.Mode)==GEAACTR_procp) )
+if ( (IOMACTR_modetype(NSBBCTR_routine.Mode)==GEAACTR_procp) )
 { 
 for ( ;; )
 { 
  /* line 1207: */
-A_CALLPROC(NL(PXABCTR_lookahead),(),((NL(PXABCTR_lookahead)).nonlocals));
+A_CALLPROC(NL(GZABCTR_lookahead),(),((NL(GZABCTR_lookahead)).nonlocals));
  /* line 1208: */
  /* line 1209: */
  /* line 1210: */
-XQBBCTR = (*NL(HXABCTR_nextimperative)) ;
-switch ( XQBBCTR.mode )
+OSBBCTR = (*NL(YYABCTR_nextimperative)) ;
+switch ( OSBBCTR.mode )
 { 
 case 12: /* STRUCT(REF MODE26,BITS,INT,INT,INT)  */
-YQBBCTR_r = (XQBBCTR.data.mode12);
+PSBBCTR_r = (OSBBCTR.data.mode12);
  /* line 1211: */
  /* line 1212: */
 { 
-PXIACTR_assert(CRBBCTR, A_VC_EQ(YQBBCTR_r.Name,BRBBCTR));
+WXIACTR_assert(TSBBCTR, A_VC_EQ(PSBBCTR_r.Name,SSBBCTR));
  /* line 1213: */
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 1214: */
-A_CALLPROC(EYABCTR_skiproutine,(),((EYABCTR_skiproutine).nonlocals));
+A_CALLPROC(VZABCTR_skiproutine,(),((VZABCTR_skiproutine).nonlocals));
  /* line 1215: */
  /* line 1216: */
  /* line 1217: */
-DRBBCTR = A68_TRUE;
+USBBCTR = A68_TRUE;
 } 
 break;
 default: 
  /* line 1218: */
  /* line 1219: */
-DRBBCTR = A68_FALSE;
+USBBCTR = A68_FALSE;
 break;
 } 
  /* line 1221: */
-ERBBCTR = DRBBCTR;
-if ( !ERBBCTR ) break;
+VSBBCTR = USBBCTR;
+if ( !VSBBCTR ) break;
 /*SKIP*/;
 }
  /* line 1222: */
@@ -4548,87 +4548,87 @@ if ( !ERBBCTR ) break;
  /* line 1226: */
  /* line 1227: */
  /* line 1229: */
-GRBBCTR = (&((&JZOACTR_currentmodule)->Uname)) ;
-ZQYACTR_startprocmodule(WQBBCTR_routine, A_ISVEC(FRBBCTR,GRBBCTR,7,A68_CHAR ), Modulename, AQBBCTR_result);
+XSBBCTR = (&((&ABPACTR_currentmodule)->Uname)) ;
+QSYACTR_startprocmodule(NSBBCTR_routine, A_ISVEC(WSBBCTR,XSBBCTR,7,A68_CHAR ), Modulename, RRBBCTR_result);
  /* line 1231: */
  /* line 1232: */
-if ( XRMACTR_dynamic((*(&(AQBBCTR_result->Mode)))) )
+if ( OTMACTR_dynamic((*(&(RRBBCTR_result->Mode)))) )
 { 
  /* line 1233: */
-IXIACTR_error(340);
+PXIACTR_error(340);
 } 
  /* line 1235: */
  /* line 1236: */
  /* line 1237: */
-HRBBCTR.Value = AQBBCTR_result;
-HRBBCTR.End = ZPBBCTR_endofmodule;
-HRBBCTR.Type = QJJACTR_routineresult;
+YSBBCTR.Value = RRBBCTR_result;
+YSBBCTR.End = QRBBCTR_endofmodule;
+YSBBCTR.Type = HLJACTR_routineresult;
  /* line 1238: */
  /* line 1239: */
-IRBBCTR = WQBBCTR_routine.Props ;
-A_CALLPROC(XBBBCTR_phrase,(A_LB_GE(IRBBCTR,NCAACTR_ccbit), HRBBCTR, A68_FALSE),(A_LB_GE(IRBBCTR,NCAACTR_ccbit), HRBBCTR, A68_FALSE,(XBBBCTR_phrase).nonlocals));
+ZSBBCTR = NSBBCTR_routine.Props ;
+A_CALLPROC(ODBBCTR_phrase,(A_LB_GE(ZSBBCTR,NCAACTR_ccbit), YSBBCTR, A68_FALSE),(A_LB_GE(ZSBBCTR,NCAACTR_ccbit), YSBBCTR, A68_FALSE,(ODBBCTR_phrase).nonlocals));
  /* line 1240: */
-ERYACTR_endmodule();
+VSYACTR_endmodule();
  /* line 1243: */
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 1244: */
  /* line 1245: */
  /* line 1246: */
  /* line 1247: */
-if ( ((RMMACTR_modetype(WQBBCTR_routine.Mode)==FEAACTR_proc)&((*(&(AQBBCTR_result->Mode)))!=UEAACTR_voidmode)) )
+if ( ((IOMACTR_modetype(NSBBCTR_routine.Mode)==FEAACTR_proc)&((*(&(RRBBCTR_result->Mode)))!=UEAACTR_voidmode)) )
 { 
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
 } 
  /* line 1248: */
-A_CALLPROC(NL(JXABCTR_read),(),((NL(JXABCTR_read)).nonlocals));
+A_CALLPROC(NL(AZABCTR_read),(),((NL(AZABCTR_read)).nonlocals));
  /* line 1249: */
  /* line 1250: */
-JRBBCTR = (*NL(FXABCTR_currentimperative)) ;
-switch ( JRBBCTR.mode )
+ATBBCTR = (*NL(WYABCTR_currentimperative)) ;
+switch ( ATBBCTR.mode )
 { 
 case 22: /* STRUCT(INT,BITS)  */
-KRBBCTR_t = (JRBBCTR.data.mode22);
+BTBBCTR_t = (ATBBCTR.data.mode22);
  /* line 1251: */
-LRBBCTR = (KRBBCTR_t.Fn!=HCAACTR_finishfn);
+CTBBCTR = (BTBBCTR_t.Fn!=HCAACTR_finishfn);
 break;
 default: 
  /* line 1252: */
  /* line 1253: */
-LRBBCTR = A68_TRUE;
+CTBBCTR = A68_TRUE;
 break;
 } 
-if ( LRBBCTR )
+if ( CTBBCTR )
 { 
  /* line 1254: */
  /* line 1255: */
  /* line 1257: */
-LXIACTR_terminalerror(628);
+SXIACTR_terminalerror(628);
 } 
 } 
 else
 { 
-NRBBCTR = (&((&JZOACTR_currentmodule)->Uname)) ;
-SNYACTR_startmodule(A_ISVEC(MRBBCTR,NRBBCTR,7,A68_CHAR ), Modulename);
+ETBBCTR = (&((&ABPACTR_currentmodule)->Uname)) ;
+JPYACTR_startmodule(A_ISVEC(DTBBCTR,ETBBCTR,7,A68_CHAR ), Modulename);
  /* line 1258: */
-ORBBCTR.Mode = UEAACTR_voidmode;
-ORBBCTR.Info = YIJACTR_defaultinfo;
-ORBBCTR.Extra = A_EMPTY(PRBBCTR,3);
-AQBBCTR_result = JEBBCTR_assignment(A_LOC(A68_64 ), ORBBCTR);
+FTBBCTR.Mode = UEAACTR_voidmode;
+FTBBCTR.Info = PKJACTR_defaultinfo;
+FTBBCTR.Extra = A_EMPTY(GTBBCTR,3);
+RRBBCTR_result = AGBBCTR_assignment(A_LOC(A68_64 ), FTBBCTR);
  /* line 1259: */
  /* line 1260: */
  /* line 1261: */
  /* line 1262: */
-QRBBCTR.Value = AQBBCTR_result;
+HTBBCTR.Value = RRBBCTR_result;
  /* line 1264: */
-QRBBCTR.End = ZPBBCTR_endofmodule;
-QRBBCTR.Type = NJJACTR_voidresult;
+HTBBCTR.End = QRBBCTR_endofmodule;
+HTBBCTR.Type = ELJACTR_voidresult;
  /* line 1265: */
  /* line 1266: */
-A_CALLPROC(XBBBCTR_phrase,(A68_FALSE, QRBBCTR, A68_FALSE),(A68_FALSE, QRBBCTR, A68_FALSE,(XBBBCTR_phrase).nonlocals));
+A_CALLPROC(ODBBCTR_phrase,(A68_FALSE, HTBBCTR, A68_FALSE),(A68_FALSE, HTBBCTR, A68_FALSE,(ODBBCTR_phrase).nonlocals));
  /* line 1267: */
  /* line 1268: */
  /* line 1269: */
-ERYACTR_endmodule();
+VSYACTR_endmodule();
 } 
 } 
 } 
@@ -4639,77 +4639,77 @@ return;
  /* line 59: */
  /* line 61: */
 
-A68_VOID  EXABCTR_translator(A68_264  Nextstreamimperative, A68_116 * Xsizes, A68_171  Keptdecnos)
+A68_VOID  VYABCTR_translator(A68_264  Nextstreamimperative, A68_116 * Xsizes, A68_171  Keptdecnos)
 { 
-A68_180  GXABCTR;  /* OPERATORS - mode -> union mode */
-A68_180  FXABCTR_currentimperative;
-A68_180  IXABCTR;  /* OPERATORS - mode -> union mode */
-A68_180  HXABCTR_nextimperative;
-A68_75  JXABCTR_read;   /* proc value of non-global proc */
-A68_75  PXABCTR_lookahead;   /* proc value of non-global proc */
-A68_267  AYABCTR_module;   /* proc value of non-global proc */
-A68_VC  RRBBCTR;  /* OPERATORS - istruct -> vector */
-A68_89 * SRBBCTR;  /* OPERATORS - istruct -> vector */
-A68_VC  TRBBCTR;  /* avoid structure result */
-A68_VC  URBBCTR_modulename;
-A68_BOOL  VRBBCTR_decsmodule;
-A68_BOOL  WRBBCTR_contextvoid;
+A68_180  XYABCTR;  /* OPERATORS - mode -> union mode */
+A68_180  WYABCTR_currentimperative;
+A68_180  ZYABCTR;  /* OPERATORS - mode -> union mode */
+A68_180  YYABCTR_nextimperative;
+A68_75  AZABCTR_read;   /* proc value of non-global proc */
+A68_75  GZABCTR_lookahead;   /* proc value of non-global proc */
+A68_267  RZABCTR_module;   /* proc value of non-global proc */
+A68_VC  ITBBCTR;  /* OPERATORS - istruct -> vector */
+A68_89 * JTBBCTR;  /* OPERATORS - istruct -> vector */
+A68_VC  KTBBCTR;  /* avoid structure result */
+A68_VC  LTBBCTR_modulename;
+A68_BOOL  MTBBCTR_decsmodule;
+A68_BOOL  NTBBCTR_contextvoid;
 A_PROC_ENTRY(translator);
  /* line 62: */
  /* line 64: */
 { 
-FXABCTR_currentimperative = A_EMPTY(GXABCTR,26);
+WYABCTR_currentimperative = A_EMPTY(XYABCTR,26);
  /* line 65: */
-HXABCTR_nextimperative = A_EMPTY(IXABCTR,26);
+YYABCTR_nextimperative = A_EMPTY(ZYABCTR,26);
  /* line 67: */
  /* line 73: */
  /* line 74: */
-A_CLOSURE( JXABCTR_read, KXABCTR_read, LXABCTR_read );
-(( LXABCTR_read * ) ( JXABCTR_read.nonlocals )) -> HXABCTR_nextimperative = (&HXABCTR_nextimperative);
-(( LXABCTR_read * ) ( JXABCTR_read.nonlocals )) -> FXABCTR_currentimperative = (&FXABCTR_currentimperative);
-(( LXABCTR_read * ) ( JXABCTR_read.nonlocals )) -> Nextstreamimperative = Nextstreamimperative;
+A_CLOSURE( AZABCTR_read, BZABCTR_read, CZABCTR_read );
+(( CZABCTR_read * ) ( AZABCTR_read.nonlocals )) -> YYABCTR_nextimperative = (&YYABCTR_nextimperative);
+(( CZABCTR_read * ) ( AZABCTR_read.nonlocals )) -> WYABCTR_currentimperative = (&WYABCTR_currentimperative);
+(( CZABCTR_read * ) ( AZABCTR_read.nonlocals )) -> Nextstreamimperative = Nextstreamimperative;
  /* line 81: */
  /* line 87: */
  /* line 88: */
-A_CLOSURE( PXABCTR_lookahead, QXABCTR_lookahead, RXABCTR_lookahead );
-(( RXABCTR_lookahead * ) ( PXABCTR_lookahead.nonlocals )) -> HXABCTR_nextimperative = (&HXABCTR_nextimperative);
-(( RXABCTR_lookahead * ) ( PXABCTR_lookahead.nonlocals )) -> Nextstreamimperative = Nextstreamimperative;
+A_CLOSURE( GZABCTR_lookahead, HZABCTR_lookahead, IZABCTR_lookahead );
+(( IZABCTR_lookahead * ) ( GZABCTR_lookahead.nonlocals )) -> YYABCTR_nextimperative = (&YYABCTR_nextimperative);
+(( IZABCTR_lookahead * ) ( GZABCTR_lookahead.nonlocals )) -> Nextstreamimperative = Nextstreamimperative;
  /* line 94: */
  /* line 100: */
  /* line 103: */
  /* line 104: */
-A_CLOSURE( AYABCTR_module, BYABCTR_module, CYABCTR_module );
-(( CYABCTR_module * ) ( AYABCTR_module.nonlocals )) -> JXABCTR_read = JXABCTR_read;
-(( CYABCTR_module * ) ( AYABCTR_module.nonlocals )) -> FXABCTR_currentimperative = (&FXABCTR_currentimperative);
-(( CYABCTR_module * ) ( AYABCTR_module.nonlocals )) -> PXABCTR_lookahead = PXABCTR_lookahead;
-(( CYABCTR_module * ) ( AYABCTR_module.nonlocals )) -> HXABCTR_nextimperative = (&HXABCTR_nextimperative);
+A_CLOSURE( RZABCTR_module, SZABCTR_module, TZABCTR_module );
+(( TZABCTR_module * ) ( RZABCTR_module.nonlocals )) -> AZABCTR_read = AZABCTR_read;
+(( TZABCTR_module * ) ( RZABCTR_module.nonlocals )) -> WYABCTR_currentimperative = (&WYABCTR_currentimperative);
+(( TZABCTR_module * ) ( RZABCTR_module.nonlocals )) -> GZABCTR_lookahead = GZABCTR_lookahead;
+(( TZABCTR_module * ) ( RZABCTR_module.nonlocals )) -> YYABCTR_nextimperative = (&YYABCTR_nextimperative);
  /* line 1273: */
-SRBBCTR = (&(KZOACTR_currentmodinfo->Name)) ;
-RMAAOSF_scanto( ' ', A_ISVEC(RRBBCTR,SRBBCTR,32,A68_CHAR ), &TRBBCTR );
-URBBCTR_modulename = TRBBCTR;
+JTBBCTR = (&(BBPACTR_currentmodinfo->Name)) ;
+RMAAOSF_scanto( ' ', A_ISVEC(ITBBCTR,JTBBCTR,32,A68_CHAR ), &KTBBCTR );
+LTBBCTR_modulename = KTBBCTR;
  /* line 1275: */
-VRBBCTR_decsmodule = ((*(&(KZOACTR_currentmodinfo->Type)))==(-1));
+MTBBCTR_decsmodule = ((*(&(BBPACTR_currentmodinfo->Type)))==(-1));
  /* line 1276: */
-WRBBCTR_contextvoid = ((*(&((&(KZOACTR_currentmodinfo->L))->Level)))==0);
+NTBBCTR_contextvoid = ((*(&((&(BBPACTR_currentmodinfo->L))->Level)))==0);
  /* line 1278: */
-DSZACTR_initialise(Xsizes, (&FXABCTR_currentimperative), Keptdecnos);
+UTZACTR_initialise(Xsizes, (&WYABCTR_currentimperative), Keptdecnos);
  /* line 1280: */
  /* line 1281: */
  /* line 1282: */
-if ( FLOACTR_composition )
+if ( WMOACTR_composition )
 { 
  /* line 1283: */
  /* line 1284: */
-LXIACTR_terminalerror(806);
+SXIACTR_terminalerror(806);
 } 
 else
 { 
-RCPACTR_initialiseunames();
+IEPACTR_initialiseunames();
  /* line 1285: */
  /* line 1286: */
  /* line 1288: */
  /* line 1290: */
-A_CALLPROC(AYABCTR_module,(URBBCTR_modulename, VRBBCTR_decsmodule, WRBBCTR_contextvoid),(URBBCTR_modulename, VRBBCTR_decsmodule, WRBBCTR_contextvoid,(AYABCTR_module).nonlocals));
+A_CALLPROC(RZABCTR_module,(LTBBCTR_modulename, MTBBCTR_decsmodule, NTBBCTR_contextvoid),(LTBBCTR_modulename, MTBBCTR_decsmodule, NTBBCTR_contextvoid,(RZABCTR_module).nonlocals));
 } 
 } 
 A_PROC_EXIT(translator);
@@ -4723,51 +4723,51 @@ return;
  /* line 5: */
  /* line 6: */
  /* line 8: */
-void WWABCTR(void)   /* initialise DECS compiler */
+void NYABCTR(void)   /* initialise DECS compiler */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/src/a68toc","-v","-uname","seedfile","-lib","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/a68config","-dir","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel","-dir",".","compiler.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/shields/projects/Algol68/Tools/Algol68toC/a68config","A68_CDIR=","A68_DIR=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/shields/projects/Algol68/Tools/Algol68toC/a68config/a68config.m","./values.m","./coutput.m","./uniquenameserver.m","./oper.m","./moduletracer.m","./modules.m","./modes.m","./incmode.m","./loops.m","./loads.m","./initialiser.m","./incvalue.m","./incoperfn.m","./incimperatives.m","./identifiers.m","./environment.m","./environ.m","./entryandreturn.m","./common.m","./clauses.m","./centities.m","/home/shields/projects/Algol68/Tools/Algol68toC/liba68prel/usefulops.m",""};
+static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","-dir",".","compiler.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","./values.m","./coutput.m","./uniquenameserver.m","./oper.m","./moduletracer.m","./modules.m","./modes.m","./incmode.m","./loops.m","./loads.m","./initialiser.m","./incvalue.m","./incoperfn.m","./incimperatives.m","./identifiers.m","./environment.m","./environ.m","./entryandreturn.m","./common.m","./clauses.m","./centities.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/usefulops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
-JRPACTR();   /* USE values */
-YRLACTR();   /* USE coutput */
-AGMACTR();   /* USE uniquenameserver */
-LNQACTR();   /* USE oper */
+ATPACTR();   /* USE values */
+PTLACTR();   /* USE coutput */
+RHMACTR();   /* USE uniquenameserver */
+CPQACTR();   /* USE oper */
 BCHACTR();   /* USE moduletracer */
-VJOACTR();   /* USE modules */
-MLMACTR();   /* USE modes */
+MLOACTR();   /* USE modules */
+DNMACTR();   /* USE modes */
 ZDAACTR();   /* USE incmode */
-KAABCTR();   /* USE loops */
-ISZACTR();   /* USE loads */
-URZACTR();   /* USE initialiser */
-PIJACTR();   /* USE incvalue */
+BCABCTR();   /* USE loops */
+ZTZACTR();   /* USE loads */
+LTZACTR();   /* USE initialiser */
+GKJACTR();   /* USE incvalue */
 XFAACTR();   /* USE incoperfn */
 UAAACTR();   /* USE incimperatives */
-WIVACTR();   /* USE identifiers */
+NKVACTR();   /* USE identifiers */
 HPIACTR();   /* USE environment */
-KNLACTR();   /* USE environ */
-KBYACTR();   /* USE entryandreturn */
-KXYACTR();   /* USE clauses */
+BPLACTR();   /* USE environ */
+BDYACTR();   /* USE entryandreturn */
+BZYACTR();   /* USE clauses */
 THAACTR();   /* USE centities */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/shields/projects/Algol68/Tools/Algol68toC/src/compiler.a68";
-A_config.translation_time = "Sun Sep 26 21:51:11 2004";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/src/compiler.a68";
+A_config.translation_time = "Fri May 30 22:15:47 2003";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "VWABCTR (from seed file) ";
-A_config.spec_change_time = "Sun Sep 26 21:51:11 2004";
+A_config.name_seed = "MYABCTR (from seed file) ";
+A_config.spec_change_time = "Fri May 30 22:15:47 2003";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS compiler);
-UEAALIB_a68config(LGAALIB_configinfo, AXABCTR);
+UEAALIB_a68config(LGAALIB_configinfo, RYABCTR);
  /* line 57: */
  /* line 58: */
  /* line 1292: */

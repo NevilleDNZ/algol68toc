@@ -3,12 +3,13 @@ USE spmodes, spaliens, spplain, spops, spconvert:
 
 COMMENT
    $Log: transput.a68,v $
-   Revision 1.9.2.1  2004/09/04 17:36:15  teshields
-   LCSE Algol68toC initial revision
-   Default installation directory is '/usr/local/'
+   Revision 1.11  2005-01-28 17:09:50  sian
+   1. Altered the `new filebuffer' to (INT mtu)FILEBUFFER:
+   2. Altered bufprocs and `client socket estab', `server socket estab'
+      and `accept' to reflect that change.
 
-   Revision 1.9  2004/09/04 03:15:14  teshields
-   Algol68toC v1.8 Public Baseline
+   Revision 1.10  2004/08/06 22:58:22  sian
+   Removed `bin possible' from both `stand in' and `stand out'
 
    Revision 1.9  2003/11/09 14:31:47  sian
    Squashed a bug in transput.a68
@@ -215,7 +216,11 @@ FI; #command line#
 
 FILEBUFFER no buffer = (NIL, 0, 0, 0, FALSE, FALSE);
 
-PROC new filebuffer = FILEBUFFER: (SYSBUFF 4096, 4096, 0, 0, FALSE, FALSE);
+PROC new filebuffer = (INT mtu)FILEBUFFER:
+IF mtu=0
+THEN no buffer
+ELSE (SYSBUFF mtu, mtu, 0, 0, FALSE, FALSE)
+FI;
 
 INT zero pos = 0;
 
@@ -317,14 +322,14 @@ PROC on char error = (REF FILE f,PROC(REF FILE,REF CHAR)BOOL p)VOID:
 PROC make term = (REF FILE f, STRING term)VOID:
     string term OF io OF f := STRINGTOBAG(lf+term);
 
-PROC set read mood  = (REF FILE f)VOID: 
-IF   NOT read mood OF state OF f 
+PROC set read mood  = (REF FILE f)VOID:
+IF   NOT read mood OF state OF f
 THEN
    (flush buffer OF sys OF f) (f);
    read mood OF state OF f := TRUE
 FI;
 
-PROC set write mood = (REF FILE f)VOID: 
+PROC set write mood = (REF FILE f)VOID:
 IF   read mood OF state OF f
 THEN
    (flush buffer OF sys OF f) (f);
@@ -389,7 +394,7 @@ THEN
 FI;
 
 PROC lock = (REF FILE f)VOID:
-IF 
+IF
    opened OF state OF f
 THEN
    (close OF sys OF f) (f);
@@ -413,7 +418,7 @@ IF set possible OF type OF book OF f
 THEN
    ended OF state OF f:=FALSE;
    back ch OF state OF f:=-1;
-   IF opened OF state OF f 
+   IF opened OF state OF f
             ANDTH
       (set OF sys OF f) (f, zero pos)
    THEN pos OF state OF f:=zero pos
@@ -428,7 +433,7 @@ IF set possible OF type OF book OF f
          ANDTH
    NOT ended OF state OF f
          ANDTH
-   opened OF state OF f 
+   opened OF state OF f
 THEN
    back ch OF state OF f := -1;
    IF (set OF sys OF f) (f, c) THEN pos OF state OF f := c FI
@@ -546,7 +551,7 @@ THEN system error(f); SKIP
 ELSE end
 FI; #sys lpos#
 
-PROC sys cpos = (REF FILE f) VOID: 
+PROC sys cpos = (REF FILE f) VOID:
    pos OF buffer OF state OF f :=
       pos OF state OF f :=
          posix lseek (sysfile OF f, 0, posix seek cur);
@@ -558,7 +563,7 @@ SYSPROCS
   (
      sys estab, sys open, sys close,
      sys set, sys lpos,
-     sys put buf, sys get buf, 
+     sys put buf, sys get buf,
      (REF FILE f, INT bytes)RVC: SKIP,
      (REF FILE f) VOID: SKIP,
      sys put ch, sys get ch,
@@ -576,8 +581,8 @@ IOSTATE
 FILE stand in :=
 (
     (HEAP VECTOR[8]CHAR:="stand in", NIL,
-     (TRUE, FALSE, TRUE, FALSE, FALSE)), #Cannot `set' on stand in#
-    sys stdin, 
+     (FALSE, FALSE, TRUE, FALSE, FALSE)),
+    sys stdin,
     unbuf sysprocs,
     default io procs,
     init state
@@ -586,8 +591,8 @@ FILE stand in :=
 FILE stand out :=
 (
     (HEAP VECTOR[9]CHAR:="stand out", NIL,
-     (TRUE, TRUE, FALSE, FALSE, FALSE)), #Cannot `set' on stand out'#
-    sys stdout, 
+     (FALSE, TRUE, FALSE, FALSE, FALSE)),
+    sys stdout,
     unbuf sysprocs,
     default io procs,
     init state
@@ -597,8 +602,8 @@ FILE stand error :=
 (
     (HEAP VECTOR[11]CHAR:="stand error", NIL,
      (TRUE, TRUE, FALSE, FALSE, FALSE)), #Cannot `set' on stand err#
-    sys stderr, 
-    unbuf sysprocs, 
+    sys stderr,
+    unbuf sysprocs,
     default io procs,
     init state
 );
@@ -651,7 +656,7 @@ THEN
     sys flush buffer (f);
 
     valid OF buffer OF state OF f :=
-        IF   read mood OF state OF f 
+        IF   read mood OF state OF f
         THEN sys get buf(f,(start OF buffer OF state OF f)[:
                               max OF buffer OF state OF f])
 
@@ -664,19 +669,19 @@ ELSE
     (start OF buffer OF state OF f)[curr+1:curr+bytes] #+1 'cos the buffer is a vector#
 FI; #ensure buf space#
 
-PROC buff estab = (REF FILE f, INT p,l,c) INT: 
+PROC buff estab = (REF FILE f, INT p,l,c) INT:
 IF INT r=sys estab(f,p,l,c);  r=0
-THEN buffer OF state OF f := new filebuffer; 0
+THEN buffer OF state OF f := new filebuffer(4096); 0
 ELSE r
 FI; #buff estab#
 
-PROC buff open  = (REF FILE f)INT: 
+PROC buff open  = (REF FILE f)INT:
 IF INT r=sys open(f);  r=0
-THEN buffer OF state OF f := new filebuffer; 0
+THEN buffer OF state OF f := new filebuffer(4096); 0
 ELSE r
 FI; #buff open#
 
-PROC buff close  = (REF FILE f) VOID: 
+PROC buff close  = (REF FILE f) VOID:
 BEGIN
    sys flush buffer (f);
    sys close (f);
@@ -706,7 +711,7 @@ PROC buff put buf = (REF FILE f, BUFFER b) INT:
 PROC buff get buf = (REF FILE f, BUFFER b) INT:
    (sys flush buffer (f); sys get buf (f, b));
 
-PROC buff get ch = (REF FILE f, REF CHAR c) BOOL: 
+PROC buff get ch = (REF FILE f, REF CHAR c) BOOL:
 IF c := ensure buf space(f, 1)[1];
    valid OF buffer OF state OF f > 0
 THEN TRUE
@@ -715,10 +720,10 @@ THEN buff get ch(f,c) #try again#
 ELSE transput error(f,logical file end not mended);  SKIP
 FI; #buff get ch#
 
-PROC buff put ch = (REF FILE f, CHAR c) BOOL: 
+PROC buff put ch = (REF FILE f, CHAR c) BOOL:
 (
-   ensure buf space (f, 1)[1]:=c; 
-   valid OF buffer OF state OF f +:= 1; 
+   ensure buf space (f, 1)[1]:=c;
+   valid OF buffer OF state OF f +:= 1;
    writeback OF buffer OF state OF f := TRUE;
    TRUE
 );
@@ -1026,7 +1031,7 @@ COMMENT
 INT backlog queue size = 5;
 
 PROC sys unpack str addr list = (CCHARPTRPTR a,INT l)REF[]STRING:
-BEGIN # a=the address of the list of addresses, 
+BEGIN # a=the address of the list of addresses,
         l=length of each address in bytes; 0=>null-terminated #
 	# count the number of addresses #
 	INT n:=0;
@@ -1118,7 +1123,7 @@ INT
    sock addr un sz = 110,
    sock addr in sz = 16;
 
-PROC client sock estab = (REF FILE f, INT p, l, c)INT: #p=family, l=port#
+PROC client sock estab = (REF FILE f, INT p, l, c)INT: #p=family, l=port c=MTU#
 IF p/=af unix & p/=af inet
 THEN estab invalid parameters
 ELIF
@@ -1135,7 +1140,7 @@ THEN #family = af unix#
    THEN errno
    ELIF
       state OF f:=(FALSE, FALSE, TRUE, FALSE, TRUE, -1, 0,
-                   new filebuffer, zero pos);
+                   new filebuffer(c), zero pos);
       bsd connect(sysfile OF f,sock addr,sock addr un sz)=-1
    THEN errno
    ELSE last error OF state OF f:=0
@@ -1148,7 +1153,7 @@ ELIF (sysfile OF f:=bsd socket(p,sock stream,0))=-1
 THEN errno
 ELIF
    state OF f:=(FALSE,FALSE,TRUE,FALSE,TRUE,-1,0,
-                new file buffer,zero pos);
+                new file buffer(c),zero pos);
    []CHAR htos=FLATB SHORTEN BIN l; #port#
    sock addr[3]:=htos[2];  sock addr[4]:=htos[1]; #Internet order#
    sock addr[5:8]:=FLATB inet addr; #Internet order#
@@ -1157,7 +1162,7 @@ THEN errno
 ELSE last error OF state OF f:=0
 FI; #client sock estab#
 
-PROC server sock estab = (REF FILE f, INT p, l, c)INT: #p=family, l=port#
+PROC server sock estab = (REF FILE f, INT p, l, c)INT: #p=family, l=port c=MTU#
 IF p/=af unix & p/=af inet
 THEN estab invalid parameters
 ELIF
@@ -1225,7 +1230,7 @@ PROC sock get ch = (REF FILE f, REF CHAR c) BOOL:
 PROC sock put ch = (REF FILE f, CHAR c) BOOL:
 (
    sock ensure buf space (f, 1)[1]:=c;
-   valid OF buffer OF state OF f +:= 1; 
+   valid OF buffer OF state OF f +:= 1;
    writeback OF buffer OF state OF f:=TRUE
 ); #sock put ch#
 
@@ -1233,7 +1238,7 @@ PROC accept = (REF FILE s)REF FILE:
 (
    HEAP VECTOR[sock addr un sz]CHAR client address;
    HEAP FILE client sock:=s;
-   buffer OF state OF client sock:=new filebuffer;
+   buffer OF state OF client sock:=new filebuffer(max OF buffer OF state OF s);
    sysfile OF client sock:=bsd accept(sysfile OF s, client address, LOC INT);
    client sock
 ); #accept#
@@ -1261,21 +1266,21 @@ CHANNEL
                             io book,
                             default io procs);
 
-CHANNEL stand in channel = 
+CHANNEL stand in channel =
 (
    sysprocs,
    stand in book,
    default ioprocs
 );
 
-CHANNEL stand out channel = 
+CHANNEL stand out channel =
 (
    sysprocs,
    stand out book,
    default ioprocs
 );
 
-CHANNEL stand back channel = 
+CHANNEL stand back channel =
 (
    sysprocs,
    stand back book,
@@ -1297,8 +1302,8 @@ FI; #put ch#
 
 PROC get ch = (REF FILE f) CHAR:
 IF  back ch OF state OF f /= -1 ANDTH NOT ended OF state OF f
-THEN 
-    CHAR ch = REPR back ch OF state OF f; 
+THEN
+    CHAR ch = REPR back ch OF state OF f;
     back ch OF state OF f := -1;
     ch
 ELIF
@@ -1339,7 +1344,7 @@ PROC skip to char = (REF FILE f,CHAR ch)VOID:
 PROC newline = (REF FILE f) VOID:
    (read mood OF state OF f | skip to char(f,lf) | put ch(f,lf));
 
-PROC newpage = (REF FILE f) VOID: 
+PROC newpage = (REF FILE f) VOID:
    (read mood OF state OF f | skip to char(f,ff) | put ch(f,ff));
 
 # --------- binary transput primitives --------- #
@@ -2020,7 +2025,7 @@ THEN
                      DO get(f,rzz[i]) OD,
                   (REF[]SHORT COMPL rzz):
                      FOR i FROM LWB rzz TO UPB rzz
-                     DO get(f,rzz[i]) OD,                  
+                     DO get(f,rzz[i]) OD,
 
                   (REF BOOL bb):
                      BEGIN
@@ -2103,7 +2108,7 @@ THEN
                   (REF[]SHORT SHORT BITS rlb):
                      FOR i FROM LWB rlb TO UPB rlb
                      DO get(f,rlb[i]) OD,
-                     
+
                   (REF CHAR cc): cc:=get char(f),
                   (REF[]CHAR ss):
                      FOR i FROM LWB ss TO UPB ss
@@ -2219,13 +2224,13 @@ THEN
                   DO
                      FOR k TO bits width
                      DO put ch(f,(k ELEM rh[k]|flip|flop)) OD
-                  OD,               
+                  OD,
                ([]SHORT BITS rsh):
                   FOR i FROM LWB rsh TO UPB rsh
                   DO
                      FOR k TO short bits width
                      DO put ch(f,(k ELEM rsh[k]|flip|flop)) OD
-                  OD,                           
+                  OD,
                ([]SHORT SHORT BITS rssh):
                   FOR i FROM LWB rssh TO UPB rssh
                   DO

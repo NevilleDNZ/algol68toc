@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: reset.a68,v 1.1.2.1 2004/09/04 17:36:16 teshields Exp $
+# $Id: reset.a68,v 1.2 2004-11-07 16:01:35 sian Exp $
 # Reset the nameseed file and remove *.c, *.o and *.m files
 
 help() {
@@ -33,13 +33,19 @@ case $1 in
 	;;
 esac
 
-# Remove the DECS and PROGRAM c, o and m files only
+echo "Removing the DECS and PROGRAM a68, c, o and m files for Web 68 files"
+for i in *.w68
+do
+   B=${i%.w68}
+   rm -f ${B}.a68 ${B}.c ${B}.o ${B}.m
+done
+
+echo "Removing the c, o and m files for the remaining Algol 68 files"
 for i in *.a68
 do
-   B=$(basename $i .a68)
+   B=${i%.a68}
    rm -f ${B}.m ${B}.c ${B}.o
 done
 
-echo "nameseed reset and c, o and m files removed."
 exit 0
 # End of reset.a68

@@ -1,10 +1,10 @@
 DECS  loads  CONTEXT VOID  USE
-      osif,
+*L    osif,
       centities, common, coutput, environ, environment, denotations,
       identifiers, incid, idtable, incimperatives, incmode, incoperfn,
       modes, uniquenameserver, values, tracer:
 
-configinfo A68CONFIG "$Id: loads.a68,v 1.1.2.2 2004/09/05 04:23:35 teshields Exp $";
+configinfo A68CONFIG "$Id: loads.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $";
 
 
 COMMENT 

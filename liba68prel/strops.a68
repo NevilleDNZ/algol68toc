@@ -1,7 +1,7 @@
 DECS  strops  CONTEXT VOID:
 
 { " Id: " }
-configinfo A68CONFIG "$Id: strops.a68,v 1.1.2.1 2004/09/04 17:36:14 teshields Exp $";
+configinfo A68CONFIG "$Id: strops.a68,v 1.1.1.1 2001-05-07 10:16:12 sian Exp $";
 
 
 COMMENT 

@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.2.2.1 2004/09/04 17:36:12 teshields Exp $
+# $Id: Makefile,v 1.2 2002-02-23 17:50:43 sian Exp $
 #------------ Algol 68 sources -------------
 liba68prel_a := cif.a68 strops.a68 oscommon.a68 usefulops.a68 \
         messageproc.a68 oserrors.a68 osmessages.a68 osgc.a68 \
