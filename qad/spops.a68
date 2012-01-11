@@ -3,6 +3,9 @@ USE spmodes, spaliens:
 
 COMMENT
    $Log: spops.a68,v $
+   Revision 1.5  2012/01/04 17:20:55  sian
+   *** empty log message ***
+
    Revision 1.4  2004-11-07 15:59:29  sian
    Removed PLUS, MINUS and TIMES
 
@@ -91,35 +94,10 @@ INT
    fp64 mant word      = 1,
    fp64 exp word       = 2;
 
-#--------- OPs for overflow checking -----------#
-                                          #     RC PC rs PUOZDI#
-SHORT BITS fpu cw ieee           = SHORT 2r0001 00 11 01 111111; #h/w default#
-SHORT BITS fpu cw algol68 round  = SHORT 2r1111 00 11 11 100010;
-SHORT BITS fpu cw algol68 entier = SHORT 2r0000 01 00 00 000000;
-
-OP ROUND = (REAL r)INT:
-(
-   INT n;
-   SHORT BITS ocw;  get fpu cw(ocw);
-   set fpu cw(ocw & fpu cw algol68 round);
-   ph round(r,n);
-   set fpu cw(ocw);
-   n
-);
-
-OP ENTIER = (REAL r)INT:
-(
-   INT n;
-   SHORT BITS ocw;  get fpu cw(ocw);
-   set fpu cw(ocw & fpu cw algol68 round OR fpu cw algol68 entier);
-   ph round(r,n);
-   set fpu cw(ocw);
-   n
-);
-
 OP VALID = (REAL x)BOOL:
 BEGIN #Algol 68 equivalent of the C library "finite"#
-   STRUCT 2 BITS xx = FLATR x;  BITS xe=xx[fp64 exp word];
+   STRUCT 2 BITS xx = FLATR x;
+   BITS xe=xx[fp64 exp word];
    2r1=BIN(ABS(xe&16r7fff ffff)-ABS 16r7ff0 0000)SHR 31
 END; #VALID#
 
@@ -295,6 +273,28 @@ OP + = (CHARBAG s, t)CHARBAG:
    r
 ); #+#
 
+OP ROUND = (REAL r)INT:
+IF r > max int OR r < -max int
+THEN 0
+ELSE
+  INT method=fe get round;
+  fe set round(fe tonearest);
+  INT i=lrint(r);
+  fe set round(method);
+  i
+FI; #ROUND#
+
+OP ENTIER = (REAL r)INT:
+IF r > max int OR r < -max int
+THEN 0
+ELSE
+  INT method=fe get round;
+  fe set round(fe towardzero);
+  INT i=lrint(r);
+  fe set round(method);
+  i
+FI; #ENTIER#
+
 SKIP
 KEEP
 
@@ -322,7 +322,6 @@ fp32 bits after exp,
 
 fp64 sign mask, fp64 exp mask, fp64 mant mask, fp64 mant top bit,
 fp64 bits after exp, fp64 mant word, fp64 exp word,
-fpu cw ieee, fpu cw algol68 round, fpu cw algol68 entier,
 
 ROUND(REAL), ENTIER(REAL),
 

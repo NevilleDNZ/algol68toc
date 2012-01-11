@@ -1,9 +1,9 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.7 2004-11-27 09:06:27 sian Exp $
+# $Id: Makefile,v 1.8 2012/01/04 17:20:06 sian Exp $
 #
 #-------------- Documentation sources ---------------
-ctrans_doc := HOWTO-PAME compl.taylour star.txt
+ctrans_doc := compl.taylour star.txt
 
 pame_tex := pame.tex title.tex preface.tex \
         chapter1.tex chapter2.tex chapter3.tex chapter4.tex \
@@ -17,10 +17,10 @@ pame_tex := pame.tex title.tex preface.tex \
 #--------------- Rules ---------------
 .PHONY: install
 
-all : pame.dvi rscompiler.dvi ctrans.info.gz a68toc.1.gz \
-	ca68.1.gz $(ctrans_doc)
+all : pame.dvi.gz rscompiler.dvi.gz ctrans.dvi.gz ctrans.info.gz \
+	a68toc.1.gz ca68.1.gz $(ctrans_doc)
 
-pame.dvi : $(pame_tex)
+pame.dvi.gz : $(pame_tex)
 	chmod +x pame.sh
 	latex pame >latex.log
 	latex pame >>latex.log
@@ -28,15 +28,21 @@ pame.dvi : $(pame_tex)
 	./pame.sh
 	latex pame >>latex.log
 	latex pame >>latex.log
+	gzip -9c pame.dvi >$@
 
-rscompiler.dvi : rscompiler.texi
+rscompiler.dvi.gz : rscompiler.texi
 	tex rscompiler.texi
+	gzip -9 rscompiler.dvi
 
 ctrans.info.gz : ctrans.texi
+	makeinfo $<
+	gzip -9 ctrans.info
+
+ctrans.dvi.gz : ctrans.texi
+	tex $<
 	tex $<
 	texindex ctrans.??
-	makeinfo $<
-	gzip -9 ctrans.info*
+	gzip -9 ctrans.dvi
 
 a68toc.1.gz : a68toc.1
 	gzip -9c $< >$@
@@ -45,7 +51,7 @@ ca68.1.gz : ca68.1
 	gzip -9c $< >$@
 
 install :
-	$(INSTALLDATA) -p rscompiler.dvi pame.dvi HOWTO-PAME \
+	$(INSTALLDATA) -p rscompiler.dvi.gz pame.dvi.gz ctrans.dvi.gz \
 	   compl.taylour star.txt $(DOCDIR)
 	$(INSTALLDATA) -p ctrans.info.gz $(INFODIR)
 	$(INSTALLDATA) -p a68toc.1.gz ca68.1.gz $(MANDIR)

@@ -3,6 +3,9 @@ USE spmodes:
 
 COMMENT
    $Log: spaliens.a68,v $
+   Revision 1.8  2012/01/04 17:23:31  sian
+   Replaced the ALIENs for ROUND and ENTIER
+
    Revision 1.6  2004-11-07 15:59:29  sian
    Removed PLUS, MINUS and TIMES
 
@@ -196,7 +199,7 @@ PROC(INT,VECTOR[]CHAR,REF INT)INT
    "#define ACCEPT(s,addr,addrlen) \"
    "    A_int_INT(accept(A_INT_int(s),\"
    "              (struct sockaddr *)A_VC_charptr(addr),(socklen_t *)addrlen))";
-   
+
 PROC(INT,VECTOR[]CHAR,INT)INT
    bsd bind = ALIEN "BIND"
    "#define BIND(sockfd,addr,addrlen) \"
@@ -350,20 +353,22 @@ PROC(INT,VECTOR[]CHAR,INT)INT
 
 # -------------- Local procedures --------------- #
 
-PROC(REF SHORT BITS)VOID get fpu cw = ALIEN "GET_FPU_CW"
-   "#define GET_FPU_CW(cw) __asm__(""fnstcw %0"" : ""=m"" (*cw))";
+INT fe to nearest = ALIEN "FE_TONEAREST"
+  "#include <fenv.h>"
+  "#include <math.h>"
+  "#include <limits.h>";
+INT fe toward zero = ALIEN "FE_TOWARDZERO" "/**/";
 
-PROC(SHORT BITS)VOID set fpu cw = ALIEN "SET_FPU_CW"
-   "#define SET_FPU_CW(cw) __asm__(""fnclex; fldcw %0"" :: ""m"" (cw))";
-
-PROC(REAL,REF INT)VOID ph round = ALIEN "PH_ROUND"
-   "#define PH_ROUND(r,res) \"
-   "   __asm__(""fldl %1; fistpl %0; fwait"" : \"
-               """=m"" (*res) : ""m"" (r))";
+PROC(INT)INT fe set round = ALIEN "fesetround" "/**/";
+PROC fe get round = INT:
+  INT CODE "RESULT=fegetround();";
+PROC(REAL)INT lrint = ALIEN "lrint" "/**/";
 
 SKIP
 
 KEEP
+fe to nearest, fe toward zero,
+fe set round, fe get round, lrint,
 
 null c charptr, max abs char,
 max int, short max int, short short max int,
@@ -411,8 +416,6 @@ posix close,    posix creat,      posix exit,
 posix getenv,   posix getpid,     posix lseek,
 posix open,     posix read,       posix rename,
 posix strlen,   posix time,       posix unlink,
-posix write,
-
-get fpu cw, set fpu cw, ph round
+posix write
 
 FINISH

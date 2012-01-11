@@ -75,7 +75,6 @@ always collect, always grow heap, default policy,
 
 bytes per bits, errno,
 af unix, af inet,
-get fpu cw, set fpu cw,
 
 ansi raise,     ansi signal,      ansi strtod,
 
@@ -167,8 +166,6 @@ cr, lf, ff, tab ch, esc, eof char,
 min real,                   short min real,
 max real,                   short max real,
 exp width,                  short exp width,
-
-fpu cw ieee, fpu cw algol68 round, fpu cw algol68 entier,
 
 short pi, log2,
 
