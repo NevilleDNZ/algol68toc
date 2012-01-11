@@ -89,16 +89,14 @@ preludes:-
       stat, fstat, lstat
       directory scanning
       time routines
+   Xforms library binding
 
 Half of the Web68 literate programming system is also available
 (tang). See also the man page for ca68(1).
 
-I am currently alpha testing an Algol 68 binding to the Xforms
-library which will provide a GUI for Algol 68 programs.
-
 If any of these interest you, then do send me email.
 
-Dr Sian Leitch           Wed Jun 19 22:37:37 BST 2002
+Dr Sian Mountbatten           Wed Jun 19 22:37:37 BST 2002
 Inverness
 Scotland
-<poenikatu@operamail.com>
+<poenikatu@fastmail.co.uk>

@@ -13,24 +13,24 @@ In what follows, three terms are used specifically:-
 
 You will need the following programs:-
        make, gcc, ld, ldconfig
-       latex, makeinfo
+       latex, makeinfo, tex
        ar, ranlib, tar
        cp, mv, rm, find, sh
 
-The build was successful with Debian GNU/Linux using a 2.4.17 kernel.
+The build was successful with Debian GNU/Linux using a 
+3.1-6.towo.3-siduction-686 kernel
 
 3. Header files
 
 You will need the header files from the following package:-
           libc6-dev
-Note that the build used a /usr/include/linux which was a
-symbolic link to /usr/src/kernel-headers-2.4.17/include
+Note that the build uses /usr/include/linux.
 
 4. Debian
 
 Issue the commands:-
 	export A68_NAMESEED=nameseed (for bash or sh)
-	make dist-clean
+	make distclean
 	debian/rules binary
 to construct the Debian binary package.
 
@@ -44,7 +44,7 @@ use.
 
 NOTES
 (1) The library `liba68prel.a', produced in the early part of the
-`make' is only used for `a68toc'. It is NOT part of the
+`make', is only used for `a68toc'. It is NOT part of the
 installation and cannot be used by user programs unless the user
 cares to document the routines therein. Far better to use the
 standard prelude which has all the functionality and more.
@@ -55,6 +55,6 @@ However, the licence for the QAD Standard Prelude is the GNU GPL
 
 (3) I should like to hear from you if you find any bugs.
 
-Dr Sian Leitch
-Inbhir Nis
+Dr Sian Mountbatten
+Inverness, Scotland
 

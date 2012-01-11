@@ -1,6 +1,6 @@
 #!/usr/bin/make
 
-# $Id: Makefile,v 1.11 2004-08-06 23:48:41 sian Exp $
+# $Id: Makefile,v 1.12 2012/01/04 17:18:45 sian Exp $
 #------------ Debug value -------------
 DEBUG=no
 #------------ Debian values -----------
@@ -99,16 +99,17 @@ info :
 	install-info --quiet $(INFODIR)/ctrans.info.gz
 
 uninstall :
-	-$(RM) $(BINDIR)/a68toc $(BINDIR)/reset.ctrans $(BINDIR)/ca68
+	-$(RM) $(BINDIR)/a68toc $(BINDIR)/reset.a68 $(BINDIR)/ca68
 	-install-info --quiet --remove $(INFODIR)/ctrans.info.gz
 	-$(RM) -rf $(PKGDIR) $(DOCDIR)
-	-$(RM) $(INFODIR)/ctrans.info.gz $(INFODIR)/ctrans.info-1.gz $(INFODIR)/ctrans.info-2.gz \
-           $(LIBDIR)/liba68.a $(LIBDIR)/liba68s.a $(AMNDIR)/a68toc.1.gz
+	-$(RM) $(INFODIR)/ctrans.info.gz $(LIBDIR)/liba68.a $(LIBDIR)/liba68s.a \
+		$(MANDIR)/a68toc.1.gz $(MANDIR)/ca68.1.gz
 
 dist-clean: clean
 	-$(RM) c-stamp q-stamp d-stamp
-	-$(RM) -rf DEBIAN -rf debian/tmp
-	-$(RM) $(CTD)/a68toc $(LBD)/liba68.a $(LBD)/Afirst*.o
+	-$(RM) -rf DEBIAN -rf debian/tmp -rf debian/algol68toc
+	-$(RM) $(CTD)/a68toc $(LBD)/liba68.a $(LBD)/Afirst*.o \
+		$(QAD)/liba68s.a
 
 nameseed : a68config/rctr liba68prel/rctr src/rctr qad/rctr
 	for d in $(ADIRS); do cp $$d/rctr $$d/nameseed; done
@@ -118,15 +119,25 @@ remove :
 
 clean:
 	find $(TOP) \( -name '*~' -o -name '*.asv' -o -name '*##' \
-             -o -name '*.gz' -o -name '*.a' \) -print -exec $(RM) '{}' ';'
+             -o -name '*.gz' -o -name '*.a' \) -print -exec $(RM) -v '{}' ';'
 	-$(RM) *-stamp $(LBD)/*.o src/a68toc \
-          doc/ctrans.{aux,cp,cps,dvi,fn,fns,ky,kys,log,pg,pgs,toc,tp,tps,vr,vrs} \
-          doc/rscompiler.{aux,cp,dvi,fn,ky,log,pg,toc,tp,vr} \
-          doc/pame.{ans,aux,dvi,idx,ilg,ind,index,log,toc} doc/latex.log
+	doc/ctrans.aux doc/ctrans.cp doc/ctrans.cps doc/ctrans.dvi \
+	doc/ctrans.fn doc/ctrans.fns doc/ctrans.ky doc/ctrans.kys \
+	doc/ctrans.log doc/ctrans.pg doc/ctrans.pgs doc/ctrans.toc \
+	doc/ctrans.tp doc/ctrans.tps doc/ctrans.vr doc/ctrans.vrs \
+	doc/rscompiler.aux doc/rscompiler.cp doc/rscompiler.dvi \
+	doc/rscompiler.fn doc/rscompiler.ky doc/rscompiler.log \
+	doc/rscompiler.pg doc/rscompiler.toc doc/rscompiler.tp doc/rscompiler.vr \
+	doc/pame.ans doc/pame.aux doc/pame.dvi doc/pame.idx doc/pame.ilg \
+	doc/pame.ind doc/pame.index doc/pame.log doc/pame.toc \
+	doc/latex.log
 	-for i in $(ADIRS); do $(RM) $$i/*.o $$i/nameseed; done
 	-$(RM) qad/*.[cm]
 
 # $Log: Makefile,v $
+# Revision 1.12  2012/01/04 17:18:45  sian
+# *** empty log message ***
+#
 # Revision 1.11  2004-08-06 23:48:41  sian
 # *** empty log message ***
 #

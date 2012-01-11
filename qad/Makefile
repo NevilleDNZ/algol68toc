@@ -1,6 +1,6 @@
 #!/usr/bin/make
 #
-# $Id: Makefile,v 1.1 2002-02-19 11:40:12 sian Exp $
+# $Id: Makefile,v 1.2 2012/01/04 17:20:55 sian Exp $
 #-------------- Algol 68 sources ---------------
 qad_a := spmodes.a68 spaliens.a68 spops.a68 spplain.a68 \
         spconvert.a68 transput.a68 standard.a68
@@ -23,7 +23,7 @@ liba68s.a : $(ACD)/a68config.o $(qad_o)
 Translate : remove nameseed $(qad_c)
 
 clean :
-	rm -f nameseed $(qad_o)
+	rm -f nameseed $(qad_o) liba68s.a
 
 nameseed : rctr
 	cp rctr nameseed
