@@ -1,3 +1,10 @@
+algol68toc (1.12) unstable; rugency=low
+
+  * Maintenance release
+  * Amend ENTIER to round downwards
+
+ -- Sian Mountbatten <poenikatu@fastmail.co.uk>  Wed, 18 Jan 2012 17:00:00 +0000
+
 algol68toc (1.11) unstable; urgency=low
 
   * Replaced ROUND and ENTIER with new C functions
