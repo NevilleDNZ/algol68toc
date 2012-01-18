@@ -357,7 +357,7 @@ INT fe to nearest = ALIEN "FE_TONEAREST"
   "#include <fenv.h>"
   "#include <math.h>"
   "#include <limits.h>";
-INT fe toward zero = ALIEN "FE_TOWARDZERO" "/**/";
+INT fe downward    = ALIEN "FE_DOWNWARD"   "/**/";
 
 PROC(INT)INT fe set round = ALIEN "fesetround" "/**/";
 PROC fe get round = INT:
@@ -367,7 +367,7 @@ PROC(REAL)INT lrint = ALIEN "lrint" "/**/";
 SKIP
 
 KEEP
-fe to nearest, fe toward zero,
+fe to nearest, fe downward,
 fe set round, fe get round, lrint,
 
 null c charptr, max abs char,

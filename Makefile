@@ -128,9 +128,6 @@ clean:
 	doc/rscompiler.aux doc/rscompiler.cp doc/rscompiler.dvi \
 	doc/rscompiler.fn doc/rscompiler.ky doc/rscompiler.log \
 	doc/rscompiler.pg doc/rscompiler.toc doc/rscompiler.tp doc/rscompiler.vr \
-	doc/pame.ans doc/pame.aux doc/pame.dvi doc/pame.idx doc/pame.ilg \
-	doc/pame.ind doc/pame.index doc/pame.log doc/pame.toc \
-	doc/latex.log
 	-for i in $(ADIRS); do $(RM) $$i/*.o $$i/nameseed; done
 	-$(RM) qad/*.[cm]
 
