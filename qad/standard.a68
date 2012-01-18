@@ -97,6 +97,9 @@ posix open,     posix read,       posix rename,
 posix strlen,   posix time,       posix unlink,
 posix write,
 
+fe to nearest, fe downward,
+fe set round, fe get round, lrint,
+
 #spops#
 TOCPTR(INT), TOCSTR(CPTR),
 nil func ptr,

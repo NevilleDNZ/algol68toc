@@ -27,7 +27,7 @@ Description: Algol 68 development system
  reset.a68  -- reset nameseed file
  PAME   -- Programming Algol 68 Made Easy
     (600-page book teaching the language from scratch.
-    The book is in TeX DVI format.
+    The book is in HTML format.
  System documentation in GNU info format
  Compiler documentation in TeX DVI format
  Various example Algol 68 program sources.

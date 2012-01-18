@@ -146,6 +146,9 @@ then
     else WDBG=
     fi
     tang "(w(${WEBDIR})${WDBG},f(${W68S}.w68))"
+    if [ $? -ne 0 ]
+    then exit 1
+    fi
     A68S=${W68S}
 else
     A68S=${FILE%.a68}

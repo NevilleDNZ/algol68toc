@@ -289,7 +289,7 @@ IF r > max int OR r < -max int
 THEN 0
 ELSE
   INT method=fe get round;
-  fe set round(fe towardzero);
+  fe set round(fe downward);
   INT i=lrint(r);
   fe set round(method);
   i
