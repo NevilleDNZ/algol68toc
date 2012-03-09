@@ -1,9 +1,14 @@
-algol68toc (1.12) unstable; rugency=low
+algol68toc (1.14) unstable; urgency=low
 
-  * Maintenance release
-  * Amend ENTIER to round downwards
+  * Ensured that the manuals are included in the package
 
- -- Sian Mountbatten <poenikatu@fastmail.co.uk>  Wed, 18 Jan 2012 17:00:00 +0000
+ -- Sian Mountbatten <poenikatu@fastmail.co.uk>  Fri, 09 Mar 2012 18:55:00 +0000
+
+algol68toc (1.13) unstable; urgency=low
+
+  * Altered ENTIER and ROUND to clamp their input value
+
+ -- Sian Mountbatten <poenikatu@fastmail.co.uk>  Fri, 01 Mar 2012 18:53:35 +0000
 
 algol68toc (1.11) unstable; urgency=low
 

@@ -24,7 +24,6 @@
 .Op Fl l Ar lib
 .Op Fl M Ar lib-dir
 .Op Fl m Ar mod-lib
-.Op Fl s Ar staredit
 .Op Fl u Ar uname
 .Op Fl w Ar web68-dirs
 .Ar module-path Ns Op \&.a68 Ns | Ns \&.w68
@@ -43,8 +42,8 @@ specified in a
 .Fl m
 argument which should be preceded by a
 .Fl M
-argument giving its directory. The module can include debugging
-symbols.
+argument giving its directory. The default directory for the static library
+file is ~/lib. The module can include debugging symbols.
 .Nm
 is intended to replace the module manager
 .Ql mm
@@ -98,7 +97,7 @@ in debugging mode.
 .
 .It Fl h | Fl \-help
 Displays a terse help message together with the defaults of various
-parameters.
+arguments.
 .
 .
 .It Fl I Ar inc-dir
@@ -120,7 +119,7 @@ to the list of libraries which
 .Xr gcc 1
 will search for libraries for linking. It should be followed by
 .Fl l Ar link-lib
-parameters indicating the libraries to be searched. The default is
+arguments indicating the libraries to be searched. The default is
 .Bl -tag -width 10n -offset indent
 .It Li -L /usr/lib -L ${HOME}/lib
 .El
@@ -157,15 +156,8 @@ in the directory specified by this parameter.
 .
 .It Fl m Ar mod-lib
 Specifies a static library of pre-compiled modules. When compiling a
-declarations module, If the library does not exist, it will be
-created. This option may be repeated.
-.
-.
-.It Fl s Ar staredit
-Specifies the staredit characters to use for this compilation. The
-default value is taken from the
-.Ev A68_STAREDIT
-environment string.
+declarations module, if the library does not exist, it will be
+created.
 .
 .
 .It Fl u Ar uname
@@ -186,7 +178,7 @@ list of directories in which
 .Xr tang 1
 should look for Web 68 include files. The default value is
 .Bl -tag -width 10n -offset indent
-.It Pa /usr/include/algol68
+.It Pa ${HOME}/lib
 .El
 .
 .El
@@ -200,57 +192,11 @@ None.
 .Bl -tag -width Ds
 .
 .
-.It Ev A68_STAREDIT
-Should contain any number of single digits or upper-case letters. The
-staredit mechanism works as follows:
-.
-.
-.Bl -tag -width Ds -offset indent
-.It Ao Ns Ar cmd Ns Ac Ao Ns Ar tag Ns Ac
-A line subject to the the staredit mechanism should start with a
-single-character command
-.Ao Ns Ar cmd Ns Ac
-which can be
-.Ql \&*
-or
-.Ql \&%
-followed by a single-character
-.Ao Ns Ar tag Ns Ac
-which can be a digit or an upper-case letter.
-.
-.
-.It \&* Ar tag
-If
-.Ao Ns Ar tag Ns Ac
-appears in the
-.Em staredit
-option, include this line. If
-.Ao Ns Ar tag Ns Ac
-does not appear in the
-.Em staredit
-option, exclude this line.
-.
-.
-.It \&% Ar tag
-If
-.Ar tag
-appears in the
-.Em staredit
-option, exclude this line. If
-.Ar tag
-does not appear in the
-.Em staredit
-option, include this line.
-.El
-.
-.El
-.
-.
 .Sh EXAMPLES
 .
 .Bl -tag -width Ds
 .
-.It Ar "ca68 prog"
+.It Ar "ca prog"
 This command will translate the source
 .Ar prog.a68
 into C, compile it with
@@ -262,9 +208,9 @@ in the current directory. The object file
 will be linked with the standard Algol 68 libraries.
 .
 .
-.It Ar "ca68 -d ~/lib/m -L /usr/X11R6/lib -l forms -l flimage -l X11 -w . prog.w68"
+.It Ar "ca -d ~/lib/m -l forms -l flimage -l X11 -w . prog.w68"
 This command will run
-.Xr tangle68 1 ,
+.Xr tang 1 ,
 then
 .Xr a68toc 1 ,
 then
@@ -277,11 +223,11 @@ current working directory and directory
 will be searched for .m files of precompiled modules.
 .
 .
-.It Ar "ca68 -d . -M ~/lib -m liba68prel.a decs.a68"
+.It Ar "ca -d . -M ~/lib -m libmod.a decs.a68"
 The declaration module
 .Ar decs.a68
 will be translated to C, compiled to object form and then stored in
-.Pa liba68prel.a
+.Pa libmod.a
 in directory
 .Pa ~/lib .
 The .m file will be stored in
@@ -304,4 +250,4 @@ Public Licence version 2 or any later version.
 .
 .
 .Sh AUTHOR
-Sian Leitch
+Sian Mountbatten

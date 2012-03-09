@@ -60,7 +60,7 @@ as ctrans_1.0.0.tar.gz, but it was always the intention of the author
 to upload as a Debian package.
 
 This version of the translator dispenses with the module manager `mm' and,
-instead, uses `ca68' to create preludes and programs.
+instead, uses `ca' to create preludes and programs.
 
 A few extra files have been added to the port:-
 
@@ -92,11 +92,11 @@ preludes:-
    Xforms library binding
 
 Half of the Web68 literate programming system is also available
-(tang). See also the man page for ca68(1).
+(tang). See also the man page for ca(1).
 
 If any of these interest you, then do send me email.
 
-Dr Sian Mountbatten           Wed Jun 19 22:37:37 BST 2002
+Dr Sian Mountbatten           Fri Mar 9 20:05:37 GMT 2012
 Inverness
 Scotland
 <poenikatu@fastmail.co.uk>

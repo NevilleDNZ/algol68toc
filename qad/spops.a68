@@ -274,26 +274,38 @@ OP + = (CHARBAG s, t)CHARBAG:
 ); #+#
 
 OP ROUND = (REAL r)INT:
-IF r > max int OR r < -max int
-THEN 0
-ELSE
+BEGIN
+	REAL lr;
+	IF r > max int
+	THEN lr:=max int
+	ELIF r < -max int
+	THEN lr:=-max int
+	ELSE lr:=r
+	FI; #clamp r to [-maxint:maxint]#
+
   INT method=fe get round;
   fe set round(fe tonearest);
-  INT i=lrint(r);
+  INT i=lrint(lr);
   fe set round(method);
   i
-FI; #ROUND#
+END; #ROUND#
 
 OP ENTIER = (REAL r)INT:
-IF r > max int OR r < -max int
-THEN 0
-ELSE
+BEGIN
+	REAL lr;
+	IF r > max int
+	THEN lr:=max int
+	ELIF r < -max int
+	THEN lr:=-max int
+	ELSE lr:=r
+	FI; #clamp r to [-maxint:maxint]#
+
   INT method=fe get round;
   fe set round(fe downward);
   INT i=lrint(r);
   fe set round(method);
   i
-FI; #ENTIER#
+END; #ENTIER#
 
 SKIP
 KEEP
