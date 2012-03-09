@@ -13,17 +13,16 @@ DEBUG=n
 DESTDIR=${HOME}/lib
 INCLUDES="-I/usr/include/algol68 -I/usr/include"
 LIBRARIES=-L${DESTDIR}
-STARS="-staredit ${A68_STAREDIT}"
 UNAME="-uname seedfile"
-WEBDIR=${DESTDIR}
+WEBDIR="-w${DESTDIR}"
 
 usage() {
     echo "Usage:"
-    echo "    ca68 [-c] [-d m-files-dir] [-g] [-h|--help] [-I include-dir]"
-    echo "         [-L library-dir] [-l link library]"
-    echo "         [-M module-library-dir] [-m module-library]"
-    echo "         [-s staredit] [-u uname] [-w web-include-dirs]"
-    echo "            file[.a68|.w68]"
+    echo "    ca [-c] [-d m-files-dir] [-g] [-h|--help] [-I include-dir]"
+    echo "       [-L library-dir] [-l link library]"
+    echo "       [-M module-library-dir] [-m module-library]"
+    echo "       [-u uname] [-w web-include-dirs]"
+    echo "          file[.a68|.w68]"
     echo
     echo "Defaults:"
     echo "   A68DIRS  =${A68DIRS}"
@@ -34,8 +33,6 @@ usage() {
     echo "            Use -I to add to this"
     echo "   LIBRARIES=${LIBRARIES}"
     echo "            Use -L and -l to add to this"
-    echo "   STARS    =${STARS}"
-    echo "            Use -s to replace this"
     echo "   UNAME    =${UNAME}"
     echo "            Use -u to replace this"
     echo "   WEBDIR   =${WEBDIR}"
@@ -65,7 +62,7 @@ add_to () {
     elif [ "$1" == "LIBDIR" ]
     then LIBRARIES="${LIBRARIES} -L$2"
     elif [ "$1" == "WEBDIR" ]
-    then WEBDIR="${WEBDIR},$2"
+    then WEBDIR="${WEBDIR} -w$2"
     fi
 }
 
@@ -113,10 +110,6 @@ do
          add_to DESTDIR $2
          shift 2
          ;;
-      -s)
-         STARS="-staredit $2"
-         shift 2
-         ;;
       -u)
          UNAME="-uname $2"
          shift 2
@@ -126,13 +119,12 @@ do
          shift 2
          ;;
       -*|+*)
-         echo "ca68: Unknown option $1"
+         echo "ca: Unknown option $1"
          exit 1
          ;;
       *)
          FILE=$1
          W68S=${FILE%.w68}
-         D68S=$(dirname $1)
          shift
          ;;
   esac
@@ -142,10 +134,10 @@ done
 if [ "${FILE}" != "${W68S}" ]
 then
     if [ "${DEBUG}" == "y" ]
-    then WDBG=",d"
+    then WDBG="-d"
     else WDBG=
     fi
-    tang "(w(${WEBDIR})${WDBG},f(${W68S}.w68))"
+    tang ${WEBDIR} ${WDBG} ${W68S}.w68
     if [ $? -ne 0 ]
     then exit 1
     fi
@@ -165,21 +157,22 @@ else
     then
         if [ ! -e ${DESTDIR}/m ]
         then mkdir ${DESTDIR}/m
-           echo "ca68: Directory ${DESTDIR}/m created"
+           echo "ca: Directory ${DESTDIR}/m created"
         fi
     fi
 fi
 
 # Translate to C and compile
-a68toc -s -v -lib ${ROOT} ${A68DIRS} ${UNAME} ${STARS} ${A68S}.a68
+a68toc -s -v -lib ${ROOT} ${A68DIRS} ${UNAME} ${A68S}.a68
 RES=$?
 
 if [ ${RES} -eq 0 ]
 then
-    if [ ! -z "${D68S}" ] && [ "${D68S}" != "./" ] && [ "${D68S}" != "." ]
-    then mv $(basename ${A68S}).c ${D68S}
-    fi
     gcc -O0 ${CHECK} ${CFLAGS} ${INCLUDES} -o ${A68S}.o -c ${A68S}.c
+    RES=$?
+    if [ ${RES} -ne 0 ]
+    then exit ${RES}
+    fi
 else
     rm -f $(basename ${A68S}).c
     exit ${RES}
@@ -200,12 +193,7 @@ then
     ar t ${DESTDIR}/${DESTLIB}
     # Put the .m file into the sub-directory
     mv $(basename ${A68S}).m ${DESTDIR}/m
-    echo "ca68: .m file moved to ${DESTDIR}/m"
-    if [ "${DEBUG}" == "n" ]
-    then
-        rm -f ${A68S}.c ${A68S}.o
-        echo "ca68: .c  and .o files deleted"
-    fi
+    echo "ca: .m file moved to ${DESTDIR}/m"
 fi
 
 exit 0

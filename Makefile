@@ -99,16 +99,16 @@ info :
 	install-info --quiet $(INFODIR)/ctrans.info.gz
 
 uninstall :
-	-$(RM) $(BINDIR)/a68toc $(BINDIR)/reset.a68 $(BINDIR)/ca68
+	-$(RM) -f $(BINDIR)/a68toc $(BINDIR)/reset.a68 $(BINDIR)/ca68
 	-install-info --quiet --remove $(INFODIR)/ctrans.info.gz
-	-$(RM) -rf $(PKGDIR) $(DOCDIR)
-	-$(RM) $(INFODIR)/ctrans.info.gz $(LIBDIR)/liba68.a $(LIBDIR)/liba68s.a \
+	-$(RM) -rf -v $(PKGDIR) $(DOCDIR)
+	-$(RM) -f -v $(INFODIR)/ctrans.info.gz $(LIBDIR)/liba68.a $(LIBDIR)/liba68s.a \
 		$(MANDIR)/a68toc.1.gz $(MANDIR)/ca68.1.gz
 
 dist-clean: clean
-	-$(RM) c-stamp q-stamp d-stamp
-	-$(RM) -rf DEBIAN -rf debian/tmp -rf debian/algol68toc
-	-$(RM) $(CTD)/a68toc $(LBD)/liba68.a $(LBD)/Afirst*.o \
+	-$(RM) -f -v c-stamp q-stamp d-stamp
+	-$(RM) -v -rf DEBIAN debian/tmp debian/algol68toc
+	-$(RM) -f -v $(CTD)/a68toc $(LBD)/liba68.a $(LBD)/Afirst*.o \
 		$(QAD)/liba68s.a
 
 nameseed : a68config/rctr liba68prel/rctr src/rctr qad/rctr
@@ -119,17 +119,17 @@ remove :
 
 clean:
 	find $(TOP) \( -name '*~' -o -name '*.asv' -o -name '*##' \
-             -o -name '*.gz' -o -name '*.a' \) -print -exec $(RM) -v '{}' ';'
-	-$(RM) *-stamp $(LBD)/*.o src/a68toc \
-	doc/ctrans.aux doc/ctrans.cp doc/ctrans.cps doc/ctrans.dvi \
+		-o -name '*.gz' -o -name '*.a' -o -name '*.o' \) -exec $(RM) -v '{}' ';'
+	-$(RM) -f -v *-stamp $(LBD)/*.o src/a68toc $(CTD)/*.o \
+	doc/ctrans.aux doc/ctrans.cp doc/ctrans.cps \
 	doc/ctrans.fn doc/ctrans.fns doc/ctrans.ky doc/ctrans.kys \
 	doc/ctrans.log doc/ctrans.pg doc/ctrans.pgs doc/ctrans.toc \
 	doc/ctrans.tp doc/ctrans.tps doc/ctrans.vr doc/ctrans.vrs \
-	doc/rscompiler.aux doc/rscompiler.cp doc/rscompiler.dvi \
+	doc/rscompiler.aux doc/rscompiler.cp \
 	doc/rscompiler.fn doc/rscompiler.ky doc/rscompiler.log \
 	doc/rscompiler.pg doc/rscompiler.toc doc/rscompiler.tp doc/rscompiler.vr \
-	-for i in $(ADIRS); do $(RM) $$i/*.o $$i/nameseed; done
-	-$(RM) qad/*.[cm]
+	-for i in $(ADIRS); do $(RM) -fv $$i/*.o $$i/nameseed; done
+	-$(RM) -fv qad/*.[cm]
 
 # $Log: Makefile,v $
 # Revision 1.12  2012/01/04 17:18:45  sian

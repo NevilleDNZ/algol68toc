@@ -1,21 +1,12 @@
-Source: algol68toc
-Section: devel
-Priority: optional
-Maintainer: Sian Mountbatten <poenikatu@fastmail.co.uk>
-Build-Depends: debhelper (>= 8.0.0),libc6-dev (>=2.13.24)
-Standards-Version: 3.9.2
-Homepage: http://www.poenikatu.co.uk/
-#Vcs-Git: git://git.debian.org/collab-maint/algol68toc.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/algol68toc.git;a=summary
-
 Package: algol68toc
+Version: 1.14
 Architecture: i386
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Source: algol68toc
+Maintainer: Sian Mountbatten <poenikatu@fastmail.co.uk>
+Installed-Size: 1593
+Depends: libc6 (>= 2.1)
 Section: devel
 Priority: optional
-Maintainer: Sian Mountbatten <poenikatu@fastmail.co.uk>
-Standards-Version: 3.0.1
+Homepage: http://www.poenikatu.co.uk/
 Description: Algol 68 development system
  Everything you need to start developing programs with the
  general-purpose high-level programming language Algol 68. The

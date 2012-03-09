@@ -36,7 +36,6 @@ dh_perl
 dh_pycentral
 dh_usrlocal
 dh_link
-dh_installtex
 dh_compress
 dh_fixperms
 dh_strip
