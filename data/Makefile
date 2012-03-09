@@ -4,7 +4,7 @@
 #
 #------------ Algol 68 sources -------------
 data_f := algol68.ssh lf.a68 m_algol.fte main.fte sheets.map \
-          test.lf ui_k_fte.fte ui_m_kb.fte
+          test.lf ui_k_fte.fte ui_m_kb.fte algol68.e algol68.h
 
 algol_make := Algol68.mk
 

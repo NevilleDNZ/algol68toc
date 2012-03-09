@@ -1,4 +1,0 @@
-setv MM_SYSDIR /var/log/
-me REPORT will send msgs to /var/log/report.log
-hidden
-me Hidden commands are now visible

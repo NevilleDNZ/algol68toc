@@ -9,30 +9,26 @@ ctrans_doc := compl.taylour star.txt
 .PHONY: install
 
 all : rscompiler.dvi.gz ctrans.dvi.gz ctrans.info.gz \
-	a68toc.1.gz ca68.1.gz $(ctrans_doc)
+	a68toc.1.gz ca.1.gz $(ctrans_doc)
 
-rscompiler.dvi.gz : rscompiler.texi
-	tex rscompiler.texi
+rscompiler.dvi.gz : rscompiler.dvi
 	gzip -9 rscompiler.dvi
 
 ctrans.info.gz : ctrans.texi
 	makeinfo $<
 	gzip -9 ctrans.info
 
-ctrans.dvi.gz : ctrans.texi
-	tex $<
-	tex $<
-	texindex ctrans.??
+ctrans.dvi.gz : ctrans.dvi
 	gzip -9 ctrans.dvi
 
 a68toc.1.gz : a68toc.1
 	gzip -9c $< >$@
 
-ca68.1.gz : ca68.1
+ca.1.gz : ca.1
 	gzip -9c $< >$@
 
 install :
 	$(INSTALLDATA) -p rscompiler.dvi.gz ctrans.dvi.gz \
 	   compl.taylour star.txt $(DOCDIR)
 	$(INSTALLDATA) -p ctrans.info.gz $(INFODIR)
-	$(INSTALLDATA) -p a68toc.1.gz ca68.1.gz $(MANDIR)
+	$(INSTALLDATA) -p a68toc.1.gz ca.1.gz $(MANDIR)
