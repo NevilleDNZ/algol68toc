@@ -9,7 +9,7 @@ requires a2ps version 4.10.4
 
 documentation is
 	"The Algol 68 covered by this style is that of the Revised Report"
-	"plus some extra keywords for the Ctrans compiler."
+	"plus some extra keywords for the a68toc compiler."
 end documentation
 
 first alphabet is
@@ -42,7 +42,7 @@ keywords in Keyword_strong are
 end keywords
 
 keywords in Keyword are
-	/[A-Z][0-9A-Z]*/
+	/[A-Z_][0-9A-Z_]*/
 end keywords
 
 optional operators are

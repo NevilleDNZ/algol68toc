@@ -1,3 +1,9 @@
+algol68toc (1.15) unstable; urgency=low
+
+  * Added pame to the package and renamed reset.a68 to resetseed
+
+ -- Sian Mountbatten <poenikatu@fastmail.co.uk>  Sun, 30 Sep 2012 19:28:14 +0100
+
 algol68toc (1.14) unstable; urgency=low
 
   * Ensured that the manuals are included in the package

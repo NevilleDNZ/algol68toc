@@ -12,7 +12,7 @@ a68config_o:=a68config.o
 include $(TOP)/Algol68.mk
 
 #-------------- Rules --------------
-.PHONY : install
+.PHONY : install clean
 
 all : $(a68config_o)
 
@@ -20,3 +20,7 @@ Translate : $(a68config_c)
 
 install :
 	$(INSTALLDATA) -p a68config.m $(PKGDIR)
+
+clean :
+	-$(RM) -v a68config.o nameseed
+
