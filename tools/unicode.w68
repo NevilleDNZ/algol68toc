@@ -1,0 +1,440 @@
+@1Introduction.
+The first part of the code in this module was originally written by
+Neville Dempsey &lt;NevilleD.AU@sgr-a.net&gt;. The latter part was
+written by Sian Mountbatten &lt;poenikatu@fastmail.co.uk&gt;.
+
+@ The prelude consists of declarations of modes, operators and procedures
+for dealing with Unicode characters. The prelude presumes that there is a
+module in the main program which starts with the word "Unicode".
+
+@aDECS unicode CONTEXT VOID USE standard:
+@<UModes at the top level@>
+@<UPlain values at the top level@>
+@<UOperators at the top level@>
+@<UProcedures at the top level@>
+SKIP
+KEEP
+@<Public tags@>
+FINISH
+
+@2Modes.
+The basic Unicode modes. We assume that !bits width >= 31!.
+
+@<UModes...@>=
+MODE UCHAR = STRUCT(BITS #31# bits);
+MODE USTRING = REF[]UCHAR;
+
+@ @<Public...@>=
+ UCHAR, USTRING
+
+@ The following operators are used internally by the prelude.
+
+@<UOper...@>=
+OP U = (BITS bits)UCHAR: (UCHAR out; bits OF out := bits; out);
+OP U = (CHAR char)UCHAR: (UCHAR out; bits OF out := BIN ABS char; out);
+
+@ @<Public...@>=
+ ,U(BITS), U(CHAR)
+
+@2Code from the Unicode Consortium.
+This part of the module is derived from code provided on the CD-ROM
+distributed with the book <i>The Unicode Standard Version 3.0</i>. In
+particular, the author would like to thank Mark E. Davis for writing
+the original C code.
+
+The following copyright notice must be displayed in this module.
+
+Copyright &copy; 1994--1999 IBM Corp. All rights reserved.
+
+IBM Corp. grants the user a nonexclusive right and license to use,
+execute, display, modify, and prepare and/or have prepared derivative
+works of the code, including but not limited to creating software
+products which incorporate the code or derivative works thereof.
+
+IBM Corp. grants the user a right and license to reproduce and
+distribute the code as long as this entire copyright notice is
+reproduced in the code or reproduction.
+
+The code is provided <b>as-is</b>, and IBM Corp. disclaims all
+warranties, either express or implied, including, but not limited to
+implied warranties of merchantability and fitness for a particular
+purpose.  In no event will IBM Corp. be liable for any damages
+whatsoever (including, without limitation, damages for loss of business
+profits, business interruption, loss of business information, or other
+pecuniary loss) arising out of the use or inability to use this code,
+even if IBM Corp. has been advised of the possibility of such damages.
+Because some states do not allow the exclusion or limitation of
+liability for consequential or incidental damages, the above limitation
+may not apply to you.
+
+@3Plain values.
+Although the ISO/IEC 10646 standard defines a 31-bit character set,
+all the characters which have been published already can be expressed
+in 16 bits and another million characters can be expressed using
+surrogate characters. However, !UCS! characters do need to be
+compared so they are declared as a synonym for !UCHAR!.
+For the time being, !UCS! is only used for intermediate values.
+
+@ These values are used in the routines converting to or from !CHAR!.
+They are used internally only.
+
+@<UPlain...@>=
+BITS
+   byte mask = 16r bf,
+   byte mark = 16r 80;
+
+@2Operators.
+The operators are defined in two groups:
+<ul>
+  <li>Operators with two !UCHAR! operands</li>
+  <li>Operators with two !USTRING! operands or a mixture of !UCHAR! and
+      !USTRING!</li>
+</ul>
+
+@3!UCHAR! operators.
+Operators using the letter abbreviations.
+
+@<UOper...@>=
+OP LT = (UCHAR a,b)BOOL: ABS bits OF a LT ABS bits OF b,
+   LE = (UCHAR a,b)BOOL: ABS bits OF a LE ABS bits OF b,
+   EQ = (UCHAR a,b)BOOL: ABS bits OF a EQ ABS bits OF b,
+   NE = (UCHAR a,b)BOOL: ABS bits OF a NE ABS bits OF b,
+   GE = (UCHAR a,b)BOOL: ABS bits OF a GE ABS bits OF b,
+   GT = (UCHAR a,b)BOOL: ABS bits OF a GT ABS bits OF b;
+
+@ @<Public...@>=
+,LT(UCHAR,UCHAR)
+,LE(UCHAR,UCHAR)
+,EQ(UCHAR,UCHAR)
+,NE(UCHAR,UCHAR)
+,GE(UCHAR,UCHAR)
+,GT(UCHAR,UCHAR)
+
+@ ASCII Operators.
+
+@<UOper...@>=
+OP <  = (UCHAR a,b)BOOL: a LT b,
+   <= = (UCHAR a,b)BOOL: a LE b,
+    = = (UCHAR a,b)BOOL: a EQ b,
+   /= = (UCHAR a,b)BOOL: a NE b,
+   >= = (UCHAR a,b)BOOL: a GE b,
+   >  = (UCHAR a,b)BOOL: a GT b;
+
+@ @<Public...@>=
+ ,<(UCHAR,UCHAR)
+ ,<=(UCHAR,UCHAR)
+ ,=(UCHAR,UCHAR)
+ ,/=(UCHAR,UCHAR)
+ ,>=(UCHAR,UCHAR)
+ ,>(UCHAR,UCHAR)
+
+@3Operators with !USTRING! operands.
+A full set of operators, including !>=!  and !<=!, are given. The ordering
+operators need to compare elements until the first unequal pair is found.
+Firstly, define the basic ordering operator. It is only used internally.
+
+@<UOper...@>=
+PRIO MCOMP = 6;
+OP MCOMP = (USTRING a,b)INT:
+BEGIN
+   USTRING aa=a[:],bb=b[:];
+   INT size=UPB aa MAX UPB bb;
+   INT diff:=0;
+
+   FOR k TO size WHILE diff = 0
+   DO
+      UCHAR
+         aak = (UPB aa>0 & k<=UPB aa|aa[k]|U 2r0),
+         bbk = (UPB bb>0 & k<=UPB bb|bb[k]|U 2r0);
+      diff+:=ABS bits OF aak - ABS bits OF bbk
+   OD;
+
+   SIGN diff
+END; #MCOMP#
+
+@ The operator !MCOMP! can be used to define the other operators.
+
+@<UOper...@>=
+OP
+   EQ = (USTRING a,b)BOOL: a MCOMP b = 0,
+   NE = (USTRING a,b)BOOL: a MCOMP b /= 0,
+   LT = (USTRING a,b)BOOL: a MCOMP b < 0,
+   LE = (USTRING a,b)BOOL: a MCOMP b <= 0,
+   GT = (USTRING a,b)BOOL: a MCOMP b > 0,
+   GE = (USTRING a,b)BOOL: a MCOMP b >= 0;
+
+@ @<Public...@>=
+ ,EQ(USTRING,USTRING)
+ ,NE(USTRING,USTRING)
+ ,LT(USTRING,USTRING)
+ ,LE(USTRING,USTRING)
+ ,GT(USTRING,USTRING)
+ ,GE(USTRING,USTRING)
+
+@ The ASCII operators.
+
+@<UOper...@>=
+OP
+   =  = (USTRING a,b)BOOL: a EQ b,
+   /= = (USTRING a,b)BOOL: a NE b,
+   <  = (USTRING a,b)BOOL: a LT b,
+   <= = (USTRING a,b)BOOL: a LE b,
+   >  = (USTRING a,b)BOOL: a GT b,
+   >= = (USTRING a,b)BOOL: a GE b;
+
+@ @<Public...@>=
+ ,=(USTRING,USTRING)
+ ,/=(USTRING,USTRING)
+ ,<(USTRING,USTRING)
+ ,<=(USTRING,USTRING)
+ ,>(USTRING,USTRING)
+ ,>=(USTRING,USTRING)
+
+@3Operators !+! and !*!.
+Define !+! where both operands have the mode !USTRING!.
+
+@<UOper...@>=
+OP + = (USTRING a,b)USTRING:
+(
+   HEAP[UPB a[:]+UPB b[:]]UCHAR hm;
+   hm[:UPB a[:]]:=a[:];
+   hm[1+UPB a[:]:]:=b[:];
+   hm
+);
+
+@ @<Public...@>=
+ ,+(USTRING,USTRING)
+
+@ Mixtures of !UCHAR! and !USTRING! can be defined using a cast.
+
+@<UOper...@>=
+OP + = (UCHAR a,USTRING m)USTRING: USTRING(HEAP UCHAR:=a)+m;
+OP + = (USTRING m,UCHAR a)USTRING: m + USTRING(HEAP UCHAR:=a);
+OP + = (UCHAR a,b)USTRING: USTRING(HEAP UCHAR:=a) + USTRING(HEAP UCHAR:=b);
+
+@ @<Public...@>=
+ ,+(UCHAR,USTRING)
+ ,+(USTRING,UCHAR)
+ ,+(UCHAR,UCHAR)
+
+@ Suffix a character to the end of a !USTRING!.
+
+@<UOper...@>=
+OP +:= = (REF USTRING a,USTRING b)REF USTRING: a:=a + b;
+OP +:= = (REF USTRING a,UCHAR b)REF USTRING: a:=a + b;
+
+@ @<Public...@>=
+ ,+:=(REF USTRING,USTRING)
+ ,+:=(REF USTRING,UCHAR)
+
+@ Prefix a character to the beginning of a USTRING.
+
+@<UOper...@>=
+OP +=: = (USTRING b,REF USTRING a)REF USTRING: a := b + a;
+OP +=: = (UCHAR b,REF USTRING a)REF USTRING: a := b + a;
+
+@ @<Public...@>=
+ ,+=:(USTRING,REF USTRING)
+ ,+=:(UCHAR,REF USTRING)
+
+@ Repetition of Unicode strings.
+
+@<UOper...@>=
+OP * = (USTRING a,INT n)USTRING:
+BEGIN
+   INT ua=UPB a[:];
+   HEAP[ua*n]UCHAR out;
+   FOR i TO n
+   DO
+      out[(i-1)*ua+1:i*ua]:=a[:]
+   OD;
+   out
+END; #OP *#
+
+OP * = (INT n, USTRING a)USTRING: a * n;
+OP * = (UCHAR a, INT n)USTRING: USTRING(HEAP UCHAR:=a)* n;
+OP * = (INT n, UCHAR a)USTRING: n * USTRING(HEAP UCHAR:=a);
+OP *:= = (REF USTRING a, INT b)REF USTRING: a := a * b;
+
+@ @<Public...@>=
+ ,*(USTRING,INT)
+ ,*(INT,USTRING)
+ ,*(UCHAR,INT)
+ ,*(INT,UCHAR)
+ ,*:=(REF USTRING,INT)
+
+@3Conversion routines.
+Presume that the lower bound of !source! will always be greater
+than zero. This ensures that, should an error be found in the input
+character sequence, a negative index can be placed in !s! to indicate
+it with its absolute value being the index of the offending
+character. If the source character sequence ends with an incomplete
+character, the absolute value of !s! will be one greater than the
+upper bound of !source!.
+
+Conversion to or from !CHAR! characters involves production or
+elucidation of a possible start byte which contains as many 1-bits as
+the number of bytes in the sequence, followed by a 0-bit. The
+following multiple will be indexed by the number of bytes in the
+sequence.
+
+@<UPlain...@>=
+[]BITS first byte mark =
+   (2r 0000 0000,
+    2r 1100 0000,
+    2r 1110 0000,
+    2r 1111 0000,
+    2r 1111 1000,
+    2r 1111 1100);
+
+@ This table is used to convert a !UCHAR! character produced by
+cumulative shifting and adding of a !CHAR! byte sequence.
+
+@<UPlain...@>=
+[]BITS offsets from utf =
+   (16r 0000 3080,
+    16r 000e 2080,
+    16r 03c8 2080,
+    16r fa08 2080,
+    16r 8208 2080);
+
+@ The first byte of a !CHAR! byte sequence must either be less than
+!16r80! or at least !16rc0!. It should start with no more than 6
+bits set to one followed by a zero bit. The first two bits of all
+continuation bytes should be !2r10!.
+
+@<UProc...@>=
+PROC ustring to string = (USTRING source,REF INT start)STRING:
+IF [6*(UPB source-start+1)]CHAR target;
+   INT t:=LWB target-1, bytes;
+   UCHAR uch,replacement:=U 16r0000 fffd,max ucs:=U BIN max int;
+   start>=LWB source
+THEN
+   start-:=1;
+
+   WHILE start < UPB source
+   DO
+      uch:=source[start+:=1];
+      @<Determine the length of the !CHAR! character sequence@>;
+      @<Convert the !UCHAR! character to !CHAR!@>
+   OD;
+
+   target[:t]
+ELSE start:=-LWB source; ""
+FI; #ustring to string#
+
+@ @<Public...@>=
+ ,ustring to string
+
+@ Determining the number of !CHAR! bytes to write dependes on the
+upper limits of the !UCHAR! ranges from which !CHAR! byte sequences
+are produced. An indexed table could be used, but simple comparisons
+are more efficient.
+
+@<Determine the length...@>=
+bytes:=IF   ABS bits OF uch < ABS 16r 0000 0080    THEN 1
+       ELIF ABS bits OF uch < ABS 16r 0000 0800    THEN 2
+       ELIF ABS bits OF uch < ABS 16r 0001 0000    THEN 3
+       ELIF ABS bits OF uch < ABS 16r 0020 0000    THEN 4
+       ELIF ABS bits OF uch < ABS 16r 0400 0000    THEN 5
+       ELIF ABS bits OF uch <= ABS bits OF max ucs THEN 6
+       ELSE uch:=replacement;                           2
+       FI #part of !ustring to string!#
+
+@ Now use a loop to produce the !CHAR! bytes in reverse order. The
+first byte, with the number of set bits indicating the number of
+bytes, is created after the loop. Due to a bug in the compiler,
+the !BY! clause must be a formula which cannot be parsed simply.
+
+@<Convert the !UCHAR!...@>=
+FOR i FROM bytes BY -1 TO 2
+DO
+   target[t+i]:=REPR ABS((bits OF uch OR byte mark) & byte mask);
+   bits OF uch:=bits OF uch SHR 6
+OD; #part of !ustring to string!#
+
+target[t+1]:=
+   REPR ABS(bits OF uch OR first byte mark[bytes]);
+t+:=bytes
+
+@ This procedure converts a !CHAR! byte string to !UCHAR! characters.
+
+@<UProc...@>=
+PROC string to ustring = (STRING source,REF INT start)USTRING:
+IF HEAP[UPB source-start+1]UCHAR target;
+   INT t:=LWB target-1, bytes:=1;
+   CHAR utf;
+   start>=LWB source
+THEN
+   start-:=1;
+
+   WHILE start >= LWB source - 1 & start < UPB source
+   DO
+      UCHAR ucs;
+      @<Check the validity and convert the !CHAR! sequence to !UCHAR!@>;
+      IF bytes >= 1
+      THEN target[t+:=1]:=ucs
+      FI
+   OD;
+
+   target[:t]
+ELSE start:=-LWB source; HEAP[1:0]UCHAR
+FI; #string to ustring#
+
+@ Do the conversion while checking the number of leading
+1-bits in the first !CHAR! byte.
+
+@<Check the validity...@>=
+IF 25 ELEM BIN ABS(utf:=source[start+:=1])
+THEN #Could be a leading !CHAR! byte#
+   ucs:=U utf;
+   INT save = start;
+   CHAR u2;
+   bytes:=1;
+
+   FOR i FROM 2 TO 8
+   WHILE (24+i)ELEM BIN ABS utf & start >= LWB source - 1 & start < UPB source
+   DO
+      bytes+:=1;
+      u2:=source[start+:=1];
+      IF 25 ELEM BIN ABS u2 & NOT(26 ELEM BIN ABS u2)
+      THEN ucs:=U BIN(ABS(bits OF ucs SHL 6)+ABS u2)
+      ELSE #Signal an error# start:=-start
+      FI
+   OD;
+
+   IF bytes > 6 OR bytes < 2
+   THEN start:=-save;  #invalid leader#  bytes:=0
+   ELIF start = UPB source & (25+bytes) ELEM BIN ABS utf
+   THEN start:=-(1+UPB source); #!source! exhausted# bytes:=0
+   ELSE ucs:= U BIN(ABS bits OF ucs - ABS offsets from utf[bytes-1])
+   FI
+ELSE ucs:=U utf
+FI #part of string to ustring#
+
+@ Add !string to ustring! to the public tags.
+
+@ @<Public...@>=
+ ,string to ustring
+
+@ This procedure is an analogue of the routine !char in string!.
+
+@<UProc...@>=
+PROC @!uchar in ustring = (UCHAR uch,REF INT p,USTRING str)BOOL:
+BEGIN
+   FOR k FROM LWB str TO UPB str
+   DO
+      IF uch = str[k]
+      THEN p:=k; GOTO found
+      FI
+   OD;
+   FALSE EXIT
+found:
+   TRUE
+END; #uchar in ustring#
+
+@ @<Public...@>=
+ ,uchar in ustring
+
+@2System dependencies.
+None.

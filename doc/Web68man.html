@@ -1,0 +1,932 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="description" content="Web 68: Literate Programming with Algol 68">
+  <meta name="author"
+  content="Sian Mountbatten &lt;poenikatu@fastmail.co.uk&gt;">
+  <meta name="keywords" content="Algol 68,Literate Programming,Web 68,Manual">
+  <meta name="resource-type" content="document">
+  <meta name="distribution" content="global">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="copyright" content="Copyright 2012 Phoenix Engineering.">
+  <title>Web 68: Literate Programming with Algol 68</title>
+  <style type="text/css">
+p {
+   font-family: "Times New Roman";
+   text-align: justify;
+}
+
+li {
+   font-family: "Times New Roman";
+   text-align: justify;
+}
+
+dd {
+   font-family: "Times New Roman";
+   text-align: justify;
+}
+
+dt.r {color:red;}
+dt.g {color:green;}
+span.r {color:red;}
+span.g {color:green;}
+
+</style>
+</head>
+
+<body>
+<h1 style="color:blue;text-align:center">Web 68</h1>
+
+<h1>Contents</h1>
+
+<table border="0">
+  <tbody>
+    <tr><td><a href="#litprog">1. Literate Programming</a></td></tr>
+    <tr><td><a href="#struct">2. Structure of this document</a></td></tr>
+    <tr><td><a href="#sec:web68">3. Web 68</a></td></tr>
+    <tr><td><a href="#subsec:input">3.1 Filenames</a></td></tr>
+    <tr><td><a href="#subsec:progs">3.2 Program Usage</a></td></tr>
+    <tr><td><a href="#subsubsec:tang">3.2.1 Overview of <b>tang</b></a></td></tr>
+    <tr><td><a href="#subsubsec:teks">3.2.2 Overview of <b>teks</b></a></td></tr>
+    <tr><td><a href="#subsec:alg68code">3.3 Algol 68 code</a></td></tr>
+    <tr><td><a href="#subsubsec:ids">3.3.1 Identifiers</a></td></tr>
+    <tr><td><a href="#subsubsec:snippets">3.3.2 In the HTML section</a></td></tr>
+    <tr><td><a href="#subsubsec:macros">3.3.3 In macro bodies</a></td></tr>
+    <tr><td><a href="#subsubsec:modules">3.3.4 In module bodies</a></td></tr>
+    <tr><td><a href="#subsec:limbo">3.4 Limbo</a></td></tr>
+    <tr><td><a href="#subsec:sections">3.5 Sections</a></td></tr>
+    <tr><td><a href="#subsubsec:level">3.5.1 Level Sections</a></td></tr>
+    <tr><td><a href="#subsubsec:plain">3.5.2 Plain Sections</a></td></tr>
+    <tr><td><a href="#subsec:html">3.6 The HTML part</a></td></tr>
+    <tr><td><a href="#subsec:macros">3.7 The definition part</a></td></tr>
+    <tr><td><a href="#subsubsec:defmacros">3.7.1 Defining Macros</a></td></tr>
+    <tr><td><a href="#subsubsec:usemacros">3.7.2 Using Macros</a></td></tr>
+    <tr><td><a href="#subsec:algol68">3.8 The Algol 68 part</a></td></tr>
+    <tr><td><a href="#subsec:cmds">3.9 Web 68 Commands</a></td></tr>
+    <tr><td>
+    <table border="0" cellspacing="10">
+    <tbody>
+       <tr><td><a href="#cmd:atat"><b>@@</b></a></td><td>Literal @-symbol</td></tr>
+       <tr><td><a href="#cmd:atsp"><b>@&nabla;</b></a></td><td>Lowest section
+           command</td></tr>
+       <tr><td><a href="#cmd:level"><b>@1</b>,<b>@2</b>,<b>@3</b></a></td>
+       <td>Level section command</td></tr>
+       <tr><td><a href="#cmd:a"><b>@a</b></a></td><td>Part of the unnamed module</td></tr>
+       <tr><td><a href="#cmd:d"><b>@d</b></a></td><td>Declarative macro</td></tr>
+       <tr><td><a href="#cmd:h"><b>@h</b></a></td><td>Emit HTML code</td></tr>
+       <tr><td><a href="#cmd:i"><b>@i</b></a></td><td>Include Web 68 file</td></tr>
+       <tr><td><a href="#cmd:m"><b>@m</b></a></td><td>Multi-use macro</td></tr>
+       <tr><td><a href="#cmd:lt"><b>@&lt;</b></a></td><td>Start of module tag</td></tr>
+       <tr><td><a href="#cmd:gt"><b>@&gt;</b></a></td><td>End of module tag</td></tr>
+       <tr><td><a href="#cmd:caret"><b>@^</b></a></td><td>Index text</td></tr>
+       <tr><td><a href="#cmd:dot"><b>@.</b></a></td><td>Index in typewriter type</td></tr>
+       <tr><td><a href="#cmd:bang"><b>@!</b></a></td><td>Index section in bold face</td></tr>
+       <tr><td><a href="#cmd:eq"><b>@=</b></a></td><td>Emit code verbatim</td></tr>
+       <tr><td><a href="#cmd:back"><b>@\</b></a></td><td>Break the output line</td></tr>
+       <tr><td><a href="#cmd:stroke"><b>@/</b></a></td><td>Force <b>teks</b> to break
+          its output</td></tr>
+       <tr><td><a href="#cmd:comma"><b>@,</b></a></td><td> Force <b>teks</b> to insert a
+          non-breakable space in its output</td></tr>
+    </tbody>
+    </table>
+</td></tr>
+    <tr><td><a href="#subsec:notes">3.10 Notes</a></td></tr>
+    <tr><td><a href="#subsec:errors">3.11 Errors</a></td></tr>
+  </tbody>
+</table>
+
+<h1><a name="litprog">1. Literate Programming</a></h1>
+
+<p>The central problem of documenting software is keeping the documentation
+up-to-date. It is accepted by most software engineers that documentation is an
+unfortunate necessity. It is probable that this general attitude is engendered
+by enormous documents which are separate from the code they describe. With this
+attitude, some way of closely relating documentation to the software it
+describes is very desirable. A literate programming system provides a means of
+interleaving documentation with source code so that the reader is presented
+with small amounts of documentation for small amounts of code - the ancient
+Roman maxim of "divide and conquer" seems peculiarly relevant here.</p>
+
+<p>The Web 68 literate programming system not only provides a means of keeping
+system documentation up-to-date, but also makes it easier to develop large
+programs. One of the bugbears of modern compilation systems is the tendency to
+write large programs as a collection of small files. This causes considerable
+complexities in the code, never mind in the documentation of such code, which,
+sadly, is rarely provided. Writers of large programs written in a high-level
+programming language tend to write large files. Keeping track of identifiers
+and similar syntactic constructs can be facilitated by a literate programming
+system. Web 68 provides extensive cross-referencing of identifiers, mode
+indicants and operator indicants which help the reader to keep her bearings.
+Coupled with a powerful macro facility, Web 68 makes it easier to write
+programs in sections where each section is accompanied by its own
+documentation.</p>
+
+<p>Ideally, one would like to use HTML to produce the documentation and
+Algol 68 to write the program. Web 68 provides a means of combining both HTML
+and Algol 68 as a single document which can be processed by two programs,
+<tt>tang</tt> and <tt>teks</tt>, to produce Algol 68 and HTML code
+respectively: the former as source code ready for compilation, the latter ready
+for reading with a Web browser.</p>
+
+<p>Web 68 is firmly based on the <i>Web System of Structured Documentation</i>
+created by Donald E. Knuth for writing his TeX and Metafont typsetting system.
+In accordance with Algol 68 practice, the original programs <b>tangle</b> and
+<b>weave</b> have been abbreviated to <b>tang</b> and <b>teks</b> respectively.
+However, you should note that both <b>tang</b> and <b>teks</b> have been
+rewritten from scratch in Algol 68 so, although they bear similar functionality
+to the original programs, they provide that functionality using different
+algorithms.</p>
+
+<h1><a name="struct">2. Structure of this document</a></h1>
+This document contains the following parts:- 
+<ol>
+  <li>The specification of the <a href="sec:web68">Web 68</a> literate programming system.</li>
+  <li><a href="#sec:tangoutput">Example output</a> of the <b>tang</b> program.</li>
+  <li>Example output of the <b>teks</b> program.</li>
+  <li>The
+	  <a href="http://www.poenikatu.co.uk/algol68/teks.w68">
+		  source code</a> of the <b>teks</b> program.</li>
+  <li>The <a href="http://www.poenikatu.co.uk/algol68/tang.w68">
+	  source code</a> of the <b>tang</b> program.</li>
+  <li>Implementation notes.</li>
+</ol>
+
+<h1><a name="sec:web68">3. Web 68</a></h1>
+
+<p>A Web 68 file is a long string of text which has been divided, more or less
+arbitrarily, into individual lines. The exact line boundaries are not critical,
+so that you can chop up the input file in any way you wish. The end of a line
+is regarded by <b>teks</b> as a blank space. However, Algol 68 program source
+code is very flexible, so <b>teks</b> will try to respect your layout.</p>
+
+<p>Web 68 contains its own command language which is described in the
+following sections. Subsection <a href="#subsec:cmds">commands</a> gives the
+definitive list of commands (there are no undocumented commands). Thus, to
+write a program using Web 68, you must be familiar with three languages:-</p>
+<ul>
+  <li>HTML for the documentation itself</li>
+  <li>Algol 68 for the source code</li>
+  <li>Web 68 for teksing the whole together</li>
+</ul>
+
+<p>In practice, error messages from the Web 68 programs and the Algol 68
+compiler or interpreter can occur. Consult the documentation for your Algol 68
+compiler or interpreter for the meaning of the error messages. See section <a
+href="#subsec:errors">errors</a> for the location of error messages from
+<b>tang</b> and <b>teks</b>.</p>
+
+<p>As you write a program using Web 68, you should be aware both of the
+documentation and of the program you are writing: that is, you should be aware
+of the different actions that <b>tang</b> and <b>teks</b> will perform on your
+document. See sections <a href="#subsubsec:tang">tang</a> and <a
+href="#subsubsec:teks">teks</a> for an overview of what each program does.</p>
+
+<p>A Web 68 document consists of a number of sections, each of which starts
+with a section command and can contain an HTML part, a definition part or an
+Algol 68 part. Only a section command is mandatory: a
+section command can be followed immediately by another section command.</p>
+
+<h2><a name="subsec:input">3.1 Filenames</a></h2>
+
+<p>A Web 68 file is expected to have a file extension of <b>.w68</b>. Included
+Web 68 files may have any extension or even no extension. However, I recommend
+you keep to some kind of naming system so that files intended for inclusion can
+be recognised as such without glancing at their contents.</p>
+
+<p>The output files from <b>teks</b> will have a file extension of <b>.html</b>
+and the output file from <b>tang</b> will have a file extension of <b>.a68</b>.
+The latter is an intermediate file which should be deleted as soon as it has
+been processed successfully by the Algol 68 compiler. The Web 68 file
+contains the definitive source code of the program.</p>
+
+<h2><a name="subsec:progs">3.2 Program Usage</a></h2>
+
+<p>This section describes how a Web 68 document can be converted into both
+structured documentation and an Algol 68 program.</p>
+<ol>
+  <li>Use a plain text editor to prepare the Web 68 document.</li>
+  <li>Production of the formatted text. 
+    <ol>
+      <li>Use <b>teks</b> to produce an HTML output file.</li>
+      <li>Use a web browser to view the document on your screen.</li>
+    </ol>
+  </li>
+  <li>Production of the Algol 68 program. 
+    <ol>
+      <li>Use <b>tang</b> to produce the Algol 68 program.</li>
+      <li>Use your Algol 68 compiler or interpreter to produce the Algol 68
+        binary program.</li>
+    </ol>
+  </li>
+</ol>
+
+<p>The next two sections give an overview of the actions of <b>tang</b> and
+<b>teks</b> together with details of their arguments.</p>
+
+<h3><a name="subsubsec:tang">3.2.1 Overview of <b>tang</b></a></h3>
+
+<p>The simplest call of the program is</p>
+<pre>tang filename</pre>
+
+<p>Options are:-</p>
+<dl>
+  <dt><b>-d</b></dt>
+    <dd>Output debugging information to <b>tang.dbg</b>.</dd>
+  <dt><b>-h</b></dt>
+    <dd>Display a usage message only.</dd>
+  <dt><b>-s</b></dt><dd>Output SALTU instread of SKIP for subsequent
+     once-off macro calls. Sets <b>put skip</b> to <b>FALSE</b>.</dd>
+  <dt><b>-V</b></dt><dd><b>tang</b>will not emit comments in the
+     output Algol 68 program.</dd>
+  <dt><b>-v</b></dt>
+    <dd>Display the version of the program only.</dd>
+  <dt><b>-w</b></dt>
+    <dd>Specify a directory to search for Web 68 include files. The argument
+      following the "-w" should be a directory name. There should be no spaces
+      between the "-w" and the directory name.</dd>
+</dl>
+<p>See section <a href="subsec:input">input</a> for details of input and
+output filenames. 
+
+<p><b>tang</b> works roughly as follows:-</p>
+<ol>
+  <li>It reads the Web 68 source file, skipping the HTML part of each section,
+    but tokenising the macro definitions and all the Algol 68 code in the
+    modules. Wherever Algol 68 code is specified as being in an already
+    existing module, whether tagged or untagged, it is simply tacked onto the
+    end of that module, together with the section number in which the code
+    appears.</li>
+  <li>The untagged module is then output, token by token.</li>
+  <li>Wherever a token is a module tag, the tag is replaced by the text in that
+    module.</li>
+  <li>Wherever a token is a macro, the macro is replaced by the body of the
+    macro. If the macro has parameters, the actual parameters are scanned and
+    used to replace the formal parameters in the macro body.</li>
+  <li>The process of expanding macros and modules bodies continues until the
+    output text consists of plain tokens.</li>
+  <li>The output lines are filled to 80 characters as much as possible,
+    although string denotations are not split across line boundaries.</li>
+  <li>The output text contains comments which specify the section in which each
+    piece of code occurs:- 
+    <dl>
+      <dt>Starting comment</dt>
+        <dd><b>#</b>section.subsection.subsubsection.paragraph:<b>#</b></dd>
+      <dt>Finishing comment</dt>
+        <dd><b>#</b>:section.subsection.subsubsection.paragraph<b>#</b></dd>
+      <dt>Finishing and starting comment</dt>
+        <dd>Instead of outputting a finishing comment followed by a starting
+          comment, the two comments are concatenated to form a single comment
+          of the form #:1.1.2.1 3.1.4.2:#.</dd>
+    </dl>
+  </li>
+</ol>
+
+<h3><a name="subsubsec:teks">3.2.2 Overview of teks</a></h3>
+
+<p><b>teks</b> works roughly as follows:-</p>
+<ol>
+   <li>It reads the Web 68 source file. Web 68 commands are read
+   wherever they occur and their arguments processed. In this first
+   phase, module tags, macro identifiers and bold symbols are
+   extracted and put into binary trees (or a flexible table for macro
+   identifiers and their parameters). Tags which will be printed in
+   the indexes will be stored.</li>
+
+   <li>In the second phase, the source code is read again. This time,
+      the HTML part is carefully formatted and output as HTML code.
+      The output may be split into a number of output file depending
+      on the value of <b>splitting</b>. Which input files appear
+      in the output depends on the value of <b>listing</b>. References
+      to other parts of the program are kept in the index entries. The Algol
+      68 code is output just as it is in the input unless the engineer
+      has specified Web 68 commands to alter the standard layout.</li>
+
+   <li>In the third phase, the indexes are output as HTML code.</li>
+</ol>
+
+<h2><a name="subsec:alg68code">3.3 Algol 68 code</a></h2>
+
+<p>Algol 68 source code can occur in three different places:-</p>
+<ol>
+  <li>Between bangs in the HTML part</li>
+  <li>In macro bodies in the definition part</li>
+  <li>After a module tag in the Algol 68 part</li>
+</ol>
+
+<p>Wherever the Algol 68 code appears, you should remember to double all @
+symbols. For example:-</p>
+<pre>s:=t[pos+1:@@pos+1]</pre>
+
+<p>This also applies to string denotations, viz:-</p>
+<pre>STRING @!title = "Epsilon @@ Lugaru";</pre>
+
+<p>Notice that the @ symbol just before <i>title</i> has not been doubled
+because it is part of a Web 68 command.</p>
+
+<h3><a name="subsubsec:ids">3.3.1 Identifiers</a></h3>
+
+<p>Because identifiers in Algol 68 can contain white-space, it is possible for
+you to key an identifier differently on two separate occasions in the Web 68
+file. This is not a problem for <b>tang</b>, because it deletes all white-space
+from the identifier before storing it. However, this could lead to problems
+with <b>teks</b>. The policy has been adopted of outputting the identifier in
+the form that was used when it was first keyed, more or less. Thus the two identifiers</p>
+<pre>
+   <i>fl bgn form</i> and <i>flbgn form</i>
+</pre>
+
+<p>will appear in the index as <i>fl bgn form</i>. However, the identifiers
+will be compared as <i>flbgnform</i> (all white-space deleted).</p>
+
+<h3><a name="subsubsec:snippets">3.3.2 In the HTML section</a></h3>
+
+<p>In the HTML part of each section, scraps of Algol 68 code should be
+enclosed in exclamation marks (bangs). In this manual, I refer to such scraps,
+excluding the bangs, as <i>snippets</i>. For example, you might refer to a mode
+as !REF INT!. The part between the bangs will be formatted as Algol 68 code.
+In this case, the upper case characters will be output in a colour
+which depends on the syntactic construct of the code. Thus string
+denotations will appear in yellow (including the quote characters),
+comments will appear in orange, HTML code will appear in pink. Any
+Algol 68 code, and any amount of code, can be placed between the bangs, but
+you should ensure that each such snippet can fit on a single line of text
+because the normal formatting involving newlines will not be used.</p>
+
+<h3><a name="subsubsec:macros">3.3.3 In macro bodies</a></h3>
+
+<p>All the text following the = symbol at the end of a macro header should be
+Algol 68 code. You can insert comments wherever you want in the macro body.
+They will be ignored by <b>tang</b> and formatted by <b>teks</b> as HTML
+code.</p>
+
+<h3><a name="subsubsec:modules">3.3.4 In module bodies</a></h3>
+
+<p>Most of the Algol 68 code will be in module bodies. Because Algol 68 is
+such a flexible language, it is impossible to specify a formatting style which
+will suit all engineers. Accordingly, a number of Web 68 commands are
+provided to help <b>teks</b> format the Algol 68 code. You should not use
+these until you have seen what <b>teks</b> does with your source code without
+them. Generally speaking, teks will format your Algol 68 code as you specify
+it.</p>
+
+<p>Comments can be put into Algol 68 code in module bodies, just as in macro
+bodies. They will not appear in the output from <b>tang</b>.</p>
+
+<h2><a name="subsec:limbo">3.4 Limbo</a></h2>
+
+<p>Any text preceding the first section of a Web 68 document is said to be
+<i>in limbo</i>. Allowable text consists of</p>
+<ul>
+  <li>HTML commands or comments.</li>
+  <li>Algol 68 source code, to be output directly, placed between <b>@=</b>
+    and <b>@&gt;</b>.</li>
+  <li>The Web 68 command "@\" which instructs <b>tang</b> to output a newline
+    in the output code.</li>
+</ul>
+
+<p>Any HTML commands which would normally appear in the preamble of an HTML
+input file should be placed here.</p>
+
+<p>As an example, here is the limbo for an Algol 68 script to be elaborated by
+the Algol 68 interpreter <b>a68g</b>:</p>
+<pre>@=#!/usr/bin/a68g@&gt;@\</pre>
+
+<p>The <b>tang</b> program processes this line by outputting
+<b>#!/usr/bin/a68g</b> immediately followed by a newline.</p>
+
+<p>The <b>teks</b> program outputs the line as HTML containing formatting
+commands. However, the code between the Web 68 commands <b>@=</b> and
+<b>@&gt;</b> is not subjected to the cross-referencing system. Text in limbo
+should be restricted to data extraneous to the Web 68 system.</p>
+
+<h2><a name="subsec:sections">3.5 Sections</a></h2>
+
+<p>HTML provides a set of heading commands for dividing a document into a
+hierarchy: each section at the next lower level is numbered from 1. Thus, the
+number <b>2.4.1</b> refers to the first subsubsection of the fourth subsection
+of the second section.</p>
+
+<p>The numbering of sections in Web 68 is handled automatically by both
+<b>tang</b> and <b>teks</b>. All you need to remember is that each section is
+either a level section or a plain section.</p>
+
+<h3><a name="subsubsec:level">3.5.1 Level Sections</a></h3>
+
+<p>A level section command specifies the section header for HTML as well as the
+section level. The command should be followed by the section heading followed
+by a full-stop. The full-stop will be omitted from the heading when it is
+formatted by <b>teks</b>. The heading will appear both in the table of contents
+and in each page, so you should be careful about what to put into such a
+header.</p>
+
+<p>The following table shows the Web 68 code in the first column and the code
+output by <b>teks</b> in the second column:-</p>
+
+<center>
+
+<table border="1">
+  <tbody>
+    <tr>
+      <td><b>Web 68 code</b></td>
+      <td><b>Output HTML code</b></td>
+    </tr>
+    <tr>
+      <td>@1Heading 1.</td>
+      <td>&lt;h1&gt;Heading 1&lt;/h1&gt;</td>
+    </tr>
+    <tr>
+      <td>@2Heading 2.</td>
+      <td>&lt;h2&gt;Heading 2&lt;/h2&gt;</td>
+    </tr>
+    <tr>
+      <td>@3Heading 3.</td>
+      <td>&lt;h3&gt;Heading 3&lt;/h3&gt;</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p>The text for the section should follow on the next line, not preceded by any
+spaces.</p>
+
+<p>For example:-</p>
+<pre>
+@1Introduction.
+This program ...
+</pre>
+
+<p>Level sections introduce major parts of the program. Level 1 sections are
+disallowed in included files to ensure the integrity of the indexes output by
+<b>teks</b>.</p>
+
+<center>
+<pre>[section.subsection.subsubsection.paragraph]</pre>
+</center>
+
+<p>unless the current file is an included file when the current section will
+appear as</p>
+
+<center>
+<pre>[Ifile number.subsection.subsubsection.paragraph]</pre>
+</center>
+
+<h3><a name="subsubsec:plain">3.5.2 Plain Sections</a></h3>
+
+<p>A plain section is preceded by the "@ " command (an <b>@</b>-symbol followed
+by a space). The section is numbered at the paragraph level, but has no header
+to otherwise identify it so its HTML part can directly follow the section
+command.</p>
+
+<p>For example:-</p>
+<pre>@ This procedure ...</pre>
+
+<p>Plain sections describe successively the details of the major parts. Neither
+<b>tang</b> nor <b>teks</b> output anything to the console when plain sections
+are being processed (unless there are errors or warnings, of course).</p>
+
+<h2><a name="subsec:html">The HTML part</a></h2>
+
+<p>This part starts immediately after the section command and contains HTML
+code intermingled with references to parts of the Algol 68 code (see section
+<a href="">snippets</a>). The latter are delimited by the exclamation mark
+(also referred to as <i>bang</i>). The text will be passed unchanged to the
+output file by <b>teks</b> (apart from the snippets which will be formatted as
+Algol 68 source code) and completely ignored by <b>tang</b>. Here is an
+example from the <b>uregex.w</b> prelude:-</p>
+
+<pre>
+@ The library is initialised by !rx init! which takes as its only
+parameter a row of pairs of mode !STRUCT(INT ind,UCS val)!. A null row
+specified as !()! may also be given if the default meta-characters are
+acceptable. The routine yields !TRUE! if the parameters are
+satisfactory.
+</pre>
+
+<p>The HTML part can contain any HTML code including mathematics. This example
+has been taken from the <b>charbag.w</b> prelude:-</p>
+<quote>
+   @ (2) <i>b<sup>b</sup><sub>i</sub></i> <i>c<sup>e</sup><sub>s</sub></i>
+the beginning of <i>b<sub>i</sub></i> lies within <i>c<sub>s</sub></i>. There
+are two cases:-
+
+<dl>
+  <dt>(2.1)</dt>
+    <dd><i>b<sup>e</sup><sub>i</sub> c<sup>e</sup><sub>f</sub></i> The
+      beginning ...</dd>
+</dl>
+</quote>
+
+<h2><a name="subsec:macros">3.7 The definition part</a></h2>
+
+<p>This part contains macro definitions and is introduced by the Web 68
+commands <b>@d</b> or <b>@m</b>.</p>
+
+<h3><a name="subsubsec:defmacros">3.7.1 Defining Macros</a></h3>
+
+<p>Web 68 provides two kinds of macros:</p>
+<dl>
+  <dt><b>@m</b></dt>
+  <dd>Multi-use macros which may be called many times.</dd>
+  <dt><b>@d</b></dt>
+  <dd>Declarative macros which may only be called once.</dd>
+</dl>
+
+<p>Both macros may have any number of parameters (including none).</p>
+
+<p>The definition of a macro consists of four or five parts:</p>
+<ol>
+  <li>the Web 68 macro definition command ("@d" or "@m") followed by at least
+    one space</li>
+  <li>the macro identifier (which looks like an Algol 68 identifier or
+     a bold symbol)</li>
+  <li>an optional formal parameter pack</li>
+  <li>an equals symbol ("=")</li>
+  <li>the macro body</li>
+</ol>
+
+<p>The text</p>
+<quote>
+   <b>@m</b> <i>identifier</i> = Algol 68 text
+</quote>
+
+<p>defines a <i>simple</i> macro, where the identifier will be replaced by the
+Algol 68 text when <b>tang</b> produces its output.</p>
+
+<p>The text</p>
+<quote>
+   <b>@m</b> <i>identifier</i> (p<sub>1</sub>,...,p<sub>n</sub>) =
+Algol 68 text
+</quote>
+
+<p>defines a <i>parametric</i> macro, where the identifier plus the actual
+parameters (in a parameter pack) will be replaced by the Algol 68 text and
+occurrences of the formal parameters p<sub>i</sub> in that Algol 68 text will
+be replaced by the corresponding actual parameters.</p>
+
+<p>The formal parameter pack looks just like the parameter pack of an Algol 68
+routine. The formal parameters themselves can take the form of Algol 68
+identifiers or mode or operator indicants and should be separated by commas as
+in an Algol 68 routine call. The macro body can contain any Algol 68 code,
+including calls of previously defined macros, but parentheses should be
+balanced. Note that "previously" in this case refers to previously in the
+Web 68 file. Any occurrence of the formal parameters in the text, as a lexical
+unit, will be replaced by the corresponding actual parameter when the macro is
+expanded. These two examples show a simple macro and a parametrised macro, both
+taken from <b>tang</b>:-</p>
+<pre>
+@m help status = 1
+@m err print(msg)=(print nl; print out(msg); error(errors))
+</pre>
+
+<p>and here is a declarative macro taken from the <b>forms.w</b> prelude:-</p>
+<pre>
+@d macro x raise window =
+PROC(DISPLAY,WINDOW)INT x raise window =
+   ALIEN "XRAISEWINDOW"
+   "#define XRAISEWINDOW(dpy,win) \"
+   " XRaiseWindow((void *)dpy,win)";
+</pre>
+
+<p>Because declarative macros can only be called once, they usually do not have
+parameters.</p>
+
+<p>It should be noted that macros have to be recognised during <b>tang</b>'s
+first phase, so every macro must be defined before it is used. You should not
+call a macro recursively. Macros are expanded by <b>tang</b> in its second
+phase.</p>
+
+<p>Macros are only operational for <b>tang</b>. <b>teks</b> simply regards them
+as Algol 68 code. However, the macro identifier will appear in the
+cross-reference index.</p>
+
+<h3><a name="subsubsec:usemacros">3.7.2 Using Macros</a></h3>
+
+<p>Macros are used by <i>calling</i> them, just like Algol 68 procedures. The
+only restriction on the actual parameters of a macro is that any parentheses
+should be balanced. Furthermore, if you want to include a comma in an actual
+parameter, it should be surrounded by parentheses because the actual
+parameters, if there are more than one, are themselves separated by commas. The
+actual parameters can include or consist of calls to other macros. Any macros
+in the body of the macro must have been declared before calling them. This is
+because <strong>teks</strong> actions the macros in its first pass.
+<strong>tang</strong>, on the other hand, reads all the macros in the input
+files into memory before actioning them.</p>
+
+<p>If a declarative macro is called more than once, the second and subsequent
+calls are replaced by <b>SKIP</b> (or <b>SALTU</b> if the <i>-s</i>
+option is used) instead of the macro body.</p>
+
+<p>Because each token is considered in turn, the following definitions and call
+will produce an error message:-</p>
+<pre>
+@m arg = (p)
+@m identity(p1) = p1
+@a identity ## arg
+</pre>
+
+<p>The ## between <i>identity</i> and <i>arg</i> serve to separate the two
+words into two lexical entities because otherwise they would be regarded as
+part of a single identifier. The error is caused by <i>identity</i> being
+expanded first: <i>identity</i> requires a parameter pack, but the next token
+is not "(", but <i>arg</i> which has not yet been expanded. Only when the macro
+call has been expanded will <i>arg</i> be expanded. This will produce the error
+message</p>
+<pre>! Error: call of identity not followed by "(".</pre>
+
+<p>This brings us to a useful wrinkle associated with macro definitions and
+calls.</p>
+
+<p>In the next macro, the body of the macro contains two identifiers which are
+split into two lexical tokens by ## enabling the actual parameters, provided
+that they are just identifiers, to be used to construct two identifiers.</p>
+<pre>
+@m mcheck col(col1,col2) =@/
+  IF NOT q##col1 OR NOT q##col2
+  THEN@/
+    []CHAR s="fl set object color";
+    put(outf,
+        ("  ",s,"(",obj ident,",",
+         CA mov(gen##col1),",",CA mov(gen##col2),");",
+         newline));
+    add mac(s)
+  FI</pre>
+
+<h2><a name="subsec:algol68">3.8 The Algol 68 part</a></h2>
+
+<p>The Algol 68 program is written as modules. The outermost module is the
+<i>untagged module</i> and is introduced by the Web 68 command <b>@a</b> (a
+for Algol 68).</p>
+
+<p>Tagged modules are preceded by a module tag, consisting of HTML code which
+appears between <b>@&lt;</b> and <b>@&gt;</b>.</p>
+
+<p>Module tags should be a good description of the contents of the module. If
+you are tempted to write a comment inside Algol 68 which will explain what the
+following lines of code do, consider writing the comment as a module tag and
+putting the lines of code in their own section.</p>
+
+<p>Multiple spaces and tabs in module tags are reduced to a single space or tab
+and preceding and following spaces are removed. So the module tag</p>
+<pre>@&lt;Print input buffer error location@&gt;</pre>
+
+<p>can be matched by</p>
+<pre>@&lt; Print input buffer  error location @&gt;</pre>
+
+<p>However, inputting such long tags is error prone, so Web 68 allows you to
+abbreviate them whereby you provide a unique prefix to identify the tag. Thus,
+the above tag could be abbreviated to</p>
+<pre>@&lt;Print input error...@&gt;</pre>
+
+<p>provided that no other module starts with those characters.</p>
+
+<p>When you want to add actual Algol 68 source code to a module, you should
+append an "=" symbol to the command <b>@&gt;</b>, viz:-</p>
+<pre>@&lt;Compiler pre...@&gt;=
+PROGRAM tang CONTEXT VOID
+USE @&lt;Library preludes@&gt; standard</pre>
+
+<p>You can add Algol 68 source code to any module as many times as you
+want.</p>
+
+<p>You can place comments in the Algol 68 source code in a module. <b>tang</b>
+will ignore them and <b>teks</b> will format them, the text between the # or
+<b>CO</b> or <b>COMMENT</b> pairs being regarded as HTML code. Thus you can use
+text between bangs just as in the HTML part.</p>
+
+<p>Modules are particularly useful when you have a long procedure: you can use
+a module tag instead of comments. For example, here is a procedure from
+<b>tang</b> which has the same piece of code occurring in two places. The
+actual code has already been specified, so both references are abbreviated.
+Notice how the module tags materially add to your understanding of the
+procedure:-</p>
+<pre>
+@&lt;Input...@&gt;=
+PROC next char = CHAR:
+IF input ended
+THEN @&lt;Check if included...@&gt;; blank
+ELIF loc OF web &gt;= UPB b OF web
+THEN
+  WHILE input ln(web) &amp; UPB b OF web = 0 DO SKIP OD;
+  IF input ended
+  THEN @&lt;Check if included...@&gt;
+  FI;
+  blank
+ELSE (b OF web)[loc OF web+:=1]
+FI;
+</pre>
+
+<p>In a sense, modules are like Algol 68 procedures with mode <b>VOID</b>,
+except that they do not have to be units.</p>
+
+<h2><a name="subsec:cmds">3.9 Web 68 Commands</a></h2>
+
+<p>Every Web 68 command consists of the command introducer <b>@</b> followed
+by a defining character. Some commands are followed by other text which is
+delimited by the concluding command <b>@&gt;</b>. See section <a
+href="#subsec:limbo">limbo</a> for an example of the <b>@=</b> command. Such
+text is called "control text" and, like a string denotation, must end on the
+same line of the Web 68 file as it began. Furthermore, no Web 68 commands are
+allowed in a control text, not even <b>@@</b>. (Remember that Algol 68 allows
+<b>AT</b> instead of <b>@</b>)</p>
+
+<p>The letters following each code indicate in which sections that code can be
+found:-</p>
+<dl>
+  <dt>L</dt>
+    <dd>In limbo.</dd>
+  <dt>T</dt>
+    <dd>In the HTML part of a section.</dd>
+  <dt>M</dt>
+    <dd>In the definition part of a section.</dd>
+  <dt>A</dt>
+    <dd>In the Algol 68 part of a section.</dd>
+  <dt>C</dt>
+    <dd>In a comment.</dd>
+  <dt>S</dt>
+    <dd>In a string.</dd>
+</dl>
+
+<p>A tilde preceding one of these letters means that the control code ends the
+present part of the Web 68 file; for example, ~A means that this control code
+ends the Algol 68 part of a section.</p>
+<dl>
+  <dt><a name="cmd:atat"><b>@@</b></a> [A,C,L,M,S,T]</dt>
+    <dd>A double <b>@</b> symbol denotes a single <b>@</b> symbol. This is the
+      only Web 68 command which is allowed in limbo, in comments and in
+      strings.</dd>
+  <dt><a name="cmd:atsp"><b>@&nabla;</b></a> [~L,~T,~A]</dt>
+    <dd>This denotes the start of a plain section. A tab character or the end
+      of the line is equivalent to a space when it follows an <b>@</b>
+    symbol.</dd>
+  <dt><a name="cmd:level"><b>@1</b>,<b>@2</b>,<b>@3</b></a> [~L,~A,~T]</dt>
+    <dd>This denotes the start of a level section, that is, a section which
+      begins a new major part of the Web 68 file. The title of the new part
+      should appear after the <b>@n</b> n being from 1 to 3) followed by a
+      full-stop and a newline. HTML control sequences should be avoided in
+      titles unless they are quite simple: such as font switching commands.
+      When <b>tang</b> and <b>teks</b> meet a level section, they print the
+      number of that section on the console. The very first section should be
+      an <b>@1</b> section unless it is in an included file.</dd>
+  <dt><a name="cmd:a"><b>@a</b></a> [~M,~T]</dt>
+    <dd>This denotes the start of a part of the untagged module. <b>teks</b>
+      will format the Algol 68 code without a module tag at its start.
+      <b>tang</b> will concatenate all the source code preceded by
+    <b>@a</b>.</dd>
+  <dt><a name="cmd:d"><b>@d</b></a> [~M,~T]</dt>
+    <dd>This denotes the start of a declarative macro and, therefore, the end
+      of a previous macro.</dd>
+  <dt><a name="cmd:h"><b>@h</b></a> [A]</dt>
+    <dd>The control text that follows, upto the next <b>@&gt;</b> will be
+      output by <b>teks</b>, but is ignored by <b>tang</b>.</dd>
+  <dt><a name="cmd:i"><b>@i</b></a> [~L,~A,~M,~T]</dt>
+    <dd>The control text upto the next <b>@&gt;</b> will be regarded by both
+      <b>teks</b> and <b>tang</b> as the filename of a file to be included at
+      that point. The file will be looked for in directories previously
+      specified to the program (see sections <a href="#subsubsec:tang">tang</a>
+      and <a href="#subsubsec:teks">teks</a>). Such a file is presumed to be in
+      Web 68 format and should contain sections as described above. It will be
+      read completely before both programs return to the current point in the
+      text. Whether <b>teks</b> includes the include file in the current output
+      is determined by an option when calling the program. The <b>@i</b>
+      command may also occur in an included file. However, circular calls will
+      not be honoured because both <b>tang</b> and <b>teks</b> keep a check on
+      which files have been included.</dd>
+  <dt><a name="cmd:m"><b>@m</b></a> [~M,~T]</dt>
+    <dd>This denotes the start of a multi-call macro and, therefore, the end of
+      a previous macro.</dd>
+  <dt><a name="cmd:lt"><b>@&lt;</b></a> [A,~T]</dt>
+    <dd>A module tag begins with this command followed by HTML text followed by
+      the concluding command <b>@&gt;</b>; the HTML text should not contain any
+      Web 68 commands other than <b>@@</b>, unless these commands appear in
+      snippets (see section <a href="#subsubsec:snippets">snippets</a>). The
+      module tag may be abbreviated after its first appearance in the Web 68
+      file, by giving any unique prefix followed by ... where the three dots
+      immediately precede the command <b>@&gt;</b>. No module tag should be the
+      prefix of another. Module tags may not appear in snippets, nor may they
+      appear in the definition part of a module (because the appearance of a
+      module tag signals the end of the definition part and the beginning of
+      the Algol 68 part).</dd>
+  <dt><a name="cmd:caret"><b>@^</b></a> [A,T]</dt>
+    <dd>The "control text" that follows, up to the next <b>@&gt;</b>, will be
+      inserted into the index together with the identifiers and indicants of
+      the Algol 68 program. The text will appear in normal type. For example,
+      to put "system dependencies" into the index, you can key @^system
+      dependencies@&gt; in each section that you want to index as system
+      dependent.</dd>
+  <dt><a name="cmd:dot"><b>@.</b></a> [A,T]</dt>
+    <dd>The "control text" that follows, will be inserted into the index in
+      <tt>typewriter</tt> type; see the rules for <b>@^</b> which is
+    analogous.</dd>
+  <dt><a name="cmd:bang"><b>@!</b></a> [A,T]</dt>
+    <dd>The section number in an index entry will be in colour if this command
+      immediately precedes the identifier or control text being indexed. This
+      convention is used to distinguish the sections where an identifier is
+      defined, or where it is explained in some special way, from the sections
+      where it is used. An identifier of length one will
+      not be indexed except for bold face entries. Predefined bold
+      symbols will be indexed if they are of type operator or mode.
+      An implicit <b>@!</b> is
+      inserted by <b>teks</b> after <b>@d</b> and <b>@m</b>; but you should
+      insert your own <b>@!</b> before the declarations of modes, denotations,
+      names, parameters and field selectors of <b>STRUCT</b>s and operators
+      that are not covered by this implicit convention, if you want to improve
+      the quality of the index that you get.</dd>
+  <dt><a name="cmd:eq"><b>@=</b></a> [A]</dt>
+    <dd>The "control text" that follows, upto the next <b>@&gt;</b>, will be
+      passed verbatim to the Algol 68 program.</dd>
+  <dt><a name="cmd:back"><b>@\</b></a> [A]</dt>
+    <dd>This command forces <b>tang</b> to break the line in the output
+      Algol 68 source program here. It is ignored by <b>teks</b>.</dd>
+  <dt><a name="cmd:stroke"><b>@/</b></a> [A]</dt>
+    <dd>This command forces <b>teks</b> to break the line at this point in the
+      output HTML source file. Line breaks are chosen automatically by HTML
+      depending on the size of a web browser's window, but sometimes you want
+      to force a line break so that the program is formatted according to
+      logical rather than visual criteria. You should only use this command
+      after an Algol 68 unit. It is ignored by <b>tang</b>.</dd>
+  <dt><a name="cmd:comma"><b>@,</b></a> [A]</dt>
+    <dd>This command inserts a non-breakable space into <b>teks</b>'s output;
+      it is ignored by <b>tang</b>.</dd>
+</dl>
+
+<p>The last two commands have no effect on the Algol 68 program output by
+<b>tang</b>; they merely help to improve the readability of the HTML-formatted
+Algol 68 that is output by <b>teks</b>. Although Web 68 allows you to
+override the automatic formatting provided by <b>teks</b>, your best strategy
+is not to worry about such things until you have seen what <b>teks</b> produces
+automatically, since you will probably need to make only a few corrections when
+you are fine-tuning your documentation.</p>
+
+<p>Because of the rules by which every section is broken into three parts, the
+commands <b>@a</b>, <b>@d</b> and <b>@m</b> are not allowed to occur once the
+Algol 68 part of a section has begun.</p>
+
+<h2><a name="subsec:notes">3.10 Notes</a></h2>
+
+<p>This section provides some additional features and warnings.</p>
+<ol>
+  <li>Lines containing HTML comments.<br>
+    The HTML output by <b>teks</b> is broken into lines containing not more
+    than 80 characters each. Any HTML comments are put on a new line, but its
+    embedded newlines will be observed.</li>
+  <li>The <b>teks</b> output contains embedded codes that cause HTML to indent
+    and break lines as necessary, depending on the fonts used and the page
+    width of the reader's browser. For best results it is wise to adhere to the
+    following restrictions:- 
+    <ol>
+      <li>Comments in Algol 68 text should appear only after units; that is,
+        after semicolons, after bold tags like <b>THEN</b> or <b>DO</b>, or
+        before bold tags like <b>END</b> or <b>OD</b>.</li>
+      <li>Don't enclose long Algol 68 texts in snippets, since the indentation
+        and line breaking codes are omitted when the snippet is translated from
+        Algol 68 to HTML. Stick to simple expressions or units.</li>
+    </ol>
+  </li>
+  <li>Comments and module tags are not permitted in snippets. After a <b>!</b>
+    signals the change from HTML text to Algol 68 text, the next <b>!</b> that
+    is not part of a string or control text ends the snippet.</li>
+  <li>Because an Algol 68 comment must begin and end with the same symbol, it
+    is quite possible to nest a comment delimited by <b>#</b> with a comment
+    delimited by <b>CO</b> or <i>vice versa</i>. At present, <b>tang</b> and
+    <b>teks</b> handle comments in different ways and it is necessary to
+    satisfy both conventions: <b>tang</b> ignores <b>!</b> characters entirely,
+    while <b>teks</b> uses them to switch between HTML text and Algol 68
+    text.</li>
+  <li>Algol 68 bold tags must appear entirely in uppercase letters in the
+    Web 68 file; otherwise their special nature will not be recognised by
+    <b>teks</b>. You could, for example, have an <i>end</i> identifier or macro
+    and it will not be confused with Algol 68's <b>END</b>.</li>
+  <li>Sometimes it is desirable to insert spacing into Algol 68 code that is
+    more general than the non-breaking space provided by <b>@,</b>. The
+    <b>@h</b> command can be used for this purpose; for example, @h  @&gt;
+    will leave two non-breaking spaces.</li>
+  <li><b>teks</b> and <b>tang</b> are both designed to work with a single input
+    file, called a Web 68 file. Any changes required in the Web 68 file
+    should be made with a version control system. There are no "change files"
+    corresponding to the original Web system created by Donald Knuth.</li>
+</ol>
+
+<h2><a name="subsec:errors">3.11 Errors</a></h2>
+
+<p>All the error messages emitted by the two programs can be found in the
+indexes of tags and indicants of their respective programs.</p>
+
+<h1><a name="sec:tangoutput">Example output of <b>tang</b></a></h1>
+
+<p>This is part of the <b>tang</b> program itself. Note that the
+	contents of the whole file, while compilable, are not intended for human
+	usage other than for debugging.</p>
+<pre>
+#1.1.1.2:# #1.1.1.3:# PROGRAM tang CONTEXT VOID USE standard#:1.1.1.3# BEGIN#
+3.1.1.3:# FILE monitorfile;PROC monitor =([]UNION(SIMPLOUT,PROC(REF FILE)VOID)s)
+BOOL:IF open(monitorfile,idf(monitorfile),standbackchannel)/=0 THEN FALSE ELSE
+ set(monitorfile,0 ,0 ,logicalend(monitorfile));put(monitorfile,s);close(
+monitorfile);TRUE FI; SKIP; SKIP;PROC startmonitor =(STRING fn)BOOL:IF establish
+(monitorfile,fn,standbackchannel,0 ,0 ,0 )/=0 THEN FALSE ELSE put(monitorfile,( 
+"Monitor log",newline, "===========",newline));close(monitorfile);TRUE FI;#:
+3.1.1.3 5.2.1.7:# PRIO FIND =6 ;OP FIND =(CHAR c,[]CHAR s)INT:(INT p;
+charinstring(c,p,s)|p|LWB s-1 );PRIO UPTO =5 ;OP UPTO =([]CHAR s,CHAR t)[]CHAR:
+IF s = ""THEN ""ELIF INT toix;charinstring(t,toix,s)THEN s[:toix-1 @LWB s]ELSE s
+</pre>
+</body>
+</html>

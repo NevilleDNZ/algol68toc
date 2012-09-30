@@ -226,11 +226,12 @@ INT zero pos = 0;
 
 PROC error text = (INT e)RVC:  CSTRTORVC posix strerror(e);
 
-PROC system error = (REF FILE f)VOID:
+PROC system error = (REF FILE f,[]CHAR where)VOID:
 (
-   RVC et=concat((MAKERVC "system error (",
+   RVC et=concat((MAKERVC "standard prelude (",MAKERVC where,
+                  MAKERVC ") system error = """,
                   CSTRTORVC posix strerror(errno),
-                  MAKERVC ") on ",idf OF book OF f,MAKERVC lf));
+                  MAKERVC """ on ",idf OF book OF f,MAKERVC lf));
    posix write(2,et,UPB et-1);
    exit(errno)
 ); #system error#
@@ -378,7 +379,7 @@ THEN
    IF (RVC(reidf OF book OF f) ISNT NIL) ANDTH reidf OF book OF f/=""
    THEN
       IF posix rename(Z idf OF book OF f,Z reidf OF book OF f) = -1
-      THEN system error(f)
+      THEN system error(f,"close")
       FI
    FI;
    ended OF state OF f:=TRUE
@@ -403,7 +404,7 @@ THEN
       (RVC(reidf OF book OF f) ISNT NIL)
    THEN
       IF posix rename(idf OF book OF f, reidf OF book OF f)=-1
-      THEN system error(f)
+      THEN system error(f,"lock")
       ELSE bsd chmod(reidf OF book OF f,0)
       FI
    ELSE bsd chmod (idf OF book OF f, 0)
@@ -503,20 +504,20 @@ FI; #sys open#
 
 PROC sys close = (REF FILE f) VOID:
 IF  posix close (sysfile OF f) < 0 # Cannot be called if f not open #
-THEN system error(f)
+THEN system error(f,"sys close")
 FI;
 
 
 PROC sys get buf = (REF FILE f, BUFFER buf)INT:
 IF INT r = posix read(sysfile OF f, buf, UPB buf); r < 0
-THEN system error(f);  SKIP
+THEN system error(f,"sys get buf");  SKIP
 ELSE last error OF state OF f := 0; r
 FI; #sys get buf#
 
 
 PROC sys put buf = (REF FILE f, BUFFER buf)INT:
 IF INT r = posix write (sysfile OF f, buf, UPB buf); r < 0
-THEN system error(f);  SKIP
+THEN system error(f,"sys put buf");  SKIP
 ELSE last error OF state OF f := 0; r
 FI; #sys put buf#
 
@@ -537,17 +538,17 @@ FI; #sys put ch#
 PROC sys set = (REF FILE f, INT p) BOOL:
 IF INT r = posix lseek (sysfile OF f, p, posix seek set);
    r < 0
-THEN system error(f);  SKIP
+THEN system error(f,"sys set");  SKIP
 ELSE last error OF state OF f := 0;  TRUE
 FI;
 
 PROC sys lpos = (REF FILE f)INT:
 IF INT curr = posix lseek (sysfile OF f, 0, posix seek cur); curr < 0
-THEN system error(f); SKIP
+THEN system error(f,"sys lpos"); SKIP
 ELIF INT end = posix lseek (sysfile OF f, 0, posix seek end); end < 0
-THEN system error(f); SKIP
+THEN system error(f,"sys lpos"); SKIP
 ELIF posix lseek (sysfile OF f, curr, posix seek set) < 0
-THEN system error(f); SKIP
+THEN system error(f,"sys lpos"); SKIP
 ELSE end
 FI; #sys lpos#
 
@@ -598,9 +599,9 @@ FILE stand out :=
     init state
 );
 
-FILE stand error :=
+FILE stand err :=
 (
-    (HEAP VECTOR[11]CHAR:="stand error", NIL,
+    (HEAP VECTOR[9]CHAR:="stand err", NIL,
      (TRUE, TRUE, FALSE, FALSE, FALSE)), #Cannot `set' on stand err#
     sys stderr,
     unbuf sysprocs,
@@ -608,8 +609,9 @@ FILE stand error :=
     init state
 );
 
-
 FILE stand back;
+
+REF FILE stand error = stand err;
 
 COMMENT
 BUFFERED TRANSPUT SYSPROCS
@@ -2118,10 +2120,33 @@ THEN
                         INT index:=0;
                         REF[]CHAR s:=LOC[256]CHAR;
                         WHILE
-                           IF k:=get ch(f);
-                              k ELEM string term OF io OF f
+                           IF k:=eof char;
+                              back ch OF state OF f /= -1 ANDTH NOT ended OF state OF f
+                           THEN
+                              k:=REPR back ch OF state OF f;
+                              back ch OF state OF f := -1
+                           ELIF UPB start OF buffer OF state OF f = 4096 & NOT put possible(f)
+                           THEN
+										IF k:= ensure buf space(f,1)[1];
+											valid OF buffer OF state OF f = 0
+										THEN ended OF state OF f:=TRUE
+										ELSE pos OF state OF f +:= 1;
+											bol OF state OF f:=(k=lf)
+										FI
+									ELIF (get ch OF sys OF f)(f,k) #ANDTH ch /= eof char#
+                           THEN #character read#
+										IF k /= eof char
+										THEN
+											pos OF state OF f +:= 1;
+											bol OF state OF f:=(k=lf)
+										FI
+                           ELIF (logical file mended OF io OF f)(f)
+                           THEN k:=get ch(f) #try again#
+                           ELSE transput error(f,logical file end not mended); SKIP
+                           FI;
+                           IF k ELEM string term OF io OF f & NOT ended OF state OF f
                            THEN back ch(f, k); FALSE
-                           ELSE TRUE
+                           ELSE NOT ended OF state OF f
                            FI
                         DO
                            IF index = UPB s
@@ -2137,6 +2162,17 @@ THEN
             END #simplin#
       ESAC #x[i]#
    OD
+ELIF opened OF state OF f
+			ANDTH
+	get possible OF type OF book OF f
+			ANDTH
+		ended OF state OF f
+THEN
+   ended OF state OF f:=FALSE;
+	IF (logical file mended OF io OF f)(f)
+	THEN get(f,x) #try again#
+	ELSE transput error(f,logical file end not mended); SKIP
+	FI
 FI; #get#
 
 PROC put = (REF FILE f, []UNION(SIMPLOUT,PROC(REF FILE)VOID) x) VOID:
@@ -2464,7 +2500,7 @@ establish, open, create, close, scratch, lock,
 reset, set,
 no file end, ignore value error, ignore char error,
 
-stand in, stand out, stand error, stand back,
+stand in, stand out, stand err, stand error, stand back,
 kbd channel, arg channel, env channel, mem channel,
 accept, client socket channel, server socket channel,
 stand in channel, stand out channel, stand back channel,

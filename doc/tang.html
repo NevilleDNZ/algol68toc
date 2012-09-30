@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<!-- copyright (c) 2013 by Sian Mountbatten <poenikatu@fastmail.co.uk -->
+<meta name="generator" content="Epsilon 13.12" />
+<meta name="revised" content="sian,2013/03/10" />
+<meta name="keywords" content="tang,Web 68,Algol 68" />
+<meta name="description" content="" />
+<meta name="author" content="Sian Mountbatten" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>tang</title>
+<style type="text/css">
+p {
+   font-family: "Times New Roman";
+   text-align: justify;
+}
+
+li {
+   font-family: "Times New Roman";
+   text-align: justify;
+}
+
+dd {
+   font-family: "Times New Roman";
+   text-align: justify;
+}
+
+dt.r {color:red;}
+dt.g {color:green;}
+
+span.r {color:red;}
+span.g {color:green;}
+</style>
+</head>
+
+<body>
+
+<h1>Name</h1>
+
+<p><b>tang</b> - preprocess a Web 68 file</p>
+
+<h1>Summary</h1>
+
+<pre>
+<b>tang</b> [-d] [-e] [-h] [-V] [-v] [-wdir] tang-file
+</pre>
+
+<h1>Description</h1>
+
+<p><b>tang</b> extracts the underlying Algol 68 code from a Web 68
+file. The output is suitable for compilation.</p>
+
+<p>The Web 68 file is arbitrarily broken into lines. Because
+<b>tang</b> regards a linefeed character as a space, this means that
+the meaning of the input is independent of its position. The meaning of
+text in a Web 68 file is controlled by Web 68 commands. See the
+<a href="./Web68man.html">Web 68 manual</a> for further details.</p>
+
+<p><b>tang</b> takes the following options:</p>
+<ul>
+   <li><b>-d</b>: switch on debugging. Output to tang.dbg</li>
+   <li><b>-e</b>: output SALTU instead of SKIP</li>
+   <li><b>-h</b>: output a concise usage message and exit</li>
+   <li><b>-V</b>: do not output comments to the Algol 68 output</li>
+   <li><b>-v</b>: output the version and exit</li>
+   <li><b>-wdir</b>: add dir to the search list for Web 68 include files</li>
+</ul>
+
+</body>
+
+</html>

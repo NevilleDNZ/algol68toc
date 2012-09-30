@@ -1,0 +1,6 @@
+latex pame >latex.log
+latex pame >latex.log
+makeindex -o pame.index -s pame.ist pame.idx
+./pame.sh
+latex pame >latex.log
+latex pame >latex.log

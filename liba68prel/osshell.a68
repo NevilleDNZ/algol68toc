@@ -45,6 +45,7 @@ COMMENT
 13:06:94  33.001  ELLA  NewConFig Entered in new config system previous version
                                   number  32.006 
 29:03:95  34.002  ELLA  Modcprght Change copyright header
+28:01:13  ??.???  Sian Mountbatten 
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -244,17 +245,25 @@ END;
 }
 
 { prelude must be kept }
+CO The line before #define... and the #define itself was inserted by Sian Mountbatten
+   on 2013-01-28 19:57:27
+   The original #define line was:
+    "#define A_prelude(argc,argv) A_argc=argc; A_argv = argv"; CO
 INT prelude =
   ALIEN "A_prelude"
         "extern int A_argc;"
         "extern char **A_argv;"
-        "#define A_prelude(argc,argv) A_argc=argc; A_argv = argv";
+        "extern char **A_envp;"
+        "#define A_prelude(argc,argv,envp) A_argc=argc; A_argv = argv; A_envp = envp";
 
 { but don't keep this ... }
+CO The line after the "char **A_argv line" was inserted by Sian Mountbatten on
+   2013-01-28 20:04:56 CO
 INT define_argc_argv =
   ALIEN "dummy"
         "int A_argc = 0;"
-        "char **A_argv = NULL;";
+        "char **A_argv = NULL;"
+	"char **A_envp = NULL;";
 
 BOOL args_initialised := FALSE;
 REF VECTOR [] RVC  arguments:= LOC VECTOR [1] RVC:= LOC STRUCT 4 CHAR:= "Anon";

@@ -1,0 +1,282 @@
+chapter10.tex:8:\newcommand{\co}{$\;\Longrightarrow\;$} % Used in coercion displays
+chapter10.tex:327:      \hbox{\tt INT}\\
+chapter10.tex:330:  \right\}\quad\Longrightarrow\quad\hbox{\tt UNION(INT,REAL)}$$
+chapter10.tex:339: \hbox{\tt INT}\,&\Longrightarrow\,&\hbox{\tt REAL}\\
+chapter10.tex:340: \hbox{\tt REAL}\,&\Longrightarrow\,&\hbox{\tt COMPL}
+chapter10.tex:1320:\item \ %
+chapter10.tex:1328:\item \ %
+chapter10.tex:1336:\item \ %
+chapter11.tex:83:1101&=1\times2^3+1\times2^2+0\times2^1+1\times2^0\\
+chapter11.tex:84:    &=8+4+0+1\\
+chapter11.tex:85:    &=13\,\hbox{(thirteen, in decimal)}
+chapter11.tex:90:      $+$ &0&1\\*[2pt] \hline
+chapter11.tex:91:      0   &0&1\\
+chapter11.tex:92:      1   &1&10\\*[2pt] \hline
+chapter11.tex:95:      $\times$ &0&1\\*[2pt] \hline
+chapter11.tex:96:      0        &0&0\\
+chapter11.tex:97:      1        &0&1\\*[2pt] \hline
+chapter11.tex:137:10011011_2&=&1\times2^7+1\times2^4+1\times2^3+1\times2^1+1\times2^0\\
+chapter11.tex:138:          &=&128+16+8+2+1\,\hbox{(in decimal)}\\
+chapter11.tex:148:    135&=&87_{16}\\
+chapter11.tex:149:       &=&2013_4\\
+chapter11.tex:216:94_{10}&=&5\times16^1+14\times16^0\\
+chapter11.tex:221:13_{10}&=&1\times2^3+1\times2^2+0\times2^1+1\times2^0\\
+chapter11.tex:225:\item $1111\,1001_2\Rightarrow16$ \subans \begin{eqnarray*}
+chapter11.tex:226:1111\,1001_2&=&\hbox{f}9_{16}
+chapter11.tex:230:3\hbox{e}1_{16}&=&3\times16^2+\hbox{e}\times16^1+1\times16^0\\
+chapter11.tex:231:               &=&3\times256+14\times16+1\\
+chapter11.tex:232:               &=&768+224+1\\
+chapter11.tex:236:\item $2\hbox{c}_{16}\Rightarrow2$ \subans $2\hbox{c}_{16}=0010\,1100_2$.
+chapter11.tex:239:10101_2&=&1\times2^4+1\times2^2+1\times2^0\\
+chapter11.tex:240:       &=&16+4+1\\
+chapter11.tex:322:Left Operand&Right Operand&\tt AND&\tt OR\\*[2pt] \hline
+chapter11.tex:323:      0     &       0     &    0  &   0\\*
+chapter11.tex:324:      0     &       1     &    0  &   1\\*
+chapter11.tex:325:      1     &       0     &    0  &   1\\*
+chapter11.tex:326:      1     &       1     &    1  &   1\\*[2pt] \hline
+chapter11.tex:409:      \\ \hline\hline
+chapter11.tex:411:      \\ \hline
+chapter11.tex:412:    \texttt{SHL}&\ 4&\texttt{9abc def0}\\
+chapter11.tex:413:    \texttt{SHL}&-4&\texttt{089a bcde}\\
+chapter11.tex:414:    \texttt{SHR}&\ 4&\texttt{089a bcde}\\
+chapter11.tex:416:      \\ \hline
+chapter11.tex:573:\ans \ %
+chapter11.tex:818:\verb|(3,-2,4)| to your name. \ans \ \newline%
+chapter11.tex:1055:\indent\=\verb|x or y|\qquad\=\kill
+chapter11.tex:1056:\+\verb|xx|\>\verb|REF REF INT|\\
+chapter11.tex:1057:\verb|x or y|\>\verb|PROC REF INT|\\
+chapter11.tex:1058:\verb|NIL|\>\verb|REF whatever|\\
+chapter11.tex:1059:\verb|x|\>\verb|REF INT|\\
+chapter11.tex:1060:\verb|SKIP|\>who knows?\\
+chapter11.tex:1061:\verb|yy|\>\verb|REF REF INT|
+chapter11.tex:1065:\indent\=\verb|x or y|\qquad\=\qquad\=\kill
+chapter11.tex:1066:\+\+\+\verb|REF REF INT|\\
+chapter11.tex:1067:\verb|REF INT|\\
+chapter11.tex:1068:\verb|REF whatever|\\
+chapter11.tex:1069:\verb|REF INT|\\
+chapter11.tex:1070:who knows?\\
+chapter11.tex:1393:\indent \ans \ %
+chapter11.tex:1407:errors (no output will be produced). \ans \ %
+chapter11.tex:1683:Who ate sour apples and died.\protect\\
+chapter11.tex:1684:The apples fermented inside the lamented\protect\\
+chapter11.tex:1791:memory before printing).\ans \ \newline%
+chapter12.tex:49:was written by \hx{ George P\'olya}{Polya@P\'olya, George}(see
+chapter12.tex:257:which can be stored for a binary mantissa ({\it not\/} the number of
+chapter12.tex:394:occupies more than 30\% of the whole development time.  If you write
+chapter12.tex:873:\quad\=tabstops\quad\=FFTFFTFFTFFTFFTFFTFFTFFT$\ldots$\\
+chapter12.tex:874:\>line(ln)\>\verb*|    |T\\
+chapter12.tex:875:\>in line\>$\rightarrow$\verb*| THEN ch:="A"|\\
+chapter12.tex:876:\>op\>$\not1\not2\not3\not4\not5$ 6\\
+chapter12.tex:877:\>i\>$\not1\not2$ 3\\
+chapter12.tex:878:\>c\>$\not\rightarrow\not\hbox{\verb*| |}$ T
+chapter13.tex:21:\Chapter{Standard Prelude}{chapxiii}\catcode`\%=12
+chapter13.tex:184:\item \hxtt{SHORT INT short max int}{short max int} (RR) $[32\,767]$ \newline
+chapter13.tex:186:\item \hxtt{INT max int}{max int} (RR) $[2\,147\,483\,647]$ \newline
+chapter13.tex:189:$[9\,223\,372\,036\,854\,775\,807]$ \newline
+chapter13.tex:191:\item \hxtt{SHORT REAL short min real}{short min real} $[0.117\,55e-37]$ \newline
+chapter13.tex:194:\item \hxtt{SHORT REAL short max real}{short max real} (RR) $[0.340\,28e+39]$ \newline
+chapter13.tex:197:$[1.192\,09e-7]$\newline
+chapter13.tex:201: $[0.197\,626\,258\,336\,50e-322]$\hfil \newline
+chapter13.tex:205: (RR) $[0.179\,769\,313\,486\,23e+309]$\hfil\newline
+chapter13.tex:208: (RR) $[0.222\,044\,604\,925\,031e-15]$\hfil\newline
+chapter13.tex:298:\item \hxtt{REAL pi}{pi} $[3.141\,592\,653\,589\,79]$
+chapter13.tex:299:\item \hxtt{REAL log2}{log2} $[0.301\,029\,995\,663\,981]$\newline
+chapter13.tex:318:set, for example, will display `\'a'. The environment enquiries in
+chapter13.tex:662:Yields $\sqrt{\mbox{\texttt{RE}}\,a^2+\,\mbox{\texttt{IM}}\,a^2}$.
+chapter13.tex:877:  Left operand    &Right operand &Yield\\ \hline
+chapter13.tex:878:  \texttt{REF L INT}   &\texttt{L INT}     &\texttt{REF L INT}\\
+chapter13.tex:879:  \texttt{REF L REAL}  &\texttt{L INT}     &\texttt{REF L REAL}\\
+chapter13.tex:880:  \texttt{REF L COMPL} &\texttt{L INT}     &\texttt{REF L COMPL}\\
+chapter13.tex:881:  \texttt{REF L REAL}  &\texttt{L REAL}    &\texttt{REF L REAL}\\
+chapter13.tex:882:  \texttt{REF L COMPL} &\texttt{L REAL}    &\texttt{REF L COMPL}\\
+chapter13.tex:883:  \texttt{REF L COMPL} &\texttt{L COMPL}   &\texttt{REF L COMPL}\\
+chapter13.tex:884:  \texttt{REF STRING}  &\texttt{CHAR}      &\texttt{REF STRING}\\
+chapter13.tex:885:  \texttt{REF STRING}  &\texttt{STRING}    &\texttt{REF STRING}\\ \hline
+chapter13.tex:890:  Left operand    &Right operand &Yield\\ \hline
+chapter13.tex:891:  \texttt{STRING}      &\texttt{REF STRING}&\texttt{REF STRING}\\
+chapter13.tex:892:  \texttt{CHAR}        &\texttt{REF STRING}&\texttt{REF STRING}\\ \hline
+chapter13.tex:898:  Left operand    &Right operand &Yield\\ \hline
+chapter13.tex:899:  \texttt{REF L INT}   &\texttt{L INT}     &\texttt{REF L INT}\\
+chapter13.tex:900:  \texttt{REF L REAL}  &\texttt{L INT}     &\texttt{REF L REAL}\\
+chapter13.tex:901:  \texttt{REF L COMPL} &\texttt{L INT}     &\texttt{REF L COMPL}\\
+chapter13.tex:902:  \texttt{REF L REAL}  &\texttt{L REAL}    &\texttt{REF L REAL}\\
+chapter13.tex:903:  \texttt{REF L COMPL} &\texttt{L REAL}    &\texttt{REF L COMPL}\\
+chapter13.tex:904:  \texttt{REF L COMPL} &\texttt{L COMPL}   &\texttt{REF L COMPL}\\ \hline
+chapter13.tex:909:  Left operand    &Right operand &Yield\\ \hline
+chapter13.tex:910:  \texttt{REF L INT}   &\texttt{L INT}     &\texttt{REF L INT}\\
+chapter13.tex:911:  \texttt{REF L REAL}  &\texttt{L INT}     &\texttt{REF L REAL}\\
+chapter13.tex:912:  \texttt{REF L COMPL} &\texttt{L INT}     &\texttt{REF L COMPL}\\
+chapter13.tex:913:  \texttt{REF L REAL}  &\texttt{L REAL}    &\texttt{REF L REAL}\\
+chapter13.tex:914:  \texttt{REF L COMPL} &\texttt{L REAL}    &\texttt{REF L COMPL}\\
+chapter13.tex:915:  \texttt{REF L COMPL} &\texttt{L COMPL}   &\texttt{REF L COMPL}\\
+chapter13.tex:916:  \texttt{REF STRING}  &\texttt{INT}       &\texttt{REF L COMPL}\\ \hline
+chapter13.tex:921:  Left operand    &Right operand &Yield\\ \hline
+chapter13.tex:922:  \texttt{REF L REAL}  &\texttt{L INT}     &\texttt{REF L REAL}\\
+chapter13.tex:923:  \texttt{REF L REAL}  &\texttt{L REAL}    &\texttt{REF L REAL}\\
+chapter13.tex:924:  \texttt{REF L COMPL} &\texttt{L INT}     &\texttt{REF L COMPL}\\
+chapter13.tex:925:  \texttt{REF L COMPL} &\texttt{L REAL}    &\texttt{REF L COMPL}\\
+chapter13.tex:926:  \texttt{REF L COMPL} &\texttt{L COMPL}   &\texttt{REF L COMPL}\\ \hline
+chapter13.tex:941:\item \hx{\texttt{OP \&* = (REAL r,INT e)REAL:}}{&*@\texttt{\&*}}\newline
+chapter13.tex:1087:sighup  & sigstkflt & sigint  & sigchld \\ \hline
+chapter13.tex:1088:sigquit & sigcont   & sigill  & sigstop \\ \hline
+chapter13.tex:1089:sigtrap & sigtstp   & sigabrt & sigttin \\ \hline
+chapter13.tex:1090:sigbus  & sigttou   & sigfpe  & sigurg  \\ \hline
+chapter13.tex:1091:sigkill & sigxcpu   & sigusr1 & sigxfsz \\ \hline
+chapter13.tex:1092:sigsegv & sigvtalrm & sigusr2 & sigprof \\ \hline
+chapter13.tex:1093:sigpipe & sigwinch  & sigalrm & sigio   \\ \hline
+chapter13.tex:1094:sigterm & sigpwr    &         &         \\ \hline
+chapter13.tex:1635:\item \hxtt{PROC garbage\_collect = VOID:}{garbage\_collect}\newline
+chapter13.tex:1638:\item \hxtt{PROC disable\_garbage\_collector = VOID:}{disable\_garbage\_collector}\newline
+chapter13.tex:1640:\item \hxtt{PROC enable\_garbage\_collector = VOID:}{enable\_garbage\_collector}\newline
+chapter13.tex:1642:\item \hxtt{PROC gc\_param = (VECTOR[]CHAR cmd,INT v)INT:}{gc\_param}\newline
+chapter13.tex:1673:environment string \ixtt{A68\_GC\_POLICY}.
+chapter13.tex:1675:\item \hxtt{PROC get\_gc\_param = (VECTOR[]CHAR param)INT:}{get\_gc\_param}\newline
+chapter13.tex:1678:\item \hxtt{PROC set\_gc\_params = (VECTOR[]GCPARAM gcpar)VOID:}{set\_gc\_params}\newline
+chapter13.tex:1708:  \ixtt{physical file end not mended}&255\\
+chapter13.tex:1709:  \ixtt{logical file end not mended}&254\\
+chapter13.tex:1710:  \ixtt{stand in redirected}&253\\
+chapter13.tex:1711:  \ixtt{environment string unset}&252\\
+chapter13.tex:1712:  \ixtt{environment string estab err}&251\\
+chapter13.tex:1713:  \ixtt{estab invalid parameters}&250\\
+chapter13.tex:1714:  \ixtt{open invalid parameters}&249\\
+chapter13.tex:1715:  \ixtt{no program args}&248\\
+chapter13.tex:1716:  \ixtt{value error not mended}&247\\ \hline
+chapter13.tex:1749:  establish\\
+chapter13.tex:1750:  open\\
+chapter13.tex:1751:  create\\
+chapter13.tex:1752:  close\\
+chapter13.tex:1753:  lock\\
+chapter13.tex:1754:  scratch\\
+chapter13.tex:1755:  set\\
+chapter13.tex:1756:  logical end\\
+chapter13.tex:1757:  reidf\\ \hline
+chapter13.tex:1769:  \multicolumn{2}{|c|}{stand in channel}\\ \hline
+chapter13.tex:1770:  bin possible & \texttt{TRUE}\\
+chapter13.tex:1771:  put possible & \texttt{FALSE}\\
+chapter13.tex:1772:  get possible & \texttt{TRUE}\\
+chapter13.tex:1773:  set possible & \texttt{TRUE}\\
+chapter13.tex:1774:  reidf possible & \texttt{FALSE}\\ \hline
+chapter13.tex:1782:  \multicolumn{2}{|c|}{stand out channel}\\ \hline
+chapter13.tex:1783:  bin possible & \texttt{TRUE}\\
+chapter13.tex:1784:  put possible & \texttt{TRUE}\\
+chapter13.tex:1785:  get possible & \texttt{FALSE}\\
+chapter13.tex:1786:  set possible & \texttt{TRUE}\\
+chapter13.tex:1787:  reidf possible & \texttt{FALSE}\\ \hline
+chapter13.tex:1795:  \multicolumn{2}{|c|}{stand back channel}\\ \hline
+chapter13.tex:1796:  bin possible & \texttt{TRUE}\\
+chapter13.tex:1797:  put possible & \texttt{TRUE}\\
+chapter13.tex:1798:  get possible & \texttt{TRUE}\\
+chapter13.tex:1799:  set possible & \texttt{TRUE}\\
+chapter13.tex:1800:  reidf possible & \texttt{TRUE}\\ \hline
+chapter13.tex:1842:\multicolumn{2}{|c|}{\texttt{arg channel}}\\ \hline
+chapter13.tex:1843:  bin possible & \texttt{FALSE} \\
+chapter13.tex:1844:  put possible & \texttt{FALSE} \\
+chapter13.tex:1845:  get possible & \texttt{TRUE} \\
+chapter13.tex:1846:  set possible & \texttt{TRUE} \\
+chapter13.tex:1847:  reidf possible & \texttt{FALSE}\\ \hline
+chapter13.tex:1876:  \multicolumn{2}{|c|}{\texttt{env channel}}\\ \hline
+chapter13.tex:1877:  bin possible & \texttt{FALSE} \\
+chapter13.tex:1878:  put possible & \texttt{FALSE} \\
+chapter13.tex:1879:  get possible & \texttt{TRUE} \\
+chapter13.tex:1880:  set possible & \texttt{TRUE} \\
+chapter13.tex:1881:  reidf possible & \texttt{FALSE}\\ \hline
+chapter13.tex:1923:  \multicolumn{2}{|c|}{\texttt{kbd channel}}\\ \hline
+chapter13.tex:1924:  bin possible & \texttt{TRUE} \\
+chapter13.tex:1925:  put possible & \texttt{FALSE} \\
+chapter13.tex:1926:  get possible & \texttt{TRUE} \\
+chapter13.tex:1927:  set possible & \texttt{FALSE} \\
+chapter13.tex:1928:  reidf possible & \texttt{FALSE}\\ \hline
+chapter13.tex:1959:  \multicolumn{2}{|c|}{\texttt{mem channel}}\\ \hline
+chapter13.tex:1960:  bin possible & \texttt{TRUE} \\
+chapter13.tex:1961:  put possible & \texttt{TRUE} \\
+chapter13.tex:1962:  get possible & \texttt{TRUE} \\
+chapter13.tex:1963:  set possible & \texttt{TRUE} \\
+chapter13.tex:1964:  reidf possible & \texttt{FALSE}\\ \hline
+chapter13.tex:1997:  \multicolumn{2}{|c|}{\texttt{client/server socket channel}}\\ \hline
+chapter13.tex:1998:  bin possible & \texttt{TRUE}\\
+chapter13.tex:1999:  put possible & \texttt{TRUE}\\
+chapter13.tex:2000:  get possible & \texttt{TRUE}\\
+chapter13.tex:2001:  set possible & \texttt{FALSE}\\
+chapter13.tex:2002:  reidf possible & \texttt{FALSE}\\ \hline
+chapter13.tex:2219:\item[\texttt{REF CHAR}]\ \newline
+chapter13.tex:2225:\item[\texttt{REF STRING}]\ \newline
+chapter13.tex:2231:\item[\texttt{REF BOOL}]\ \newline
+chapter13.tex:2236:\item[\texttt{REF L BITS}]\ \newline
+chapter13.tex:2240:\item[\texttt{REF L INT}]\ \newline
+chapter13.tex:2251:\item[\texttt{REF L REAL}]\ \newline
+chapter13.tex:2259:\verb|"Ee\"|. The exponent may have a sign. Absence of a sign is
+chapter13.tex:2265:\item[\texttt{REF L COMPL}]\ \newline
+chapter13.tex:2398:(the character \verb|"e"| or \verb|"E"| or \verb|"\"| has been read),
+chapter13.tex:2564:\catcode`\%=14
+chapter1.tex:150:$2\,147\,483\,647$, and the
+chapter1.tex:152:is $-2\,147\,483\,647$ (the first
+chapter1.tex:361:   "a"  "A"  "3"  ";"  "\"  "'"  """"  " "
+chapter1.tex:509:\item Given that light travels $2.997\,925\times10^8$ metres per
+chapter1.tex:846:\indent\ans \ %
+chapter2.tex:301:\ixtt{OVER}.  The formula \texttt{7 \%\ 3} yields the value \verb|2|,
+chapter2.tex:302:and the formula \texttt{-7 \%\ 3} yields the value \verb|-2|.  The
+chapter3.tex:339:\item \ %
+chapter3.tex:536:\ans \ %
+chapter3.tex:873:from \verb|1| to \verb|25|. \ans \ %
+chapter3.tex:887:backwards, all on one line. \ans \ %
+chapter4.tex:283:\item \ %
+chapter4.tex:583:containing \verb|AND| is treated {\it as a whole\/} as the right-hand
+chapter4.tex:598:otherwise. \ans \ %
+chapter4.tex:608:operator \ixtt{MOD} for the test. \ans \ %
+chapter4.tex:841:the sign of a number of mode \verb|REAL|. \ans \ %
+chapter4.tex:907:than~\verb|1000| and \verb|"Too big"| otherwise. \ans \ %
+chapter4.tex:921:\ans \ %
+chapter5.tex:1000:   \hbox{\tt a PLUSAB b}&\equiv&\hbox{\enskip a:=a+b}\\
+chapter5.tex:1016:row on a separate line. Use a \verb|FOR| loop clause.  \ans \ %
+chapter5.tex:1038:followed by a space, all on one line. \ans \ %
+chapter5.tex:1124:and product. \ans \ %
+chapter5.tex:1144:reading until a line of zero length is read. \ans \ %
+chapter5.tex:1207:\ans \ %
+chapter5.tex:1215:\ans \ %
+chapter5.tex:1291:positive integers. \ans \ %
+chapter5.tex:1325:just erroneous results---see section \hyref{stan-othop}). \ans \ %
+chapter5.tex:1476:\verb|-1| is read. Display the average on the screen. \ans \ %
+chapter6.tex:360:\ans \ %
+chapter6.tex:634:      &\multicolumn{2}{c|}{Occurrences}\\ \hline
+chapter6.tex:635:Line  &Applied&Defining\\ \hline
+chapter6.tex:636: 5    &\texttt{T p}&2\\
+chapter6.tex:637: 5    &\texttt{T c}&3\\
+chapter6.tex:638: 8    &\texttt{T 4}&2\\
+chapter6.tex:639: 8    &\texttt{T q}&7\\
+chapter6.tex:640:10    &\texttt{T REPR 2}&3\\
+chapter6.tex:641:12    &\texttt{T c}&3\\
+chapter6.tex:642:12    &\texttt{T q}&2\\ \hline
+chapter6.tex:820:would yield $2&#XB7;058\,823\,529\,411\,76$. Now consider the formula
+chapter6.tex:838:$1.714\,285\,714$.
+chapter6.tex:1180:\ans \ %
+chapter6.tex:1195:the multiple should be \verb|REF[,]CHAR|. \ans \ %
+chapter6.tex:1342:(that is, its name). \ans \ %
+chapter6.tex:1353:the mode \verb|VOID|. \ans \ %
+chapter6.tex:1367:\ans \ %
+chapter6.tex:1524:\verb|[]CHAR|. \ans \ %
+chapter6.tex:1536:as the procedure identifiers. \ans \ %
+chapter6.tex:1580:throw in $10\,000$ such throws:
+chapter6.tex:1614:which yields $-0.416\,146\,836\,5$. We could also declare a procedure
+chapter6.tex:1723:two-dimensional row-of-reals parameter. \ans \ %
+chapter6.tex:1741:phrase \verb|pr(2)[2]|. \ans \ %
+chapter6.tex:1747:keyboard. \ans \ %
+chapter7.tex:130:\verb|s| and \textit{its\/} field selectors are \verb|i| and \verb|j|.
+chapter7.tex:300:\verb|p OF st| in the last question. \ans \ %
+chapter7.tex:446:\ans \ %
+chapter7.tex:456:\ans \ %
+chapter7.tex:552:operand: \verb|ARG z| would yield $0.982\,793\,723\,2$, lying in the
+chapter7.tex:947:\ans \ %
+chapter8.tex:258:given in the text.  \ans \ %
+chapter8.tex:393:\ans \ %
+chapter8.tex:419:cases. \ans \ %
+chapter8.tex:461:operand. \ans \ %
+chapter9.tex:231:\ans \ %
+chapter9.tex:259:\ans \ %
+chapter9.tex:383:\verb|result|. \ans \ %
+chapter9.tex:545:line by itself. \ans \ %
+chapter9.tex:1086:\ans \ %
+chapter9.tex:1117:\ans \ %
+chapter9.tex:1188:program with a useful message if not. \ans \ %
+chapter9.tex:1381:width of 12. \ans \ %
+chapter9.tex:1859:Continue until zero is read. \ans \ %
+chapter9.tex:1958:        ); \#get str\#
