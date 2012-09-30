@@ -18,7 +18,7 @@ You will need the following programs:-
        cp, mv, rm, find, sh
 
 The build was successful with Debian GNU/Linux using a 
-3.2-9.towo.2-siduction-686 kernel.
+3.2.0-2-686-pae kernel.
 
 3. Header files
 
@@ -30,9 +30,9 @@ Note that the build uses /usr/include/linux.
 
 Issue the commands:-
 	export A68_NAMESEED=nameseed (for bash or sh)
-	make distclean
-	fakeroot debian/rules binary
-to construct the Debian binary package.
+	make dist-clean
+	dpkg-buildpackage -F
+to construct the Debian binary package and source tarball.
 
 5. Amending the source
 
@@ -57,4 +57,4 @@ However, the licence for the QAD Standard Prelude is the GNU GPL
 
 Dr Sian Mountbatten
 Inverness, Scotland
-March 2012
+September 2012

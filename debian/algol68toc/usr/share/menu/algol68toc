@@ -1,2 +1,0 @@
-?package(algol68toc):needs="text" section="Applications/devel"\
-  title="algol68toc" command="/usr/bin/a68toc"

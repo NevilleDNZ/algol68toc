@@ -4,8 +4,8 @@
 #
 .PHONY : install
 
-all : reset.a68 ca
+all : resetseed ca
 	echo "Nothing to be done for all"
 
 install :
-	$(INSTALLPROG) -p reset.a68 ca $(BINDIR)
+	$(INSTALLPROG) -p resetseed ca $(BINDIR)

@@ -24,7 +24,7 @@ A68_DIRS=-dir $(A68_ROOT) -dir $(LPD) -dir .
 A68_LIBS=-L$(LPD) -la68prel -L$(LBD) -la68
 
 #------------ Rules --------------
-.PHONY : install
+.PHONY : install clean
 
 all : a68toc
 
@@ -36,3 +36,6 @@ Translate : $(a68toc_c) a68toc.c
 
 install :
 	$(INSTALLPROG) -p -s a68toc $(BINDIR)
+
+clean :
+	$(RM) -v $(a68toc_o) a68toc

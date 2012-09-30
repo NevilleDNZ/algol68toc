@@ -14,22 +14,21 @@ include $(TOP)/Algol68.mk
 
 .PHONY: clean install
 
-all : liba68s.a
+all : liba68s.a nameseed
 
 liba68s.a : $(ACD)/a68config.o $(qad_o)
 	ar rv $@ $^
 	ranlib $@
 
-Translate : remove nameseed $(qad_c)
-
-clean :
-	rm -f nameseed $(qad_o) liba68s.a
-
 nameseed : rctr
 	cp rctr nameseed
 
+Translate : remove nameseed $(qad_c)
+
+clean :
+	$(RM) -v nameseed $(qad_c) $(qad_o) *.m liba68s.a
+
 remove : clean
-	rm -f $(qad_c)
 
 install :
 	$(INSTALLDATA) -p liba68s.a $(LIBDIR)

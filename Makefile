@@ -1,11 +1,10 @@
 #!/usr/bin/make
 
-# $Id: Makefile,v 1.12 2012/01/04 17:18:45 sian Exp $
 #------------ Debug value -------------
 DEBUG=no
 #------------ Debian values -----------
 DESTDIR=
-VERSION=1.6
+VERSION=1.15
 NODEPENDS=
 PKGDIR=$(DESTDIR)/usr/share/algol68toc
 DOCDIR=$(DESTDIR)/usr/share/doc/algol68toc
@@ -14,6 +13,7 @@ LIBDIR=$(DESTDIR)/usr/lib
 INFODIR=$(DESTDIR)/usr/share/info
 MANDIR=$(DESTDIR)/usr/share/man/man1
 INCDIR=$(DESTDIR)/usr/include/algol68
+APPDIR=$(DESTDIR)/usr/share/applications
 
 #------------- Absolute directories ------------
 TOP:=$(shell pwd)
@@ -53,7 +53,6 @@ CTFLAGS=-v -uname seedfile -staredit $(CTSTAR)
 QADFLAGS=-v -s -uname seedfile -staredit $(QADSTAR)
 
 #------------ Programs -----------
-CC=gcc
 ALGOL=$(CTD)/a68toc
 SHELL=/bin/sh
 INSTALL=$(shell which install) -g root -o root
@@ -69,18 +68,18 @@ export
 all : c-stamp q-stamp d-stamp
 
 Translate : remove nameseed
-	for d in $(ADIRS); do make -C $$d Translate; done
+	-for d in $(ADIRS); do $(MAKE) -C $$d Translate; done
 
 c-stamp:
-	-for d in $(CDIRS); do make -C $$d; done
+	-for d in $(CDIRS); do $(MAKE) -C $$d; done
 	touch c-stamp
 
 q-stamp : nameseed
-	-make -C $(QAD)
+	-$(MAKE) -C $(QAD)
 	touch q-stamp
 
 d-stamp :
-	-make -C $(DOD)
+	-$(MAKE) -C $(DOD)
 	touch d-stamp
 
 install : c-stamp q-stamp d-stamp
@@ -92,44 +91,36 @@ install : c-stamp q-stamp d-stamp
 	$(INSTALL) -m 755 -d $(INFODIR)
 	$(INSTALL) -m 755 -d $(DOCDIR)
 	$(INSTALL) -m 755 -d $(DOCDIR)/examples
+	$(INSTALL) -m 755 -d $(DOCDIR)/pame
+	$(INSTALL) -m 755 -d $(APPDIR)
 	$(INSTALL) -m 755 -d $(MANDIR)
+	$(INSTALLDATA) -p README $(DOCDIR)
 	for d in include library $(ADIRS) $(DDIRS); do $(MAKE) -C $$d install; done
 
 info :
 	install-info --quiet $(INFODIR)/ctrans.info.gz
 
 uninstall :
-	-$(RM) -f $(BINDIR)/a68toc $(BINDIR)/reset.a68 $(BINDIR)/ca68
+	-$(RM) $(BINDIR)/a68toc $(BINDIR)/resetseed $(BINDIR)/ca
 	-install-info --quiet --remove $(INFODIR)/ctrans.info.gz
-	-$(RM) -rf -v $(PKGDIR) $(DOCDIR)
-	-$(RM) -f -v $(INFODIR)/ctrans.info.gz $(LIBDIR)/liba68.a $(LIBDIR)/liba68s.a \
-		$(MANDIR)/a68toc.1.gz $(MANDIR)/ca68.1.gz
+	-$(RM) -r $(PKGDIR) $(DOCDIR)
+	-$(RM) $(INFODIR)/ctrans.info.gz $(LIBDIR)/liba68.a $(LIBDIR)/liba68s.a \
+		$(MANDIR)/a68toc.1.gz $(MANDIR)/ca.1.gz
 
 dist-clean: clean
-	-$(RM) -f -v c-stamp q-stamp d-stamp
-	-$(RM) -v -rf DEBIAN debian/tmp debian/algol68toc
-	-$(RM) -f -v $(CTD)/a68toc $(LBD)/liba68.a $(LBD)/Afirst*.o \
-		$(QAD)/liba68s.a
+	-$(RM) -v c-stamp q-stamp d-stamp
+	-$(RM) -r DEBIAN debian/tmp debian/algol68toc
 
 nameseed : a68config/rctr liba68prel/rctr src/rctr qad/rctr
 	for d in $(ADIRS); do cp $$d/rctr $$d/nameseed; done
 
 remove :
-	for d in $(ADIRS); do rm -f $$d/*.c $$d/*.m; done
+	for d in $(ADIRS); do $(RM) $$d/*.c $$d/*.m; done
 
 clean:
-	find $(TOP) \( -name '*~' -o -name '*.asv' -o -name '*##' \
-		-o -name '*.gz' -o -name '*.a' -o -name '*.o' \) -exec $(RM) -v '{}' ';'
-	-$(RM) -f -v *-stamp $(LBD)/*.o src/a68toc $(CTD)/*.o \
-	doc/ctrans.aux doc/ctrans.cp doc/ctrans.cps \
-	doc/ctrans.fn doc/ctrans.fns doc/ctrans.ky doc/ctrans.kys \
-	doc/ctrans.log doc/ctrans.pg doc/ctrans.pgs doc/ctrans.toc \
-	doc/ctrans.tp doc/ctrans.tps doc/ctrans.vr doc/ctrans.vrs \
-	doc/rscompiler.aux doc/rscompiler.cp \
-	doc/rscompiler.fn doc/rscompiler.ky doc/rscompiler.log \
-	doc/rscompiler.pg doc/rscompiler.toc doc/rscompiler.tp doc/rscompiler.vr \
-	-for i in $(ADIRS); do $(RM) -fv $$i/*.o $$i/nameseed; done
-	-$(RM) -fv qad/*.[cm]
+	find $(TOP) \( -name '*~' -o -name '*.asv' -o -name '*##' \) \
+		-exec $(RM) -v '{}' ';'
+	-for d in $(ADIRS) $(DDIRS) library; do $(MAKE) -C $$d clean; done
 
 # $Log: Makefile,v $
 # Revision 1.12  2012/01/04 17:18:45  sian
