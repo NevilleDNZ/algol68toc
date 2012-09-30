@@ -4,7 +4,7 @@
 DEBUG=no
 #------------ Debian values -----------
 DESTDIR=
-VERSION=1.15
+VERSION=1.16
 NODEPENDS=
 PKGDIR=$(DESTDIR)/usr/share/algol68toc
 DOCDIR=$(DESTDIR)/usr/share/doc/algol68toc
@@ -29,10 +29,11 @@ EXD=$(TOP)/examples
 LBD=$(TOP)/library
 LPD=$(TOP)/liba68prel
 QAD=$(TOP)/qad
+TOD=$(TOP)/tools
 
 ADIRS=a68config liba68prel src qad
 CDIRS=library a68config liba68prel src
-DDIRS=doc data examples scripts
+DDIRS=doc data examples tools
 
 #------------- a68toc environment --------------
 A68_GC_POLICY:=1
@@ -43,8 +44,10 @@ A68_LIB:=$(ACD)
 #------------ Flags ------------
 ifeq ($(DEBUG),no)
 override CFLAGS=-O0
+STRIP=-s
 else
 override CFLAGS=-O0 -g
+STRIP=
 endif
 NOR=$(CFLAGS) $(INCS)
 CTSTAR=59LR
@@ -80,6 +83,7 @@ q-stamp : nameseed
 
 d-stamp :
 	-$(MAKE) -C $(DOD)
+	-$(MAKE) -C $(TOD)
 	touch d-stamp
 
 install : c-stamp q-stamp d-stamp

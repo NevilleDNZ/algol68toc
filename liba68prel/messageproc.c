@@ -180,7 +180,7 @@ extern A68_VOID  JDAAOSF_concat(struct A68t35 ,A68_VC *);
 extern void BAAALIB(void);   /* a68config */
 extern void BCAAOSF(void);   /* strops */
 /* --- end of DECS initialisation functions --- */
-static A68_42   CSAAOSF = {"$Id: messageproc.c,v 1.5 2003-05-30 21:20:46 sian Exp $"}; 
+static A68_42   CSAAOSF = {"$Id: messageproc.a68,v 1.1.1.1 2001-05-07 10:16:12 sian Exp $"}; 
 A_GISVEC(A68_VC ,DSAAOSF,CSAAOSF,61)
 A68_31  ESAAOSF_anonymous;
 A68_52  FSAAOSF_anonymous;
@@ -1087,9 +1087,9 @@ void ZRAAOSF(void)   /* initialise DECS messageproc */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","messageproc.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/strops.m",""};
+static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","messageproc.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/strops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_31  LSAAOSF;  /* procedure value */
@@ -1126,11 +1126,11 @@ A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 BCAAOSF();   /* USE strops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/liba68prel/messageproc.a68";
-A_config.translation_time = "Fri May 30 22:15:07 2003";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/liba68prel/messageproc.a68";
+A_config.translation_time = "Mon Jan 28 20:24:31 2013";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "YRAAOSF (from seed file) ";
-A_config.spec_change_time = "Fri May 30 22:15:07 2003";
+A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

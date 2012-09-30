@@ -1,0 +1,1395 @@
+@1Introduction.
+This regular expression module was translated from <tt>C++</tt> source code
+which was part of the <tt>FTE</tt> editor written by Marko Macek. This
+particular code was selected because it used a single syntax which was
+acceptable to the author. This version (<tt>uregex</tt>) provides regular
+expressions for Unicode.
+
+This macro should reflect the current version.
+
+@m uregex version = "$Id: uregex.w,v 1.4 2003/12/26 16:42:54 sian Exp $"
+
+@ The prelude has the following structure.
+
+@aDECS uregexpr CONTEXT VOID
+USE ucharbag,unicode,standard:
+@<URegex modes at the top level@>
+@<URegex !NIL!s at the top level@>
+@<URegex names at the top level@>
+@<URegex other values at the top level@>
+@<URegex routines at the top level@>
+SKIP
+KEEP
+@<Public tags@>
+FINISH
+
+@2Meta characters.
+The module uses !UCHAR! character sequences in which a number of
+characters are used to denote syntactic constructs. The characters
+are called <b>meta-characters</b>}. Regular expressions, if they are
+going to be used world-wide, must be able to use meta-characters
+specifiable by the programmer. Strictly speaking, they should be part
+of the locale, but are unlikely to be made so in the present chaotic
+state of computing. The only limitation put on the meta-characters is
+that each character must be representable as a single !UCHAR! character (no
+combining characters and such-like allowed).
+
+In what follows, a <i>line</i> is to be regarded as a sequence of
+characters given to the pattern matcher. Whether such a sequence would
+be displayed as a uni-directional sequence is beyond the scope of this
+module.
+
+The module requires the following set of meta-characters. Default
+values are shown in parentheses. Each meta-character has an associated
+integer which is shown in square brackets.
+<ol>
+   <li>Meta characters.
+   <ol>
+      <li>Escape character<br />
+      The character is used to convert meta-characters to normal
+      characters and normal characters to meta-characters. The normal
+      characters which, when preceded by the escape meta-character, have
+      meta-significance are described below (backstroke "\") [1].</li>
+      <li>Anchors.
+      <ol>
+         <li>Beginning of a line anchor<br />
+         This character fixes a match to the beginning of a line
+         (caret "^") [2].</li>
+         <li>End of a line anchor<br />
+         This character fixes a match to the end of a line (dollar
+         symbol "$") [3].</li>
+         <li>Beginning of a word anchor<br />
+         This character fixes a match to the beginning of a word.
+         (less-than symbol "&lt;") [4].</li>
+         <li>End of a word anchor<br />
+         This character fixes a match to the end of a word
+         (greater-than symbol "&gt;") [5].</li>
+      </ol></li>
+      <li>Closures.<br />
+      These act on the preceding or, in the case of the vertical bar,
+      both the preceding and the following, pattern.
+      <ol>
+         <li>Any character<br />
+         This character represents any single character (full stop ".")
+         [6].</li>
+         <li>None or one<br />
+         This character matches none or one of the preceding
+         maximal pattern (question mark "?") [7].</li>
+         <li>None or many (minimal)<br />
+         This character matches any number of the preceding minimal
+         pattern (commercial at symbol "@") [8].</li>
+         <li>None or many (maximal)<br />
+         This character matches any number of the preceding maximal
+         pattern (asterisk "*") [9].</li>
+         <li>One or many (minimal)<br />
+         This character matches one or more of the preceding minimal
+         pattern (number sign "#") [10].</li><!--#-->
+         <li>One or many (maximal)<br />
+         This character matches one or more of the preceding maximal
+         pattern (plus symbol "+") [11].</li>
+         <li>Choice<br />
+         This character matches the preceding or the following
+         pattern (vertical bar "|") [12].</li>
+      </ol></li>
+      <li>Sets.<br />
+      These denote a number of possible characters which will match a
+      single character.
+      <ol>
+         <li>Beginning of set<br />
+         This character is used to denote the beginning of a set
+         (left square bracket "[") [13].</li>
+         <li>End of set<br />
+         This character is used to denote the end of a set (right
+         square bracket "]") [14].</li>
+         <li>Set complement<br />
+         This character is used to denote the complement of a set:
+         that is, a set containing all characters <i>not</i>
+         specified in the set. Whichever character is used, it will
+         only be regarded as a set meta-character if it occurs at
+         the beginning of the set (tilde "~") [15].</li>
+         <li>Character range<br />
+         This character is used to denote a range of characters. It
+         must be preceded by a character whose value is less than
+         or equal to the character following it (colon ":") [16].</li>
+      </ol></li>
+      <li>Groups.<br />
+      A group of characters can be acted on by a closure.
+      <ol>
+         <li>Beginning of a group<br />
+         This character denotes the beginning of a group (left
+         brace "{") [17].</li>
+         <li>End of a group<br />
+         This character denotes the end of a group (right
+         brace "}") [18].</li>
+      </ol></li>
+      <li>Sub-expressions.<br />
+      Sub-expressions will be remembered by the pattern matcher
+      (upto nine such sub-expressions can be referrred to by the
+      escape character followed by a single digit character). The
+      total match can be referred to by the two-character expression
+      "escape character and zero"
+      <ol>
+         <li>Beginning of sub-expression<br />
+         This character denotes the beginning of a sub-expression
+         (open parenthesis "(") [19].</li>
+         <li>End of sub-expression<br />
+         This character denotes the end of a sub-expression (close
+         parenthesis ")") [20].</li>
+      </ol></li>
+   </ol></li>
+   <li>Normal characters used as meta-characters by preceding them
+   with the escape character ("\").
+   <ol>
+      <li>Character classes.<br />
+      Each set can be specified using the routine !rx set charbag!.
+      <ol>
+         <li>Set of digits ("d") [21]</li>
+         <li>Set of non-digits ("D") [22]</li>
+         <li>Set of white-space characters ("s") [23]</li>
+         <li>Set of non-white-space characters ("S") [24]</li>
+         <li>Set of word characters ("w") [25]</li>
+         <li>Set of non-word characters ("W") [26]</li>
+      </ol></li>
+      <li>Unicode denoter<br />
+      This character introduces a set of upto 8 hexadecimal digits whose
+      value will be used as the !UCHAR! value of the character ("u")
+      [27].</li>
+   </ol></li>
+</ol>
+
+@ For replacement, some escaped characters act as meta-characters. The
+default value is used to specify them.
+<dl>
+<dt>[\0]</dt><dd>Use the whole of the matched pattern as replacement.</dd>
+<dt>[\n]</dt><dd>Use matched expression <i>n</i> where
+<i>n&isin;[1,9]</i> as replacement.</dd>
+</dl>
+
+@ The meta-characters are stored in a value of mode !USTRING! with
+identifiers for each one. These declarations give the index of the
+individual !UCHAR!s.
+
+@m mc esc    =   1
+@m mc bol    =   2
+@m mc eol    =   3
+@m mc bow    =   4
+@m mc eow    =   5
+@m mc any    =   6
+@m mc 0or1   =   7
+@m mc n0p    =   8
+@m mc x0p    =   9
+@m mc n1p    =  10
+@m mc x1p    =  11
+@m mc choice =  12
+@m mc boset  =  13
+@m mc eoset  =  14
+@m mc compl  =  15
+@m mc range  =  16
+@m mc bog    =  17
+@m mc eog    =  18
+@m mc bosub  =  19
+@m mc eosub  =  20
+@m mc dig    =  21
+@m mc nodig  =  22
+@m mc ws     =  23
+@m mc nows   =  24
+@m mc word   =  25
+@m mc noword =  26
+@m mc hex    =  27
+
+@ Here is the declaration of !meta char!. Because this can be included
+into a DECS module, only 'library' operators only. What this means in
+practice, goodness knows. So here is a macro to do the job of !U!.
+
+@m NU(mc) = (UCHAR uc; bits OF uc:=BIN ABS init meta[mc]; uc)
+
+@<URegex name...@>=
+[27]UCHAR meta char;
+[]CHAR init meta="\^$<>.?@@*#+|[]~-{}()dDsSwWu";
+REF UCHAR
+   meta esc    = meta char[mc esc]   := NU(mc esc),
+   meta bol    = meta char[mc bol]   := NU(mc bol),
+   meta eol    = meta char[mc eol]   := NU(mc eol),
+   meta bow    = meta char[mc bow]   := NU(mc bow),
+   meta eow    = meta char[mc eow]   := NU(mc eow),
+   meta any    = meta char[mc any]   := NU(mc any),
+   meta 0 or 1 = meta char[mc 0or1]  := NU(mc 0or1),
+   meta n 0 p  = meta char[mc n0p]   := NU(mc n0p),
+   meta x 0 p  = meta char[mc x0p]   := NU(mc x0p),
+   meta n 1 p  = meta char[mc n1p]   := NU(mc n1p),
+   meta x 1 p  = meta char[mc x1p]   := NU(mc x1p),
+   meta choice = meta char[mc choice]:= NU(mc choice),
+   meta boset  = meta char[mc boset] := NU(mc boset),
+   meta eoset  = meta char[mc eoset] := NU(mc eoset),
+   meta compl  = meta char[mc compl] := NU(mc compl),
+   meta range  = meta char[mc range] := NU(mc range),
+   meta bog    = meta char[mc bog]   := NU(mc bog),
+   meta eog    = meta char[mc eog]   := NU(mc eog),
+   meta bosub  = meta char[mc bosub] := NU(mc bosub),
+   meta eosub  = meta char[mc eosub] := NU(mc eosub),
+   meta dig    = meta char[mc dig]   := NU(mc dig),
+   meta nodig  = meta char[mc nodig] := NU(mc nodig),
+   meta ws     = meta char[mc ws]    := NU(mc ws),
+   meta nows   = meta char[mc nows]  := NU(mc nows),
+   meta word   = meta char[mc word]  := NU(mc word),
+   meta noword = meta char[mc noword]:= NU(mc noword),
+   meta hex    = meta char[mc hex]   := NU(mc hex);
+
+@ @<Public...@>=
+meta esc
+,meta bol
+,meta eol
+,meta bow
+,meta eow
+,meta any
+,meta 0 or 1
+,meta n 0 p
+,meta x 0 p
+,meta n 1 p
+,meta x 1 p
+,meta choice
+,meta boset
+,meta eoset
+,meta compl
+,meta range
+,meta bog
+,meta eog
+,meta bosub
+,meta eosub
+,meta dig
+,meta nodig
+,meta ws
+,meta nows
+,meta word
+,meta noword
+,meta hex
+
+@ The procedures can be grouped as follows.
+
+@<URegex rout...@>=
+@<URegex basic procedures@>
+@<URegex node handling procedures@>
+@<URegex principal procedures@>
+
+@2Preliminary conversion.
+Before compiling a regular expression, the characters of the expression are
+converted from mode !STRING! to a linked-list each of whose elements have mode
+!REF RX!.
+
+@<URegex mode...@>=
+MODE RX = STRUCT(UCHAR c,INT ind,REF RX back,forw);
+
+@ Originally, the mode !REGEX! contained a union of mutually exclusive
+values. However, for reasons of efficiency, the union has been replaced
+by individual fields in the structure. After all, there will not be
+many nodes in the compiled regular expression, so the saving of two or
+three hundred bytes at the expense of many other instructions to get
+the united value is not worth it.
+
+@<URegex mode...@>=
+MODE REGEX =
+   STRUCT(BITS what,
+          UCHAR uc,
+          CHARBAG ucb,
+          REF REGEX urx,prev,next);
+
+@ @<Public...@>=
+,REGEX
+
+@ !NIL!s are needed for !no rx! and !no regex!.
+
+@<URegex !NIL!...@>=
+REF RX no rx = NIL;
+REF REGEX no regex = NIL;
+
+@ @<Public...@>=
+,no regex
+
+@ There needs to be a structure which can contain the indices of all
+the sub-expressions in the regular expression.
+
+@<URegex mode...@>=
+MODE SUBEXP = [0:9]STRUCT(INT open, close);
+
+@ @<Public...@>=
+,SUBEXP
+
+@2Basic routines.
+Here are operators which insert a character into a !CHARBAG! and
+various operations on !CHARBAG!s themselves. Also define !SET! and
+!CLEAR! for !BITS! as well.  Firstly, declare the priorities.
+
+@<URegex basic...@>=
+PRIO SET = 7, CLEAR = 7;
+
+@ These operators set or clear a bit in a !BITS!. Note that they do not
+change the value of the !BITS! operand, but yield a !BITS! with the
+concerned bit changed. They are used internally only.
+
+@<URegex basic...@>=
+OP SET = (BITS b,INT n)BITS: 2r1 SHL(32-n) OR b;
+
+@ !CLEAR! is similar to !SET!.
+
+@<URegex basic...@>=
+OP CLEAR = (BITS b,INT n)BITS: NOT(2r1 SHL(32-n)) AND b;
+
+@ Now for the !CHARBAG! operators.  This procedure creates a set of
+consecutive characters given starting and ending characters.
+
+@<URegex basic...@>=
+PROC range set = (REF CHARBAG bag,UCHAR c1,c2)REF CHARBAG:
+   bag:=bag OR C CHUNK(c1,c2);
+
+@ This operator is defined such that multiple invocations can occur
+for one left-hand operand. Because the priority has not been given, it
+is, by default, !1! (in common with all the other assigning operators).
+
+!SETAB! can be defined in terms of !range set!.
+
+@<URegex basic...@>=
+PRIO SETAB = 1;
+OP SETAB = (REF CHARBAG bag,UCHAR c)REF CHARBAG:  range set(bag,c,c);
+
+@ The procedure !make rx! converts a !USTRING! to a linked list whose
+members have the mode !REF RX!.
+
+@<URegex basic...@>=
+PROC make rx = (USTRING us)REF REF RX:
+BEGIN
+   REF REF RX tail, head;
+   tail:=head:=HEAP REF RX:=no rx;
+
+   FOR i FROM LWB us TO UPB us
+   DO
+      IF head IS no rx
+      THEN tail:=head:=HEAP REF RX:=HEAP RX:=
+               (us[i], i, no rx, no rx)
+      ELSE forw OF tail:=HEAP RX:=(us[i],i,tail,no rx);
+         tail:=forw OF tail
+      FI
+   OD;
+   head
+END; #make rx#
+
+@ The public routine !rx compile! firstly, converts the regular
+expression to a !REF[]RX! of which the first member is the parameter
+of !rx comp! which controls the compilation proper.
+
+!sub exp ct! must be global to !rx comp! because it contains a
+cumulative count of the number of sub-expressions which must be
+independent of the !rx comp!, the latter calling itself recursively.
+
+@<URegex princ...@>=
+PROC rx compile = (USTRING us)REF REGEX:
+IF UPB us < LWB us
+THEN no regex
+ELIF
+   INT sub exp ct:=0;
+   REF REF RX rx:=make rx(us);
+   @<URegex: declare the regex compiler@>;
+   @<URegex: do the compilation proper and add an ending node@>
+FI; #rx compile#
+
+@ @<Public...@>=
+,rx compile
+
+@ Before we call !rx comp! to compile the converted regular expression.
+we need to define all the node types which do not represent actual
+characters.
+
+@<URegex other...@>=
+BITS re nothing= 16r0;
+BITS re jump   = 16r1;
+BITS re break  = 16r2;
+BITS re at bol = 16r3;
+BITS re at eol = 16r4;
+BITS re at bow = 16r5;
+BITS re at eow = 16r6;
+BITS re end    = 16r1f;
+
+@ @<Public...@>=
+,re nothing,re jump,re break,re at bol,re at eol,re at bow,re at  eow,re end
+
+@ The next group of macros define values of the !what! field of a
+!REGEX! which represent a single character.
+
+@m re any          = 16r21
+@m re set          = 16r22
+@m re char         = 16r23
+@m re wspace       = 16r24
+@m re not wspace   = 16r25
+@m re digit        = 16r26
+@m re not digit    = 16r27
+@m re word         = 16r28
+@m re not word     = 16r29
+
+@ The last group of macros define the bits of the !what! field which are
+!OR!ed with other values.
+
+@<URegex other...@>=
+INT re maximal = 19;
+INT re branch = 20;
+INT re mem = 21;
+INT re close = 22;
+INT re open = 23;
+INT re group = 24;
+
+@ @<Public...@>=
+,re maximal,re branch,re mem,re close,re open,re group
+
+@ Now call !rx comp!. For a successful compilation, an ending
+node is added.
+
+@<URegex: do the comp...@>=
+   REF REGEX result = rx comp(rx);
+   result IS no regex
+THEN no regex
+ELSE
+   HEAP REF REGEX tmp:=result;
+   WHILE next OF tmp ISNT no regex
+   DO
+      tmp:=next OF tmp
+   OD;
+   next OF tmp:=new node(re end);
+   HEAP REGEX:=result
+
+@ Here is a basic procedure.
+
+@<URegex basic...@>=
+PROC ruc to us = ([]UCHAR ruc)USTRING:  HEAP[UPB ruc[@@1]]UCHAR:=ruc;
+
+@3Compilation proper.
+The routine !rx comp! consists largely of a big !CASE! which identifies
+each character and takes appropriate action.
+
+@<URegex: declare the regex...@>=
+PROC rx comp = (REF REF RX rx)REF REGEX:
+BEGIN
+   HEAP REF REGEX head:=no regex, tail:=no regex;
+   INT ct, pos;
+   USTRING
+      ruc1:=ruc to us((meta 0 or 1,meta n 0 p,meta x 0 p,meta n 1 p,meta x 1 p,meta choice)),
+      ruc2:=ruc to us((meta bog,meta bosub,meta esc,meta boset)),
+      ruc3:=ruc to us((meta bol,meta eol,meta any,meta bow,meta eow));
+
+   WHILE
+      no regex ISNT
+         IF rx IS no rx
+         THEN no regex
+         ELIF uchar in ustring(c OF rx,pos,ruc1)
+         THEN new sub(head,tail,rx)
+         ELIF c OF rx = meta eog OR c OF rx = meta eosub
+         THEN no regex
+         ELIF uchar in ustring(c OF rx,pos,ruc2)
+         THEN rx:=forw OF rx;
+            @<URegex: act according to the value of !pos!@>
+         ELIF uchar in ustring(c OF rx,pos,ruc3)
+         THEN
+            add node(head,tail,new node(
+                     (pos|re at bol,re at eol,re any,re at bow,re at eow)))
+         ELSE add node(head,tail,new char(c OF rx))
+         FI
+   DO
+      IF rx ISNT no rx
+      THEN rx:=forw OF rx
+      FI
+   OD;
+
+   head
+END #rx comp#
+
+@ @<URegex: act according...@>=
+CASE pos
+IN
+   # Start of a group #
+   IF add node(head,tail,new node(2r0 SET re group SET re open));
+      add node(head,tail,rx comp(rx)) ISNT no regex
+   THEN
+      IF rx IS no rx
+      THEN no regex
+      ELIF c OF rx = meta eog
+      THEN add node(head,tail,new node(2r0 SET re group SET re close))
+      ELSE no regex
+      FI
+   ELSE head:=no regex
+   FI,
+
+   # Start of a sub-expression #
+   IF add node(head,tail,
+         new node(BIN(ct:=sub exp ct+:=1)
+                  SET re group SET re open SET re mem));
+         no regex ISNT add node(head,tail,rx comp(rx))
+   THEN
+      IF rx IS no rx
+      THEN no regex
+      ELIF c OF rx = meta eosub
+      THEN add node(head,tail,
+               new node(BIN ct SET re group SET re close SET re mem))
+      ELSE no regex
+      FI
+   ELSE head:=no regex
+   FI,
+
+   # An escaped expression #
+   add node(head,tail,new escape(rx)),
+
+   # A set #
+     add node(head,tail,new set(rx))
+OUT SKIP
+ESAC
+
+@ This procedure is required in both !new escape! and !new set!.
+
+@<URegex basic...@>=
+PROC expand set denoter = (BITS what)CHARBAG:
+IF CHARBAG set:=null bag;
+   HEAP[6]UCHAR hu;
+   hu[1]:=U re digit;
+   hu[2]:=U re not digit;
+   hu[3]:=U re wspace;
+   hu[4]:=U re not wspace;
+   hu[5]:=U re word;
+   hu[6]:=U re not word;
+   INT pos;
+   uchar in ustring(U what,pos,hu)
+THEN
+   set:=
+   CASE pos
+   IN
+      digits,
+      NOT digits,
+      white space,
+      NOT white space,
+      word chars,
+      NOT word chars
+   OUT SKIP
+   ESAC
+ELSE set
+FI; #expand set denoter#
+
+@2Node handlers.
+This procedure creates a new node of mode !REF REGEX!. Its parameter
+gives the type of node. The !NIL! in the structure display is
+assigned to the !CHARBAG! field of the structure.
+
+@<URegex node...@>=
+PROC new node = (BITS what)REF REGEX:
+   HEAP REGEX:=REGEX(what,U 2r0,null bag,no regex,no regex,no regex);
+
+@ A single character is added to a compiled regular expression by
+storing it in a single node.
+
+@<URegex node...@>=
+PROC new char = (UCHAR uch)REF REGEX:
+BEGIN
+   REF REGEX hr=new node(re char);
+   uc OF hr:=uch;
+   HEAP REGEX:=hr
+END;
+
+@ Now declare !new escape! which creates a new node for an
+escaped character (a character preceded by !meta esc!).
+
+The routine leaves !rx! referring to the last character processed.
+
+@m max hex digits = 8
+
+@m process(wh) = (REF REGEX hx = new node(wh);
+    ucb OF hx:=expand set denoter(wh);
+    what OF hx:=re set;
+    HEAP REGEX:=hx)
+
+@<URegex node...@>=
+PROC new escape = (REF REF RX rx)REF REGEX:
+IF INT pos;
+   @<URegex: declare !process digits!@>
+   []UCHAR ruc=(meta dig,meta nodig,meta ws,meta nows,
+                meta word,meta noword,meta hex);
+   [UPB ruc]UCHAR rruc:=ruc;
+   uchar in ustring(c OF rx,pos,rruc)
+THEN
+   CASE pos
+   IN
+      process(re digit),
+      process(re not digit),
+      process(re wspace),
+      process(re not wspace),
+      process(re word),
+      process(re not word),
+      process digits(16,max hex digits,rx)
+   OUT new char(c OF rx)
+   ESAC
+ELSE new char(c OF rx)
+FI; #new escape#
+
+@ @<URegex basic...@>=
+PROC is dec = (UCHAR u)BOOL: u>=U"0" & u<=U "9";
+PROC is hex = (UCHAR u)BOOL: is dec(u) OR u>=U "a" & u <=U "f";
+OP CTOI = (UCHAR u)INT:
+   (is dec(u)|ABS bits OF u-ABS "0"|ABS bits OF u-ABS"a"+10);
+OP CTOI = (CHAR c)INT:
+IF c>="0" & c<="9"
+THEN ABS c-ABS"0"
+ELIF c>="a" & c<= "f"
+THEN ABS c-ABS"a"+10
+ELSE 0
+FI;
+
+@ @<Public...@>=
+,isdec
+,ishex
+,CTOI(UCHAR),CTOI(CHAR)
+
+@ A character which cannot be denoted can be expressed as a decimal,
+octal or hexadecimal value. Each sequence of digits is preceded by a
+character which identifies the radix. The routine !process digits!
+converts such digit sequences into a value and yields a new node
+containing the equivalent character. Here are three macros for testing
+whether a digit is decimal, octal or hexadecimal. Note that for
+hexadecimal characters, only allow lower-case letters, in accordance
+with Algol 68 practice. Presume that digits are always !"0"! to
+!"9"! and that hexadecimal digits will always include !"a"! to !"f"!.
+
+The routine leaves !rx! referring to the last character processed.
+
+@ @<URegex: declare !process...@>=
+PROC process digits = (INT radix,max chars,REF REF RX rx)REF REGEX:
+IF INT n:=0;  BOOL no val:=TRUE;
+
+   TO max chars
+   WHILE
+      IF forw OF rx IS no rx THEN FALSE
+      ELSE is hex(c OF forw OF rx)
+      FI
+   DO
+      no val:=FALSE;
+      rx:=forw OF rx;
+      n*:=radix+:=CTOI c OF rx
+   OD;
+
+   no val
+THEN no regex
+ELSE new char(U BIN n)
+FI; #process digits#
+
+@ A set of characters is denoted by ![...]! where the ellipsis denotes
+one or more character patterns. A character pattern can be
+<ol>
+<li>A single character, possibly escaped.
+<li>A character range, expressed as !<char>meta range<char>!, each !<char>!
+being of type 1.
+</ol>
+If the first character is !meta compl!, then the set comprises
+all those characters which are not denoted by the patterns.
+
+@<URegex node...@>=
+PROC new set = (REF REF RX rx)REF REGEX:
+BEGIN
+   HEAP CHARBAG set:=null bag;
+   UCHAR uch, uc1 #1st range char.#, uc2 #2nd range char#;
+   BOOL neg=(c OF rx = meta compl);
+	BOOL range:=FALSE;
+
+   IF neg THEN rx:=forw OF rx FI; #skip the !meta compl!#
+   REF REGEX yield:=new node(re set);
+
+   WHILE
+      IF (rx IS no rx) OR (yield IS no regex)
+      THEN yield:=no regex;  FALSE
+      ELIF c OF rx = meta eoset
+      THEN @<URegex: complete the yield@>
+      ELSE TRUE
+      FI
+   DO #Process the character in !rx!#
+      REF REGEX lrgx;
+      IF c OF rx = meta esc
+      THEN #Process the escape sequence#
+         IF forw OF rx IS no rx
+         THEN yield:=no regex #lone !meta esc!#
+         ELIF lrgx:=new escape(rx:=forw OF rx);
+            what OF lrgx = re char
+         THEN uch:=uc OF lrgx;  @<URegex: do a normal character@>
+         ELSE set:=set OR ucb OF lrgx
+         FI
+      ELSE
+         uch:=c OF rx;
+         @<URegex: do a normal...@>
+      FI;
+      rx:=forw OF rx
+   OD;
+   HEAP REGEX:=yield
+END; #new set#
+
+@ A normal character could start or finish a range. The boolean name
+!range! is !TRUE! when a normal character has been read which is
+followed by a !meta range!.
+
+@<URegex: do a normal...@>=
+IF IF NOT range
+   THEN
+      IF forw OF rx IS no rx
+      THEN yield:=no regex #no closing !meta eoset!#; FALSE
+      ELSE c OF forw OF rx = meta range
+      FI
+   ELSE FALSE
+   FI
+THEN #start of a range#
+   range:=TRUE;
+   rx:=forw OF rx;  #skip the !meta range!#
+   uc1:=uch
+ELIF range
+THEN
+   IF uc1 <= (uc2:=uch)
+   THEN range set(set,uc1,uc2);  range:=FALSE
+   ELSE yield:=no regex #invalid range#
+   FI
+ELIF yield ISNT no regex
+THEN set SETAB uch
+FI
+
+@ When the end of the set has been found, we need to complete the value
+of !yield!. We yield !FALSE! here to terminate the loop in the
+preceding section.
+
+@<URegex: complete...@>=
+IF range
+THEN yield:=no regex #no 2nd range char.#
+ELSE ucb OF yield:=(neg|NOT set|set)
+FI;
+FALSE
+
+@ Some values of mode !CHARBAG! are declared as names so that the user
+can set them. Here are the names. The default values are assigned by !rx init!.
+
+@<URegex other...@>=
+CHARBAG
+   digits,
+   word chars,
+   white space;
+
+@ Here is the procedure for changing the default !digits!, !word chars! and
+!white space! !CHARBAG!s.
+
+The first parameter should have the value !rx digits set! to !rx white set! and
+the second parameter should be a set specification (it must start with !meta
+boset! and finish with !meta eoset!). The routine yields !FALSE! if a wrong
+type parameter is supplied or the set specifier is incorrect and !TRUE!
+otherwise. All the means of producing a set are available to the engineer.
+
+@m rx digits set = 1
+@m rx word set   = 2
+@m rx white set  = 3
+
+@<URegex princ...@>=
+PROC rx change set = (INT type, STRING val)BOOL:
+IF   UPB val-LWB val+1 < 3
+THEN FALSE #insufficient chars#
+ELIF U val[LWB val]/=meta boset OR U val[UPB val]/=meta eoset
+THEN FALSE
+ELIF type < rx digits set OR type > rx white set
+THEN FALSE
+ELIF
+   INT start;
+   USTRING uv:=string to ustring(val,start:=LWB val);
+   start < LWB val OR start > UPB val
+THEN FALSE
+ELIF
+   REF REGEX rx = rx compile(uv);
+   rx IS no regex
+THEN FALSE
+ELSE
+   []REF CHARBAG
+      (digits,word chars,white space)[type]:=ucb OF rx;
+   TRUE
+FI; #rx change set#
+
+@ @<Public...@>=
+,rx change set
+
+@ The prelude is initialised by !rx init!. The only parameter of !rx init! is a
+row of pairs of mode !STRUCT(INT ind,STRING val)!. The !STRING! should be a
+string of UTF-8 bytes. A null row specified as !()! may also be given if the
+default meta-characters are acceptable. The routine yields 0 if the
+parameters are satisfactory and a positive number otherwise.
+
+@<URegex prin...@>=
+PROC rx init = ([]STRUCT(INT ind,[]CHAR val)r)INT:
+BEGIN
+   INT start,err:=0;
+   
+   IF USTRING udig:=string to ustring("[0-9]",start:=1);
+   start < 1 OR start > 5
+THEN err:=1; GOTO error
+ELIF
+   USTRING uwch:=string to ustring("[A-Za-z]",start:=1);
+   start < 1 OR start > 8
+THEN err:=2; GOTO error
+ELIF
+   USTRING uwsp:=string to ustring("[\u09-\u0d ]",start:=1);
+   start < 1 OR start > 12
+THEN err:=3; GOTO error
+ELIF
+   REF REGEX rx udig:=rx compile(udig);
+   rxudig IS no regex
+THEN err:=4; GOTO error
+ELIF
+   REF REGEX rx uwch:=rx compile(uwch);
+   rx uwch IS no regex
+THEN err:=5; GOTO error
+ELIF
+   REF REGEX rx uwsp:=rx compile(uwsp);
+   rx uwsp IS no regex
+THEN err:=6; GOTO error
+ELIF
+   digits:=ucb OF rx udig;
+   word chars:=ucb OF rx uwch;
+   white space:=ucb OF rx uwsp;
+   UPB r < LWB r
+THEN err:=7; GOTO error
+ELSE
+   FOR i FROM LWB r TO UPB r
+   DO
+      INT ii=ind OF r[i];
+      IF ii< LWB meta char OR ii > UPB meta char
+      THEN err:=8; GOTO error
+      ELIF
+         []CHAR lvi=val OF r[i];
+         USTRING us=string to ustring(lvi,start:=LWB lvi);
+         start < LWB lvi OR start > UPB lvi
+      THEN err:=9; GOTO error
+      ELSE meta char[ii]:=us[LWB us]
+      FI
+   OD;
+   err:=0
+FI;
+error:
+   err
+END; #rx init#
+
+@ @<Public...@>=
+,rx init
+
+@ The routine !add node! adds a new node to the linked-list that contains
+the compiled regular expresssion. If both !st! and !fn! refer to
+!no regex!, the new node is simply assigned to them. Otherwise, the new
+node is appended to the last node and !fn! made to refer to the
+last node of the whole list.
+
+@<URegex node...@>=
+PROC add node = (REF REF REGEX st,fn,REF REGEX node)REF REGEX:
+IF node IS no regex
+THEN no regex
+ELIF (st IS no regex) OR (fn IS no regex)
+THEN st:=fn:=node
+ELSE
+   next OF fn:=node;
+   prev OF node:=fn;
+   WHILE next OF fn ISNT no regex
+   DO fn:=next OF fn OD;
+   node
+FI; #add node#
+
+@ The final sub-expression routine handles the closures !meta 0 or
+1!, !meta x 0 p!, !meta x 1 p!, !meta n 0 p!, !meta n 1 p! and the
+alternative operator !meta choice!.
+
+@m is(rx,t) = (t ELEM what OF rx)
+
+@<URegex node...@>=
+PROC new sub = (REF REF REGEX begin,end,REF RX rx)REF REGEX:
+IF end IS no regex
+THEN no regex #All the closures must be preceded by a char/set/group#
+ELIF
+   HEAP REF REGEX no, new, jump, skip, last:=end, p;
+   INT num chars:=0;
+   is(last,re group) & is(last,re open)
+THEN no regex #closure is preceded by an opener#
+ELIF
+   IF is(last,re group)
+   THEN #backtrack to its beginning#
+      p:=last;
+      INT nesting level:=1;
+
+      @<URegex: backtrack to the start of the group@>
+   ELSE num chars:=1 #!last!&rarr;char#
+   FI;
+
+   last IS no regex
+THEN no regex       #extra closer#
+ELIF num chars = 0
+THEN no regex     #empty group#
+ELIF c OF rx = meta choice
+THEN @<URegex: do or symbol@>
+ELIF c OF rx = meta 0 or 1
+THEN @<URegex: do one or none@>
+ELIF c OF rx = meta x 0 p OR c OF rx = meta n 0 p
+THEN @<URegex: do none or more@>
+ELSE @<URegex: do 1 or more@>
+FI; #new sub#
+
+@ Move !last! back to the opener of this group.
+
+@<URegex: backtrack...@>=
+WHILE nesting level>0 & (p ISNT no regex)
+DO
+   p:=prev OF p;
+   IF p ISNT no regex
+   THEN
+      IF is(p,re group)
+      THEN #This is either an opener or a closer#
+         nesting level+:=(is(p,re close)|1|-1)
+      ELIF ABS what OF p >= ABS re any & ABS what OF p <= ABS re not word
+      THEN num chars+:=1
+      FI;
+      last:=p
+   FI
+OD
+
+@ Insert a branch node for the !meta 0 or 1! before the character or
+group preceding it, append a nothing node to the character or group
+and make the new branch node refer to the nothing node and vice versa.
+
+@<URegex: do one or...@>=
+new:=new node(bits OF c OF rx SET re branch SET re maximal);
+no:=new node(re nothing);
+
+next OF end:=no;
+prev OF no:=end; #append !no! to !end!#
+
+next OF new:=last;
+prev OF new:=prev OF last;
+prev OF last:=new; #Insert !new! before !last!#
+
+IF prev OF new IS no regex
+THEN begin:=new
+ELSE next OF prev OF new:=new
+FI;   #insertion completed#
+
+urx OF new:=no;  #link !new!#
+urx OF no:=new;  #and !no!  #
+end:=no #The new last node#
+
+@ Insert a branch node before the character or group to be repeated and
+jump and nothing nodes after it.
+
+@<URegex: do none...@>=
+new:=new node(IF c OF rx=meta x 0 p
+              THEN bits OF c OF rx SET re branch SET re maximal
+              ELSE bits OF c OF rx SET re branch
+              FI);
+jump:=new node(re jump);
+no:=new node(re nothing);
+
+next OF end:=jump;
+prev OF jump:=end; #append !jump! to !end!#
+
+next OF jump:=no;
+prev OF no:=jump;  #append !no! to !jump!#
+
+next OF new:=last;
+prev OF new:=prev OF last;
+prev OF last:=new; #insert !new! before !last!#
+
+IF prev OF new IS no regex
+THEN begin:=new
+ELSE next OF prev OF new:=new
+FI; #insertion completed#
+
+urx OF new:=no;  #link !new!#
+urx OF no:=new;  #and !no!  #
+urx OF jump:=new;#enable the !jump! link#
+
+end:=no #The new last node#
+
+@ Insert jump and branch nodes before the character or group to
+be repeated and jump and nothing nodes after it.
+
+@<URegex: do 1...@>=
+new:=new node(IF c OF rx=meta x 1 p
+              THEN bits OF c OF rx SET re branch SET re maximal
+              ELSE bits OF c OF rx SET re branch
+              FI);
+skip:=new node(re jump);
+jump:=new node(re jump);
+no:=new node(re nothing);
+
+next OF end:=jump;
+prev OF jump:=end;   #append !jump! to !end!#
+
+next OF jump:=no;
+prev OF no:=jump;    #append !no! to !jump!#
+
+next OF skip:=new;
+prev OF new:=skip;   #append !new! to !skip!#
+
+next OF new:=last;   #insert !new! before !last!#
+prev OF skip:=prev OF last;
+prev OF last:=new;
+
+IF prev OF skip IS no regex
+THEN begin:=skip
+ELSE next OF prev OF skip:=skip
+FI; #insertion completed#
+
+urx OF new:=no;     #link !new!#
+urx OF no:=new;     #and !no!#
+urx OF jump:=new;   #enable the !jump! link#
+urx OF skip:=last;  #enable the !skip! link#
+
+end:=no #The new last node#
+
+@ Insert a branch node before the character or group and a break node
+and a nothing node after it.
+
+@<URegex: do or...@>=
+IF forw OF rx ISNT no rx
+THEN
+   new:=new node(bits OF c OF rx SET re branch SET re maximal);
+   jump:=new node(re break);
+   no:=new node(re nothing);
+
+   next OF jump:=no;
+   prev OF no:=jump;    #append !no! to !jump!#
+
+   next OF end:=jump;
+   prev OF jump:=end;   #append !jump! to !end!#
+
+   next OF new:=last;
+   prev OF new:=prev OF last;
+   prev OF last:=new;   #insert !new! before !last!#
+
+   IF prev OF new IS no regex
+   THEN begin:=new
+   ELSE next OF prev OF new:=new
+   FI;                  #insertion completed#
+
+   urx OF new:=no;     #link !new!#
+   urx OF no:=new;     #and !no!  #
+   urx OF jump:=new;   #enable the !jump! link#
+
+   HEAP REGEX:=end:=no #The new last node#
+ELSE no regex #!"|" not followed by a character#
+FI
+
+@2Matching.
+This routine tests whether a compiled regular expression will match a
+string. The local names are used as follows:-
+<dl>
+<dt><tt>n</tt></dt>
+<dd>Used to step down the compiled regular expression.</dd>
+<dt><tt>pos</tt></dt>
+<dd>Contains the position of a discriminant in a string.</dd>
+<dt><tt>rex</tt></dt>
+<dd>Contains the current position in the string to be
+matched. Set to !LWB s! at the start of the routine.</dd>
+</dl>
+The outermost call of the routine ensures that the lower bound of the string
+is !1!. Recursive calls do not ensure that so that a test of !pti=1! will
+determine whether !matcher! is at the beginning of the string (which is taken
+to be the beginning of the line).
+
+We shall need to keep the current index into the pattern to be matched
+global to the routines !rx match! and !matcher!.
+
+@<URegex name...@>=
+INT pti;
+
+@ Here is the pattern matching routine.
+
+@<URegex node...@>=
+PROC matcher = (REF REGEX rx,
+                  USTRING str,
+                  INT st,level,
+                  REF SUBEXP se)BOOL:
+IF level = 1000
+THEN FALSE
+ELSE
+   HEAP REF REGEX n:=rx;
+   BOOL yield:=FALSE;
+   INT pos,save;
+   []UCHAR ruc=(U re char,U re any,U re set,U re end);
+   [UPB ruc]UCHAR rruc:=ruc;
+   WHILE
+      IF n IS no regex THEN FALSE
+      ELIF ABS what OF n >= ABS re end
+                       AND
+         ABS what OF n < ABS re not word
+                       AND
+         uchar in ustring(U what OF n,pos,rruc)
+      THEN @<URegex: do characters, sets and the end@>
+      ELIF ABS what OF n < ABS re end
+      THEN
+         CASE ABS what OF n + 1
+         IN
+            (n:=next OF n; TRUE),                        #re nothing#
+            (n:=urx OF n; TRUE),                         #re jump#
+            @<URegex: match a break@>,                   #re break#
+            (pti=1|n:=next OF n; TRUE|FALSE),            #re at bol#
+            (pti>UPB str|n:=next OF n; TRUE|FALSE),      #re at eol#
+            @<URegex: match the beginning of a word@>,   #re at bow#
+            @<URegex: match the end of a word@>          #re at eow#
+         ESAC
+      ELIF is(n,re group)
+      THEN @<URegex: do groups@>
+      ELIF is(n,re branch)
+      THEN @<URegex: do branches@>
+      ELSE FALSE
+      FI
+   DO SKIP OD;
+   yield
+FI; #matcher#
+
+@ Process character and set matchers and the end of the regular
+expression.
+
+@<URegex: do char...@>=
+IF pos = 4
+THEN se[0]:=(st,pti); NOT(yield:=TRUE)
+ELIF pti > UPB str
+THEN FALSE
+ELSE
+   CASE pos
+   IN
+      IF uc OF n = str[pti]          #re char#
+      THEN pti+:=1;  n:=next OF n;  TRUE
+      ELSE FALSE
+      FI
+      ,
+      BEGIN                          #re any#
+         pti+:=1;  n:=next OF n; TRUE
+      END
+      ,
+      IF str[pti] ELEM ucb OF n      #re set#
+      THEN pti+:=1;  n:=next OF n; TRUE
+      ELSE FALSE
+      FI
+   ESAC
+FI
+
+@ Nodes of type !re break! only exist for the choice operator.
+
+@<URegex: match a bre...@>=
+BEGIN
+   n:=next OF next OF n; #guaranteed to exist for !meta choice!#
+   IF is(n,re branch)
+   THEN @<URegex: skip over following alternatives@>
+   FI;
+
+   IF is(n,re group)
+   THEN @<URegex: skip forward over the group@>
+   FI;
+   n:=next OF n;
+   TRUE
+END
+
+@ The beginning of a word can occur at the start of a line or following
+a non-word character.
+
+@<URegex: match the begin...@>=
+IF pti > UPB str
+THEN FALSE
+ELIF pti=1
+THEN
+   IF str[pti] ELEM word chars
+   THEN n:=next OF n;  TRUE
+   ELSE FALSE
+   FI
+ELIF UPB str > LWB str
+THEN #more than one char.#
+   IF NOT(str[pti-1] ELEM word chars) & str[pti] ELEM word chars
+   THEN n:=next OF n;  TRUE
+   ELSE FALSE
+   FI
+ELSE FALSE
+FI
+
+@ The end of a word can occur at the end of a line or following a word.
+
+@<URegex: match the end...@>=
+IF pti = LWB str                         #re at eow#
+THEN FALSE
+ELIF UPB str >= LWB str
+THEN #at least one char.#
+   IF pti > UPB str & str[pti-1] ELEM word chars
+   THEN n:=next OF n; TRUE
+   ELIF pti > UPB str
+   THEN FALSE
+   ELIF UPB str > LWB str
+   THEN #more than one char.#
+      IF str[pti-1] ELEM word chars & NOT(str[pti] ELEM word chars)
+      THEN n:=next OF n;  TRUE
+      ELSE FALSE
+      FI
+   ELSE FALSE
+   FI
+ELSE FALSE
+FI
+
+@ Groups may be remembered sub-expressions or sub-expressions which
+limit the scope of closures and alternatives. Here we deal with
+remembered sub-expressions whose start and finish need to be stored in
+!se!. The openers and closers of other sub-expressions are simply
+ignored here. They are operative for compilation and skipping forward
+or backward over a group.
+
+@<URegex: do gr...@>=
+IF is(n,re mem)
+THEN
+   INT b=ABS(what OF n&16rff); #sub exp num#
+   IF save:=pti;  matcher(next OF n,str,st,level+1,se)
+   THEN #sub exp matched#
+      (is(n,re open)|open OF se[b]|close OF se[b]):=save;
+      NOT(yield:=TRUE)
+   ELSE #sub exp did not match#
+      (is(n,re open)|open OF se[b]|close OF se[b]):=0;
+      FALSE
+   FI
+ELSE n:=next OF n;  TRUE
+FI
+
+@ Branches require a recursive call to !matcher!. For maximal branches,
+(maximal closures), !matcher! uses the embedded node of the branch to
+advance to the end of !str! and then backtrack if the end of the
+regular expression is also not reached. For minimal closures, !matcher!
+tries the minimum and then extends the search if that fails.
+
+@<URegex: do br...@>=
+IF is(n,re maximal)
+THEN
+   IF save:=pti;  matcher(next OF n,str,st,level+1,se)
+   THEN se[0]:=(st,pti);  NOT(yield:=TRUE)
+   ELSE pti:=save;  n:=urx OF n; TRUE
+   FI
+ELIF save:=pti;  matcher(urx OF n,str,st,level+1,se)
+THEN se[0]:=(st,pti);  NOT(yield:=TRUE)
+ELSE pti:=save;  n:=next OF n; TRUE
+FI
+
+@ This code skips alternatives which follow a sucessfully matched
+alternative.
+
+@<URegex: skip over...@>=
+REF REGEX m;
+WHILE
+   IF NOT is(n,re branch)
+   THEN FALSE
+   ELSE ((m:=urx OF n):/=:no regex)
+               AND
+         U(what OF n&16rff) = meta choice
+   FI
+DO
+   n:=next OF m
+OD
+
+@ This code skips forward over a group.
+
+@<URegex: skip forward...@>=
+INT nesting level:=1;
+WHILE(nesting level>0|(n:=next OF n):/=:no regex|FALSE)
+DO
+   IF is(n,re group)
+   THEN nesting level+:=(is(n,re open)|1|-1)
+   FI
+OD
+
+@ !matcher! only tries to match a pattern from a given start. If it fails, it
+does not try a match later in the pattern. The routine !rx match! tests whether
+the regular expression is anchored at the beginning of the line. Otherwise, the
+regular expression is matched against the pattern starting from the first
+character until a match is achieved or the end of the pattern is reached.
+
+The routine yields !TRUE! if the regular expression matches the pattern.
+
+@<URegex princ...@>=
+PROC rx match = (REF REGEX rx,USTRING pattern,REF SUBEXP se)BOOL:
+IF rx IS no regex
+THEN FALSE
+ELIF
+   PROC zero se = VOID:
+   FOR i FROM LWB se TO UPB se DO se[i]:=(0,0) OD;
+
+   what OF rx = re at bol
+THEN zero se;  matcher(rx,pattern[@@1],pti:=1,1,se)
+ELSE
+   FOR i TO UPB pattern[@@1]
+   DO
+      zero se;
+      IF matcher(rx,pattern[@@1],pti:=i,1,se) THEN GOTO ytrue FI
+   OD;
+   FALSE EXIT
+ytrue:
+   TRUE
+FI; #rx match#
+
+@ @<Public...@>=
+,rx match
+
+@2Replacing.
+The routine !rx replace! presumes that !rx match! has been called and
+yielded !TRUE! so that a !REF SUBEXP! is available with the requisite
+subexpression indices. The routine yields the result of replacing
+!matched! with the expression provided in !replacer!.
+
+@<URegex princ...@>=
+PROC rx replace = (USTRING replacer,matched,SUBEXP se)USTRING:
+BEGIN
+   USTRING yield:=matched[:open OF se[0]-1];
+   BOOL #State flags#
+      escape:=FALSE,      #!TRUE! if !meta esc! was read#
+      unicode:=FALSE;     #!TRUE! if !meta hex! was read#
+   INT value;             #Used for processing Unicode code points#
+
+   FOR r FROM LWB replacer TO UPB replacer
+   DO
+      UCHAR rr:=replacer[r];
+      IF escape
+      THEN
+         escape:=FALSE;
+         @<URegex: does a Unicode code point or a sub-expression follow?@>
+      ELIF unicode
+      THEN @<URegex: compute a Unicode code point@>
+      ELIF rr = meta esc
+      THEN escape:=TRUE
+      ELSE yield:=USTRING(yield)+UCHAR(rr)
+      FI
+   OD;
+
+   IF unicode
+   THEN yield+:=U BIN value
+   FI;
+
+   yield + matched[close OF se[0]:]
+END; #rx replace#
+
+@ @<Public...@>=
+,rx replace
+
+@ A !meta esc! character can precede a single digit representing a
+matched sub-expression or a series of hexadecimal digits representing
+a Unicode code point.
+
+@<URegex: does a Unicode...@>=
+IF rr = meta hex
+THEN unicode:=TRUE;  value:=0
+ELIF is dec(rr)
+THEN
+   INT si = ABS bits OF rr-ABS "0";
+   INT oi = open OF se[si], ci = close OF se[si]-1;
+   IF oi/=0 & ci/=0
+   THEN yield+:=matched[oi:ci]
+   FI
+ELSE yield+:=rr      #Literal character#
+FI
+
+@ Shift !value! for speed. When a non-hexadecimal digit is read,
+add the computed code point to the yield and reset !unicode!.
+
+@<URegex: compute a Unicode...@>=
+IF is hex(rr)
+THEN value:=ABS(BIN value SHL 4)+CTOI rr
+ELSE yield+:=U BIN value;  unicode:=FALSE
+FI
+
+@2End.
+The end.

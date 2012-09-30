@@ -1,0 +1,70 @@
+This is makeindex, version 2.15 [TeX Live 2012] (kpathsea + Thai support).
+Scanning style file ./pame.ist.....done (5 attributes redefined, 0 ignored).
+Scanning input file pame.idx.....done (1896 entries accepted, 0 rejected).
+Sorting entries....................done (24874 comparisons).
+Generating output file pame.index....
+## Warning (input = pame.idx, line = 1694; output = pame.index, line = 354):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 876; output = pame.index, line = 376):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1757; output = pame.index, line = 378):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1581; output = pame.index, line = 465):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1864; output = pame.index, line = 1001):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1866; output = pame.index, line = 1002):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1768; output = pame.index, line = 1126):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1775; output = pame.index, line = 1136):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1803; output = pame.index, line = 1167):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1700; output = pame.index, line = 1186):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1785; output = pame.index, line = 1530):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+.
+## Warning (input = pame.idx, line = 1595; output = pame.index, line = 1571):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1597; output = pame.index, line = 1572):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1798; output = pame.index, line = 1704):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1699; output = pame.index, line = 1900):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1374; output = pame.index, line = 2307):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 916; output = pame.index, line = 2344):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 914; output = pame.index, line = 2471):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1834; output = pame.index, line = 2473):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1754; output = pame.index, line = 2649):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = pame.idx, line = 1831; output = pame.index, line = 2657):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+done (2959 lines written, 21 warnings).
+Output written in pame.index.
+Transcript written in pame.ilg.

@@ -346,8 +346,8 @@ A68_BOOL  Hasdescriptors;
 A_PAD_BOOL(PAD_23)
 };
 typedef struct A68t123  A68_123 ;    /* STRUCT(INT,INT,BOOL)  */
-A_ISTRUCT(A68_CHAR ,46,A68t125);
-typedef struct A68t125  A68_125 ;    /* STRUCT 46 CHAR */
+A_ISTRUCT(A68_CHAR ,32,A68t125);
+typedef struct A68t125  A68_125 ;    /* STRUCT 32 CHAR */
 struct A68t124{
 A68_INT  Mode;
 A_PAD_INT(PAD_24)
@@ -1255,8 +1255,8 @@ typedef struct A68t272  A68_272 ;    /* PROC(MODE96) VOID */
 
 A_PROCEDURE(A68_VOID ,A68t273,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t273  A68_273 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,64,A68t274);
-typedef struct A68t274  A68_274 ;    /* STRUCT 64 CHAR */
+A_ISTRUCT(A68_CHAR ,60,A68t274);
+typedef struct A68t274  A68_274 ;    /* STRUCT 60 CHAR */
 A_ISTRUCT(A68_CHAR ,2,A68t275);
 typedef struct A68t275  A68_275 ;    /* STRUCT 2 CHAR */
 A_ISTRUCT(struct A68t122 ,2,A68t276);
@@ -1344,30 +1344,32 @@ A_ISTRUCT(A68_CHAR ,38,A68t314);
 typedef struct A68t314  A68_314 ;    /* STRUCT 38 CHAR */
 A_ISTRUCT(A68_CHAR ,23,A68t315);
 typedef struct A68t315  A68_315 ;    /* STRUCT 23 CHAR */
-A_ISTRUCT(A68_VC ,2,A68t316);
-typedef struct A68t316  A68_316 ;    /* STRUCT 2 MODE26 */
+A_ISTRUCT(A68_CHAR ,21,A68t316);
+typedef struct A68t316  A68_316 ;    /* STRUCT 21 CHAR */
+A_ISTRUCT(A68_VC ,2,A68t317);
+typedef struct A68t317  A68_317 ;    /* STRUCT 2 MODE26 */
 
-A_PROCEDURE(A68_VOID ,A68t317,(struct A68t204 ,A68_VC ,A68_VC ,struct A68t154 *),(struct A68t204 ,A68_VC ,A68_VC ,struct A68t154 *,void *));
-typedef struct A68t317  A68_317 ;    /* PROC(MODE204,REF MODE26,REF MODE26,REF MODE154) VOID */
+A_PROCEDURE(A68_VOID ,A68t318,(struct A68t204 ,A68_VC ,A68_VC ,struct A68t154 *),(struct A68t204 ,A68_VC ,A68_VC ,struct A68t154 *,void *));
+typedef struct A68t318  A68_318 ;    /* PROC(MODE204,REF MODE26,REF MODE26,REF MODE154) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t318,(A68_VC ,A68_VC ,A68_BOOL ),(A68_VC ,A68_VC ,A68_BOOL ,void *));
-typedef struct A68t318  A68_318 ;    /* PROC(REF MODE26,REF MODE26,BOOL) VOID */
-A_ISTRUCT(A68_CHAR ,17,A68t319);
-typedef struct A68t319  A68_319 ;    /* STRUCT 17 CHAR */
-A_ISTRUCT(A68_CHAR ,11,A68t320);
-typedef struct A68t320  A68_320 ;    /* STRUCT 11 CHAR */
-A_ISTRUCT(A68_CHAR ,10,A68t321);
-typedef struct A68t321  A68_321 ;    /* STRUCT 10 CHAR */
-A_ISTRUCT(struct A68t122 ,8,A68t322);
-typedef struct A68t322  A68_322 ;    /* STRUCT 8 MODE122 */
+A_PROCEDURE(A68_VOID ,A68t319,(A68_VC ,A68_VC ,A68_BOOL ),(A68_VC ,A68_VC ,A68_BOOL ,void *));
+typedef struct A68t319  A68_319 ;    /* PROC(REF MODE26,REF MODE26,BOOL) VOID */
+A_ISTRUCT(A68_CHAR ,17,A68t320);
+typedef struct A68t320  A68_320 ;    /* STRUCT 17 CHAR */
+A_ISTRUCT(A68_CHAR ,11,A68t321);
+typedef struct A68t321  A68_321 ;    /* STRUCT 11 CHAR */
+A_ISTRUCT(A68_CHAR ,10,A68t322);
+typedef struct A68t322  A68_322 ;    /* STRUCT 10 CHAR */
+A_ISTRUCT(struct A68t122 ,8,A68t323);
+typedef struct A68t323  A68_323 ;    /* STRUCT 8 MODE122 */
 
-A_PROCEDURE(A68_VOID ,A68t323,(A68_VC ),(A68_VC ,void *));
-typedef struct A68t323  A68_323 ;    /* PROC(REF MODE26) VOID */
+A_PROCEDURE(A68_VOID ,A68t324,(A68_VC ),(A68_VC ,void *));
+typedef struct A68t324  A68_324 ;    /* PROC(REF MODE26) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t324,(A68_VC ,struct A68t105 *),(A68_VC ,struct A68t105 *,void *));
-typedef struct A68t324  A68_324 ;    /* PROC(REF MODE26,REF MODE105) VOID */
-A_ISTRUCT(A68_CHAR ,25,A68t325);
-typedef struct A68t325  A68_325 ;    /* STRUCT 25 CHAR */
+A_PROCEDURE(A68_VOID ,A68t325,(A68_VC ,struct A68t105 *),(A68_VC ,struct A68t105 *,void *));
+typedef struct A68t325  A68_325 ;    /* PROC(REF MODE26,REF MODE105) VOID */
+A_ISTRUCT(A68_CHAR ,25,A68t326);
+typedef struct A68t326  A68_326 ;    /* STRUCT 25 CHAR */
 
 /* --- Imports from a68config --- */
 extern A68_VOID  UEAALIB_a68config(A68_VC ,A68_VC );
@@ -1477,7 +1479,8 @@ extern A68_VOID  YPBAOSF_local_time_str(A68_LINT ,A68_VC *);
 #define APBAOSF_exit EXIT
 extern int A_argc;
 extern char **A_argv;
-#define A_prelude(argc,argv) A_argc=argc; A_argv = argv
+extern char **A_envp;
+#define A_prelude(argc,argv,envp) A_argc=argc; A_argv = argv; A_envp = envp
 
 #define XHCAOSF_prelude A_prelude
 extern A68_VOID  LICAOSF_get_args(A68_36 *);
@@ -1609,8 +1612,8 @@ extern void THAACTR(void);   /* centities */
 extern void WSCAOSF(void);   /* osif */
 extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
-static A68_274   EDYACTR = {"$Id: entryandreturn.c,v 1.5 2003-06-10 14:03:55 sian Exp $"}; 
-A_GISVEC(A68_VC ,FDYACTR,EDYACTR,64)
+static A68_274   EDYACTR = {"$Id: entryandreturn.a68,v 1.2 2003-06-10 14:03:55 sian Exp $"}; 
+A_GISVEC(A68_VC ,FDYACTR,EDYACTR,60)
 static A68_275   JDYACTR = {"{ "}; 
 A_GISVEC(A68_VC ,KDYACTR,JDYACTR,2)
 static A68_275   XDYACTR = {"} "}; 
@@ -1691,8 +1694,8 @@ static A68_305   TOYACTR = {"return( "};
 A_GISVEC(A68_VC ,UOYACTR,TOYACTR,8)
 static A68_306   ZOYACTR = {" );"}; 
 A_GISVEC(A68_VC ,APYACTR,ZOYACTR,3)
-static A68_125   MPYACTR = {"int main(int argc, char *argv[], char *envp[])"}; 
-A_GISVEC(A68_VC ,NPYACTR,MPYACTR,46)
+static A68_296   MPYACTR = {"int main(int argc, char **argv, char **envp)"}; 
+A_GISVEC(A68_VC ,NPYACTR,MPYACTR,44)
 static A68_308   TPYACTR = {"A_GC_STARTUP(argc);"}; 
 A_GISVEC(A68_VC ,UPYACTR,TPYACTR,19)
 static A68_309   AQYACTR = {"#ifdef A_prelude"}; 
@@ -1713,23 +1716,23 @@ static A68_314   PRYACTR = {"static A68_BOOL A_invoked = A68_FALSE;"};
 A_GISVEC(A68_VC ,QRYACTR,PRYACTR,38)
 static A68_315   WRYACTR = {"if( A_invoked ) return;"}; 
 A_GISVEC(A68_VC ,XRYACTR,WRYACTR,23)
-static A68_310   BSYACTR = {"A_invoked = A68_TRUE;"}; 
+static A68_316   BSYACTR = {"A_invoked = A68_TRUE;"}; 
 A_GISVEC(A68_VC ,CSYACTR,BSYACTR,21)
 static A68_312   ISYACTR = {"DECS "}; 
 A_GISVEC(A68_VC ,JSYACTR,ISYACTR,5)
 static A68_40   WSYACTR = {"MAIN"}; 
 A_GISVEC(A68_VC ,XSYACTR,WSYACTR,4)
-static A68_319   ZSYACTR = {"#ifdef A_postlude"}; 
+static A68_320   ZSYACTR = {"#ifdef A_postlude"}; 
 A_GISVEC(A68_VC ,ATYACTR,ZSYACTR,17)
-static A68_320   ETYACTR = {"A_postlude;"}; 
+static A68_321   ETYACTR = {"A_postlude;"}; 
 A_GISVEC(A68_VC ,FTYACTR,ETYACTR,11)
 static A68_311   JTYACTR = {"#endif"}; 
 A_GISVEC(A68_VC ,KTYACTR,JTYACTR,6)
-static A68_321   OTYACTR = {"return(0);"}; 
+static A68_322   OTYACTR = {"return(0);"}; 
 A_GISVEC(A68_VC ,PTYACTR,OTYACTR,10)
 static A68_312   YTYACTR = {"DECS "}; 
 A_GISVEC(A68_VC ,ZTYACTR,YTYACTR,5)
-static A68_325   FUYACTR = {"'complete program' called"}; 
+static A68_326   FUYACTR = {"'complete program' called"}; 
 A_GISVEC(A68_VC ,GUYACTR,FUYACTR,25)
 
 A_STATIC A68_VOID  GDYACTR_writeinitialopencurly(void);
@@ -1824,13 +1827,13 @@ A68_121  RDYACTR;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(writeinitialopencurly);
 { 
 HDYACTR_codestream = NSLACTR_codestream(VRLACTR_currentlevel());
- /* line 54: */
+ /* line 55: */
 MDYACTR = KDYACTR ;
 IDYACTR.data[0] = A_UNITE(LDYACTR,mode2,2,MDYACTR);
 IDYACTR.data[1] = A_UNITE(NDYACTR,mode4,4,EIAACTR_cnewline);
 MDMACTR_writecstream(A_HISVEC(ODYACTR,IDYACTR,2,A68_122 ), HDYACTR_codestream);
- /* line 55: */
  /* line 56: */
+ /* line 57: */
 QDYACTR = QSLACTR_locdecstream(VRLACTR_currentlevel()) ;
 MDMACTR_writecstream(A_HVEC(RDYACTR,A_UNITE(PDYACTR,mode3,3,QDYACTR),A68_122 ), HDYACTR_codestream);
 } 
@@ -1859,11 +1862,11 @@ A68_121  LEYACTR;  /* OPERATORS - scalar -> [] or VEC[] */
 A_PROC_ENTRY(writeclosingcurly);
 { 
 TDYACTR_codestream = NSLACTR_codestream(VRLACTR_currentlevel());
- /* line 67: */
-UDYACTR_locdecstream = QSLACTR_locdecstream(VRLACTR_currentlevel());
  /* line 68: */
+UDYACTR_locdecstream = QSLACTR_locdecstream(VRLACTR_currentlevel());
+ /* line 69: */
 VDYACTR_labelstream = TSLACTR_labelstream(VRLACTR_currentlevel());
- /* line 70: */
+ /* line 71: */
 AEYACTR = YDYACTR ;
 WDYACTR.data[0] = A_UNITE(ZDYACTR,mode2,2,AEYACTR);
 WDYACTR.data[1] = A_UNITE(BEYACTR,mode4,4,EIAACTR_cnewline);
@@ -1871,10 +1874,10 @@ FEYACTR = DEYACTR ;
 WDYACTR.data[2] = A_UNITE(EEYACTR,mode2,2,FEYACTR);
 WDYACTR.data[3] = A_UNITE(GEYACTR,mode4,4,EIAACTR_cnewline);
 MDMACTR_writecstream(A_HISVEC(HEYACTR,WDYACTR,4,A68_122 ), TDYACTR_codestream);
- /* line 71: */
-MDMACTR_writecstream(A_HVEC(JEYACTR,A_UNITE(IEYACTR,mode3,3,VDYACTR_labelstream),A68_122 ), UDYACTR_locdecstream);
  /* line 72: */
+MDMACTR_writecstream(A_HVEC(JEYACTR,A_UNITE(IEYACTR,mode3,3,VDYACTR_labelstream),A68_122 ), UDYACTR_locdecstream);
  /* line 73: */
+ /* line 74: */
 MDMACTR_writecstream(A_HVEC(LEYACTR,A_UNITE(KEYACTR,mode3,3,TDYACTR_codestream),A68_122 ), VDYACTR_labelstream);
 } 
 A_PROC_EXIT(writeclosingcurly);
@@ -1894,9 +1897,9 @@ A68_VC  YEYACTR;  /* YIELD */
 A68_122  ZEYACTR;  /* OPERATORS - mode -> union mode */
 A68_121  AFYACTR;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(routine_entry_hook);
- /* line 76: */
  /* line 77: */
  /* line 78: */
+ /* line 79: */
 OEYACTR = 1 ;
 if ( (A_VINDEX(Routinename,OEYACTR)!='!') )
 { 
@@ -1906,7 +1909,7 @@ PEYACTR.data[1] = A_UNITE(UEYACTR,mode2,2,Routinename);
 YEYACTR = WEYACTR ;
 PEYACTR.data[2] = A_UNITE(XEYACTR,mode2,2,YEYACTR);
 PEYACTR.data[3] = A_UNITE(ZEYACTR,mode4,4,EIAACTR_cnewline);
- /* line 79: */
+ /* line 80: */
 MDMACTR_writecstream(A_HISVEC(AFYACTR,PEYACTR,4,A68_122 ), NSLACTR_codestream(VRLACTR_currentlevel()));
 } 
 A_PROC_EXIT(routine_entry_hook);
@@ -1926,9 +1929,9 @@ A68_VC  NFYACTR;  /* YIELD */
 A68_122  OFYACTR;  /* OPERATORS - mode -> union mode */
 A68_121  PFYACTR;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(routine_exit_hook);
- /* line 82: */
  /* line 83: */
  /* line 84: */
+ /* line 85: */
 DFYACTR = 1 ;
 if ( (A_VINDEX(Routinename,DFYACTR)!='!') )
 { 
@@ -1938,7 +1941,7 @@ EFYACTR.data[1] = A_UNITE(JFYACTR,mode2,2,Routinename);
 NFYACTR = LFYACTR ;
 EFYACTR.data[2] = A_UNITE(MFYACTR,mode2,2,NFYACTR);
 EFYACTR.data[3] = A_UNITE(OFYACTR,mode4,4,EIAACTR_cnewline);
- /* line 85: */
+ /* line 86: */
 MDMACTR_writecstream(A_HISVEC(PFYACTR,EFYACTR,4,A68_122 ), NSLACTR_codestream(VRLACTR_currentlevel()));
 } 
 A_PROC_EXIT(routine_exit_hook);
@@ -2074,17 +2077,17 @@ A68_122  LMYACTR;  /* OPERATORS - mode -> union mode */
 A68_121  MMYACTR;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(writeconfiginfo);
 { 
- /* line 93: */
+ /* line 94: */
 RFYACTR.data[0] = A_UNITE(SFYACTR,mode4,4,EIAACTR_cnewline);
 WFYACTR = UFYACTR ;
 RFYACTR.data[1] = A_UNITE(VFYACTR,mode2,2,WFYACTR);
- /* line 95: */
+ /* line 96: */
 RFYACTR.data[2] = A_UNITE(XFYACTR,mode4,4,EIAACTR_cnewline);
 BGYACTR = ZFYACTR ;
 RFYACTR.data[3] = A_UNITE(AGYACTR,mode2,2,BGYACTR);
 MDMACTR_writecstream(A_HISVEC(CGYACTR,RFYACTR,4,A68_122 ), QSLACTR_locdecstream(0));
- /* line 97: */
  /* line 98: */
+ /* line 99: */
 LICAOSF_get_args(  &EGYACTR );
 GGYACTR = EGYACTR.upb -1;
 FGYACTR = EGYACTR.data;
@@ -2093,99 +2096,99 @@ for (;GGYACTR-- >= 0;
 ) )
 {
 DGYACTR_arg = *FGYACTR;
- /* line 99: */
+ /* line 100: */
 JGYACTR = '\"' ;
 HGYACTR.data[0] = A_UNITE(IGYACTR,mode1,1,JGYACTR);
 HGYACTR.data[1] = A_UNITE(KGYACTR,mode2,2,DGYACTR_arg);
 OGYACTR = MGYACTR ;
 HGYACTR.data[2] = A_UNITE(NGYACTR,mode2,2,OGYACTR);
- /* line 100: */
+ /* line 101: */
 MDMACTR_writecstream(A_HISVEC(PGYACTR,HGYACTR,3,A68_122 ), QSLACTR_locdecstream(0));
 }
- /* line 102: */
  /* line 103: */
+ /* line 104: */
 UGYACTR = SGYACTR ;
 QGYACTR.data[0] = A_UNITE(TGYACTR,mode2,2,UGYACTR);
- /* line 105: */
+ /* line 106: */
 QGYACTR.data[1] = A_UNITE(VGYACTR,mode4,4,EIAACTR_cnewline);
 ZGYACTR = XGYACTR ;
 QGYACTR.data[2] = A_UNITE(YGYACTR,mode2,2,ZGYACTR);
 MDMACTR_writecstream(A_HISVEC(AHYACTR,QGYACTR,3,A68_122 ), QSLACTR_locdecstream(0));
- /* line 107: */
-BHYACTR_env = (*(&((&IYIACTR_config_info)->Environment)));
  /* line 108: */
+BHYACTR_env = (*(&((&IYIACTR_config_info)->Environment)));
+ /* line 109: */
 for ( ;; )
 { 
- /* line 109: */
  /* line 110: */
-if ( !((BHYACTR_env!=DYIACTR_nil_envinfo)) ) break;
  /* line 111: */
+if ( !((BHYACTR_env!=DYIACTR_nil_envinfo)) ) break;
+ /* line 112: */
 EHYACTR = '\"' ;
 CHYACTR.data[0] = A_UNITE(DHYACTR,mode1,1,EHYACTR);
 GHYACTR = (*(&(BHYACTR_env->Env_name))) ;
 CHYACTR.data[1] = A_UNITE(FHYACTR,mode2,2,GHYACTR);
 IHYACTR = '=' ;
 CHYACTR.data[2] = A_UNITE(HHYACTR,mode1,1,IHYACTR);
- /* line 112: */
+ /* line 113: */
 KHYACTR = (*(&(BHYACTR_env->Env_value))) ;
 CHYACTR.data[3] = A_UNITE(JHYACTR,mode2,2,KHYACTR);
 OHYACTR = MHYACTR ;
 CHYACTR.data[4] = A_UNITE(NHYACTR,mode2,2,OHYACTR);
 MDMACTR_writecstream(A_HISVEC(PHYACTR,CHYACTR,5,A68_122 ), QSLACTR_locdecstream(0));
- /* line 113: */
  /* line 114: */
+ /* line 115: */
 BHYACTR_env = (*(&(BHYACTR_env->Next)));
 }
- /* line 116: */
  /* line 117: */
+ /* line 118: */
 UHYACTR = SHYACTR ;
 QHYACTR.data[0] = A_UNITE(THYACTR,mode2,2,UHYACTR);
- /* line 119: */
+ /* line 120: */
 QHYACTR.data[1] = A_UNITE(VHYACTR,mode4,4,EIAACTR_cnewline);
 ZHYACTR = XHYACTR ;
 QHYACTR.data[2] = A_UNITE(YHYACTR,mode2,2,ZHYACTR);
 MDMACTR_writecstream(A_HISVEC(AIYACTR,QHYACTR,3,A68_122 ), QSLACTR_locdecstream(0));
- /* line 121: */
-BIYACTR_mlist = (*(&((&IYIACTR_config_info)->Used_modules)));
  /* line 122: */
+BIYACTR_mlist = (*(&((&IYIACTR_config_info)->Used_modules)));
+ /* line 123: */
 for ( ;; )
 { 
- /* line 123: */
  /* line 124: */
-if ( !((BIYACTR_mlist!=CYIACTR_nil_modinfolist)) ) break;
  /* line 125: */
+if ( !((BIYACTR_mlist!=CYIACTR_nil_modinfolist)) ) break;
+ /* line 126: */
 EIYACTR = '\"' ;
 CIYACTR.data[0] = A_UNITE(DIYACTR,mode1,1,EIYACTR);
- /* line 126: */
+ /* line 127: */
 GIYACTR = (*(&(BIYACTR_mlist->Modinfo_file))) ;
 CIYACTR.data[1] = A_UNITE(FIYACTR,mode2,2,GIYACTR);
 KIYACTR = IIYACTR ;
 CIYACTR.data[2] = A_UNITE(JIYACTR,mode2,2,KIYACTR);
 MDMACTR_writecstream(A_HISVEC(LIYACTR,CIYACTR,3,A68_122 ), QSLACTR_locdecstream(0));
- /* line 127: */
  /* line 128: */
+ /* line 129: */
 BIYACTR_mlist = (*(&(BIYACTR_mlist->Next)));
 }
- /* line 130: */
  /* line 131: */
+ /* line 132: */
 QIYACTR = OIYACTR ;
 MIYACTR.data[0] = A_UNITE(PIYACTR,mode2,2,QIYACTR);
- /* line 132: */
+ /* line 133: */
 MIYACTR.data[1] = A_UNITE(RIYACTR,mode4,4,EIAACTR_cnewline);
 VIYACTR = TIYACTR ;
 MIYACTR.data[2] = A_UNITE(UIYACTR,mode2,2,VIYACTR);
- /* line 133: */
-MIYACTR.data[3] = A_UNITE(WIYACTR,mode4,4,EIAACTR_cnewline);
  /* line 134: */
+MIYACTR.data[3] = A_UNITE(WIYACTR,mode4,4,EIAACTR_cnewline);
+ /* line 135: */
 AJYACTR = YIYACTR ;
 MIYACTR.data[4] = A_UNITE(ZIYACTR,mode2,2,AJYACTR);
 MIYACTR.data[5] = A_UNITE(BJYACTR,mode4,4,EIAACTR_cnewline);
 MDMACTR_writecstream(A_HISVEC(CJYACTR,MIYACTR,6,A68_122 ), QSLACTR_locdecstream(0));
- /* line 136: */
  /* line 137: */
+ /* line 138: */
 HJYACTR = FJYACTR ;
 DJYACTR.data[0] = A_UNITE(GJYACTR,mode2,2,HJYACTR);
- /* line 138: */
+ /* line 139: */
 DJYACTR.data[1] = A_UNITE(IJYACTR,mode4,4,EIAACTR_cnewline);
 MJYACTR = KJYACTR ;
 DJYACTR.data[2] = A_UNITE(LJYACTR,mode2,2,MJYACTR);
@@ -2195,7 +2198,7 @@ DJYACTR.data[4] = A_UNITE(OJYACTR,mode1,1,PJYACTR);
 DJYACTR.data[5] = A_UNITE(QJYACTR,mode2,2,XQIACTR_sourcefilename);
 UJYACTR = SJYACTR ;
 DJYACTR.data[6] = A_UNITE(TJYACTR,mode2,2,UJYACTR);
- /* line 139: */
+ /* line 140: */
 DJYACTR.data[7] = A_UNITE(VJYACTR,mode4,4,EIAACTR_cnewline);
 ZJYACTR = XJYACTR ;
 DJYACTR.data[8] = A_UNITE(YJYACTR,mode2,2,ZJYACTR);
@@ -2203,7 +2206,7 @@ YPBAOSF_local_time_str( (*(&((&IYIACTR_config_info)->Translationtime))), &AKYACT
 DJYACTR.data[9] = A_UNITE(BKYACTR,mode2,2,AKYACTR);
 FKYACTR = DKYACTR ;
 DJYACTR.data[10] = A_UNITE(EKYACTR,mode2,2,FKYACTR);
- /* line 140: */
+ /* line 141: */
 DJYACTR.data[11] = A_UNITE(GKYACTR,mode4,4,EIAACTR_cnewline);
 KKYACTR = IKYACTR ;
 DJYACTR.data[12] = A_UNITE(JKYACTR,mode2,2,KKYACTR);
@@ -2211,11 +2214,11 @@ MKYACTR = (*(&((&IYIACTR_config_info)->Version))) ;
 DJYACTR.data[13] = A_UNITE(LKYACTR,mode2,2,MKYACTR);
 QKYACTR = OKYACTR ;
 DJYACTR.data[14] = A_UNITE(PKYACTR,mode2,2,QKYACTR);
- /* line 141: */
+ /* line 142: */
 DJYACTR.data[15] = A_UNITE(RKYACTR,mode4,4,EIAACTR_cnewline);
 VKYACTR = TKYACTR ;
 DJYACTR.data[16] = A_UNITE(UKYACTR,mode2,2,VKYACTR);
- /* line 142: */
+ /* line 143: */
 XKYACTR = (*(&((&IYIACTR_config_info)->Nameseed))) ;
 ZKYACTR = A_HISVEC(WKYACTR,XKYACTR,7,A68_CHAR ) ;
 DJYACTR.data[17] = A_UNITE(YKYACTR,mode2,2,ZKYACTR);
@@ -2223,9 +2226,9 @@ EMMACTR_nameseedoriginstring( (*(&((&IYIACTR_config_info)->Nameseedorigin))), &A
 DJYACTR.data[18] = A_UNITE(BLYACTR,mode2,2,ALYACTR);
 FLYACTR = DLYACTR ;
 DJYACTR.data[19] = A_UNITE(ELYACTR,mode2,2,FLYACTR);
- /* line 143: */
-DJYACTR.data[20] = A_UNITE(GLYACTR,mode4,4,EIAACTR_cnewline);
  /* line 144: */
+DJYACTR.data[20] = A_UNITE(GLYACTR,mode4,4,EIAACTR_cnewline);
+ /* line 145: */
 KLYACTR = ILYACTR ;
 DJYACTR.data[21] = A_UNITE(JLYACTR,mode2,2,KLYACTR);
 if ( (DBPACTR_specs.dim[0].upb==0) )
@@ -2241,55 +2244,55 @@ DJYACTR.data[22] = A_UNITE(RLYACTR,mode2,2,QLYACTR);
 } 
 VLYACTR = TLYACTR ;
 DJYACTR.data[23] = A_UNITE(ULYACTR,mode2,2,VLYACTR);
- /* line 145: */
+ /* line 146: */
 DJYACTR.data[24] = A_UNITE(WLYACTR,mode4,4,EIAACTR_cnewline);
 AMYACTR = YLYACTR ;
 DJYACTR.data[25] = A_UNITE(ZLYACTR,mode2,2,AMYACTR);
- /* line 146: */
+ /* line 147: */
 DJYACTR.data[26] = A_UNITE(BMYACTR,mode4,4,EIAACTR_cnewline);
 FMYACTR = DMYACTR ;
 DJYACTR.data[27] = A_UNITE(EMYACTR,mode2,2,FMYACTR);
- /* line 147: */
-DJYACTR.data[28] = A_UNITE(GMYACTR,mode4,4,EIAACTR_cnewline);
  /* line 148: */
+DJYACTR.data[28] = A_UNITE(GMYACTR,mode4,4,EIAACTR_cnewline);
+ /* line 149: */
 KMYACTR = IMYACTR ;
 DJYACTR.data[29] = A_UNITE(JMYACTR,mode2,2,KMYACTR);
 DJYACTR.data[30] = A_UNITE(LMYACTR,mode4,4,EIAACTR_cnewline);
- /* line 149: */
+ /* line 150: */
 MDMACTR_writecstream(A_HISVEC(MMYACTR,DJYACTR,31,A68_122 ), NSLACTR_codestream(0));
 } 
 A_PROC_EXIT(writeconfiginfo);
 return;
 } 
 #undef NL
- /* line 153: */
  /* line 154: */
  /* line 155: */
- /* line 157: */
+ /* line 156: */
+ /* line 158: */
 
 A68_VOID  SMYACTR_startroutine(A68_204  Routine, A68_110  Environ, A68_93  Paramdecnos, A68_INT  Resultmode, A68_154 * Resultvalue)
 { 
 A68_154  TMYACTR;  /* collateral clause result */
 A68_155  UMYACTR;  /* OPERATORS - mode -> union mode */
 A_PROC_ENTRY(startroutine);
- /* line 158: */
- /* line 160: */
-{ 
+ /* line 159: */
  /* line 161: */
+{ 
  /* line 162: */
  /* line 163: */
  /* line 164: */
  /* line 165: */
- /* line 167: */
-UOWACTR_rddec(Routine.Name, Routine.Mode, Paramdecnos, Resultmode, Routine.Rdenno, Environ, Routine.Props);
+ /* line 166: */
  /* line 168: */
-GDYACTR_writeinitialopencurly();
+UOWACTR_rddec(Routine.Name, Routine.Mode, Paramdecnos, Resultmode, Routine.Rdenno, Environ, Routine.Props);
  /* line 169: */
+GDYACTR_writeinitialopencurly();
+ /* line 170: */
 NEYACTR_routine_entry_hook(Routine.Name);
- /* line 171: */
+ /* line 172: */
 TMYACTR.Mode = Resultmode;
 TMYACTR.Info = PKJACTR_defaultinfo;
- /* line 172: */
+ /* line 173: */
 TMYACTR.Extra = A_EMPTY(UMYACTR,3);
 XMYACTR_assignment(Resultvalue, (*XMYACTR_assignment(A_LOC(A68_154 ), TMYACTR)));
 } 
@@ -2334,36 +2337,36 @@ A68_VC  CPYACTR;  /* YIELD */
 A68_122  DPYACTR;  /* OPERATORS - mode -> union mode */
 A68_121  EPYACTR;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(endroutine);
- /* line 175: */
  /* line 176: */
+ /* line 177: */
 { 
 MNYACTR = Routine.Props ;
 NNYACTR_generator = A_LB_GE(MNYACTR,FDAACTR_genprocbit);
- /* line 177: */
-ONYACTR_codestream = NSLACTR_codestream(VRLACTR_currentlevel());
  /* line 178: */
+ONYACTR_codestream = NSLACTR_codestream(VRLACTR_currentlevel());
  /* line 179: */
  /* line 180: */
+ /* line 181: */
 if ( NNYACTR_generator )
 { 
 /*SKIP*/;
 } 
 else
 { 
- /* line 181: */
+ /* line 182: */
 if ( OTMACTR_dynamic((*(&(Result->Mode)))) )
 { 
- /* line 182: */
  /* line 183: */
+ /* line 184: */
 if ( ARMACTR_isarray((*(&(Result->Mode)))) )
 { 
- /* line 184: */
-/*SKIP*/;
-} 
-else
-{ 
  /* line 185: */
+/*SKIP*/;
+} 
+else
+{ 
  /* line 186: */
+ /* line 187: */
 /*SKIP*/;
 } 
 } 
@@ -2372,68 +2375,68 @@ else
 /*SKIP*/;
 } 
 } 
- /* line 188: */
+ /* line 189: */
 CFYACTR_routine_exit_hook(Routine.Name);
- /* line 191: */
  /* line 192: */
+ /* line 193: */
 PNYACTR = NQIACTR_nostructresultoption;
 if ( PNYACTR )
 {PNYACTR = VSMACTR_iscstruct((*(&(Result->Mode))));
 }
 QNYACTR_usetempforresult = PNYACTR;
- /* line 194: */
  /* line 195: */
+ /* line 196: */
 if ( ((*(&(Result->Mode)))==UEAACTR_voidmode) )
 { 
 VNYACTR = TNYACTR ;
 RNYACTR.data[0] = A_UNITE(UNYACTR,mode2,2,VNYACTR);
 RNYACTR.data[1] = A_UNITE(WNYACTR,mode4,4,EIAACTR_cnewline);
- /* line 196: */
  /* line 197: */
+ /* line 198: */
 MDMACTR_writecstream(A_HISVEC(XNYACTR,RNYACTR,2,A68_122 ), ONYACTR_codestream);
 } 
 else
 { 
- /* line 198: */
+ /* line 199: */
 if ( QNYACTR_usetempforresult )
 { 
- /* line 199: */
+ /* line 200: */
 COYACTR = AOYACTR ;
 YNYACTR.data[0] = A_UNITE(BOYACTR,mode2,2,COYACTR);
- /* line 200: */
+ /* line 201: */
 GYPACTR_getcfragment( Result, &DOYACTR );
 YNYACTR.data[1] = A_UNITE(EOYACTR,mode2,2,DOYACTR);
 IOYACTR = GOYACTR ;
 YNYACTR.data[2] = A_UNITE(HOYACTR,mode2,2,IOYACTR);
 YNYACTR.data[3] = A_UNITE(JOYACTR,mode4,4,EIAACTR_cnewline);
 MDMACTR_writecstream(A_HISVEC(KOYACTR,YNYACTR,4,A68_122 ), ONYACTR_codestream);
- /* line 201: */
+ /* line 202: */
 POYACTR = NOYACTR ;
 LOYACTR.data[0] = A_UNITE(OOYACTR,mode2,2,POYACTR);
 LOYACTR.data[1] = A_UNITE(QOYACTR,mode4,4,EIAACTR_cnewline);
- /* line 202: */
  /* line 203: */
+ /* line 204: */
 MDMACTR_writecstream(A_HISVEC(ROYACTR,LOYACTR,2,A68_122 ), ONYACTR_codestream);
 } 
 else
 { 
- /* line 204: */
+ /* line 205: */
 WOYACTR = UOYACTR ;
 SOYACTR.data[0] = A_UNITE(VOYACTR,mode2,2,WOYACTR);
- /* line 205: */
+ /* line 206: */
 GYPACTR_getcfragment( Result, &XOYACTR );
 SOYACTR.data[1] = A_UNITE(YOYACTR,mode2,2,XOYACTR);
 CPYACTR = APYACTR ;
 SOYACTR.data[2] = A_UNITE(BPYACTR,mode2,2,CPYACTR);
 SOYACTR.data[3] = A_UNITE(DPYACTR,mode4,4,EIAACTR_cnewline);
- /* line 206: */
+ /* line 207: */
 MDMACTR_writecstream(A_HISVEC(EPYACTR,SOYACTR,4,A68_122 ), ONYACTR_codestream);
 } 
 } 
- /* line 208: */
+ /* line 209: */
 SDYACTR_writeclosingcurly();
- /* line 210: */
  /* line 211: */
+ /* line 212: */
 QNWACTR_completerddec();
 } 
 A_PROC_EXIT(endroutine);
@@ -2477,46 +2480,46 @@ A68_VC  NQYACTR;  /* YIELD */
 A68_122  OQYACTR;  /* OPERATORS - mode -> union mode */
 A68_121  PQYACTR;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(startmodule);
- /* line 219: */
  /* line 220: */
+ /* line 221: */
 { 
 KPYACTR_codestream = NSLACTR_codestream(VRLACTR_currentlevel());
- /* line 222: */
  /* line 223: */
- /* line 224: */
+ /* line 226: */
+ /* line 227: */
 PPYACTR = NPYACTR ;
 LPYACTR.data[0] = A_UNITE(OPYACTR,mode2,2,PPYACTR);
 LPYACTR.data[1] = A_UNITE(QPYACTR,mode4,4,EIAACTR_cnewline);
- /* line 225: */
+ /* line 228: */
 MDMACTR_writecstream(A_HISVEC(RPYACTR,LPYACTR,2,A68_122 ), KPYACTR_codestream);
- /* line 227: */
+ /* line 230: */
 GDYACTR_writeinitialopencurly();
- /* line 232: */
+ /* line 235: */
 WPYACTR = UPYACTR ;
 SPYACTR.data[0] = A_UNITE(VPYACTR,mode2,2,WPYACTR);
 SPYACTR.data[1] = A_UNITE(XPYACTR,mode4,4,EIAACTR_cnewline);
 MDMACTR_writecstream(A_HISVEC(YPYACTR,SPYACTR,2,A68_122 ), KPYACTR_codestream);
- /* line 234: */
+ /* line 237: */
 USPACTR_processcontexts();
- /* line 236: */
-QFYACTR_writeconfiginfo();
- /* line 238: */
  /* line 239: */
+QFYACTR_writeconfiginfo();
+ /* line 241: */
+ /* line 242: */
 DQYACTR = BQYACTR ;
 ZPYACTR.data[0] = A_UNITE(CQYACTR,mode2,2,DQYACTR);
- /* line 240: */
+ /* line 245: */
 ZPYACTR.data[1] = A_UNITE(EQYACTR,mode4,4,EIAACTR_cnewline);
 IQYACTR = GQYACTR ;
 ZPYACTR.data[2] = A_UNITE(HQYACTR,mode2,2,IQYACTR);
- /* line 241: */
+ /* line 246: */
 ZPYACTR.data[3] = A_UNITE(JQYACTR,mode4,4,EIAACTR_cnewline);
- /* line 242: */
+ /* line 247: */
 NQYACTR = LQYACTR ;
 ZPYACTR.data[4] = A_UNITE(MQYACTR,mode2,2,NQYACTR);
 ZPYACTR.data[5] = A_UNITE(OQYACTR,mode4,4,EIAACTR_cnewline);
 MDMACTR_writecstream(A_HISVEC(PQYACTR,ZPYACTR,6,A68_122 ), KPYACTR_codestream);
- /* line 244: */
- /* line 245: */
+ /* line 249: */
+ /* line 250: */
 NEYACTR_routine_entry_hook(RQYACTR);
 } 
 A_PROC_EXIT(startmodule);
@@ -2552,60 +2555,60 @@ A68_122  DSYACTR;  /* OPERATORS - mode -> union mode */
 A68_VC  ESYACTR;  /* YIELD */
 A68_122  FSYACTR;  /* OPERATORS - mode -> union mode */
 A68_121  GSYACTR;  /* OPERATORS - istruct -> vector */
-A68_316  HSYACTR;  /* collateral clause result */
+A68_317  HSYACTR;  /* collateral clause result */
 A68_36  KSYACTR;  /* OPERATORS - istruct -> vector */
 A68_VC  LSYACTR;  /* avoid structure result */
 A_PROC_ENTRY(startdecsmodule);
- /* line 255: */
- /* line 256: */
+ /* line 260: */
+ /* line 261: */
 { 
 VQYACTR_codestream = NSLACTR_codestream(VRLACTR_currentlevel());
- /* line 257: */
-WQYACTR_locdecstream = QSLACTR_locdecstream(VRLACTR_currentlevel());
- /* line 261: */
  /* line 262: */
+WQYACTR_locdecstream = QSLACTR_locdecstream(VRLACTR_currentlevel());
+ /* line 266: */
+ /* line 267: */
 BRYACTR = ZQYACTR ;
 XQYACTR.data[0] = A_UNITE(ARYACTR,mode2,2,BRYACTR);
 XQYACTR.data[1] = A_UNITE(CRYACTR,mode2,2,Uniquename);
 GRYACTR = ERYACTR ;
 XQYACTR.data[2] = A_UNITE(FRYACTR,mode2,2,GRYACTR);
 XQYACTR.data[3] = A_UNITE(HRYACTR,mode2,2,Modulename);
- /* line 264: */
+ /* line 269: */
 LRYACTR = JRYACTR ;
 XQYACTR.data[4] = A_UNITE(KRYACTR,mode2,2,LRYACTR);
 XQYACTR.data[5] = A_UNITE(MRYACTR,mode4,4,EIAACTR_cnewline);
- /* line 265: */
-MDMACTR_writecstream(A_HISVEC(NRYACTR,XQYACTR,6,A68_122 ), VQYACTR_codestream);
- /* line 267: */
-GDYACTR_writeinitialopencurly();
- /* line 269: */
  /* line 270: */
- /* line 271: */
+MDMACTR_writecstream(A_HISVEC(NRYACTR,XQYACTR,6,A68_122 ), VQYACTR_codestream);
+ /* line 272: */
+GDYACTR_writeinitialopencurly();
+ /* line 274: */
+ /* line 275: */
+ /* line 276: */
 SRYACTR = QRYACTR ;
 ORYACTR.data[0] = A_UNITE(RRYACTR,mode2,2,SRYACTR);
 ORYACTR.data[1] = A_UNITE(TRYACTR,mode4,4,EIAACTR_cnewline);
- /* line 272: */
+ /* line 277: */
 MDMACTR_writecstream(A_HISVEC(URYACTR,ORYACTR,2,A68_122 ), WQYACTR_locdecstream);
- /* line 274: */
- /* line 275: */
+ /* line 279: */
+ /* line 280: */
 ZRYACTR = XRYACTR ;
 VRYACTR.data[0] = A_UNITE(YRYACTR,mode2,2,ZRYACTR);
- /* line 276: */
+ /* line 281: */
 VRYACTR.data[1] = A_UNITE(ASYACTR,mode4,4,EIAACTR_cnewline);
- /* line 277: */
+ /* line 282: */
 ESYACTR = CSYACTR ;
 VRYACTR.data[2] = A_UNITE(DSYACTR,mode2,2,ESYACTR);
 VRYACTR.data[3] = A_UNITE(FSYACTR,mode4,4,EIAACTR_cnewline);
- /* line 278: */
+ /* line 283: */
 MDMACTR_writecstream(A_HISVEC(GSYACTR,VRYACTR,4,A68_122 ), VQYACTR_codestream);
- /* line 280: */
+ /* line 285: */
 USPACTR_processcontexts();
- /* line 282: */
+ /* line 287: */
 QFYACTR_writeconfiginfo();
- /* line 284: */
+ /* line 289: */
 HSYACTR.data[0] = JSYACTR;
 HSYACTR.data[1] = Modulename;
- /* line 285: */
+ /* line 290: */
 JDAAOSF_concat( A_HISVEC(KSYACTR,HSYACTR,2,A68_VC ), &LSYACTR );
 NEYACTR_routine_entry_hook(LSYACTR);
 } 
@@ -2613,28 +2616,28 @@ A_PROC_EXIT(startdecsmodule);
 return;
 } 
 #undef NL
- /* line 289: */
- /* line 291: */
+ /* line 294: */
+ /* line 296: */
 
 A68_VOID  QSYACTR_startprocmodule(A68_204  Routine, A68_VC  Uniquename, A68_VC  Modulename, A68_154 * Resultvalue)
 { 
 A_PROC_ENTRY(startprocmodule);
- /* line 292: */
- /* line 293: */
- /* line 294: */
+ /* line 297: */
+ /* line 298: */
+ /* line 299: */
 SXIACTR_terminalerror(809);
 A_PROC_EXIT(startprocmodule);
 return;
 } 
 #undef NL
- /* line 299: */
+ /* line 304: */
 
 A68_VOID  USYACTR_startcompositionmodule(A68_VC  Uniquename, A68_VC  Modulename, A68_BOOL  Partialcomposition)
 { 
 A_PROC_ENTRY(startcompositionmodule);
- /* line 303: */
- /* line 304: */
- /* line 305: */
+ /* line 308: */
+ /* line 309: */
+ /* line 310: */
 SXIACTR_terminalerror(806);
 A_PROC_EXIT(startcompositionmodule);
 return;
@@ -2643,7 +2646,7 @@ return;
 
 A68_VOID  VSYACTR_endmodule(void)
 { 
-A68_322  YSYACTR;  /* collateral clause result */
+A68_323  YSYACTR;  /* collateral clause result */
 A68_122  BTYACTR;  /* OPERATORS - mode -> union mode */
 A68_VC  CTYACTR;  /* YIELD */
 A68_122  DTYACTR;  /* OPERATORS - mode -> union mode */
@@ -2660,27 +2663,27 @@ A68_121  TTYACTR;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(endmodule);
 { 
 CFYACTR_routine_exit_hook(XSYACTR);
- /* line 310: */
- /* line 311: */
+ /* line 315: */
+ /* line 316: */
 CTYACTR = ATYACTR ;
 YSYACTR.data[0] = A_UNITE(BTYACTR,mode2,2,CTYACTR);
- /* line 312: */
+ /* line 317: */
 YSYACTR.data[1] = A_UNITE(DTYACTR,mode4,4,EIAACTR_cnewline);
 HTYACTR = FTYACTR ;
 YSYACTR.data[2] = A_UNITE(GTYACTR,mode2,2,HTYACTR);
- /* line 313: */
+ /* line 318: */
 YSYACTR.data[3] = A_UNITE(ITYACTR,mode4,4,EIAACTR_cnewline);
 MTYACTR = KTYACTR ;
 YSYACTR.data[4] = A_UNITE(LTYACTR,mode2,2,MTYACTR);
- /* line 314: */
+ /* line 319: */
 YSYACTR.data[5] = A_UNITE(NTYACTR,mode4,4,EIAACTR_cnewline);
- /* line 315: */
+ /* line 320: */
 RTYACTR = PTYACTR ;
 YSYACTR.data[6] = A_UNITE(QTYACTR,mode2,2,RTYACTR);
 YSYACTR.data[7] = A_UNITE(STYACTR,mode4,4,EIAACTR_cnewline);
 MDMACTR_writecstream(A_HISVEC(TTYACTR,YSYACTR,8,A68_122 ), NSLACTR_codestream(VRLACTR_currentlevel()));
- /* line 316: */
- /* line 317: */
+ /* line 321: */
+ /* line 322: */
 SDYACTR_writeclosingcurly();
 } 
 A_PROC_EXIT(endmodule);
@@ -2691,57 +2694,57 @@ return;
 A68_VOID  VTYACTR_enddecsmodule(A68_VC  Modulename)
 { 
 A68_BOOL  WTYACTR;  /* optbool result */
-A68_316  XTYACTR;  /* collateral clause result */
+A68_317  XTYACTR;  /* collateral clause result */
 A68_36  AUYACTR;  /* OPERATORS - istruct -> vector */
 A68_VC  BUYACTR;  /* avoid structure result */
 A_PROC_ENTRY(enddecsmodule);
- /* line 320: */
- /* line 321: */
+ /* line 325: */
+ /* line 326: */
 { 
- /* line 322: */
+ /* line 327: */
 if ( WAPACTR_previousversionfound )
 { 
- /* line 323: */
- /* line 325: */
+ /* line 328: */
+ /* line 330: */
 WTYACTR = XAPACTR_rscompatiblewithpreviousversion;
 if ( WTYACTR )
 {WTYACTR = YAPACTR_transcompatiblewithpreviousversi;
 }
 if ( WTYACTR )
 { 
- /* line 326: */
+ /* line 331: */
 GXIACTR_comment(319);
 } 
 else
 { 
- /* line 327: */
- /* line 328: */
+ /* line 332: */
+ /* line 333: */
 JXIACTR_warning(320);
 } 
 } 
- /* line 330: */
+ /* line 335: */
 XTYACTR.data[0] = ZTYACTR;
 XTYACTR.data[1] = Modulename;
 JDAAOSF_concat( A_HISVEC(AUYACTR,XTYACTR,2,A68_VC ), &BUYACTR );
 CFYACTR_routine_exit_hook(BUYACTR);
- /* line 332: */
+ /* line 337: */
 SDYACTR_writeclosingcurly();
- /* line 334: */
- /* line 335: */
+ /* line 339: */
+ /* line 340: */
 PHPACTR_outputmoduleinformation();
 } 
 A_PROC_EXIT(enddecsmodule);
 return;
 } 
 #undef NL
- /* line 340: */
+ /* line 345: */
 
 A68_VOID  EUYACTR_completeprogram(A68_VC  Modulename, A68_105 * Autocomplabel)
 { 
 A_PROC_ENTRY(completeprogram);
- /* line 346: */
- /* line 347: */
- /* line 348: */
+ /* line 351: */
+ /* line 352: */
+ /* line 353: */
 WXIACTR_assert(GUYACTR, A68_FALSE);
 A_PROC_EXIT(completeprogram);
 return;
@@ -2757,9 +2760,9 @@ void BDYACTR(void)   /* initialise DECS entryandreturn */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","-dir",".","entryandreturn.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","./values.m","./uniquenameserver.m","./modules.m","./incmode.m","./incvalue.m","./incimperatives.m","./incid.m","./environment.m","./identifiers.m","./modes.m","./coutput.m","./environ.m","./centities.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/osif.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/usefulops.m",""};
+static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","-dir",".","entryandreturn.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","./values.m","./uniquenameserver.m","./modules.m","./incmode.m","./incvalue.m","./incimperatives.m","./incid.m","./environment.m","./identifiers.m","./modes.m","./coutput.m","./environ.m","./centities.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/osif.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/usefulops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 if( A_invoked ) return;
@@ -2781,46 +2784,46 @@ THAACTR();   /* USE centities */
 WSCAOSF();   /* USE osif */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/src/entryandreturn.a68";
-A_config.translation_time = "Fri May 30 22:15:44 2003";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/src/entryandreturn.a68";
+A_config.translation_time = "Mon Jan 28 20:24:33 2013";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ADYACTR (from seed file) ";
-A_config.spec_change_time = "Fri May 30 22:15:44 2003";
+A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS entryandreturn);
 UEAALIB_a68config(LGAALIB_configinfo, FDYACTR);
- /* line 45: */
- /* line 52: */
+ /* line 46: */
  /* line 53: */
- /* line 58: */
- /* line 65: */
+ /* line 54: */
+ /* line 59: */
  /* line 66: */
- /* line 75: */
- /* line 81: */
- /* line 87: */
- /* line 91: */
+ /* line 67: */
+ /* line 76: */
+ /* line 82: */
+ /* line 88: */
  /* line 92: */
- /* line 151: */
+ /* line 93: */
  /* line 152: */
- /* line 174: */
- /* line 213: */
- /* line 215: */
- /* line 247: */
- /* line 287: */
- /* line 288: */
- /* line 296: */
- /* line 297: */
- /* line 307: */
- /* line 308: */
- /* line 309: */
- /* line 319: */
- /* line 337: */
- /* line 338: */
- /* line 350: */
- /* line 352: */
- /* line 356: */
+ /* line 153: */
+ /* line 175: */
+ /* line 214: */
+ /* line 216: */
+ /* line 252: */
+ /* line 292: */
+ /* line 293: */
+ /* line 301: */
+ /* line 302: */
+ /* line 312: */
+ /* line 313: */
+ /* line 314: */
+ /* line 324: */
+ /* line 342: */
+ /* line 343: */
+ /* line 355: */
+ /* line 357: */
+ /* line 361: */
 /*SKIP*/;
 A_PROC_EXIT(DECS entryandreturn);
 } 

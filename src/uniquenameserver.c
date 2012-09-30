@@ -618,7 +618,8 @@ extern A68_77  FTBAOSF_write_access;
 #define APBAOSF_exit EXIT
 extern int A_argc;
 extern char **A_argv;
-#define A_prelude(argc,argv) A_argc=argc; A_argv = argv
+extern char **A_envp;
+#define A_prelude(argc,argv,envp) A_argc=argc; A_argv = argv; A_envp = envp
 
 #define XHCAOSF_prelude A_prelude
 #include <signal.h>
@@ -767,7 +768,7 @@ extern void WSCAOSF(void);   /* osif */
 extern void BAAAOSF(void);   /* cif */
 extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
-static A68_162   UHMACTR = {"$Id: uniquenameserver.c,v 1.4 2003-05-30 21:20:49 sian Exp $"}; 
+static A68_162   UHMACTR = {"$Id: uniquenameserver.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,VHMACTR,UHMACTR,66)
 static A68_58  AIMACTR_num;
 static A68_164   CIMACTR = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"}; 
@@ -1358,9 +1359,9 @@ void RHMACTR(void)   /* initialise DECS uniquenameserver */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","-dir",".","uniquenameserver.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","./environment.m","./incinstallation.m","./environ.m","./coutput.m","./centities.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/osif.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/cif.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/usefulops.m",""};
+static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","-dir",".","uniquenameserver.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","./environment.m","./incinstallation.m","./environ.m","./coutput.m","./centities.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/osif.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/cif.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/usefulops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_58  BIMACTR;  /* avoid structure result */
@@ -1377,11 +1378,11 @@ WSCAOSF();   /* USE osif */
 BAAAOSF();   /* USE cif */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/src/uniquenameserver.a68";
-A_config.translation_time = "Fri May 30 22:15:36 2003";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/src/uniquenameserver.a68";
+A_config.translation_time = "Mon Jan 28 20:24:33 2013";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "QHMACTR (from seed file) ";
-A_config.spec_change_time = "Fri May 30 22:15:36 2003";
+A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

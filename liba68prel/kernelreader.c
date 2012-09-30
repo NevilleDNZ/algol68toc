@@ -950,7 +950,8 @@ extern A68_113  RTBAOSF_update_truncate_access;
 extern A68_VOID  VFCAOSF_parse_filename(A68_VC ,A68_VC ,struct A68t97 ,A68_134 *);
 extern int A_argc;
 extern char **A_argv;
-#define A_prelude(argc,argv) A_argc=argc; A_argv = argv
+extern char **A_envp;
+#define A_prelude(argc,argv,envp) A_argc=argc; A_argv = argv; A_envp = envp
 
 #define XHCAOSF_prelude A_prelude
 #include <algol68/Alibrary.h>
@@ -986,7 +987,7 @@ extern void CQEAOSF(void);   /* osinterface */
 extern void ZRAAOSF(void);   /* messageproc */
 extern void KNDAOSF(void);   /* putstrings */
 /* --- end of DECS initialisation functions --- */
-static A68_216   JLJAOSF = {"$Id: kernelreader.c,v 1.5 2003-05-30 21:20:46 sian Exp $"}; 
+static A68_216   JLJAOSF = {"$Id: kernelreader.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
 A_GISVEC(A68_VC ,KLJAOSF,JLJAOSF,62)
 static A68_217   LLJAOSF = {"+-*/%<>=:.$#^@"}; 
 A_GISVEC(A68_VC ,MLJAOSF,LLJAOSF,14)
@@ -4225,9 +4226,9 @@ void GLJAOSF(void)   /* initialise DECS kernelreader */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","kernelreader.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/commandreader.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/commandsyntax.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/basics.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/osinterface.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/messageproc.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/putstrings.m",""};
+static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","kernelreader.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/commandreader.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/commandsyntax.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/basics.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/osinterface.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/messageproc.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/putstrings.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_VC  CNJAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
@@ -4278,11 +4279,11 @@ CQEAOSF();   /* USE osinterface */
 ZRAAOSF();   /* USE messageproc */
 KNDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/liba68prel/kernelreader.a68";
-A_config.translation_time = "Fri May 30 22:15:16 2003";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/liba68prel/kernelreader.a68";
+A_config.translation_time = "Mon Jan 28 20:24:32 2013";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "FLJAOSF (from seed file) ";
-A_config.spec_change_time = "Fri May 30 22:15:16 2003";
+A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

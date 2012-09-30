@@ -1,0 +1,26 @@
+Replace references to Ctrans with A68toc or Algol68toc.
+
+Missing index entries
+=====================
+arg channel
+client socket channel
+on signal
+server socket channel
+
+Errors in the text
+==================
+OP ELEM = (INT a,L BITS b)BOOL:
+
+Delete the note about the Ctrans compiler, because ELEM for the other
+precisions has been redefined appropriately.
+
+OP SHL, SHR
+
+No priority is given in chapter 12. Should be 8.
+
+Chapter 1-> remove the reference to /usr/info/mm.info.gz.
+Chapter 1-> remove underscores from the answer to exercise 1.2.
+Chapter 1-> remove underscores in the definition of an identifier
+Chapter 1->be easily missed=>be missed easily
+
+Chapter 9-> Environment strings:- s/null ch/nul ch/ and check the index entry.
