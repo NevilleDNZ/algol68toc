@@ -23,16 +23,19 @@ A68_DIRS=-dir $(ACD) -dir $(LPD)
 
 .PHONY : clean install
 
-all : liba68prel.a
+all : liba68prel.a nameseed
 
 liba68prel.a : $(ACD)/a68config.o $(liba68prel_o)
 	ar rv $@ $^
 	ranlib $@
 
+nameseed : rctr
+	cp rctr nameseed
+
 Translate : $(liba68prel_c)
 
 clean :
-	rm -f *.o *.a
+	$(RM) -v *.o liba68prel.a nameseed
 
 install :
 	echo "Nothing to be done for install"

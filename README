@@ -48,7 +48,7 @@ The QAD Standard Prelude given here (in sub-directory qad)
 uses the conversion routines from the van Vliet Transput Model as
 well as the source code for `put' and `get' suitably adapted.
 
-The availability of the `STRAIGHT' operator in the Ctrans Algol 68
+The availability of the `STRAIGHT' operator in the a68toc Algol 68
 compiler meant that some of the modes in the OCCL definition of
 `SIMPLIN/SIMPLOUT' could be removed. While it is true that `STRAIGHT'
 will straighten any multiple, a quick attempt to remove all multiples
@@ -68,21 +68,14 @@ A few extra files have been added to the port:-
 printed with some lexical highlighting, provided that `a2ps' is used
 (see the Debian package of that name):-
     algol68.ssh -- a style sheet for `a2ps'
-    sheets.map  -- a revised sheet map file for `a2ps'
-
-(2) The following four files provide an Algol 68 mode for the `FTE' text
-editor:-
-    m_algol.fte
-    main.fte
-    ui_k_fte.fte
-    ui_m_kb.fte
-I should warn, however, that some of the modes have been commented
-out. You should use whichever modes interest you.
+    sheets.entry-- an entry for the file /usr/share/a2ps/sheets/sheets.map
+	 for `a2ps'
 
 Lastly, I am actively using this port and have already created the following
 preludes:-
    regular expressions
-   string, xor, monitor
+	Unicode regular expressions
+	string operators, sorting and the binary chop
    system facilities:-
       execve, fork, exec piped child, system
       getpid et al
@@ -91,12 +84,9 @@ preludes:-
       time routines
    Xforms library binding
 
-Half of the Web68 literate programming system is also available
-(tang). See also the man page for ca(1).
-
 If any of these interest you, then do send me email.
 
-Dr Sian Mountbatten           Fri Mar 9 20:05:37 GMT 2012
+Dr Sian Mountbatten           Thu Sep 13 18:00:00 +0100 2012
 Inverness
 Scotland
 <poenikatu@fastmail.co.uk>
