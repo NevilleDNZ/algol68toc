@@ -27,7 +27,7 @@ endif
 
 #---------------- Rules -----------------
 %.c: %.a68
-	$(ALGOL) $(A68_FLAGS) -lib $(A68_ROOT) $(A68_DIRS) $<
+	/usr/bin/a68toc $(A68_FLAGS) -lib $(A68_ROOT) $(A68_DIRS) $<
 
 %.o: %.c
 	$(CC) $(CFLAGS) -DA68_CHECK -o $@ -c $<

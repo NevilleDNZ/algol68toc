@@ -1,0 +1,259 @@
+\contentsline {chapter}{Preface}{xiv}
+\contentsline {chapter}{\numberline {1}\special {html:<a href="chapi">}Introduction\special {html:</a>}}{1}
+\contentsline {section}{\numberline {1.1}\special {html:<a href="intro-need">}What you will need\special {html:</a>}}{3}
+\contentsline {section}{\numberline {1.2}\special {html:<a href="intro-term">}Terminology\special {html:</a>}}{3}
+\contentsline {section}{\numberline {1.3}\special {html:<a href="intro-values">}Values and modes\special {html:</a>}}{4}
+\contentsline {section}{\numberline {1.4}\special {html:<a href="intro-ints">}Integers\special {html:</a>}}{6}
+\contentsline {section}{\numberline {1.5}\special {html:<a href="intro-iddecs">}Identity declarations\special {html:</a>}}{7}
+\contentsline {section}{\numberline {1.6}\special {html:<a href="intro-chars">}Characters\special {html:</a>}}{11}
+\contentsline {section}{\numberline {1.7}\special {html:<a href="intro-reals">}Real numbers\special {html:</a>}}{13}
+\contentsline {section}{\numberline {1.8}\special {html:<a href="intro-prog">}Program structure\special {html:</a>}}{16}
+\contentsline {section}{\numberline {1.9}\special {html:<a href="intro-co">}Comments\special {html:</a>}}{19}
+\contentsline {section}{\numberline {1.10}\special {html:<a href="intro-ext">}External values\special {html:</a>}}{23}
+\contentsline {section}{\numberline {1.11}\special {html:<a href="intro-summ">}Summary\special {html:</a>}}{24}
+\contentsline {chapter}{\numberline {2}\special {html:<a href="chapii">}Formul\ae \special {html:</a>}}{27}
+\contentsline {section}{\numberline {2.1}\special {html:<a href="form-monad">}Monadic operators\special {html:</a>}}{28}
+\contentsline {section}{\numberline {2.2}\special {html:<a href="form-dyad">}Dyadic operators\special {html:</a>}}{29}
+\contentsline {section}{\numberline {2.3}\special {html:<a href="form-mul">}Multiplication\special {html:</a>}}{32}
+\contentsline {section}{\numberline {2.4}\special {html:<a href="form-div">}Division\special {html:</a>}}{35}
+\contentsline {section}{\numberline {2.5}\special {html:<a href="form-exp">}Exponentiation\special {html:</a>}}{37}
+\contentsline {section}{\numberline {2.6}\special {html:<a href="form-mix">}Mixed arithmetic\special {html:</a>}}{39}
+\contentsline {section}{\numberline {2.7}\special {html:<a href="form-order">}Order of elaboration\special {html:</a>}}{39}
+\contentsline {section}{\numberline {2.8}\special {html:<a href="form-change">}Changing the mode\special {html:</a>}}{40}
+\contentsline {section}{\numberline {2.9}\special {html:<a href="form-miscop">}Miscellaneous operators\special {html:</a>}}{42}
+\contentsline {section}{\numberline {2.10}\special {html:<a href="from-opchar">}Operators using \texttt {CHAR}\special {html:</a>}}{42}
+\contentsline {section}{\numberline {2.11}\special {html:<a href="form-print">}\texttt {print} revisited\special {html:</a>}}{43}
+\contentsline {section}{\numberline {2.12}\special {html:<a href="form-summ">}Summary\special {html:</a>}}{44}
+\contentsline {chapter}{\numberline {3}\special {html:<a href="chapiii">}Repetition\special {html:</a>}}{47}
+\contentsline {section}{\numberline {3.1}\special {html:<a href="rep-mult">}Multiples\special {html:</a>}}{48}
+\contentsline {subsection}{\numberline {3.1.1}\special {html:<a href="rep-rowdisp">}Row-displays\special {html:</a>}}{49}
+\contentsline {subsection}{\numberline {3.1.2}\special {html:<a href="rep-dim">}Dimensions\special {html:</a>}}{52}
+\contentsline {subsection}{\numberline {3.1.3}\special {html:<a href="rep-bound">}Subscripts and bounds\special {html:</a>}}{54}
+\contentsline {section}{\numberline {3.2}\special {html:<a href="rep-slice">}Slicing\special {html:</a>}}{57}
+\contentsline {section}{\numberline {3.3}\special {html:<a href="rep-trim">}Trimming\special {html:</a>}}{60}
+\contentsline {section}{\numberline {3.4}\special {html:<a href="rep-prmult">}Printing multiples\special {html:</a>}}{63}
+\contentsline {section}{\numberline {3.5}\special {html:<a href="rep-opmult">}Operators with multiples\special {html:</a>}}{65}
+\contentsline {section}{\numberline {3.6}\special {html:<a href="rep-range">}Ranges\special {html:</a>}}{66}
+\contentsline {section}{\numberline {3.7}\special {html:<a href="rep-rep">}Program repetition\special {html:</a>}}{67}
+\contentsline {section}{\numberline {3.8}\special {html:<a href="rep-nestloop">}Nested loops\special {html:</a>}}{72}
+\contentsline {section}{\numberline {3.9}\special {html:<a href="rep-prog">}Program structure\special {html:</a>}}{73}
+\contentsline {section}{\numberline {3.10}\special {html:<a href="rep-FORALL">}The \texttt {FORALL} loop\special {html:</a>}}{74}
+\contentsline {section}{\numberline {3.11}\special {html:<a href="rep-summ">}Summary\special {html:</a>}}{75}
+\contentsline {chapter}{\numberline {4}\special {html:<a href="chapiv">}Choice\special {html:</a>}}{79}
+\contentsline {section}{\numberline {4.1}\special {html:<a href="choice-bool">}Boolean values\special {html:</a>}}{80}
+\contentsline {section}{\numberline {4.2}\special {html:<a href="choice-bops">}Boolean operators\special {html:</a>}}{80}
+\contentsline {section}{\numberline {4.3}\special {html:<a href="choice-relops">}Relational operators\special {html:</a>}}{81}
+\contentsline {section}{\numberline {4.4}\special {html:<a href="choice-comp">}Compound Boolean formul{\ae }\special {html:</a>}}{85}
+\contentsline {section}{\numberline {4.5}\special {html:<a href="choice-cond">}Conditional clauses\special {html:</a>}}{87}
+\contentsline {subsection}{\numberline {4.5.1}\special {html:<a href="choice-pseud">}Pseudo-operators\special {html:</a>}}{93}
+\contentsline {section}{\numberline {4.6}\special {html:<a href="choice-case">}Multiple choice\special {html:</a>}}{96}
+\contentsline {section}{\numberline {4.7}\special {html:<a href="choice-summ">}Summary\special {html:</a>}}{102}
+\contentsline {chapter}{\numberline {5}\special {html:<a href="chapv">}Names\special {html:</a>}}{104}
+\contentsline {section}{\numberline {5.1}\special {html:<a href="name-assign">}Assignment\special {html:</a>}}{107}
+\contentsline {subsection}{\numberline {5.1.1}\special {html:<a href="name-copy">}Copying values\special {html:</a>}}{110}
+\contentsline {subsection}{\numberline {5.1.2}\special {html:<a href="name-assops">}Assigning operators\special {html:</a>}}{111}
+\contentsline {section}{\numberline {5.2}\special {html:<a href="name-assform">}Assignments in formul\ae \special {html:</a>}}{115}
+\contentsline {section}{\numberline {5.3}\special {html:<a href="name-mult">}Multiple names\special {html:</a>}}{117}
+\contentsline {section}{\numberline {5.4}\special {html:<a href="name-assmult">}Assigning to multiple names\special {html:</a>}}{118}
+\contentsline {subsection}{\numberline {5.4.1}\special {html:<a href="name-indiv">}Individual assignment\special {html:</a>}}{118}
+\contentsline {subsection}{\numberline {5.4.2}\special {html:<a href="name-coll">}Collective assignment\special {html:</a>}}{121}
+\contentsline {section}{\numberline {5.5}\special {html:<a href="name-flex">}Flexible names\special {html:</a>}}{126}
+\contentsline {section}{\numberline {5.6}\special {html:<a href="name-string">}The mode \texttt {STRING}\special {html:</a>}}{130}
+\contentsline {section}{\numberline {5.7}\special {html:<a href="name-trans">}Reference modes in transput\special {html:</a>}}{132}
+\contentsline {section}{\numberline {5.8}\special {html:<a href="name-dyn">}Dynamic names\special {html:</a>}}{135}
+\contentsline {section}{\numberline {5.9}\special {html:<a href="name-loop">}Loops revisited\special {html:</a>}}{136}
+\contentsline {section}{\numberline {5.10}\special {html:<a href="name-abbr">}Abbreviated declarations\special {html:</a>}}{138}
+\contentsline {section}{\numberline {5.11}\special {html:<a href="name-summ">}Summary\special {html:</a>}}{141}
+\contentsline {chapter}{\numberline {6}\special {html:<a href="chapvi">}Routines\special {html:</a>}}{143}
+\contentsline {section}{\numberline {6.1}\special {html:<a href="rout-rout">}Routines\special {html:</a>}}{143}
+\contentsline {subsection}{\numberline {6.1.1}\special {html:<a href="rout-modes">}Routine modes\special {html:</a>}}{147}
+\contentsline {subsection}{\numberline {6.1.2}\special {html:<a href="rout-multpar">}Multiples as parameters\special {html:</a>}}{148}
+\contentsline {subsection}{\numberline {6.1.3}\special {html:<a href="rout-namepar">}Names as parameters\special {html:</a>}}{148}
+\contentsline {subsection}{\numberline {6.1.4}\special {html:<a href="rout-VOID">}The mode \texttt {VOID}\special {html:</a>}}{149}
+\contentsline {subsection}{\numberline {6.1.5}\special {html:<a href="rout-yname">}Routines yielding names\special {html:</a>}}{150}
+\contentsline {subsection}{\numberline {6.1.6}\special {html:<a href="rout-nopar">}Parameterless routines\special {html:</a>}}{153}
+\contentsline {section}{\numberline {6.2}\special {html:<a href="rout-ops">}Operators\special {html:</a>}}{155}
+\contentsline {subsection}{\numberline {6.2.1}\special {html:<a href="rout-idops">}Identification of operators\special {html:</a>}}{156}
+\contentsline {subsection}{\numberline {6.2.2}\special {html:<a href="rout-opuse">}Operator usage\special {html:</a>}}{160}
+\contentsline {subsection}{\numberline {6.2.3}\special {html:<a href="rout-dyad">}Dyadic operators\special {html:</a>}}{162}
+\contentsline {subsection}{\numberline {6.2.4}\special {html:<a href="rout-opsym">}Operator symbols\special {html:</a>}}{166}
+\contentsline {section}{\numberline {6.3}\special {html:<a href="rout-procs">}Procedures\special {html:</a>}}{167}
+\contentsline {subsection}{\numberline {6.3.1}\special {html:<a href="rout-npprocs">}Parameterless procedures\special {html:</a>}}{169}
+\contentsline {subsection}{\numberline {6.3.2}\special {html:<a href="rout-parprocs">}Procedures with parameters\special {html:</a>}}{174}
+\contentsline {subsection}{\numberline {6.3.3}\special {html:<a href="rout-procpar">}Procedures as parameters\special {html:</a>}}{178}
+\contentsline {subsection}{\numberline {6.3.4}\special {html:<a href="rout-rec">}Recursion\special {html:</a>}}{180}
+\contentsline {subsection}{\numberline {6.3.5}\special {html:<a href="rout-stan">}Standard procedures\special {html:</a>}}{183}
+\contentsline {subsection}{\numberline {6.3.6}\special {html:<a href="rout-other">}Other features of procedures\special {html:</a>}}{184}
+\contentsline {section}{\numberline {6.4}\special {html:<a href="rout-summ">}Summary\special {html:</a>}}{187}
+\contentsline {chapter}{\numberline {7}\special {html:<a href="chapvii">}Structures\special {html:</a>}}{189}
+\contentsline {section}{\numberline {7.1}\special {html:<a href="struc-denot">}Structure denotations\special {html:</a>}}{189}
+\contentsline {section}{\numberline {7.2}\special {html:<a href="struc-field">}Field selection\special {html:</a>}}{193}
+\contentsline {section}{\numberline {7.3}\special {html:<a href="struc-mode">}Mode declarations\special {html:</a>}}{197}
+\contentsline {section}{\numberline {7.4}\special {html:<a href="struc-compl">}Complex numbers\special {html:</a>}}{201}
+\contentsline {section}{\numberline {7.5}\special {html:<a href="struc-mult">}Multiples in structures\special {html:</a>}}{206}
+\contentsline {section}{\numberline {7.6}\special {html:<a href="struc-rows">}Rows of structures\special {html:</a>}}{211}
+\contentsline {section}{\numberline {7.7}\special {html:<a href="struc-trans">}Transput of structures\special {html:</a>}}{213}
+\contentsline {section}{\numberline {7.8}\special {html:<a href="struc-summ">}Summary\special {html:</a>}}{214}
+\contentsline {chapter}{\numberline {8}\special {html:<a href="chapviii">}Unions\special {html:</a>}}{216}
+\contentsline {section}{\numberline {8.1}\special {html:<a href="union-mode">}United mode declarations\special {html:</a>}}{217}
+\contentsline {section}{\numberline {8.2}\special {html:<a href="union-proc">}United modes in procedures\special {html:</a>}}{221}
+\contentsline {section}{\numberline {8.3}\special {html:<a href="union-conf">}Conformity clauses\special {html:</a>}}{224}
+\contentsline {section}{\numberline {8.4}\special {html:<a href="union-summ">}Summary\special {html:</a>}}{228}
+\contentsline {chapter}{\numberline {9}\special {html:<a href="chapix">}Transput\special {html:</a>}}{229}
+\contentsline {section}{\numberline {9.1}\special {html:<a href="trans-books">}Books, channels and files\special {html:</a>}}{230}
+\contentsline {section}{\numberline {9.2}\special {html:<a href="trans-readbook">}Reading books\special {html:</a>}}{231}
+\contentsline {section}{\numberline {9.3}\special {html:<a href="trans-writbook">}Writing to books\special {html:</a>}}{236}
+\contentsline {section}{\numberline {9.4}\special {html:<a href="trans-term">}String terminators\special {html:</a>}}{239}
+\contentsline {section}{\numberline {9.5}\special {html:<a href="trans-event">}Events\special {html:</a>}}{241}
+\contentsline {subsection}{\numberline {9.5.1}\special {html:<a href="trans-logi">}Logical file end\special {html:</a>}}{241}
+\contentsline {subsection}{\numberline {9.5.2}\special {html:<a href="trans-phys">}Physical file end\special {html:</a>}}{244}
+\contentsline {subsection}{\numberline {9.5.3}\special {html:<a href="trans-val">}Value error\special {html:</a>}}{244}
+\contentsline {subsection}{\numberline {9.5.4}\special {html:<a href="trans-char">}Char error\special {html:</a>}}{245}
+\contentsline {section}{\numberline {9.6}\special {html:<a href="trans-cmd">}The command line\special {html:</a>}}{247}
+\contentsline {section}{\numberline {9.7}\special {html:<a href="trans-env">}Environment strings\special {html:</a>}}{250}
+\contentsline {section}{\numberline {9.8}\special {html:<a href="trans-conv">}Writing reports\special {html:</a>}}{252}
+\contentsline {section}{\numberline {9.9}\special {html:<a href="trans-bin">}Binary books\special {html:</a>}}{256}
+\contentsline {section}{\numberline {9.10}\special {html:<a href="trans-intern">}Internal books\special {html:</a>}}{261}
+\contentsline {section}{\numberline {9.11}\special {html:<a href="trans-other">}Other transput procedures\special {html:</a>}}{262}
+\contentsline {section}{\numberline {9.12}\special {html:<a href="trans-summ">}Summary\special {html:</a>}}{263}
+\contentsline {chapter}{\numberline {10}\special {html:<a href="chapx">}Units\special {html:</a>}}{265}
+\contentsline {section}{\numberline {10.1}\special {html:<a href="gram-phrases">}Phrases\special {html:</a>}}{266}
+\contentsline {section}{\numberline {10.2}\special {html:<a href="gram-contexts">}Contexts\special {html:</a>}}{268}
+\contentsline {section}{\numberline {10.3}\special {html:<a href="gram-coercions">}Coercions\special {html:</a>}}{269}
+\contentsline {subsection}{\numberline {10.3.1}\special {html:<a href="gram-deproc">}Deproceduring\special {html:</a>}}{271}
+\contentsline {subsection}{\numberline {10.3.2}\special {html:<a href="gram-deref">}Dereferencing\special {html:</a>}}{273}
+\contentsline {subsection}{\numberline {10.3.3}\special {html:<a href="gram-wderef">}Weakly-dereferencing\special {html:</a>}}{274}
+\contentsline {subsection}{\numberline {10.3.4}\special {html:<a href="gram-unite">}Uniting\special {html:</a>}}{275}
+\contentsline {subsection}{\numberline {10.3.5}\special {html:<a href="gram-wid">}Widening\special {html:</a>}}{275}
+\contentsline {subsection}{\numberline {10.3.6}\special {html:<a href="gram-row">}Rowing\special {html:</a>}}{276}
+\contentsline {subsection}{\numberline {10.3.7}\special {html:<a href="gram-voiding">}Voiding\special {html:</a>}}{278}
+\contentsline {subsection}{\numberline {10.3.8}\special {html:<a href="gram-legal">}Legal coercions\special {html:</a>}}{279}
+\contentsline {section}{\numberline {10.4}\special {html:<a href="gram-enc">}Enclosed clauses\special {html:</a>}}{281}
+\contentsline {section}{\numberline {10.5}\special {html:<a href="gram-prim">}Primaries\special {html:</a>}}{284}
+\contentsline {section}{\numberline {10.6}\special {html:<a href="gram-sec">}Secondaries\special {html:</a>}}{287}
+\contentsline {section}{\numberline {10.7}\special {html:<a href="gram-ter">}Tertiaries\special {html:</a>}}{291}
+\contentsline {section}{\numberline {10.8}\special {html:<a href="gram-quat">}Quaternaries\special {html:</a>}}{291}
+\contentsline {section}{\numberline {10.9}\special {html:<a href="gram-bal">}Balancing\special {html:</a>}}{295}
+\contentsline {section}{\numberline {10.10}\special {html:<a href="gram-well">}Well-formed modes\special {html:</a>}}{299}
+\contentsline {section}{\numberline {10.11}\special {html:<a href="gram-flex">}Flexible names\special {html:</a>}}{304}
+\contentsline {section}{\numberline {10.12}\special {html:<a href="gram-orth">}Orthogonality\special {html:</a>}}{305}
+\contentsline {section}{\numberline {10.13}\special {html:<a href="gram-summ">}Summary\special {html:</a>}}{306}
+\contentsline {chapter}{\numberline {11}\special {html:<a href="chapxi">}Advanced constructs\special {html:</a>}}{308}
+\contentsline {section}{\numberline {11.1}\special {html:<a href="adv-words">}Bits, bytes and words\special {html:</a>}}{309}
+\contentsline {subsection}{\numberline {11.1.1}\special {html:<a href="adv-radix">}Radix arithmetic\special {html:</a>}}{310}
+\contentsline {section}{\numberline {11.2}\special {html:<a href="adv-BITS">}The mode \texttt {BITS}\special {html:</a>}}{315}
+\contentsline {section}{\numberline {11.3}\special {html:<a href="adv-overlap">}Overlapping slices\special {html:</a>}}{321}
+\contentsline {section}{\numberline {11.4}\special {html:<a href="adv-exit">}Completers\special {html:</a>}}{324}
+\contentsline {section}{\numberline {11.5}\special {html:<a href="adv-refref">}References to names\special {html:</a>}}{327}
+\contentsline {section}{\numberline {11.6}\special {html:<a href="adv-idrel">}Identity relations\special {html:</a>}}{331}
+\contentsline {section}{\numberline {11.7}\special {html:<a href="adv-NIL">}The value \texttt {NIL}\special {html:</a>}}{334}
+\contentsline {section}{\numberline {11.8}\special {html:<a href="adv-queues">}Queues\special {html:</a>}}{338}
+\contentsline {section}{\numberline {11.9}\special {html:<a href="adv-addfan">}The procedure \texttt {add fan}\special {html:</a>}}{344}
+\contentsline {section}{\numberline {11.10}\special {html:<a href="adv-mqproc">}More queue procedures\special {html:</a>}}{346}
+\contentsline {section}{\numberline {11.11}\special {html:<a href="adv-trees">}Trees\special {html:</a>}}{350}
+\contentsline {section}{\numberline {11.12}\special {html:<a href="adv-par">}Parallel programming\special {html:</a>}}{354}
+\contentsline {section}{\numberline {11.13}\special {html:<a href="adv-summ">}Summary\special {html:</a>}}{355}
+\contentsline {chapter}{\numberline {12}\special {html:<a href="chapxii">}Program development\special {html:</a>}}{356}
+\contentsline {section}{\numberline {12.1}\special {html:<a href="dev-writ">}Writing programs\special {html:</a>}}{357}
+\contentsline {subsection}{\numberline {12.1.1}\special {html:<a href="dev-top">}Top-down analysis\special {html:</a>}}{359}
+\contentsline {subsection}{\numberline {12.1.2}\special {html:<a href="dev-layout">}Program layout\special {html:</a>}}{360}
+\contentsline {subsection}{\numberline {12.1.3}\special {html:<a href="dev-decs">}Declarations\special {html:</a>}}{362}
+\contentsline {subsection}{\numberline {12.1.4}\special {html:<a href="dev-procs">}Procedures\special {html:</a>}}{362}
+\contentsline {subsection}{\numberline {12.1.5}\special {html:<a href="dev-money">}Monetary values\special {html:</a>}}{363}
+\contentsline {subsection}{\numberline {12.1.6}\special {html:<a href="dev-opt">}Optimisation\special {html:</a>}}{367}
+\contentsline {subsection}{\numberline {12.1.7}\special {html:<a href="dev-test">}Testing and debugging\special {html:</a>}}{368}
+\contentsline {subsection}{\numberline {12.1.8}\special {html:<a href="dev-errors">}Compilation errors\special {html:</a>}}{371}
+\contentsline {subsection}{\numberline {12.1.9}\special {html:<a href="dev-overflow">}Arithmetic overflow\special {html:</a>}}{374}
+\contentsline {subsection}{\numberline {12.1.10}\special {html:<a href="dev-docs">}Documentation\special {html:</a>}}{374}
+\contentsline {section}{\numberline {12.2}\special {html:<a href="dev-noncanon">}Non-canonical input\special {html:</a>}}{376}
+\contentsline {section}{\numberline {12.3}\special {html:<a href="dev-lf">}A simple utility\special {html:</a>}}{377}
+\contentsline {subsection}{\numberline {12.3.1}\special {html:<a href="dev-code">}The source code\special {html:</a>}}{378}
+\contentsline {subsection}{\numberline {12.3.2}\special {html:<a href="dev-rout">}Routines\special {html:</a>}}{381}
+\contentsline {subsection}{\numberline {12.3.3}\special {html:<a href="dev-dry">}Dry-running example\special {html:</a>}}{383}
+\contentsline {subsection}{\numberline {12.3.4}\special {html:<a href="dev-ALIEN">}\texttt {ALIEN} procedures\special {html:</a>}}{384}
+\contentsline {subsubsection}{The procedure \texttt {fstat}}{384}
+\contentsline {subsubsection}{The procedure \texttt {get cwd}}{386}
+\contentsline {section}{\numberline {12.4}\special {html:<a href="dev-summ">}Summary\special {html:</a>}}{388}
+\contentsline {chapter}{\numberline {13}\special {html:<a href="chapxiii">}Standard Prelude\special {html:</a>}}{390}
+\contentsline {section}{\numberline {13.1}\special {html:<a href="stan-modes">}Standard modes\special {html:</a>}}{392}
+\contentsline {section}{\numberline {13.2}\special {html:<a href="stan-enq">}Environment enquiries\special {html:</a>}}{394}
+\contentsline {subsection}{\numberline {13.2.1}\special {html:<a href="stan-arithenq">}Arithmetic enquiries\special {html:</a>}}{395}
+\contentsline {subsubsection}{Enquiries about precisions}{395}
+\contentsline {subsubsection}{Enquiries about ranges}{396}
+\contentsline {subsubsection}{Internal sizes of modes}{397}
+\contentsline {subsubsection}{Sizes used in binary transput}{399}
+\contentsline {subsubsection}{Particular arithmetic values}{400}
+\contentsline {subsection}{\numberline {13.2.2}\special {html:<a href="stan-enqchar">}Character set enquiries\special {html:</a>}}{400}
+\contentsline {section}{\numberline {13.3}\special {html:<a href="stan-ops">}Standard operators\special {html:</a>}}{402}
+\contentsline {subsection}{\numberline {13.3.1}\special {html:<a href="stan-opsmeth">}Method of description\special {html:</a>}}{403}
+\contentsline {subsection}{\numberline {13.3.2}\special {html:<a href="stan-prio">}Standard priorities\special {html:</a>}}{404}
+\contentsline {subsection}{\numberline {13.3.3}\special {html:<a href="stan-optrow">}Operators with row operands\special {html:</a>}}{405}
+\contentsline {subsection}{\numberline {13.3.4}\special {html:<a href="stan-opbool">}Operators with \texttt {BOOL} operands\special {html:</a>}}{405}
+\contentsline {subsection}{\numberline {13.3.5}\special {html:<a href="stan-opint">}Operators with \texttt {INT} operands\special {html:</a>}}{406}
+\contentsline {subsubsection}{Monadic operators}{406}
+\contentsline {subsubsection}{Dyadic operators}{407}
+\contentsline {subsection}{\numberline {13.3.6}\special {html:<a href="stan-opreal">}Operators with \texttt {REAL} operands\special {html:</a>}}{409}
+\contentsline {subsubsection}{Monadic operators}{409}
+\contentsline {subsubsection}{Dyadic operators}{411}
+\contentsline {subsection}{\numberline {13.3.7}\special {html:<a href="stan-opcompl">}Operators with \texttt {COMPL} operands\special {html:</a>}}{413}
+\contentsline {subsubsection}{Monadic operators}{413}
+\contentsline {subsubsection}{Dyadic operators}{414}
+\contentsline {subsection}{\numberline {13.3.8}\special {html:<a href="stan-mixed">}Operators with mixed operands\special {html:</a>}}{415}
+\contentsline {subsection}{\numberline {13.3.9}\special {html:<a href="stan-opbits">}Operators with \texttt {BITS} operands\special {html:</a>}}{416}
+\contentsline {subsubsection}{Monadic operators}{417}
+\contentsline {subsubsection}{Dyadic operators}{417}
+\contentsline {subsection}{\numberline {13.3.10}\special {html:<a href="stan-opchar">}Operators with \texttt {CHAR} operands\special {html:</a>}}{418}
+\contentsline {subsection}{\numberline {13.3.11}\special {html:<a href="stan-opstr">}Operators with \texttt {STRING} operands\special {html:</a>}}{419}
+\contentsline {subsection}{\numberline {13.3.12}\special {html:<a href="stan-opass">}Assigning operators\special {html:</a>}}{421}
+\contentsline {subsection}{\numberline {13.3.13}\special {html:<a href="stan-othop">}Other operators\special {html:</a>}}{423}
+\contentsline {section}{\numberline {13.4}\special {html:<a href="stan-proc">}Standard procedures\special {html:</a>}}{424}
+\contentsline {subsection}{\numberline {13.4.1}\special {html:<a href="stan-math">}Mathematical procedures\special {html:</a>}}{424}
+\contentsline {subsection}{\numberline {13.4.2}\special {html:<a href="stan-procoth">}Other procedures\special {html:</a>}}{426}
+\contentsline {subsection}{\numberline {13.4.3}\special {html:<a href="stan-decalien">}\texttt {ALIEN} declarations\special {html:</a>}}{427}
+\contentsline {subsection}{\numberline {13.4.4}\special {html:<a href="stan-procalien">}\texttt {ALIEN} routines\special {html:</a>}}{429}
+\contentsline {subsubsection}{Routines conforming to Ansi C}{429}
+\contentsline {subsubsection}{Routines conforming to BSD4.4}{429}
+\contentsline {subsubsection}{Routines conforming to an ISO standard}{431}
+\contentsline {subsubsection}{Routines peculiar to Linux}{431}
+\contentsline {subsubsection}{Routines conforming to POSIX}{431}
+\contentsline {subsubsection}{Local routines}{432}
+\contentsline {section}{\numberline {13.5}\special {html:<a href="stan-a68toc">}a68toc extensions\special {html:</a>}}{433}
+\contentsline {subsection}{\numberline {13.5.1}\special {html:<a href="stan-ctmodes">}Modes peculiar to a68toc\special {html:</a>}}{433}
+\contentsline {subsection}{\numberline {13.5.2}\special {html:<a href="stan-ctcons">}a68toc constructs\special {html:</a>}}{436}
+\contentsline {subsection}{\numberline {13.5.3}\special {html:<a href="stan-ctops">}Operators\special {html:</a>}}{438}
+\contentsline {subsubsection}{Operators using \texttt {BIOP 99}}{439}
+\contentsline {subsubsection}{Other operators}{440}
+\contentsline {section}{\numberline {13.6}\special {html:<a href="stan-cont">}Control routines\special {html:</a>}}{442}
+\contentsline {subsection}{\numberline {13.6.1}\special {html:<a href="stan-fpov">}Floating-point unit control\special {html:</a>}}{442}
+\contentsline {subsection}{\numberline {13.6.2}\special {html:<a href="stan-prcont">}Terminating a process\special {html:</a>}}{446}
+\contentsline {subsection}{\numberline {13.6.3}\special {html:<a href="stan-gc">}Garbage-collector control\special {html:</a>}}{447}
+\contentsline {section}{\numberline {13.7}\special {html:<a href="stan-trans">}Transput\special {html:</a>}}{449}
+\contentsline {subsection}{\numberline {13.7.1}\special {html:<a href="stan-trmodes">}Transput modes\special {html:</a>}}{451}
+\contentsline {subsection}{\numberline {13.7.2}\special {html:<a href="stan-trchan">}Standard channels\special {html:</a>}}{451}
+\contentsline {subsection}{\numberline {13.7.3}\special {html:<a href="stan-trfiles">}Standard files\special {html:</a>}}{461}
+\contentsline {subsection}{\numberline {13.7.4}\special {html:<a href="stan-tropen">}Opening files\special {html:</a>}}{462}
+\contentsline {subsection}{\numberline {13.7.5}\special {html:<a href="stan-trclose">}Closing files\special {html:</a>}}{464}
+\contentsline {subsection}{\numberline {13.7.6}\special {html:<a href="stan-trtran">}Transput routines\special {html:</a>}}{464}
+\contentsline {subsubsection}{Straightening}{465}
+\contentsline {subsubsection}{Formatless transput}{466}
+\contentsline {subsubsection}{Binary transput}{470}
+\contentsline {subsubsection}{Other procedures}{471}
+\contentsline {subsection}{\numberline {13.7.7}\special {html:<a href="stan-trinterr">}Interrogating files\special {html:</a>}}{472}
+\contentsline {subsection}{\numberline {13.7.8}\special {html:<a href="stan-trprop">}File properties\special {html:</a>}}{473}
+\contentsline {subsection}{\numberline {13.7.9}\special {html:<a href="stan-trevent">}Event routines\special {html:</a>}}{473}
+\contentsline {subsection}{\numberline {13.7.10}\special {html:<a href="stan-trconv">}Conversion routines\special {html:</a>}}{476}
+\contentsline {subsection}{\numberline {13.7.11}\special {html:<a href="stan-trlay">}Layout routines\special {html:</a>}}{479}
+\contentsline {section}{\numberline {13.8}\special {html:<a href="stan-summ">}Summary\special {html:</a>}}{480}
+\contentsline {chapter}{\numberline {A}\special {html:<a href="app-ans">}Answers\special {html:</a>}}{481}
+\contentsline {section}{\numberline {A.1}\special {html:<a href="app-i">}Chapter 1\special {html:</a>}}{481}
+\contentsline {section}{\numberline {A.2}\special {html:<a href="app-ii">}Chapter 2\special {html:</a>}}{485}
+\contentsline {section}{\numberline {A.3}\special {html:<a href="app-iii">}Chapter 3\special {html:</a>}}{489}
+\contentsline {section}{\numberline {A.4}\special {html:<a href="app-iv">}Chapter 4\special {html:</a>}}{496}
+\contentsline {section}{\numberline {A.5}\special {html:<a href="app-v">}Chapter 5\special {html:</a>}}{501}
+\contentsline {section}{\numberline {A.6}\special {html:<a href="app-vi">}Chapter 6\special {html:</a>}}{512}
+\contentsline {section}{\numberline {A.7}\special {html:<a href="app-vii">}Chapter 7\special {html:</a>}}{520}
+\contentsline {section}{\numberline {A.8}\special {html:<a href="app-viii">}Chapter 8\special {html:</a>}}{524}
+\contentsline {section}{\numberline {A.9}\special {html:<a href="app-ix">}Chapter 9\special {html:</a>}}{527}
+\contentsline {section}{\numberline {A.10}\special {html:<a href="app-x">}Chapter 10\special {html:</a>}}{559}
+\contentsline {section}{\numberline {A.11}\special {html:<a href="app-xi">}Chapter 11\special {html:</a>}}{563}
+\contentsline {chapter}{\special {html:<a href="biblio">}Bibliography\special {html:</a>}}{580}

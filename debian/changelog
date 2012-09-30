@@ -1,3 +1,16 @@
+algol68toc (1.18) unstable; urgency=low
+
+  * Provided Web 68 manual, tang, rs and the Unicode regular expression library
+
+ -- Sian Mountbatten <poenikatu@fastmail.co.uk>  Sun, 10 Mar 2013 17:07:38 +0000
+
+algol68toc (1.17) unstable; urgency=low
+
+  * Altered get for buffered input to check for EOF
+  * Rewrote ca as a program using Web 68
+
+ -- Sian Mountbatten <poenikatu@fastmail.co.uk>  Mon, 28 Jan 2013 17:30:26 +0000
+
 algol68toc (1.15) unstable; urgency=low
 
   * Added pame to the package and renamed reset.a68 to resetseed

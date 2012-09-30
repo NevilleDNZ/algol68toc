@@ -1628,7 +1628,8 @@ extern A68_62  BTBAOSF_read_access;
 #define APBAOSF_exit EXIT
 extern int A_argc;
 extern char **A_argv;
-#define A_prelude(argc,argv) A_argc=argc; A_argv = argv
+extern char **A_envp;
+#define A_prelude(argc,argv,envp) A_argc=argc; A_argv = argv; A_envp = envp
 
 #define XHCAOSF_prelude A_prelude
 #include <signal.h>
@@ -1767,7 +1768,7 @@ extern void THAACTR(void);   /* centities */
 extern void WSCAOSF(void);   /* osif */
 extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
-static A68_275   QTBBCTR = {"$Id: a68toc.c,v 1.4 2003-05-30 21:20:47 sian Exp $"}; 
+static A68_275   QTBBCTR = {"$Id: a68toc.a68,v 1.2 2002-02-04 09:26:51 sian Exp $"}; 
 A_GISVEC(A68_VC ,RTBBCTR,QTBBCTR,52)
 static A68_157  TTBBCTR_xsizes;
 static A68_276  BUBBCTR_unsetstream;
@@ -4419,13 +4420,13 @@ return;
  /* line 7: */
  /* line 8: */
  /* line 10: */
-int main (int argc, char **argv)
+int main(int argc, char *argv[], char *envp[])
 { 
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","-dir",".","a68toc.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m","./uniquenameserver.m","./moduletracer.m","./modules.m","./modes.m","./mnemonics.m","./lookup.m","./incoperfn.m","./incmode.m","./incinstallation.m","./incimperatives.m","./incid.m","./environment.m","./environ.m","./denotations.m","./coutput.m","./compiler.m","./rscompiler.m","./centities.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/osif.m","/home/sian/src/algol68/algol68toc-1.6/liba68prel/usefulops.m",""};
+static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","-dir",".","a68toc.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","./uniquenameserver.m","./moduletracer.m","./modules.m","./modes.m","./mnemonics.m","./lookup.m","./incoperfn.m","./incmode.m","./incinstallation.m","./incimperatives.m","./incid.m","./environment.m","./environ.m","./denotations.m","./coutput.m","./compiler.m","./rscompiler.m","./centities.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/osif.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/usefulops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_157  STBBCTR;  /* collateral clause result */
@@ -4558,8 +4559,8 @@ THAACTR();   /* USE centities */
 WSCAOSF();   /* USE osif */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/src/a68toc.a68";
-A_config.translation_time = "Fri May 30 22:15:49 2003";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/src/a68toc.a68";
+A_config.translation_time = "Mon Jan 28 20:24:34 2013";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "NTBBCTR (from seed file) ";
 A_config.spec_change_time = "no spec";
@@ -4567,7 +4568,7 @@ A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 #ifdef A_prelude
-A_prelude(argc,argv);
+A_prelude(argc,argv,envp);
 #endif
 A_PROC_ENTRY(MAIN);
 { 

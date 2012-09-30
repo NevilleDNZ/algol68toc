@@ -1,0 +1,109 @@
+Script started on dim 10 Mar 2013 19:52:51 +0000
+[01;32msian@Phoenicia[00m:19:52:51 [01;34m~/src/algol68/algol68toc-1.18[00m$ dpkg-buildpackage
+dpkg-buildpackage: source package algol68toc
+dpkg-buildpackage: source version 1.18
+dpkg-buildpackage: source changed by Sian Mountbatten <poenikatu@fastmail.co.uk>
+dpkg-buildpackage: host architecture i386
+ dpkg-source --before-build algol68toc-1.18
+ fakeroot debian/rules clean
+dh clean 
+   dh_testdir
+   dh_auto_clean
+make[1]: Entering directory `/home/sian/src/algol68/algol68toc-1.18'
+find /home/sian/src/algol68/algol68toc-1.18 \( -name '*~' -o -name '*.asv' -o -name '*##' \) \
+		-exec rm -f -v '{}' ';'
+forigis «/home/sian/src/algol68/algol68toc-1.18/tools/ca.w68~»
+for d in a68config liba68prel src qad doc data examples tools library; do make -C $d clean; done
+make[2]: Entering directory `/home/sian/src/algol68/algol68toc-1.18/a68config'
+rm -f -v a68config.o nameseed
+forigis «a68config.o»
+forigis «nameseed»
+make[2]: Leaving directory `/home/sian/src/algol68/algol68toc-1.18/a68config'
+make[2]: Entering directory `/home/sian/src/algol68/algol68toc-1.18/liba68prel'
+rm -f -v *.o liba68prel.a nameseed
+forigis «basics.o»
+forigis «cif.o»
+forigis «clear.o»
+forigis «command.o»
+forigis «commandcaller.o»
+forigis «commandreader.o»
+forigis «commandsyntax.o»
+forigis «getstrings.o»
+forigis «globalcommands.o»
+forigis «iobasics.o»
+forigis «iolib.o»
+forigis «iomessages.o»
+forigis «ioprocs.o»
+forigis «kernelreader.o»
+forigis «mathslib.o»
+forigis «messageproc.o»
+forigis «numberstr.o»
+forigis «options.o»
+forigis «oscommon.o»
+forigis «oserrors.o»
+forigis «osfiles.o»
+forigis «osgc.o»
+forigis «osif.o»
+forigis «osinterface.o»
+forigis «osmessages.o»
+forigis «osmisc.o»
+forigis «osshell.o»
+forigis «ossignals.o»
+forigis «printissue.o»
+forigis «putstrings.o»
+forigis «strops.o»
+forigis «testmode.o»
+forigis «time.o»
+forigis «usefulops.o»
+forigis «variables.o»
+forigis «liba68prel.a»
+forigis «nameseed»
+make[2]: Leaving directory `/home/sian/src/algol68/algol68toc-1.18/liba68prel'
+make[2]: Entering directory `/home/sian/src/algol68/algol68toc-1.18/src'
+rm -f -v incid.o incimperatives.o incinstallation.o incmode.o incoperfn.o incenviron.o ctrans_version.o centities.o rscompiler.o moduletracer.o message.o environment.o common.o incvalue.o denotations.o lookup.o idtable.o liblookup.o environ.o coutput.o uniquenameserver.o modes.o modules.o values.o oper.o unionaids.o evalbase.o operators.o biops.o adicops.o evaluator.o identifiers.o mnemonics.o entryandreturn.o tracer.o clauses.o initialiser.o loads.o loops.o compiler.o a68toc
+forigis «incid.o»
+forigis «incimperatives.o»
+forigis «incinstallation.o»
+forigis «incmode.o»
+forigis «incoperfn.o»
+forigis «incenviron.o»
+forigis «ctrans_version.o»
+forigis «centities.o»
+forigis «rscompiler.o»
+forigis «moduletracer.o»
+forigis «message.o»
+forigis «environment.o»
+forigis «common.o»
+forigis «incvalue.o»
+forigis «denotations.o»
+forigis «lookup.o»
+forigis «idtable.o»
+forigis «liblookup.o»
+forigis «environ.o»
+forigis «coutput.o»
+forigis «uniquenameserver.o»
+forigis «modes.o»
+forigis «modules.o»
+forigis «values.o»
+forigis «oper.o»
+forigis «unionaids.o»
+forigis «evalbase.o»
+forigis «operators.o»
+forigis «biops.o»
+forigis «adicops.o»
+forigis «evaluator.o»
+forigis «identifiers.o»
+forigis «mnemonics.o»
+forigis «entryandreturn.o»
+forigis «tracer.o»
+forigis «clauses.o»
+forigis «initialiser.o»
+forigis «loads.o»
+forigis «loops.o»
+forigis «compiler.o»
+forigis «a68toc»
+make[2]: Leaving directory `/home/sian/src/algol68/algol68toc-1.18/src'
+make[2]: Entering directory `/home/sian/src/algol68/algol68toc-1.18/qad'
+rm -f -v nameseed spmodes.c spaliens.c spops.c spplain.c spconvert.c transput.c standard.c spmodes.o spaliens.o spops.o spplain.o spconvert.o transput.o standard.o *.m liba68s.a
+forigis «nameseed»
+forigis «spmodes.

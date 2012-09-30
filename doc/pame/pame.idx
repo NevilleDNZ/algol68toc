@@ -1,0 +1,1896 @@
+\indexentry{"@@\texttt{"@}|see{ \texttt{AT}}}{iv}
+\indexentry{"|@\texttt{"|}|see{ choice clause, abbreviated}}{iv}
+\indexentry{%*:=@\texttt{%*:=}|see{ \texttt{MODAB}}}{iv}
+\indexentry{%*@\texttt{%*}|see{ \texttt{MOD}}}{iv}
+\indexentry{%:=@\texttt{%:=}|see{ \texttt{OVERAB}}}{iv}
+\indexentry{%@\texttt{%}|see{ \texttt{OVER}}}{iv}
+\indexentry{&@\verb+&+|see{ \texttt{AND}}}{iv}
+\indexentry{,@\texttt{,}|see{ comma}}{iv}
+\indexentry{*:=@\texttt{*:=}|see{ \texttt{TIMESAB}}}{iv}
+\indexentry{+*@\texttt{+*}|see{ \texttt{I}}}{iv}
+\indexentry{+:=@\texttt{+:=}|see{ \texttt{PLUSAB}}}{iv}
+\indexentry{+=:@\texttt{+=:}|see{ \texttt{PLUSTO}}}{iv}
+\indexentry{-:=@\texttt{-:=}|see{ \texttt{MINUSAB}}}{iv}
+\indexentry{/:=@\texttt{/:=}|see{ \texttt{DIVAB}}}{iv}
+\indexentry{base mode|see{ mode}}{iv}
+\indexentry{boolean serial clause|see{ clause, boolean}}{iv}
+\indexentry{call|see{ procedure, call}}{iv}
+\indexentry{case clause|see{ clause, case}}{iv}
+\indexentry{choice clause|see{ clause, choice}}{iv}
+\indexentry{closed clause|see{ clause, closed}}{iv}
+\indexentry{code optimisation|see{ optimisation}}{iv}
+\indexentry{collateral clause|see{ clause}}{iv}
+\indexentry{collateral elaboration|see{ elaboration}}{iv}
+\indexentry{conditional clause|see{ clause, conditional}}{iv}
+\indexentry{conformity clause|see{ clause, conformity}}{iv}
+\indexentry{constituent mode|see{ mode, constituent}}{iv}
+\indexentry{constituent unit|see{ unit, constituent}}{iv}
+\indexentry{deproceduring|see{ coercion}}{iv}
+\indexentry{dereferencing|see{ coercion}}{iv}
+\indexentry{displaying values|see{ value, displaying}}{iv}
+\indexentry{DO@\texttt{DO}|see{ clause, loop}}{iv}
+\indexentry{DOWN@\texttt{DOWN}|see{ \texttt{SHR}}}{iv}
+\indexentry{dyadic|see{ operator, dyadic}}{iv}
+\indexentry{dynamic names|see{ name, dynamic}}{iv}
+\indexentry{enclosed clause|see{ clause, enclosed}}{iv}
+\indexentry{enquiry clause|see{ clause, enquiry}}{iv}
+\indexentry{EQ@\texttt{EQ}|see{ \texttt{=}}}{iv}
+\indexentry{execution|see{ elaboration}}{iv}
+\indexentry{external values|see{ value, external}}{iv}
+\indexentry{firm context|see{ context, firm}}{iv}
+\indexentry{flat multiple|see{ multiple, flat}}{iv}
+\indexentry{flexible name|see{ name, flexible}}{iv}
+\indexentry{FOR loop@\texttt{FOR} loop|see{ clause, loop}}{iv}
+\indexentry{formal mode|see{ mode, formal}}{iv}
+\indexentry{formal parameter|see{ parameter}}{iv}
+\indexentry{GE@\texttt{GE}|see{ \texttt{>=}}}{iv}
+\indexentry{global!generator|see{ generator}}{iv}
+\indexentry{go-on symbol|see{ \texttt{;}}}{iv}
+\indexentry{grouping of declarations|see{ declaration, grouping}}{iv}
+\indexentry{GT@\texttt{GT}|see{ \texttt{>}}}{iv}
+\indexentry{identity declaration|see{ declaration}}{iv}
+\indexentry{indentation|see{ code}}{iv}
+\indexentry{integer denotation|see{ denotation}}{iv}
+\indexentry{internal value|see{ value, internal}}{iv}
+\indexentry{LE@\texttt{LE}|see{ \texttt{<=}}}{iv}
+\indexentry{local!generator|see{ generator}}{iv}
+\indexentry{loop clause|see{ clause, loop}}{iv}
+\indexentry{lower bound|see{ bound, lower}}{iv}
+\indexentry{LT@\texttt{LT}|see{ \texttt{<}}}{iv}
+\indexentry{machine code|see{ code, machine}}{iv}
+\indexentry{macro|see{ C macro}}{iv}
+\indexentry{meek context|see{ context, meek}}{iv}
+\indexentry{mode indicant|see{ mode, indicant}}{iv}
+\indexentry{monadic|see{ operator, monadic}}{iv}
+\indexentry{NE@\texttt{NE}|see{ \texttt{/=}}}{iv}
+\indexentry{object code|see{ code}}{iv}
+\indexentry{operator!exponentiation|see{ \texttt{**}}}{iv}
+\indexentry{order of elaboration|see{ elaboration, order of}}{iv}
+\indexentry{overlapping multiples|see{ multiples}}{iv}
+\indexentry{parallel!clause|see{ clause}}{iv}
+\indexentry{plain value|see{ value, plain}}{iv}
+\indexentry{quote|see{ \texttt{""}}}{iv}
+\indexentry{rectangular multiple|see{ multiple}}{iv}
+\indexentry{routine!denotation|see{ denotation}}{iv}
+\indexentry{rowing|see{ coercion}}{iv}
+\indexentry{run-time error|see{ error}}{iv}
+\indexentry{running|see{ program}}{iv}
+\indexentry{sequential elaboration|see{ elaboration}}{iv}
+\indexentry{serial clause|see{ clause}}{iv}
+\indexentry{serial elaboration|see{ elaboration}}{iv}
+\indexentry{source code|see{ code}}{iv}
+\indexentry{stub declaration|see{ declaration}}{iv}
+\indexentry{subsidiary loop|see{ clause, loop}}{iv}
+\indexentry{UP@\texttt{UP}|see{ \texttt{SHL}}}{iv}
+\indexentry{upper bound|see{ bound, upper}}{iv}
+\indexentry{voiding|see{ coercion}}{iv}
+\indexentry{widening|see{ coercion}}{iv}
+\indexentry{orthogonality|ind-i--i}{2}
+\indexentry{a68toc!requirements|ind-i-i-i}{3}
+\indexentry{command line|ind-i-i-ii}{3}
+\indexentry{value|ind-i-iii-i}{4}
+\indexentry{mode|ind-i-iii-ii}{4}
+\indexentry{INT@\texttt  {INT}|ind-i-iii-iii}{4}
+\indexentry{mode!indicant!definition|ind-i-iii-iv}{5}
+\indexentry{integer|ind-i-iv-i}{6}
+\indexentry{integer!largest positive|ind-i-iv-ii}{6}
+\indexentry{integer!largest negative|ind-i-iv-iii}{6}
+\indexentry{denotation|ind-i-iv-iv}{6}
+\indexentry{value!instance|ind-i-iv-v}{6}
+\indexentry{denotation!integer|ind-i-iv-vi}{6}
+\indexentry{leading zero|ind-i-iv-vii}{6}
+\indexentry{mode|ind-i-iv-viii}{6}
+\indexentry{INT@\texttt  {INT}|ind-i-iv-ix}{6}
+\indexentry{formula|ind-i-iv-x}{7}
+\indexentry{declaration!identity|ind-i-v-i}{8}
+\indexentry{identifier|ind-i-v-ii}{8}
+\indexentry{=@\texttt  {=}|ind-i-v-iii}{9}
+\indexentry{value|ind-i-v-iv}{9}
+\indexentry{mode!indicant|ind-i-v-v}{9}
+\indexentry{;@\texttt  {;}|ind-i-v-vi}{9}
+\indexentry{phrase|ind-i-v-vii}{9}
+\indexentry{comma|ind-i-v-viii}{10}
+\indexentry{declaration|ind-i-v-ix}{10}
+\indexentry{parallel!processing|ind-i-v-x}{10}
+\indexentry{elaboration!collateral|ind-i-v-xi}{10}
+\indexentry{elaboration!sequential|ind-i-v-xii}{10}
+\indexentry{machine code|ind-i-v-xiii}{10}
+\indexentry{elaboration!sequence of|ind-i-v-xiv}{10}
+\indexentry{compiler|ind-i-v-xv}{10}
+\indexentry{program!structure|ind-i-v-xvi}{10}
+\indexentry{standard prelude|ind-i-v-xvii}{10}
+\indexentry{max int@\texttt  {max int}|ind-i-v-xviii}{10}
+\indexentry{symbols|ind-i-vi-i}{11}
+\indexentry{characters|ind-i-vi-ii}{11}
+\indexentry{character set|ind-i-vi-iii}{11}
+\indexentry{ASCII|ind-i-vi-iv}{11}
+\indexentry{CHAR@\texttt  {CHAR}|ind-i-vi-v}{11}
+\indexentry{denotation!character|ind-i-vi-vi}{11}
+\indexentry{;@\texttt  {;}|ind-i-vi-vii}{12}
+\indexentry{yield|ind-i-vi-viii}{12}
+\indexentry{phrase|ind-i-vi-ix}{12}
+\indexentry{unit|ind-i-vi-x}{12}
+\indexentry{blank@\texttt  {blank}|ind-i-vi-xii}{12}
+\indexentry{standard prelude|ind-i-vi-xiii}{12}
+\indexentry{a68toc!declarations|ind-i-vi-xi}{12}
+\indexentry{REAL@\texttt  {REAL}|ind-i-vii-i}{13}
+\indexentry{denotation!real|ind-i-vii-ii}{13}
+\indexentry{standard prelude|ind-i-vii-iii}{14}
+\indexentry{max real@\texttt  {max real}|ind-i-vii-iv}{14}
+\indexentry{pi@\texttt  {pi}|ind-i-vii-v}{14}
+\indexentry{declaration!identity|ind-i-vii-vi}{14}
+\indexentry{context|ind-i-vii-vii}{14}
+\indexentry{context!strong|ind-i-vii-viii}{14}
+\indexentry{coercion|ind-i-vii-ix}{15}
+\indexentry{coercion!widening|ind-i-vii-x}{15}
+\indexentry{comma|ind-i-vii-xi}{15}
+\indexentry{a68toc!declarations|ind-i-vii-xii}{15}
+\indexentry{program!structure|ind-i-viii-i}{16}
+\indexentry{program|ind-i-viii-ii}{16}
+\indexentry{a68toc!directives|ind-i-viii-iii}{17}
+\indexentry{phrase|ind-i-viii-iv}{17}
+\indexentry{USE@\texttt  {USE}|ind-i-viii-v}{17}
+\indexentry{print@\texttt  {print}|ind-i-viii-vi}{17}
+\indexentry{code!source|ind-i-viii-vii}{17}
+\indexentry{denotation|ind-i-viii-viii}{17}
+\indexentry{unit|ind-i-viii-ix}{17}
+\indexentry{;@\texttt  {;}|ind-i-viii-x}{17}
+\indexentry{;@\texttt  {;}|ind-i-viii-xi}{18}
+\indexentry{free format|ind-i-viii-xii}{18}
+\indexentry{code!source|ind-i-ix-i}{19}
+\indexentry{code!object|ind-i-ix-ii}{19}
+\indexentry{linker|ind-i-ix-iii}{19}
+\indexentry{code!machine|ind-i-ix-iv}{19}
+\indexentry{program!running|ind-i-ix-v}{19}
+\indexentry{comment|ind-i-ix-vi}{20}
+\indexentry{mode!indicant|ind-i-ix-vii}{20}
+\indexentry{a68toc!comments|ind-i-ix-viii}{20}
+\indexentry{value!internal|ind-i-x-i}{23}
+\indexentry{value!external|ind-i-x-ii}{23}
+\indexentry{value!displaying|ind-i-x-iii}{23}
+\indexentry{denotation|ind-i-x-iv}{23}
+\indexentry{max int@\texttt  {max int}|ind-i-x-v}{23}
+\indexentry{max real@\texttt  {max real}|ind-i-x-vi}{23}
+\indexentry{operator|ind-ii--i}{27}
+\indexentry{operand|ind-ii--ii}{27}
+\indexentry{standard prelude|ind-ii--iii}{27}
+\indexentry{mode!indicant|ind-ii--iv}{27}
+\indexentry{operator!monadic|ind-ii-i-i}{28}
+\indexentry{operator!dyadic|ind-ii-i-ii}{28}
+\indexentry{-@\texttt  {-}!monadic|ind-ii-i-iii}{28}
+\indexentry{+@\texttt  {+}!monadic|ind-ii-i-iv}{28}
+\indexentry{denotation|ind-ii-i-v}{28}
+\indexentry{INT@\texttt  {INT}|ind-ii-i-vi}{28}
+\indexentry{yield|ind-ii-i-vii}{28}
+\indexentry{mode!INT@\texttt  {INT}|ind-ii-i-viii}{28}
+\indexentry{REAL@\texttt  {REAL}|ind-ii-i-ix}{28}
+\indexentry{declaration!identity|ind-ii-i-x}{28}
+\indexentry{ABS@\texttt  {ABS}|ind-ii-i-xi}{28}
+\indexentry{operator!combining|ind-ii-i-xii}{29}
+\indexentry{elaboration!order of|ind-ii-i-xiii}{29}
+\indexentry{SIGN@\texttt  {SIGN}|ind-ii-i-xiv}{29}
+\indexentry{+@\texttt  {+}!dyadic|ind-ii-ii-i}{29}
+\indexentry{INT@\texttt  {INT}|ind-ii-ii-ii}{29}
+\indexentry{REAL@\texttt  {REAL}|ind-ii-ii-iii}{29}
+\indexentry{overflow!integer|ind-ii-ii-iv}{30}
+\indexentry{-@\texttt  {-}!dyadic|ind-ii-ii-v}{30}
+\indexentry{operand|ind-ii-ii-vi}{31}
+\indexentry{*@\texttt  {*}|ind-ii-iii-i}{32}
+\indexentry{multiplication|ind-ii-iii-ii}{32}
+\indexentry{elaboration!order of|ind-ii-iii-iii}{32}
+\indexentry{BODMAS|ind-ii-iii-iv}{33}
+\indexentry{priority|ind-ii-iii-v}{33}
+\indexentry{declaration!identity|ind-ii-iii-vi}{33}
+\indexentry{coercion!widening|ind-ii-iii-vii}{33}
+\indexentry{context!strong|ind-ii-iii-viii}{33}
+\indexentry{context!firm|ind-ii-iii-ix}{33}
+\indexentry{value!yield|ind-ii-iii-x}{34}
+\indexentry{context!strong|ind-ii-iii-xi}{34}
+\indexentry{coercion|ind-ii-iii-xii}{34}
+\indexentry{integer division|ind-ii-iv-i}{35}
+\indexentry{alternative representation|ind-ii-iv-ii}{35}
+\indexentry{OVER@\texttt  {OVER}|ind-ii-iv-iii}{35}
+\indexentry{priority|ind-ii-iv-iv}{35}
+\indexentry{consecutive operators|ind-ii-iv-v}{35}
+\indexentry{operator!modulo|ind-ii-iv-vi}{36}
+\indexentry{MOD@\texttt  {MOD}|ind-ii-iv-vii}{36}
+\indexentry{remainder|ind-ii-iv-viii}{36}
+\indexentry{division!real|ind-ii-iv-ix}{36}
+\indexentry{/@\texttt  {/}|ind-ii-iv-x}{36}
+\indexentry{coercion!widening|ind-ii-iv-xi}{36}
+\indexentry{**@\texttt  {**}|ind-ii-v-i}{37}
+\indexentry{operator!dyadic|ind-ii-v-ii}{38}
+\indexentry{operator!monadic|ind-ii-v-iii}{38}
+\indexentry{arithmetic!mixed|ind-ii-vi-i}{39}
+\indexentry{operator!mixed modes|ind-ii-vi-ii}{39}
+\indexentry{priority|ind-ii-vi-iii}{39}
+\indexentry{order of elaboration|ind-ii-vii-i}{39}
+\indexentry{parentheses|ind-ii-vii-ii}{39}
+\indexentry{(@\texttt  {(}|ind-ii-vii-iii}{39}
+\indexentry{)@\texttt  {)}|ind-ii-vii-iv}{39}
+\indexentry{BEGIN@\texttt  {BEGIN}|ind-ii-vii-v}{39}
+\indexentry{END@\texttt  {END}|ind-ii-vii-vi}{39}
+\indexentry{nesting|ind-ii-vii-vii}{39}
+\indexentry{parentheses!nesting of|ind-ii-vii-viii}{39}
+\indexentry{coercion!widening|ind-ii-viii-i}{40}
+\indexentry{fractional part|ind-ii-viii-ii}{40}
+\indexentry{ROUND@\texttt  {ROUND}|ind-ii-viii-iii}{40}
+\indexentry{ENTIER@\texttt  {ENTIER}|ind-ii-viii-iv}{40}
+\indexentry{rounding|ind-ii-viii-v}{40}
+\indexentry{SIGN@\texttt  {SIGN}|ind-ii-viii-vi}{41}
+\indexentry{MAX@\texttt  {MAX}|ind-ii-ix-i}{42}
+\indexentry{MIN@\texttt  {MIN}|ind-ii-ix-ii}{42}
+\indexentry{+@\texttt  {+}|ind-ii-x-i}{42}
+\indexentry{*@\texttt  {*}|ind-ii-x-ii}{42}
+\indexentry{ABS@\texttt  {ABS}|ind-ii-x-iii}{42}
+\indexentry{ASCII|ind-ii-x-iv}{42}
+\indexentry{max abs char@\texttt  {max abs char}|ind-ii-x-v}{42}
+\indexentry{standard prelude|ind-ii-x-vi}{42}
+\indexentry{REPR@\texttt  {REPR}|ind-ii-x-vii}{42}
+\indexentry{tab ch@\texttt  {tab ch}|ind-ii-x-viii}{43}
+\indexentry{print@\texttt  {print}|ind-ii-xi-i}{43}
+\indexentry{parameter|ind-ii-xi-ii}{43}
+\indexentry{newline@\texttt  {newline}|ind-ii-xi-iii}{43}
+\indexentry{newpage@\texttt  {newpage}|ind-ii-xi-iv}{43}
+\indexentry{file redirection|ind-ii-xi-v}{43}
+\indexentry{value!plain|ind-iii--i}{47}
+\indexentry{multiple|ind-iii-i-i}{48}
+\indexentry{elements|ind-iii-i-ii}{48}
+\indexentry{mode!base|ind-iii-i-iii}{48}
+\indexentry{mode|ind-iii-i-iv}{48}
+\indexentry{mode!indicant|ind-iii-i-v}{48}
+\indexentry{declaration!identity![]CHAR@\texttt  {[]CHAR}|ind-iii-i-vi}{48}
+\indexentry{denotation![]CHAR@\texttt  {[]CHAR}|ind-iii-i-vii}{48}
+\indexentry{max int@\texttt  {max int}|ind-iii-i-viii}{48}
+\indexentry{""@\texttt  {""}|ind-iii-i-ix}{49}
+\indexentry{row!display|ind-iii-i-x}{49}
+\indexentry{unit|ind-iii-i-xi}{49}
+\indexentry{parentheses|ind-iii-i-xii}{50}
+\indexentry{BEGIN@\texttt  {BEGIN}|ind-iii-i-xiii}{50}
+\indexentry{END@\texttt  {END}|ind-iii-i-xiv}{50}
+\indexentry{declaration!identity![]CHAR@\texttt  {[]CHAR}|ind-iii-i-xv}{50}
+\indexentry{declaration!identity|ind-iii-i-xvi}{50}
+\indexentry{context!strong|ind-iii-i-xvii}{50}
+\indexentry{unit!constituent|ind-iii-i-xviii}{50}
+\indexentry{coercion!widening|ind-iii-i-xix}{50}
+\indexentry{multiple!flat|ind-iii-i-xx}{50}
+\indexentry{row!display!empty|ind-iii-i-xxi}{50}
+\indexentry{unit|ind-iii-i-xxii}{51}
+\indexentry{clause!enclosed|ind-iii-i-xxiii}{51}
+\indexentry{formula|ind-iii-i-xxiv}{51}
+\indexentry{coercion!rowing|ind-iii-i-xxv}{51}
+\indexentry{context!strong|ind-iii-i-xxvi}{51}
+\indexentry{context!firm|ind-iii-i-xxvii}{51}
+\indexentry{dimensions|ind-iii-i-xxviii}{52}
+\indexentry{comma!dimensions|ind-iii-i-xxix}{52}
+\indexentry{row!display|ind-iii-i-xxxi}{52}
+\indexentry{a68toc!dimensions|ind-iii-i-xxx}{52}
+\indexentry{row|ind-iii-i-xxxii}{53}
+\indexentry{columns|ind-iii-i-xxxiii}{53}
+\indexentry{multiple!rectangular|ind-iii-i-xxxiv}{53}
+\indexentry{multiple!square|ind-iii-i-xxxv}{53}
+\indexentry{declaration!identity|ind-iii-i-xxxvi}{53}
+\indexentry{mode!base|ind-iii-i-xxxvii}{53}
+\indexentry{subscript|ind-iii-i-xxxviii}{54}
+\indexentry{bound!lower|ind-iii-i-xxxix}{55}
+\indexentry{bound!upper|ind-iii-i-xl}{55}
+\indexentry{bounds!interrogation|ind-iii-i-xli}{55}
+\indexentry{LWB@\texttt  {LWB}|ind-iii-i-xlii}{55}
+\indexentry{UPB@\texttt  {UPB}|ind-iii-i-xliii}{55}
+\indexentry{operator!monadic|ind-iii-i-xliv}{55}
+\indexentry{operator!dyadic|ind-iii-i-xlv}{55}
+\indexentry{bus|ind-iii-ii-i}{57}
+\indexentry{sub|ind-iii-ii-ii}{57}
+\indexentry{slice|ind-iii-ii-iii}{58}
+\indexentry{comma|ind-iii-ii-iv}{58}
+\indexentry{vertical slicing|ind-iii-ii-v}{58}
+\indexentry{AT@\texttt  {AT}|ind-iii-iii-i}{60}
+\indexentry{priority|ind-iii-iii-ii}{61}
+\indexentry{trimmer|ind-iii-iii-iii}{61}
+\indexentry{:@\texttt  {:}|ind-iii-iii-iv}{61}
+\indexentry{context!meek|ind-iii-iii-v}{61}
+\indexentry{slice|ind-iii-iii-vi}{61}
+\indexentry{print@\texttt  {print}|ind-iii-iv-i}{63}
+\indexentry{row!display|ind-iii-iv-ii}{63}
+\indexentry{print@\texttt  {print}|ind-iii-iv-iii}{64}
+\indexentry{a68toc!dimensions|ind-iii-iv-iv}{64}
+\indexentry{+@\texttt  {+}|ind-iii-v-i}{65}
+\indexentry{concatenation|ind-iii-v-ii}{65}
+\indexentry{priority|ind-iii-v-iii}{65}
+\indexentry{*@\texttt  {*}|ind-iii-v-iv}{65}
+\indexentry{PROGRAM@\texttt  {PROGRAM}|ind-iii-vi-i}{66}
+\indexentry{USE@\texttt  {USE}|ind-iii-vi-ii}{66}
+\indexentry{clause!closed|ind-iii-vi-iii}{66}
+\indexentry{;@\texttt  {;}|ind-iii-vi-iv}{66}
+\indexentry{phrase|ind-iii-vi-v}{66}
+\indexentry{unit|ind-iii-vi-vi}{66}
+\indexentry{value!of a closed clause|ind-iii-vi-vii}{67}
+\indexentry{range|ind-iii-vi-viii}{67}
+\indexentry{identifier|ind-iii-vi-ix}{67}
+\indexentry{repetition|ind-iii-vii-i}{67}
+\indexentry{TO@\texttt  {TO}|ind-iii-vii-ii}{68}
+\indexentry{context!meek|ind-iii-vii-iii}{68}
+\indexentry{clause!loop|ind-iii-vii-iv}{68}
+\indexentry{identifier|ind-iii-vii-v}{68}
+\indexentry{INT@\texttt  {INT}|ind-iii-vii-vi}{68}
+\indexentry{range|ind-iii-vii-vii}{68}
+\indexentry{FROM@\texttt  {FROM}|ind-iii-vii-viii}{68}
+\indexentry{unit|ind-iii-vii-ix}{68}
+\indexentry{context!meek|ind-iii-vii-x}{69}
+\indexentry{BY@\texttt  {BY}|ind-iii-vii-xi}{69}
+\indexentry{a68toc!BY@\texttt  {BY}|ind-iii-vii-xii}{69}
+\indexentry{clause!loop|ind-iii-vii-xiii}{70}
+\indexentry{LWB@\texttt  {LWB}|ind-iii-vii-xiv}{70}
+\indexentry{UPB@\texttt  {UPB}|ind-iii-vii-xv}{70}
+\indexentry{declaration!identity!optimisation|ind-iii-vii-xvi}{70}
+\indexentry{optimisation|ind-iii-vii-xvii}{70}
+\indexentry{clause!loop|ind-iii-viii-i}{73}
+\indexentry{clause!enclosed|ind-iii-viii-ii}{73}
+\indexentry{phrase|ind-iii-viii-iii}{73}
+\indexentry{unit|ind-iii-viii-iv}{73}
+\indexentry{FORALL loop@\texttt  {FORALL} loop|ind-iii-x-i}{74}
+\indexentry{a68toc!FORALL@\texttt  {FORALL}|ind-iii-x-ii}{74}
+\indexentry{IN@\texttt  {IN}|ind-iii-x-iii}{74}
+\indexentry{comma|ind-iii-x-iv}{75}
+\indexentry{elaboration!collateral|ind-iii-x-v}{75}
+\indexentry{bounds|ind-iii-x-vi}{75}
+\indexentry{nested|ind-iii-x-vii}{75}
+\indexentry{BOOL@\texttt  {BOOL}|ind-iv-i-i}{80}
+\indexentry{Boole, George|ind-iv-i-ii}{80}
+\indexentry{TRUE@\texttt  {TRUE}|ind-iv-i-iii}{80}
+\indexentry{FALSE@\texttt  {FALSE}|ind-iv-i-iv}{80}
+\indexentry{print@\texttt  {print}|ind-iv-i-v}{80}
+\indexentry{Boolean|ind-iv-i-vi}{80}
+\indexentry{NOT@\texttt  {NOT}|ind-iv-ii-i}{80}
+\indexentry{ODD@\texttt  {ODD}|ind-iv-ii-ii}{80}
+\indexentry{ABS@\texttt  {ABS}|ind-iv-ii-iii}{81}
+\indexentry{operator!dyadic|ind-iv-ii-iv}{81}
+\indexentry{standard prelude|ind-iv-ii-v}{81}
+\indexentry{AND@\texttt  {AND}|ind-iv-ii-vi}{81}
+\indexentry{priority|ind-iv-ii-vii}{81}
+\indexentry{OR@\texttt  {OR}|ind-iv-ii-viii}{81}
+\indexentry{=@\texttt  {=}|ind-iv-iii-i}{82}
+\indexentry{coercion!rowing|ind-iv-iii-ii}{82}
+\indexentry{standard prelude|ind-iv-iii-iii}{82}
+\indexentry{/=@\texttt  {/=}|ind-iv-iii-iv}{82}
+\indexentry{NE@\texttt  {NE}|ind-iv-iii-v}{83}
+\indexentry{priority|ind-iv-iii-vi}{83}
+\indexentry{coercion!widening|ind-iv-iii-vii}{83}
+\indexentry{mixed modes|ind-iv-iii-viii}{83}
+\indexentry{<@\texttt  {<}|ind-iv-iii-ix}{83}
+\indexentry{>@\texttt  {>}|ind-iv-iii-x}{83}
+\indexentry{<=@\texttt  {<=}|ind-iv-iii-xi}{83}
+\indexentry{>=@\texttt  {>=}|ind-iv-iii-xii}{83}
+\indexentry{ordering operators|ind-iv-iii-xiii}{84}
+\indexentry{priority|ind-iv-iv-i}{86}
+\indexentry{OR@\texttt  {OR}|ind-iv-iv-ii}{86}
+\indexentry{converse condition|ind-iv-iv-iii}{86}
+\indexentry{clause!enclosed|ind-iv-v-i}{87}
+\indexentry{phrase|ind-iv-v-ii}{87}
+\indexentry{BEGIN@\texttt  {BEGIN}|ind-iv-v-iii}{87}
+\indexentry{END@\texttt  {END}|ind-iv-v-iv}{87}
+\indexentry{parentheses|ind-iv-v-v}{87}
+\indexentry{clause!serial|ind-iv-v-vi}{87}
+\indexentry{clause!conditional|ind-iv-v-vii}{87}
+\indexentry{clause!boolean|ind-iv-v-viii}{88}
+\indexentry{clause!enquiry|ind-iv-v-ix}{88}
+\indexentry{THEN@\texttt  {THEN}|ind-iv-v-x}{88}
+\indexentry{ELSE@\texttt  {ELSE}|ind-iv-v-xi}{88}
+\indexentry{FI@\texttt  {FI}|ind-iv-v-xii}{88}
+\indexentry{range|ind-iv-v-xiii}{88}
+\indexentry{clause!conditional|ind-iv-v-xiv}{89}
+\indexentry{operand|ind-iv-v-xv}{90}
+\indexentry{(@\texttt  {(}|ind-iv-v-xvi}{90}
+\indexentry{)@\texttt  {)}|ind-iv-v-xvii}{90}
+\indexentry{clause!conditional!short form|ind-iv-v-xviii}{90}
+\indexentry{SKIP@\texttt  {SKIP}|ind-iv-v-xix}{90}
+\indexentry{balancing|ind-iv-v-xx}{90}
+\indexentry{context!strong|ind-iv-v-xxii}{90}
+\indexentry{coercion!widening|ind-iv-v-xxiii}{90}
+\indexentry{clause!enquiry|ind-iv-v-xxiv}{90}
+\indexentry{a68toc!ELSE SKIP@\texttt  {ELSE SKIP}|ind-iv-v-xxi}{90}
+\indexentry{clause!conditional!nested|ind-iv-v-xxv}{91}
+\indexentry{ELSE IF@\texttt  {ELSE IF}|ind-iv-v-xxvi}{91}
+\indexentry{ELIF@\texttt  {ELIF}|ind-iv-v-xxvii}{91}
+\indexentry{range|ind-iv-v-xxviii}{92}
+\indexentry{clause!enquiry|ind-iv-v-xxix}{92}
+\indexentry{"|:@\texttt  {"|:}|ind-iv-v-xxx}{92}
+\indexentry{pseudo-operator|ind-iv-v-xxxi}{93}
+\indexentry{AND@\texttt  {AND}|ind-iv-v-xxxii}{93}
+\indexentry{compound expression|ind-iv-v-xxxiii}{94}
+\indexentry{OREL@\texttt  {OREL}|ind-iv-v-xxxiv}{95}
+\indexentry{OR@\texttt  {OR}|ind-iv-v-xxxv}{95}
+\indexentry{MOD@\texttt  {MOD}|ind-iv-v-xxxvi}{95}
+\indexentry{clause!case|ind-iv-vi-i}{96}
+\indexentry{CASE@\texttt  {CASE}|ind-iv-vi-ii}{97}
+\indexentry{IN@\texttt  {IN}|ind-iv-vi-iii}{97}
+\indexentry{OUT@\texttt  {OUT}|ind-iv-vi-iv}{97}
+\indexentry{ESAC@\texttt  {ESAC}|ind-iv-vi-v}{97}
+\indexentry{comma|ind-iv-vi-vi}{97}
+\indexentry{clause!enclosed|ind-iv-vi-vii}{97}
+\indexentry{parentheses|ind-iv-vi-viii}{97}
+\indexentry{BEGIN@\texttt  {BEGIN}|ind-iv-vi-ix}{97}
+\indexentry{END@\texttt  {END}|ind-iv-vi-x}{97}
+\indexentry{clause!enquiry|ind-iv-vi-xi}{97}
+\indexentry{clause!serial|ind-iv-vi-xii}{97}
+\indexentry{OUT clause@\texttt  {OUT} clause|ind-iv-vi-xiii}{98}
+\indexentry{OUT CASE@\texttt  {OUT CASE}|ind-iv-vi-xiv}{98}
+\indexentry{OUSE@\texttt  {OUSE}|ind-iv-vi-xv}{98}
+\indexentry{SKIP@\texttt  {SKIP}|ind-iv-vi-xvi}{100}
+\indexentry{read@\texttt  {read}|ind-v--i}{104}
+\indexentry{name|ind-v--ii}{104}
+\indexentry{2's-complement binary|ind-v--iii}{105}
+\indexentry{generator|ind-v--iv}{105}
+\indexentry{generator!local|ind-v--v}{105}
+\indexentry{generator!global|ind-v--vi}{105}
+\indexentry{scope|ind-v--vii}{105}
+\indexentry{local!name|ind-v--viii}{105}
+\indexentry{range|ind-v--ix}{105}
+\indexentry{LOC@\texttt  {LOC}|ind-v--x}{105}
+\indexentry{declaration!identity!LOC@\texttt  {LOC}|ind-v--xi}{106}
+\indexentry{REF@\texttt  {REF}|ind-v--xii}{106}
+\indexentry{assignment|ind-v-i-i}{107}
+\indexentry{assignment token|ind-v-i-ii}{108}
+\indexentry{name|ind-v-i-iii}{108}
+\indexentry{go-on|ind-v-i-iv}{108}
+\indexentry{instance|ind-v-i-v}{108}
+\indexentry{REF@\texttt  {REF}|ind-v-i-vi}{109}
+\indexentry{standard prelude|ind-v-i-vii}{109}
+\indexentry{context!strong|ind-v-i-viii}{109}
+\indexentry{coercion!widening|ind-v-i-ix}{109}
+\indexentry{value integrity!principle of|ind-v-i-x}{109}
+\indexentry{constant|ind-v-i-xi}{109}
+\indexentry{coercion|ind-v-i-xii}{109}
+\indexentry{value|ind-v-i-xiii}{109}
+\indexentry{initial assignment|ind-v-i-xiv}{110}
+\indexentry{coercion!dereferencing|ind-v-i-xv}{110}
+\indexentry{context!strong|ind-v-i-xvi}{110}
+\indexentry{context!firm|ind-v-i-xvii}{112}
+\indexentry{coercion!dereferencing|ind-v-i-xviii}{112}
+\indexentry{elaboration!collateral|ind-v-i-xix}{112}
+\indexentry{PLUSAB@\texttt  {PLUSAB}|ind-v-i-xx}{113}
+\indexentry{unit|ind-v-i-xxii}{113}
+\indexentry{context!firm|ind-v-i-xxiii}{113}
+\indexentry{MINUSAB@\texttt  {MINUSAB}|ind-v-i-xxiv}{113}
+\indexentry{TIMESAB@\texttt  {TIMESAB}|ind-v-i-xxv}{113}
+\indexentry{DIVAB@\texttt  {DIVAB}|ind-v-i-xxvi}{113}
+\indexentry{OVERAB@\texttt  {OVERAB}|ind-v-i-xxvii}{113}
+\indexentry{MODAB@\texttt  {MODAB}|ind-v-i-xxviii}{113}
+\indexentry{principle of value integrity|ind-v-i-xxi}{113}
+\indexentry{priority|ind-v-i-xxix}{114}
+\indexentry{assignment operators|ind-v-i-xxx}{114}
+\indexentry{unit|ind-v-i-xxxi}{114}
+\indexentry{a68toc|ind-v-i-xxxii}{114}
+\indexentry{clause!enclosed|ind-v-ii-i}{115}
+\indexentry{context!soft|ind-v-ii-ii}{115}
+\indexentry{clause!conditional|ind-v-ii-iii}{115}
+\indexentry{multiple|ind-v-iii-i}{117}
+\indexentry{REF@\texttt  {REF}|ind-v-iii-ii}{117}
+\indexentry{formal-declarer|ind-v-iii-iii}{117}
+\indexentry{declaration!identity|ind-v-iii-iv}{117}
+\indexentry{actual-declarer|ind-v-iii-v}{117}
+\indexentry{trimmer|ind-v-iii-vi}{117}
+\indexentry{bounds|ind-v-iii-vii}{117}
+\indexentry{subscript|ind-v-iv-i}{118}
+\indexentry{error!run-time|ind-v-iv-ii}{118}
+\indexentry{coercion!dereferencing|ind-v-iv-iii}{119}
+\indexentry{clause!loop|ind-v-iv-iv}{119}
+\indexentry{Eratosthenes' Sieve|ind-v-iv-v}{119}
+\indexentry{row!display|ind-v-iv-vi}{121}
+\indexentry{bounds|ind-v-iv-vii}{121}
+\indexentry{AT@\texttt  {AT}|ind-v-iv-viii}{121}
+\indexentry{slice|ind-v-iv-ix}{121}
+\indexentry{trimming|ind-v-iv-x}{121}
+\indexentry{REF@\texttt  {REF}|ind-v-iv-xi}{121}
+\indexentry{assignment|ind-v-iv-xii}{123}
+\indexentry{lower bound|ind-v-iv-xiii}{123}
+\indexentry{formal-declarer|ind-v-iv-xiv}{123}
+\indexentry{optimisation|ind-v-iv-xv}{124}
+\indexentry{clause!conditional|ind-v-iv-xvi}{124}
+\indexentry{REF@\texttt  {REF}|ind-v-iv-xvii}{124}
+\indexentry{read@\texttt  {read}|ind-v-iv-xviii}{125}
+\indexentry{print@\texttt  {print}|ind-v-iv-xix}{125}
+\indexentry{flexible|ind-v-v-i}{126}
+\indexentry{declaration!identity!FLEX@\texttt  {FLEX}|ind-v-v-ii}{126}
+\indexentry{REF@\texttt  {REF}|ind-v-v-iii}{126}
+\indexentry{FLEX@\texttt  {FLEX}|ind-v-v-iv}{126}
+\indexentry{bounds|ind-v-v-v}{126}
+\indexentry{multiple!flat|ind-v-v-vi}{127}
+\indexentry{coercion!rowing|ind-v-v-vii}{127}
+\indexentry{FLEX@\texttt  {FLEX}|ind-v-v-viii}{127}
+\indexentry{transient name|ind-v-v-ix}{128}
+\indexentry{error!run-time|ind-v-v-x}{129}
+\indexentry{bounds|ind-v-v-xi}{129}
+\indexentry{STRING@\texttt  {STRING}|ind-v-vi-i}{130}
+\indexentry{standard prelude|ind-v-vi-ii}{130}
+\indexentry{FLEX@\texttt  {FLEX}|ind-v-vi-iii}{130}
+\indexentry{declaration!identity!REF@\texttt  {REF}|ind-v-vi-iv}{130}
+\indexentry{mode!indicant|ind-v-vi-v}{130}
+\indexentry{formal-declarer|ind-v-vi-vi}{130}
+\indexentry{actual-declarer|ind-v-vi-vii}{130}
+\indexentry{slice|ind-v-vi-viii}{130}
+\indexentry{name!flexible|ind-v-vi-ix}{131}
+\indexentry{standard prelude|ind-v-vi-x}{131}
+\indexentry{PLUSAB@\texttt  {PLUSAB}|ind-v-vi-xi}{131}
+\indexentry{PLUSTO@\texttt  {PLUSTO}|ind-v-vi-xii}{131}
+\indexentry{concatenation|ind-v-vi-xiii}{131}
+\indexentry{+@\texttt  {+}|ind-v-vi-xiv}{131}
+\indexentry{parameter|ind-v-vii-i}{132}
+\indexentry{print@\texttt  {print}|ind-v-vii-ii}{132}
+\indexentry{context!firm|ind-v-vii-iii}{132}
+\indexentry{coercion!dereferencing|ind-v-vii-iv}{132}
+\indexentry{read@\texttt  {read}|ind-v-vii-v}{132}
+\indexentry{internal representation|ind-v-vii-vi}{133}
+\indexentry{coercion!widening|ind-v-vii-vii}{133}
+\indexentry{sign|ind-v-vii-viii}{133}
+\indexentry{newline@\texttt  {newline}|ind-v-vii-ix}{133}
+\indexentry{newpage@\texttt  {newpage}|ind-v-vii-x}{133}
+\indexentry{row!display|ind-v-vii-xi}{133}
+\indexentry{context!meek|ind-v-viii-i}{135}
+\indexentry{coercion!dereferencing|ind-v-viii-ii}{135}
+\indexentry{name!dynamic|ind-v-viii-iii}{135}
+\indexentry{context!meek|ind-v-ix-i}{136}
+\indexentry{WHILE@\texttt  {WHILE}|ind-v-ix-ii}{137}
+\indexentry{clause!enquiry|ind-v-ix-iii}{137}
+\indexentry{SKIP@\texttt  {SKIP}|ind-v-ix-iv}{137}
+\indexentry{clause!loop|ind-v-ix-v}{137}
+\indexentry{declaration!abbreviated|ind-v-x-i}{138}
+\indexentry{actual-declarer|ind-v-x-ii}{139}
+\indexentry{routine|ind-vi-i-i}{143}
+\indexentry{denotation!routine|ind-vi-i-ii}{143}
+\indexentry{header|ind-vi-i-iii}{144}
+\indexentry{routine!header|ind-vi-i-iv}{144}
+\indexentry{mode!routine|ind-vi-i-v}{144}
+\indexentry{routine!yield|ind-vi-i-vi}{144}
+\indexentry{routine!body|ind-vi-i-vii}{144}
+\indexentry{parameter|ind-vi-i-viii}{144}
+\indexentry{unit|ind-vi-i-ix}{144}
+\indexentry{clause!enclosed|ind-vi-i-x}{144}
+\indexentry{declaration!identity!formal definition|ind-vi-i-xi}{144}
+\indexentry{parameter!formal|ind-vi-i-xii}{144}
+\indexentry{formal-mode-declarer|ind-vi-i-xiii}{144}
+\indexentry{formal-declarer|ind-vi-i-xiv}{144}
+\indexentry{parameter!actual|ind-vi-i-xv}{144}
+\indexentry{identifier|ind-vi-i-xvi}{144}
+\indexentry{row!display|ind-vi-i-xvii}{145}
+\indexentry{clause!enclosed|ind-vi-i-xviii}{145}
+\indexentry{BEGIN@\texttt  {BEGIN}|ind-vi-i-xix}{145}
+\indexentry{END@\texttt  {END}|ind-vi-i-xx}{145}
+\indexentry{clause!serial|ind-vi-i-xxi}{145}
+\indexentry{initial assignment|ind-vi-i-xxii}{145}
+\indexentry{clause!loop|ind-vi-i-xxiii}{145}
+\indexentry{routine!context|ind-vi-i-xxiv}{145}
+\indexentry{context!strong|ind-vi-i-xxv}{146}
+\indexentry{coercion!dereferencing|ind-vi-i-xxvi}{146}
+\indexentry{routine!header|ind-vi-i-xxvii}{147}
+\indexentry{collateral!elaboration|ind-vi-i-xxviii}{147}
+\indexentry{side-effect|ind-vi-i-xxix}{147}
+\indexentry{parameter!formal|ind-vi-i-xxx}{148}
+\indexentry{parameter!actual|ind-vi-i-xxxi}{148}
+\indexentry{bounds interrogation|ind-vi-i-xxxii}{148}
+\indexentry{denotation!routine|ind-vi-i-xxxiii}{148}
+\indexentry{unit|ind-vi-i-xxxiv}{149}
+\indexentry{phrase|ind-vi-i-xxxv}{149}
+\indexentry{clause!conditional|ind-vi-i-xxxvi}{149}
+\indexentry{clause!enclosed|ind-vi-i-xxxvii}{149}
+\indexentry{bounds|ind-vi-i-xxxviii}{149}
+\indexentry{FLEX@\texttt  {FLEX}|ind-vi-i-xxxix}{149}
+\indexentry{coercion!voiding|ind-vi-i-xl}{149}
+\indexentry{VOID@\texttt  {VOID}|ind-vi-i-xli}{149}
+\indexentry{EMPTY@\texttt  {EMPTY}|ind-vi-i-xlii}{149}
+\indexentry{stop@\texttt  {stop}|ind-vi-i-xliii}{149}
+\indexentry{yield|ind-vi-i-xliv}{150}
+\indexentry{name|ind-vi-i-xlv}{150}
+\indexentry{range|ind-vi-i-xlvi}{151}
+\indexentry{scope|ind-vi-i-xlvii}{151}
+\indexentry{generator!local|ind-vi-i-xlviii}{151}
+\indexentry{LOC@\texttt  {LOC}|ind-vi-i-xlix}{151}
+\indexentry{a68toc!scope checking|ind-vi-i-l}{151}
+\indexentry{scope checking|ind-vi-i-li}{151}
+\indexentry{generator!global|ind-vi-i-lii}{151}
+\indexentry{HEAP@\texttt  {HEAP}|ind-vi-i-liii}{151}
+\indexentry{denotation|ind-vi-i-liv}{152}
+\indexentry{parameter!formal|ind-vi-i-lv}{153}
+\indexentry{VOID@\texttt  {VOID}|ind-vi-i-lvi}{153}
+\indexentry{identifier!global|ind-vi-i-lvii}{153}
+\indexentry{side-effect|ind-vi-i-lviii}{154}
+\indexentry{operator!mode|ind-vi-ii-i}{155}
+\indexentry{operator!value|ind-vi-ii-ii}{155}
+\indexentry{denotation!routine|ind-vi-ii-iii}{155}
+\indexentry{operator!priority|ind-vi-ii-iv}{155}
+\indexentry{operand|ind-vi-ii-v}{155}
+\indexentry{operator!dyadic|ind-vi-ii-vi}{155}
+\indexentry{operator!yield|ind-vi-ii-vii}{155}
+\indexentry{operator!monadic|ind-vi-ii-viii}{155}
+\indexentry{operator!symbol|ind-vi-ii-ix}{155}
+\indexentry{mode!indicant|ind-vi-ii-x}{155}
+\indexentry{declaration!identity!routine|ind-vi-ii-xi}{155}
+\indexentry{OP@\texttt  {OP}|ind-vi-ii-xii}{155}
+\indexentry{overloading|ind-vi-ii-xiv}{156}
+\indexentry{a68toc!BY@\texttt  {BY}|ind-vi-ii-xiii}{156}
+\indexentry{clause!conditional|ind-vi-ii-xv}{157}
+\indexentry{coercion!dereferencing|ind-vi-ii-xvi}{157}
+\indexentry{context!firm|ind-vi-ii-xvii}{157}
+\indexentry{firmly coercible|ind-vi-ii-xviii}{157}
+\indexentry{range|ind-vi-ii-xix}{157}
+\indexentry{firmly related|ind-vi-ii-xx}{158}
+\indexentry{occurrence!defining|ind-vi-ii-xxi}{158}
+\indexentry{occurrence!applied|ind-vi-ii-xxii}{158}
+\indexentry{firmly related|ind-vi-ii-xxiii}{160}
+\indexentry{context!firm|ind-vi-ii-xxiv}{160}
+\indexentry{parameter!formal|ind-vi-ii-xxv}{161}
+\indexentry{context!strong!exception|ind-vi-ii-xxvi}{161}
+\indexentry{operator!dyadic|ind-vi-ii-xxvii}{162}
+\indexentry{operator!priority|ind-vi-ii-xxviii}{162}
+\indexentry{PRIO@\texttt  {PRIO}|ind-vi-ii-xxix}{162}
+\indexentry{declaration!priority|ind-vi-ii-xxx}{163}
+\indexentry{operator!symbol|ind-vi-ii-xxxi}{163}
+\indexentry{scope|ind-vi-ii-xxxii}{163}
+\indexentry{operator!dyadic!identification|ind-vi-ii-xxxiii}{163}
+\indexentry{elaboration!order of|ind-vi-ii-xxxiv}{163}
+\indexentry{firmly related|ind-vi-ii-xxxv}{163}
+\indexentry{declaration!identity!routine call|ind-vi-ii-xxxvi}{164}
+\indexentry{elaboration!collateral|ind-vi-ii-xxxvii}{164}
+\indexentry{side-effect|ind-vi-ii-xxxviii}{164}
+\indexentry{indeterminate result|ind-vi-ii-xxxix}{165}
+\indexentry{parameter!actual|ind-vi-ii-xl}{165}
+\indexentry{identifier|ind-vi-ii-xli}{165}
+\indexentry{parameter!formal|ind-vi-ii-xlii}{165}
+\indexentry{operator!symbol|ind-vi-ii-xliii}{166}
+\indexentry{procedure|ind-vi-iii-i}{167}
+\indexentry{procedure!mode|ind-vi-iii-ii}{167}
+\indexentry{PROC@\texttt  {PROC}|ind-vi-iii-iii}{167}
+\indexentry{overloading|ind-vi-iii-iv}{167}
+\indexentry{formal-declarer|ind-vi-iii-v}{168}
+\indexentry{procedure!call|ind-vi-iii-vi}{169}
+\indexentry{coercion!deproceduring|ind-vi-iii-vii}{169}
+\indexentry{context!soft|ind-vi-iii-viii}{169}
+\indexentry{context!soft|ind-vi-iii-ix}{170}
+\indexentry{side-effect|ind-vi-iii-x}{170}
+\indexentry{context!strong|ind-vi-iii-xi}{171}
+\indexentry{coercion!voiding|ind-vi-iii-xii}{171}
+\indexentry{VOID@\texttt  {VOID}|ind-vi-iii-xiii}{171}
+\indexentry{procedure!parameterless|ind-vi-iii-xiv}{172}
+\indexentry{slice|ind-vi-iii-xv}{172}
+\indexentry{subscript|ind-vi-iii-xvi}{172}
+\indexentry{HEAP@\texttt  {HEAP}|ind-vi-iii-xvii}{172}
+\indexentry{procedure!yield|ind-vi-iii-xviii}{172}
+\indexentry{standard prelude|ind-vi-iii-xix}{173}
+\indexentry{random@\texttt  {random}|ind-vi-iii-xx}{173}
+\indexentry{procedure!parameters|ind-vi-iii-xxi}{174}
+\indexentry{parameter!list|ind-vi-iii-xxii}{174}
+\indexentry{procedure!call|ind-vi-iii-xxiii}{175}
+\indexentry{parentheses|ind-vi-iii-xxiv}{175}
+\indexentry{parameter!actual|ind-vi-iii-xxv}{175}
+\indexentry{parameter!formal|ind-vi-iii-xxvi}{176}
+\indexentry{row!display|ind-vi-iii-xxvii}{176}
+\indexentry{context!strong|ind-vi-iii-xxviii}{176}
+\indexentry{read@\texttt  {read}|ind-vi-iii-xxix}{177}
+\indexentry{flexible name|ind-vi-iii-xxx}{177}
+\indexentry{STRING@\texttt  {STRING}|ind-vi-iii-xxxi}{177}
+\indexentry{parameter!procedure|ind-vi-iii-xxxii}{179}
+\indexentry{mode!formal|ind-vi-iii-xxxiii}{179}
+\indexentry{procedure!identifier|ind-vi-iii-xxxiv}{179}
+\indexentry{denotation!routine|ind-vi-iii-xxxv}{179}
+\indexentry{unit|ind-vi-iii-xxxvi}{179}
+\indexentry{anonymous|ind-vi-iii-xxxvii}{179}
+\indexentry{recursion|ind-vi-iii-xxxviii}{180}
+\indexentry{recursive call|ind-vi-iii-xxxix}{181}
+\indexentry{enclosing range|ind-vi-iii-xl}{181}
+\indexentry{mutual recursion|ind-vi-iii-xli}{181}
+\indexentry{standard prelude|ind-vi-iii-xlii}{183}
+\indexentry{sqrt@\texttt  {sqrt}|ind-vi-iii-xliii}{183}
+\indexentry{exp@\texttt  {exp}|ind-vi-iii-xliv}{183}
+\indexentry{ln@\texttt  {ln}|ind-vi-iii-xlv}{183}
+\indexentry{cos@\texttt  {cos}|ind-vi-iii-xlvi}{183}
+\indexentry{sin@\texttt  {sin}|ind-vi-iii-xlvii}{183}
+\indexentry{tan@\texttt  {tan}|ind-vi-iii-xlviii}{183}
+\indexentry{arctan@\texttt  {arctan}|ind-vi-iii-xlix}{183}
+\indexentry{arcsin@\texttt  {arcsin}|ind-vi-iii-l}{183}
+\indexentry{arccos@\texttt  {arccos}|ind-vi-iii-li}{183}
+\indexentry{random int@\texttt  {random int}|ind-vi-iii-lii}{183}
+\indexentry{procedure!nesting|ind-vi-iii-liii}{184}
+\indexentry{procedure!multiple|ind-vi-iii-liv}{184}
+\indexentry{coercion!dereferencing|ind-vi-iii-lv}{185}
+\indexentry{procedure!name|ind-vi-iii-lvi}{185}
+\indexentry{a68toc!scope checking|ind-vi-iii-lvii}{186}
+\indexentry{SKIP@\texttt  {SKIP}|ind-vi-iii-lviii}{186}
+\indexentry{clause!conditional|ind-vi-iii-lix}{186}
+\indexentry{context!strong|ind-vi-iii-lx}{186}
+\indexentry{procedure!nesting|ind-vi-iii-lxi}{187}
+\indexentry{structure|ind-vii-i-i}{190}
+\indexentry{fields|ind-vii-i-ii}{190}
+\indexentry{STRUCT@\texttt  {STRUCT}|ind-vii-i-iii}{190}
+\indexentry{declaration!identity!STRUCT@\texttt  {STRUCT}|ind-vii-i-iv}{190}
+\indexentry{field selector|ind-vii-i-v}{190}
+\indexentry{structure!display|ind-vii-i-vi}{190}
+\indexentry{context!strong|ind-vii-i-vii}{190}
+\indexentry{mode!constituent|ind-vii-i-viii}{191}
+\indexentry{coercion!widening|ind-vii-i-ix}{192}
+\indexentry{structure!procedure field|ind-vii-i-x}{192}
+\indexentry{structure!nested|ind-vii-i-xi}{192}
+\indexentry{field selector|ind-vii-i-xii}{192}
+\indexentry{field selection|ind-vii-ii-i}{193}
+\indexentry{structure!mode|ind-vii-ii-ii}{193}
+\indexentry{selection|ind-vii-ii-iii}{193}
+\indexentry{OF@\texttt  {OF}|ind-vii-ii-iv}{193}
+\indexentry{parentheses|ind-vii-ii-v}{193}
+\indexentry{coercion!widening|ind-vii-ii-vi}{194}
+\indexentry{REF@\texttt  {REF}|ind-vii-ii-vii}{195}
+\indexentry{structure!display|ind-vii-ii-viii}{195}
+\indexentry{;@\texttt  {;}|ind-vii-ii-ix}{195}
+\indexentry{elaboration!collateral|ind-vii-ii-x}{195}
+\indexentry{declaration!structure|ind-vii-iii-i}{197}
+\indexentry{mode declaration|ind-vii-iii-ii}{197}
+\indexentry{mode!indicant|ind-vii-iii-iii}{197}
+\indexentry{a68toc!recursive modes|ind-vii-iii-iv}{198}
+\indexentry{declaration!stub|ind-vii-iii-v}{198}
+\indexentry{mutual recursion|ind-vii-iii-vi}{198}
+\indexentry{STRING@\texttt  {STRING}|ind-vii-iii-vii}{199}
+\indexentry{standard prelude|ind-vii-iv-i}{201}
+\indexentry{declaration!mode|ind-vii-iv-ii}{201}
+\indexentry{COMPL@\texttt  {COMPL}|ind-vii-iv-iii}{202}
+\indexentry{complex numbers|ind-vii-iv-iv}{202}
+\indexentry{+@\texttt  {+}|ind-vii-iv-v}{202}
+\indexentry{-@\texttt  {-}|ind-vii-iv-vi}{202}
+\indexentry{**@\texttt  {**}|ind-vii-iv-vii}{202}
+\indexentry{=@\texttt  {=}|ind-vii-iv-viii}{202}
+\indexentry{/=@\texttt  {/=}|ind-vii-iv-ix}{202}
+\indexentry{TIMESAB@\texttt  {TIMESAB}|ind-vii-iv-x}{202}
+\indexentry{DIVAB@\texttt  {DIVAB}|ind-vii-iv-xi}{202}
+\indexentry{PLUSAB@\texttt  {PLUSAB}|ind-vii-iv-xii}{202}
+\indexentry{MINUSAB@\texttt  {MINUSAB}|ind-vii-iv-xiii}{202}
+\indexentry{context!strong|ind-vii-iv-xiv}{202}
+\indexentry{coercion!widening|ind-vii-iv-xv}{202}
+\indexentry{I@\texttt  {I}|ind-vii-iv-xvi}{202}
+\indexentry{RE@\texttt  {RE}|ind-vii-iv-xvii}{203}
+\indexentry{IM@\texttt  {IM}|ind-vii-iv-xviii}{203}
+\indexentry{CONJ@\texttt  {CONJ}|ind-vii-iv-xix}{203}
+\indexentry{ARG@\texttt  {ARG}|ind-vii-iv-xx}{203}
+\indexentry{ABS@\texttt  {ABS}|ind-vii-iv-xxi}{203}
+\indexentry{COMPL@\texttt  {COMPL}|ind-vii-iv-xxii}{203}
+\indexentry{RE@\texttt  {RE}|ind-vii-iv-xxiii}{204}
+\indexentry{declaration!structure|ind-vii-v-i}{206}
+\indexentry{actual-declarer|ind-vii-v-ii}{206}
+\indexentry{formal-declarer|ind-vii-v-iii}{206}
+\indexentry{identity!declaration!formal-declarer|ind-vii-v-iv}{206}
+\indexentry{STRING@\texttt  {STRING}|ind-vii-v-v}{207}
+\indexentry{slice|ind-vii-v-vi}{207}
+\indexentry{formal-declarer|ind-vii-v-vii}{208}
+\indexentry{a68toc!ignoring bounds|ind-vii-v-viii}{208}
+\indexentry{actual-declarer|ind-vii-v-ix}{208}
+\indexentry{declaration!mode|ind-vii-v-x}{208}
+\indexentry{structure!multiple|ind-vii-vi-i}{211}
+\indexentry{a68toc!selections|ind-vii-vi-ii}{211}
+\indexentry{a68toc!selections|ind-vii-vi-iii}{212}
+\indexentry{straightening|ind-vii-vii-i}{213}
+\indexentry{print@\texttt  {print}|ind-viii--i}{216}
+\indexentry{mode!united|ind-viii--ii}{216}
+\indexentry{UNION@\texttt  {UNION}|ind-viii-i-i}{217}
+\indexentry{order of modes|ind-viii-i-ii}{217}
+\indexentry{declaration!mode|ind-viii-i-iv}{217}
+\indexentry{a68toc!UNION@\texttt  {UNION}|ind-viii-i-iii}{217}
+\indexentry{coercion!uniting|ind-viii-i-v}{218}
+\indexentry{random@\texttt  {random}|ind-viii-i-vi}{218}
+\indexentry{firmly related|ind-viii-i-vii}{219}
+\indexentry{context!firm|ind-viii-i-viii}{219}
+\indexentry{generator!local|ind-viii-i-ix}{219}
+\indexentry{declaration!abbreviated|ind-viii-i-x}{219}
+\indexentry{print@\texttt  {print}|ind-viii-ii-i}{221}
+\indexentry{read@\texttt  {read}|ind-viii-ii-ii}{221}
+\indexentry{SIMPLIN@\texttt  {SIMPLIN}|ind-viii-ii-iii}{221}
+\indexentry{SIMPLOUT@\texttt  {SIMPLOUT}|ind-viii-ii-iv}{221}
+\indexentry{context!firm|ind-viii-ii-v}{221}
+\indexentry{coercion!deproceduring|ind-viii-ii-vi}{222}
+\indexentry{coercion!dereferencing|ind-viii-ii-vii}{222}
+\indexentry{clause!conformity|ind-viii-ii-viii}{222}
+\indexentry{VOID@\texttt  {VOID}|ind-viii-ii-ix}{222}
+\indexentry{coercion!uniting|ind-viii-iii-i}{224}
+\indexentry{mode!constituent|ind-viii-iii-ii}{224}
+\indexentry{clause!conformity|ind-viii-iii-iii}{224}
+\indexentry{mode!selector|ind-viii-iii-iv}{224}
+\indexentry{conformity case clause|ind-viii-iii-v}{224}
+\indexentry{identifier|ind-viii-iii-vi}{225}
+\indexentry{declaration!identity!CASE@\texttt  {CASE}|ind-viii-iii-vii}{225}
+\indexentry{unit|ind-viii-iii-viii}{225}
+\indexentry{clause!enclosed|ind-viii-iii-ix}{225}
+\indexentry{read@\texttt  {read}|ind-viii-iii-x}{226}
+\indexentry{print@\texttt  {print}|ind-viii-iii-xi}{226}
+\indexentry{mode!constituent|ind-viii-iii-xii}{227}
+\indexentry{standard prelude|ind-ix--i}{229}
+\indexentry{event-driven programming|ind-ix--ii}{229}
+\indexentry{book|ind-ix-i-i}{230}
+\indexentry{identification|ind-ix-i-ii}{230}
+\indexentry{reading|ind-ix-i-iii}{230}
+\indexentry{writing|ind-ix-i-iv}{230}
+\indexentry{browsing|ind-ix-i-v}{230}
+\indexentry{restart|ind-ix-i-vi}{230}
+\indexentry{binary|ind-ix-i-vii}{230}
+\indexentry{operating-system|ind-ix-i-viii}{230}
+\indexentry{files|ind-ix-i-ix}{230}
+\indexentry{keyboard|ind-ix-i-x}{230}
+\indexentry{book!read-only|ind-ix-i-xi}{230}
+\indexentry{book!write-only|ind-ix-i-xii}{230}
+\indexentry{data|ind-ix-i-xiii}{231}
+\indexentry{standard prelude|ind-ix-i-xiv}{231}
+\indexentry{stand in channel@\texttt  {stand in channel}|ind-ix-i-xv}{231}
+\indexentry{stand out channel@\texttt  {stand out channel}|ind-ix-i-xvi}{231}
+\indexentry{stand back channel@\texttt  {stand back channel}|ind-ix-i-xvii}{231}
+\indexentry{read-only|ind-ix-i-xviii}{231}
+\indexentry{write-only|ind-ix-i-xix}{231}
+\indexentry{CHANNEL@\texttt  {CHANNEL}|ind-ix-i-xx}{231}
+\indexentry{FILE@\texttt  {FILE}|ind-ix-i-xxi}{231}
+\indexentry{reading!books|ind-ix-ii-i}{231}
+\indexentry{open@\texttt  {open}|ind-ix-ii-ii}{231}
+\indexentry{get@\texttt  {get}|ind-ix-ii-iii}{232}
+\indexentry{read@\texttt  {read}|ind-ix-ii-iv}{232}
+\indexentry{SIMPLIN@\texttt  {SIMPLIN}|ind-ix-ii-v}{233}
+\indexentry{newpage@\texttt  {newpage}|ind-ix-ii-vi}{234}
+\indexentry{newline@\texttt  {newline}|ind-ix-ii-vii}{234}
+\indexentry{get@\texttt  {get}|ind-ix-ii-viii}{234}
+\indexentry{STRAIGHT@\texttt  {STRAIGHT}|ind-ix-ii-ix}{235}
+\indexentry{stand in@\texttt  {stand in}|ind-ix-ii-x}{235}
+\indexentry{read@\texttt  {read}|ind-ix-ii-xi}{235}
+\indexentry{get@\texttt  {get}|ind-ix-ii-xii}{235}
+\indexentry{close@\texttt  {close}|ind-ix-ii-xiii}{235}
+\indexentry{establish@\texttt  {establish}|ind-ix-iii-i}{236}
+\indexentry{a68toc!establish@\texttt  {establish}|ind-ix-iii-ii}{237}
+\indexentry{put@\texttt  {put}|ind-ix-iii-iii}{237}
+\indexentry{newline@\texttt  {newline}|ind-ix-iii-iv}{237}
+\indexentry{newpage@\texttt  {newpage}|ind-ix-iii-v}{237}
+\indexentry{close@\texttt  {close}|ind-ix-iii-vi}{238}
+\indexentry{print@\texttt  {print}|ind-ix-iii-vii}{238}
+\indexentry{stand out@\texttt  {stand out}|ind-ix-iii-viii}{238}
+\indexentry{make term@\texttt  {make term}|ind-ix-iv-i}{239}
+\indexentry{string terminator|ind-ix-iv-ii}{239}
+\indexentry{context!strong|ind-ix-iv-iii}{240}
+\indexentry{end-of-line|ind-ix-iv-iv}{240}
+\indexentry{a68toc!events|ind-ix-v-i}{241}
+\indexentry{logical file end|ind-ix-v-ii}{241}
+\indexentry{physical file end|ind-ix-v-iii}{241}
+\indexentry{command prompt|ind-ix-vi-i}{247}
+\indexentry{argument|ind-ix-vi-ii}{247}
+\indexentry{arg channel@\texttt  {arg channel}|ind-ix-vi-iii}{247}
+\indexentry{arg channel@\texttt  {arg channel}|ind-ix-vi-iv}{248}
+\indexentry{stop@\texttt  {stop}|ind-ix-vi-v}{248}
+\indexentry{arg channel@\texttt  {arg channel}|ind-ix-vi-vi}{248}
+\indexentry{get@\texttt  {get}|ind-ix-vi-vii}{248}
+\indexentry{make term@\texttt  {make term}|ind-ix-vi-viii}{248}
+\indexentry{blank@\texttt  {blank}|ind-ix-vi-ix}{248}
+\indexentry{terminators|ind-ix-vi-x}{249}
+\indexentry{null string|ind-ix-vi-xi}{249}
+\indexentry{skip terminators@\texttt  {skip terminators}|ind-ix-vi-xii}{249}
+\indexentry{environment string|ind-ix-vii-i}{250}
+\indexentry{nul ch@\texttt  {nul ch}|ind-ix-vii-ii}{250}
+\indexentry{env channel@\texttt  {env channel}|ind-ix-vii-iii}{250}
+\indexentry{open@\texttt  {open}|ind-ix-vii-iv}{250}
+\indexentry{make term@\texttt  {make term}|ind-ix-vii-v}{250}
+\indexentry{:@\texttt  {:}|ind-ix-vii-vi}{250}
+\indexentry{get@\texttt  {get}|ind-ix-vii-vii}{250}
+\indexentry{label|ind-ix-vii-viii}{251}
+\indexentry{:@\texttt  {:}|ind-ix-vii-ix}{251}
+\indexentry{whole@\texttt  {whole}|ind-ix-viii-i}{252}
+\indexentry{field|ind-ix-viii-ii}{253}
+\indexentry{error char@\texttt  {error char}|ind-ix-viii-iii}{253}
+\indexentry{whole@\texttt  {whole}|ind-ix-viii-iv}{254}
+\indexentry{fixed@\texttt  {fixed}|ind-ix-viii-v}{254}
+\indexentry{scientific format|ind-ix-viii-vi}{254}
+\indexentry{float@\texttt  {float}|ind-ix-viii-vii}{254}
+\indexentry{whole@\texttt  {whole}|ind-ix-viii-viii}{255}
+\indexentry{fixed@\texttt  {fixed}|ind-ix-viii-ix}{255}
+\indexentry{float@\texttt  {float}|ind-ix-viii-x}{255}
+\indexentry{book!binary|ind-ix-ix-i}{256}
+\indexentry{put@\texttt  {put}|ind-ix-ix-ii}{256}
+\indexentry{get@\texttt  {get}|ind-ix-ix-iii}{256}
+\indexentry{put bin@\texttt  {put bin}|ind-ix-ix-iv}{256}
+\indexentry{get bin@\texttt  {get bin}|ind-ix-ix-v}{256}
+\indexentry{get bin@\texttt  {get bin}|ind-ix-ix-vi}{257}
+\indexentry{make term@\texttt  {make term}|ind-ix-ix-vii}{257}
+\indexentry{lf@\texttt  {lf}|ind-ix-ix-viii}{257}
+\indexentry{set possible@\texttt  {set possible}|ind-ix-ix-ix}{258}
+\indexentry{FALSE@\texttt  {FALSE}|ind-ix-ix-x}{258}
+\indexentry{REF FILE@\texttt  {REF FILE}|ind-ix-ix-xi}{258}
+\indexentry{get bin@\texttt  {get bin}|ind-ix-ix-xii}{258}
+\indexentry{set possible@\texttt  {set possible}|ind-ix-ix-xiii}{258}
+\indexentry{TRUE@\texttt  {TRUE}|ind-ix-ix-xiv}{258}
+\indexentry{REF FILE@\texttt  {REF FILE}|ind-ix-ix-xv}{258}
+\indexentry{browsing|ind-ix-ix-xvi}{258}
+\indexentry{set@\texttt  {set}|ind-ix-ix-xvii}{258}
+\indexentry{a68toc!set@\texttt  {set}|ind-ix-ix-xviii}{258}
+\indexentry{reset@\texttt  {reset}|ind-ix-ix-xix}{258}
+\indexentry{work file|ind-ix-ix-xx}{258}
+\indexentry{logical end@\texttt  {logical end}|ind-ix-ix-xxi}{259}
+\indexentry{binary transput|ind-ix-ix-xxii}{260}
+\indexentry{current pos@\texttt  {current pos}|ind-ix-ix-xxiii}{260}
+\indexentry{record|ind-ix-ix-xxiv}{260}
+\indexentry{book!internal|ind-ix-x-i}{261}
+\indexentry{a68toc|ind-ix-x-ii}{261}
+\indexentry{idf@\texttt  {idf}|ind-ix-xi-i}{262}
+\indexentry{scratch@\texttt  {scratch}|ind-ix-xi-ii}{262}
+\indexentry{lock@\texttt  {lock}|ind-ix-xi-iii}{262}
+\indexentry{a68toc!lock@\texttt  {lock}|ind-ix-xi-iv}{262}
+\indexentry{phrase|ind-x-i-i}{266}
+\indexentry{declaration|ind-x-i-ii}{266}
+\indexentry{unit|ind-x-i-iii}{266}
+\indexentry{assignment!initial|ind-x-i-iv}{266}
+\indexentry{identity!relation|ind-x-i-v}{266}
+\indexentry{denotation!routine|ind-x-i-vi}{266}
+\indexentry{SKIP@\texttt  {SKIP}|ind-x-i-vii}{266}
+\indexentry{NIL@\texttt  {NIL}|ind-x-i-viii}{267}
+\indexentry{denotation|ind-x-i-ix}{267}
+\indexentry{context!strong|ind-x-ii-i}{268}
+\indexentry{identity!relation|ind-x-ii-ii}{268}
+\indexentry{context!firm|ind-x-ii-iii}{268}
+\indexentry{context!meek|ind-x-ii-iv}{268}
+\indexentry{context!weak|ind-x-ii-v}{269}
+\indexentry{context!soft|ind-x-ii-vi}{269}
+\indexentry{identity!relation|ind-x-ii-vii}{269}
+\indexentry{coercion!deproceduring|ind-x-iii-i}{270}
+\indexentry{coercion!rowing|ind-x-iii-ii}{270}
+\indexentry{coercion!voiding|ind-x-iii-iii}{270}
+\indexentry{coercion!widening|ind-x-iii-iv}{270}
+\indexentry{coercion!uniting|ind-x-iii-v}{270}
+\indexentry{coercion!dereferencing|ind-x-iii-vi}{270}
+\indexentry{coercion!weakly-dereferencing|ind-x-iii-vii}{270}
+\indexentry{cast|ind-x-iii-viii}{270}
+\indexentry{coercion!deproceduring|ind-x-iii-ix}{271}
+\indexentry{random@\texttt  {random}|ind-x-iii-x}{271}
+\indexentry{standard prelude|ind-x-iii-xi}{271}
+\indexentry{a68toc!voiding error|ind-x-iii-xii}{272}
+\indexentry{a68toc!OP error@\texttt  {OP} error|ind-x-iii-xiii}{273}
+\indexentry{coercion!dereferencing|ind-x-iii-xiv}{273}
+\indexentry{coercion!weakly-dereferencing|ind-x-iii-xv}{274}
+\indexentry{context!weak|ind-x-iii-xvi}{274}
+\indexentry{secondary|ind-x-iii-xvii}{274}
+\indexentry{uniting|ind-x-iii-xviii}{275}
+\indexentry{context!firm|ind-x-iii-xix}{275}
+\indexentry{context!strong|ind-x-iii-xx}{275}
+\indexentry{coercion!rowing|ind-x-iii-xxi}{276}
+\indexentry{mode!base|ind-x-iii-xxii}{276}
+\indexentry{name|ind-x-iii-xxiii}{277}
+\indexentry{declaration!identity|ind-x-iii-xxiv}{277}
+\indexentry{generator!local|ind-x-iii-xxv}{277}
+\indexentry{coercion!voiding|ind-x-iii-xxvi}{278}
+\indexentry{context!strong|ind-x-iii-xxvii}{278}
+\indexentry{VOID@\texttt  {VOID}|ind-x-iii-xxviii}{278}
+\indexentry{;@\texttt  {;}|ind-x-iii-xxix}{278}
+\indexentry{assignment|ind-x-iii-xxx}{279}
+\indexentry{coercion!deproceduring|ind-x-iii-xxxi}{279}
+\indexentry{coercion!dereferencing|ind-x-iii-xxxii}{279}
+\indexentry{elaboration|ind-x-iii-xxxiii}{279}
+\indexentry{clause!enclosed|ind-x-iv-i}{281}
+\indexentry{clause!closed|ind-x-iv-ii}{281}
+\indexentry{BEGIN@\texttt  {BEGIN}|ind-x-iv-iii}{281}
+\indexentry{END@\texttt  {END}|ind-x-iv-iv}{281}
+\indexentry{range|ind-x-iv-v}{281}
+\indexentry{a68toc!identifier range|ind-x-iv-vi}{281}
+\indexentry{clause!collateral|ind-x-iv-vii}{282}
+\indexentry{clause!parallel|ind-x-iv-ix}{282}
+\indexentry{row!display|ind-x-iv-xi}{282}
+\indexentry{clause!loop|ind-x-iv-xii}{282}
+\indexentry{clause!conditional|ind-x-iv-xiii}{282}
+\indexentry{clause!case|ind-x-iv-xiv}{282}
+\indexentry{structure!display|ind-x-iv-xv}{282}
+\indexentry{clause!conformity|ind-x-iv-xvi}{282}
+\indexentry{a68toc!collateral clauses|ind-x-iv-viii}{282}
+\indexentry{a68toc!parallel clauses|ind-x-iv-x}{282}
+\indexentry{context!meek|ind-x-iv-xvii}{283}
+\indexentry{denotation|ind-x-v-i}{284}
+\indexentry{values!plain|ind-x-v-ii}{284}
+\indexentry{cast|ind-x-v-iii}{284}
+\indexentry{mode!indicant|ind-x-v-iv}{284}
+\indexentry{identity!relation|ind-x-v-v}{284}
+\indexentry{balancing|ind-x-v-vi}{284}
+\indexentry{generator|ind-x-v-vii}{284}
+\indexentry{field selector|ind-x-v-viii}{285}
+\indexentry{procedure!call|ind-x-v-ix}{285}
+\indexentry{identifier!applied|ind-x-v-x}{285}
+\indexentry{context!meek|ind-x-v-xi}{285}
+\indexentry{slice|ind-x-v-xii}{285}
+\indexentry{context!weak|ind-x-v-xiii}{285}
+\indexentry{coercion!weakly-dereferencing|ind-x-v-xiv}{285}
+\indexentry{context!strong|ind-x-v-xv}{286}
+\indexentry{context!meek|ind-x-v-xvi}{286}
+\indexentry{selection|ind-x-vi-i}{287}
+\indexentry{generator|ind-x-vi-ii}{287}
+\indexentry{anonymous name|ind-x-vi-iii}{287}
+\indexentry{clause!loop|ind-x-vi-iv}{287}
+\indexentry{scope|ind-x-vi-v}{287}
+\indexentry{secondary|ind-x-vi-vi}{288}
+\indexentry{identifier!applied|ind-x-vi-vii}{288}
+\indexentry{slice|ind-x-vi-viii}{289}
+\indexentry{primary|ind-x-vi-ix}{289}
+\indexentry{secondary|ind-x-vi-x}{289}
+\indexentry{parentheses|ind-x-vi-xi}{289}
+\indexentry{a68toc!selections|ind-x-vi-xii}{289}
+\indexentry{formula|ind-x-vii-i}{291}
+\indexentry{secondary|ind-x-vii-ii}{291}
+\indexentry{primary|ind-x-vii-iii}{291}
+\indexentry{identity!relation|ind-x-viii-i}{291}
+\indexentry{assignment|ind-x-viii-ii}{291}
+\indexentry{tertiary|ind-x-viii-iii}{291}
+\indexentry{applied identifier|ind-x-viii-iv}{291}
+\indexentry{clause!closed|ind-x-viii-v}{292}
+\indexentry{name|ind-x-viii-vi}{292}
+\indexentry{context!soft|ind-x-viii-vii}{292}
+\indexentry{cast|ind-x-viii-viii}{292}
+\indexentry{coercion!deproceduring|ind-x-viii-ix}{292}
+\indexentry{assignment token|ind-x-viii-x}{292}
+\indexentry{context!strong|ind-x-viii-xi}{292}
+\indexentry{assigning operators|ind-x-viii-xii}{292}
+\indexentry{parentheses|ind-x-viii-xiii}{292}
+\indexentry{BEGIN@\texttt  {BEGIN}|ind-x-viii-xiv}{292}
+\indexentry{END@\texttt  {END}|ind-x-viii-xv}{292}
+\indexentry{denotation!routine|ind-x-viii-xvi}{292}
+\indexentry{SKIP@\texttt  {SKIP}|ind-x-viii-xvii}{292}
+\indexentry{balancing|ind-x-viii-xviii}{293}
+\indexentry{SKIP@\texttt  {SKIP}|ind-x-viii-xix}{293}
+\indexentry{row!display|ind-x-viii-xx}{293}
+\indexentry{structure!display|ind-x-viii-xxi}{293}
+\indexentry{a68toc!unassigned names|ind-x-viii-xxii}{293}
+\indexentry{identity!relation|ind-x-viii-xxiii}{293}
+\indexentry{identity!relator|ind-x-viii-xxiv}{293}
+\indexentry{:=:@\texttt  {:=:}|ind-x-viii-xxv}{293}
+\indexentry{:/=:@\texttt  {:/=:}|ind-x-viii-xxvi}{293}
+\indexentry{formula|ind-x-viii-xxvii}{293}
+\indexentry{tertiary|ind-x-viii-xxviii}{293}
+\indexentry{context!soft|ind-x-viii-xxix}{294}
+\indexentry{context!strong|ind-x-viii-xxx}{294}
+\indexentry{balancing|ind-x-viii-xxxi}{294}
+\indexentry{coercion!weakly-dereferencing|ind-x-viii-xxxii}{294}
+\indexentry{denotation!routine|ind-x-ix-i}{295}
+\indexentry{clause!closed|ind-x-ix-ii}{295}
+\indexentry{yield|ind-x-ix-iii}{295}
+\indexentry{balancing|ind-x-ix-iv}{296}
+\indexentry{identity!relation|ind-x-ix-v}{296}
+\indexentry{clause!case|ind-x-ix-vi}{296}
+\indexentry{context!meek|ind-x-ix-vii}{296}
+\indexentry{context!soft|ind-x-ix-viii}{297}
+\indexentry{assignment|ind-x-ix-ix}{297}
+\indexentry{clause!conditional|ind-x-ix-x}{297}
+\indexentry{a68toc!balancing|ind-x-ix-xi}{297}
+\indexentry{declaration!mode|ind-x-x-i}{299}
+\indexentry{mode!well-formed|ind-x-x-ii}{299}
+\indexentry{elaboration|ind-x-x-iii}{299}
+\indexentry{mode!shielding|ind-x-x-iv}{299}
+\indexentry{mode!recursion|ind-x-x-v}{299}
+\indexentry{UNION@\texttt  {UNION}|ind-x-x-vi}{300}
+\indexentry{recursion!mutual|ind-x-x-vii}{300}
+\indexentry{mode!indicant|ind-x-x-viii}{301}
+\indexentry{yang|ind-x-x-ix}{301}
+\indexentry{yin|ind-x-x-x}{301}
+\indexentry{UNION@\texttt  {UNION}|ind-x-x-xi}{302}
+\indexentry{a68toc!mode declaration|ind-x-x-xii}{302}
+\indexentry{declaration!stub|ind-x-x-xiii}{302}
+\indexentry{descriptor|ind-x-xi-i}{304}
+\indexentry{orthogonality|ind-x-xii-i}{305}
+\indexentry{primitive concepts|ind-x-xii-ii}{305}
+\indexentry{value|ind-x-xii-iii}{305}
+\indexentry{mode|ind-x-xii-iv}{305}
+\indexentry{context|ind-x-xii-v}{305}
+\indexentry{coercion|ind-x-xii-vi}{305}
+\indexentry{phrase|ind-x-xii-vii}{305}
+\indexentry{flexibility|ind-x-xii-viii}{305}
+\indexentry{value!plain|ind-xi-i-i}{309}
+\indexentry{memory|ind-xi-i-ii}{309}
+\indexentry{bytes|ind-xi-i-iii}{309}
+\indexentry{words|ind-xi-i-iv}{309}
+\indexentry{radix!arithmetic|ind-xi-i-v}{309}
+\indexentry{radix|ind-xi-i-vi}{310}
+\indexentry{decimal|ind-xi-i-vii}{310}
+\indexentry{hexadecimal|ind-xi-i-viii}{311}
+\indexentry{binary|ind-xi-i-ix}{311}
+\indexentry{hexadecimal!arithmetic|ind-xi-i-x}{311}
+\indexentry{hexadecimal!notation|ind-xi-i-xi}{312}
+\indexentry{radix!conversion|ind-xi-i-xii}{313}
+\indexentry{itostr@\texttt  {itostr}|ind-xi-i-xiii}{313}
+\indexentry{BITS@\texttt  {BITS}|ind-xi-ii-i}{315}
+\indexentry{environment enquiry|ind-xi-ii-ii}{315}
+\indexentry{bits width@\texttt  {bits width}|ind-xi-ii-iii}{315}
+\indexentry{a68toc!bits width@\texttt  {bits width}|ind-xi-ii-iv}{315}
+\indexentry{denotation!BITS@\texttt  {BITS}|ind-xi-ii-v}{315}
+\indexentry{radix|ind-xi-ii-vi}{315}
+\indexentry{machine word|ind-xi-ii-vii}{315}
+\indexentry{BIN@\texttt  {BIN}|ind-xi-ii-viii}{316}
+\indexentry{ABS@\texttt  {ABS}|ind-xi-ii-ix}{316}
+\indexentry{NOT@\texttt  {NOT}|ind-xi-ii-x}{316}
+\indexentry{bit-wise operator|ind-xi-ii-xi}{316}
+\indexentry{AND@\texttt  {AND}|ind-xi-ii-xii}{316}
+\indexentry{OR@\texttt  {OR}|ind-xi-ii-xiii}{316}
+\indexentry{BITS@\texttt  {BITS}|ind-xi-ii-xiv}{317}
+\indexentry{REPR@\texttt  {REPR}|ind-xi-ii-xv}{317}
+\indexentry{ABS@\texttt  {ABS}|ind-xi-ii-xvi}{317}
+\indexentry{ELEM@\texttt  {ELEM}|ind-xi-ii-xvii}{317}
+\indexentry{binary|ind-xi-ii-xviii}{318}
+\indexentry{a68toc|ind-xi-ii-xix}{318}
+\indexentry{shift operators|ind-xi-ii-xx}{319}
+\indexentry{SHL@\texttt  {SHL}|ind-xi-ii-xxi}{319}
+\indexentry{SHR@\texttt  {SHR}|ind-xi-ii-xxii}{319}
+\indexentry{nibble|ind-xi-ii-xxiii}{319}
+\indexentry{slice!overlapping|ind-xi-iii-i}{321}
+\indexentry{trimming|ind-xi-iii-ii}{321}
+\indexentry{completer|ind-xi-iv-i}{324}
+\indexentry{clause!serial|ind-xi-iv-ii}{324}
+\indexentry{;@\texttt  {;}|ind-xi-iv-iii}{324}
+\indexentry{EXIT@\texttt  {EXIT}|ind-xi-iv-iv}{324}
+\indexentry{label|ind-xi-iv-v}{324}
+\indexentry{range|ind-xi-iv-vi}{324}
+\indexentry{clause!GOTO@\texttt  {GOTO}|ind-xi-iv-vii}{325}
+\indexentry{REF@\texttt  {REF}|ind-xi-v-i}{327}
+\indexentry{name|ind-xi-v-ii}{327}
+\indexentry{REF REF@\texttt  {REF REF}|ind-xi-v-iii}{328}
+\indexentry{assignment|ind-xi-v-iv}{328}
+\indexentry{coercion!dereferencing|ind-xi-v-v}{328}
+\indexentry{context!soft|ind-xi-v-vi}{329}
+\indexentry{instance|ind-xi-v-vii}{330}
+\indexentry{coercion!dereferencing|ind-xi-v-viii}{330}
+\indexentry{anonymous name|ind-xi-v-ix}{330}
+\indexentry{flexible name|ind-xi-v-x}{330}
+\indexentry{identity!relation|ind-xi-vi-i}{331}
+\indexentry{:=:@\texttt  {:=:}|ind-xi-vi-ii}{331}
+\indexentry{IS@\texttt  {IS}|ind-xi-vi-iii}{331}
+\indexentry{:/=:@\texttt  {:/=:}|ind-xi-vi-iv}{331}
+\indexentry{ISNT@\texttt  {ISNT}|ind-xi-vi-v}{331}
+\indexentry{cast|ind-xi-vi-vi}{332}
+\indexentry{balancing|ind-xi-vi-vii}{332}
+\indexentry{context!soft|ind-xi-vi-viii}{332}
+\indexentry{context!strong|ind-xi-vi-ix}{332}
+\indexentry{identity!relation|ind-xi-vi-x}{332}
+\indexentry{quaternary|ind-xi-vi-xi}{333}
+\indexentry{parentheses|ind-xi-vi-xii}{333}
+\indexentry{NIL@\texttt  {NIL}|ind-xi-vii-i}{334}
+\indexentry{a68toc!NIL@\texttt  {NIL}|ind-xi-vii-ii}{335}
+\indexentry{balancing|ind-xi-vii-iii}{335}
+\indexentry{identity!relation|ind-xi-vii-iv}{335}
+\indexentry{clause!case|ind-xi-vii-v}{336}
+\indexentry{queues|ind-xi-viii-i}{338}
+\indexentry{FAN@\texttt  {FAN}|ind-xi-viii-ii}{338}
+\indexentry{name!flexible|ind-xi-viii-iii}{338}
+\indexentry{structure!recursive|ind-xi-viii-iv}{339}
+\indexentry{QUEUE@\texttt  {QUEUE}|ind-xi-viii-v}{339}
+\indexentry{name|ind-xi-viii-vi}{340}
+\indexentry{NIL@\texttt  {NIL}|ind-xi-viii-vii}{340}
+\indexentry{generator|ind-xi-viii-viii}{340}
+\indexentry{NIL@\texttt  {NIL}|ind-xi-viii-ix}{341}
+\indexentry{field selection|ind-xi-viii-x}{341}
+\indexentry{selection|ind-xi-viii-xi}{341}
+\indexentry{context!weak|ind-xi-viii-xii}{341}
+\indexentry{coercion!weakly-dereferencing|ind-xi-viii-xiii}{341}
+\indexentry{selection|ind-xi-viii-xiv}{343}
+\indexentry{linked-list|ind-xi-viii-xv}{343}
+\indexentry{identity!relation|ind-xi-ix-i}{344}
+\indexentry{coercion!dereferencing|ind-xi-ix-ii}{344}
+\indexentry{name!anonymous|ind-xi-ix-iii}{344}
+\indexentry{optimisation|ind-xi-ix-iv}{346}
+\indexentry{queue procedures|ind-xi-x-i}{346}
+\indexentry{recursion|ind-xi-x-ii}{347}
+\indexentry{linked-list|ind-xi-x-iii}{347}
+\indexentry{linked-list|ind-xi-x-iv}{349}
+\indexentry{queues|ind-xi-x-v}{349}
+\indexentry{structure!recursive|ind-xi-xi-i}{350}
+\indexentry{linked-list|ind-xi-xi-ii}{350}
+\indexentry{procedure!recursive|ind-xi-xi-iii}{350}
+\indexentry{tree|ind-xi-xi-iv}{350}
+\indexentry{B-trees|ind-xi-xi-v}{350}
+\indexentry{balanced trees|ind-xi-xi-vi}{350}
+\indexentry{nodes|ind-xi-xi-vii}{350}
+\indexentry{root|ind-xi-xi-viii}{351}
+\indexentry{tree!balanced|ind-xi-xi-ix}{351}
+\indexentry{recursion|ind-xi-xi-x}{353}
+\indexentry{garbage collector|ind-xi-xi-xi}{353}
+\indexentry{memory control|ind-xi-xi-xii}{354}
+\indexentry{programming|ind-xii--i}{356}
+\indexentry{program!maintenance|ind-xii--ii}{356}
+\indexentry{bugs|ind-xii--iii}{357}
+\indexentry{Algol68toC|ind-xii--iv}{357}
+\indexentry{problem solving|ind-xii-i-i}{357}
+\indexentry{Polya@P\'olya, George|ind-xii-i-ii}{357}
+\indexentry{problem analysis|ind-xii-i-iii}{358}
+\indexentry{Heuristics|ind-xii-i-iv}{358}
+\indexentry{learning by doing|ind-xii-i-v}{358}
+\indexentry{SSADM|ind-xii-i-vi}{358}
+\indexentry{program!design|ind-xii-i-vii}{358}
+\indexentry{data!knowledge|ind-xii-i-viii}{358}
+\indexentry{data!structure|ind-xii-i-ix}{358}
+\indexentry{mode declarations|ind-xii-i-x}{358}
+\indexentry{procedure|ind-xii-i-xi}{358}
+\indexentry{Jackson methodology|ind-xii-i-xii}{359}
+\indexentry{top-down analysis|ind-xii-i-xiii}{359}
+\indexentry{record|ind-xii-i-xiv}{360}
+\indexentry{program!layout|ind-xii-i-xv}{360}
+\indexentry{code!indentation|ind-xii-i-xvi}{360}
+\indexentry{blank lines|ind-xii-i-xvii}{361}
+\indexentry{declaration!grouping|ind-xii-i-xviii}{362}
+\indexentry{global names|ind-xii-i-xix}{362}
+\indexentry{name!global|ind-xii-i-xx}{362}
+\indexentry{procedure|ind-xii-i-xxi}{362}
+\indexentry{logic level|ind-xii-i-xxii}{363}
+\indexentry{procedure!interface|ind-xii-i-xxiii}{363}
+\indexentry{monetary values|ind-xii-i-xxiv}{363}
+\indexentry{mantissa|ind-xii-i-xxv}{364}
+\indexentry{exponent|ind-xii-i-xxvi}{364}
+\indexentry{binary|ind-xii-i-xxvii}{364}
+\indexentry{standard prelude|ind-xii-i-xxviii}{364}
+\indexentry{environment enquiry|ind-xii-i-xxix}{364}
+\indexentry{real precision@\texttt  {real precision}|ind-xii-i-xxx}{364}
+\indexentry{max exp real@\texttt  {max exp real}|ind-xii-i-xxxi}{364}
+\indexentry{real width@\texttt  {real width}|ind-xii-i-xxxii}{364}
+\indexentry{exp width@\texttt  {exp width}|ind-xii-i-xxxiii}{364}
+\indexentry{max real@\texttt  {max real}|ind-xii-i-xxxiv}{364}
+\indexentry{min real@\texttt  {min real}|ind-xii-i-xxxv}{364}
+\indexentry{floating-point standard|ind-xii-i-xxxvi}{364}
+\indexentry{INT@\texttt  {INT}|ind-xii-i-xxxvii}{365}
+\indexentry{REAL@\texttt  {REAL}|ind-xii-i-xxxviii}{365}
+\indexentry{COMPL@\texttt  {COMPL}|ind-xii-i-xxxix}{365}
+\indexentry{BITS@\texttt  {BITS}|ind-xii-i-xl}{365}
+\indexentry{SHORT@\texttt  {SHORT}|ind-xii-i-xli}{365}
+\indexentry{LONG@\texttt  {LONG}|ind-xii-i-xlii}{365}
+\indexentry{LENG@\texttt  {LENG}|ind-xii-i-xliii}{365}
+\indexentry{SHORTEN@\texttt  {SHORTEN}|ind-xii-i-xliv}{365}
+\indexentry{standard prelude|ind-xii-i-xlv}{366}
+\indexentry{environment enquiry|ind-xii-i-xlvi}{366}
+\indexentry{int lengths@\texttt  {int lengths}|ind-xii-i-xlvii}{366}
+\indexentry{int shorths@\texttt  {int shorths}|ind-xii-i-xlviii}{366}
+\indexentry{real lengths@\texttt  {real lengths}|ind-xii-i-xlix}{366}
+\indexentry{real shorths@\texttt  {real shorths}|ind-xii-i-l}{366}
+\indexentry{bits lengths@\texttt  {bits lengths}|ind-xii-i-li}{366}
+\indexentry{bits shorths@\texttt  {bits shorths}|ind-xii-i-lii}{366}
+\indexentry{long max int@\texttt  {long max int}|ind-xii-i-liii}{366}
+\indexentry{short max int@\texttt  {short max int}|ind-xii-i-liv}{366}
+\indexentry{a68toc!int lengths@\texttt  {int lengths}|ind-xii-i-lv}{366}
+\indexentry{a68toc!int shorths@\texttt  {int shorths}|ind-xii-i-lvi}{366}
+\indexentry{optimisation!code|ind-xii-i-lvii}{367}
+\indexentry{testing|ind-xii-i-lviii}{368}
+\indexentry{debugging|ind-xii-i-lix}{368}
+\indexentry{step-wise testing|ind-xii-i-lx}{368}
+\indexentry{testing!data|ind-xii-i-lxi}{368}
+\indexentry{boundary conditions|ind-xii-i-lxii}{369}
+\indexentry{error!run-time|ind-xii-i-lxiii}{369}
+\indexentry{monitors|ind-xii-i-lxiv}{370}
+\indexentry{debug@\texttt  {debug}|ind-xii-i-lxv}{370}
+\indexentry{source-level debugger|ind-xii-i-lxvi}{370}
+\indexentry{a68toc!debugger|ind-xii-i-lxvii}{370}
+\indexentry{debugging|ind-xii-i-lxviii}{370}
+\indexentry{dry-running|ind-xii-i-lxix}{370}
+\indexentry{debugging!ploys|ind-xii-i-lxx}{371}
+\indexentry{error!compilation|ind-xii-i-lxxi}{371}
+\indexentry{a68toc!mm@\texttt  {mm}|ind-xii-i-lxxii}{371}
+\indexentry{UNION@\texttt  {UNION}|ind-xii-i-lxxiii}{373}
+\indexentry{row!display|ind-xii-i-lxxiv}{373}
+\indexentry{structure!display|ind-xii-i-lxxv}{373}
+\indexentry{overflow!arithmetic|ind-xii-i-lxxvi}{374}
+\indexentry{a68toc!test program|ind-xii-i-lxxvii}{374}
+\indexentry{documentation|ind-xii-i-lxxviii}{374}
+\indexentry{program!documentation|ind-xii-i-lxxix}{374}
+\indexentry{canonical input mode|ind-xii-ii-i}{376}
+\indexentry{utility|ind-xii-iii-i}{378}
+\indexentry{argument|ind-xii-iii-ii}{378}
+\indexentry{a68toc!declarations|ind-xii-iii-iii}{379}
+\indexentry{main processing logic|ind-xii-iii-iv}{380}
+\indexentry{SKIP@\texttt  {SKIP}|ind-xii-iii-v}{380}
+\indexentry{stop@\texttt  {stop}|ind-xii-iii-vi}{380}
+\indexentry{mode declarations|ind-xii-iii-vii}{381}
+\indexentry{dry-running|ind-xii-iii-viii}{383}
+\indexentry{tab ch@\texttt  {tab ch}|ind-xii-iii-ix}{384}
+\indexentry{a68toc!ALIEN@\texttt  {ALIEN}|ind-xii-iii-x}{384}
+\indexentry{a68toc!FSTAT@\texttt  {FSTAT}|ind-xii-iii-xi}{386}
+\indexentry{a68toc!VECTOR@\texttt  {VECTOR}|ind-xii-iii-xii}{386}
+\indexentry{C macro|ind-xii-iii-xiii}{387}
+\indexentry{generator!anonymous|ind-xii-iii-xiv}{388}
+\indexentry{a68toc!standard prelude|ind-xiii--i}{390}
+\indexentry{ALIEN@\texttt  {ALIEN}|ind-xiii--ii}{391}
+\indexentry{Revised Report|ind-xiii--iii}{392}
+\indexentry{VOID@\texttt  {VOID}|ind-xiii-i-i}{392}
+\indexentry{BOOL@\texttt  {BOOL}|ind-xiii-i-ii}{392}
+\indexentry{TRUE@\texttt  {TRUE}|ind-xiii-i-iii}{392}
+\indexentry{FALSE@\texttt  {FALSE}|ind-xiii-i-iv}{392}
+\indexentry{LONG INT@\texttt  {LONG INT}|ind-xiii-i-v}{392}
+\indexentry{INT@\texttt  {INT}|ind-xiii-i-vi}{393}
+\indexentry{SHORT INT@\texttt  {SHORT INT}|ind-xiii-i-vii}{393}
+\indexentry{SHORT SHORT INT@\texttt  {SHORT SHORT INT}|ind-xiii-i-viii}{393}
+\indexentry{REAL@\texttt  {REAL}|ind-xiii-i-ix}{393}
+\indexentry{SHORT REAL@\texttt  {SHORT REAL}|ind-xiii-i-x}{393}
+\indexentry{COMPL@\texttt  {COMPL}|ind-xiii-i-xi}{393}
+\indexentry{SHORT COMPL@\texttt  {SHORT COMPL}|ind-xiii-i-xii}{393}
+\indexentry{CHAR@\texttt  {CHAR}|ind-xiii-i-xiii}{393}
+\indexentry{LONG BITS@\texttt  {LONG BITS}|ind-xiii-i-xiv}{394}
+\indexentry{BITS@\texttt  {BITS}|ind-xiii-i-xv}{394}
+\indexentry{SHORT BITS@\texttt  {SHORT BITS}|ind-xiii-i-xvi}{394}
+\indexentry{SHORT SHORT BITS@\texttt  {SHORT SHORT BITS}|ind-xiii-i-xvii}{394}
+\indexentry{BYTES@\texttt  {BYTES}|ind-xiii-i-xviii}{394}
+\indexentry{STRING@\texttt  {STRING}|ind-xiii-i-xix}{394}
+\indexentry{a68toc!precisions|ind-xiii-ii-i}{395}
+\indexentry{int lengths@\texttt  {int lengths}|ind-xiii-ii-ii}{395}
+\indexentry{int shorths@\texttt  {int shorths}|ind-xiii-ii-iii}{395}
+\indexentry{real lengths@\texttt  {real lengths}|ind-xiii-ii-iv}{395}
+\indexentry{real shorths@\texttt  {real shorths}|ind-xiii-ii-v}{395}
+\indexentry{bits lengths@\texttt  {bits lengths}|ind-xiii-ii-vi}{395}
+\indexentry{bits shorths@\texttt  {bits shorths}|ind-xiii-ii-vii}{395}
+\indexentry{bytes lengths@\texttt  {bytes lengths}|ind-xiii-ii-viii}{395}
+\indexentry{a68toc!BYTES@\texttt  {BYTES}|ind-xiii-ii-ix}{395}
+\indexentry{bytes shorths@\texttt  {bytes shorths}|ind-xiii-ii-x}{396}
+\indexentry{short short max int@\texttt  {short short max int}|ind-xiii-ii-xi}{396}
+\indexentry{short max int@\texttt  {short max int}|ind-xiii-ii-xii}{396}
+\indexentry{max int@\texttt  {max int}|ind-xiii-ii-xiii}{396}
+\indexentry{long max int@\texttt  {long max int}|ind-xiii-ii-xiv}{396}
+\indexentry{short min real@\texttt  {short min real}|ind-xiii-ii-xv}{396}
+\indexentry{short max real@\texttt  {short max real}|ind-xiii-ii-xvi}{396}
+\indexentry{short small real@\texttt  {short small real}|ind-xiii-ii-xvii}{396}
+\indexentry{min real@\texttt  {min real}|ind-xiii-ii-xviii}{396}
+\indexentry{max real@\texttt  {max real}|ind-xiii-ii-xix}{397}
+\indexentry{small real@\texttt  {small real}|ind-xiii-ii-xx}{397}
+\indexentry{bytes per bits@\texttt  {bytes per bits}|ind-xiii-ii-xxi}{397}
+\indexentry{short short int width@\texttt  {short short int width}|ind-xiii-ii-xxii}{397}
+\indexentry{short int width@\texttt  {short int width}|ind-xiii-ii-xxiii}{397}
+\indexentry{int width@\texttt  {int width}|ind-xiii-ii-xxiv}{397}
+\indexentry{long int width@\texttt  {long int width}|ind-xiii-ii-xxv}{397}
+\indexentry{short short bits width@\texttt  {short short bits width}|ind-xiii-ii-xxvi}{397}
+\indexentry{short bits width@\texttt  {short bits width}|ind-xiii-ii-xxvii}{397}
+\indexentry{bits width@\texttt  {bits width}|ind-xiii-ii-xxviii}{398}
+\indexentry{long bits width@\texttt  {long bits width}|ind-xiii-ii-xxix}{398}
+\indexentry{bytes width@\texttt  {bytes width}|ind-xiii-ii-xxx}{398}
+\indexentry{short real precision@\texttt  {short real precision}|ind-xiii-ii-xxxi}{398}
+\indexentry{short real width@\texttt  {short real width}|ind-xiii-ii-xxxii}{398}
+\indexentry{short min exp@\texttt  {short min exp}|ind-xiii-ii-xxxiii}{398}
+\indexentry{short max exp@\texttt  {short max exp}|ind-xiii-ii-xxxiv}{398}
+\indexentry{short exp width@\texttt  {short exp width}|ind-xiii-ii-xxxv}{398}
+\indexentry{real precision@\texttt  {real precision}|ind-xiii-ii-xxxvi}{398}
+\indexentry{real width@\texttt  {real width}|ind-xiii-ii-xxxvii}{398}
+\indexentry{min exp@\texttt  {min exp}|ind-xiii-ii-xxxviii}{399}
+\indexentry{max exp@\texttt  {max exp}|ind-xiii-ii-xxxix}{399}
+\indexentry{exp width@\texttt  {exp width}|ind-xiii-ii-xl}{399}
+\indexentry{put bin@\texttt  {put bin}|ind-xiii-ii-xli}{399}
+\indexentry{get bin@\texttt  {get bin}|ind-xiii-ii-xlii}{399}
+\indexentry{long bits bin bytes@\texttt  {long bits bin bytes}|ind-xiii-ii-xliii}{399}
+\indexentry{bits bin bytes@\texttt  {bits bin bytes}|ind-xiii-ii-xliv}{399}
+\indexentry{short bits bin bytes@\texttt  {short bits bin bytes}|ind-xiii-ii-xlv}{399}
+\indexentry{short short bits bin bytes@\texttt  {short short bits bin bytes}|ind-xiii-ii-xlvi}{399}
+\indexentry{bool bin bytes@\texttt  {bool bin bytes}|ind-xiii-ii-xlvii}{399}
+\indexentry{long int bin bytes@\texttt  {long int bin bytes}|ind-xiii-ii-xlviii}{399}
+\indexentry{int bin bytes@\texttt  {int bin bytes}|ind-xiii-ii-xlix}{399}
+\indexentry{short int bin bytes@\texttt  {short int bin bytes}|ind-xiii-ii-l}{399}
+\indexentry{short short int bin bytes@\texttt  {short short int bin bytes}|ind-xiii-ii-li}{399}
+\indexentry{real bin bytes@\texttt  {real bin bytes}|ind-xiii-ii-lii}{399}
+\indexentry{real bin bytes@\texttt  {real bin bytes}|ind-xiii-ii-liii}{399}
+\indexentry{compl bin bytes@\texttt  {compl bin bytes}|ind-xiii-ii-liv}{400}
+\indexentry{short compl bin bytes@\texttt  {short compl bin bytes}|ind-xiii-ii-lv}{400}
+\indexentry{char bin bytes@\texttt  {char bin bytes}|ind-xiii-ii-lvi}{400}
+\indexentry{infinity@\texttt  {infinity}|ind-xiii-ii-lvii}{400}
+\indexentry{short pi@\texttt  {short pi}|ind-xiii-ii-lviii}{400}
+\indexentry{pi@\texttt  {pi}|ind-xiii-ii-lix}{400}
+\indexentry{log2@\texttt  {log2}|ind-xiii-ii-lx}{400}
+\indexentry{a68toc!charset|ind-xiii-ii-lxi}{400}
+\indexentry{max abs char@\texttt  {max abs char}|ind-xiii-ii-lxii}{401}
+\indexentry{null character@\texttt  {null character}|ind-xiii-ii-lxiii}{401}
+\indexentry{nul ch@\texttt  {nul ch}|ind-xiii-ii-lxiv}{401}
+\indexentry{blank@\texttt  {blank}|ind-xiii-ii-lxv}{401}
+\indexentry{error char@\texttt  {error char}|ind-xiii-ii-lxvi}{401}
+\indexentry{flip@\texttt  {flip}|ind-xiii-ii-lxvii}{401}
+\indexentry{flop@\texttt  {flop}|ind-xiii-ii-lxviii}{401}
+\indexentry{cr@\texttt  {cr}|ind-xiii-ii-lxix}{401}
+\indexentry{lf@\texttt  {lf}|ind-xiii-ii-lxx}{402}
+\indexentry{ff@\texttt  {ff}|ind-xiii-ii-lxxi}{402}
+\indexentry{tab ch@\texttt  {tab ch}|ind-xiii-ii-lxxii}{402}
+\indexentry{esc@\texttt  {esc}|ind-xiii-ii-lxxiii}{402}
+\indexentry{eof char@\texttt  {eof char}|ind-xiii-ii-lxxiv}{402}
+\indexentry{PRIO@\texttt  {PRIO}|ind-xiii-iii-i}{404}
+\indexentry{PLUSAB@\texttt  {PLUSAB}|ind-xiii-iii-ii}{404}
+\indexentry{MINUSAB@\texttt  {MINUSAB}|ind-xiii-iii-iii}{404}
+\indexentry{TIMESAB@\texttt  {TIMESAB}|ind-xiii-iii-iv}{404}
+\indexentry{DIVAB@\texttt  {DIVAB}|ind-xiii-iii-v}{404}
+\indexentry{OVERAB@\texttt  {OVERAB}|ind-xiii-iii-vi}{404}
+\indexentry{MODAB@\texttt  {MODAB}|ind-xiii-iii-vii}{404}
+\indexentry{PLUSTO@\texttt  {PLUSTO}|ind-xiii-iii-viii}{404}
+\indexentry{OR@\texttt  {OR}|ind-xiii-iii-ix}{404}
+\indexentry{AND@\texttt  {AND}|ind-xiii-iii-x}{404}
+\indexentry{=@\texttt  {=}|ind-xiii-iii-xi}{404}
+\indexentry{/=@\texttt  {/=}|ind-xiii-iii-xii}{404}
+\indexentry{<@\texttt  {<}|ind-xiii-iii-xiii}{404}
+\indexentry{<=@\texttt  {<=}|ind-xiii-iii-xiv}{404}
+\indexentry{>=@\texttt  {>=}|ind-xiii-iii-xv}{404}
+\indexentry{>@\texttt  {>}|ind-xiii-iii-xvi}{404}
+\indexentry{-@\texttt  {-}|ind-xiii-iii-xvii}{404}
+\indexentry{+@\texttt  {+}|ind-xiii-iii-xviii}{404}
+\indexentry{*@\texttt  {*}|ind-xiii-iii-xix}{404}
+\indexentry{/@\texttt  {/}|ind-xiii-iii-xx}{404}
+\indexentry{OVER@\texttt  {OVER}|ind-xiii-iii-xxi}{404}
+\indexentry{MOD@\texttt  {MOD}|ind-xiii-iii-xxii}{404}
+\indexentry{ELEM@\texttt  {ELEM}|ind-xiii-iii-xxiii}{404}
+\indexentry{**@\texttt  {**}|ind-xiii-iii-xxiv}{404}
+\indexentry{SHL@\texttt  {SHL}|ind-xiii-iii-xxv}{404}
+\indexentry{SHR@\texttt  {SHR}|ind-xiii-iii-xxvi}{404}
+\indexentry{LWB@\texttt  {LWB}|ind-xiii-iii-xxvii}{404}
+\indexentry{UPB@\texttt  {UPB}|ind-xiii-iii-xxviii}{404}
+\indexentry{I@\texttt  {I}|ind-xiii-iii-xxix}{404}
+\indexentry{MIN@\texttt  {MIN}|ind-xiii-iii-xxx}{404}
+\indexentry{MAX@\texttt  {MAX}|ind-xiii-iii-xxxi}{404}
+\indexentry{LWB@\texttt  {LWB}!monadic|ind-xiii-iii-xxxii}{405}
+\indexentry{UPB@\texttt  {UPB}!monadic|ind-xiii-iii-xxxiii}{405}
+\indexentry{LWB@\texttt  {LWB}!dyadic|ind-xiii-iii-xxxiv}{405}
+\indexentry{UPB@\texttt  {UPB}!dyadic|ind-xiii-iii-xxxv}{405}
+\indexentry{OR@\texttt  {OR}|ind-xiii-iii-xxxvi}{405}
+\indexentry{AND@\texttt  {AND}|ind-xiii-iii-xxxvii}{405}
+\indexentry{NOT@\texttt  {NOT}|ind-xiii-iii-xxxviii}{405}
+\indexentry{=@\texttt  {=}|ind-xiii-iii-xxxix}{405}
+\indexentry{/=@\texttt  {/=}|ind-xiii-iii-xl}{405}
+\indexentry{ABS@\texttt  {ABS}|ind-xiii-iii-xli}{406}
+\indexentry{+@\texttt  {+}!monadic|ind-xiii-iii-xlii}{406}
+\indexentry{-@\texttt  {-}!monadic|ind-xiii-iii-xliii}{406}
+\indexentry{SIGN@\texttt  {SIGN}|ind-xiii-iii-xliv}{406}
+\indexentry{ODD@\texttt  {ODD}|ind-xiii-iii-xlv}{406}
+\indexentry{LENG@\texttt  {LENG}|ind-xiii-iii-xlvi}{407}
+\indexentry{SHORTEN@\texttt  {SHORTEN}|ind-xiii-iii-xlvii}{407}
+\indexentry{+@\texttt  {+}!dyadic|ind-xiii-iii-xlviii}{407}
+\indexentry{-@\texttt  {-}!dyadic|ind-xiii-iii-xlix}{407}
+\indexentry{*@\texttt  {*}|ind-xiii-iii-l}{407}
+\indexentry{/@\texttt  {/}|ind-xiii-iii-li}{408}
+\indexentry{a68toc!division by zero|ind-xiii-iii-lii}{408}
+\indexentry{OVER@\texttt  {OVER}|ind-xiii-iii-liii}{408}
+\indexentry{**@\texttt  {**}|ind-xiii-iii-liv}{408}
+\indexentry{MOD@\texttt  {MOD}|ind-xiii-iii-lv}{408}
+\indexentry{+*@\texttt  {+*}|ind-xiii-iii-lvi}{408}
+\indexentry{I@\texttt  {I}|ind-xiii-iii-lvii}{408}
+\indexentry{<@\texttt  {<}|ind-xiii-iii-lviii}{408}
+\indexentry{<=@\texttt  {<=}|ind-xiii-iii-lix}{408}
+\indexentry{>=@\texttt  {>=}|ind-xiii-iii-lx}{409}
+\indexentry{>@\texttt  {>}|ind-xiii-iii-lxi}{409}
+\indexentry{=@\texttt  {=}|ind-xiii-iii-lxii}{409}
+\indexentry{/=@\texttt  {/=}|ind-xiii-iii-lxiii}{409}
+\indexentry{+@\texttt  {+}!monadic|ind-xiii-iii-lxiv}{409}
+\indexentry{-@\texttt  {-}!monadic|ind-xiii-iii-lxv}{409}
+\indexentry{ABS@\texttt  {ABS}|ind-xiii-iii-lxvi}{409}
+\indexentry{SIGN@\texttt  {SIGN}|ind-xiii-iii-lxvii}{409}
+\indexentry{ROUND@\texttt  {ROUND}|ind-xiii-iii-lxviii}{410}
+\indexentry{ENTIER@\texttt  {ENTIER}|ind-xiii-iii-lxix}{410}
+\indexentry{LENG@\texttt  {LENG}|ind-xiii-iii-lxx}{411}
+\indexentry{SHORTEN@\texttt  {SHORTEN}|ind-xiii-iii-lxxi}{411}
+\indexentry{+@\texttt  {+}!dyadic|ind-xiii-iii-lxxii}{411}
+\indexentry{-@\texttt  {-}!dyadic|ind-xiii-iii-lxxiii}{411}
+\indexentry{*@\texttt  {*}|ind-xiii-iii-lxxiv}{411}
+\indexentry{/@\texttt  {/}|ind-xiii-iii-lxxv}{412}
+\indexentry{+*@\texttt  {+*}|ind-xiii-iii-lxxvi}{412}
+\indexentry{I@\texttt  {I}|ind-xiii-iii-lxxvii}{412}
+\indexentry{<@\texttt  {<}|ind-xiii-iii-lxxviii}{412}
+\indexentry{<=@\texttt  {<=}|ind-xiii-iii-lxxix}{412}
+\indexentry{>=@\texttt  {>=}|ind-xiii-iii-lxxx}{412}
+\indexentry{>@\texttt  {>}|ind-xiii-iii-lxxxi}{412}
+\indexentry{=@\texttt  {=}|ind-xiii-iii-lxxxii}{412}
+\indexentry{/=@\texttt  {/=}|ind-xiii-iii-lxxxiii}{412}
+\indexentry{RE@\texttt  {RE}|ind-xiii-iii-lxxxiv}{413}
+\indexentry{IM@\texttt  {IM}|ind-xiii-iii-lxxxv}{413}
+\indexentry{ABS@\texttt  {ABS}|ind-xiii-iii-lxxxvi}{413}
+\indexentry{ARG@\texttt  {ARG}|ind-xiii-iii-lxxxvii}{413}
+\indexentry{CONJ@\texttt  {CONJ}|ind-xiii-iii-lxxxviii}{413}
+\indexentry{+@\texttt  {+}!monadic|ind-xiii-iii-lxxxix}{413}
+\indexentry{-@\texttt  {-}!monadic|ind-xiii-iii-xc}{413}
+\indexentry{LENG@\texttt  {LENG}|ind-xiii-iii-xci}{413}
+\indexentry{a68toc!LENG@\texttt  {LENG}|ind-xiii-iii-xcii}{414}
+\indexentry{SHORTEN@\texttt  {SHORTEN}|ind-xiii-iii-xciii}{414}
+\indexentry{a68toc!SHORTEN@\texttt  {SHORTEN}|ind-xiii-iii-xciv}{414}
+\indexentry{+@\texttt  {+}!dyadic|ind-xiii-iii-xcv}{414}
+\indexentry{-@\texttt  {-}!dyadic|ind-xiii-iii-xcvi}{415}
+\indexentry{*@\texttt  {*}|ind-xiii-iii-xcvii}{415}
+\indexentry{/@\texttt  {/}|ind-xiii-iii-xcviii}{415}
+\indexentry{=@\texttt  {=}|ind-xiii-iii-xcix}{415}
+\indexentry{/=@\texttt  {/=}|ind-xiii-iii-c}{415}
+\indexentry{+@\texttt  {+}!dyadic|ind-xiii-iii-ci}{415}
+\indexentry{<@\texttt  {<}|ind-xiii-iii-cii}{415}
+\indexentry{<=@\texttt  {<=}|ind-xiii-iii-ciii}{415}
+\indexentry{>=@\texttt  {>=}|ind-xiii-iii-civ}{415}
+\indexentry{>@\texttt  {>}|ind-xiii-iii-cv}{415}
+\indexentry{**@\texttt  {**}|ind-xiii-iii-cvi}{416}
+\indexentry{+*@\texttt  {+*}|ind-xiii-iii-cvii}{416}
+\indexentry{BIN@\texttt  {BIN}|ind-xiii-iii-cviii}{417}
+\indexentry{ABS@\texttt  {ABS}|ind-xiii-iii-cix}{417}
+\indexentry{NOT@\texttt  {NOT}|ind-xiii-iii-cx}{417}
+\indexentry{LENG@\texttt  {LENG}|ind-xiii-iii-cxi}{417}
+\indexentry{SHORTEN@\texttt  {SHORTEN}|ind-xiii-iii-cxii}{417}
+\indexentry{AND@\texttt  {AND}|ind-xiii-iii-cxiii}{417}
+\indexentry{OR@\texttt  {OR}|ind-xiii-iii-cxiv}{417}
+\indexentry{SHL@\texttt  {SHL}|ind-xiii-iii-cxv}{418}
+\indexentry{SHR@\texttt  {SHR}|ind-xiii-iii-cxvi}{418}
+\indexentry{ELEM@\texttt  {ELEM}|ind-xiii-iii-cxvii}{418}
+\indexentry{=@\texttt  {=}|ind-xiii-iii-cxviii}{418}
+\indexentry{/=@\texttt  {/=}|ind-xiii-iii-cxix}{418}
+\indexentry{<=@\texttt  {<=}|ind-xiii-iii-cxx}{418}
+\indexentry{>=@\texttt  {>=}|ind-xiii-iii-cxxi}{418}
+\indexentry{ABS@\texttt  {ABS}!CHAR@\texttt  {CHAR}|ind-xiii-iii-cxxii}{418}
+\indexentry{REPR@\texttt  {REPR}|ind-xiii-iii-cxxiii}{419}
+\indexentry{+@\texttt  {+}!dyadic!CHAR@\texttt  {CHAR}|ind-xiii-iii-cxxiv}{419}
+\indexentry{=@\texttt  {=}!CHAR@\texttt  {CHAR}|ind-xiii-iii-cxxv}{419}
+\indexentry{/=@\texttt  {/=}!CHAR@\texttt  {CHAR}|ind-xiii-iii-cxxvi}{419}
+\indexentry{<@\texttt  {<}!CHAR@\texttt  {CHAR}|ind-xiii-iii-cxxvii}{419}
+\indexentry{<=@\texttt  {<=}!CHAR@\texttt  {CHAR}|ind-xiii-iii-cxxviii}{419}
+\indexentry{>@\texttt  {>}!CHAR@\texttt  {CHAR}|ind-xiii-iii-cxxix}{419}
+\indexentry{>=@\texttt  {>=}!CHAR@\texttt  {CHAR}|ind-xiii-iii-cxxx}{419}
+\indexentry{+@\texttt  {+}!STRING@\texttt  {STRING}|ind-xiii-iii-cxxxi}{419}
+\indexentry{*@\texttt  {*}!STRING@\texttt  {STRING}|ind-xiii-iii-cxxxii}{419}
+\indexentry{<@\texttt  {<}!STRING@\texttt  {STRING}|ind-xiii-iii-cxxxiii}{420}
+\indexentry{<=@\texttt  {<=}!STRING@\texttt  {STRING}|ind-xiii-iii-cxxxiv}{420}
+\indexentry{>=@\texttt  {>=}!STRING@\texttt  {STRING}|ind-xiii-iii-cxxxv}{420}
+\indexentry{>@\texttt  {>}!STRING@\texttt  {STRING}|ind-xiii-iii-cxxxvi}{420}
+\indexentry{=@\texttt  {=}!STRING@\texttt  {STRING}|ind-xiii-iii-cxxxvii}{420}
+\indexentry{/=@\texttt  {/=}!STRING@\texttt  {STRING}|ind-xiii-iii-cxxxviii}{420}
+\indexentry{<@\texttt  {<}!STRING@\texttt  {STRING}|ind-xiii-iii-cxxxix}{421}
+\indexentry{<=@\texttt  {<=}!STRING@\texttt  {STRING}|ind-xiii-iii-cxl}{421}
+\indexentry{>@\texttt  {>}!STRING@\texttt  {STRING}|ind-xiii-iii-cxli}{421}
+\indexentry{>=@\texttt  {>=}!STRING@\texttt  {STRING}|ind-xiii-iii-cxlii}{421}
+\indexentry{PLUSAB@\texttt  {PLUSAB}|ind-xiii-iii-cxliii}{421}
+\indexentry{PLUSTO@\texttt  {PLUSTO}|ind-xiii-iii-cxliv}{421}
+\indexentry{MINUSAB@\texttt  {MINUSAB}|ind-xiii-iii-cxlv}{422}
+\indexentry{TIMESAB@\texttt  {TIMESAB}|ind-xiii-iii-cxlvi}{422}
+\indexentry{DIVAB@\texttt  {DIVAB}|ind-xiii-iii-cxlvii}{422}
+\indexentry{OVERAB@\texttt  {OVERAB}|ind-xiii-iii-cxlviii}{423}
+\indexentry{MODAB@\texttt  {MODAB}|ind-xiii-iii-cxlix}{423}
+\indexentry{&*@\texttt  {\&*}|ind-xiii-iii-cl}{423}
+\indexentry{ELEM@\texttt  {ELEM}!BITS@\texttt  {BITS}|ind-xiii-iii-cli}{423}
+\indexentry{MIN@\texttt  {MIN}|ind-xiii-iii-clii}{423}
+\indexentry{MAX@\texttt  {MAX}|ind-xiii-iii-cliii}{423}
+\indexentry{VALID@\texttt  {VALID}|ind-xiii-iii-cliv}{424}
+\indexentry{sqrt@\texttt  {sqrt}|ind-xiii-iv-i}{424}
+\indexentry{short sqrt@\texttt  {short sqrt}|ind-xiii-iv-ii}{424}
+\indexentry{exp@\texttt  {exp}|ind-xiii-iv-iii}{424}
+\indexentry{short exp@\texttt  {short exp}|ind-xiii-iv-iv}{424}
+\indexentry{ln@\texttt  {ln}|ind-xiii-iv-v}{425}
+\indexentry{short ln@\texttt  {short ln}|ind-xiii-iv-vi}{425}
+\indexentry{log@\texttt  {log}|ind-xiii-iv-vii}{425}
+\indexentry{short log@\texttt  {short log}|ind-xiii-iv-viii}{425}
+\indexentry{cos@\texttt  {cos}|ind-xiii-iv-ix}{425}
+\indexentry{short cos@\texttt  {short cos}|ind-xiii-iv-x}{425}
+\indexentry{arccos@\texttt  {arccos}|ind-xiii-iv-xi}{425}
+\indexentry{short arccos@\texttt  {short arccos}|ind-xiii-iv-xii}{425}
+\indexentry{sin@\texttt  {sin}|ind-xiii-iv-xiii}{425}
+\indexentry{short sin@\texttt  {short sin}|ind-xiii-iv-xiv}{425}
+\indexentry{arcsin@\texttt  {arcsin}|ind-xiii-iv-xv}{425}
+\indexentry{short arcsin@\texttt  {short arcsin}|ind-xiii-iv-xvi}{425}
+\indexentry{tan@\texttt  {tan}|ind-xiii-iv-xvii}{425}
+\indexentry{short tan@\texttt  {short tan}|ind-xiii-iv-xviii}{425}
+\indexentry{arctan@\texttt  {arctan}|ind-xiii-iv-xix}{425}
+\indexentry{short arctan@\texttt  {short arctan}|ind-xiii-iv-xx}{425}
+\indexentry{next random@\texttt  {next random}|ind-xiii-iv-xxi}{426}
+\indexentry{last random@\texttt  {last random}|ind-xiii-iv-xxii}{426}
+\indexentry{long last random@\texttt  {long last random}|ind-xiii-iv-xxiii}{426}
+\indexentry{random@\texttt  {random}|ind-xiii-iv-xxiv}{426}
+\indexentry{short random@\texttt  {short random}|ind-xiii-iv-xxv}{426}
+\indexentry{random int@\texttt  {random int}|ind-xiii-iv-xxvi}{426}
+\indexentry{long random int@\texttt  {long random int}|ind-xiii-iv-xxvii}{426}
+\indexentry{short random int@\texttt  {short random int}|ind-xiii-iv-xxviii}{426}
+\indexentry{short short random int@\texttt  {short short random int}|ind-xiii-iv-xxix}{426}
+\indexentry{bits pack@\texttt  {bits pack}|ind-xiii-iv-xxx}{426}
+\indexentry{long bits pack@\texttt  {long bits pack}|ind-xiii-iv-xxxi}{426}
+\indexentry{bits pack@\texttt  {bits pack}|ind-xiii-iv-xxxii}{426}
+\indexentry{short bits pack@\texttt  {short bits pack}|ind-xiii-iv-xxxiii}{426}
+\indexentry{short short bits pack@\texttt  {short short bits pack}|ind-xiii-iv-xxxiv}{426}
+\indexentry{char in string@\texttt  {char in string}|ind-xiii-iv-xxxv}{426}
+\indexentry{erange err@\texttt  {erange err}|ind-xiii-iv-xxxvi}{427}
+\indexentry{posix seek cur@\texttt  {posix seek cur}|ind-xiii-iv-xxxvii}{427}
+\indexentry{posix seek end@\texttt  {posix seek end}|ind-xiii-iv-xxxviii}{427}
+\indexentry{posix seek set@\texttt  {posix seek set}|ind-xiii-iv-xxxix}{427}
+\indexentry{kbd channel@\texttt  {kbd channel}|ind-xiii-iv-xl}{427}
+\indexentry{termios vtime@\texttt  {termios vtime}|ind-xiii-iv-xli}{427}
+\indexentry{termios vmin@\texttt  {termios vmin}|ind-xiii-iv-xlii}{427}
+\indexentry{tcsanow@\texttt  {tcsanow}|ind-xiii-iv-xliii}{427}
+\indexentry{linux tc set attr@\texttt  {linux tc set attr}|ind-xiii-iv-xliv}{427}
+\indexentry{isig@\texttt  {isig}|ind-xiii-iv-xlv}{428}
+\indexentry{linux tc set attr@\texttt  {linux tc set attr}|ind-xiii-iv-xlvi}{428}
+\indexentry{icanon@\texttt  {icanon}|ind-xiii-iv-xlvii}{428}
+\indexentry{linux tc set attr@\texttt  {linux tc set attr}|ind-xiii-iv-xlviii}{428}
+\indexentry{echo@\texttt  {echo}|ind-xiii-iv-xlix}{428}
+\indexentry{linux tc set attr@\texttt  {linux tc set attr}|ind-xiii-iv-l}{428}
+\indexentry{nil func ptr@\texttt  {nil func ptr}|ind-xiii-iv-li}{428}
+\indexentry{null c charptr@\texttt  {null c charptr}|ind-xiii-iv-lii}{428}
+\indexentry{prelude@\texttt  {prelude}|ind-xiii-iv-liii}{428}
+\indexentry{errno@\texttt  {errno}|ind-xiii-iv-liv}{428}
+\indexentry{bsd mkstemp@\texttt  {bsd mkstemp}|ind-xiii-iv-lv}{429}
+\indexentry{ansi raise@\texttt  {ansi raise}|ind-xiii-iv-lvi}{429}
+\indexentry{ansi signal@\texttt  {ansi signal}|ind-xiii-iv-lvii}{429}
+\indexentry{ansi strtod@\texttt  {ansi strtod}|ind-xiii-iv-lviii}{429}
+\indexentry{bsd accept@\texttt  {bsd accept}|ind-xiii-iv-lix}{429}
+\indexentry{bsd bind@\texttt  {bsd bind}|ind-xiii-iv-lx}{430}
+\indexentry{bsd chmod@\texttt  {bsd chmod}|ind-xiii-iv-lxi}{430}
+\indexentry{bsd connect@\texttt  {bsd connect}|ind-xiii-iv-lxii}{430}
+\indexentry{fchmod@\texttt  {fchmod}|ind-xiii-iv-lxiii}{430}
+\indexentry{bsd gethostbyname@\texttt  {bsd gethostbyname}|ind-xiii-iv-lxiv}{430}
+\indexentry{bsd inet aton@\texttt  {bsd inet aton}|ind-xiii-iv-lxv}{430}
+\indexentry{bsd is a tty@\texttt  {bsd is a tty}|ind-xiii-iv-lxvi}{430}
+\indexentry{bsd listen@\texttt  {bsd listen}|ind-xiii-iv-lxvii}{430}
+\indexentry{mkstemp@\texttt  {mkstemp}|ind-xiii-iv-lxviii}{430}
+\indexentry{bsd real snprintf@\texttt  {bsd real snprintf}|ind-xiii-iv-lxix}{430}
+\indexentry{bsd shutdown@\texttt  {bsd shutdown}|ind-xiii-iv-lxx}{430}
+\indexentry{bsd socket@\texttt  {bsd socket}|ind-xiii-iv-lxxi}{431}
+\indexentry{iso at exit@\texttt  {iso at exit}|ind-xiii-iv-lxxii}{431}
+\indexentry{linux on exit@\texttt  {linux on exit}|ind-xiii-iv-lxxiii}{431}
+\indexentry{linux tc get attr@\texttt  {linux tc get attr}|ind-xiii-iv-lxxiv}{431}
+\indexentry{linux tc set attr@\texttt  {linux tc set attr}|ind-xiii-iv-lxxv}{431}
+\indexentry{posix close@\texttt  {posix close}|ind-xiii-iv-lxxvi}{431}
+\indexentry{posix creat@\texttt  {posix creat}|ind-xiii-iv-lxxvii}{431}
+\indexentry{posix exit@\texttt  {posix exit}|ind-xiii-iv-lxxviii}{431}
+\indexentry{posix getenv@\texttt  {posix getenv}|ind-xiii-iv-lxxix}{431}
+\indexentry{posix getpid@\texttt  {posix getpid}|ind-xiii-iv-lxxx}{432}
+\indexentry{posix lseek@\texttt  {posix lseek}|ind-xiii-iv-lxxxi}{432}
+\indexentry{posix open@\texttt  {posix open}|ind-xiii-iv-lxxxii}{432}
+\indexentry{posix read@\texttt  {posix read}|ind-xiii-iv-lxxxiii}{432}
+\indexentry{posix rename@\texttt  {posix rename}|ind-xiii-iv-lxxxiv}{432}
+\indexentry{posx strerror@\texttt  {posx strerror}|ind-xiii-iv-lxxxv}{432}
+\indexentry{posix strlen@\texttt  {posix strlen}|ind-xiii-iv-lxxxvi}{432}
+\indexentry{posix time@\texttt  {posix time}|ind-xiii-iv-lxxxvii}{432}
+\indexentry{posix unlink@\texttt  {posix unlink}|ind-xiii-iv-lxxxviii}{432}
+\indexentry{posix write@\texttt  {posix write}|ind-xiii-iv-lxxxix}{432}
+\indexentry{get fpu cw@\texttt  {get fpu cw}|ind-xiii-iv-xc}{432}
+\indexentry{set fpu cw@\texttt  {set fpu cw}|ind-xiii-iv-xci}{433}
+\indexentry{ph round@\texttt  {ph round}|ind-xiii-iv-xcii}{433}
+\indexentry{indexable structure|ind-xiii-v-i}{433}
+\indexentry{CSTR@\texttt  {CSTR}|ind-xiii-v-ii}{433}
+\indexentry{CCHARPTRPTR@\texttt  {CCHARPTRPTR}|ind-xiii-v-iii}{434}
+\indexentry{VECTOR@\texttt  {VECTOR}|ind-xiii-v-iv}{434}
+\indexentry{STR@\texttt  {STR}|ind-xiii-v-v}{434}
+\indexentry{RVC@\texttt  {RVC}|ind-xiii-v-vi}{434}
+\indexentry{CPTR@\texttt  {CPTR}|ind-xiii-v-vii}{435}
+\indexentry{CINTPTR@\texttt  {CINTPTR}|ind-xiii-v-viii}{435}
+\indexentry{CCHARPTR@\texttt  {CCHARPTR}|ind-xiii-v-ix}{435}
+\indexentry{GCPARAM@\texttt  {GCPARAM}|ind-xiii-v-x}{435}
+\indexentry{PDESC@\texttt  {PDESC}|ind-xiii-v-xi}{435}
+\indexentry{VDESC@\texttt  {VDESC}|ind-xiii-v-xii}{435}
+\indexentry{ALIEN@\texttt  {ALIEN}|ind-xiii-v-xiii}{436}
+\indexentry{CODE@\texttt  {CODE}|ind-xiii-v-xiv}{436}
+\indexentry{PROGRAM@\texttt  {PROGRAM}|ind-xiii-v-xv}{436}
+\indexentry{DECS@\texttt  {DECS}|ind-xiii-v-xvi}{436}
+\indexentry{USE@\texttt  {USE}|ind-xiii-v-xvii}{437}
+\indexentry{BY@\texttt  {BY}|ind-xiii-v-xviii}{437}
+\indexentry{CASE default@\texttt  {CASE} default|ind-xiii-v-xix}{437}
+\indexentry{BIOP 99@\texttt  {BIOP 99}|ind-xiii-v-xx}{438}
+\indexentry{CCHARPTRTOCSTR@\texttt  {CCHARPTRTOCSTR}|ind-xiii-v-xxi}{439}
+\indexentry{CSTRTOCCHARPTR@\texttt  {CSTRTOCCHARPTR}|ind-xiii-v-xxii}{439}
+\indexentry{TOCPTR@\texttt  {TOCPTR}|ind-xiii-v-xxiii}{439}
+\indexentry{TOCSTR@\texttt  {TOCSTR}|ind-xiii-v-xxiv}{439}
+\indexentry{TOPDESC@\texttt  {TOPDESC}|ind-xiii-v-xxv}{439}
+\indexentry{RPDESC@\texttt  {RPDESC}|ind-xiii-v-xxvi}{440}
+\indexentry{TOVDESC@\texttt  {TOVDESC}|ind-xiii-v-xxvii}{440}
+\indexentry{TOVBDESC@\texttt  {TOVBDESC}|ind-xiii-v-xxviii}{440}
+\indexentry{TOVIDESC@\texttt  {TOVIDESC}|ind-xiii-v-xxix}{440}
+\indexentry{CPTRTORVC@\texttt  {CPTRTORVC}|ind-xiii-v-xxx}{440}
+\indexentry{CSTRTORVC@\texttt  {CSTRTORVC}|ind-xiii-v-xxxi}{440}
+\indexentry{FLATRVB@\texttt  {FLATRVB}|ind-xiii-v-xxxii}{441}
+\indexentry{FLATRVLB@\texttt  {FLATRVLB}|ind-xiii-v-xxxiii}{441}
+\indexentry{FLATRVSB@\texttt  {FLATRVSB}|ind-xiii-v-xxxiv}{441}
+\indexentry{FLATRVSSB@\texttt  {FLATRVSSB}|ind-xiii-v-xxxv}{441}
+\indexentry{FLATRVR@\texttt  {FLATRVR}|ind-xiii-v-xxxvi}{441}
+\indexentry{FLATRVSR@\texttt  {FLATRVSR}|ind-xiii-v-xxxvii}{441}
+\indexentry{MAKERVC@\texttt  {MAKERVC}|ind-xiii-v-xxxviii}{441}
+\indexentry{VBTOCPTR@\texttt  {VBTOCPTR}|ind-xiii-v-xxxix}{441}
+\indexentry{VCTOCHARPTR@\texttt  {VCTOCHARPTR}|ind-xiii-v-xl}{441}
+\indexentry{VITOINTPTR@\texttt  {VITOINTPTR}|ind-xiii-v-xli}{442}
+\indexentry{STRTOCSTR@\texttt  {STRTOCSTR}|ind-xiii-v-xlii}{442}
+\indexentry{Z@\texttt  {Z}|ind-xiii-v-xliii}{442}
+\indexentry{get fpu cw@\texttt  {get fpu cw}|ind-xiii-vi-i}{443}
+\indexentry{set fpu cw@\texttt  {set fpu cw}|ind-xiii-vi-ii}{443}
+\indexentry{fpu cw ieee@\texttt  {fpu cw ieee}|ind-xiii-vi-iii}{443}
+\indexentry{fpu cw algol68 round@\texttt  {fpu cw algol68 round}|ind-xiii-vi-iv}{443}
+\indexentry{fpu cw algol68 entier@\texttt  {fpu cw algol68 entier}|ind-xiii-vi-v}{444}
+\indexentry{signal|ind-xiii-vi-vi}{444}
+\indexentry{on signal@\texttt  {on signal}|ind-xiii-vi-vii}{444}
+\indexentry{sigint@\texttt  {sigint}|ind-xiii-vi-viii}{445}
+\indexentry{ansi raise@\texttt  {ansi raise}|ind-xiii-vi-ix}{446}
+\indexentry{ansi raise@\texttt  {ansi raise}|ind-xiii-vi-x}{446}
+\indexentry{iso at exit@\texttt  {iso at exit}|ind-xiii-vi-xi}{446}
+\indexentry{on exit@\texttt  {on exit}|ind-xiii-vi-xii}{446}
+\indexentry{at exit@\texttt  {at exit}|ind-xiii-vi-xiii}{446}
+\indexentry{exit@\texttt  {exit}|ind-xiii-vi-xiv}{446}
+\indexentry{on exit@\texttt  {on exit}|ind-xiii-vi-xv}{446}
+\indexentry{exit@\texttt  {exit}|ind-xiii-vi-xvi}{446}
+\indexentry{at exit@\texttt  {at exit}|ind-xiii-vi-xvii}{447}
+\indexentry{on exit@\texttt  {on exit}|ind-xiii-vi-xviii}{447}
+\indexentry{stop@\texttt  {stop}|ind-xiii-vi-xix}{447}
+\indexentry{garbage\_collect@\texttt  {garbage\_collect}|ind-xiii-vi-xx}{447}
+\indexentry{disable\_garbage\_collector@\texttt  {disable\_garbage\_collector}|ind-xiii-vi-xxi}{447}
+\indexentry{enable\_garbage\_collector@\texttt  {enable\_garbage\_collector}|ind-xiii-vi-xxii}{447}
+\indexentry{gc\_param@\texttt  {gc\_param}|ind-xiii-vi-xxiii}{447}
+\indexentry{COLLECTION THRESHOLD@\texttt  {COLLECTION THRESHOLD}|ind-xiii-vi-xxiv}{448}
+\indexentry{HEAP INCREMENT@\texttt  {HEAP INCREMENT}|ind-xiii-vi-xxv}{448}
+\indexentry{MAX HEAP SIZE@\texttt  {MAX HEAP SIZE}|ind-xiii-vi-xxvi}{448}
+\indexentry{MIN HEAP SIZE@\texttt  {MIN HEAP SIZE}|ind-xiii-vi-xxvii}{448}
+\indexentry{MAX SEGMENT SIZE@\texttt  {MAX SEGMENT SIZE}|ind-xiii-vi-xxviii}{448}
+\indexentry{MIN SEGMENT SIZE@\texttt  {MIN SEGMENT SIZE}|ind-xiii-vi-xxix}{448}
+\indexentry{POLICY@\texttt  {POLICY}|ind-xiii-vi-xxx}{448}
+\indexentry{always collect@\texttt  {always collect}|ind-xiii-vi-xxxi}{448}
+\indexentry{always grow heap@\texttt  {always grow heap}|ind-xiii-vi-xxxii}{448}
+\indexentry{default policy@\texttt  {default policy}|ind-xiii-vi-xxxiii}{449}
+\indexentry{A68\_GC\_POLICY@\texttt  {A68\_GC\_POLICY}|ind-xiii-vi-xxxiv}{449}
+\indexentry{get\_gc\_param@\texttt  {get\_gc\_param}|ind-xiii-vi-xxxv}{449}
+\indexentry{set\_gc\_params@\texttt  {set\_gc\_params}|ind-xiii-vi-xxxvi}{449}
+\indexentry{physical file end not mended@\texttt  {physical file end not mended}|ind-xiii-vii-i}{450}
+\indexentry{logical file end not mended@\texttt  {logical file end not mended}|ind-xiii-vii-ii}{450}
+\indexentry{stand in redirected@\texttt  {stand in redirected}|ind-xiii-vii-iii}{450}
+\indexentry{environment string unset@\texttt  {environment string unset}|ind-xiii-vii-iv}{450}
+\indexentry{environment string estab err@\texttt  {environment string estab err}|ind-xiii-vii-v}{450}
+\indexentry{estab invalid parameters@\texttt  {estab invalid parameters}|ind-xiii-vii-vi}{450}
+\indexentry{open invalid parameters@\texttt  {open invalid parameters}|ind-xiii-vii-vii}{450}
+\indexentry{no program args@\texttt  {no program args}|ind-xiii-vii-viii}{450}
+\indexentry{value error not mended@\texttt  {value error not mended}|ind-xiii-vii-ix}{450}
+\indexentry{FILE@\texttt  {FILE}|ind-xiii-vii-x}{451}
+\indexentry{CHANNEL@\texttt  {CHANNEL}|ind-xiii-vii-xi}{451}
+\indexentry{SIMPLIN@\texttt  {SIMPLIN}|ind-xiii-vii-xii}{451}
+\indexentry{SIMPLOUT@\texttt  {SIMPLOUT}|ind-xiii-vii-xiii}{451}
+\indexentry{BUFFER@\texttt  {BUFFER}|ind-xiii-vii-xiv}{451}
+\indexentry{RVC@\texttt  {RVC}|ind-xiii-vii-xv}{451}
+\indexentry{file buffer@\texttt  {file buffer}|ind-xiii-vii-xvi}{451}
+\indexentry{stand in channel@\texttt  {stand in channel}|ind-xiii-vii-xvii}{452}
+\indexentry{stand out channel@\texttt  {stand out channel}|ind-xiii-vii-xviii}{452}
+\indexentry{stand back channel@\texttt  {stand back channel}|ind-xiii-vii-xix}{452}
+\indexentry{stand in book@\texttt  {stand in book}|ind-xiii-vii-xx}{452}
+\indexentry{stand out book@\texttt  {stand out book}|ind-xiii-vii-xxi}{453}
+\indexentry{stand back book@\texttt  {stand back book}|ind-xiii-vii-xxii}{453}
+\indexentry{establish@\texttt  {establish}|ind-xiii-vii-xxiii}{453}
+\indexentry{open@\texttt  {open}|ind-xiii-vii-xxiv}{453}
+\indexentry{create@\texttt  {create}|ind-xiii-vii-xxv}{454}
+\indexentry{close@\texttt  {close}|ind-xiii-vii-xxvi}{454}
+\indexentry{stand out channel@\texttt  {stand out channel}|ind-xiii-vii-xxvii}{454}
+\indexentry{stand back channel@\texttt  {stand back channel}|ind-xiii-vii-xxviii}{454}
+\indexentry{lock@\texttt  {lock}|ind-xiii-vii-xxix}{454}
+\indexentry{scratch@\texttt  {scratch}|ind-xiii-vii-xxx}{454}
+\indexentry{set@\texttt  {set}|ind-xiii-vii-xxxi}{454}
+\indexentry{logical end@\texttt  {logical end}|ind-xiii-vii-xxxii}{454}
+\indexentry{reidf@\texttt  {reidf}|ind-xiii-vii-xxxiii}{454}
+\indexentry{stand back channel@\texttt  {stand back channel}|ind-xiii-vii-xxxiv}{454}
+\indexentry{stand error@\texttt  {stand error}|ind-xiii-vii-xxxv}{454}
+\indexentry{arg channel@\texttt  {arg channel}|ind-xiii-vii-xxxvi}{454}
+\indexentry{arg channel@\texttt  {arg channel}|ind-xiii-vii-xxxvii}{454}
+\indexentry{blank@\texttt  {blank}|ind-xiii-vii-xxxviii}{455}
+\indexentry{establish@\texttt  {establish}|ind-xiii-vii-xxxix}{455}
+\indexentry{open@\texttt  {open}|ind-xiii-vii-xl}{455}
+\indexentry{create@\texttt  {create}|ind-xiii-vii-xli}{455}
+\indexentry{close@\texttt  {close}|ind-xiii-vii-xlii}{455}
+\indexentry{lock@\texttt  {lock}|ind-xiii-vii-xliii}{455}
+\indexentry{scratch@\texttt  {scratch}|ind-xiii-vii-xliv}{455}
+\indexentry{set@\texttt  {set}|ind-xiii-vii-xlv}{455}
+\indexentry{logical end@\texttt  {logical end}|ind-xiii-vii-xlvi}{455}
+\indexentry{reidf@\texttt  {reidf}|ind-xiii-vii-xlvii}{455}
+\indexentry{env channel@\texttt  {env channel}|ind-xiii-vii-xlviii}{456}
+\indexentry{env channel@\texttt  {env channel}|ind-xiii-vii-xlix}{456}
+\indexentry{establish@\texttt  {establish}|ind-xiii-vii-l}{456}
+\indexentry{environment string estab err@\texttt  {environment string estab err}|ind-xiii-vii-li}{456}
+\indexentry{open@\texttt  {open}|ind-xiii-vii-lii}{456}
+\indexentry{environment string unset@\texttt  {environment string unset}|ind-xiii-vii-liii}{456}
+\indexentry{create@\texttt  {create}|ind-xiii-vii-liv}{456}
+\indexentry{environment string estab err@\texttt  {environment string estab err}|ind-xiii-vii-lv}{456}
+\indexentry{close@\texttt  {close}|ind-xiii-vii-lvi}{456}
+\indexentry{lock@\texttt  {lock}|ind-xiii-vii-lvii}{456}
+\indexentry{scratch@\texttt  {scratch}|ind-xiii-vii-lviii}{457}
+\indexentry{set@\texttt  {set}|ind-xiii-vii-lix}{457}
+\indexentry{logical end@\texttt  {logical end}|ind-xiii-vii-lx}{457}
+\indexentry{reidf@\texttt  {reidf}|ind-xiii-vii-lxi}{457}
+\indexentry{nul ch@\texttt  {nul ch}|ind-xiii-vii-lxii}{457}
+\indexentry{make term@\texttt  {make term}|ind-xiii-vii-lxiii}{457}
+\indexentry{kbd channel@\texttt  {kbd channel}|ind-xiii-vii-lxiv}{457}
+\indexentry{kbd channel@\texttt  {kbd channel}|ind-xiii-vii-lxv}{457}
+\indexentry{establish@\texttt  {establish}|ind-xiii-vii-lxvi}{458}
+\indexentry{open@\texttt  {open}|ind-xiii-vii-lxvii}{458}
+\indexentry{stand in redirected@\texttt  {stand in redirected}|ind-xiii-vii-lxviii}{458}
+\indexentry{create@\texttt  {create}|ind-xiii-vii-lxix}{458}
+\indexentry{close@\texttt  {close}|ind-xiii-vii-lxx}{458}
+\indexentry{stand in@\texttt  {stand in}|ind-xiii-vii-lxxi}{458}
+\indexentry{lock@\texttt  {lock}|ind-xiii-vii-lxxii}{458}
+\indexentry{scratch@\texttt  {scratch}|ind-xiii-vii-lxxiii}{458}
+\indexentry{set@\texttt  {set}|ind-xiii-vii-lxxiv}{458}
+\indexentry{logical end@\texttt  {logical end}|ind-xiii-vii-lxxv}{458}
+\indexentry{reidf@\texttt  {reidf}|ind-xiii-vii-lxxvi}{458}
+\indexentry{mem channel@\texttt  {mem channel}|ind-xiii-vii-lxxvii}{458}
+\indexentry{mem channel@\texttt  {mem channel}|ind-xiii-vii-lxxviii}{458}
+\indexentry{establish@\texttt  {establish}|ind-xiii-vii-lxxix}{459}
+\indexentry{estab invalid parameters@\texttt  {estab invalid parameters}|ind-xiii-vii-lxxx}{459}
+\indexentry{open@\texttt  {open}|ind-xiii-vii-lxxxi}{459}
+\indexentry{create@\texttt  {create}|ind-xiii-vii-lxxxii}{459}
+\indexentry{estab invalid parameters@\texttt  {estab invalid parameters}|ind-xiii-vii-lxxxiii}{459}
+\indexentry{close@\texttt  {close}|ind-xiii-vii-lxxxiv}{459}
+\indexentry{lock@\texttt  {lock}|ind-xiii-vii-lxxxv}{459}
+\indexentry{scratch@\texttt  {scratch}|ind-xiii-vii-lxxxvi}{459}
+\indexentry{set@\texttt  {set}|ind-xiii-vii-lxxxvii}{459}
+\indexentry{logical end@\texttt  {logical end}|ind-xiii-vii-lxxxviii}{459}
+\indexentry{reidf@\texttt  {reidf}|ind-xiii-vii-lxxxix}{460}
+\indexentry{make term@\texttt  {make term}|ind-xiii-vii-xc}{460}
+\indexentry{client socket channel@\texttt  {client socket channel}|ind-xiii-vii-xci}{460}
+\indexentry{server socket channel@\texttt  {server socket channel}|ind-xiii-vii-xcii}{460}
+\indexentry{establish@\texttt  {establish}|ind-xiii-vii-xciii}{460}
+\indexentry{af unix@\texttt  {af unix}|ind-xiii-vii-xciv}{460}
+\indexentry{af inet@\texttt  {af inet}|ind-xiii-vii-xcv}{460}
+\indexentry{estab invalid parameters@\texttt  {estab invalid parameters}|ind-xiii-vii-xcvi}{460}
+\indexentry{open@\texttt  {open}|ind-xiii-vii-xcvii}{460}
+\indexentry{create@\texttt  {create}|ind-xiii-vii-xcviii}{461}
+\indexentry{close@\texttt  {close}|ind-xiii-vii-xcix}{461}
+\indexentry{lock@\texttt  {lock}|ind-xiii-vii-c}{461}
+\indexentry{scratch@\texttt  {scratch}|ind-xiii-vii-ci}{461}
+\indexentry{set@\texttt  {set}|ind-xiii-vii-cii}{461}
+\indexentry{logical end@\texttt  {logical end}|ind-xiii-vii-ciii}{461}
+\indexentry{reidf@\texttt  {reidf}|ind-xiii-vii-civ}{461}
+\indexentry{accept@\texttt  {accept}|ind-xiii-vii-cv}{461}
+\indexentry{client socket@\texttt  {client socket}|ind-xiii-vii-cvi}{461}
+\indexentry{stand in@\texttt  {stand in}|ind-xiii-vii-cvii}{462}
+\indexentry{stand in channel@\texttt  {stand in channel}|ind-xiii-vii-cviii}{462}
+\indexentry{set possible@\texttt  {set possible}|ind-xiii-vii-cix}{462}
+\indexentry{kbd channel@\texttt  {kbd channel}|ind-xiii-vii-cx}{462}
+\indexentry{stand in@\texttt  {stand in}|ind-xiii-vii-cxi}{462}
+\indexentry{stand out@\texttt  {stand out}|ind-xiii-vii-cxii}{462}
+\indexentry{stand out channel@\texttt  {stand out channel}|ind-xiii-vii-cxiii}{462}
+\indexentry{set possible@\texttt  {set possible}|ind-xiii-vii-cxiv}{462}
+\indexentry{stand error@\texttt  {stand error}|ind-xiii-vii-cxv}{462}
+\indexentry{stand back@\texttt  {stand back}|ind-xiii-vii-cxvi}{462}
+\indexentry{establish@\texttt  {establish}|ind-xiii-vii-cxvii}{462}
+\indexentry{mem channel@\texttt  {mem channel}|ind-xiii-vii-cxviii}{463}
+\indexentry{open@\texttt  {open}|ind-xiii-vii-cxix}{463}
+\indexentry{RVC@\texttt  {RVC}|ind-xiii-vii-cxx}{463}
+\indexentry{a68toc|ind-xiii-vii-cxxi}{464}
+\indexentry{straightening|ind-xiii-vii-cxxii}{465}
+\indexentry{write@\texttt  {write}|ind-xiii-vii-cxxiii}{466}
+\indexentry{print@\texttt  {print}|ind-xiii-vii-cxxiv}{466}
+\indexentry{put@\texttt  {put}|ind-xiii-vii-cxxv}{466}
+\indexentry{read@\texttt  {read}|ind-xiii-vii-cxxvi}{467}
+\indexentry{get@\texttt  {get}|ind-xiii-vii-cxxvii}{468}
+\indexentry{write bin@\texttt  {write bin}|ind-xiii-vii-cxxviii}{470}
+\indexentry{put bin@\texttt  {put bin}|ind-xiii-vii-cxxix}{470}
+\indexentry{read bin@\texttt  {read bin}|ind-xiii-vii-cxxx}{470}
+\indexentry{get bin@\texttt  {get bin}|ind-xiii-vii-cxxxi}{470}
+\indexentry{make term@\texttt  {make term}|ind-xiii-vii-cxxxii}{471}
+\indexentry{f|ind-xiii-vii-cxxxiii}{471}
+\indexentry{c|ind-xiii-vii-cxxxiv}{471}
+\indexentry{r|ind-xiii-vii-cxxxv}{471}
+\indexentry{set possible@\texttt  {set possible}|ind-xiii-vii-cxxxvi}{471}
+\indexentry{stand in@\texttt  {stand in}|ind-xiii-vii-cxxxvii}{471}
+\indexentry{stand out@\texttt  {stand out}|ind-xiii-vii-cxxxviii}{471}
+\indexentry{file buffer@\texttt  {file buffer}|ind-xiii-vii-cxxxix}{471}
+\indexentry{flush buffer@\texttt  {flush buffer}|ind-xiii-vii-cxl}{471}
+\indexentry{no file end@\texttt  {no file end}|ind-xiii-vii-cxli}{471}
+\indexentry{default io procs@\texttt  {default io procs}|ind-xiii-vii-cxlii}{471}
+\indexentry{ignore value error@\texttt  {ignore value error}|ind-xiii-vii-cxliii}{471}
+\indexentry{default io procs@\texttt  {default io procs}|ind-xiii-vii-cxliv}{471}
+\indexentry{ignore char error@\texttt  {ignore char error}|ind-xiii-vii-cxlv}{471}
+\indexentry{default io procs@\texttt  {default io procs}|ind-xiii-vii-cxlvi}{471}
+\indexentry{bin possible@\texttt  {bin possible}|ind-xiii-vii-cxlvii}{472}
+\indexentry{put possible@\texttt  {put possible}|ind-xiii-vii-cxlviii}{472}
+\indexentry{get possible@\texttt  {get possible}|ind-xiii-vii-cxlix}{472}
+\indexentry{set possible@\texttt  {set possible}|ind-xiii-vii-cl}{472}
+\indexentry{reidf possible@\texttt  {reidf possible}|ind-xiii-vii-cli}{472}
+\indexentry{current pos@\texttt  {current pos}|ind-xiii-vii-clii}{472}
+\indexentry{file buffer@\texttt  {file buffer}|ind-xiii-vii-cliii}{472}
+\indexentry{\texttt  {BUFFER}|ind-xiii-vii-cliv}{472}
+\indexentry{idf@\texttt  {idf}|ind-xiii-vii-clv}{473}
+\indexentry{\texttt  {RVC}|ind-xiii-vii-clvi}{473}
+\indexentry{logical end@\texttt  {logical end}|ind-xiii-vii-clvii}{473}
+\indexentry{make term@\texttt  {make term}|ind-xiii-vii-clviii}{473}
+\indexentry{reidf@\texttt  {reidf}|ind-xiii-vii-clix}{473}
+\indexentry{set flush after put@\texttt  {set flush after put}|ind-xiii-vii-clx}{473}
+\indexentry{on char error@\texttt  {on char error}|ind-xiii-vii-clxi}{473}
+\indexentry{on logical file end@\texttt  {on logical file end}|ind-xiii-vii-clxii}{475}
+\indexentry{on physical file end@\texttt  {on physical file end}|ind-xiii-vii-clxiii}{475}
+\indexentry{on value error@\texttt  {on value error}|ind-xiii-vii-clxiv}{476}
+\indexentry{char in string@\texttt  {char in string}|ind-xiii-vii-clxv}{477}
+\indexentry{whole@\texttt  {whole}|ind-xiii-vii-clxvi}{477}
+\indexentry{fixed@\texttt  {fixed}|ind-xiii-vii-clxvii}{477}
+\indexentry{float@\texttt  {float}|ind-xiii-vii-clxviii}{478}
+\indexentry{HEX@\texttt  {HEX}|ind-xiii-vii-clxix}{478}
+\indexentry{space@\texttt  {space}|ind-xiii-vii-clxx}{479}
+\indexentry{backspace@\texttt  {backspace}|ind-xiii-vii-clxxi}{479}
+\indexentry{newline@\texttt  {newline}|ind-xiii-vii-clxxii}{479}
+\indexentry{newpage@\texttt  {newpage}|ind-xiii-vii-clxxiii}{479}
+\indexentry{skip terminators@\texttt  {skip terminators}|ind-xiii-vii-clxxiv}{480}
+\indexentry{a68toc|ind-i-iii-i}{489}
+\indexentry{a68toc!BY@\texttt  {BY}|ind-i-ix-i}{529}

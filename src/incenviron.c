@@ -66,7 +66,7 @@ static A68_VC  A_configinfo;
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
 /* --- end of DECS initialisation functions --- */
-static A68_38   DHAACTR = {"$Id: incenviron.c,v 1.4 2003-05-30 21:20:48 sian Exp $"}; 
+static A68_38   DHAACTR = {"$Id: incenviron.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,EHAACTR,DHAACTR,60)
 A68_39 * FHAACTR_emptynonloclist;
 A68_41 * GHAACTR_emptyenvironstack;
@@ -79,9 +79,9 @@ void AHAACTR(void)   /* initialise DECS incenviron */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/home/sian/src/algol68/algol68toc-1.6/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/a68config","-dir","/home/sian/src/algol68/algol68toc-1.6/liba68prel","-dir",".","incenviron.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.6/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc/","A68_STAREDIT=1234ABCD","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.6/a68config/a68config.m",""};
+static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","-dir",".","incenviron.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_42  HHAACTR;  /* collateral clause result */
@@ -90,11 +90,11 @@ if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.6/src/incenviron.a68";
-A_config.translation_time = "Fri May 30 22:15:20 2003";
+A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/src/incenviron.a68";
+A_config.translation_time = "Mon Jan 28 20:24:32 2013";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "ZGAACTR (from seed file) ";
-A_config.spec_change_time = "Fri May 30 22:15:20 2003";
+A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

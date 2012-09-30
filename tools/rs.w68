@@ -1,0 +1,346 @@
+<!--This program is copyright (c) BD21319 Phoenix Engineering-->
+@1Introduction.
+This simple program does a regular expression search of a file and
+prints matching lines.
+
+@m cvs rs = "$Id: $"
+
+@a@<Prelude@>
+BEGIN
+@<Included declarations@>
+@<Modes in the outer reach@>
+@<!NIL!s in the outer reach@>
+@<Names in the outer reach@>
+@<Procedures in the outer reach@>
+@<Logic in the outer reach@>
+END
+@<Postlude@>
+
+@ The local compiler requires a special prelude.@^system dependencies@>
+
+@<Prel...@>=
+PROGRAM rs CONTEXT VOID
+USE @<Library preludes@>
+
+@ And a special postlude.@^system dependencies@>
+
+@<Post...@>=
+FINISH
+
+@ The standard prelude and the Unicode regular expression module are
+required.
+
+@<Library...@>=
+uregex,standard
+
+@ Include the system prelude.
+
+@isysprelude.w@>
+
+@ These boolean names are used as follows:
+<ol>
+  <li><b>expect set</b>: the next argument should be a regular
+  expression giving the set of characters regarded as word
+  characters.</li>
+  <li><b>expr found</b>: used in the matching 
+  <li><b>file only</b>: print the filename only</li>
+  <li><b>filename output</b>: !TRUE! when the filename has been
+  output. Made !FALSE! for every file.</li>
+  <li><b>matched</b>: if a match has been found, !exit(0)! else
+  !exit(1)!.</li>
+</ol>
+
+@<Names...@>=
+BOOL
+	@!expect set:=FALSE,
+	@!expr found,
+	@!file only:=FALSE,
+	@!filename output:=FALSE,
+	@!matched:=FALSE;
+
+@ These integers control printing of context lines:
+<ol>
+  <li><b>context num</b>: number of context lines to print</li>
+  <li><b>ctx</b>: number of context lines left to print</li>
+</ol>
+
+@<Names...@>=
+INT
+	@!context num:=0,
+	@!ctx:=0;
+
+@ Main logic of the program.
+
+@<Logic...@>=
+open(LOC FILE,"",arg channel);
+rx init(());
+@<rs: Check the environment variable RSWORDCHARS@>
+@<Read the program arguments and initialise the filename linked list@>
+@<Search each line@>;
+exit(ABS NOT matched)
+
+@ The regular expression used for searching is stored here.
+
+@<Names...@>=
+REF REGEX @!search rx:=no regex;
+INT @!pos; #used for !char in string!#
+
+@2Program arguments.
+These are:
+<ol>
+  <li><b>-cn</b>: print n lines of context after each match</li>
+  <li><b>-f</b>: print the file name only if the regular expression is found</li>
+  <li><b>-h</b>: print the usage message and exit</li>
+  <li><b>-v</b>: print the version and exit
+  <li><b>-w set-regexp</b><br />
+      Change the word character set to the set specified</li>
+  <li>The regular expression for searching as a string between quotes.</li>
+  <li>The names of input files.</li>
+</ol>
+If no input file is given, !stand in! is used as input.
+
+@<Read the...@>=
+IF argc=1
+THEN usage
+ELSE
+   FOR i FROM 2 TO argc
+   DO
+      []CHAR argvi=CSTRTORVC argv[i];
+      IF "-" BEGINS argvi
+      THEN
+         CASE UPB argvi
+         IN
+            #solitary - so use stand in#
+            add filename(head,tail,"stand in")
+            ,
+            IF char in string(argvi[2],pos,"fhvw")
+            THEN
+               CASE pos
+               IN
+                  file only:=TRUE
+                  ,
+                  usage
+                  ,
+                  (print(("rs: version ",cvs rs,newline)); exit(1))
+                  ,
+                  expect set:=TRUE
+               ESAC
+            ELSE unknown arg(argvi)
+            FI
+            ,
+            IF "-c" BEGINS argvi
+            THEN
+					IF argvi[3]>="0" & argvi[3]<="9"
+					THEN context num:=(ABS argvi[3]-ABS "0")
+					ELSE err("not a digit after -c argument")
+					FI
+            ELSE unknown arg(argvi)
+            FI
+         OUT unknown arg(argvi)
+         ESAC
+      ELIF expect set
+      THEN
+         IF NOT rx change set(2,argvi)
+         THEN err("invalid set: "+argvi)
+         ELSE expect set:=FALSE
+         FI
+      ELIF search rx IS no regex
+      THEN
+         IF INT st;
+            USTRING uargvi=string to ustring(argvi,st:=LWB argvi);
+            st < LWB argvi OR st > UPB argvi
+         THEN err("argument "+whole(i,0)+" is invalid UTF-8")
+         ELIF (search rx:=rx compile(uargvi)) IS no regex
+         THEN err("regex ("+argvi+") is invalid")
+         FI
+      ELSE add filename(head,tail,argvi)
+      FI
+   OD;
+	IF head IS no filename
+	THEN add filename(head,tail,"stand in")
+	FI
+FI;
+
+@ Some procedures for dealing with errors.
+
+@m nl = newline
+
+@<Proc...@>=
+PROC err = (STRING e)VOID:
+BEGIN
+   put(stand err,("rs: ",e,nl));
+   exit(1)
+END;
+
+PROC unknown arg = ([]CHAR s)VOID: err("unknown argument");
+
+@ Here is !usage!.
+
+@<Proc...@>=
+PROC usage = VOID:
+BEGIN
+  OP N = (UCHAR uch)STRING:
+  IF uch>=U"A" & uch<=U"Z" OR uch>=U"a" & uch<=U"z"
+  THEN "\"+REPR ABS bits OF uch
+  ELSE REPR ABS bits OF uch
+  FI;
+  print(("rs [-cn] [-f] [-h] [-v] [-w set-regexp] 'search-regex' file ...",nl,
+         "  -cn Print n lines of context after a match",nl,
+         "  -f  Print the filename only if the regex string was found in it",nl,
+         "  -h  Print this message and exit",nl,
+         "  -v  Print the version and exit",nl,
+         "  -w set-regexp",nl,
+         "      Change the characters defining a word to the set",nl,
+         "        specified",nl,
+         "'search-regex':",nl,
+         "      Regular expression used for searching",nl,
+         "      Put the regex in apostrophes if you are using shell-sensitive",nl,
+         "      characters, because otherwise the shell may interfere",nl,
+         nl,
+         "If the environment variable RSWORDCHARS is set, rs will use its",nl,
+         "value for the word set (can be overridden by the -w argument).",nl,
+         " The variable should be a regular expression set. eg) [A-Za-z]",nl,
+         nl,
+         "The regular expression special characters are:",nl,nl,
+         "Meaning              Value",nl,
+         "escape               ",N meta esc,nl,
+         "start of line        ",N meta bol,nl,
+         "end of line          ",N meta eol,nl,
+         "start of a word      ",N meta bow,nl,
+         "end of a word        ",N meta eow,nl,
+         "any character        ",N meta any,nl,
+         "0 or 1 characters    ",N meta 0 or 1,nl,
+         "minimal 0 or more    ",N meta n 0 p,nl,
+         "maximal 0 or more    ",N meta x 0 p,nl,
+         "minimal 1 or more    ",N meta n 1 p,nl,
+         "maximal 1 or more    ",N meta x 1 p,nl,
+         "alternatives         ",N meta choice,nl,
+         "start of set         ",N meta boset,nl,
+         "end of set           ",N meta eoset,nl,
+         "complement set       ",N meta compl,nl,
+         "set range            ",N meta range,nl,
+         "start of group       ",N meta bog,nl,
+         "end of group         ",N meta eog,nl,
+         "start of sub expr    ",N meta bosub,nl,
+         "end of sub expr      ",N meta eosub,nl,
+         "any digit            ",N meta dig,nl,
+         "not a digit          ",N meta no dig,nl,
+         "any whitespace       ",N meta ws,nl,
+         "not whitespace       ",N meta no ws,nl,
+         "any word character   ",N meta word,nl,
+         "not a word character ",N meta no word,nl,
+         "hex value marker     ",N meta hex,nl));
+   exit(1)
+END; #usage#
+
+@ Word characters can be set in RSWORDCHARS.
+
+@<rs: Check...@>=
+IF []CHAR wset=ENV "RSWORDCHARS";
+   wset/=""
+THEN
+   IF NOT rx change set(2,wset)
+   THEN err("RSWORDCHARS contains an invalid regexp ("+wset+")")
+   FI
+FI;
+
+@2Getting filenames.
+Store the filenames on a linked list. Here is the mode.
+
+@<Modes...@>=
+MODE FILENAME = STRUCT(REF FILE f,STRING fn,REF FILENAME next);
+
+@ Here is the !NIL!.
+
+@<!NIL!s...@>=
+REF FILENAME no filename = NIL;
+
+@ Here is the start and end of the linked list.
+
+@<Names...@>=
+REF REF FILENAME head:=HEAP REF FILENAME:=no filename;
+REF REF FILENAME tail:=head;
+
+@ Here is the routine to add a filename.
+
+@<Proc...@>=
+PROC add filename = (REF REF REF FILENAME h,t,STRING fn)VOID:
+IF HEAP FILENAME hf:=(HEAP FILE,fn,no filename);
+   REF STAT rs=stat(fn);
+   rs IS no stat
+THEN err("cannot stat file "+fn)
+ELIF NOT is nor(rs)
+THEN err("file "+fn+" is not a normal file")
+ELSE
+  REF REF FILENAME(h:=:no filename|h|t):=hf;
+  t:=next OF t
+FI; #add filename#
+
+@ Now process each file.
+
+@<Search...@>=
+BEGIN
+   tail:=head;
+   WHILE tail ISNT no filename
+   DO
+      IF fn OF tail/="stand in"
+      THEN open(f OF tail,fn OF tail,stand in channel)
+      FI;
+      on logical file end(f OF tail,
+                          (REF FILE f)BOOL: (GOTO eof; SKIP));
+      expr found:=FALSE;
+      @<Read a file outputting matched lines@>;
+eof:
+      IF file only & expr found
+      THEN print(idf(f OF tail))
+      FI;
+      IF fn OF tail/="stand in"
+      THEN close(f OF tail)
+      FI;
+      tail:=next OF tail
+   OD
+END
+
+@1Comparing lines.
+The line number is simply the value of !lno!. Subexpressions will
+not be saved.
+
+@<Read a file...@>=
+FOR lno
+DO
+   get(f OF tail,(line,nl));
+   IF line/=""
+   THEN
+      INT st:=LWB line;
+      USTRING uline=string to ustring(line,st);
+      IF st < LWB line
+      THEN print(((fn OF tail="stand in"
+                  |line
+                  |fn OF tail+":"+whole(lno,0)+":")," is not valid UTF-8",newline))
+      ELIF rx match(search rx,uline,LOC SUBEXP)
+      THEN
+         expr found:=matched:=TRUE;
+         IF NOT file only
+         THEN print(((fn OF tail="stand in"|""|fn OF tail+":"+whole(lno,0)+":"),line,nl))
+         FI
+      FI
+   FI
+OD
+
+@ !line!.
+
+@<Names...@>=
+STRING @!line;
+
+@1Included declarations.
+All the macros are declared here.
+
+@<Include...@>=
+macro gp op begins char;
+macro gp op begins row char;
+macro sys op env;
+macro sys stat;
+macro sys is nor;
+
+@1System dependencies.
+Check these if you are porting this program to another platform.

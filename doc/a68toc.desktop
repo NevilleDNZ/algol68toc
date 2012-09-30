@@ -1,6 +1,5 @@
 [Desktop Entry]
 Type=Application
-Encoding=UTF-8
 Name=a68toc
 TryExec=a68toc
 Exec=a68toc
