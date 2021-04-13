@@ -36,14 +36,14 @@ FILE cmd;
 STRING infn;
 
 IF open(cmd,"",arg channel)/=0
-THEN put(stand err,("Cannot open the command line",newline)); exit(1)
+THEN put(stand error,("Cannot open the command line",newline)); exit(1)
 ELSE
    on logical file end(cmd,
                        (REF FILE f)BOOL:
                        (
-                          put(stand err,("No data file given",newline));
+                          put(stand error,("No data file given",newline));
                         exit(2);  FALSE));
-   get(cmd,(skip delimiters, LOC STRING,skip delimiters,infn))
+   get(cmd,(skip terminators, LOC STRING,skip terminators,infn))
 FI;
 
 PROC result = (STRING exp, obs)VOID:
@@ -233,30 +233,31 @@ result(" +0.00e+0",float(0.0, +9, 2, +2));
 
 test(23);
 FILE inf;
-[4000]REAL rand;
+[4000] REAL rand;
 IF open(inf,infn,stand in channel)=0
 THEN
    on logical file end(inf,
                        (REF FILE f)BOOL:
                        (
-                        put(stand err,("Unexpected end of ",idf(f),newline));
+                        put(stand error,("Unexpected end of ",idf(f),newline));
                         close(f);
                         exit(3); TRUE
                        ));
    get bin(inf,rand);
    close(inf)
-ELSE put(stand err,("Cannot open file ",infn,newline)); exit(4)
+ELSE put(stand error,("Cannot open file ",infn,newline)); exit(4)
 FI;
 
 INT r:=0;
 
 TO 1000
 DO
-   REAL x=rand[r+:=1]*1000*(rand[r+:=1]<.5|0|1);
+   REAL x=rand[r+:=1]*1000*(rand[r+:=1]<.5|-1|1);
    INT m=ENTIER(rand[r+:=1]*10+2);
    INT n=ENTIER(rand[r+:=1]*m);
    []CHAR s1=float(x, m, n, 0);
    []CHAR s2=(n/=0|float(x,m,n-1,-1)|float(x,m,n,-1));
+
    IF s1/=s2
    THEN
       print(("float(",float(x,26,18,3),",",whole(m,-2),",",

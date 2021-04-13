@@ -1,15 +1,13 @@
-algol68toc (1.18) unstable; urgency=low
+algol68toc (1.20) unstable; urgency=low
 
-  * Provided Web 68 manual, tang, rs and the Unicode regular expression library
+  * Completed addition of envp to main in liba68prel/osshell.a68 and src/a68toc.a68
+  * Corrected sprintf formats for LONG INTs in liba68prel/usefulops.a68
+  * Ported to ARM 32-bit architecture (armhf)
+  * Compile with gcc -fpack-struct=4 on armhf to avoid conformity clause errors on union copies
+  * Include <unistd.h> in library/Aerror.h to avoid warning about write()
+  * Fix Makefiles to remove a68toc.o on target clean and intall info files correctly
 
- -- Sian Mountbatten <poenikatu@fastmail.co.uk>  Sun, 10 Mar 2013 17:07:38 +0000
-
-algol68toc (1.17) unstable; urgency=low
-
-  * Altered get for buffered input to check for EOF
-  * Rewrote ca as a program using Web 68
-
- -- Sian Mountbatten <poenikatu@fastmail.co.uk>  Mon, 28 Jan 2013 17:30:26 +0000
+ -- Neil Matthew <neil@tilde.co.uk>  Tue, 13 Apr 2021 15:44:00 +0100
 
 algol68toc (1.15) unstable; urgency=low
 

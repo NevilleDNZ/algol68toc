@@ -147,11 +147,6 @@ PROC (VECTOR [] CHAR,VECTOR [] CHAR) INT rename =
         "#include <stdio.h>"
         "#define RENAME(old,new) A_int_INT(rename(A_VC_charptr(old),A_VC_charptr(new)))";
 
-PROC (VECTOR [] CHAR, VECTOR [] CHAR) CSTRING tempnam =
-  ALIEN "TEMPNAM"
-        "#include <stdio.h>"
-        "#define TEMPNAM(dir,pfx) (void *)(tempnam(A_VC_charptr(dir),A_VC_charptr(pfx)))";
-
 PROC (CSTRING) VOID free =
   ALIEN "free"
         "#include <stdlib.h>";
@@ -532,28 +527,6 @@ ELSE
 FI;
 
 {
-  TEMPORARY FILENAME
-}
-
-PROC make_temp_filename = (
-  VECTOR [] CHAR directory,
-  VECTOR [] CHAR file_prefix,
-  MESSAGEPROC msg
-) VECTOR [] CHAR:
-IF
-  CSTRING temp = tempnam(directory+2r"0",file_prefix+2r"0");
-  temp IS NIL
-THEN
-  osif message( 99, ("make_temp_filename", errno text), msg);
-  ""
-ELSE
-  REF VECTOR [] CHAR result = MAKERVC CSTRINGTORVC temp;
-  free(temp);
-  result
-FI;
-
-
-{
   FILE STATUS
 }
 
@@ -732,7 +705,7 @@ KEEP
   update_access, update_truncate_access, update_append_access,
 
   set_file_position, get_file_position, update_disk,
-  delete_file, rename_file, make_temp_filename,
+  delete_file, rename_file, 
 
   FILEDETAILS, nil_file_details, get_file_details, is_terminal,
 

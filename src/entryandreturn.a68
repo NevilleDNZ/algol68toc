@@ -39,7 +39,7 @@ COMMENT
 25:08:94  33.001  ELLA  NewConFig Entered in new config system previous version
                                   number 2.13 
 29:03:95  34.002  ELLA  Modcprght Change copyright header
-10:06:03  ??.???  SM    Phoenix Engineering SM: changed main header and macro
+10:06:03  34.003  SL    Phoenix Engineering SL: changed main header and macro
 ??:??:??   ?.???  ????
 COMMENT
 
@@ -221,9 +221,9 @@ BEGIN
 	INT code stream = CODESTREAM current level;
 
 	write c stream
-CO Next but one line changed by Sian Mountbatten at 2013-01-28 20:13:19
+CO Next but one line changed by Phoenix Engineering SL BP65-06-10
 	(("int main (int argc, char **argv)", cnewline CO
-   (("int main(int argc, char **argv, char **envp)", cnewline
+   (("int main(int argc, char *argv[], char *envp[])", cnewline
 	 ),code stream
 	);
 
@@ -240,9 +240,9 @@ CO Next but one line changed by Sian Mountbatten at 2013-01-28 20:13:19
 
         write c stream((
           "#ifdef A_prelude", cnewline,
-CO Next but one line changed by Phoenix Engineering SL 2008-06-10
+CO Next but one line changed by Phoenix Engineering SL BP65-06-10
           "A_prelude(argc,argv);", cnewline,CO
-          "A_prelude(argc,argv,envp);",cnewline,
+			 "A_prelude(argc,argv,envp);",cnewline,
           "#endif", cnewline
           ), code stream);
 

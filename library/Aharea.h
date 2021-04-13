@@ -66,9 +66,30 @@ typedef struct
 }
 AREA;
 
+#if defined(A_GARBAGE_COLLECT_64)
+
+/* Note that in 64-bit architectures structure fields are usually
+   aligned to 64-bit instead of WORDSIZE (32-bit). But is it *always*?  
+
+Set STEPSIZE to either one or two times WORDSIZE depending on you view
+Setting to WORDIZE will make the collector sweep look at all 4-byte aligned addresses for potential pointers, which might be slower
+Setting to twice WORDSIZE will be faster, but if there are 4-byte aligned pointers, will miss them
+*/
+
+/* #define STEPSIZE (WORDSIZE * 2) */
+#define STEPSIZE WORDSIZE
+
+#ifndef STEPAREA
+#define STEPAREA(area)  ((area).size -= (STEPSIZE) , (area).addr = (char *)(area).addr + (STEPSIZE))
+#endif
+
+#else /* 32-bit case */
+
 #ifndef STEPAREA
 #define STEPAREA(area)  ((area).size -= WORDSIZE , (area).addr = (char *)(area).addr + WORDSIZE)
 #endif
+
+#endif /* A_GARBAGE_COLLECT_64 */
 
 #ifndef NILAREA
 #define NILAREA(area) (area.addr == NIL)

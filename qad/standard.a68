@@ -53,7 +53,7 @@ CHANNEL, FILE,
 SIMPLIN, SIMPLOUT,
 
 #spaliens#
-null c charptr, max abs char,
+null c charptr, max abs char, 
 max int, short max int, short short max int,
 infinity, pi,
 
@@ -223,7 +223,7 @@ establish, open, create, close, scratch, lock,
 reset, set,
 no file end, ignore value error, ignore char error,
 
-stand in, stand out, stand error, stand err, stand back,
+stand in, stand out, stand error, stand back,
 kbd channel, arg channel, env channel, mem channel,
 accept, client socket channel, server socket channel,
 stand in channel, stand out channel, stand back channel,

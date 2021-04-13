@@ -1,4 +1,4 @@
-/* UNAME:JPFAOSF */
+/* UNAME:POFAOSF */
 #include <algol68/Asupport.h>
 struct A68t31{
 A68_INT  Number;
@@ -69,7 +69,7 @@ typedef struct A68t47  A68_47 ;    /* PROC(MODE48) BOOL */
 struct A68t48 { A68_INT mode; union {
 struct A68t31  mode1;
 struct A68t34  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t48  A68_48 ;    /* UNION(MODE31,MODE34)  */
 
 A_PROCEDURE(A68_INT ,A68t49,(struct A68t31 ),(struct A68t31 ,void *));
@@ -183,328 +183,328 @@ extern A68_BOOL  YZAAOSF_is_facility_msg(struct A68t31 ,struct A68t39 );
 extern void BAAALIB(void);   /* a68config */
 extern void ZRAAOSF(void);   /* messageproc */
 /* --- end of DECS initialisation functions --- */
-static A68_58   NPFAOSF = {"$Id: iomessages.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
-A_GISVEC(A68_VC ,OPFAOSF,NPFAOSF,60)
-#define PPFAOSF_max_io_messages 35
-static A68_59   RPFAOSF = {"ioprocs"}; 
-A_GISVEC(A68_VC ,SPFAOSF,RPFAOSF,7)
-static A68_61   AQFAOSF = {"* Error writing to log file - closing file \"*\""}; 
-A_GISVEC(A68_VC ,BQFAOSF,AQFAOSF,46)
-static A68_62   CQFAOSF = {"* Error writing to output file - closing file \"*\""}; 
-A_GISVEC(A68_VC ,DQFAOSF,CQFAOSF,49)
-static A68_63   EQFAOSF = {"Input file \"*\" closed "}; 
-A_GISVEC(A68_VC ,FQFAOSF,EQFAOSF,22)
-static A68_64   GQFAOSF = {"Line of text read from file \"*\" is too long"}; 
-A_GISVEC(A68_VC ,HQFAOSF,GQFAOSF,43)
-static A68_65   IQFAOSF = {"Too many END-OF-FILEs encountered on input line"}; 
-A_GISVEC(A68_VC ,JQFAOSF,IQFAOSF,47)
-static A68_66   KQFAOSF = {"END-OF-FILE found on input line"}; 
-A_GISVEC(A68_VC ,LQFAOSF,KQFAOSF,31)
-static A68_67   MQFAOSF = {"Input line too long"}; 
-A_GISVEC(A68_VC ,NQFAOSF,MQFAOSF,19)
-static A68_68   OQFAOSF = {"From *"}; 
-A_GISVEC(A68_VC ,PQFAOSF,OQFAOSF,6)
-static A68_69   QQFAOSF = {"Input error in non-interactive working"}; 
-A_GISVEC(A68_VC ,RQFAOSF,QQFAOSF,38)
-static A68_67   SQFAOSF = {"No input files open"}; 
-A_GISVEC(A68_VC ,TQFAOSF,SQFAOSF,19)
-static A68_70   UQFAOSF = {"Reading from \"*\""}; 
-A_GISVEC(A68_VC ,VQFAOSF,UQFAOSF,16)
-static A68_67   WQFAOSF = {"No input files open"}; 
-A_GISVEC(A68_VC ,XQFAOSF,WQFAOSF,19)
-static A68_71   BRFAOSF = {"No input file to resume"}; 
-A_GISVEC(A68_VC ,CRFAOSF,BRFAOSF,23)
-static A68_72   DRFAOSF = {"Input file not suspended"}; 
+static A68_58   TOFAOSF = {"$Id: iomessages.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
+A_GISVEC(A68_VC ,UOFAOSF,TOFAOSF,60)
+#define VOFAOSF_max_io_messages 35
+static A68_59   XOFAOSF = {"ioprocs"}; 
+A_GISVEC(A68_VC ,YOFAOSF,XOFAOSF,7)
+static A68_61   GPFAOSF = {"* Error writing to log file - closing file \"*\""}; 
+A_GISVEC(A68_VC ,HPFAOSF,GPFAOSF,46)
+static A68_62   IPFAOSF = {"* Error writing to output file - closing file \"*\""}; 
+A_GISVEC(A68_VC ,JPFAOSF,IPFAOSF,49)
+static A68_63   KPFAOSF = {"Input file \"*\" closed "}; 
+A_GISVEC(A68_VC ,LPFAOSF,KPFAOSF,22)
+static A68_64   MPFAOSF = {"Line of text read from file \"*\" is too long"}; 
+A_GISVEC(A68_VC ,NPFAOSF,MPFAOSF,43)
+static A68_65   OPFAOSF = {"Too many END-OF-FILEs encountered on input line"}; 
+A_GISVEC(A68_VC ,PPFAOSF,OPFAOSF,47)
+static A68_66   QPFAOSF = {"END-OF-FILE found on input line"}; 
+A_GISVEC(A68_VC ,RPFAOSF,QPFAOSF,31)
+static A68_67   SPFAOSF = {"Input line too long"}; 
+A_GISVEC(A68_VC ,TPFAOSF,SPFAOSF,19)
+static A68_68   UPFAOSF = {"From *"}; 
+A_GISVEC(A68_VC ,VPFAOSF,UPFAOSF,6)
+static A68_69   WPFAOSF = {"Input error in non-interactive working"}; 
+A_GISVEC(A68_VC ,XPFAOSF,WPFAOSF,38)
+static A68_67   YPFAOSF = {"No input files open"}; 
+A_GISVEC(A68_VC ,ZPFAOSF,YPFAOSF,19)
+static A68_70   AQFAOSF = {"Reading from \"*\""}; 
+A_GISVEC(A68_VC ,BQFAOSF,AQFAOSF,16)
+static A68_67   CQFAOSF = {"No input files open"}; 
+A_GISVEC(A68_VC ,DQFAOSF,CQFAOSF,19)
+static A68_71   HQFAOSF = {"No input file to resume"}; 
+A_GISVEC(A68_VC ,IQFAOSF,HQFAOSF,23)
+static A68_72   JQFAOSF = {"Input file not suspended"}; 
+A_GISVEC(A68_VC ,KQFAOSF,JQFAOSF,24)
+static A68_62   LQFAOSF = {"This command may only be given from an input file"}; 
+A_GISVEC(A68_VC ,MQFAOSF,LQFAOSF,49)
+static A68_73   NQFAOSF = {"Input file suspended due to ONLINE command"}; 
+A_GISVEC(A68_VC ,OQFAOSF,NQFAOSF,42)
+static A68_74   PQFAOSF = {"You are already using a log file, use \"dontlog\" first"}; 
+A_GISVEC(A68_VC ,QQFAOSF,PQFAOSF,53)
+static A68_75   RQFAOSF = {"* log file  \"*\"  started on  *"}; 
+A_GISVEC(A68_VC ,SQFAOSF,RQFAOSF,30)
+static A68_76   TQFAOSF = {"Log file  \"*\"  closed"}; 
+A_GISVEC(A68_VC ,UQFAOSF,TQFAOSF,21)
+static A68_77   VQFAOSF = {"Not using a log file"}; 
+A_GISVEC(A68_VC ,WQFAOSF,VQFAOSF,20)
+static A68_78   XQFAOSF = {"You are already writing a file, use \"dontoutput\" first"}; 
+A_GISVEC(A68_VC ,YQFAOSF,XQFAOSF,54)
+static A68_64   ZQFAOSF = {"COM  * output file  \"*\"  started on  *  MOC"}; 
+A_GISVEC(A68_VC ,ARFAOSF,ZQFAOSF,43)
+static A68_72   BRFAOSF = {"Output file  \"*\"  closed"}; 
+A_GISVEC(A68_VC ,CRFAOSF,BRFAOSF,24)
+static A68_72   DRFAOSF = {"Not using an output file"}; 
 A_GISVEC(A68_VC ,ERFAOSF,DRFAOSF,24)
-static A68_62   FRFAOSF = {"This command may only be given from an input file"}; 
-A_GISVEC(A68_VC ,GRFAOSF,FRFAOSF,49)
-static A68_73   HRFAOSF = {"Input file suspended due to ONLINE command"}; 
-A_GISVEC(A68_VC ,IRFAOSF,HRFAOSF,42)
-static A68_74   JRFAOSF = {"You are already using a log file, use \"dontlog\" first"}; 
-A_GISVEC(A68_VC ,KRFAOSF,JRFAOSF,53)
-static A68_75   LRFAOSF = {"* log file  \"*\"  started on  *"}; 
-A_GISVEC(A68_VC ,MRFAOSF,LRFAOSF,30)
-static A68_76   NRFAOSF = {"Log file  \"*\"  closed"}; 
-A_GISVEC(A68_VC ,ORFAOSF,NRFAOSF,21)
-static A68_77   PRFAOSF = {"Not using a log file"}; 
-A_GISVEC(A68_VC ,QRFAOSF,PRFAOSF,20)
-static A68_78   RRFAOSF = {"You are already writing a file, use \"dontoutput\" first"}; 
-A_GISVEC(A68_VC ,SRFAOSF,RRFAOSF,54)
-static A68_64   TRFAOSF = {"COM  * output file  \"*\"  started on  *  MOC"}; 
-A_GISVEC(A68_VC ,URFAOSF,TRFAOSF,43)
-static A68_72   VRFAOSF = {"Output file  \"*\"  closed"}; 
-A_GISVEC(A68_VC ,WRFAOSF,VRFAOSF,24)
-static A68_72   XRFAOSF = {"Not using an output file"}; 
-A_GISVEC(A68_VC ,YRFAOSF,XRFAOSF,24)
-static A68_79   ZRFAOSF = {"Screen page length too short"}; 
-A_GISVEC(A68_VC ,ASFAOSF,ZRFAOSF,28)
-static A68_80   BSFAOSF = {"Screen page length is * lines"}; 
-A_GISVEC(A68_VC ,CSFAOSF,BSFAOSF,29)
-static A68_71   DSFAOSF = {"Output width too narrow"}; 
-A_GISVEC(A68_VC ,ESFAOSF,DSFAOSF,23)
-static A68_63   FSFAOSF = {"Output  width too wide"}; 
-A_GISVEC(A68_VC ,GSFAOSF,FSFAOSF,22)
-static A68_81   HSFAOSF = {"Output  width is now * characters"}; 
-A_GISVEC(A68_VC ,ISFAOSF,HSFAOSF,33)
-static A68_66   JSFAOSF = {"$$$Output file width too narrow"}; 
-A_GISVEC(A68_VC ,KSFAOSF,JSFAOSF,31)
-static A68_80   LSFAOSF = {"$$$Output file width too wide"}; 
-A_GISVEC(A68_VC ,MSFAOSF,LSFAOSF,29)
-static A68_82   NSFAOSF = {"$$$Output file width is now * characters"}; 
-A_GISVEC(A68_VC ,OSFAOSF,NSFAOSF,40)
-static A68_39  QSFAOSF_io_facility;
-static A68_34 * YSFAOSF_message;
+static A68_79   FRFAOSF = {"Screen page length too short"}; 
+A_GISVEC(A68_VC ,GRFAOSF,FRFAOSF,28)
+static A68_80   HRFAOSF = {"Screen page length is * lines"}; 
+A_GISVEC(A68_VC ,IRFAOSF,HRFAOSF,29)
+static A68_71   JRFAOSF = {"Output width too narrow"}; 
+A_GISVEC(A68_VC ,KRFAOSF,JRFAOSF,23)
+static A68_63   LRFAOSF = {"Output  width too wide"}; 
+A_GISVEC(A68_VC ,MRFAOSF,LRFAOSF,22)
+static A68_81   NRFAOSF = {"Output  width is now * characters"}; 
+A_GISVEC(A68_VC ,ORFAOSF,NRFAOSF,33)
+static A68_66   PRFAOSF = {"$$$Output file width too narrow"}; 
+A_GISVEC(A68_VC ,QRFAOSF,PRFAOSF,31)
+static A68_80   RRFAOSF = {"$$$Output file width too wide"}; 
+A_GISVEC(A68_VC ,SRFAOSF,RRFAOSF,29)
+static A68_82   TRFAOSF = {"$$$Output file width is now * characters"}; 
+A_GISVEC(A68_VC ,URFAOSF,TRFAOSF,40)
+static A68_39  WRFAOSF_io_facility;
+static A68_34 * ESFAOSF_message;
 
-A_STATIC A68_VOID  UPFAOSF_generator(A68_BOOL  TPFAOSF_anonymous, A68_33  *ReturnedValue);
+A_STATIC A68_VOID  APFAOSF_generator(A68_BOOL  ZOFAOSF_anonymous, A68_33  *ReturnedValue);
 
-A68_VOID  SSFAOSF_io_msg(A68_INT  Number, A68_31  *ReturnedValue);
+A68_VOID  YRFAOSF_io_msg(A68_INT  Number, A68_31  *ReturnedValue);
 
-A68_BOOL  WSFAOSF_is_io_msg(A68_31  Msgno);
+A68_BOOL  CSFAOSF_is_io_msg(A68_31  Msgno);
 
-A_STATIC A68_VOID  UPFAOSF_generator(A68_BOOL  TPFAOSF_anonymous, A68_33  *ReturnedValue)
+A_STATIC A68_VOID  APFAOSF_generator(A68_BOOL  ZOFAOSF_anonymous, A68_33  *ReturnedValue)
 { 
-A68_33  VPFAOSF;  /* clause result */
-A68_33  WPFAOSF;  /* OPERATORS - dynamic generator */
+A68_33  BPFAOSF;  /* clause result */
+A68_33  CPFAOSF;  /* OPERATORS - dynamic generator */
 { 
-WPFAOSF.upb = PPFAOSF_max_io_messages ;
-( TPFAOSF_anonymous? A_VLOC(A68_34 ,WPFAOSF): A_VHEAP(A68_34 ,WPFAOSF) );
-VPFAOSF = WPFAOSF;
+CPFAOSF.upb = VOFAOSF_max_io_messages ;
+( ZOFAOSF_anonymous? A_VLOC(A68_34 ,CPFAOSF): A_VHEAP(A68_34 ,CPFAOSF) );
+BPFAOSF = CPFAOSF;
 } 
-*ReturnedValue = (VPFAOSF);
+*ReturnedValue = (BPFAOSF);
 return;
 } 
 #undef NL
 
-A68_VOID  SSFAOSF_io_msg(A68_INT  Number, A68_31  *ReturnedValue)
+A68_VOID  YRFAOSF_io_msg(A68_INT  Number, A68_31  *ReturnedValue)
 { 
-A68_31  TSFAOSF;  /* clause result */
-A68_31  USFAOSF;  /* avoid structure result */
+A68_31  ZRFAOSF;  /* clause result */
+A68_31  ASFAOSF;  /* avoid structure result */
 A_PROC_ENTRY(io_msg);
-XYAAOSF_make_msgno( Number, QSFAOSF_io_facility, &USFAOSF );
-TSFAOSF = USFAOSF;
+XYAAOSF_make_msgno( Number, WRFAOSF_io_facility, &ASFAOSF );
+ZRFAOSF = ASFAOSF;
 A_PROC_EXIT(io_msg);
-*ReturnedValue = (TSFAOSF);
+*ReturnedValue = (ZRFAOSF);
 return;
 } 
 #undef NL
 
-A68_BOOL  WSFAOSF_is_io_msg(A68_31  Msgno)
+A68_BOOL  CSFAOSF_is_io_msg(A68_31  Msgno)
 { 
-A68_BOOL  XSFAOSF;  /* clause result */
+A68_BOOL  DSFAOSF;  /* clause result */
 A_PROC_ENTRY(is_io_msg);
-XSFAOSF = YZAAOSF_is_facility_msg(Msgno, QSFAOSF_io_facility);
+DSFAOSF = YZAAOSF_is_facility_msg(Msgno, WRFAOSF_io_facility);
 A_PROC_EXIT(is_io_msg);
-return( XSFAOSF );
+return( DSFAOSF );
 } 
 #undef NL
  /* line 1: */
  /* line 4: */
-void KPFAOSF(void)   /* initialise DECS iomessages */
+void QOFAOSF(void)   /* initialise DECS iomessages */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","iomessages.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/messageproc.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","iomessages.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/messageproc.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
-A68_39  QPFAOSF;  /* collateral clause result */
-A68_33  XPFAOSF;  /* avoid structure result */
-A68_BOOL * YPFAOSF;  /* YIELD */
-A68_83  ZPFAOSF;  /* collateral clause result */
-A68_VC  YQFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_VC  ZQFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_VC  ARFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_40  PSFAOSF;  /* OPERATORS - istruct -> vector */
-A68_33  ZSFAOSF;  /* forall yield */
-A68_INT  ATFAOSF;  /* forall loop counter */
-A68_34  BTFAOSF;  /* collateral clause result */
-A68_VC  CTFAOSF;  /* OPERATORS - nil -> mode */
+A68_39  WOFAOSF;  /* collateral clause result */
+A68_33  DPFAOSF;  /* avoid structure result */
+A68_BOOL * EPFAOSF;  /* YIELD */
+A68_83  FPFAOSF;  /* collateral clause result */
+A68_VC  EQFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_VC  FQFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_VC  GQFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_40  VRFAOSF;  /* OPERATORS - istruct -> vector */
+A68_33  FSFAOSF;  /* forall yield */
+A68_INT  GSFAOSF;  /* forall loop counter */
+A68_34  HSFAOSF;  /* collateral clause result */
+A68_VC  ISFAOSF;  /* OPERATORS - nil -> mode */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 ZRAAOSF();   /* USE messageproc */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/liba68prel/iomessages.a68";
-A_config.translation_time = "Mon Jan 28 20:24:31 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/iomessages.a68";
+A_config.translation_time = "Wed Apr 21 16:34:02 2021";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "JPFAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.name_seed = "POFAOSF (from seed file) ";
+A_config.spec_change_time = "Wed Apr 21 16:34:02 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS iomessages);
-UEAALIB_a68config(LGAALIB_configinfo, OPFAOSF);
+UEAALIB_a68config(LGAALIB_configinfo, UOFAOSF);
  /* line 48: */
  /* line 50: */
-QPFAOSF.Name = SPFAOSF;
+WOFAOSF.Name = YOFAOSF;
  /* line 51: */
-UPFAOSF_generator( A68_TRUE, &XPFAOSF );
-QPFAOSF.Messages = XPFAOSF;
+APFAOSF_generator( A68_TRUE, &DPFAOSF );
+WOFAOSF.Messages = DPFAOSF;
  /* line 52: */
-YPFAOSF = A_LOC(A68_BOOL ) ;
-(*YPFAOSF) = A68_FALSE ;
-QPFAOSF.Initialised = YPFAOSF;
+EPFAOSF = A_LOC(A68_BOOL ) ;
+(*EPFAOSF) = A68_FALSE ;
+WOFAOSF.Initialised = EPFAOSF;
  /* line 53: */
-ZPFAOSF.data[0].Number = 1;
-ZPFAOSF.data[0].Class = LVAAOSF_user_class;
+FPFAOSF.data[0].Number = 1;
+FPFAOSF.data[0].Class = LVAAOSF_user_class;
  /* line 54: */
-ZPFAOSF.data[0].Text = BQFAOSF;
-ZPFAOSF.data[1].Number = 2;
-ZPFAOSF.data[1].Class = LVAAOSF_user_class;
+FPFAOSF.data[0].Text = HPFAOSF;
+FPFAOSF.data[1].Number = 2;
+FPFAOSF.data[1].Class = LVAAOSF_user_class;
  /* line 55: */
-ZPFAOSF.data[1].Text = DQFAOSF;
-ZPFAOSF.data[2].Number = 3;
-ZPFAOSF.data[2].Class = OVAAOSF_log_class;
+FPFAOSF.data[1].Text = JPFAOSF;
+FPFAOSF.data[2].Number = 3;
+FPFAOSF.data[2].Class = OVAAOSF_log_class;
  /* line 56: */
-ZPFAOSF.data[2].Text = FQFAOSF;
-ZPFAOSF.data[3].Number = 4;
-ZPFAOSF.data[3].Class = LVAAOSF_user_class;
+FPFAOSF.data[2].Text = LPFAOSF;
+FPFAOSF.data[3].Number = 4;
+FPFAOSF.data[3].Class = LVAAOSF_user_class;
  /* line 57: */
-ZPFAOSF.data[3].Text = HQFAOSF;
-ZPFAOSF.data[4].Number = 5;
-ZPFAOSF.data[4].Class = KVAAOSF_fatal_class;
+FPFAOSF.data[3].Text = NPFAOSF;
+FPFAOSF.data[4].Number = 5;
+FPFAOSF.data[4].Class = KVAAOSF_fatal_class;
  /* line 58: */
-ZPFAOSF.data[4].Text = JQFAOSF;
-ZPFAOSF.data[5].Number = 6;
-ZPFAOSF.data[5].Class = LVAAOSF_user_class;
+FPFAOSF.data[4].Text = PPFAOSF;
+FPFAOSF.data[5].Number = 6;
+FPFAOSF.data[5].Class = LVAAOSF_user_class;
  /* line 59: */
-ZPFAOSF.data[5].Text = LQFAOSF;
-ZPFAOSF.data[6].Number = 7;
-ZPFAOSF.data[6].Class = LVAAOSF_user_class;
+FPFAOSF.data[5].Text = RPFAOSF;
+FPFAOSF.data[6].Number = 7;
+FPFAOSF.data[6].Class = LVAAOSF_user_class;
  /* line 60: */
-ZPFAOSF.data[6].Text = NQFAOSF;
-ZPFAOSF.data[7].Number = 8;
-ZPFAOSF.data[7].Class = OVAAOSF_log_class;
+FPFAOSF.data[6].Text = TPFAOSF;
+FPFAOSF.data[7].Number = 8;
+FPFAOSF.data[7].Class = OVAAOSF_log_class;
  /* line 61: */
-ZPFAOSF.data[7].Text = PQFAOSF;
-ZPFAOSF.data[8].Number = 9;
-ZPFAOSF.data[8].Class = KVAAOSF_fatal_class;
+FPFAOSF.data[7].Text = VPFAOSF;
+FPFAOSF.data[8].Number = 9;
+FPFAOSF.data[8].Class = KVAAOSF_fatal_class;
  /* line 62: */
-ZPFAOSF.data[8].Text = RQFAOSF;
-ZPFAOSF.data[9].Number = 10;
-ZPFAOSF.data[9].Class = LVAAOSF_user_class;
+FPFAOSF.data[8].Text = XPFAOSF;
+FPFAOSF.data[9].Number = 10;
+FPFAOSF.data[9].Class = LVAAOSF_user_class;
  /* line 64: */
-ZPFAOSF.data[9].Text = TQFAOSF;
-ZPFAOSF.data[10].Number = 11;
-ZPFAOSF.data[10].Class = OVAAOSF_log_class;
+FPFAOSF.data[9].Text = ZPFAOSF;
+FPFAOSF.data[10].Number = 11;
+FPFAOSF.data[10].Class = OVAAOSF_log_class;
  /* line 65: */
-ZPFAOSF.data[10].Text = VQFAOSF;
-ZPFAOSF.data[11].Number = 12;
-ZPFAOSF.data[11].Class = LVAAOSF_user_class;
+FPFAOSF.data[10].Text = BQFAOSF;
+FPFAOSF.data[11].Number = 12;
+FPFAOSF.data[11].Class = LVAAOSF_user_class;
  /* line 66: */
-ZPFAOSF.data[11].Text = XQFAOSF;
-ZPFAOSF.data[12].Number = 13;
-ZPFAOSF.data[12].Class = OVAAOSF_log_class;
+FPFAOSF.data[11].Text = DQFAOSF;
+FPFAOSF.data[12].Number = 13;
+FPFAOSF.data[12].Class = OVAAOSF_log_class;
  /* line 67: */
-ZPFAOSF.data[12].Text = A_HVEC(YQFAOSF,'*',A68_CHAR );
-ZPFAOSF.data[13].Number = 14;
-ZPFAOSF.data[13].Class = OVAAOSF_log_class;
+FPFAOSF.data[12].Text = A_HVEC(EQFAOSF,'*',A68_CHAR );
+FPFAOSF.data[13].Number = 14;
+FPFAOSF.data[13].Class = OVAAOSF_log_class;
  /* line 68: */
-ZPFAOSF.data[13].Text = A_HVEC(ZQFAOSF,'*',A68_CHAR );
-ZPFAOSF.data[14].Number = 15;
-ZPFAOSF.data[14].Class = TVAAOSF_diag1_class;
+FPFAOSF.data[13].Text = A_HVEC(FQFAOSF,'*',A68_CHAR );
+FPFAOSF.data[14].Number = 15;
+FPFAOSF.data[14].Class = TVAAOSF_diag1_class;
  /* line 69: */
-ZPFAOSF.data[14].Text = A_HVEC(ARFAOSF,'*',A68_CHAR );
-ZPFAOSF.data[15].Number = 16;
-ZPFAOSF.data[15].Class = LVAAOSF_user_class;
+FPFAOSF.data[14].Text = A_HVEC(GQFAOSF,'*',A68_CHAR );
+FPFAOSF.data[15].Number = 16;
+FPFAOSF.data[15].Class = LVAAOSF_user_class;
  /* line 70: */
-ZPFAOSF.data[15].Text = CRFAOSF;
-ZPFAOSF.data[16].Number = 17;
-ZPFAOSF.data[16].Class = LVAAOSF_user_class;
+FPFAOSF.data[15].Text = IQFAOSF;
+FPFAOSF.data[16].Number = 17;
+FPFAOSF.data[16].Class = LVAAOSF_user_class;
  /* line 71: */
-ZPFAOSF.data[16].Text = ERFAOSF;
-ZPFAOSF.data[17].Number = 18;
-ZPFAOSF.data[17].Class = LVAAOSF_user_class;
+FPFAOSF.data[16].Text = KQFAOSF;
+FPFAOSF.data[17].Number = 18;
+FPFAOSF.data[17].Class = LVAAOSF_user_class;
  /* line 72: */
-ZPFAOSF.data[17].Text = GRFAOSF;
-ZPFAOSF.data[18].Number = 19;
-ZPFAOSF.data[18].Class = OVAAOSF_log_class;
+FPFAOSF.data[17].Text = MQFAOSF;
+FPFAOSF.data[18].Number = 19;
+FPFAOSF.data[18].Class = OVAAOSF_log_class;
  /* line 73: */
-ZPFAOSF.data[18].Text = IRFAOSF;
-ZPFAOSF.data[19].Number = 20;
-ZPFAOSF.data[19].Class = LVAAOSF_user_class;
+FPFAOSF.data[18].Text = OQFAOSF;
+FPFAOSF.data[19].Number = 20;
+FPFAOSF.data[19].Class = LVAAOSF_user_class;
  /* line 75: */
-ZPFAOSF.data[19].Text = KRFAOSF;
-ZPFAOSF.data[20].Number = 21;
-ZPFAOSF.data[20].Class = OVAAOSF_log_class;
+FPFAOSF.data[19].Text = QQFAOSF;
+FPFAOSF.data[20].Number = 21;
+FPFAOSF.data[20].Class = OVAAOSF_log_class;
  /* line 76: */
-ZPFAOSF.data[20].Text = MRFAOSF;
-ZPFAOSF.data[21].Number = 22;
-ZPFAOSF.data[21].Class = OVAAOSF_log_class;
+FPFAOSF.data[20].Text = SQFAOSF;
+FPFAOSF.data[21].Number = 22;
+FPFAOSF.data[21].Class = OVAAOSF_log_class;
  /* line 77: */
-ZPFAOSF.data[21].Text = ORFAOSF;
-ZPFAOSF.data[22].Number = 23;
-ZPFAOSF.data[22].Class = LVAAOSF_user_class;
+FPFAOSF.data[21].Text = UQFAOSF;
+FPFAOSF.data[22].Number = 23;
+FPFAOSF.data[22].Class = LVAAOSF_user_class;
  /* line 78: */
-ZPFAOSF.data[22].Text = QRFAOSF;
-ZPFAOSF.data[23].Number = 24;
-ZPFAOSF.data[23].Class = LVAAOSF_user_class;
+FPFAOSF.data[22].Text = WQFAOSF;
+FPFAOSF.data[23].Number = 24;
+FPFAOSF.data[23].Class = LVAAOSF_user_class;
  /* line 79: */
-ZPFAOSF.data[23].Text = SRFAOSF;
-ZPFAOSF.data[24].Number = 25;
-ZPFAOSF.data[24].Class = OVAAOSF_log_class;
+FPFAOSF.data[23].Text = YQFAOSF;
+FPFAOSF.data[24].Number = 25;
+FPFAOSF.data[24].Class = OVAAOSF_log_class;
  /* line 80: */
-ZPFAOSF.data[24].Text = URFAOSF;
-ZPFAOSF.data[25].Number = 26;
-ZPFAOSF.data[25].Class = OVAAOSF_log_class;
+FPFAOSF.data[24].Text = ARFAOSF;
+FPFAOSF.data[25].Number = 26;
+FPFAOSF.data[25].Class = OVAAOSF_log_class;
  /* line 81: */
-ZPFAOSF.data[25].Text = WRFAOSF;
-ZPFAOSF.data[26].Number = 27;
-ZPFAOSF.data[26].Class = LVAAOSF_user_class;
+FPFAOSF.data[25].Text = CRFAOSF;
+FPFAOSF.data[26].Number = 27;
+FPFAOSF.data[26].Class = LVAAOSF_user_class;
  /* line 82: */
-ZPFAOSF.data[26].Text = YRFAOSF;
-ZPFAOSF.data[27].Number = 28;
-ZPFAOSF.data[27].Class = LVAAOSF_user_class;
+FPFAOSF.data[26].Text = ERFAOSF;
+FPFAOSF.data[27].Number = 28;
+FPFAOSF.data[27].Class = LVAAOSF_user_class;
  /* line 83: */
-ZPFAOSF.data[27].Text = ASFAOSF;
-ZPFAOSF.data[28].Number = 29;
-ZPFAOSF.data[28].Class = OVAAOSF_log_class;
+FPFAOSF.data[27].Text = GRFAOSF;
+FPFAOSF.data[28].Number = 29;
+FPFAOSF.data[28].Class = OVAAOSF_log_class;
  /* line 84: */
-ZPFAOSF.data[28].Text = CSFAOSF;
-ZPFAOSF.data[29].Number = 30;
-ZPFAOSF.data[29].Class = LVAAOSF_user_class;
+FPFAOSF.data[28].Text = IRFAOSF;
+FPFAOSF.data[29].Number = 30;
+FPFAOSF.data[29].Class = LVAAOSF_user_class;
  /* line 86: */
-ZPFAOSF.data[29].Text = ESFAOSF;
-ZPFAOSF.data[30].Number = 31;
-ZPFAOSF.data[30].Class = LVAAOSF_user_class;
+FPFAOSF.data[29].Text = KRFAOSF;
+FPFAOSF.data[30].Number = 31;
+FPFAOSF.data[30].Class = LVAAOSF_user_class;
  /* line 87: */
-ZPFAOSF.data[30].Text = GSFAOSF;
-ZPFAOSF.data[31].Number = 32;
-ZPFAOSF.data[31].Class = OVAAOSF_log_class;
+FPFAOSF.data[30].Text = MRFAOSF;
+FPFAOSF.data[31].Number = 32;
+FPFAOSF.data[31].Class = OVAAOSF_log_class;
  /* line 88: */
-ZPFAOSF.data[31].Text = ISFAOSF;
-ZPFAOSF.data[32].Number = 33;
-ZPFAOSF.data[32].Class = LVAAOSF_user_class;
+FPFAOSF.data[31].Text = ORFAOSF;
+FPFAOSF.data[32].Number = 33;
+FPFAOSF.data[32].Class = LVAAOSF_user_class;
  /* line 89: */
-ZPFAOSF.data[32].Text = KSFAOSF;
-ZPFAOSF.data[33].Number = 34;
-ZPFAOSF.data[33].Class = LVAAOSF_user_class;
+FPFAOSF.data[32].Text = QRFAOSF;
+FPFAOSF.data[33].Number = 34;
+FPFAOSF.data[33].Class = LVAAOSF_user_class;
  /* line 90: */
-ZPFAOSF.data[33].Text = MSFAOSF;
-ZPFAOSF.data[34].Number = 35;
-ZPFAOSF.data[34].Class = OVAAOSF_log_class;
+FPFAOSF.data[33].Text = SRFAOSF;
+FPFAOSF.data[34].Number = 35;
+FPFAOSF.data[34].Class = OVAAOSF_log_class;
  /* line 91: */
-ZPFAOSF.data[34].Text = OSFAOSF;
-QPFAOSF.Setup = A_HISVEC(PSFAOSF,ZPFAOSF,35,A68_41 );
-QSFAOSF_io_facility = QPFAOSF;
+FPFAOSF.data[34].Text = URFAOSF;
+WOFAOSF.Setup = A_HISVEC(VRFAOSF,FPFAOSF,35,A68_41 );
+WRFAOSF_io_facility = WOFAOSF;
  /* line 93: */
  /* line 95: */
  /* line 97: */
  /* line 98: */
-ZSFAOSF = QSFAOSF_io_facility.Messages ;
-ATFAOSF = ZSFAOSF.upb -1;
-YSFAOSF_message = ZSFAOSF.data;
-for (;ATFAOSF-- >= 0;
-(YSFAOSF_message++
+FSFAOSF = WRFAOSF_io_facility.Messages ;
+GSFAOSF = FSFAOSF.upb -1;
+ESFAOSF_message = FSFAOSF.data;
+for (;GSFAOSF-- >= 0;
+(ESFAOSF_message++
 ) )
 {
-BTFAOSF.Msgno.Number = 0;
-BTFAOSF.Msgno.Facility = (A68_32 *)A68_NIL;
-BTFAOSF.Msgno.Class = 0X0U;
-BTFAOSF.Text = A_VVAC(CTFAOSF);
-(*YSFAOSF_message) = BTFAOSF;
+HSFAOSF.Msgno.Number = 0;
+HSFAOSF.Msgno.Facility = (A68_32 *)A68_NIL;
+HSFAOSF.Msgno.Class = 0X0U;
+HSFAOSF.Text = A_VVAC(ISFAOSF);
+(*ESFAOSF_message) = HSFAOSF;
 }
  /* line 100: */
  /* line 101: */

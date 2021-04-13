@@ -367,7 +367,7 @@ void Agc_sweep(SEGCTLPTR *heap_segments)
 		
 	/* care needed because of possible overlap between new and old element header */
 		
-	REPORT5(6,"Agc_collect: adding free list element (0x%p -> 0x%p : size %d) after elpp 0x%p, before 0x%p\n",
+	REPORT5(6,"Agc_collect: adding free list element (0x%p -> 0x%p : size %ld) after elpp 0x%p, before 0x%p\n",
 		(void *)freestart,(void *)freeend,(char *)freeend-(char *)freestart,(void *)elpp,(void *)elp);
 		
 	ASSERT( IS_CLR(freestart,SEGELSIZE(segctlp),(char *)freeend-(char *)freestart)

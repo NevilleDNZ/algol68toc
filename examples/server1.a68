@@ -4,17 +4,20 @@ BEGIN
 
 FILE server socket;
 
-IF INT r=establish(server socket,"server_socket",server socket channel,af unix,0,0);
+IF INT r=establish(server socket,"server_socket",server socket channel,af unix,0,1024);
    r/=0
-THEN put(stand err,("server1: ",error text(r),newline));  exit(r)
+THEN put(stand error,("server1: ",error text(r),newline));  exit(r)
 FI;
 
 DO
-	CHAR ch;  print(("server waiting",newline));
+	INT ch;  print(("server waiting",newline));
 	REF FILE client socket = accept(server socket);
-	get(client socket,ch);
-	ch:=REPR(ABS ch+1);
-	put(client socket,ch);
+        print(("server accepted",newline));
+        get bin(client socket,ch);
+	print(("from client = ",ch,newline));
+	COMMENT ch:=REPR(ABS ch+1); COMMENT
+	ch:=ch+1;
+	put bin(client socket,ch);
 	close(client socket)
 OD
 END

@@ -77,7 +77,7 @@ ALLOC_CACHE *Agc_cache;
 ** The cache itself, initialised on demand
 */
 
-ALLOC_CACHE Agc_1alloc_cache[A_MAX_MAX_CACHE/sizeof(A68_INT)];
+ALLOC_CACHE Agc_1alloc_cache[A_MAX_MAX_CACHE/sizeof(A68_INT)] = {0};
 
 /*
 ** Fill a cache slot

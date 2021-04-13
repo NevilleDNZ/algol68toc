@@ -122,7 +122,7 @@ struct A68t59 { A68_INT mode; union {
 struct A68t56  mode1;
 struct A68t60  mode2;
 struct A68t61  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t59  A68_59 ;    /* UNION(MODE56,MODE60,MODE61)  */
 struct A68t64{
 A68_INT  Nochars;
@@ -286,7 +286,7 @@ struct A68t81  mode22;
 struct A68t56  mode23;
 struct A68t60  mode24;
 struct A68t61  mode25;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t67  A68_67 ;    /* UNION(MODE68,INT,BOOL,MODE66,MODE69,MODE70,MODE54,MODE71,MODE72,MODE73,MODE65,MODE74,MODE75,MODE76,MODE77,MODE55,MODE78,MODE63,MODE58,MODE79,MODE80,MODE81,MODE56,MODE60,MODE61,VOID)  */
 struct A68t82 { A68_INT mode; union {
 struct A68t68  mode1;
@@ -298,7 +298,7 @@ struct A68t70  mode6;
 struct A68t54  mode7;
 struct A68t71  mode8;
 struct A68t72  mode9;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t82  A68_82 ;    /* UNION(MODE68,INT,BOOL,MODE66,MODE69,MODE70,MODE54,MODE71,MODE72)  */
 struct A68t83 { A68_INT mode; union {
 struct A68t68  mode1;
@@ -320,7 +320,7 @@ struct A68t55  mode16;
 struct A68t78  mode17;
 struct A68t63  mode18;
 struct A68t58  mode19;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t83  A68_83 ;    /* UNION(MODE68,INT,BOOL,MODE66,MODE69,MODE70,MODE54,MODE71,MODE72,MODE73,MODE65,MODE74,MODE75,MODE76,MODE77,MODE55,MODE78,MODE63,MODE58)  */
 
 A_PROCEDURE(A68_VOID ,A68t84,(A68_INT ),(A68_INT ,void *));
@@ -365,7 +365,7 @@ A68_VC  mode6;
 struct A68t69  mode7;
 struct A68t68  mode8;
 struct A68t91  mode9;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t87  A68_87 ;    /* UNION(LONG BITS,MODE88,VOID,MODE89,MODE90,MODE26,MODE69,MODE68,MODE91)  */
 struct A68t86{
 A68_INT  Mode;
@@ -2946,9 +2946,9 @@ void HWWACTR(void)   /* initialise DECS mnemonics */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","-dir",".","mnemonics.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","./identifiers.m","./incimperatives.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/usefulops.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","-dir",".","mnemonics.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","./identifiers.m","./incimperatives.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/usefulops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_116  XWWACTR;  /* procedure value */
@@ -2963,11 +2963,11 @@ NKVACTR();   /* USE identifiers */
 UAAACTR();   /* USE incimperatives */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/src/mnemonics.a68";
-A_config.translation_time = "Mon Jan 28 20:24:33 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/src/mnemonics.a68";
+A_config.translation_time = "Wed Apr 21 16:34:05 2021";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "GWWACTR (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.spec_change_time = "Wed Apr 21 16:34:05 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

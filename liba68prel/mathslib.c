@@ -1,4 +1,4 @@
-/* UNAME:YTCAOSF */
+/* UNAME:ETCAOSF */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_VOID ,A68t31,(A68_BOOL ,A68_VC *),(A68_BOOL ,A68_VC *,void *));
@@ -42,75 +42,75 @@ static A68_VC  A_configinfo;
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
 /* --- end of DECS initialisation functions --- */
-static A68_38   CUCAOSF = {"$Id: mathslib.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
-A_GISVEC(A68_VC ,DUCAOSF,CUCAOSF,58)
+static A68_38   ITCAOSF = {"$Id: mathslib.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
+A_GISVEC(A68_VC ,JTCAOSF,ITCAOSF,58)
 #include <math.h>
 
-#define EUCAOSF_sqrt sqrt
+#define KTCAOSF_sqrt sqrt
 #include <math.h>
 
-#define FUCAOSF_exp exp
+#define LTCAOSF_exp exp
 #include <math.h>
 
-#define GUCAOSF_ln log
+#define MTCAOSF_ln log
 #include <math.h>
 
-#define HUCAOSF_cos cos
+#define NTCAOSF_cos cos
 #include <math.h>
 
-#define IUCAOSF_sin sin
+#define OTCAOSF_sin sin
 #include <math.h>
 
-#define JUCAOSF_tan tan
+#define PTCAOSF_tan tan
 #include <math.h>
 
-#define KUCAOSF_arccos acos
+#define QTCAOSF_arccos acos
 #include <math.h>
 
-#define LUCAOSF_arcsin asin
+#define RTCAOSF_arcsin asin
 #include <math.h>
 
-#define MUCAOSF_arctan atan
-static A68_REAL  NUCAOSF_hp;
-A68_REAL  QUCAOSF_halfpi;
-A68_REAL  RUCAOSF_pi;
-A68_REAL  SUCAOSF_twopi;
+#define STCAOSF_arctan atan
+static A68_REAL  TTCAOSF_hp;
+A68_REAL  WTCAOSF_halfpi;
+A68_REAL  XTCAOSF_pi;
+A68_REAL  YTCAOSF_twopi;
 
-A_STATIC A68_VOID  OUCAOSF_anonymous(void);
+A_STATIC A68_VOID  UTCAOSF_anonymous(void);
 
-A_STATIC A68_VOID  OUCAOSF_anonymous(void)
+A_STATIC A68_VOID  UTCAOSF_anonymous(void)
 { 
-NUCAOSF_hp = (2.0*MUCAOSF_arctan(1.0));
+TTCAOSF_hp = (2.0*STCAOSF_arctan(1.0));
 return;
 } 
 #undef NL
  /* line 1: */
  /* line 3: */
-void ZTCAOSF(void)   /* initialise DECS mathslib */
+void FTCAOSF(void)   /* initialise DECS mathslib */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","mathslib.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","mathslib.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
-A68_33  PUCAOSF;  /* procedure value */
+A68_33  VTCAOSF;  /* procedure value */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/liba68prel/mathslib.a68";
-A_config.translation_time = "Mon Jan 28 20:24:31 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/mathslib.a68";
+A_config.translation_time = "Wed Apr 21 16:34:02 2021";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "YTCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.name_seed = "ETCAOSF (from seed file) ";
+A_config.spec_change_time = "Wed Apr 21 16:34:02 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS mathslib);
-UEAALIB_a68config(LGAALIB_configinfo, DUCAOSF);
+UEAALIB_a68config(LGAALIB_configinfo, JTCAOSF);
  /* line 42: */
  /* line 43: */
  /* line 44: */
@@ -121,14 +121,14 @@ UEAALIB_a68config(LGAALIB_configinfo, DUCAOSF);
  /* line 49: */
  /* line 50: */
  /* line 52: */
-PUCAOSF.fn.fn_global = OUCAOSF_anonymous;
-PUCAOSF.nonlocals = A68_NIL;
-ABAALIB_a68init(PUCAOSF);
+VTCAOSF.fn.fn_global = UTCAOSF_anonymous;
+VTCAOSF.nonlocals = A68_NIL;
+ABAALIB_a68init(VTCAOSF);
  /* line 54: */
-QUCAOSF_halfpi = NUCAOSF_hp;
-RUCAOSF_pi = (2.0*QUCAOSF_halfpi);
+WTCAOSF_halfpi = TTCAOSF_hp;
+XTCAOSF_pi = (2.0*WTCAOSF_halfpi);
  /* line 56: */
-SUCAOSF_twopi = (2.0*RUCAOSF_pi);
+YTCAOSF_twopi = (2.0*XTCAOSF_pi);
  /* line 58: */
 A_PROC_EXIT(DECS mathslib);
 } 

@@ -1,10 +1,41 @@
 #!/usr/bin/make
 
+#------------ Compiler choice ---------
+#--- Allow for different flags if required ---
+
+CC="none"
+ARCH="$(shell arch)"
+OS="$(shell uname -s)"
+
+ifeq ($(ARCH), "i386")
+CC=gcc
+endif
+
+ifeq ($(ARCH), "i686")
+CC=gcc
+endif
+
+ifeq ($(ARCH), "x86_64")
+CC=gcc
+endif
+
+ifeq ($(ARCH), "armv7l")
+CC=gcc
+endif
+
+ifeq ($(ARCH), "aarch64")
+CC=gcc
+endif
+
+ifeq ($(CC), "none")
+$(error Cannot determine C compiler to use)
+endif
+
 #------------ Debug value -------------
-DEBUG=no
+DEBUG=yes
 #------------ Debian values -----------
 DESTDIR=
-VERSION=1.16
+VERSION=1.20
 NODEPENDS=
 PKGDIR=$(DESTDIR)/usr/share/algol68toc
 DOCDIR=$(DESTDIR)/usr/share/doc/algol68toc
@@ -18,7 +49,7 @@ APPDIR=$(DESTDIR)/usr/share/applications
 #------------- Absolute directories ------------
 TOP:=$(shell pwd)
 VPATH:=$(TOP)/include
-INCS:=-I $(VPATH)
+HERE:=$(shell basename `pwd`)
 
 #------------- sub-directories --------------
 ACD=$(TOP)/a68config
@@ -29,11 +60,11 @@ EXD=$(TOP)/examples
 LBD=$(TOP)/library
 LPD=$(TOP)/liba68prel
 QAD=$(TOP)/qad
-TOD=$(TOP)/tools
 
 ADIRS=a68config liba68prel src qad
 CDIRS=library a68config liba68prel src
-DDIRS=doc data examples tools
+DDIRS=doc data examples scripts
+INCS:=-I $(VPATH)
 
 #------------- a68toc environment --------------
 A68_GC_POLICY:=1
@@ -44,10 +75,8 @@ A68_LIB:=$(ACD)
 #------------ Flags ------------
 ifeq ($(DEBUG),no)
 override CFLAGS=-O0
-STRIP=-s
 else
 override CFLAGS=-O0 -g
-STRIP=
 endif
 NOR=$(CFLAGS) $(INCS)
 CTSTAR=59LR
@@ -57,6 +86,7 @@ QADFLAGS=-v -s -uname seedfile -staredit $(QADSTAR)
 
 #------------ Programs -----------
 ALGOL=$(CTD)/a68toc
+
 SHELL=/bin/sh
 INSTALL=$(shell which install) -g root -o root
 INSTALLDATA=$(INSTALL) -m 644
@@ -68,7 +98,12 @@ export
 #-------------- Rules --------------
 .PHONY : clean info uninstall
 
-all : c-stamp q-stamp d-stamp
+#-----Don't remake the documentation all the time----
+#all : c-stamp q-stamp d-stamp
+all : c-stamp q-stamp
+
+remove :
+	for d in $(ADIRS); do $(RM) $$d/*.c $$d/*.m; done
 
 Translate : remove nameseed
 	-for d in $(ADIRS); do $(MAKE) -C $$d Translate; done
@@ -83,10 +118,10 @@ q-stamp : nameseed
 
 d-stamp :
 	-$(MAKE) -C $(DOD)
-	-$(MAKE) -C $(TOD)
 	touch d-stamp
 
-install : c-stamp q-stamp d-stamp
+#install : c-stamp q-stamp d-stamp
+install : c-stamp q-stamp
 	$(INSTALL) -m 755 -d $(PKGDIR)
 	$(INSTALL) -m 755 -d $(INCDIR)
 	$(INSTALL) -m 755 -d $(INCDIR)/linux
@@ -102,29 +137,40 @@ install : c-stamp q-stamp d-stamp
 	for d in include library $(ADIRS) $(DDIRS); do $(MAKE) -C $$d install; done
 
 info :
-	install-info --quiet $(INFODIR)/ctrans.info.gz
+	install-info --quiet $(INFODIR)/ctrans.info.gz $(INFODIR)/dir
 
 uninstall :
 	-$(RM) $(BINDIR)/a68toc $(BINDIR)/resetseed $(BINDIR)/ca
-	-install-info --quiet --remove $(INFODIR)/ctrans.info.gz
+	-install-info --quiet --remove $(INFODIR)/ctrans.info.gz $(INFODIR)/dir
 	-$(RM) -r $(PKGDIR) $(DOCDIR)
 	-$(RM) $(INFODIR)/ctrans.info.gz $(LIBDIR)/liba68.a $(LIBDIR)/liba68s.a \
 		$(MANDIR)/a68toc.1.gz $(MANDIR)/ca.1.gz
 
 dist-clean: clean
 	-$(RM) -v c-stamp q-stamp d-stamp
-	-$(RM) -r DEBIAN debian/tmp debian/algol68toc
+	-$(RM) -r debian/tmp debian/algol68toc
 
 nameseed : a68config/rctr liba68prel/rctr src/rctr qad/rctr
 	for d in $(ADIRS); do cp $$d/rctr $$d/nameseed; done
 
-remove :
-	for d in $(ADIRS); do $(RM) $$d/*.c $$d/*.m; done
+savepoint:
+	COPYFILE_DISABLE=1 tar zcvf ../$(HERE).save.a68.tar.gz .
+
+restore:
+	tar zxvf ../$(HERE).save.tar.gz
 
 clean:
 	find $(TOP) \( -name '*~' -o -name '*.asv' -o -name '*##' \) \
 		-exec $(RM) -v '{}' ';'
 	-for d in $(ADIRS) $(DDIRS) library; do $(MAKE) -C $$d clean; done
+
+realclean:
+	find $(TOP) \( -name '*~' -o -name '*.asv' -o -name '*##' \) \
+		-exec $(RM) -v '{}' ';'
+	-for d in $(ADIRS) $(DDIRS) library; do $(MAKE) -C $$d realclean; done
+
+# Revision 1.20  2021/04/21 Neil Matthew
+# Port to 64-bit and ARM architectures
 
 # $Log: Makefile,v $
 # Revision 1.12  2012/01/04 17:18:45  sian

@@ -4,14 +4,14 @@ BEGIN
 
 FILE f;
 
-IF INT r=establish(f,"server_socket",client socket channel,af unix,0,0);
+IF INT r=establish(f,"server_socket",client socket channel,af unix,0,1024);
    r/=0
-THEN put(stand err,("client1: ",error text(r),newline));  exit(r)
+THEN put(stand error,("client1: ",error text(r),newline));  exit(r)
 FI;
 
-CHAR ch:="A";  put(f,ch);  get(f,ch);
+INT ch:=100;  print(("client putting ",ch,newline)); put bin(f,ch);  print(("client getting",newline)); get bin(f,ch);
 
-print(("char from server = ",ch,newline));
+print(("from server = ",ch,newline));
 close(f)
 
 END

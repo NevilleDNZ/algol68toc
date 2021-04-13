@@ -184,10 +184,7 @@ typedef struct A68t86  A68_86 ;    /* PROC(MODE26,MODE69) MODE75 */
 
 A_PROCEDURE(A68_VOID ,A68t87,(A68_VC ,A68_VC ,struct A68t69 ,struct A68t75 *),(A68_VC ,A68_VC ,struct A68t69 ,struct A68t75 *,void *));
 typedef struct A68t87  A68_87 ;    /* PROC(MODE26,MODE26,MODE69) MODE75 */
-
-A_PROCEDURE(A68_VOID ,A68t88,(A68_VC ,A68_VC ,struct A68t69 ,A68_VC *),(A68_VC ,A68_VC ,struct A68t69 ,A68_VC *,void *));
-typedef struct A68t88  A68_88 ;    /* PROC(MODE26,MODE26,MODE69) MODE26 */
-struct A68t89{
+struct A68t88{
 A68_SBITS  Permissions;
 A_PAD_SBITS(PAD_5)
 A68_LBITS  Inode;
@@ -209,171 +206,171 @@ A_PAD_LINT(PAD_13)
 A68_LINT  Status_modified;
 A_PAD_LINT(PAD_14)
 };
-typedef struct A68t89  A68_89 ;    /* STRUCT(SHORT BITS,LONG BITS,SHORT INT,SHORT INT,SHORT BITS,SHORT BITS,LONG INT,LONG INT,LONG INT,LONG INT)  */
-struct A68t91 ;
+typedef struct A68t88  A68_88 ;    /* STRUCT(SHORT BITS,LONG BITS,SHORT INT,SHORT INT,SHORT BITS,SHORT BITS,LONG INT,LONG INT,LONG INT,LONG INT)  */
+struct A68t90 ;
 
-A_PROCEDURE(struct A68t89 *,A68t90,(struct A68t91 ,struct A68t69 ),(struct A68t91 ,struct A68t69 ,void *));
-typedef struct A68t90  A68_90 ;    /* PROC(MODE91,MODE69) REF MODE89 */
-struct A68t91 { A68_INT mode; union {
+A_PROCEDURE(struct A68t88 *,A68t89,(struct A68t90 ,struct A68t69 ),(struct A68t90 ,struct A68t69 ,void *));
+typedef struct A68t89  A68_89 ;    /* PROC(MODE90,MODE69) REF MODE88 */
+struct A68t90 { A68_INT mode; union {
 struct A68t74 * mode1;
 A68_VC  mode2;
-} data; };
-typedef struct A68t91  A68_91 ;    /* UNION(REF MODE74,MODE26)  */
+} data __attribute__ ((__aligned__(8))); };
+typedef struct A68t90  A68_90 ;    /* UNION(REF MODE74,MODE26)  */
 
-A_PROCEDURE(A68_BOOL ,A68t92,(struct A68t74 *),(struct A68t74 *,void *));
-typedef struct A68t92  A68_92 ;    /* PROC(REF MODE74) BOOL */
+A_PROCEDURE(A68_BOOL ,A68t91,(struct A68t74 *),(struct A68t74 *,void *));
+typedef struct A68t91  A68_91 ;    /* PROC(REF MODE74) BOOL */
 
-A_PROCEDURE(A68_BITS *,A68t93,(A68_VC ,struct A68t69 ),(A68_VC ,struct A68t69 ,void *));
-typedef struct A68t93  A68_93 ;    /* PROC(MODE26,MODE69) REF BITS */
+A_PROCEDURE(A68_BITS *,A68t92,(A68_VC ,struct A68t69 ),(A68_VC ,struct A68t69 ,void *));
+typedef struct A68t92  A68_92 ;    /* PROC(MODE26,MODE69) REF BITS */
 
-A_PROCEDURE(A68_VOID ,A68t94,(A68_BITS *,struct A68t69 ),(A68_BITS *,struct A68t69 ,void *));
-typedef struct A68t94  A68_94 ;    /* PROC(REF BITS,MODE69) VOID */
+A_PROCEDURE(A68_VOID ,A68t93,(A68_BITS *,struct A68t69 ),(A68_BITS *,struct A68t69 ,void *));
+typedef struct A68t93  A68_93 ;    /* PROC(REF BITS,MODE69) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t95,(A68_BITS *,struct A68t69 ,A68_VC *),(A68_BITS *,struct A68t69 ,A68_VC *,void *));
-typedef struct A68t95  A68_95 ;    /* PROC(REF BITS,MODE69) REF MODE26 */
+A_PROCEDURE(A68_VOID ,A68t94,(A68_BITS *,struct A68t69 ,A68_VC *),(A68_BITS *,struct A68t69 ,A68_VC *,void *));
+typedef struct A68t94  A68_94 ;    /* PROC(REF BITS,MODE69) REF MODE26 */
 
-A_PROCEDURE(A68_VOID ,A68t96,(A68_VC *),(A68_VC *,void *));
-typedef struct A68t96  A68_96 ;    /* PROC MODE26 */
+A_PROCEDURE(A68_VOID ,A68t95,(A68_VC *),(A68_VC *,void *));
+typedef struct A68t95  A68_95 ;    /* PROC MODE26 */
 
-A_PROCEDURE(A68_LINT ,A68t97,(void),(void *));
-typedef struct A68t97  A68_97 ;    /* PROC LONG INT */
+A_PROCEDURE(A68_LINT ,A68t96,(void),(void *));
+typedef struct A68t96  A68_96 ;    /* PROC LONG INT */
 
-A_PROCEDURE(A68_VOID ,A68t98,(A68_LINT ,A68_VC *),(A68_LINT ,A68_VC *,void *));
-typedef struct A68t98  A68_98 ;    /* PROC(LONG INT) MODE26 */
+A_PROCEDURE(A68_VOID ,A68t97,(A68_LINT ,A68_VC *),(A68_LINT ,A68_VC *,void *));
+typedef struct A68t97  A68_97 ;    /* PROC(LONG INT) MODE26 */
 
-A_PROCEDURE(A68_INT ,A68t99,(A68_VC ,struct A68t69 ),(A68_VC ,struct A68t69 ,void *));
-typedef struct A68t99  A68_99 ;    /* PROC(MODE26,MODE69) INT */
+A_PROCEDURE(A68_INT ,A68t98,(A68_VC ,struct A68t69 ),(A68_VC ,struct A68t69 ,void *));
+typedef struct A68t98  A68_98 ;    /* PROC(MODE26,MODE69) INT */
 
-A_PROCEDURE(A68_INT ,A68t100,(void),(void *));
-typedef struct A68t100  A68_100 ;    /* PROC INT */
-struct A68t101{
+A_PROCEDURE(A68_INT ,A68t99,(void),(void *));
+typedef struct A68t99  A68_99 ;    /* PROC INT */
+struct A68t100{
 A68_VC  Filename;
 A68_VC  Directory;
 A68_VC  Name;
 A68_VC  Type;
 };
-typedef struct A68t101  A68_101 ;    /* STRUCT(REF MODE26,REF MODE26,REF MODE26,REF MODE26)  */
+typedef struct A68t100  A68_100 ;    /* STRUCT(REF MODE26,REF MODE26,REF MODE26,REF MODE26)  */
 
-A_PROCEDURE(A68_VOID ,A68t102,(A68_VC ,A68_VC ,struct A68t69 ,struct A68t101 *),(A68_VC ,A68_VC ,struct A68t69 ,struct A68t101 *,void *));
-typedef struct A68t102  A68_102 ;    /* PROC(MODE26,MODE26,MODE69) MODE101 */
+A_PROCEDURE(A68_VOID ,A68t101,(A68_VC ,A68_VC ,struct A68t69 ,struct A68t100 *),(A68_VC ,A68_VC ,struct A68t69 ,struct A68t100 *,void *));
+typedef struct A68t101  A68_101 ;    /* PROC(MODE26,MODE26,MODE69) MODE100 */
 
-A_PROCEDURE(A68_VOID ,A68t103,(struct A68t36 *),(struct A68t36 *,void *));
-typedef struct A68t103  A68_103 ;    /* PROC MODE36 */
+A_PROCEDURE(A68_VOID ,A68t102,(struct A68t36 *),(struct A68t36 *,void *));
+typedef struct A68t102  A68_102 ;    /* PROC MODE36 */
 
-A_PROCEDURE(A68_VOID ,A68t104,(A68_VC ,struct A68t69 ,struct A68t36 *),(A68_VC ,struct A68t69 ,struct A68t36 *,void *));
-typedef struct A68t104  A68_104 ;    /* PROC(MODE26,MODE69) MODE36 */
+A_PROCEDURE(A68_VOID ,A68t103,(A68_VC ,struct A68t69 ,struct A68t36 *),(A68_VC ,struct A68t69 ,struct A68t36 *,void *));
+typedef struct A68t103  A68_103 ;    /* PROC(MODE26,MODE69) MODE36 */
 
-A_PROCEDURE(A68_VOID ,A68t105,(struct A68t58 ,struct A68t69 ,struct A68t69 ),(struct A68t58 ,struct A68t69 ,struct A68t69 ,void *));
-typedef struct A68t105  A68_105 ;    /* PROC(MODE58,MODE69,MODE69) VOID */
+A_PROCEDURE(A68_VOID ,A68t104,(struct A68t58 ,struct A68t69 ,struct A68t69 ),(struct A68t58 ,struct A68t69 ,struct A68t69 ,void *));
+typedef struct A68t104  A68_104 ;    /* PROC(MODE58,MODE69,MODE69) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t106,(struct A68t58 ,struct A68t69 ),(struct A68t58 ,struct A68t69 ,void *));
-typedef struct A68t106  A68_106 ;    /* PROC(MODE58,MODE69) VOID */
+A_PROCEDURE(A68_VOID ,A68t105,(struct A68t58 ,struct A68t69 ),(struct A68t58 ,struct A68t69 ,void *));
+typedef struct A68t105  A68_105 ;    /* PROC(MODE58,MODE69) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t107,(A68_INT ,struct A68t69 ,struct A68t69 *),(A68_INT ,struct A68t69 ,struct A68t69 *,void *));
-typedef struct A68t107  A68_107 ;    /* PROC(INT,MODE69) MODE69 */
+A_PROCEDURE(A68_VOID ,A68t106,(A68_INT ,struct A68t69 ,struct A68t69 *),(A68_INT ,struct A68t69 ,struct A68t69 *,void *));
+typedef struct A68t106  A68_106 ;    /* PROC(INT,MODE69) MODE69 */
 
-A_PROCEDURE(A68_VOID ,A68t108,(A68_BITS ),(A68_BITS ,void *));
-typedef struct A68t108  A68_108 ;    /* PROC(BITS) VOID */
-struct A68t110 ;
+A_PROCEDURE(A68_VOID ,A68t107,(A68_BITS ),(A68_BITS ,void *));
+typedef struct A68t107  A68_107 ;    /* PROC(BITS) VOID */
+struct A68t109 ;
 
-A_PROCEDURE(A68_VOID ,A68t109,(struct A68t110 ),(struct A68t110 ,void *));
-typedef struct A68t109  A68_109 ;    /* PROC(MODE110) VOID */
+A_PROCEDURE(A68_VOID ,A68t108,(struct A68t109 ),(struct A68t109 ,void *));
+typedef struct A68t108  A68_108 ;    /* PROC(MODE109) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t110,(A68_VC ),(A68_VC ,void *));
-typedef struct A68t110  A68_110 ;    /* PROC(MODE26) VOID */
-struct A68t111{
+A_PROCEDURE(A68_VOID ,A68t109,(A68_VC ),(A68_VC ,void *));
+typedef struct A68t109  A68_109 ;    /* PROC(MODE26) VOID */
+struct A68t110{
 A68_VC  Name;
 A68_INT  Value;
 A_PAD_INT(PAD_15)
 };
-typedef struct A68t111  A68_111 ;    /* STRUCT(MODE26,INT)  */
+typedef struct A68t110  A68_110 ;    /* STRUCT(MODE26,INT)  */
 
-A_PROCEDURE(A68_VOID ,A68t112,(A68_BOOL ,struct A68t111 *),(A68_BOOL ,struct A68t111 *,void *));
-typedef struct A68t112  A68_112 ;    /* PROC(BOOL) MODE111 */
-struct A68t114 ;
+A_PROCEDURE(A68_VOID ,A68t111,(A68_BOOL ,struct A68t110 *),(A68_BOOL ,struct A68t110 *,void *));
+typedef struct A68t111  A68_111 ;    /* PROC(BOOL) MODE110 */
+struct A68t113 ;
 
-A_PROCEDURE(A68_VOID ,A68t113,(struct A68t114 ,struct A68t69 ),(struct A68t114 ,struct A68t69 ,void *));
-typedef struct A68t113  A68_113 ;    /* PROC(MODE114,MODE69) VOID */
-A_VECTOR(struct A68t111 ,A68t114);
-typedef struct A68t114  A68_114 ;    /* VECTOR [] MODE111 */
+A_PROCEDURE(A68_VOID ,A68t112,(struct A68t113 ,struct A68t69 ),(struct A68t113 ,struct A68t69 ,void *));
+typedef struct A68t112  A68_112 ;    /* PROC(MODE113,MODE69) VOID */
+A_VECTOR(struct A68t110 ,A68t113);
+typedef struct A68t113  A68_113 ;    /* VECTOR [] MODE110 */
 
-A_PROCEDURE(A68_VOID ,A68t115,(A68_BOOL ,A68_VC *),(A68_BOOL ,A68_VC *,void *));
-typedef struct A68t115  A68_115 ;    /* PROC(BOOL) MODE26 */
-A_ISTRUCT(A68_CHAR ,7,A68t117);
-typedef struct A68t117  A68_117 ;    /* STRUCT 7 CHAR */
-struct A68t116{
-struct A68t117  Name;
-A_PAD_ISTRUCT(A68_117 ,PAD_16)
+A_PROCEDURE(A68_VOID ,A68t114,(A68_BOOL ,A68_VC *),(A68_BOOL ,A68_VC *,void *));
+typedef struct A68t114  A68_114 ;    /* PROC(BOOL) MODE26 */
+A_ISTRUCT(A68_CHAR ,7,A68t116);
+typedef struct A68t116  A68_116 ;    /* STRUCT 7 CHAR */
+struct A68t115{
+struct A68t116  Name;
+A_PAD_ISTRUCT(A68_116 ,PAD_16)
 A68_BOOL  Set;
 A_PAD_BOOL(PAD_17)
 };
-typedef struct A68t116  A68_116 ;    /* STRUCT(MODE117,BOOL)  */
-struct A68t118{
+typedef struct A68t115  A68_115 ;    /* STRUCT(MODE116,BOOL)  */
+struct A68t117{
 A68_INT  Labno;
 A_PAD_INT(PAD_18)
 };
-typedef struct A68t118  A68_118 ;    /* STRUCT(INT)  */
-struct A68t120 ;
+typedef struct A68t117  A68_117 ;    /* STRUCT(INT)  */
+struct A68t119 ;
 
-A_PROCEDURE(A68_VOID ,A68t119,(struct A68t120 ),(struct A68t120 ,void *));
-typedef struct A68t119  A68_119 ;    /* PROC(MODE120) VOID */
-A_VECTOR(struct A68t121 ,A68t120);
-typedef struct A68t120  A68_120 ;    /* VECTOR [] MODE121 */
-struct A68t121 { A68_INT mode; union {
+A_PROCEDURE(A68_VOID ,A68t118,(struct A68t119 ),(struct A68t119 ,void *));
+typedef struct A68t118  A68_118 ;    /* PROC(MODE119) VOID */
+A_VECTOR(struct A68t120 ,A68t119);
+typedef struct A68t119  A68_119 ;    /* VECTOR [] MODE120 */
+struct A68t120 { A68_INT mode; union {
 A68_CHAR  mode1;
 A68_VC  mode2;
 A68_SINT  mode3;
-} data; };
-typedef struct A68t121  A68_121 ;    /* UNION(CHAR,MODE26,SHORT INT)  */
-struct A68t123 ;
+} data __attribute__ ((__aligned__(8))); };
+typedef struct A68t120  A68_120 ;    /* UNION(CHAR,MODE26,SHORT INT)  */
+struct A68t122 ;
 
-A_PROCEDURE(A68_VOID ,A68t122,(struct A68t123 ,A68_INT ),(struct A68t123 ,A68_INT ,void *));
-typedef struct A68t122  A68_122 ;    /* PROC(MODE123,INT) VOID */
-A_VECTOR(struct A68t124 ,A68t123);
-typedef struct A68t123  A68_123 ;    /* VECTOR [] MODE124 */
-struct A68t124 { A68_INT mode; union {
+A_PROCEDURE(A68_VOID ,A68t121,(struct A68t122 ,A68_INT ),(struct A68t122 ,A68_INT ,void *));
+typedef struct A68t121  A68_121 ;    /* PROC(MODE122,INT) VOID */
+A_VECTOR(struct A68t123 ,A68t122);
+typedef struct A68t122  A68_122 ;    /* VECTOR [] MODE123 */
+struct A68t123 { A68_INT mode; union {
 A68_CHAR  mode1;
 A68_VC  mode2;
 A68_INT  mode3;
 A68_SINT  mode4;
-} data; };
-typedef struct A68t124  A68_124 ;    /* UNION(CHAR,MODE26,INT,SHORT INT)  */
+} data __attribute__ ((__aligned__(8))); };
+typedef struct A68t123  A68_123 ;    /* UNION(CHAR,MODE26,INT,SHORT INT)  */
 
-A_PROCEDURE(A68_INT ,A68t125,(A68_INT ),(A68_INT ,void *));
-typedef struct A68t125  A68_125 ;    /* PROC(INT) INT */
+A_PROCEDURE(A68_INT ,A68t124,(A68_INT ),(A68_INT ,void *));
+typedef struct A68t124  A68_124 ;    /* PROC(INT) INT */
 
-A_PROCEDURE(A68_BOOL ,A68t126,(A68_INT ),(A68_INT ,void *));
-typedef struct A68t126  A68_126 ;    /* PROC(INT) BOOL */
-struct A68t127{
+A_PROCEDURE(A68_BOOL ,A68t125,(A68_INT ),(A68_INT ,void *));
+typedef struct A68t125  A68_125 ;    /* PROC(INT) BOOL */
+struct A68t126{
 A68_INT  Level;
 A_PAD_INT(PAD_19)
 A68_INT  Block;
 A_PAD_INT(PAD_20)
 };
-typedef struct A68t127  A68_127 ;    /* STRUCT(INT,INT)  */
+typedef struct A68t126  A68_126 ;    /* STRUCT(INT,INT)  */
 
-A_PROCEDURE(A68_VOID ,A68t128,(struct A68t127 *),(struct A68t127 *,void *));
-typedef struct A68t128  A68_128 ;    /* PROC MODE127 */
+A_PROCEDURE(A68_VOID ,A68t127,(struct A68t126 *),(struct A68t126 *,void *));
+typedef struct A68t127  A68_127 ;    /* PROC MODE126 */
 
-A_PROCEDURE(A68_BOOL ,A68t129,(void),(void *));
-typedef struct A68t129  A68_129 ;    /* PROC BOOL */
+A_PROCEDURE(A68_BOOL ,A68t128,(void),(void *));
+typedef struct A68t128  A68_128 ;    /* PROC BOOL */
 
-A_PROCEDURE(A68_BOOL ,A68t130,(A68_INT ,A68_INT ),(A68_INT ,A68_INT ,void *));
-typedef struct A68t130  A68_130 ;    /* PROC(INT,INT) BOOL */
+A_PROCEDURE(A68_BOOL ,A68t129,(A68_INT ,A68_INT ),(A68_INT ,A68_INT ,void *));
+typedef struct A68t129  A68_129 ;    /* PROC(INT,INT) BOOL */
 
-A_PROCEDURE(A68_VOID ,A68t131,(A68_INT ,A68_INT ),(A68_INT ,A68_INT ,void *));
-typedef struct A68t131  A68_131 ;    /* PROC(INT,INT) VOID */
+A_PROCEDURE(A68_VOID ,A68t130,(A68_INT ,A68_INT ),(A68_INT ,A68_INT ,void *));
+typedef struct A68t130  A68_130 ;    /* PROC(INT,INT) VOID */
 
-A_PROCEDURE(A68_BOOL ,A68t132,(struct A68t127 ,struct A68t127 ),(struct A68t127 ,struct A68t127 ,void *));
-typedef struct A68t132  A68_132 ;    /* PROC(MODE127,MODE127) BOOL */
+A_PROCEDURE(A68_BOOL ,A68t131,(struct A68t126 ,struct A68t126 ),(struct A68t126 ,struct A68t126 ,void *));
+typedef struct A68t131  A68_131 ;    /* PROC(MODE126,MODE126) BOOL */
 
-A_PROCEDURE(A68_BOOL ,A68t133,(struct A68t127 ),(struct A68t127 ,void *));
-typedef struct A68t133  A68_133 ;    /* PROC(MODE127) BOOL */
-A_ISTRUCT(A68_CHAR ,32,A68t134);
-typedef struct A68t134  A68_134 ;    /* STRUCT 32 CHAR */
-struct A68t135{
-struct A68t117  Prefix;
-A_PAD_ISTRUCT(A68_117 ,PAD_21)
+A_PROCEDURE(A68_BOOL ,A68t132,(struct A68t126 ),(struct A68t126 ,void *));
+typedef struct A68t132  A68_132 ;    /* PROC(MODE126) BOOL */
+A_ISTRUCT(A68_CHAR ,32,A68t133);
+typedef struct A68t133  A68_133 ;    /* STRUCT 32 CHAR */
+struct A68t134{
+struct A68t116  Prefix;
+A_PAD_ISTRUCT(A68_116 ,PAD_21)
 A68_BOOL  Optimised;
 A_PAD_BOOL(PAD_22)
 A68_BOOL  Iddec;
@@ -387,176 +384,176 @@ A_PAD_BOOL(PAD_26)
 A68_VC  Definition;
 A68_VC  Rhs;
 };
-typedef struct A68t135  A68_135 ;    /* STRUCT(MODE117,BOOL,BOOL,BOOL,BOOL,BOOL,REF MODE26,REF MODE26)  */
-A_VECTOR(struct A68t138 ,A68t137);
-typedef struct A68t137  A68_137 ;    /* VECTOR [] MODE138 */
-A_VECTOR(struct A68t144 ,A68t143);
-typedef struct A68t143  A68_143 ;    /* VECTOR [] MODE144 */
-struct A68t144{
-struct A68t134  N;
-A_PAD_ISTRUCT(A68_134 ,PAD_27)
-struct A68t134  F;
-A_PAD_ISTRUCT(A68_134 ,PAD_28)
+typedef struct A68t134  A68_134 ;    /* STRUCT(MODE116,BOOL,BOOL,BOOL,BOOL,BOOL,REF MODE26,REF MODE26)  */
+A_VECTOR(struct A68t137 ,A68t136);
+typedef struct A68t136  A68_136 ;    /* VECTOR [] MODE137 */
+A_VECTOR(struct A68t143 ,A68t142);
+typedef struct A68t142  A68_142 ;    /* VECTOR [] MODE143 */
+struct A68t143{
+struct A68t133  N;
+A_PAD_ISTRUCT(A68_133 ,PAD_27)
+struct A68t133  F;
+A_PAD_ISTRUCT(A68_133 ,PAD_28)
 A68_INT  Level;
 A_PAD_INT(PAD_29)
 };
-typedef struct A68t144  A68_144 ;    /* STRUCT(MODE134,MODE134,INT)  */
-struct A68t142 { A68_INT mode; union {
+typedef struct A68t143  A68_143 ;    /* STRUCT(MODE133,MODE133,INT)  */
+struct A68t141 { A68_INT mode; union {
 A68_VC  mode1;
-struct A68t143  mode2;
-} data; };
-typedef struct A68t142  A68_142 ;    /* UNION(REF MODE26,REF MODE143)  */
-struct A68t139{
-struct A68t134  F;
-A_PAD_ISTRUCT(A68_134 ,PAD_30)
+struct A68t142  mode2;
+} data __attribute__ ((__aligned__(8))); };
+typedef struct A68t141  A68_141 ;    /* UNION(REF MODE26,REF MODE142)  */
+struct A68t138{
+struct A68t133  F;
+A_PAD_ISTRUCT(A68_133 ,PAD_30)
 A68_INT  No;
 A_PAD_INT(PAD_31)
 A68_INT  Nl;
 A_PAD_INT(PAD_32)
 A68_INT  Ng;
 A_PAD_INT(PAD_33)
-struct A68t142  U;
+struct A68t141  U;
 };
-typedef struct A68t139  A68_139 ;    /* STRUCT(MODE134,INT,INT,INT,MODE142)  */
-A_VECTOR(struct A68t135 ,A68t140);
-typedef struct A68t140  A68_140 ;    /* VECTOR [] MODE135 */
-A_VECTOR(struct A68t117 ,A68t141);
-typedef struct A68t141  A68_141 ;    /* VECTOR [] MODE117 */
-struct A68t138{
-struct A68t139  Xs;
-struct A68t117  Ys;
-A_PAD_ISTRUCT(A68_117 ,PAD_34)
+typedef struct A68t138  A68_138 ;    /* STRUCT(MODE133,INT,INT,INT,MODE141)  */
+A_VECTOR(struct A68t134 ,A68t139);
+typedef struct A68t139  A68_139 ;    /* VECTOR [] MODE134 */
+A_VECTOR(struct A68t116 ,A68t140);
+typedef struct A68t140  A68_140 ;    /* VECTOR [] MODE116 */
+struct A68t137{
+struct A68t138  Xs;
+struct A68t116  Ys;
+A_PAD_ISTRUCT(A68_116 ,PAD_34)
 A68_LINT  Timeoflastchange;
 A_PAD_LINT(PAD_35)
-struct A68t140  Keptinfo;
-struct A68t141  Cnames;
+struct A68t139  Keptinfo;
+struct A68t140  Cnames;
 };
-typedef struct A68t138  A68_138 ;    /* STRUCT(MODE139,MODE117,LONG INT,REF MODE140,REF MODE141)  */
-struct A68t136{
-struct A68t117  Uname;
-A_PAD_ISTRUCT(A68_117 ,PAD_36)
-struct A68t117  Lname;
-A_PAD_ISTRUCT(A68_117 ,PAD_37)
-struct A68t117  Gname;
-A_PAD_ISTRUCT(A68_117 ,PAD_38)
-struct A68t137  Specs;
+typedef struct A68t137  A68_137 ;    /* STRUCT(MODE138,MODE116,LONG INT,REF MODE139,REF MODE140)  */
+struct A68t135{
+struct A68t116  Uname;
+A_PAD_ISTRUCT(A68_116 ,PAD_36)
+struct A68t116  Lname;
+A_PAD_ISTRUCT(A68_116 ,PAD_37)
+struct A68t116  Gname;
+A_PAD_ISTRUCT(A68_116 ,PAD_38)
+struct A68t136  Specs;
 };
-typedef struct A68t136  A68_136 ;    /* STRUCT(MODE117,MODE117,MODE117,REF MODE137)  */
+typedef struct A68t135  A68_135 ;    /* STRUCT(MODE116,MODE116,MODE116,REF MODE136)  */
 
-A_PROCEDURE(A68_VOID ,A68t145,(A68_VC ,A68_BOOL ),(A68_VC ,A68_BOOL ,void *));
-typedef struct A68t145  A68_145 ;    /* PROC(MODE26,BOOL) VOID */
+A_PROCEDURE(A68_VOID ,A68t144,(A68_VC ,A68_BOOL ),(A68_VC ,A68_BOOL ,void *));
+typedef struct A68t144  A68_144 ;    /* PROC(MODE26,BOOL) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t146,(A68_VC ,A68_INT ),(A68_VC ,A68_INT ,void *));
-typedef struct A68t146  A68_146 ;    /* PROC(MODE26,INT) VOID */
+A_PROCEDURE(A68_VOID ,A68t145,(A68_VC ,A68_INT ),(A68_VC ,A68_INT ,void *));
+typedef struct A68t145  A68_145 ;    /* PROC(MODE26,INT) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t147,(A68_INT ,A68_VC *),(A68_INT ,A68_VC *,void *));
-typedef struct A68t147  A68_147 ;    /* PROC(INT) REF MODE26 */
-struct A68t149 ;
+A_PROCEDURE(A68_VOID ,A68t146,(A68_INT ,A68_VC *),(A68_INT ,A68_VC *,void *));
+typedef struct A68t146  A68_146 ;    /* PROC(INT) REF MODE26 */
+struct A68t148 ;
 
-A_PROCEDURE(A68_VOID ,A68t148,(A68_INT ,struct A68t149 ),(A68_INT ,struct A68t149 ,void *));
-typedef struct A68t148  A68_148 ;    /* PROC(INT,MODE149) VOID */
-A_ROW(A68_VC ,A68t149,1);
-typedef struct A68t149  A68_149 ;    /* [] MODE26 */
+A_PROCEDURE(A68_VOID ,A68t147,(A68_INT ,struct A68t148 ),(A68_INT ,struct A68t148 ,void *));
+typedef struct A68t147  A68_147 ;    /* PROC(INT,MODE148) VOID */
+A_ROW(A68_VC ,A68t148,1);
+typedef struct A68t148  A68_148 ;    /* [] MODE26 */
 
-A_PROCEDURE(A68_BITS ,A68t150,(void),(void *));
-typedef struct A68t150  A68_150 ;    /* PROC BITS */
-struct A68t151{
+A_PROCEDURE(A68_BITS ,A68t149,(void),(void *));
+typedef struct A68t149  A68_149 ;    /* PROC BITS */
+struct A68t150{
 A68_INT  Cfile;
 A_PAD_INT(PAD_39)
 };
-typedef struct A68t151  A68_151 ;    /* STRUCT(INT)  */
-struct A68t152{
+typedef struct A68t150  A68_150 ;    /* STRUCT(INT)  */
+struct A68t151{
 A68_INT  Seedfile;
 A_PAD_INT(PAD_40)
 };
-typedef struct A68t152  A68_152 ;    /* STRUCT(INT)  */
-struct A68t153 { A68_INT mode; union {
-struct A68t151  mode1;
-struct A68t152  mode2;
-struct A68t117  mode3;
-} data; };
-typedef struct A68t153  A68_153 ;    /* UNION(MODE151,MODE152,MODE117,VOID)  */
-A_ROW(A68_BOOL ,A68t154,1);
-typedef struct A68t154  A68_154 ;    /* [] BOOL */
-struct A68t155{
+typedef struct A68t151  A68_151 ;    /* STRUCT(INT)  */
+struct A68t152 { A68_INT mode; union {
+struct A68t150  mode1;
+struct A68t151  mode2;
+struct A68t116  mode3;
+} data __attribute__ ((__aligned__(8))); };
+typedef struct A68t152  A68_152 ;    /* UNION(MODE150,MODE151,MODE116,VOID)  */
+A_ROW(A68_BOOL ,A68t153,1);
+typedef struct A68t153  A68_153 ;    /* [] BOOL */
+struct A68t154{
 A68_VC  Version;
 A68_LINT  Translationtime;
 A_PAD_LINT(PAD_41)
 A68_VC  Sourcefile;
-struct A68t117  Nameseed;
-A_PAD_ISTRUCT(A68_117 ,PAD_42)
-struct A68t153  Nameseedorigin;
-struct A68t156 * Used_modules;
+struct A68t116  Nameseed;
+A_PAD_ISTRUCT(A68_116 ,PAD_42)
+struct A68t152  Nameseedorigin;
+struct A68t155 * Used_modules;
 A68_VC  Commandline;
-struct A68t157 * Environment;
+struct A68t156 * Environment;
 };
-typedef struct A68t155  A68_155 ;    /* STRUCT(REF MODE26,LONG INT,REF MODE26,MODE117,MODE153,REF MODE156,REF MODE26,REF MODE157)  */
-struct A68t156{
+typedef struct A68t154  A68_154 ;    /* STRUCT(REF MODE26,LONG INT,REF MODE26,MODE116,MODE152,REF MODE155,REF MODE26,REF MODE156)  */
+struct A68t155{
 A68_VC  Modinfo_file;
-struct A68t156 * Next;
+struct A68t155 * Next;
 };
-typedef struct A68t156  A68_156 ;    /* STRUCT(REF MODE26,REF MODE156)  */
-struct A68t157{
+typedef struct A68t155  A68_155 ;    /* STRUCT(REF MODE26,REF MODE155)  */
+struct A68t156{
 A68_VC  Env_name;
 A68_VC  Env_value;
-struct A68t157 * Next;
+struct A68t156 * Next;
 };
-typedef struct A68t157  A68_157 ;    /* STRUCT(REF MODE26,REF MODE26,REF MODE157)  */
-struct A68t159 ;
+typedef struct A68t156  A68_156 ;    /* STRUCT(REF MODE26,REF MODE26,REF MODE156)  */
+struct A68t158 ;
 
-A_PROCEDURE(struct A68t74 *,A68t158,(A68_VC ,struct A68t159 *,A68_VC *),(A68_VC ,struct A68t159 *,A68_VC *,void *));
-typedef struct A68t158  A68_158 ;    /* PROC(MODE26,REF MODE159,REF REF MODE26) REF MODE74 */
-struct A68t159{
+A_PROCEDURE(struct A68t74 *,A68t157,(A68_VC ,struct A68t158 *,A68_VC *),(A68_VC ,struct A68t158 *,A68_VC *,void *));
+typedef struct A68t157  A68_157 ;    /* PROC(MODE26,REF MODE158,REF REF MODE26) REF MODE74 */
+struct A68t158{
 A68_VC  Dir;
-struct A68t159 * Next;
+struct A68t158 * Next;
 };
-typedef struct A68t159  A68_159 ;    /* STRUCT(REF MODE26,REF MODE159)  */
+typedef struct A68t158  A68_158 ;    /* STRUCT(REF MODE26,REF MODE158)  */
 
-A_PROCEDURE(A68_VOID ,A68t160,(struct A68t62 ),(struct A68t62 ,void *));
-typedef struct A68t160  A68_160 ;    /* PROC(MODE62) VOID */
+A_PROCEDURE(A68_VOID ,A68t159,(struct A68t62 ),(struct A68t62 ,void *));
+typedef struct A68t159  A68_159 ;    /* PROC(MODE62) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t161,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
-typedef struct A68t161  A68_161 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,66,A68t162);
-typedef struct A68t162  A68_162 ;    /* STRUCT 66 CHAR */
+A_PROCEDURE(A68_VOID ,A68t160,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
+typedef struct A68t160  A68_160 ;    /* PROC(MODE26,MODE26) VOID */
+A_ISTRUCT(A68_CHAR ,66,A68t161);
+typedef struct A68t161  A68_161 ;    /* STRUCT 66 CHAR */
 
-A_PROCEDURE(A68_VOID ,A68t163,(A68_BOOL ,struct A68t58 *),(A68_BOOL ,struct A68t58 *,void *));
-typedef struct A68t163  A68_163 ;    /* PROC(BOOL) MODE58 */
-A_ISTRUCT(A68_CHAR ,26,A68t164);
-typedef struct A68t164  A68_164 ;    /* STRUCT 26 CHAR */
+A_PROCEDURE(A68_VOID ,A68t162,(A68_BOOL ,struct A68t58 *),(A68_BOOL ,struct A68t58 *,void *));
+typedef struct A68t162  A68_162 ;    /* PROC(BOOL) MODE58 */
+A_ISTRUCT(A68_CHAR ,26,A68t163);
+typedef struct A68t163  A68_163 ;    /* STRUCT 26 CHAR */
 
-A_PROCEDURE(struct A68t117 ,A68t165,(void),(void *));
-typedef struct A68t165  A68_165 ;    /* PROC MODE117 */
-A_ISTRUCT(A68_CHAR ,9,A68t166);
-typedef struct A68t166  A68_166 ;    /* STRUCT 9 CHAR */
+A_PROCEDURE(struct A68t116 ,A68t164,(void),(void *));
+typedef struct A68t164  A68_164 ;    /* PROC MODE116 */
+A_ISTRUCT(A68_CHAR ,9,A68t165);
+typedef struct A68t165  A68_165 ;    /* STRUCT 9 CHAR */
 
-A_PROCEDURE(A68_BOOL ,A68t167,(struct A68t117 *),(struct A68t117 *,void *));
-typedef struct A68t167  A68_167 ;    /* PROC(REF MODE117) BOOL */
-A_ISTRUCT(A68_CHAR ,2,A68t168);
-typedef struct A68t168  A68_168 ;    /* STRUCT 2 CHAR */
+A_PROCEDURE(A68_BOOL ,A68t166,(struct A68t116 *),(struct A68t116 *,void *));
+typedef struct A68t166  A68_166 ;    /* PROC(REF MODE116) BOOL */
+A_ISTRUCT(A68_CHAR ,2,A68t167);
+typedef struct A68t167  A68_167 ;    /* STRUCT 2 CHAR */
 
-A_PROCEDURE(A68_VOID ,A68t169,(struct A68t117 ),(struct A68t117 ,void *));
-typedef struct A68t169  A68_169 ;    /* PROC(MODE117) VOID */
-A_ISTRUCT(A68_CHAR ,3,A68t170);
-typedef struct A68t170  A68_170 ;    /* STRUCT 3 CHAR */
-A_ISTRUCT(struct A68t124 ,4,A68t171);
-typedef struct A68t171  A68_171 ;    /* STRUCT 4 MODE124 */
+A_PROCEDURE(A68_VOID ,A68t168,(struct A68t116 ),(struct A68t116 ,void *));
+typedef struct A68t168  A68_168 ;    /* PROC(MODE116) VOID */
+A_ISTRUCT(A68_CHAR ,3,A68t169);
+typedef struct A68t169  A68_169 ;    /* STRUCT 3 CHAR */
+A_ISTRUCT(struct A68t123 ,4,A68t170);
+typedef struct A68t170  A68_170 ;    /* STRUCT 4 MODE123 */
 
-A_PROCEDURE(A68_VOID ,A68t172,(struct A68t153 ),(struct A68t153 ,void *));
-typedef struct A68t172  A68_172 ;    /* PROC(MODE153) VOID */
-A_ISTRUCT(A68_CHAR ,24,A68t173);
-typedef struct A68t173  A68_173 ;    /* STRUCT 24 CHAR */
+A_PROCEDURE(A68_VOID ,A68t171,(struct A68t152 ),(struct A68t152 ,void *));
+typedef struct A68t171  A68_171 ;    /* PROC(MODE152) VOID */
+A_ISTRUCT(A68_CHAR ,24,A68t172);
+typedef struct A68t172  A68_172 ;    /* STRUCT 24 CHAR */
 
-A_PROCEDURE(A68_VOID ,A68t174,(struct A68t153 ,A68_VC *),(struct A68t153 ,A68_VC *,void *));
-typedef struct A68t174  A68_174 ;    /* PROC(MODE153) MODE26 */
-A_ISTRUCT(A68_CHAR ,23,A68t175);
-typedef struct A68t175  A68_175 ;    /* STRUCT 23 CHAR */
-A_ISTRUCT(A68_CHAR ,18,A68t176);
-typedef struct A68t176  A68_176 ;    /* STRUCT 18 CHAR */
-A_ISTRUCT(A68_CHAR ,31,A68t177);
-typedef struct A68t177  A68_177 ;    /* STRUCT 31 CHAR */
-A_ISTRUCT(A68_CHAR ,34,A68t178);
-typedef struct A68t178  A68_178 ;    /* STRUCT 34 CHAR */
+A_PROCEDURE(A68_VOID ,A68t173,(struct A68t152 ,A68_VC *),(struct A68t152 ,A68_VC *,void *));
+typedef struct A68t173  A68_173 ;    /* PROC(MODE152) MODE26 */
+A_ISTRUCT(A68_CHAR ,23,A68t174);
+typedef struct A68t174  A68_174 ;    /* STRUCT 23 CHAR */
+A_ISTRUCT(A68_CHAR ,18,A68t175);
+typedef struct A68t175  A68_175 ;    /* STRUCT 18 CHAR */
+A_ISTRUCT(A68_CHAR ,31,A68t176);
+typedef struct A68t176  A68_176 ;    /* STRUCT 31 CHAR */
+A_ISTRUCT(A68_CHAR ,34,A68t177);
+typedef struct A68t177  A68_177 ;    /* STRUCT 34 CHAR */
 
 /* --- Imports from a68config --- */
 extern A68_VOID  UEAALIB_a68config(A68_VC ,A68_VC );
@@ -574,9 +571,9 @@ extern A68_VOID  WXIACTR_assert(A68_VC ,A68_BOOL );
 extern A68_VC  YQIACTR_basenamesourcefile;
 extern A68_VOID  JXIACTR_warning(A68_INT );
 extern A68_VC  ARIACTR_seedfilename;
-extern A68_155  IYIACTR_config_info;
-extern A68_74 * BJJACTR_find_and_open_file(A68_VC ,struct A68t159 *,A68_VC *);
-extern A68_159 * ERIACTR_cfile_dirlist;
+extern A68_154  IYIACTR_config_info;
+extern A68_74 * BJJACTR_find_and_open_file(A68_VC ,struct A68t158 *,A68_VC *);
+extern A68_158 * ERIACTR_cfile_dirlist;
 /* --- End of imports from environment --- */
 
 
@@ -591,7 +588,7 @@ extern A68_159 * ERIACTR_cfile_dirlist;
 
 
 /* --- Imports from coutput --- */
-extern A68_VOID  MDMACTR_writecstream(struct A68t123 ,A68_INT );
+extern A68_VOID  MDMACTR_writecstream(struct A68t122 ,A68_INT );
 /* --- End of imports from coutput --- */
 
 
@@ -605,13 +602,13 @@ extern A68_SINT  EIAACTR_cnewline;
 
 #define RCBAOSF_errno errno
 extern A68_69  RIBAOSF_ignore_msg;
-extern A68_74 * TSBAOSF_nil_file;
-extern A68_74 * RVBAOSF_open_file(A68_VC ,struct A68t77 ,struct A68t69 );
-extern A68_VOID  JWBAOSF_close_file(struct A68t74 *,struct A68t69 );
-extern A68_VOID  TWBAOSF_read_buffer(struct A68t74 *,A68_VC ,A68_INT *,struct A68t69 ,A68_75 *);
-extern A68_VOID  VXBAOSF_write_buffer(struct A68t74 *,A68_VC ,struct A68t69 ,A68_75 *);
-extern A68_77  BTBAOSF_read_access;
-extern A68_77  FTBAOSF_write_access;
+extern A68_74 * SSBAOSF_nil_file;
+extern A68_74 * QVBAOSF_open_file(A68_VC ,struct A68t77 ,struct A68t69 );
+extern A68_VOID  IWBAOSF_close_file(struct A68t74 *,struct A68t69 );
+extern A68_VOID  SWBAOSF_read_buffer(struct A68t74 *,A68_VC ,A68_INT *,struct A68t69 ,A68_75 *);
+extern A68_VOID  UXBAOSF_write_buffer(struct A68t74 *,A68_VC ,struct A68t69 ,A68_75 *);
+extern A68_77  ATBAOSF_read_access;
+extern A68_77  ETBAOSF_write_access;
 #include <unistd.h>
 #define EXIT(status) exit(A_INT_int(status))
 
@@ -619,99 +616,105 @@ extern A68_77  FTBAOSF_write_access;
 extern int A_argc;
 extern char **A_argv;
 extern char **A_envp;
-#define A_prelude(argc,argv,envp) A_argc=argc; A_argv = argv; A_envp = envp
+#define A_prelude(argc,argv,envp) A_argc = argc; A_argv = argv; A_envp = envp
 
-#define XHCAOSF_prelude A_prelude
+#define DHCAOSF_prelude A_prelude
 #include <signal.h>
 
-#define QLCAOSF_sighup SIGHUP
+#define WKCAOSF_sighup SIGHUP
 /**/
 
-#define RLCAOSF_sigint SIGINT
+#define XKCAOSF_sigint SIGINT
 /**/
 
-#define SLCAOSF_sigquit SIGQUIT
+#define YKCAOSF_sigquit SIGQUIT
 /**/
 
-#define TLCAOSF_sigill SIGILL
+#define ZKCAOSF_sigill SIGILL
 /**/
 
-#define ULCAOSF_sigtrap SIGTRAP
+#define ALCAOSF_sigtrap SIGTRAP
 /**/
 
-#define VLCAOSF_sigabrt SIGABRT
+#define BLCAOSF_sigabrt SIGABRT
 /**/
 
-#define WLCAOSF_sigbus SIGBUS
+#define CLCAOSF_sigbus SIGBUS
 /**/
 
-#define XLCAOSF_sigfpe SIGFPE
+#define DLCAOSF_sigfpe SIGFPE
 /**/
 
-#define YLCAOSF_sigkill SIGKILL
+#define ELCAOSF_sigkill SIGKILL
 /**/
 
-#define ZLCAOSF_sigusr1 SIGUSR1
+#define FLCAOSF_sigusr1 SIGUSR1
 /**/
 
-#define AMCAOSF_sigsegv SIGSEGV
+#define GLCAOSF_sigsegv SIGSEGV
 /**/
 
-#define BMCAOSF_sigusr2 SIGUSR2
+#define HLCAOSF_sigusr2 SIGUSR2
 /**/
 
-#define CMCAOSF_sigpipe SIGPIPE
+#define ILCAOSF_sigpipe SIGPIPE
 /**/
 
-#define DMCAOSF_sigalrm SIGALRM
+#define JLCAOSF_sigalrm SIGALRM
 /**/
 
-#define EMCAOSF_sigterm SIGTERM
+#define KLCAOSF_sigterm SIGTERM
+#if !defined(SIGSTKFLT)
+#define SIGSTKFLT 32
+#endif
 /**/
 
-#define FMCAOSF_sigstkflt SIGSTKFLT
+#define LLCAOSF_sigstkflt SIGSTKFLT
 /**/
 
-#define GMCAOSF_sigchld SIGCHLD
+#define MLCAOSF_sigchld SIGCHLD
 /**/
 
-#define HMCAOSF_sigcont SIGCONT
+#define NLCAOSF_sigcont SIGCONT
 /**/
 
-#define IMCAOSF_sigstop SIGSTOP
+#define OLCAOSF_sigstop SIGSTOP
 /**/
 
-#define JMCAOSF_sigtstp SIGTSTP
+#define PLCAOSF_sigtstp SIGTSTP
 /**/
 
-#define KMCAOSF_sigttin SIGTTIN
+#define QLCAOSF_sigttin SIGTTIN
 /**/
 
-#define LMCAOSF_sigttou SIGTTOU
+#define RLCAOSF_sigttou SIGTTOU
 /**/
 
-#define MMCAOSF_sigurg SIGURG
+#define SLCAOSF_sigurg SIGURG
 /**/
 
-#define NMCAOSF_sigxcpu SIGXCPU
+#define TLCAOSF_sigxcpu SIGXCPU
 /**/
 
-#define OMCAOSF_sigxfsz SIGXFSZ
+#define ULCAOSF_sigxfsz SIGXFSZ
 /**/
 
-#define PMCAOSF_sigvtalrm SIGVTALRM
+#define VLCAOSF_sigvtalrm SIGVTALRM
 /**/
 
-#define QMCAOSF_sigprof SIGPROF
+#define WLCAOSF_sigprof SIGPROF
 /**/
 
-#define RMCAOSF_sigwinch SIGWINCH
+#define XLCAOSF_sigwinch SIGWINCH
 /**/
 
-#define SMCAOSF_sigio SIGIO
+#define YLCAOSF_sigio SIGIO
+#if !defined(SIGPWR)
+#define SIGPWR 33
+#endif
 /**/
 
-#define TMCAOSF_sigpwr SIGPWR
+#define ZLCAOSF_sigpwr SIGPWR
 #include <algol68/Alibrary.h>
 
 #define GMBAOSF_garbage_collect Agc_collect
@@ -764,38 +767,38 @@ extern void ODAACTR(void);   /* incinstallation */
 extern void BPLACTR(void);   /* environ */
 extern void PTLACTR(void);   /* coutput */
 extern void THAACTR(void);   /* centities */
-extern void WSCAOSF(void);   /* osif */
+extern void CSCAOSF(void);   /* osif */
 extern void BAAAOSF(void);   /* cif */
 extern void IKAAOSF(void);   /* usefulops */
 /* --- end of DECS initialisation functions --- */
-static A68_162   UHMACTR = {"$Id: uniquenameserver.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
+static A68_161   UHMACTR = {"$Id: uniquenameserver.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
 A_GISVEC(A68_VC ,VHMACTR,UHMACTR,66)
 static A68_58  AIMACTR_num;
-static A68_164   CIMACTR = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"}; 
+static A68_163   CIMACTR = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"}; 
 A_GISVEC(A68_VC ,DIMACTR,CIMACTR,26)
 static A68_VC  EIMACTR_idchars;
 static A68_INT  FIMACTR_upbidchars;
 static A68_INT  GIMACTR_upbnum;
-static A68_166   ZIMACTR = {"/* UNAME:"}; 
+static A68_165   ZIMACTR = {"/* UNAME:"}; 
 A_GISVEC(A68_VC ,AJMACTR,ZIMACTR,9)
 static A68_VC  BJMACTR_c_prologue;
-static A68_168   FJMACTR = {".c"}; 
+static A68_167   FJMACTR = {".c"}; 
 A_GISVEC(A68_VC ,GJMACTR,FJMACTR,2)
-static A68_170   MKMACTR = {" */"}; 
+static A68_169   MKMACTR = {" */"}; 
 A_GISVEC(A68_VC ,NKMACTR,MKMACTR,3)
-A68_172  SKMACTR_initialiseuniquenameserver;
-static A68_117   ZLMACTR = {"AAAAAAA"}; 
-static A68_173   AMMACTR = {"invalid name seed origin"}; 
+A68_171  SKMACTR_initialiseuniquenameserver;
+static A68_116   ZLMACTR = {"AAAAAAA"}; 
+static A68_172   AMMACTR = {"invalid name seed origin"}; 
 A_GISVEC(A68_VC ,BMMACTR,AMMACTR,24)
-static A68_175   GMMACTR = {" ( from -uname option )"}; 
+static A68_174   GMMACTR = {" ( from -uname option )"}; 
 A_GISVEC(A68_VC ,IMMACTR,GMMACTR,23)
-static A68_176   JMMACTR = {" (from seed file) "}; 
+static A68_175   JMMACTR = {" (from seed file) "}; 
 A_GISVEC(A68_VC ,KMMACTR,JMMACTR,18)
-static A68_177   LMMACTR = {" (from previously generated C) "}; 
+static A68_176   LMMACTR = {" (from previously generated C) "}; 
 A_GISVEC(A68_VC ,MMMACTR,LMMACTR,31)
-static A68_178   NMMACTR = {" (other name seeds not available) "}; 
+static A68_177   NMMACTR = {" (other name seeds not available) "}; 
 A_GISVEC(A68_VC ,OMMACTR,NMMACTR,34)
-static A68_173   PMMACTR = {"invalid name seed origin"}; 
+static A68_172   PMMACTR = {"invalid name seed origin"}; 
 A_GISVEC(A68_VC ,QMMACTR,PMMACTR,24)
 typedef struct   /* env of non-global proc */
 {
@@ -806,19 +809,19 @@ A_STATIC A68_VOID  XHMACTR_generator(A68_BOOL  WHMACTR_anonymous, A68_58  *Retur
 
 A_STATIC A68_VOID  HIMACTR_incrementnum(void);
 
-A68_117  QIMACTR_newuniquename(void);
+A68_116  QIMACTR_newuniquename(void);
 
-A_STATIC A68_BOOL  DJMACTR_read_cfile_uname(A68_117 * Uname);
+A_STATIC A68_BOOL  DJMACTR_read_cfile_uname(A68_116 * Uname);
 
 A_STATIC A68_VOID  MJMACTR_generator(A68_BOOL  KJMACTR_anonymous, A68_VC  *ReturnedValue, void *NonLocals);
 
-A68_VOID  GKMACTR_write_cfile_uname(A68_117  Uname);
+A68_VOID  GKMACTR_write_cfile_uname(A68_116  Uname);
 
-A_STATIC A68_VOID  UKMACTR_initnum(A68_117  Uname);
+A_STATIC A68_VOID  UKMACTR_initnum(A68_116  Uname);
 
-A_STATIC A68_VOID  FLMACTR_anonymous(A68_153  Origin);
+A_STATIC A68_VOID  FLMACTR_anonymous(A68_152  Origin);
 
-A68_VOID  EMMACTR_nameseedoriginstring(A68_153  Nameseed, A68_VC  *ReturnedValue);
+A68_VOID  EMMACTR_nameseedoriginstring(A68_152  Nameseed, A68_VC  *ReturnedValue);
 
 A68_VOID  SMMACTR_closedownuniquenameserver(void);
 
@@ -908,16 +911,16 @@ return;
 } 
 #undef NL
 
-A68_117  QIMACTR_newuniquename(void)
+A68_116  QIMACTR_newuniquename(void)
 { 
-A68_117  RIMACTR_result;
+A68_116  RIMACTR_result;
 A68_INT  SIMACTR_i;
 A68_INT  TIMACTR;  /* to part of loop */
 A68_VC  UIMACTR;  /* OPERATORS - istruct -> vector */
 A68_VC  VIMACTR;  /* OPERATORS - simple index */
 A68_INT  WIMACTR;  /* YIELD */
 A68_CHAR * XIMACTR;  /* YIELD */
-A68_117  YIMACTR;  /* clause result */
+A68_116  YIMACTR;  /* clause result */
 A_PROC_ENTRY(newuniquename);
 { 
  /* line 86: */
@@ -945,13 +948,13 @@ return( YIMACTR );
 } 
 #undef NL
 
-A_STATIC A68_BOOL  DJMACTR_read_cfile_uname(A68_117 * Uname)
+A_STATIC A68_BOOL  DJMACTR_read_cfile_uname(A68_116 * Uname)
 { 
 A68_VC  EJMACTR_full_filename;
 A68_74 * HJMACTR_cfile;
 A68_BOOL  IJMACTR;  /* clause result */
 A68_BOOL  JJMACTR;  /* clause result */
-A68_115  LJMACTR_generator;   /* proc value of non-global proc */
+A68_114  LJMACTR_generator;   /* proc value of non-global proc */
 A68_VC  RJMACTR;  /* avoid structure result */
 A68_VC  QJMACTR_buffer;
 A68_INT  SJMACTR_charsread;
@@ -976,7 +979,7 @@ HJMACTR_cfile = BJJACTR_find_and_open_file(A_VC_PLUS(YQIACTR_basenamesourcefile,
  /* line 101: */
  /* line 102: */
  /* line 103: */
-IJMACTR = (HJMACTR_cfile==TSBAOSF_nil_file);
+IJMACTR = (HJMACTR_cfile==SSBAOSF_nil_file);
 if ( IJMACTR )
 { 
 JXIACTR_warning(812);
@@ -993,10 +996,10 @@ A_CALLPROC(LJMACTR_generator,(A68_TRUE, &RJMACTR),(A68_TRUE, &RJMACTR,(LJMACTR_g
 QJMACTR_buffer = RJMACTR;
  /* line 107: */
  /* line 108: */
-TWBAOSF_read_buffer( HJMACTR_cfile, QJMACTR_buffer, (&SJMACTR_charsread), RIBAOSF_ignore_msg, &TJMACTR );
+SWBAOSF_read_buffer( HJMACTR_cfile, QJMACTR_buffer, (&SJMACTR_charsread), RIBAOSF_ignore_msg, &TJMACTR );
 TJMACTR;
  /* line 109: */
-JWBAOSF_close_file(HJMACTR_cfile, RIBAOSF_ignore_msg);
+IWBAOSF_close_file(HJMACTR_cfile, RIBAOSF_ignore_msg);
  /* line 110: */
 UJMACTR = (SJMACTR_charsread!=QJMACTR_buffer.upb);
 if ( ! UJMACTR )
@@ -1032,17 +1035,17 @@ return( JJMACTR );
 } 
 #undef NL
 
-A68_VOID  GKMACTR_write_cfile_uname(A68_117  Uname)
+A68_VOID  GKMACTR_write_cfile_uname(A68_116  Uname)
 { 
-A68_171  HKMACTR;  /* collateral clause result */
-A68_124  IKMACTR;  /* OPERATORS - mode -> union mode */
+A68_170  HKMACTR;  /* collateral clause result */
+A68_123  IKMACTR;  /* OPERATORS - mode -> union mode */
 A68_VC  JKMACTR;  /* OPERATORS - istruct -> vector */
-A68_124  KKMACTR;  /* OPERATORS - mode -> union mode */
+A68_123  KKMACTR;  /* OPERATORS - mode -> union mode */
 A68_VC  LKMACTR;  /* YIELD */
-A68_124  OKMACTR;  /* OPERATORS - mode -> union mode */
+A68_123  OKMACTR;  /* OPERATORS - mode -> union mode */
 A68_VC  PKMACTR;  /* YIELD */
-A68_124  QKMACTR;  /* OPERATORS - mode -> union mode */
-A68_123  RKMACTR;  /* OPERATORS - istruct -> vector */
+A68_123  QKMACTR;  /* OPERATORS - mode -> union mode */
+A68_122  RKMACTR;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(write_cfile_uname);
  /* line 120: */
  /* line 121: */
@@ -1053,13 +1056,13 @@ HKMACTR.data[1] = A_UNITE(KKMACTR,mode2,2,LKMACTR);
 PKMACTR = NKMACTR ;
 HKMACTR.data[2] = A_UNITE(OKMACTR,mode2,2,PKMACTR);
 HKMACTR.data[3] = A_UNITE(QKMACTR,mode4,4,EIAACTR_cnewline);
-MDMACTR_writecstream(A_HISVEC(RKMACTR,HKMACTR,4,A68_124 ), ESLACTR_preamblestream);
+MDMACTR_writecstream(A_HISVEC(RKMACTR,HKMACTR,4,A68_123 ), ESLACTR_preamblestream);
 A_PROC_EXIT(write_cfile_uname);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  UKMACTR_initnum(A68_117  Uname)
+A_STATIC A68_VOID  UKMACTR_initnum(A68_116  Uname)
 { 
 A68_BOOL  VKMACTR_ok;
 A68_INT * WKMACTR_i;
@@ -1068,8 +1071,8 @@ A68_VC  YKMACTR;  /* OPERATORS - istruct -> vector */
 A68_VC  ZKMACTR;  /* forall yield */
 A68_CHAR * ALMACTR;  /* forall control - []x */
 A68_INT  BLMACTR;  /* forall loop counter */
-A68_153  CLMACTR;  /* OPERATORS - mode -> union mode */
-A68_117 * DLMACTR;  /* YIELD */
+A68_152  CLMACTR;  /* OPERATORS - mode -> union mode */
+A68_116 * DLMACTR;  /* YIELD */
 A_PROC_ENTRY(initnum);
  /* line 128: */
  /* line 129: */
@@ -1119,27 +1122,27 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  FLMACTR_anonymous(A68_153  Origin)
+A_STATIC A68_VOID  FLMACTR_anonymous(A68_152  Origin)
 { 
-A68_153 * GLMACTR;  /* YIELD */
-A68_153  HLMACTR;  /* united object - for case conformity */
-A68_117  ILMACTR_uname;
+A68_152 * GLMACTR;  /* YIELD */
+A68_152  HLMACTR;  /* united object - for case conformity */
+A68_116  ILMACTR_uname;
 A68_74 * JLMACTR_ufile;
-A68_117  KLMACTR_init;
+A68_116  KLMACTR_init;
 A68_INT  LLMACTR_charsread;
 A68_VC  MLMACTR;  /* OPERATORS - nil -> mode */
 A68_VC  NLMACTR;  /* == */
 A68_BOOL  OLMACTR;  /* optbool result */
 A68_BOOL  PLMACTR;  /* clause result */
-A68_153  QLMACTR;  /* OPERATORS - mode -> union mode */
+A68_152  QLMACTR;  /* OPERATORS - mode -> union mode */
 A68_VC  RLMACTR;  /* OPERATORS - istruct -> vector */
 A68_75  SLMACTR;  /* avoid structure result */
 A68_BOOL  TLMACTR;  /* clause result */
 A68_VC  ULMACTR;  /* OPERATORS - istruct -> vector */
-A68_153  VLMACTR;  /* OPERATORS - mode -> union mode */
-A68_117  WLMACTR_init;
+A68_152  VLMACTR;  /* OPERATORS - mode -> union mode */
+A68_116  WLMACTR_init;
 A68_BOOL  XLMACTR;  /* clause result */
-A68_153  YLMACTR;  /* OPERATORS - mode -> union mode */
+A68_152  YLMACTR;  /* OPERATORS - mode -> union mode */
  /* line 153: */
  /* line 154: */
 GLMACTR = (&((&IYIACTR_config_info)->Nameseedorigin)) ;
@@ -1162,7 +1165,7 @@ NLMACTR = A_VVAC(MLMACTR) ;
 OLMACTR = A_VSTRUCTCOMP(ARIACTR_seedfilename,NLMACTR);
 if ( ! OLMACTR )
 { /* line 164: */
-OLMACTR = ((JLMACTR_ufile = RVBAOSF_open_file(ARIACTR_seedfilename, BTBAOSF_read_access, RIBAOSF_ignore_msg))==TSBAOSF_nil_file);
+OLMACTR = ((JLMACTR_ufile = QVBAOSF_open_file(ARIACTR_seedfilename, ATBAOSF_read_access, RIBAOSF_ignore_msg))==SSBAOSF_nil_file);
 }
  /* line 165: */
 PLMACTR = OLMACTR;
@@ -1176,10 +1179,10 @@ A_CALLPROC(SKMACTR_initialiseuniquenameserver,(A_EMPTY(QLMACTR,4)),(A_EMPTY(QLMA
 } 
 else
 { 
-TWBAOSF_read_buffer( JLMACTR_ufile, A_ISVEC(RLMACTR,(&KLMACTR_init),7,A68_CHAR ), (&LLMACTR_charsread), RIBAOSF_ignore_msg, &SLMACTR );
+SWBAOSF_read_buffer( JLMACTR_ufile, A_ISVEC(RLMACTR,(&KLMACTR_init),7,A68_CHAR ), (&LLMACTR_charsread), RIBAOSF_ignore_msg, &SLMACTR );
 SLMACTR;
  /* line 169: */
-JWBAOSF_close_file(JLMACTR_ufile, RIBAOSF_ignore_msg);
+IWBAOSF_close_file(JLMACTR_ufile, RIBAOSF_ignore_msg);
  /* line 170: */
  /* line 171: */
  /* line 172: */
@@ -1243,9 +1246,9 @@ return;
 } 
 #undef NL
 
-A68_VOID  EMMACTR_nameseedoriginstring(A68_153  Nameseed, A68_VC  *ReturnedValue)
+A68_VOID  EMMACTR_nameseedoriginstring(A68_152  Nameseed, A68_VC  *ReturnedValue)
 { 
-A68_153  FMMACTR;  /* united object - for case conformity */
+A68_152  FMMACTR;  /* united object - for case conformity */
 A68_VC  HMMACTR;  /* clause result */
 A68_VC  RMMACTR;  /* OPERATORS - skip to mode */
 A_PROC_ENTRY(nameseedoriginstring);
@@ -1285,7 +1288,7 @@ return;
 
 A68_VOID  SMMACTR_closedownuniquenameserver(void)
 { 
-A68_153  TMMACTR;  /* united object - for case conformity */
+A68_152  TMMACTR;  /* united object - for case conformity */
 A68_74 * UMMACTR_ufile;
 A68_VC  VMMACTR;  /* OPERATORS - nil -> mode */
 A68_VC  WMMACTR;  /* == */
@@ -1310,7 +1313,7 @@ WMMACTR = A_VVAC(VMMACTR) ;
 XMMACTR = A_VSTRUCTCOMP(ARIACTR_seedfilename,WMMACTR);
 if ( ! XMMACTR )
 { /* line 218: */
-UMMACTR_ufile = RVBAOSF_open_file(ARIACTR_seedfilename, FTBAOSF_write_access, RIBAOSF_ignore_msg) ;
+UMMACTR_ufile = QVBAOSF_open_file(ARIACTR_seedfilename, ETBAOSF_write_access, RIBAOSF_ignore_msg) ;
 XMMACTR = ((&UMMACTR_ufile)==(A68_74 **)A68_NIL);
 }
  /* line 219: */
@@ -1332,13 +1335,13 @@ for (;ANMACTR-- >= 0;
 {
  /* line 223: */
  /* line 224: */
-VXBAOSF_write_buffer( UMMACTR_ufile, A_HVEC(BNMACTR,A_VINDEX(EIMACTR_idchars,(*ZMMACTR_i)),A68_CHAR ), RIBAOSF_ignore_msg, &CNMACTR );
+UXBAOSF_write_buffer( UMMACTR_ufile, A_HVEC(BNMACTR,A_VINDEX(EIMACTR_idchars,(*ZMMACTR_i)),A68_CHAR ), RIBAOSF_ignore_msg, &CNMACTR );
 CNMACTR;
 }
  /* line 225: */
  /* line 226: */
  /* line 229: */
-JWBAOSF_close_file(UMMACTR_ufile, RIBAOSF_ignore_msg);
+IWBAOSF_close_file(UMMACTR_ufile, RIBAOSF_ignore_msg);
 } 
 } 
 break;
@@ -1359,13 +1362,13 @@ void RHMACTR(void)   /* initialise DECS uniquenameserver */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","-dir",".","uniquenameserver.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","./environment.m","./incinstallation.m","./environ.m","./coutput.m","./centities.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/osif.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/cif.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/usefulops.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","-dir",".","uniquenameserver.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","./environment.m","./incinstallation.m","./environ.m","./coutput.m","./centities.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/osif.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/cif.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/usefulops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_58  BIMACTR;  /* avoid structure result */
-A68_172  CMMACTR;  /* procedure value */
+A68_171  CMMACTR;  /* procedure value */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
@@ -1374,15 +1377,15 @@ ODAACTR();   /* USE incinstallation */
 BPLACTR();   /* USE environ */
 PTLACTR();   /* USE coutput */
 THAACTR();   /* USE centities */
-WSCAOSF();   /* USE osif */
+CSCAOSF();   /* USE osif */
 BAAAOSF();   /* USE cif */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/src/uniquenameserver.a68";
-A_config.translation_time = "Mon Jan 28 20:24:33 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/src/uniquenameserver.a68";
+A_config.translation_time = "Wed Apr 21 16:34:05 2021";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "QHMACTR (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.spec_change_time = "Wed Apr 21 16:34:05 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

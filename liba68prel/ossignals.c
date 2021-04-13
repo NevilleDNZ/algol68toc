@@ -1,4 +1,4 @@
-/* UNAME:WKCAOSF */
+/* UNAME:CKCAOSF */
 #include <algol68/Asupport.h>
 A_ISTRUCT(A68_CHAR ,16000000,A68t31);
 typedef struct A68t31  A68_31 ;    /* STRUCT 16000000 CHAR */
@@ -113,7 +113,7 @@ typedef struct A68t62  A68_62 ;    /* PROC(MODE63) BOOL */
 struct A68t63 { A68_INT mode; union {
 struct A68t46  mode1;
 struct A68t49  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t63  A68_63 ;    /* UNION(MODE46,MODE49)  */
 
 A_PROCEDURE(A68_INT ,A68t64,(struct A68t46 ),(struct A68t46 ,void *));
@@ -407,330 +407,336 @@ extern void MCBAOSF(void);   /* oserrors */
 extern void ZRAAOSF(void);   /* messageproc */
 extern void BAAAOSF(void);   /* cif */
 /* --- end of DECS initialisation functions --- */
-static A68_101   ALCAOSF = {"$Id: ossignals.a68,v 1.1.1.1 2001-05-07 10:16:12 sian Exp $"}; 
-A_GISVEC(A68_VC ,BLCAOSF,ALCAOSF,59)
+static A68_101   GKCAOSF = {"$Id: ossignals.a68,v 1.1.1.1 2001-05-07 10:16:12 sian Exp $"}; 
+A_GISVEC(A68_VC ,HKCAOSF,GKCAOSF,59)
 #include <signal.h>
 #include <unistd.h>
 #define KILL(pid,sig) A_int_INT(kill(A_INT_pid_t(pid),A_INT_int(sig)))
 
-#define CLCAOSF_kill KILL
-/* extern int raise(); /* #include <signal.h> */
+#define IKCAOSF_kill KILL
+/* extern int raise(); */ /* #include <signal.h> */
 #define myraise(sig) kill(getpid(),(sig))
 #define RAISE(sig) A_int_INT(myraise(A_INT_int(sig)))
 
-#define DLCAOSF_raise RAISE
+#define JKCAOSF_raise RAISE
 #include <signal.h>
 #define SIGACTION(sig,act,oact) A_int_INT(sigaction(A_INT_int(sig),(void *)(act),(void *)(oact)))
 
-#define ELCAOSF_sigaction SIGACTION
+#define KKCAOSF_sigaction SIGACTION
 #include <signal.h>
-#define SIGADDSET(set,signo) A_int_INT(sigaddset((void *)(set),A_INT_int(signo)))
+#define SIGADDSET(set,signo) A_int_INT(sigaddset((sigset_t *)(set),A_INT_int(signo)))
 
-#define FLCAOSF_sigaddset SIGADDSET
+#define LKCAOSF_sigaddset SIGADDSET
 #include <signal.h>
-#define SIGDELSET(set,signo) A_int_INT(sigdelset((void *)(set),A_INT_int(signo)))
+#define SIGDELSET(set,signo) A_int_INT(sigdelset((sigset_t *)(set),A_INT_int(signo)))
 
-#define GLCAOSF_sigdelset SIGDELSET
+#define MKCAOSF_sigdelset SIGDELSET
 #include <signal.h>
-#define SIGEMPTYSET(set) A_int_INT(sigemptyset((void *)(set)))
+#define SIGEMPTYSET(set) A_int_INT(sigemptyset((sigset_t *)(set)))
 
-#define HLCAOSF_sigemptyset SIGEMPTYSET
+#define NKCAOSF_sigemptyset SIGEMPTYSET
 #include <signal.h>
-#define SIGFILLSET(set) A_int_INT(sigfillset((void *)(set)))
+#define SIGFILLSET(set) A_int_INT(sigfillset((sigset_t *)(set)))
 
-#define ILCAOSF_sigfillset SIGFILLSET
+#define OKCAOSF_sigfillset SIGFILLSET
 #include <signal.h>
-#define SIGISMEMBER(set,signo) A_int_INT(sigismember((void *)(set),A_INT_int(signo)))
+#define SIGISMEMBER(set,signo) A_int_INT(sigismember((sigset_t *)(set),A_INT_int(signo)))
 
-#define JLCAOSF_sigismember SIGISMEMBER
+#define PKCAOSF_sigismember SIGISMEMBER
 #include <signal.h>
-#define SIGPENDING(set) A_int_INT(sigpending((void *)(set)))
+#define SIGPENDING(set) A_int_INT(sigpending((sigset_t *)(set)))
 
-#define KLCAOSF_sigpending SIGPENDING
+#define QKCAOSF_sigpending SIGPENDING
 #include <signal.h>
-#define SIGPROCMASK(how,set,oset) A_int_INT(sigprocmask(A_INT_int(how),(void *)(set),(void *)(oset)))
+#define SIGPROCMASK(how,set,oset) A_int_INT(sigprocmask(A_INT_int(how),(sigset_t *)(set),(sigset_t *)(oset)))
 
-#define LLCAOSF_sigprocmask SIGPROCMASK
-#include <signal.h>
-
-#define MLCAOSF_sig_block SIG_BLOCK
+#define RKCAOSF_sigprocmask SIGPROCMASK
 #include <signal.h>
 
-#define NLCAOSF_sig_unblock SIG_UNBLOCK
+#define SKCAOSF_sig_block SIG_BLOCK
 #include <signal.h>
 
-#define OLCAOSF_sig_setmask SIG_SETMASK
+#define TKCAOSF_sig_unblock SIG_UNBLOCK
+#include <signal.h>
+
+#define UKCAOSF_sig_setmask SIG_SETMASK
 #include <signal.h>
 #define SIGSUSPEND(sigmask) A_int_INT(sigsuspend((sigmask)))
 
-#define PLCAOSF_sigsuspend SIGSUSPEND
+#define VKCAOSF_sigsuspend SIGSUSPEND
 #include <signal.h>
 
-#define QLCAOSF_sighup SIGHUP
+#define WKCAOSF_sighup SIGHUP
 /**/
 
-#define RLCAOSF_sigint SIGINT
+#define XKCAOSF_sigint SIGINT
 /**/
 
-#define SLCAOSF_sigquit SIGQUIT
+#define YKCAOSF_sigquit SIGQUIT
 /**/
 
-#define TLCAOSF_sigill SIGILL
+#define ZKCAOSF_sigill SIGILL
 /**/
 
-#define ULCAOSF_sigtrap SIGTRAP
+#define ALCAOSF_sigtrap SIGTRAP
 /**/
 
-#define VLCAOSF_sigabrt SIGABRT
+#define BLCAOSF_sigabrt SIGABRT
 /**/
 
-#define WLCAOSF_sigbus SIGBUS
+#define CLCAOSF_sigbus SIGBUS
 /**/
 
-#define XLCAOSF_sigfpe SIGFPE
+#define DLCAOSF_sigfpe SIGFPE
 /**/
 
-#define YLCAOSF_sigkill SIGKILL
+#define ELCAOSF_sigkill SIGKILL
 /**/
 
-#define ZLCAOSF_sigusr1 SIGUSR1
+#define FLCAOSF_sigusr1 SIGUSR1
 /**/
 
-#define AMCAOSF_sigsegv SIGSEGV
+#define GLCAOSF_sigsegv SIGSEGV
 /**/
 
-#define BMCAOSF_sigusr2 SIGUSR2
+#define HLCAOSF_sigusr2 SIGUSR2
 /**/
 
-#define CMCAOSF_sigpipe SIGPIPE
+#define ILCAOSF_sigpipe SIGPIPE
 /**/
 
-#define DMCAOSF_sigalrm SIGALRM
+#define JLCAOSF_sigalrm SIGALRM
 /**/
 
-#define EMCAOSF_sigterm SIGTERM
+#define KLCAOSF_sigterm SIGTERM
+#if !defined(SIGSTKFLT)
+#define SIGSTKFLT 32
+#endif
 /**/
 
-#define FMCAOSF_sigstkflt SIGSTKFLT
+#define LLCAOSF_sigstkflt SIGSTKFLT
 /**/
 
-#define GMCAOSF_sigchld SIGCHLD
+#define MLCAOSF_sigchld SIGCHLD
 /**/
 
-#define HMCAOSF_sigcont SIGCONT
+#define NLCAOSF_sigcont SIGCONT
 /**/
 
-#define IMCAOSF_sigstop SIGSTOP
+#define OLCAOSF_sigstop SIGSTOP
 /**/
 
-#define JMCAOSF_sigtstp SIGTSTP
+#define PLCAOSF_sigtstp SIGTSTP
 /**/
 
-#define KMCAOSF_sigttin SIGTTIN
+#define QLCAOSF_sigttin SIGTTIN
 /**/
 
-#define LMCAOSF_sigttou SIGTTOU
+#define RLCAOSF_sigttou SIGTTOU
 /**/
 
-#define MMCAOSF_sigurg SIGURG
+#define SLCAOSF_sigurg SIGURG
 /**/
 
-#define NMCAOSF_sigxcpu SIGXCPU
+#define TLCAOSF_sigxcpu SIGXCPU
 /**/
 
-#define OMCAOSF_sigxfsz SIGXFSZ
+#define ULCAOSF_sigxfsz SIGXFSZ
 /**/
 
-#define PMCAOSF_sigvtalrm SIGVTALRM
+#define VLCAOSF_sigvtalrm SIGVTALRM
 /**/
 
-#define QMCAOSF_sigprof SIGPROF
+#define WLCAOSF_sigprof SIGPROF
 /**/
 
-#define RMCAOSF_sigwinch SIGWINCH
+#define XLCAOSF_sigwinch SIGWINCH
 /**/
 
-#define SMCAOSF_sigio SIGIO
+#define YLCAOSF_sigio SIGIO
+#if !defined(SIGPWR)
+#define SIGPWR 33
+#endif
 /**/
 
-#define TMCAOSF_sigpwr SIGPWR
+#define ZLCAOSF_sigpwr SIGPWR
 /**/
 
-#define UMCAOSF_sig_err SIG_ERR
+#define AMCAOSF_sig_err SIG_ERR
 /**/
 
-#define VMCAOSF_sig_dfl SIG_DFL
+#define BMCAOSF_sig_dfl SIG_DFL
 /**/
 
-#define WMCAOSF_sig_ign SIG_IGN
+#define CMCAOSF_sig_ign SIG_IGN
 /**/
 
-#define XMCAOSF_sig_hold SIG_HOLD
-#define YMCAOSF_maxsignals 31
-static A68_109   ANCAOSF = {"OS signals"}; 
-A_GISVEC(A68_VC ,BNCAOSF,ANCAOSF,10)
-static A68_111   JNCAOSF = {"hangup"}; 
-A_GISVEC(A68_VC ,KNCAOSF,JNCAOSF,6)
-static A68_112   LNCAOSF = {"interrupt"}; 
-A_GISVEC(A68_VC ,MNCAOSF,LNCAOSF,9)
-static A68_85   NNCAOSF = {"quit"}; 
-A_GISVEC(A68_VC ,ONCAOSF,NNCAOSF,4)
-static A68_113   PNCAOSF = {"illegal instruction (not reset when caught)"}; 
-A_GISVEC(A68_VC ,QNCAOSF,PNCAOSF,43)
-static A68_114   RNCAOSF = {"trace trap (not reset when caught)"}; 
-A_GISVEC(A68_VC ,SNCAOSF,RNCAOSF,34)
-static A68_113   TNCAOSF = {"used by abort, replace SIGIOT in the future"}; 
-A_GISVEC(A68_VC ,UNCAOSF,TNCAOSF,43)
-static A68_112   VNCAOSF = {"bus error"}; 
-A_GISVEC(A68_VC ,WNCAOSF,VNCAOSF,9)
-static A68_115   XNCAOSF = {"floating point exception"}; 
-A_GISVEC(A68_VC ,YNCAOSF,XNCAOSF,24)
-static A68_114   ZNCAOSF = {"kill (cannot be caught or ignored)"}; 
-A_GISVEC(A68_VC ,AOCAOSF,ZNCAOSF,34)
-static A68_116   BOCAOSF = {"user defined signal 1"}; 
-A_GISVEC(A68_VC ,COCAOSF,BOCAOSF,21)
-static A68_117   DOCAOSF = {"segmentation violation"}; 
-A_GISVEC(A68_VC ,EOCAOSF,DOCAOSF,22)
-static A68_116   FOCAOSF = {"user defined signal 2"}; 
-A_GISVEC(A68_VC ,GOCAOSF,FOCAOSF,21)
-static A68_118   HOCAOSF = {"write on a pipe with no one to read it"}; 
-A_GISVEC(A68_VC ,IOCAOSF,HOCAOSF,38)
-static A68_119   JOCAOSF = {"alarm clock"}; 
-A_GISVEC(A68_VC ,KOCAOSF,JOCAOSF,11)
-static A68_120   LOCAOSF = {"software termination signal from kill"}; 
-A_GISVEC(A68_VC ,MOCAOSF,LOCAOSF,37)
-static A68_119   NOCAOSF = {"stack fault"}; 
-A_GISVEC(A68_VC ,OOCAOSF,NOCAOSF,11)
-static A68_121   POCAOSF = {"to parent on child stop or exit"}; 
-A_GISVEC(A68_VC ,QOCAOSF,POCAOSF,31)
-static A68_122   ROCAOSF = {"continue a stopped process"}; 
-A_GISVEC(A68_VC ,SOCAOSF,ROCAOSF,26)
-static A68_123   TOCAOSF = {"sendable stop signal not from tty"}; 
-A_GISVEC(A68_VC ,UOCAOSF,TOCAOSF,33)
-static A68_124   VOCAOSF = {"stop signal from tty"}; 
-A_GISVEC(A68_VC ,WOCAOSF,VOCAOSF,20)
-static A68_125   XOCAOSF = {"to readers pgrp upon background tty read"}; 
-A_GISVEC(A68_VC ,YOCAOSF,XOCAOSF,40)
-static A68_126   ZOCAOSF = {"like TTIN for output if (tp->t_local&LTOSTOP)"}; 
-A_GISVEC(A68_VC ,APCAOSF,ZOCAOSF,45)
-static A68_127   BPCAOSF = {"urgent condition on IO channel"}; 
-A_GISVEC(A68_VC ,CPCAOSF,BPCAOSF,30)
-static A68_128   DPCAOSF = {"exceeded CPU time limit"}; 
-A_GISVEC(A68_VC ,EPCAOSF,DPCAOSF,23)
-static A68_115   FPCAOSF = {"exceeded file size limit"}; 
-A_GISVEC(A68_VC ,GPCAOSF,FPCAOSF,24)
-static A68_129   HPCAOSF = {"virtual time alarm"}; 
-A_GISVEC(A68_VC ,IPCAOSF,HPCAOSF,18)
-static A68_124   JPCAOSF = {"profiling time alarm"}; 
-A_GISVEC(A68_VC ,KPCAOSF,JPCAOSF,20)
-static A68_130   LPCAOSF = {"window changed"}; 
-A_GISVEC(A68_VC ,MPCAOSF,LPCAOSF,14)
-static A68_131   NPCAOSF = {"input/output possible signal"}; 
-A_GISVEC(A68_VC ,OPCAOSF,NPCAOSF,28)
-static A68_116   PPCAOSF = {"power failure restart"}; 
-A_GISVEC(A68_VC ,QPCAOSF,PPCAOSF,21)
-static A68_54  SPCAOSF_signal_facility;
-A68_133  XPCAOSF_sig_msgprocs;
+#define DMCAOSF_sig_hold SIG_HOLD
+#define EMCAOSF_maxsignals 31
+static A68_109   GMCAOSF = {"OS signals"}; 
+A_GISVEC(A68_VC ,HMCAOSF,GMCAOSF,10)
+static A68_111   PMCAOSF = {"hangup"}; 
+A_GISVEC(A68_VC ,QMCAOSF,PMCAOSF,6)
+static A68_112   RMCAOSF = {"interrupt"}; 
+A_GISVEC(A68_VC ,SMCAOSF,RMCAOSF,9)
+static A68_85   TMCAOSF = {"quit"}; 
+A_GISVEC(A68_VC ,UMCAOSF,TMCAOSF,4)
+static A68_113   VMCAOSF = {"illegal instruction (not reset when caught)"}; 
+A_GISVEC(A68_VC ,WMCAOSF,VMCAOSF,43)
+static A68_114   XMCAOSF = {"trace trap (not reset when caught)"}; 
+A_GISVEC(A68_VC ,YMCAOSF,XMCAOSF,34)
+static A68_113   ZMCAOSF = {"used by abort, replace SIGIOT in the future"}; 
+A_GISVEC(A68_VC ,ANCAOSF,ZMCAOSF,43)
+static A68_112   BNCAOSF = {"bus error"}; 
+A_GISVEC(A68_VC ,CNCAOSF,BNCAOSF,9)
+static A68_115   DNCAOSF = {"floating point exception"}; 
+A_GISVEC(A68_VC ,ENCAOSF,DNCAOSF,24)
+static A68_114   FNCAOSF = {"kill (cannot be caught or ignored)"}; 
+A_GISVEC(A68_VC ,GNCAOSF,FNCAOSF,34)
+static A68_116   HNCAOSF = {"user defined signal 1"}; 
+A_GISVEC(A68_VC ,INCAOSF,HNCAOSF,21)
+static A68_117   JNCAOSF = {"segmentation violation"}; 
+A_GISVEC(A68_VC ,KNCAOSF,JNCAOSF,22)
+static A68_116   LNCAOSF = {"user defined signal 2"}; 
+A_GISVEC(A68_VC ,MNCAOSF,LNCAOSF,21)
+static A68_118   NNCAOSF = {"write on a pipe with no one to read it"}; 
+A_GISVEC(A68_VC ,ONCAOSF,NNCAOSF,38)
+static A68_119   PNCAOSF = {"alarm clock"}; 
+A_GISVEC(A68_VC ,QNCAOSF,PNCAOSF,11)
+static A68_120   RNCAOSF = {"software termination signal from kill"}; 
+A_GISVEC(A68_VC ,SNCAOSF,RNCAOSF,37)
+static A68_119   TNCAOSF = {"stack fault"}; 
+A_GISVEC(A68_VC ,UNCAOSF,TNCAOSF,11)
+static A68_121   VNCAOSF = {"to parent on child stop or exit"}; 
+A_GISVEC(A68_VC ,WNCAOSF,VNCAOSF,31)
+static A68_122   XNCAOSF = {"continue a stopped process"}; 
+A_GISVEC(A68_VC ,YNCAOSF,XNCAOSF,26)
+static A68_123   ZNCAOSF = {"sendable stop signal not from tty"}; 
+A_GISVEC(A68_VC ,AOCAOSF,ZNCAOSF,33)
+static A68_124   BOCAOSF = {"stop signal from tty"}; 
+A_GISVEC(A68_VC ,COCAOSF,BOCAOSF,20)
+static A68_125   DOCAOSF = {"to readers pgrp upon background tty read"}; 
+A_GISVEC(A68_VC ,EOCAOSF,DOCAOSF,40)
+static A68_126   FOCAOSF = {"like TTIN for output if (tp->t_local&LTOSTOP)"}; 
+A_GISVEC(A68_VC ,GOCAOSF,FOCAOSF,45)
+static A68_127   HOCAOSF = {"urgent condition on IO channel"}; 
+A_GISVEC(A68_VC ,IOCAOSF,HOCAOSF,30)
+static A68_128   JOCAOSF = {"exceeded CPU time limit"}; 
+A_GISVEC(A68_VC ,KOCAOSF,JOCAOSF,23)
+static A68_115   LOCAOSF = {"exceeded file size limit"}; 
+A_GISVEC(A68_VC ,MOCAOSF,LOCAOSF,24)
+static A68_129   NOCAOSF = {"virtual time alarm"}; 
+A_GISVEC(A68_VC ,OOCAOSF,NOCAOSF,18)
+static A68_124   POCAOSF = {"profiling time alarm"}; 
+A_GISVEC(A68_VC ,QOCAOSF,POCAOSF,20)
+static A68_130   ROCAOSF = {"window changed"}; 
+A_GISVEC(A68_VC ,SOCAOSF,ROCAOSF,14)
+static A68_131   TOCAOSF = {"input/output possible signal"}; 
+A_GISVEC(A68_VC ,UOCAOSF,TOCAOSF,28)
+static A68_116   VOCAOSF = {"power failure restart"}; 
+A_GISVEC(A68_VC ,WOCAOSF,VOCAOSF,21)
+static A68_54  YOCAOSF_signal_facility;
+A68_133  DPCAOSF_sig_msgprocs;
 A_STATIC struct sigaction osif_handler_sigaction;
 #define OSIF_HANDLER_SIGACTION osif_handler_sigaction
 
-#define ZPCAOSF_osif_handler_sigaction OSIF_HANDLER_SIGACTION
+#define FPCAOSF_osif_handler_sigaction OSIF_HANDLER_SIGACTION
 A_STATIC struct sigaction sigusr1_sigaction;
 #define SIGUSR1_SIGACTION sigusr1_sigaction
 
-#define AQCAOSF_sigusr1_sigaction SIGUSR1_SIGACTION
+#define GPCAOSF_sigusr1_sigaction SIGUSR1_SIGACTION
 A_STATIC struct sigaction ignore_sigaction;
 #define IGNORE_SIGACTION ignore_sigaction
 
-#define BQCAOSF_ignore_sigaction IGNORE_SIGACTION
+#define HPCAOSF_ignore_sigaction IGNORE_SIGACTION
 A_STATIC struct sigaction default_sigaction;
 #define DEFAULT_SIGACTION default_sigaction
 
-#define CQCAOSF_default_sigaction DEFAULT_SIGACTION
+#define IPCAOSF_default_sigaction DEFAULT_SIGACTION
 A_STATIC struct sigaction saved_sigaction;
 #define SAVED_SIGACTION saved_sigaction
 
-#define DQCAOSF_saved_sigaction SAVED_SIGACTION
-#define EQCAOSF_nil_sigaction (A68_103 *)A68_NIL
-#define FQCAOSF_nil_sigset (A68_102 *)A68_NIL
+#define JPCAOSF_saved_sigaction SAVED_SIGACTION
+#define KPCAOSF_nil_sigaction (A68_103 *)A68_NIL
+#define LPCAOSF_nil_sigset (A68_102 *)A68_NIL
 A_STATIC sigset_t all_sigset;
 #define ALL_SIGSET all_sigset
 
-#define GQCAOSF_all_sigset ALL_SIGSET
-static A68_130   YQCAOSF = {"set_sigmsgproc"}; 
-A_GISVEC(A68_VC ,ZQCAOSF,YQCAOSF,14)
-static A68_109   ARCAOSF = {"signal no "}; 
-A_GISVEC(A68_VC ,BRCAOSF,ARCAOSF,10)
-static A68_138   NRCAOSF = {"set_sigignore"}; 
-A_GISVEC(A68_VC ,ORCAOSF,NRCAOSF,13)
-static A68_109   PRCAOSF = {"signal no "}; 
-A_GISVEC(A68_VC ,QRCAOSF,PRCAOSF,10)
-static A68_130   BSCAOSF = {"set_sigdefault"}; 
-A_GISVEC(A68_VC ,CSCAOSF,BSCAOSF,14)
-static A68_109   DSCAOSF = {"signal no "}; 
-A_GISVEC(A68_VC ,ESCAOSF,DSCAOSF,10)
-static A68_130   MSCAOSF = {"get_sigmsgproc"}; 
-A_GISVEC(A68_VC ,NSCAOSF,MSCAOSF,14)
-static A68_116   OSCAOSF = {"out of range signal: "}; 
-A_GISVEC(A68_VC ,PSCAOSF,OSCAOSF,21)
+#define MPCAOSF_all_sigset ALL_SIGSET
+static A68_130   EQCAOSF = {"set_sigmsgproc"}; 
+A_GISVEC(A68_VC ,FQCAOSF,EQCAOSF,14)
+static A68_109   GQCAOSF = {"signal no "}; 
+A_GISVEC(A68_VC ,HQCAOSF,GQCAOSF,10)
+static A68_138   TQCAOSF = {"set_sigignore"}; 
+A_GISVEC(A68_VC ,UQCAOSF,TQCAOSF,13)
+static A68_109   VQCAOSF = {"signal no "}; 
+A_GISVEC(A68_VC ,WQCAOSF,VQCAOSF,10)
+static A68_130   HRCAOSF = {"set_sigdefault"}; 
+A_GISVEC(A68_VC ,IRCAOSF,HRCAOSF,14)
+static A68_109   JRCAOSF = {"signal no "}; 
+A_GISVEC(A68_VC ,KRCAOSF,JRCAOSF,10)
+static A68_130   SRCAOSF = {"get_sigmsgproc"}; 
+A_GISVEC(A68_VC ,TRCAOSF,SRCAOSF,14)
+static A68_116   URCAOSF = {"out of range signal: "}; 
+A_GISVEC(A68_VC ,VRCAOSF,URCAOSF,21)
 
-A_STATIC A68_VOID  DNCAOSF_generator(A68_BOOL  CNCAOSF_anonymous, A68_48  *ReturnedValue);
+A_STATIC A68_VOID  JMCAOSF_generator(A68_BOOL  IMCAOSF_anonymous, A68_48  *ReturnedValue);
 
-A_STATIC A68_VOID  UPCAOSF_generator(A68_BOOL  TPCAOSF_anonymous, A68_133  *ReturnedValue);
+A_STATIC A68_VOID  APCAOSF_generator(A68_BOOL  ZOCAOSF_anonymous, A68_133  *ReturnedValue);
 
-A_STATIC A68_VOID  IQCAOSF_sigusr1_handler(A68_INT  Os_signum);
+A_STATIC A68_VOID  OPCAOSF_sigusr1_handler(A68_INT  Os_signum);
 
-A_STATIC A68_VOID  KQCAOSF_osif_handler(A68_INT  Os_signum);
+A_STATIC A68_VOID  QPCAOSF_osif_handler(A68_INT  Os_signum);
 
-A68_VOID  SQCAOSF_set_sigmsgproc(A68_35  Signals, A68_53  Sigmsgproc, A68_53  Msg);
+A68_VOID  YPCAOSF_set_sigmsgproc(A68_35  Signals, A68_53  Sigmsgproc, A68_53  Msg);
 
-A68_VOID  HRCAOSF_set_sigignore(A68_35  Signals, A68_53  Msg);
+A68_VOID  NQCAOSF_set_sigignore(A68_35  Signals, A68_53  Msg);
 
-A68_VOID  VRCAOSF_set_sigdefault(A68_35  Signals, A68_53  Msg);
+A68_VOID  BRCAOSF_set_sigdefault(A68_35  Signals, A68_53  Msg);
 
-A68_VOID  JSCAOSF_get_sigmsgproc(A68_INT  Signal, A68_53  Msg, A68_53  *ReturnedValue);
+A68_VOID  PRCAOSF_get_sigmsgproc(A68_INT  Signal, A68_53  Msg, A68_53  *ReturnedValue);
 
-A68_VOID  TSCAOSF_init_ossignals(void);
+A68_VOID  ZRCAOSF_init_ossignals(void);
 
-A_STATIC A68_VOID  DNCAOSF_generator(A68_BOOL  CNCAOSF_anonymous, A68_48  *ReturnedValue)
+A_STATIC A68_VOID  JMCAOSF_generator(A68_BOOL  IMCAOSF_anonymous, A68_48  *ReturnedValue)
 { 
-A68_48  ENCAOSF;  /* clause result */
-A68_48  FNCAOSF;  /* OPERATORS - dynamic generator */
+A68_48  KMCAOSF;  /* clause result */
+A68_48  LMCAOSF;  /* OPERATORS - dynamic generator */
 { 
-FNCAOSF.upb = YMCAOSF_maxsignals ;
-( CNCAOSF_anonymous? A_VLOC(A68_49 ,FNCAOSF): A_VHEAP(A68_49 ,FNCAOSF) );
-ENCAOSF = FNCAOSF;
+LMCAOSF.upb = EMCAOSF_maxsignals ;
+( IMCAOSF_anonymous? A_VLOC(A68_49 ,LMCAOSF): A_VHEAP(A68_49 ,LMCAOSF) );
+KMCAOSF = LMCAOSF;
 } 
-*ReturnedValue = (ENCAOSF);
+*ReturnedValue = (KMCAOSF);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  UPCAOSF_generator(A68_BOOL  TPCAOSF_anonymous, A68_133  *ReturnedValue)
+A_STATIC A68_VOID  APCAOSF_generator(A68_BOOL  ZOCAOSF_anonymous, A68_133  *ReturnedValue)
 { 
-A68_133  VPCAOSF;  /* clause result */
-A68_133  WPCAOSF;  /* OPERATORS - dynamic generator */
+A68_133  BPCAOSF;  /* clause result */
+A68_133  CPCAOSF;  /* OPERATORS - dynamic generator */
 { 
-WPCAOSF.upb = YMCAOSF_maxsignals ;
-( TPCAOSF_anonymous? A_VLOC(A68_53 ,WPCAOSF): A_VHEAP(A68_53 ,WPCAOSF) );
-VPCAOSF = WPCAOSF;
+CPCAOSF.upb = EMCAOSF_maxsignals ;
+( ZOCAOSF_anonymous? A_VLOC(A68_53 ,CPCAOSF): A_VHEAP(A68_53 ,CPCAOSF) );
+BPCAOSF = CPCAOSF;
 } 
-*ReturnedValue = (VPCAOSF);
+*ReturnedValue = (BPCAOSF);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  IQCAOSF_sigusr1_handler(A68_INT  Os_signum)
+A_STATIC A68_VOID  OPCAOSF_sigusr1_handler(A68_INT  Os_signum)
 { 
 A_PROC_ENTRY(sigusr1_handler);
  /* line 256: */
  /* line 258: */
 { 
-ILCAOSF_sigfillset((&GQCAOSF_all_sigset));
+OKCAOSF_sigfillset((&MPCAOSF_all_sigset));
  /* line 259: */
-LLCAOSF_sigprocmask(MLCAOSF_sig_block, (&GQCAOSF_all_sigset), FQCAOSF_nil_sigset);
+RKCAOSF_sigprocmask(SKCAOSF_sig_block, (&MPCAOSF_all_sigset), LPCAOSF_nil_sigset);
  /* line 262: */
-ELCAOSF_sigaction(ZLCAOSF_sigusr1, (&DQCAOSF_saved_sigaction), EQCAOSF_nil_sigaction);
+KKCAOSF_sigaction(FLCAOSF_sigusr1, (&JPCAOSF_saved_sigaction), KPCAOSF_nil_sigaction);
  /* line 264: */
  /* line 265: */
 MOBAOSF_enable_garbage_collector();
@@ -740,33 +746,33 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  KQCAOSF_osif_handler(A68_INT  Os_signum)
+A_STATIC A68_VOID  QPCAOSF_osif_handler(A68_INT  Os_signum)
 { 
-A68_102  LQCAOSF_sigusr1_sigset;
-A68_53  MQCAOSF;  /* CALL */
-A68_51  NQCAOSF;  /* OPERATORS - vacuum */
-A68_46  OQCAOSF;  /* avoid structure result */
+A68_102  RPCAOSF_sigusr1_sigset;
+A68_53  SPCAOSF;  /* CALL */
+A68_51  TPCAOSF;  /* OPERATORS - vacuum */
+A68_46  UPCAOSF;  /* avoid structure result */
 A_PROC_ENTRY(osif_handler);
  /* line 271: */
  /* line 272: */
 { 
  /* line 273: */
-HLCAOSF_sigemptyset((&LQCAOSF_sigusr1_sigset));
+NKCAOSF_sigemptyset((&RPCAOSF_sigusr1_sigset));
  /* line 274: */
-FLCAOSF_sigaddset((&LQCAOSF_sigusr1_sigset), ZLCAOSF_sigusr1);
+LKCAOSF_sigaddset((&RPCAOSF_sigusr1_sigset), FLCAOSF_sigusr1);
  /* line 276: */
 FOBAOSF_disable_garbage_collector();
  /* line 279: */
-LLCAOSF_sigprocmask(MLCAOSF_sig_block, (&LQCAOSF_sigusr1_sigset), FQCAOSF_nil_sigset);
+RKCAOSF_sigprocmask(SKCAOSF_sig_block, (&RPCAOSF_sigusr1_sigset), LPCAOSF_nil_sigset);
  /* line 282: */
-ELCAOSF_sigaction(ZLCAOSF_sigusr1, (&AQCAOSF_sigusr1_sigaction), (&DQCAOSF_saved_sigaction));
+KKCAOSF_sigaction(FLCAOSF_sigusr1, (&GPCAOSF_sigusr1_sigaction), (&JPCAOSF_saved_sigaction));
  /* line 284: */
-DLCAOSF_raise(ZLCAOSF_sigusr1);
+JKCAOSF_raise(FLCAOSF_sigusr1);
  /* line 287: */
  /* line 288: */
-MQCAOSF = (*(&A_VINDEX(XPCAOSF_sig_msgprocs,Os_signum))) ;
-XYAAOSF_make_msgno( Os_signum, SPCAOSF_signal_facility, &OQCAOSF );
-A_CALLPROC(MQCAOSF,(OQCAOSF, A_VVAC(NQCAOSF)),(OQCAOSF, A_VVAC(NQCAOSF),(MQCAOSF).nonlocals));
+SPCAOSF = (*(&A_VINDEX(DPCAOSF_sig_msgprocs,Os_signum))) ;
+XYAAOSF_make_msgno( Os_signum, YOCAOSF_signal_facility, &UPCAOSF );
+A_CALLPROC(SPCAOSF,(UPCAOSF, A_VVAC(TPCAOSF)),(UPCAOSF, A_VVAC(TPCAOSF),(SPCAOSF).nonlocals));
 } 
 A_PROC_EXIT(osif_handler);
 return;
@@ -775,53 +781,53 @@ return;
  /* line 292: */
  /* line 294: */
 
-A68_VOID  SQCAOSF_set_sigmsgproc(A68_35  Signals, A68_53  Sigmsgproc, A68_53  Msg)
+A68_VOID  YPCAOSF_set_sigmsgproc(A68_35  Signals, A68_53  Sigmsgproc, A68_53  Msg)
 { 
-A68_INT  TQCAOSF_s;
-A68_INT * UQCAOSF;  /* forall control - []x */
-A68_INT  VQCAOSF;  /* forall loop counter */
-A68_BOOL  WQCAOSF;  /* optbool result */
-A68_136  XQCAOSF;  /* collateral clause result */
-A68_VC  CRCAOSF;  /* avoid structure result */
-A68_51  DRCAOSF;  /* OPERATORS - istruct -> vector */
-A68_53 * ERCAOSF;  /* YIELD */
+A68_INT  ZPCAOSF_s;
+A68_INT * AQCAOSF;  /* forall control - []x */
+A68_INT  BQCAOSF;  /* forall loop counter */
+A68_BOOL  CQCAOSF;  /* optbool result */
+A68_136  DQCAOSF;  /* collateral clause result */
+A68_VC  IQCAOSF;  /* avoid structure result */
+A68_51  JQCAOSF;  /* OPERATORS - istruct -> vector */
+A68_53 * KQCAOSF;  /* YIELD */
 A_PROC_ENTRY(set_sigmsgproc);
  /* line 299: */
  /* line 300: */
-VQCAOSF = Signals.upb -1;
-UQCAOSF = Signals.data;
-for (;VQCAOSF-- >= 0;
-(UQCAOSF++
+BQCAOSF = Signals.upb -1;
+AQCAOSF = Signals.data;
+for (;BQCAOSF-- >= 0;
+(AQCAOSF++
 ) )
 {
-TQCAOSF_s = *UQCAOSF;
+ZPCAOSF_s = *AQCAOSF;
  /* line 301: */
  /* line 302: */
-WQCAOSF = (TQCAOSF_s<=0);
-if ( ! WQCAOSF )
-{WQCAOSF = (TQCAOSF_s>YMCAOSF_maxsignals);
+CQCAOSF = (ZPCAOSF_s<=0);
+if ( ! CQCAOSF )
+{CQCAOSF = (ZPCAOSF_s>EMCAOSF_maxsignals);
 }
  /* line 303: */
-if ( ! WQCAOSF )
+if ( ! CQCAOSF )
 { /* line 304: */
-WQCAOSF = (ELCAOSF_sigaction(TQCAOSF_s, (&ZPCAOSF_osif_handler_sigaction), EQCAOSF_nil_sigaction)!=0);
+CQCAOSF = (KKCAOSF_sigaction(ZPCAOSF_s, (&FPCAOSF_osif_handler_sigaction), KPCAOSF_nil_sigaction)!=0);
 }
  /* line 305: */
-if ( WQCAOSF )
+if ( CQCAOSF )
 { 
-XQCAOSF.data[0] = ZQCAOSF;
-ROAAOSF_whole( TQCAOSF_s, 0, &CRCAOSF );
-XQCAOSF.data[1] = A_VC_PLUS(BRCAOSF,CRCAOSF);
+DQCAOSF.data[0] = FQCAOSF;
+ROAAOSF_whole( ZPCAOSF_s, 0, &IQCAOSF );
+DQCAOSF.data[1] = A_VC_PLUS(HQCAOSF,IQCAOSF);
  /* line 306: */
  /* line 307: */
-SEBAOSF_osifmessage(99, A_HISVEC(DRCAOSF,XQCAOSF,2,A68_VC ), Msg);
+SEBAOSF_osifmessage(99, A_HISVEC(JQCAOSF,DQCAOSF,2,A68_VC ), Msg);
 } 
 else
 { 
  /* line 308: */
  /* line 309: */
-ERCAOSF = (&A_VINDEX(XPCAOSF_sig_msgprocs,TQCAOSF_s)) ;
-(*ERCAOSF) = Sigmsgproc;
+KQCAOSF = (&A_VINDEX(DPCAOSF_sig_msgprocs,ZPCAOSF_s)) ;
+(*KQCAOSF) = Sigmsgproc;
 } 
 }
 A_PROC_EXIT(set_sigmsgproc);
@@ -830,45 +836,45 @@ return;
 #undef NL
  /* line 314: */
 
-A68_VOID  HRCAOSF_set_sigignore(A68_35  Signals, A68_53  Msg)
+A68_VOID  NQCAOSF_set_sigignore(A68_35  Signals, A68_53  Msg)
 { 
-A68_INT  IRCAOSF_s;
-A68_INT * JRCAOSF;  /* forall control - []x */
-A68_INT  KRCAOSF;  /* forall loop counter */
-A68_BOOL  LRCAOSF;  /* optbool result */
-A68_136  MRCAOSF;  /* collateral clause result */
-A68_VC  RRCAOSF;  /* avoid structure result */
-A68_51  SRCAOSF;  /* OPERATORS - istruct -> vector */
+A68_INT  OQCAOSF_s;
+A68_INT * PQCAOSF;  /* forall control - []x */
+A68_INT  QQCAOSF;  /* forall loop counter */
+A68_BOOL  RQCAOSF;  /* optbool result */
+A68_136  SQCAOSF;  /* collateral clause result */
+A68_VC  XQCAOSF;  /* avoid structure result */
+A68_51  YQCAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(set_sigignore);
  /* line 319: */
  /* line 320: */
-KRCAOSF = Signals.upb -1;
-JRCAOSF = Signals.data;
-for (;KRCAOSF-- >= 0;
-(JRCAOSF++
+QQCAOSF = Signals.upb -1;
+PQCAOSF = Signals.data;
+for (;QQCAOSF-- >= 0;
+(PQCAOSF++
 ) )
 {
-IRCAOSF_s = *JRCAOSF;
+OQCAOSF_s = *PQCAOSF;
  /* line 321: */
  /* line 322: */
-LRCAOSF = (IRCAOSF_s<=0);
-if ( ! LRCAOSF )
-{LRCAOSF = (IRCAOSF_s>YMCAOSF_maxsignals);
+RQCAOSF = (OQCAOSF_s<=0);
+if ( ! RQCAOSF )
+{RQCAOSF = (OQCAOSF_s>EMCAOSF_maxsignals);
 }
  /* line 323: */
-if ( ! LRCAOSF )
+if ( ! RQCAOSF )
 { /* line 324: */
-LRCAOSF = (ELCAOSF_sigaction(IRCAOSF_s, (&BQCAOSF_ignore_sigaction), EQCAOSF_nil_sigaction)!=0);
+RQCAOSF = (KKCAOSF_sigaction(OQCAOSF_s, (&HPCAOSF_ignore_sigaction), KPCAOSF_nil_sigaction)!=0);
 }
  /* line 325: */
-if ( LRCAOSF )
+if ( RQCAOSF )
 { 
-MRCAOSF.data[0] = ORCAOSF;
-ROAAOSF_whole( IRCAOSF_s, 0, &RRCAOSF );
-MRCAOSF.data[1] = A_VC_PLUS(QRCAOSF,RRCAOSF);
+SQCAOSF.data[0] = UQCAOSF;
+ROAAOSF_whole( OQCAOSF_s, 0, &XQCAOSF );
+SQCAOSF.data[1] = A_VC_PLUS(WQCAOSF,XQCAOSF);
  /* line 326: */
  /* line 327: */
-SEBAOSF_osifmessage(99, A_HISVEC(SRCAOSF,MRCAOSF,2,A68_VC ), Msg);
+SEBAOSF_osifmessage(99, A_HISVEC(YQCAOSF,SQCAOSF,2,A68_VC ), Msg);
 } 
 }
 A_PROC_EXIT(set_sigignore);
@@ -877,45 +883,45 @@ return;
 #undef NL
  /* line 332: */
 
-A68_VOID  VRCAOSF_set_sigdefault(A68_35  Signals, A68_53  Msg)
+A68_VOID  BRCAOSF_set_sigdefault(A68_35  Signals, A68_53  Msg)
 { 
-A68_INT  WRCAOSF_s;
-A68_INT * XRCAOSF;  /* forall control - []x */
-A68_INT  YRCAOSF;  /* forall loop counter */
-A68_BOOL  ZRCAOSF;  /* optbool result */
-A68_136  ASCAOSF;  /* collateral clause result */
-A68_VC  FSCAOSF;  /* avoid structure result */
-A68_51  GSCAOSF;  /* OPERATORS - istruct -> vector */
+A68_INT  CRCAOSF_s;
+A68_INT * DRCAOSF;  /* forall control - []x */
+A68_INT  ERCAOSF;  /* forall loop counter */
+A68_BOOL  FRCAOSF;  /* optbool result */
+A68_136  GRCAOSF;  /* collateral clause result */
+A68_VC  LRCAOSF;  /* avoid structure result */
+A68_51  MRCAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(set_sigdefault);
  /* line 337: */
  /* line 338: */
-YRCAOSF = Signals.upb -1;
-XRCAOSF = Signals.data;
-for (;YRCAOSF-- >= 0;
-(XRCAOSF++
+ERCAOSF = Signals.upb -1;
+DRCAOSF = Signals.data;
+for (;ERCAOSF-- >= 0;
+(DRCAOSF++
 ) )
 {
-WRCAOSF_s = *XRCAOSF;
+CRCAOSF_s = *DRCAOSF;
  /* line 339: */
  /* line 340: */
-ZRCAOSF = (WRCAOSF_s<=0);
-if ( ! ZRCAOSF )
-{ZRCAOSF = (WRCAOSF_s>YMCAOSF_maxsignals);
+FRCAOSF = (CRCAOSF_s<=0);
+if ( ! FRCAOSF )
+{FRCAOSF = (CRCAOSF_s>EMCAOSF_maxsignals);
 }
  /* line 341: */
-if ( ! ZRCAOSF )
+if ( ! FRCAOSF )
 { /* line 342: */
-ZRCAOSF = (ELCAOSF_sigaction(WRCAOSF_s, (&CQCAOSF_default_sigaction), EQCAOSF_nil_sigaction)!=0);
+FRCAOSF = (KKCAOSF_sigaction(CRCAOSF_s, (&IPCAOSF_default_sigaction), KPCAOSF_nil_sigaction)!=0);
 }
  /* line 343: */
-if ( ZRCAOSF )
+if ( FRCAOSF )
 { 
-ASCAOSF.data[0] = CSCAOSF;
-ROAAOSF_whole( WRCAOSF_s, 0, &FSCAOSF );
-ASCAOSF.data[1] = A_VC_PLUS(ESCAOSF,FSCAOSF);
+GRCAOSF.data[0] = IRCAOSF;
+ROAAOSF_whole( CRCAOSF_s, 0, &LRCAOSF );
+GRCAOSF.data[1] = A_VC_PLUS(KRCAOSF,LRCAOSF);
  /* line 344: */
  /* line 345: */
-SEBAOSF_osifmessage(99, A_HISVEC(GSCAOSF,ASCAOSF,2,A68_VC ), Msg);
+SEBAOSF_osifmessage(99, A_HISVEC(MRCAOSF,GRCAOSF,2,A68_VC ), Msg);
 } 
 }
 A_PROC_EXIT(set_sigdefault);
@@ -923,57 +929,57 @@ return;
 } 
 #undef NL
 
-A68_VOID  JSCAOSF_get_sigmsgproc(A68_INT  Signal, A68_53  Msg, A68_53  *ReturnedValue)
+A68_VOID  PRCAOSF_get_sigmsgproc(A68_INT  Signal, A68_53  Msg, A68_53  *ReturnedValue)
 { 
-A68_BOOL  KSCAOSF;  /* optbool result */
-A68_136  LSCAOSF;  /* collateral clause result */
-A68_VC  QSCAOSF;  /* avoid structure result */
-A68_51  RSCAOSF;  /* OPERATORS - istruct -> vector */
-A68_53  SSCAOSF;  /* clause result */
+A68_BOOL  QRCAOSF;  /* optbool result */
+A68_136  RRCAOSF;  /* collateral clause result */
+A68_VC  WRCAOSF;  /* avoid structure result */
+A68_51  XRCAOSF;  /* OPERATORS - istruct -> vector */
+A68_53  YRCAOSF;  /* clause result */
 A_PROC_ENTRY(get_sigmsgproc);
  /* line 351: */
  /* line 352: */
-KSCAOSF = (Signal<=0);
-if ( ! KSCAOSF )
+QRCAOSF = (Signal<=0);
+if ( ! QRCAOSF )
 { /* line 353: */
-KSCAOSF = (Signal>YMCAOSF_maxsignals);
+QRCAOSF = (Signal>EMCAOSF_maxsignals);
 }
  /* line 354: */
-if ( KSCAOSF )
+if ( QRCAOSF )
 { 
-LSCAOSF.data[0] = NSCAOSF;
-ROAAOSF_whole( Signal, 0, &QSCAOSF );
-LSCAOSF.data[1] = A_VC_PLUS(PSCAOSF,QSCAOSF);
-SEBAOSF_osifmessage(99, A_HISVEC(RSCAOSF,LSCAOSF,2,A68_VC ), Msg);
+RRCAOSF.data[0] = TRCAOSF;
+ROAAOSF_whole( Signal, 0, &WRCAOSF );
+RRCAOSF.data[1] = A_VC_PLUS(VRCAOSF,WRCAOSF);
+SEBAOSF_osifmessage(99, A_HISVEC(XRCAOSF,RRCAOSF,2,A68_VC ), Msg);
  /* line 355: */
  /* line 356: */
  /* line 357: */
-SSCAOSF = RIBAOSF_ignore_msg;
+YRCAOSF = RIBAOSF_ignore_msg;
 } 
 else
 { 
  /* line 358: */
-SSCAOSF = (*(&A_VINDEX(XPCAOSF_sig_msgprocs,Signal)));
+YRCAOSF = (*(&A_VINDEX(DPCAOSF_sig_msgprocs,Signal)));
 } 
 A_PROC_EXIT(get_sigmsgproc);
-*ReturnedValue = (SSCAOSF);
+*ReturnedValue = (YRCAOSF);
 return;
 } 
 #undef NL
 
-A68_VOID  TSCAOSF_init_ossignals(void)
+A68_VOID  ZRCAOSF_init_ossignals(void)
 { 
-A68_53 * USCAOSF_m;
-A68_INT  VSCAOSF;  /* forall loop counter */
+A68_53 * ASCAOSF_m;
+A68_INT  BSCAOSF;  /* forall loop counter */
 A_PROC_ENTRY(init_ossignals);
 { 
-VSCAOSF = XPCAOSF_sig_msgprocs.upb -1;
-USCAOSF_m = XPCAOSF_sig_msgprocs.data;
-for (;VSCAOSF-- >= 0;
-(USCAOSF_m++
+BSCAOSF = DPCAOSF_sig_msgprocs.upb -1;
+ASCAOSF_m = DPCAOSF_sig_msgprocs.data;
+for (;BSCAOSF-- >= 0;
+(ASCAOSF_m++
 ) )
 {
-(*USCAOSF_m) = TIBAOSF_global_msg;
+(*ASCAOSF_m) = TIBAOSF_global_msg;
 }
  /* line 367: */
  /* line 368: */
@@ -981,8 +987,8 @@ for (;VSCAOSF-- >= 0;
  /* line 370: */
  /* line 371: */
  /* line 372: */
-#define osif_handler KQCAOSF_osif_handler
-#define sigusr1_handler IQCAOSF_sigusr1_handler
+#define osif_handler QPCAOSF_osif_handler
+#define sigusr1_handler OPCAOSF_sigusr1_handler
 {osif_handler_sigaction.sa_handler = osif_handler;
 sigusr1_sigaction.sa_handler = sigusr1_handler;
 ignore_sigaction.sa_handler = SIG_IGN;
@@ -998,22 +1004,22 @@ return;
  /* line 1: */
  /* line 2: */
  /* line 6: */
-void XKCAOSF(void)   /* initialise DECS ossignals */
+void DKCAOSF(void)   /* initialise DECS ossignals */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","ossignals.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/usefulops.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/osgc.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/oserrors.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/messageproc.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/cif.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","ossignals.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/usefulops.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/osgc.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/oserrors.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/messageproc.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/cif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
-A68_54  ZMCAOSF;  /* collateral clause result */
-A68_48  GNCAOSF;  /* avoid structure result */
-A68_BOOL * HNCAOSF;  /* YIELD */
-A68_132  INCAOSF;  /* collateral clause result */
-A68_55  RPCAOSF;  /* OPERATORS - istruct -> vector */
-A68_133  YPCAOSF;  /* avoid structure result */
+A68_54  FMCAOSF;  /* collateral clause result */
+A68_48  MMCAOSF;  /* avoid structure result */
+A68_BOOL * NMCAOSF;  /* YIELD */
+A68_132  OMCAOSF;  /* collateral clause result */
+A68_55  XOCAOSF;  /* OPERATORS - istruct -> vector */
+A68_133  EPCAOSF;  /* avoid structure result */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
@@ -1023,16 +1029,16 @@ MCBAOSF();   /* USE oserrors */
 ZRAAOSF();   /* USE messageproc */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/liba68prel/ossignals.a68";
-A_config.translation_time = "Mon Jan 28 20:24:31 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/ossignals.a68";
+A_config.translation_time = "Wed Apr 21 16:34:02 2021";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "WKCAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.name_seed = "CKCAOSF (from seed file) ";
+A_config.spec_change_time = "Wed Apr 21 16:34:02 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS ossignals);
-UEAALIB_a68config(LGAALIB_configinfo, BLCAOSF);
+UEAALIB_a68config(LGAALIB_configinfo, HKCAOSF);
  /* line 66: */
  /* line 68: */
  /* line 70: */
@@ -1124,141 +1130,141 @@ UEAALIB_a68config(LGAALIB_configinfo, BLCAOSF);
  /* line 182: */
  /* line 183: */
  /* line 184: */
-ZMCAOSF.Name = BNCAOSF;
+FMCAOSF.Name = HMCAOSF;
  /* line 185: */
-DNCAOSF_generator( A68_TRUE, &GNCAOSF );
-ZMCAOSF.Messages = GNCAOSF;
+JMCAOSF_generator( A68_TRUE, &MMCAOSF );
+FMCAOSF.Messages = MMCAOSF;
  /* line 186: */
-HNCAOSF = A_LOC(A68_BOOL ) ;
-(*HNCAOSF) = A68_FALSE ;
-ZMCAOSF.Initialised = HNCAOSF;
+NMCAOSF = A_LOC(A68_BOOL ) ;
+(*NMCAOSF) = A68_FALSE ;
+FMCAOSF.Initialised = NMCAOSF;
  /* line 187: */
-INCAOSF.data[0].Number = QLCAOSF_sighup;
-INCAOSF.data[0].Class = PVAAOSF_output_class;
+OMCAOSF.data[0].Number = WKCAOSF_sighup;
+OMCAOSF.data[0].Class = PVAAOSF_output_class;
  /* line 188: */
-INCAOSF.data[0].Text = KNCAOSF;
-INCAOSF.data[1].Number = RLCAOSF_sigint;
-INCAOSF.data[1].Class = PVAAOSF_output_class;
+OMCAOSF.data[0].Text = QMCAOSF;
+OMCAOSF.data[1].Number = XKCAOSF_sigint;
+OMCAOSF.data[1].Class = PVAAOSF_output_class;
  /* line 189: */
-INCAOSF.data[1].Text = MNCAOSF;
-INCAOSF.data[2].Number = SLCAOSF_sigquit;
-INCAOSF.data[2].Class = PVAAOSF_output_class;
+OMCAOSF.data[1].Text = SMCAOSF;
+OMCAOSF.data[2].Number = YKCAOSF_sigquit;
+OMCAOSF.data[2].Class = PVAAOSF_output_class;
  /* line 190: */
-INCAOSF.data[2].Text = ONCAOSF;
-INCAOSF.data[3].Number = TLCAOSF_sigill;
-INCAOSF.data[3].Class = PVAAOSF_output_class;
+OMCAOSF.data[2].Text = UMCAOSF;
+OMCAOSF.data[3].Number = ZKCAOSF_sigill;
+OMCAOSF.data[3].Class = PVAAOSF_output_class;
  /* line 191: */
-INCAOSF.data[3].Text = QNCAOSF;
-INCAOSF.data[4].Number = ULCAOSF_sigtrap;
-INCAOSF.data[4].Class = PVAAOSF_output_class;
+OMCAOSF.data[3].Text = WMCAOSF;
+OMCAOSF.data[4].Number = ALCAOSF_sigtrap;
+OMCAOSF.data[4].Class = PVAAOSF_output_class;
  /* line 192: */
-INCAOSF.data[4].Text = SNCAOSF;
-INCAOSF.data[5].Number = VLCAOSF_sigabrt;
-INCAOSF.data[5].Class = PVAAOSF_output_class;
+OMCAOSF.data[4].Text = YMCAOSF;
+OMCAOSF.data[5].Number = BLCAOSF_sigabrt;
+OMCAOSF.data[5].Class = PVAAOSF_output_class;
  /* line 193: */
-INCAOSF.data[5].Text = UNCAOSF;
-INCAOSF.data[6].Number = WLCAOSF_sigbus;
-INCAOSF.data[6].Class = PVAAOSF_output_class;
+OMCAOSF.data[5].Text = ANCAOSF;
+OMCAOSF.data[6].Number = CLCAOSF_sigbus;
+OMCAOSF.data[6].Class = PVAAOSF_output_class;
  /* line 194: */
-INCAOSF.data[6].Text = WNCAOSF;
-INCAOSF.data[7].Number = XLCAOSF_sigfpe;
-INCAOSF.data[7].Class = PVAAOSF_output_class;
+OMCAOSF.data[6].Text = CNCAOSF;
+OMCAOSF.data[7].Number = DLCAOSF_sigfpe;
+OMCAOSF.data[7].Class = PVAAOSF_output_class;
  /* line 195: */
-INCAOSF.data[7].Text = YNCAOSF;
-INCAOSF.data[8].Number = YLCAOSF_sigkill;
-INCAOSF.data[8].Class = PVAAOSF_output_class;
+OMCAOSF.data[7].Text = ENCAOSF;
+OMCAOSF.data[8].Number = ELCAOSF_sigkill;
+OMCAOSF.data[8].Class = PVAAOSF_output_class;
  /* line 196: */
-INCAOSF.data[8].Text = AOCAOSF;
-INCAOSF.data[9].Number = ZLCAOSF_sigusr1;
-INCAOSF.data[9].Class = PVAAOSF_output_class;
+OMCAOSF.data[8].Text = GNCAOSF;
+OMCAOSF.data[9].Number = FLCAOSF_sigusr1;
+OMCAOSF.data[9].Class = PVAAOSF_output_class;
  /* line 197: */
-INCAOSF.data[9].Text = COCAOSF;
-INCAOSF.data[10].Number = AMCAOSF_sigsegv;
-INCAOSF.data[10].Class = PVAAOSF_output_class;
+OMCAOSF.data[9].Text = INCAOSF;
+OMCAOSF.data[10].Number = GLCAOSF_sigsegv;
+OMCAOSF.data[10].Class = PVAAOSF_output_class;
  /* line 198: */
-INCAOSF.data[10].Text = EOCAOSF;
-INCAOSF.data[11].Number = BMCAOSF_sigusr2;
-INCAOSF.data[11].Class = PVAAOSF_output_class;
+OMCAOSF.data[10].Text = KNCAOSF;
+OMCAOSF.data[11].Number = HLCAOSF_sigusr2;
+OMCAOSF.data[11].Class = PVAAOSF_output_class;
  /* line 199: */
-INCAOSF.data[11].Text = GOCAOSF;
-INCAOSF.data[12].Number = CMCAOSF_sigpipe;
-INCAOSF.data[12].Class = PVAAOSF_output_class;
+OMCAOSF.data[11].Text = MNCAOSF;
+OMCAOSF.data[12].Number = ILCAOSF_sigpipe;
+OMCAOSF.data[12].Class = PVAAOSF_output_class;
  /* line 200: */
-INCAOSF.data[12].Text = IOCAOSF;
-INCAOSF.data[13].Number = DMCAOSF_sigalrm;
-INCAOSF.data[13].Class = PVAAOSF_output_class;
+OMCAOSF.data[12].Text = ONCAOSF;
+OMCAOSF.data[13].Number = JLCAOSF_sigalrm;
+OMCAOSF.data[13].Class = PVAAOSF_output_class;
  /* line 201: */
-INCAOSF.data[13].Text = KOCAOSF;
-INCAOSF.data[14].Number = EMCAOSF_sigterm;
-INCAOSF.data[14].Class = PVAAOSF_output_class;
+OMCAOSF.data[13].Text = QNCAOSF;
+OMCAOSF.data[14].Number = KLCAOSF_sigterm;
+OMCAOSF.data[14].Class = PVAAOSF_output_class;
  /* line 202: */
-INCAOSF.data[14].Text = MOCAOSF;
-INCAOSF.data[15].Number = FMCAOSF_sigstkflt;
-INCAOSF.data[15].Class = PVAAOSF_output_class;
+OMCAOSF.data[14].Text = SNCAOSF;
+OMCAOSF.data[15].Number = LLCAOSF_sigstkflt;
+OMCAOSF.data[15].Class = PVAAOSF_output_class;
  /* line 203: */
-INCAOSF.data[15].Text = OOCAOSF;
-INCAOSF.data[16].Number = GMCAOSF_sigchld;
-INCAOSF.data[16].Class = PVAAOSF_output_class;
+OMCAOSF.data[15].Text = UNCAOSF;
+OMCAOSF.data[16].Number = MLCAOSF_sigchld;
+OMCAOSF.data[16].Class = PVAAOSF_output_class;
  /* line 204: */
-INCAOSF.data[16].Text = QOCAOSF;
-INCAOSF.data[17].Number = HMCAOSF_sigcont;
-INCAOSF.data[17].Class = PVAAOSF_output_class;
+OMCAOSF.data[16].Text = WNCAOSF;
+OMCAOSF.data[17].Number = NLCAOSF_sigcont;
+OMCAOSF.data[17].Class = PVAAOSF_output_class;
  /* line 205: */
-INCAOSF.data[17].Text = SOCAOSF;
-INCAOSF.data[18].Number = IMCAOSF_sigstop;
-INCAOSF.data[18].Class = PVAAOSF_output_class;
+OMCAOSF.data[17].Text = YNCAOSF;
+OMCAOSF.data[18].Number = OLCAOSF_sigstop;
+OMCAOSF.data[18].Class = PVAAOSF_output_class;
  /* line 206: */
-INCAOSF.data[18].Text = UOCAOSF;
-INCAOSF.data[19].Number = JMCAOSF_sigtstp;
-INCAOSF.data[19].Class = PVAAOSF_output_class;
+OMCAOSF.data[18].Text = AOCAOSF;
+OMCAOSF.data[19].Number = PLCAOSF_sigtstp;
+OMCAOSF.data[19].Class = PVAAOSF_output_class;
  /* line 207: */
-INCAOSF.data[19].Text = WOCAOSF;
-INCAOSF.data[20].Number = KMCAOSF_sigttin;
-INCAOSF.data[20].Class = PVAAOSF_output_class;
+OMCAOSF.data[19].Text = COCAOSF;
+OMCAOSF.data[20].Number = QLCAOSF_sigttin;
+OMCAOSF.data[20].Class = PVAAOSF_output_class;
  /* line 208: */
-INCAOSF.data[20].Text = YOCAOSF;
-INCAOSF.data[21].Number = LMCAOSF_sigttou;
-INCAOSF.data[21].Class = PVAAOSF_output_class;
+OMCAOSF.data[20].Text = EOCAOSF;
+OMCAOSF.data[21].Number = RLCAOSF_sigttou;
+OMCAOSF.data[21].Class = PVAAOSF_output_class;
  /* line 209: */
-INCAOSF.data[21].Text = APCAOSF;
-INCAOSF.data[22].Number = MMCAOSF_sigurg;
-INCAOSF.data[22].Class = PVAAOSF_output_class;
+OMCAOSF.data[21].Text = GOCAOSF;
+OMCAOSF.data[22].Number = SLCAOSF_sigurg;
+OMCAOSF.data[22].Class = PVAAOSF_output_class;
  /* line 210: */
-INCAOSF.data[22].Text = CPCAOSF;
-INCAOSF.data[23].Number = NMCAOSF_sigxcpu;
-INCAOSF.data[23].Class = PVAAOSF_output_class;
+OMCAOSF.data[22].Text = IOCAOSF;
+OMCAOSF.data[23].Number = TLCAOSF_sigxcpu;
+OMCAOSF.data[23].Class = PVAAOSF_output_class;
  /* line 211: */
-INCAOSF.data[23].Text = EPCAOSF;
-INCAOSF.data[24].Number = OMCAOSF_sigxfsz;
-INCAOSF.data[24].Class = PVAAOSF_output_class;
+OMCAOSF.data[23].Text = KOCAOSF;
+OMCAOSF.data[24].Number = ULCAOSF_sigxfsz;
+OMCAOSF.data[24].Class = PVAAOSF_output_class;
  /* line 212: */
-INCAOSF.data[24].Text = GPCAOSF;
-INCAOSF.data[25].Number = PMCAOSF_sigvtalrm;
-INCAOSF.data[25].Class = PVAAOSF_output_class;
+OMCAOSF.data[24].Text = MOCAOSF;
+OMCAOSF.data[25].Number = VLCAOSF_sigvtalrm;
+OMCAOSF.data[25].Class = PVAAOSF_output_class;
  /* line 213: */
-INCAOSF.data[25].Text = IPCAOSF;
-INCAOSF.data[26].Number = QMCAOSF_sigprof;
-INCAOSF.data[26].Class = PVAAOSF_output_class;
+OMCAOSF.data[25].Text = OOCAOSF;
+OMCAOSF.data[26].Number = WLCAOSF_sigprof;
+OMCAOSF.data[26].Class = PVAAOSF_output_class;
  /* line 214: */
-INCAOSF.data[26].Text = KPCAOSF;
-INCAOSF.data[27].Number = RMCAOSF_sigwinch;
-INCAOSF.data[27].Class = PVAAOSF_output_class;
+OMCAOSF.data[26].Text = QOCAOSF;
+OMCAOSF.data[27].Number = XLCAOSF_sigwinch;
+OMCAOSF.data[27].Class = PVAAOSF_output_class;
  /* line 215: */
-INCAOSF.data[27].Text = MPCAOSF;
-INCAOSF.data[28].Number = SMCAOSF_sigio;
-INCAOSF.data[28].Class = PVAAOSF_output_class;
+OMCAOSF.data[27].Text = SOCAOSF;
+OMCAOSF.data[28].Number = YLCAOSF_sigio;
+OMCAOSF.data[28].Class = PVAAOSF_output_class;
  /* line 216: */
-INCAOSF.data[28].Text = OPCAOSF;
-INCAOSF.data[29].Number = TMCAOSF_sigpwr;
-INCAOSF.data[29].Class = PVAAOSF_output_class;
+OMCAOSF.data[28].Text = UOCAOSF;
+OMCAOSF.data[29].Number = ZLCAOSF_sigpwr;
+OMCAOSF.data[29].Class = PVAAOSF_output_class;
  /* line 217: */
  /* line 218: */
-INCAOSF.data[29].Text = QPCAOSF;
-ZMCAOSF.Setup = A_HISVEC(RPCAOSF,INCAOSF,30,A68_56 );
-SPCAOSF_signal_facility = ZMCAOSF;
+OMCAOSF.data[29].Text = WOCAOSF;
+FMCAOSF.Setup = A_HISVEC(XOCAOSF,OMCAOSF,30,A68_56 );
+YOCAOSF_signal_facility = FMCAOSF;
  /* line 220: */
-UPCAOSF_generator( A68_TRUE, &YPCAOSF );
-XPCAOSF_sig_msgprocs = YPCAOSF;
+APCAOSF_generator( A68_TRUE, &EPCAOSF );
+DPCAOSF_sig_msgprocs = EPCAOSF;
  /* line 227: */
  /* line 228: */
  /* line 229: */

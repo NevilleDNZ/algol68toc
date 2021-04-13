@@ -51,7 +51,7 @@ A68_VC  mode6;
 struct A68t39  mode7;
 struct A68t40  mode8;
 struct A68t33  mode9;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t35  A68_35 ;    /* UNION(LONG BITS,MODE36,VOID,MODE37,MODE38,MODE26,MODE39,MODE40,MODE33)  */
 struct A68t32{
 A68_INT  Mode;
@@ -204,7 +204,7 @@ struct A68t71 { A68_INT mode; union {
 struct A68t69  mode1;
 struct A68t70  mode2;
 struct A68t41  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t71  A68_71 ;    /* UNION(MODE69,MODE70,MODE41,VOID)  */
 
 A_PROCEDURE(A68_VOID ,A68t72,(A68_VC ),(A68_VC ,void *));
@@ -272,7 +272,7 @@ struct A68t86 { A68_INT mode; union {
 A68_CHAR  mode1;
 A68_VC  mode2;
 A68_SINT  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t86  A68_86 ;    /* UNION(CHAR,MODE26,SHORT INT)  */
 struct A68t88 ;
 
@@ -285,7 +285,7 @@ A68_CHAR  mode1;
 A68_VC  mode2;
 A68_INT  mode3;
 A68_SINT  mode4;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t89  A68_89 ;    /* UNION(CHAR,MODE26,INT,SHORT INT)  */
 
 A_PROCEDURE(A68_VOID ,A68t90,(struct A68t71 ),(struct A68t71 ,void *));
@@ -357,7 +357,7 @@ struct A68t111 * mode8;
 struct A68t112 * mode9;
 struct A68t113 * mode10;
 struct A68t114  mode11;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t104  A68_104 ;    /* UNION(INT,REF MODE105,REF MODE106,REF MODE107,REF MODE108,REF MODE109,REF MODE110,REF MODE111,REF MODE112,REF MODE113,MODE114)  */
 struct A68t105{
 A68_INT  Rdenno;
@@ -532,7 +532,7 @@ struct A68t141 { A68_INT mode; union {
 struct A68t32 * mode1;
 A68_VC  mode2;
 struct A68t38  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t141  A68_141 ;    /* UNION(REF MODE32,MODE26,MODE38)  */
 
 A_PROCEDURE(A68_VOID ,A68t142,(struct A68t141 ,A68_VC *),(struct A68t141 ,A68_VC *,void *));
@@ -1190,9 +1190,9 @@ void KEVACTR(void)   /* initialise DECS evaluator */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","-dir",".","evaluator.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","./moduletracer.m","./unionaids.m","./values.m","./incvalue.m","./modes.m","./incmode.m","./uniquenameserver.m","./coutput.m","./evalbase.m","./environment.m","./centities.m","./idtable.m","./operators.m","./adicops.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","-dir",".","evaluator.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","./moduletracer.m","./unionaids.m","./values.m","./incvalue.m","./modes.m","./incmode.m","./uniquenameserver.m","./coutput.m","./evalbase.m","./environment.m","./centities.m","./idtable.m","./operators.m","./adicops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_169  GFVACTR;  /* collateral clause result */
@@ -1264,11 +1264,11 @@ PPKACTR();   /* USE idtable */
 DYQACTR();   /* USE operators */
 SFTACTR();   /* USE adicops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/src/evaluator.a68";
-A_config.translation_time = "Mon Jan 28 20:24:33 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/src/evaluator.a68";
+A_config.translation_time = "Wed Apr 21 16:34:05 2021";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "JEVACTR (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.spec_change_time = "Wed Apr 21 16:34:05 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

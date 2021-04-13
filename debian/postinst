@@ -24,7 +24,7 @@ set -e
 
 case "$1" in
     configure)
-        install-info --quiet --section Development Development /usr/share/info/ctrans.info.gz
+        install-info --quiet --section Development Development /usr/share/info/ctrans.info.gz /usr/share/info/dir 
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
