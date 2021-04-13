@@ -40,7 +40,7 @@ struct A68t41 { A68_INT mode; union {
 struct A68t39  mode1;
 struct A68t40  mode2;
 struct A68t42  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t41  A68_41 ;    /* UNION(MODE39,MODE40,MODE42,VOID)  */
 
 A_PROCEDURE(A68_VOID ,A68t43,(A68_VC ),(A68_VC ,void *));
@@ -140,7 +140,7 @@ struct A68t56 { A68_INT mode; union {
 struct A68t53  mode1;
 struct A68t57  mode2;
 struct A68t58  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t56  A68_56 ;    /* UNION(MODE53,MODE57,MODE58)  */
 struct A68t61{
 A68_INT  Nochars;
@@ -304,7 +304,7 @@ struct A68t78  mode22;
 struct A68t53  mode23;
 struct A68t57  mode24;
 struct A68t58  mode25;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t64  A68_64 ;    /* UNION(MODE65,INT,BOOL,MODE63,MODE66,MODE67,MODE51,MODE68,MODE69,MODE70,MODE62,MODE71,MODE72,MODE73,MODE74,MODE52,MODE75,MODE60,MODE55,MODE76,MODE77,MODE78,MODE53,MODE57,MODE58,VOID)  */
 struct A68t79 { A68_INT mode; union {
 struct A68t65  mode1;
@@ -316,7 +316,7 @@ struct A68t67  mode6;
 struct A68t51  mode7;
 struct A68t68  mode8;
 struct A68t69  mode9;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t79  A68_79 ;    /* UNION(MODE65,INT,BOOL,MODE63,MODE66,MODE67,MODE51,MODE68,MODE69)  */
 struct A68t80 { A68_INT mode; union {
 struct A68t65  mode1;
@@ -338,7 +338,7 @@ struct A68t52  mode16;
 struct A68t75  mode17;
 struct A68t60  mode18;
 struct A68t55  mode19;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t80  A68_80 ;    /* UNION(MODE65,INT,BOOL,MODE63,MODE66,MODE67,MODE51,MODE68,MODE69,MODE70,MODE62,MODE71,MODE72,MODE73,MODE74,MODE52,MODE75,MODE60,MODE55)  */
 struct A68t83{
 A68_INT  Rdenno;
@@ -374,7 +374,7 @@ A68_VC  mode6;
 struct A68t66  mode7;
 struct A68t65  mode8;
 struct A68t86  mode9;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t82  A68_82 ;    /* UNION(LONG BITS,MODE83,VOID,MODE84,MODE85,MODE26,MODE66,MODE65,MODE86)  */
 struct A68t81{
 A68_INT  Mode;
@@ -458,7 +458,7 @@ struct A68t107 { A68_INT mode; union {
 struct A68t81 * mode1;
 A68_VC  mode2;
 struct A68t85  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t107  A68_107 ;    /* UNION(REF MODE81,MODE26,MODE85)  */
 
 A_PROCEDURE(A68_VOID ,A68t108,(struct A68t107 ,A68_VC *),(struct A68t107 ,A68_VC *,void *));
@@ -1078,9 +1078,9 @@ void CPQACTR(void)   /* initialise DECS oper */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","-dir",".","oper.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","./values.m","./incoperfn.m","./incmode.m","./incimperatives.m","./environment.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","-dir",".","oper.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","./values.m","./incoperfn.m","./incmode.m","./incimperatives.m","./environment.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_122  TPQACTR;  /* collateral clause result */
@@ -1095,11 +1095,11 @@ ZDAACTR();   /* USE incmode */
 UAAACTR();   /* USE incimperatives */
 HPIACTR();   /* USE environment */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/src/oper.a68";
-A_config.translation_time = "Mon Jan 28 20:24:33 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/src/oper.a68";
+A_config.translation_time = "Wed Apr 21 16:34:05 2021";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "BPQACTR (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.spec_change_time = "Wed Apr 21 16:34:05 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

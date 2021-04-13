@@ -37,7 +37,7 @@ typedef struct A68t42  A68_42 ;    /* STRUCT(MODE31,MODE31,INT)  */
 struct A68t40 { A68_INT mode; union {
 A68_VC  mode1;
 struct A68t41  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t40  A68_40 ;    /* UNION(REF MODE26,REF MODE41)  */
 struct A68t37{
 struct A68t31  F;
@@ -178,7 +178,7 @@ struct A68t51 * mode8;
 struct A68t52 * mode9;
 struct A68t56 * mode10;
 struct A68t54  mode11;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t55  A68_55 ;    /* UNION(INT,REF MODE45,REF MODE46,REF MODE48,REF MODE49,REF MODE44,REF MODE50,REF MODE51,REF MODE52,REF MODE56,MODE54)  */
 struct A68t56{
 A68_INT  Mode;
@@ -312,7 +312,7 @@ struct A68t69  mode7;
 struct A68t65  mode8;
 struct A68t66  mode9;
 struct A68t64  mode10;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t70  A68_70 ;    /* UNION(BOOL,INT,REF MODE60,MODE71,MODE63,MODE68,MODE69,MODE65,MODE66,MODE64)  */
 struct A68t72{
 A68_INT  Type;
@@ -329,7 +329,7 @@ typedef struct A68t73  A68_73 ;    /* STRUCT(REF MODE60,BOOL)  */
 struct A68t74 { A68_INT mode; union {
 struct A68t72  mode1;
 struct A68t73  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t74  A68_74 ;    /* UNION(MODE72,MODE73)  */
 struct A68t75{
 A68_BOOL  Up;
@@ -536,7 +536,7 @@ struct A68t95  mode32;
 struct A68t96  mode33;
 struct A68t59 * mode34;
 struct A68t67  mode35;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t97  A68_97 ;    /* UNION(MODE75,BOOL,INT,REF MODE60,MODE71,MODE63,MODE68,MODE69,MODE65,MODE66,MODE64,MODE72,MODE73,MODE76,MODE77,MODE79,MODE80,MODE81,REF MODE98,MODE78,MODE82,MODE37,MODE85,MODE86,MODE87,MODE88,MODE89,MODE92,MODE93,REF MODE91,MODE94,MODE95,MODE96,REF MODE59,MODE67)  */
 struct A68t100 ;
 struct A68t101 ;
@@ -636,9 +636,9 @@ void BKJACTR(void)   /* initialise DECS common */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","-dir",".","common.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","./rscompiler.m","./incinstallation.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","-dir",".","common.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","./rscompiler.m","./incinstallation.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 if( A_invoked ) return;
@@ -647,11 +647,11 @@ BAAALIB();   /* USE a68config */
 ZJAACTR();   /* USE rscompiler */
 ODAACTR();   /* USE incinstallation */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/src/common.a68";
-A_config.translation_time = "Mon Jan 28 20:24:33 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/src/common.a68";
+A_config.translation_time = "Wed Apr 21 16:34:05 2021";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "AKJACTR (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.spec_change_time = "Wed Apr 21 16:34:05 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

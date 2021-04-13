@@ -498,9 +498,6 @@ execute_os_command,    { PROC (STR, MESSAGEPROC) INT - execute command STR and
 get_cpu_time,          { PROC INT - cpu time used since initialisation in cS }
 
 
-make_temp_filename,    { PROC (STR dir, prefix, MESSAGEPROC) STR - create a
-                         unique file name }
-
 rename_file,           { PROC (STR  old, new, MESSAGEPROC) IOSTATUS - rename
                          a file }
 

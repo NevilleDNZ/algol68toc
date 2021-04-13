@@ -1,4 +1,4 @@
-/* UNAME:NNEAOSF */
+/* UNAME:TMEAOSF */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_VOID ,A68t31,(A68_BOOL ,A68_VC *),(A68_BOOL ,A68_VC *,void *));
@@ -58,242 +58,242 @@ static A68_VC  A_configinfo;
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
 /* --- end of DECS initialisation functions --- */
-static A68_38   RNEAOSF = {"$Id: options.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
-A_GISVEC(A68_VC ,SNEAOSF,RNEAOSF,57)
-A68_39  YPEAOSF_ans;
-A68_39  BQEAOSF_null_options;
+static A68_38   XMEAOSF = {"$Id: options.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
+A_GISVEC(A68_VC ,YMEAOSF,XMEAOSF,57)
+A68_39  EPEAOSF_ans;
+A68_39  HPEAOSF_null_options;
 
-A68_VOID  VNEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue);
+A68_VOID  BNEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue);
 
-A68_39 * BOEAOSF_plusab(A68_39 * A, A68_39  B);
+A68_39 * HNEAOSF_plusab(A68_39 * A, A68_39  B);
 
-A68_VOID  GOEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue);
+A68_VOID  MNEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue);
 
-A68_39 * MOEAOSF_minusab(A68_39 * A, A68_39  B);
+A68_39 * SNEAOSF_minusab(A68_39 * A, A68_39  B);
 
-A68_BOOL  ROEAOSF_(A68_39  A, A68_39  B);
+A68_BOOL  XNEAOSF_(A68_39  A, A68_39  B);
 
-A68_BOOL  VOEAOSF_(A68_39  A, A68_39  B);
+A68_BOOL  BOEAOSF_(A68_39  A, A68_39  B);
 
-A68_BOOL  ZOEAOSF_includes(A68_39  Options, A68_39  Option);
+A68_BOOL  FOEAOSF_includes(A68_39  Options, A68_39  Option);
 
-A68_BOOL  DPEAOSF_includes(A68_39  Options, A68_INT  Nth);
+A68_BOOL  JOEAOSF_includes(A68_39  Options, A68_INT  Nth);
 
-A68_BOOL  JPEAOSF_excludes(A68_39  Options, A68_39  Option);
+A68_BOOL  POEAOSF_excludes(A68_39  Options, A68_39  Option);
 
-A68_BOOL  NPEAOSF_excludes(A68_39  Options, A68_INT  Nth);
+A68_BOOL  TOEAOSF_excludes(A68_39  Options, A68_INT  Nth);
 
-A68_VOID  SPEAOSF_makeoptions(A68_INT  Nth, A68_39  *ReturnedValue);
+A68_VOID  YOEAOSF_makeoptions(A68_INT  Nth, A68_39  *ReturnedValue);
 
-A68_VOID  VNEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue)
+A68_VOID  BNEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue)
 { 
-A68_39  WNEAOSF_ans;
-A68_BITS * XNEAOSF;  /* YIELD */
-A68_39  YNEAOSF;  /* clause result */
+A68_39  CNEAOSF_ans;
+A68_BITS * DNEAOSF;  /* YIELD */
+A68_39  ENEAOSF;  /* clause result */
 A_PROC_ENTRY(+);
  /* line 58: */
  /* line 59: */
 { 
-WNEAOSF_ans = A;
+CNEAOSF_ans = A;
  /* line 60: */
-XNEAOSF = (&((&WNEAOSF_ans)->Options)) ;
-(*XNEAOSF) = (A68_BITS )((*(&((&WNEAOSF_ans)->Options)))|B.Options);
+DNEAOSF = (&((&CNEAOSF_ans)->Options)) ;
+(*DNEAOSF) = (A68_BITS )((*(&((&CNEAOSF_ans)->Options)))|B.Options);
  /* line 61: */
  /* line 62: */
-YNEAOSF = WNEAOSF_ans;
+ENEAOSF = CNEAOSF_ans;
 } 
 A_PROC_EXIT(+);
-*ReturnedValue = (YNEAOSF);
+*ReturnedValue = (ENEAOSF);
 return;
 } 
 #undef NL
 
-A68_39 * BOEAOSF_plusab(A68_39 * A, A68_39  B)
+A68_39 * HNEAOSF_plusab(A68_39 * A, A68_39  B)
 { 
-A68_BITS * COEAOSF;  /* YIELD */
-A68_39 * DOEAOSF;  /* clause result */
+A68_BITS * INEAOSF;  /* YIELD */
+A68_39 * JNEAOSF;  /* clause result */
 A_PROC_ENTRY(plusab);
  /* line 65: */
  /* line 66: */
 { 
-COEAOSF = (&(A->Options)) ;
-(*COEAOSF) = (A68_BITS )((*(&(A->Options)))|B.Options);
+INEAOSF = (&(A->Options)) ;
+(*INEAOSF) = (A68_BITS )((*(&(A->Options)))|B.Options);
  /* line 67: */
  /* line 68: */
-DOEAOSF = A;
+JNEAOSF = A;
 } 
 A_PROC_EXIT(plusab);
-return( DOEAOSF );
+return( JNEAOSF );
 } 
 #undef NL
 
-A68_VOID  GOEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue)
+A68_VOID  MNEAOSF_(A68_39  A, A68_39  B, A68_39  *ReturnedValue)
 { 
-A68_39  HOEAOSF_ans;
-A68_BITS * IOEAOSF;  /* YIELD */
-A68_39  JOEAOSF;  /* clause result */
+A68_39  NNEAOSF_ans;
+A68_BITS * ONEAOSF;  /* YIELD */
+A68_39  PNEAOSF;  /* clause result */
 A_PROC_ENTRY(-);
  /* line 71: */
  /* line 72: */
 { 
-HOEAOSF_ans = A;
+NNEAOSF_ans = A;
  /* line 73: */
-IOEAOSF = (&((&HOEAOSF_ans)->Options)) ;
-(*IOEAOSF) = (A68_BITS )((*(&((&HOEAOSF_ans)->Options)))&~B.Options);
+ONEAOSF = (&((&NNEAOSF_ans)->Options)) ;
+(*ONEAOSF) = (A68_BITS )((*(&((&NNEAOSF_ans)->Options)))&~B.Options);
  /* line 74: */
  /* line 75: */
-JOEAOSF = HOEAOSF_ans;
+PNEAOSF = NNEAOSF_ans;
 } 
 A_PROC_EXIT(-);
-*ReturnedValue = (JOEAOSF);
+*ReturnedValue = (PNEAOSF);
 return;
 } 
 #undef NL
 
-A68_39 * MOEAOSF_minusab(A68_39 * A, A68_39  B)
+A68_39 * SNEAOSF_minusab(A68_39 * A, A68_39  B)
 { 
-A68_BITS * NOEAOSF;  /* YIELD */
-A68_39 * OOEAOSF;  /* clause result */
+A68_BITS * TNEAOSF;  /* YIELD */
+A68_39 * UNEAOSF;  /* clause result */
 A_PROC_ENTRY(minusab);
  /* line 78: */
  /* line 79: */
 { 
-NOEAOSF = (&(A->Options)) ;
-(*NOEAOSF) = (A68_BITS )((*(&(A->Options)))&~B.Options);
+TNEAOSF = (&(A->Options)) ;
+(*TNEAOSF) = (A68_BITS )((*(&(A->Options)))&~B.Options);
  /* line 80: */
  /* line 81: */
-OOEAOSF = A;
+UNEAOSF = A;
 } 
 A_PROC_EXIT(minusab);
-return( OOEAOSF );
+return( UNEAOSF );
 } 
 #undef NL
 
-A68_BOOL  ROEAOSF_(A68_39  A, A68_39  B)
+A68_BOOL  XNEAOSF_(A68_39  A, A68_39  B)
 { 
-A68_BOOL  SOEAOSF;  /* clause result */
+A68_BOOL  YNEAOSF;  /* clause result */
 A_PROC_ENTRY(=);
-SOEAOSF = (A.Options==B.Options);
+YNEAOSF = (A.Options==B.Options);
 A_PROC_EXIT(=);
-return( SOEAOSF );
+return( YNEAOSF );
 } 
 #undef NL
 
-A68_BOOL  VOEAOSF_(A68_39  A, A68_39  B)
+A68_BOOL  BOEAOSF_(A68_39  A, A68_39  B)
 { 
-A68_BOOL  WOEAOSF;  /* clause result */
+A68_BOOL  COEAOSF;  /* clause result */
 A_PROC_ENTRY(/=);
-WOEAOSF = (A.Options!=B.Options);
+COEAOSF = (A.Options!=B.Options);
 A_PROC_EXIT(/=);
-return( WOEAOSF );
+return( COEAOSF );
 } 
 #undef NL
 
-A68_BOOL  ZOEAOSF_includes(A68_39  Options, A68_39  Option)
+A68_BOOL  FOEAOSF_includes(A68_39  Options, A68_39  Option)
 { 
-A68_BOOL  APEAOSF;  /* clause result */
+A68_BOOL  GOEAOSF;  /* clause result */
 A_PROC_ENTRY(includes);
  /* line 92: */
-APEAOSF = ((A68_BITS )(Options.Options&Option.Options)!=0X0U);
+GOEAOSF = ((A68_BITS )(Options.Options&Option.Options)!=0X0U);
 A_PROC_EXIT(includes);
-return( APEAOSF );
+return( GOEAOSF );
 } 
 #undef NL
 
-A68_BOOL  DPEAOSF_includes(A68_39  Options, A68_INT  Nth)
+A68_BOOL  JOEAOSF_includes(A68_39  Options, A68_INT  Nth)
 { 
-A68_BOOL  EPEAOSF;  /* clause result */
-A68_INT  FPEAOSF;  /* SHL */
-A68_BITS  GPEAOSF;  /* SHL */
+A68_BOOL  KOEAOSF;  /* clause result */
+A68_INT  LOEAOSF;  /* SHL */
+A68_BITS  MOEAOSF;  /* SHL */
 A_PROC_ENTRY(includes);
  /* line 95: */
-FPEAOSF = (Nth-1) ;
-GPEAOSF = 0X1U ;
-EPEAOSF = ((A68_BITS )(Options.Options&A_SHL(GPEAOSF,FPEAOSF))!=0X0U);
+LOEAOSF = (Nth-1) ;
+MOEAOSF = 0X1U ;
+KOEAOSF = ((A68_BITS )(Options.Options&A_SHL(MOEAOSF,LOEAOSF))!=0X0U);
 A_PROC_EXIT(includes);
-return( EPEAOSF );
+return( KOEAOSF );
 } 
 #undef NL
 
-A68_BOOL  JPEAOSF_excludes(A68_39  Options, A68_39  Option)
+A68_BOOL  POEAOSF_excludes(A68_39  Options, A68_39  Option)
 { 
-A68_BOOL  KPEAOSF;  /* clause result */
+A68_BOOL  QOEAOSF;  /* clause result */
 A_PROC_ENTRY(excludes);
  /* line 98: */
-KPEAOSF = ((A68_BITS )(Options.Options&Option.Options)==0X0U);
+QOEAOSF = ((A68_BITS )(Options.Options&Option.Options)==0X0U);
 A_PROC_EXIT(excludes);
-return( KPEAOSF );
+return( QOEAOSF );
 } 
 #undef NL
 
-A68_BOOL  NPEAOSF_excludes(A68_39  Options, A68_INT  Nth)
+A68_BOOL  TOEAOSF_excludes(A68_39  Options, A68_INT  Nth)
 { 
-A68_BOOL  OPEAOSF;  /* clause result */
-A68_INT  PPEAOSF;  /* SHL */
-A68_BITS  QPEAOSF;  /* SHL */
+A68_BOOL  UOEAOSF;  /* clause result */
+A68_INT  VOEAOSF;  /* SHL */
+A68_BITS  WOEAOSF;  /* SHL */
 A_PROC_ENTRY(excludes);
  /* line 101: */
-PPEAOSF = (Nth-1) ;
-QPEAOSF = 0X1U ;
-OPEAOSF = ((A68_BITS )(Options.Options&A_SHL(QPEAOSF,PPEAOSF))==0X0U);
+VOEAOSF = (Nth-1) ;
+WOEAOSF = 0X1U ;
+UOEAOSF = ((A68_BITS )(Options.Options&A_SHL(WOEAOSF,VOEAOSF))==0X0U);
 A_PROC_EXIT(excludes);
-return( OPEAOSF );
+return( UOEAOSF );
 } 
 #undef NL
 
-A68_VOID  SPEAOSF_makeoptions(A68_INT  Nth, A68_39  *ReturnedValue)
+A68_VOID  YOEAOSF_makeoptions(A68_INT  Nth, A68_39  *ReturnedValue)
 { 
-A68_39  TPEAOSF_ans;
-A68_INT  UPEAOSF;  /* SHL */
-A68_BITS  VPEAOSF;  /* SHL */
-A68_BITS * WPEAOSF;  /* YIELD */
-A68_39  XPEAOSF;  /* clause result */
+A68_39  ZOEAOSF_ans;
+A68_INT  APEAOSF;  /* SHL */
+A68_BITS  BPEAOSF;  /* SHL */
+A68_BITS * CPEAOSF;  /* YIELD */
+A68_39  DPEAOSF;  /* clause result */
 A_PROC_ENTRY(makeoptions);
  /* line 107: */
  /* line 108: */
 { 
  /* line 109: */
-UPEAOSF = (Nth-1) ;
-VPEAOSF = 0X1U ;
-WPEAOSF = (&((&TPEAOSF_ans)->Options)) ;
-(*WPEAOSF) = A_SHL(VPEAOSF,UPEAOSF);
+APEAOSF = (Nth-1) ;
+BPEAOSF = 0X1U ;
+CPEAOSF = (&((&ZOEAOSF_ans)->Options)) ;
+(*CPEAOSF) = A_SHL(BPEAOSF,APEAOSF);
  /* line 110: */
  /* line 111: */
-XPEAOSF = TPEAOSF_ans;
+DPEAOSF = ZOEAOSF_ans;
 } 
 A_PROC_EXIT(makeoptions);
-*ReturnedValue = (XPEAOSF);
+*ReturnedValue = (DPEAOSF);
 return;
 } 
 #undef NL
  /* line 1: */
  /* line 4: */
-void ONEAOSF(void)   /* initialise DECS options */
+void UMEAOSF(void)   /* initialise DECS options */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","options.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","options.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
-A68_BITS * ZPEAOSF;  /* YIELD */
-A68_39  AQEAOSF;  /* clause result */
+A68_BITS * FPEAOSF;  /* YIELD */
+A68_39  GPEAOSF;  /* clause result */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/liba68prel/options.a68";
-A_config.translation_time = "Mon Jan 28 20:24:31 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/options.a68";
+A_config.translation_time = "Wed Apr 21 16:34:02 2021";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "NNEAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.name_seed = "TMEAOSF (from seed file) ";
+A_config.spec_change_time = "Wed Apr 21 16:34:02 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS options);
-UEAALIB_a68config(LGAALIB_configinfo, SNEAOSF);
+UEAALIB_a68config(LGAALIB_configinfo, YMEAOSF);
  /* line 53: */
  /* line 57: */
  /* line 64: */
@@ -308,12 +308,12 @@ UEAALIB_a68config(LGAALIB_configinfo, SNEAOSF);
  /* line 106: */
  /* line 115: */
 { 
-ZPEAOSF = (&((&YPEAOSF_ans)->Options)) ;
-(*ZPEAOSF) = 0X0U;
+FPEAOSF = (&((&EPEAOSF_ans)->Options)) ;
+(*FPEAOSF) = 0X0U;
  /* line 117: */
-AQEAOSF = YPEAOSF_ans;
+GPEAOSF = EPEAOSF_ans;
 } 
-BQEAOSF_null_options = AQEAOSF;
+HPEAOSF_null_options = GPEAOSF;
  /* line 123: */
 A_PROC_EXIT(DECS options);
 } 

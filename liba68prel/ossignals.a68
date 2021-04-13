@@ -75,7 +75,7 @@ PROC (INT,INT) INT kill =
 
 PROC (INT) INT raise =
   ALIEN "RAISE"
-        "/* extern int raise(); /* #include <signal.h> */"
+        "/* extern int raise(); */ /* #include <signal.h> */"
         "#define myraise(sig) kill(getpid(),(sig))"
         "#define RAISE(sig) A_int_INT(myraise(A_INT_int(sig)))";
 
@@ -87,37 +87,37 @@ PROC (INT,REF SIGACTION, REF SIGACTION) INT sigaction =
 PROC (REF SIGSET,INT) INT sigaddset =
   ALIEN "SIGADDSET"
         "#include <signal.h>"
-        "#define SIGADDSET(set,signo) A_int_INT(sigaddset((void *)(set),A_INT_int(signo)))";
+        "#define SIGADDSET(set,signo) A_int_INT(sigaddset((sigset_t *)(set),A_INT_int(signo)))";
 
 PROC (REF SIGSET,INT) INT sigdelset =
   ALIEN "SIGDELSET"
         "#include <signal.h>"
-        "#define SIGDELSET(set,signo) A_int_INT(sigdelset((void *)(set),A_INT_int(signo)))";
+        "#define SIGDELSET(set,signo) A_int_INT(sigdelset((sigset_t *)(set),A_INT_int(signo)))";
 
 PROC (REF SIGSET) INT sigemptyset =
   ALIEN "SIGEMPTYSET"
         "#include <signal.h>"
-        "#define SIGEMPTYSET(set) A_int_INT(sigemptyset((void *)(set)))";
+        "#define SIGEMPTYSET(set) A_int_INT(sigemptyset((sigset_t *)(set)))";
 
 PROC (REF SIGSET) INT sigfillset =
   ALIEN "SIGFILLSET"
         "#include <signal.h>"
-        "#define SIGFILLSET(set) A_int_INT(sigfillset((void *)(set)))";
+        "#define SIGFILLSET(set) A_int_INT(sigfillset((sigset_t *)(set)))";
 
 PROC (REF SIGSET,INT) INT sigismember =
   ALIEN "SIGISMEMBER"
         "#include <signal.h>"
-        "#define SIGISMEMBER(set,signo) A_int_INT(sigismember((void *)(set),A_INT_int(signo)))";
+        "#define SIGISMEMBER(set,signo) A_int_INT(sigismember((sigset_t *)(set),A_INT_int(signo)))";
 
 PROC (REF SIGSET) INT sigpending =
   ALIEN "SIGPENDING"
         "#include <signal.h>"
-        "#define SIGPENDING(set) A_int_INT(sigpending((void *)(set)))";
+        "#define SIGPENDING(set) A_int_INT(sigpending((sigset_t *)(set)))";
 
 PROC (INT,REF SIGSET, REF SIGSET) INT sigprocmask =
   ALIEN "SIGPROCMASK"
         "#include <signal.h>"
-        "#define SIGPROCMASK(how,set,oset) A_int_INT(sigprocmask(A_INT_int(how),(void *)(set),(void *)(oset)))";
+        "#define SIGPROCMASK(how,set,oset) A_int_INT(sigprocmask(A_INT_int(how),(sigset_t *)(set),(sigset_t *)(oset)))";
 
 { "how" values }
 INT
@@ -155,7 +155,7 @@ INT  sighup    = ALIEN "SIGHUP"  "#include <signal.h>",
      sigpipe   = ALIEN "SIGPIPE" "/**/",
      sigalrm   = ALIEN "SIGALRM" "/**/",
      sigterm   = ALIEN "SIGTERM" "/**/",
-     sigstkflt = ALIEN "SIGSTKFLT" "/**/",
+     sigstkflt = ALIEN "SIGSTKFLT" "#if !defined(SIGSTKFLT)" "#define SIGSTKFLT 32" "#endif" "/**/",
      sigchld   = ALIEN "SIGCHLD" "/**/",
      sigcont   = ALIEN "SIGCONT" "/**/",
      sigstop   = ALIEN "SIGSTOP" "/**/",
@@ -169,7 +169,7 @@ INT  sighup    = ALIEN "SIGHUP"  "#include <signal.h>",
      sigprof   = ALIEN "SIGPROF" "/**/",
      sigwinch  = ALIEN "SIGWINCH" "/**/",
      sigio     = ALIEN "SIGIO"   "/**/",
-     sigpwr    = ALIEN "SIGPWR"  "/**/";
+     sigpwr    = ALIEN "SIGPWR"   "#if !defined(SIGPWR)" "#define SIGPWR 33" "#endif" "/**/";
 
 CFUNCPTR
   sig_err = ALIEN "SIG_ERR" "/**/",

@@ -11,6 +11,7 @@ algol68_inc := algol68/Aalloc.h algol68/Aassign.h algol68/Acoerce.h \
 linux_inc := algol68/linux/Ahhostgc.h algol68/linux/Ahostenv.h \
              algol68/linux/Ahswitch.h
 
+
 .PHONY: install
 
 all : $(algol68_inc) $(linux_inc)
@@ -19,3 +20,4 @@ all : $(algol68_inc) $(linux_inc)
 install :
 	$(INSTALLDATA) -p $(algol68_inc) $(INCDIR)
 	$(INSTALLDATA) -p $(linux_inc) $(INCDIR)/linux
+

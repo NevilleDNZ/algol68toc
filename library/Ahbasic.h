@@ -93,8 +93,9 @@ typedef void		*PTR;		/* a pointer to anything */
 #define	PTRSIZE		((SIZE)sizeof(PTR))
 #endif
 
+/* WORDSIZE is always 32-bit, even on 64-bit architectures */
 #ifndef WORDSIZE
-#define WORDSIZE        ((SIZE)sizeof(void *))
+#define WORDSIZE        ((SIZE)sizeof(int))
 #endif
 
 #ifndef ALIGNED

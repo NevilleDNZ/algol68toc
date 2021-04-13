@@ -7,8 +7,8 @@ Standards-Version: 3.9.2
 Homepage: http://www.poenikatu.co.uk/
 
 Package: algol68toc
-Architecture: i386
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Architecture: any
+Depends: gcc (>=8.3.0), ${shlibs:Depends}, ${misc:Depends}
 Section: devel
 Priority: optional
 Description: Algol 68 development system
@@ -17,14 +17,10 @@ Description: Algol 68 development system
  package includes the following:-
  .
  a68toc     -- Algol 68 to C translator
- ca         -- compilation tool
- rs         -- Unicode regular expression searching
- tang       -- Web 68 extraction tool
+ ca         -- compilation shell script
  pame       -- Programming Algol 68 Made Easy
                600-odd page book teaching Algol 68 from scratch
  resetseed  -- reset nameseed file
- Web 68 documentation in HTML
- Manual pages for ca and a68toc in HTML
  System documentation in GNU info format
  Compiler documentation in TeX DVI format
  Various example Algol 68 program sources.

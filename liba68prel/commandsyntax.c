@@ -1,4 +1,4 @@
-/* UNAME:XEFAOSF */
+/* UNAME:DEFAOSF */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_VOID ,A68t31,(A68_BOOL ,A68_VC *),(A68_BOOL ,A68_VC *,void *));
@@ -85,7 +85,7 @@ A68_INT  mode2;
 A68_SBITS  mode3;
 A68_SINT  mode4;
 A68_CHAR  mode5;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t50  A68_50 ;    /* UNION(BITS,INT,SHORT BITS,SHORT INT,CHAR)  */
 
 A_PROCEDURE(A68_VOID ,A68t51,(A68_INT ,A68_VC *),(A68_INT ,A68_VC *,void *));
@@ -173,7 +173,7 @@ struct A68t63  mode19;
 struct A68t64  mode20;
 struct A68t65  mode21;
 struct A68t66  mode22;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t52  A68_52 ;    /* UNION(INT,MODE32,BITS,MODE53,SHORT BITS,CHAR,MODE26,BOOL,MODE54,REAL,MODE55,MODE56,MODE57,MODE58,MODE59,MODE60,MODE61,MODE62,MODE63,MODE64,MODE65,MODE66)  */
 
 A_PROCEDURE(A68_VOID ,A68t67,(A68_BOOL ,struct A68t58 *),(A68_BOOL ,struct A68t58 *,void *));
@@ -240,12 +240,12 @@ typedef struct A68t86  A68_86 ;    /* PROC(MODE87,MODE88) REF MODE34 */
 struct A68t87 { A68_INT mode; union {
 A68_INT  mode1;
 A68_VC  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t87  A68_87 ;    /* UNION(INT,REF MODE26)  */
 struct A68t88 { A68_INT mode; union {
 struct A68t36  mode1;
 struct A68t37  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t88  A68_88 ;    /* UNION(MODE36,MODE37)  */
 
 A_PROCEDURE(A68_VOID ,A68t89,(A68_VC ,struct A68t85 ,A68_VC *),(A68_VC ,struct A68t85 ,A68_VC *,void *));
@@ -317,7 +317,7 @@ typedef struct A68t105  A68_105 ;    /* PROC(MODE106) BOOL */
 struct A68t106 { A68_INT mode; union {
 struct A68t92  mode1;
 struct A68t95  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t106  A68_106 ;    /* UNION(MODE92,MODE95)  */
 
 A_PROCEDURE(A68_INT ,A68t107,(struct A68t92 ),(struct A68t92 ,void *));
@@ -356,7 +356,7 @@ typedef struct A68t117  A68_117 ;    /* STRUCT(BITS,REF MODE118)  */
 struct A68t119 { A68_INT mode; union {
 A68_INT * mode1;
 struct A68t117  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t119  A68_119 ;    /* UNION(REF INT,MODE117)  */
 struct A68t120{
 A68_INT  Sort;
@@ -377,7 +377,7 @@ typedef struct A68t124  A68_124 ;    /* STRUCT(INT,REF MODE125)  */
 struct A68t126 { A68_INT mode; union {
 struct A68t124  mode1;
 struct A68t120  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t126  A68_126 ;    /* UNION(MODE124,MODE120)  */
 
 A_PROCEDURE(A68_VOID ,A68t128,(struct A68t97 ,A68_VC *),(struct A68t97 ,A68_VC *,void *));
@@ -386,7 +386,7 @@ struct A68t127 { A68_INT mode; union {
 struct A68t128  mode1;
 A68_INT * mode2;
 struct A68t117  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t127  A68_127 ;    /* UNION(MODE128,REF INT,MODE117)  */
 struct A68t129{
 A68_INT * Sort;
@@ -475,360 +475,360 @@ extern A68_VOID  ZCAAOSF_makervc(A68_VC ,A68_VC *);
 
 
 /* --- Imports from putstrings --- */
-extern A68_VC  WHDAOSF_nilstr;
-extern A68_VC  CIDAOSF_nullstr;
-extern A68_VOID  LSDAOSF_tab(A68_INT ,A68_60 *);
-extern A68_VOID  FTDAOSF_lines(A68_INT ,A68_64 *);
-extern A68_VOID  JLDAOSF_newline(struct A68t34 *);
-extern A68_VOID  EZDAOSF_put(struct A68t34 *,struct A68t85 );
-extern A68_VOID  SDEAOSF_oneline(struct A68t85 ,A68_VC *);
+extern A68_VC  CHDAOSF_nilstr;
+extern A68_VC  IHDAOSF_nullstr;
+extern A68_VOID  RRDAOSF_tab(A68_INT ,A68_60 *);
+extern A68_VOID  LSDAOSF_lines(A68_INT ,A68_64 *);
+extern A68_VOID  PKDAOSF_newline(struct A68t34 *);
+extern A68_VOID  KYDAOSF_put(struct A68t34 *,struct A68t85 );
+extern A68_VOID  YCEAOSF_oneline(struct A68t85 ,A68_VC *);
 /* --- End of imports from putstrings --- */
 
 
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
 extern void ZRAAOSF(void);   /* messageproc */
-extern void KNDAOSF(void);   /* putstrings */
+extern void QMDAOSF(void);   /* putstrings */
 /* --- end of DECS initialisation functions --- */
-static A68_115   BFFAOSF = {"$Id: commandsyntax.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
-A_GISVEC(A68_VC ,CFFAOSF,BFFAOSF,63)
-A68_119  FFFAOSF_noparameters;
-A68_126  NFFAOSF_no_parameters;
-#define OFFAOSF_prod_syn 0X0U
-#define PFFAOSF_alt_syn 0X8U
-#define QFFAOSF_opt_syn 0X2U
-#define RFFAOSF_star_syn 0X4U
-static A68_137   OIFAOSF = {"illegal"}; 
-A_GISVEC(A68_VC ,PIFAOSF,OIFAOSF,7)
-static A68_139   EJFAOSF = {" | "}; 
-A_GISVEC(A68_VC ,GJFAOSF,EJFAOSF,3)
-static A68_143   YLFAOSF = {"::= "}; 
-A_GISVEC(A68_VC ,ZLFAOSF,YLFAOSF,4)
+static A68_115   HEFAOSF = {"$Id: commandsyntax.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
+A_GISVEC(A68_VC ,IEFAOSF,HEFAOSF,63)
+A68_119  LEFAOSF_noparameters;
+A68_126  TEFAOSF_no_parameters;
+#define UEFAOSF_prod_syn 0X0U
+#define VEFAOSF_alt_syn 0X8U
+#define WEFAOSF_opt_syn 0X2U
+#define XEFAOSF_star_syn 0X4U
+static A68_137   UHFAOSF = {"illegal"}; 
+A_GISVEC(A68_VC ,VHFAOSF,UHFAOSF,7)
+static A68_139   KIFAOSF = {" | "}; 
+A_GISVEC(A68_VC ,MIFAOSF,KIFAOSF,3)
+static A68_143   ELFAOSF = {"::= "}; 
+A_GISVEC(A68_VC ,FLFAOSF,ELFAOSF,4)
 typedef struct   /* env of non-global proc */
 {
 A68_118  Cs;
-} HGFAOSF_generator;
+} NFFAOSF_generator;
 typedef struct   /* env of non-global proc */
 {
 A68_118  Cs;
-} SGFAOSF_generator;
+} YFFAOSF_generator;
 typedef struct   /* env of non-global proc */
 {
 int dummy;
-} IHFAOSF_generator;
+} OGFAOSF_generator;
 typedef struct   /* env of non-global proc */
 {
 int dummy;
-} AIFAOSF_generator;
+} GHFAOSF_generator;
 typedef struct   /* env of non-global proc */
 {
 int dummy;
-} HNFAOSF_generator;
+} NMFAOSF_generator;
 typedef struct   /* env of non-global proc */
 {
-A68_INT * MNFAOSF_n;
-A68_122 * KNFAOSF_ans;
-} QNFAOSF_add;
+A68_INT * SMFAOSF_n;
+A68_122 * QMFAOSF_ans;
+} WMFAOSF_add;
 typedef struct   /* env of non-global proc */
 {
-A68_149  ONFAOSF_add;
-A68_150  EOFAOSF_simplify;
-} GOFAOSF_simplify;
-typedef struct   /* env of non-global proc */
-{
-int dummy;
-} SOFAOSF_generator;
+A68_149  UMFAOSF_add;
+A68_150  KNFAOSF_simplify;
+} MNFAOSF_simplify;
 typedef struct   /* env of non-global proc */
 {
 int dummy;
-} CPFAOSF_generator;
+} YNFAOSF_generator;
 typedef struct   /* env of non-global proc */
 {
-A68_122 * KNFAOSF_ans;
-} UNFAOSF_generator;
+int dummy;
+} IOFAOSF_generator;
+typedef struct   /* env of non-global proc */
+{
+A68_122 * QMFAOSF_ans;
+} ANFAOSF_generator;
 
-A_STATIC A68_VOID  IFFAOSF_generator(A68_BOOL  HFFAOSF_anonymous, A68_VC  *ReturnedValue);
+A_STATIC A68_VOID  OEFAOSF_generator(A68_BOOL  NEFAOSF_anonymous, A68_VC  *ReturnedValue);
 
-A68_BOOL  TFFAOSF_is_alt(A68_117  Rule);
+A68_BOOL  ZEFAOSF_is_alt(A68_117  Rule);
 
-A68_BOOL  WFFAOSF_is_opt(A68_117  Rule);
+A68_BOOL  CFFAOSF_is_opt(A68_117  Rule);
 
-A68_BOOL  ZFFAOSF_is_star(A68_117  Rule);
+A68_BOOL  FFFAOSF_is_star(A68_117  Rule);
 
-A68_VOID  CGFAOSF_alt(A68_118  Cs, A68_117  *ReturnedValue);
+A68_VOID  IFFAOSF_alt(A68_118  Cs, A68_117  *ReturnedValue);
 
-A_STATIC A68_VOID  GGFAOSF_generator(A68_BOOL  EGFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  MFFAOSF_generator(A68_BOOL  KFFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals);
 
-A68_VOID  NGFAOSF_prod(A68_118  Cs, A68_117  *ReturnedValue);
+A68_VOID  TFFAOSF_prod(A68_118  Cs, A68_117  *ReturnedValue);
 
-A_STATIC A68_VOID  RGFAOSF_generator(A68_BOOL  PGFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  XFFAOSF_generator(A68_BOOL  VFFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals);
 
-A68_VOID  YGFAOSF_opt(A68_119  Cs, A68_117  *ReturnedValue);
+A68_VOID  EGFAOSF_opt(A68_119  Cs, A68_117  *ReturnedValue);
 
-A_STATIC A68_VOID  HHFAOSF_generator(A68_BOOL  FHFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  NGFAOSF_generator(A68_BOOL  LGFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals);
 
-A68_VOID  QHFAOSF_star(A68_119  Cs, A68_117  *ReturnedValue);
+A68_VOID  WGFAOSF_star(A68_119  Cs, A68_117  *ReturnedValue);
 
-A_STATIC A68_VOID  ZHFAOSF_generator(A68_BOOL  XHFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  FHFAOSF_generator(A68_BOOL  DHFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals);
 
-A68_VOID  JIFAOSF_show_syntax(A68_119  Syntax, A68_135  Analysers, A68_VC  *ReturnedValue);
+A68_VOID  PHFAOSF_show_syntax(A68_119  Syntax, A68_135  Analysers, A68_VC  *ReturnedValue);
 
-A_STATIC A68_BOOL  UIFAOSF_needs_brackets(A68_VC  Line);
+A_STATIC A68_BOOL  AIFAOSF_needs_brackets(A68_VC  Line);
 
-A68_VOID  MLFAOSF_show_readers(A68_34 * Out, A68_135  Readers);
+A68_VOID  SKFAOSF_show_readers(A68_34 * Out, A68_135  Readers);
 
-A68_130 * RMFAOSF_add_readers(A68_130 * Readers, A68_145  New_rules);
+A68_130 * XLFAOSF_add_readers(A68_130 * Readers, A68_145  New_rules);
 
-A68_VOID  DNFAOSF_simplify_params(A68_126  Param, A68_122  *ReturnedValue);
+A68_VOID  JMFAOSF_simplify_params(A68_126  Param, A68_122  *ReturnedValue);
 
-A_STATIC A68_VOID  GNFAOSF_generator(A68_BOOL  ENFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  MMFAOSF_generator(A68_BOOL  KMFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_VOID  PNFAOSF_add(A68_120  V, void *NonLocals);
+A_STATIC A68_VOID  VMFAOSF_add(A68_120  V, void *NonLocals);
 
-A_STATIC A68_VOID  TNFAOSF_generator(A68_BOOL  RNFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  ZMFAOSF_generator(A68_BOOL  XMFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_VOID  FOFAOSF_simplify(A68_126  Param, void *NonLocals);
+A_STATIC A68_VOID  LNFAOSF_simplify(A68_126  Param, void *NonLocals);
 
-A_STATIC A68_VOID  ROFAOSF_generator(A68_BOOL  POFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  XNFAOSF_generator(A68_BOOL  VNFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_VOID  BPFAOSF_generator(A68_BOOL  ZOFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  HOFAOSF_generator(A68_BOOL  FOFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_VOID  TNFAOSF_generator(A68_BOOL  RNFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals)
-#define NL(x) (((UNFAOSF_generator *)NonLocals)->x)
+A_STATIC A68_VOID  ZMFAOSF_generator(A68_BOOL  XMFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals)
+#define NL(x) (((ANFAOSF_generator *)NonLocals)->x)
 { 
-A68_122  VNFAOSF;  /* clause result */
-A68_122  WNFAOSF;  /* OPERATORS - dynamic generator */
+A68_122  BNFAOSF;  /* clause result */
+A68_122  CNFAOSF;  /* OPERATORS - dynamic generator */
 { 
-WNFAOSF.upb = ((*NL(KNFAOSF_ans)).upb+10) ;
-( RNFAOSF_anonymous? A_VLOC(A68_120 ,WNFAOSF): A_VHEAP(A68_120 ,WNFAOSF) );
-VNFAOSF = WNFAOSF;
+CNFAOSF.upb = ((*NL(QMFAOSF_ans)).upb+10) ;
+( XMFAOSF_anonymous? A_VLOC(A68_120 ,CNFAOSF): A_VHEAP(A68_120 ,CNFAOSF) );
+BNFAOSF = CNFAOSF;
 } 
-*ReturnedValue = (VNFAOSF);
+*ReturnedValue = (BNFAOSF);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  GGFAOSF_generator(A68_BOOL  EGFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals)
-#define NL(x) (((HGFAOSF_generator *)NonLocals)->x)
+A_STATIC A68_VOID  MFFAOSF_generator(A68_BOOL  KFFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals)
+#define NL(x) (((NFFAOSF_generator *)NonLocals)->x)
 { 
-A68_118  IGFAOSF;  /* clause result */
-A68_118  JGFAOSF;  /* OPERATORS - dynamic generator */
+A68_118  OFFAOSF;  /* clause result */
+A68_118  PFFAOSF;  /* OPERATORS - dynamic generator */
 { 
-JGFAOSF.upb = NL(Cs).upb ;
-( EGFAOSF_anonymous? A_VLOC(A68_119 ,JGFAOSF): A_VHEAP(A68_119 ,JGFAOSF) );
-IGFAOSF = JGFAOSF;
+PFFAOSF.upb = NL(Cs).upb ;
+( KFFAOSF_anonymous? A_VLOC(A68_119 ,PFFAOSF): A_VHEAP(A68_119 ,PFFAOSF) );
+OFFAOSF = PFFAOSF;
 } 
-*ReturnedValue = (IGFAOSF);
+*ReturnedValue = (OFFAOSF);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  RGFAOSF_generator(A68_BOOL  PGFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals)
-#define NL(x) (((SGFAOSF_generator *)NonLocals)->x)
+A_STATIC A68_VOID  XFFAOSF_generator(A68_BOOL  VFFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals)
+#define NL(x) (((YFFAOSF_generator *)NonLocals)->x)
 { 
-A68_118  TGFAOSF;  /* clause result */
-A68_118  UGFAOSF;  /* OPERATORS - dynamic generator */
+A68_118  ZFFAOSF;  /* clause result */
+A68_118  AGFAOSF;  /* OPERATORS - dynamic generator */
 { 
-UGFAOSF.upb = NL(Cs).upb ;
-( PGFAOSF_anonymous? A_VLOC(A68_119 ,UGFAOSF): A_VHEAP(A68_119 ,UGFAOSF) );
-TGFAOSF = UGFAOSF;
+AGFAOSF.upb = NL(Cs).upb ;
+( VFFAOSF_anonymous? A_VLOC(A68_119 ,AGFAOSF): A_VHEAP(A68_119 ,AGFAOSF) );
+ZFFAOSF = AGFAOSF;
 } 
-*ReturnedValue = (TGFAOSF);
+*ReturnedValue = (ZFFAOSF);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  HHFAOSF_generator(A68_BOOL  FHFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals)
-#define NL(x) (((IHFAOSF_generator *)NonLocals)->x)
+A_STATIC A68_VOID  NGFAOSF_generator(A68_BOOL  LGFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals)
+#define NL(x) (((OGFAOSF_generator *)NonLocals)->x)
 { 
-A68_118  JHFAOSF;  /* clause result */
-A68_118  KHFAOSF;  /* OPERATORS - dynamic generator */
+A68_118  PGFAOSF;  /* clause result */
+A68_118  QGFAOSF;  /* OPERATORS - dynamic generator */
 { 
-KHFAOSF.upb = 1 ;
-( FHFAOSF_anonymous? A_VLOC(A68_119 ,KHFAOSF): A_VHEAP(A68_119 ,KHFAOSF) );
-JHFAOSF = KHFAOSF;
+QGFAOSF.upb = 1 ;
+( LGFAOSF_anonymous? A_VLOC(A68_119 ,QGFAOSF): A_VHEAP(A68_119 ,QGFAOSF) );
+PGFAOSF = QGFAOSF;
 } 
-*ReturnedValue = (JHFAOSF);
+*ReturnedValue = (PGFAOSF);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  ZHFAOSF_generator(A68_BOOL  XHFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals)
-#define NL(x) (((AIFAOSF_generator *)NonLocals)->x)
+A_STATIC A68_VOID  FHFAOSF_generator(A68_BOOL  DHFAOSF_anonymous, A68_118  *ReturnedValue, void *NonLocals)
+#define NL(x) (((GHFAOSF_generator *)NonLocals)->x)
 { 
-A68_118  BIFAOSF;  /* clause result */
-A68_118  CIFAOSF;  /* OPERATORS - dynamic generator */
+A68_118  HHFAOSF;  /* clause result */
+A68_118  IHFAOSF;  /* OPERATORS - dynamic generator */
 { 
-CIFAOSF.upb = 1 ;
-( XHFAOSF_anonymous? A_VLOC(A68_119 ,CIFAOSF): A_VHEAP(A68_119 ,CIFAOSF) );
-BIFAOSF = CIFAOSF;
+IHFAOSF.upb = 1 ;
+( DHFAOSF_anonymous? A_VLOC(A68_119 ,IHFAOSF): A_VHEAP(A68_119 ,IHFAOSF) );
+HHFAOSF = IHFAOSF;
 } 
-*ReturnedValue = (BIFAOSF);
+*ReturnedValue = (HHFAOSF);
 return;
 } 
 #undef NL
 
-A_STATIC A68_BOOL  UIFAOSF_needs_brackets(A68_VC  Line)
+A_STATIC A68_BOOL  AIFAOSF_needs_brackets(A68_VC  Line)
 { 
-A68_INT  VIFAOSF_n;
-A68_BOOL  WIFAOSF_ans;
-A68_CHAR * XIFAOSF_c;
-A68_INT  YIFAOSF;  /* forall loop counter */
-A68_BOOL  ZIFAOSF;  /* optbool result */
-A68_BOOL  AJFAOSF;  /* optbool result */
-A68_BOOL  BJFAOSF;  /* optbool result */
-A68_BOOL  CJFAOSF;  /* clause result */
+A68_INT  BIFAOSF_n;
+A68_BOOL  CIFAOSF_ans;
+A68_CHAR * DIFAOSF_c;
+A68_INT  EIFAOSF;  /* forall loop counter */
+A68_BOOL  FIFAOSF;  /* optbool result */
+A68_BOOL  GIFAOSF;  /* optbool result */
+A68_BOOL  HIFAOSF;  /* optbool result */
+A68_BOOL  IIFAOSF;  /* clause result */
 A_PROC_ENTRY(needs_brackets);
  /* line 122: */
  /* line 123: */
 { 
-VIFAOSF_n = 0;
-WIFAOSF_ans = A68_FALSE;
+BIFAOSF_n = 0;
+CIFAOSF_ans = A68_FALSE;
  /* line 124: */
-YIFAOSF = Line.upb -1;
-XIFAOSF_c = Line.data;
-for (;YIFAOSF-- >= 0;
-(XIFAOSF_c++
+EIFAOSF = Line.upb -1;
+DIFAOSF_c = Line.data;
+for (;EIFAOSF-- >= 0;
+(DIFAOSF_c++
 ) )
 {
  /* line 125: */
-if ( !(!WIFAOSF_ans) ) break;
-ZIFAOSF = ((*XIFAOSF_c)=='{');
-if ( ! ZIFAOSF )
+if ( !(!CIFAOSF_ans) ) break;
+FIFAOSF = ((*DIFAOSF_c)=='{');
+if ( ! FIFAOSF )
 { /* line 126: */
-ZIFAOSF = ((*XIFAOSF_c)=='[');
+FIFAOSF = ((*DIFAOSF_c)=='[');
 }
-if ( ZIFAOSF )
+if ( FIFAOSF )
 { 
  /* line 127: */
-VIFAOSF_n+=1;
+BIFAOSF_n+=1;
 } 
 else
 { 
-AJFAOSF = ((*XIFAOSF_c)=='}');
-if ( ! AJFAOSF )
+GIFAOSF = ((*DIFAOSF_c)=='}');
+if ( ! GIFAOSF )
 { /* line 128: */
-AJFAOSF = ((*XIFAOSF_c)==']');
+GIFAOSF = ((*DIFAOSF_c)==']');
 }
-if ( AJFAOSF )
+if ( GIFAOSF )
 { 
  /* line 129: */
-VIFAOSF_n-=1;
+BIFAOSF_n-=1;
 } 
 else
 { 
-BJFAOSF = ((*XIFAOSF_c)==' ');
-if ( BJFAOSF )
+HIFAOSF = ((*DIFAOSF_c)==' ');
+if ( HIFAOSF )
 { /* line 130: */
-BJFAOSF = (VIFAOSF_n==0);
+HIFAOSF = (BIFAOSF_n==0);
 }
-if ( BJFAOSF )
+if ( HIFAOSF )
 { 
  /* line 131: */
  /* line 132: */
-WIFAOSF_ans = A68_TRUE;
+CIFAOSF_ans = A68_TRUE;
 } 
 } 
 } 
 }
  /* line 133: */
  /* line 134: */
-CJFAOSF = WIFAOSF_ans;
+IIFAOSF = CIFAOSF_ans;
 } 
 A_PROC_EXIT(needs_brackets);
-return( CJFAOSF );
+return( IIFAOSF );
 } 
 #undef NL
 
-A_STATIC A68_VOID  GNFAOSF_generator(A68_BOOL  ENFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals)
-#define NL(x) (((HNFAOSF_generator *)NonLocals)->x)
+A_STATIC A68_VOID  MMFAOSF_generator(A68_BOOL  KMFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals)
+#define NL(x) (((NMFAOSF_generator *)NonLocals)->x)
 { 
-A68_122  INFAOSF;  /* clause result */
-A68_122  JNFAOSF;  /* OPERATORS - dynamic generator */
+A68_122  OMFAOSF;  /* clause result */
+A68_122  PMFAOSF;  /* OPERATORS - dynamic generator */
 { 
-JNFAOSF.upb = 0 ;
-( ENFAOSF_anonymous? A_VLOC(A68_120 ,JNFAOSF): A_VHEAP(A68_120 ,JNFAOSF) );
-INFAOSF = JNFAOSF;
+PMFAOSF.upb = 0 ;
+( KMFAOSF_anonymous? A_VLOC(A68_120 ,PMFAOSF): A_VHEAP(A68_120 ,PMFAOSF) );
+OMFAOSF = PMFAOSF;
 } 
-*ReturnedValue = (INFAOSF);
+*ReturnedValue = (OMFAOSF);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  PNFAOSF_add(A68_120  V, void *NonLocals)
-#define NL(x) (((QNFAOSF_add *)NonLocals)->x)
+A_STATIC A68_VOID  VMFAOSF_add(A68_120  V, void *NonLocals)
+#define NL(x) (((WMFAOSF_add *)NonLocals)->x)
 { 
-A68_148  SNFAOSF_generator;   /* proc value of non-global proc */
-A68_122  XNFAOSF;  /* avoid structure result */
-A68_122  YNFAOSF_new;
-A68_122  ZNFAOSF;  /* OPERATORS - trim index */
-A68_122  AOFAOSF;  /* YIELD */
-A68_INT  BOFAOSF;  /* YIELD */
-A68_120 * COFAOSF;  /* YIELD */
+A68_148  YMFAOSF_generator;   /* proc value of non-global proc */
+A68_122  DNFAOSF;  /* avoid structure result */
+A68_122  ENFAOSF_new;
+A68_122  FNFAOSF;  /* OPERATORS - trim index */
+A68_122  GNFAOSF;  /* YIELD */
+A68_INT  HNFAOSF;  /* YIELD */
+A68_120 * INFAOSF;  /* YIELD */
 A_PROC_ENTRY(add);
  /* line 204: */
  /* line 205: */
 { 
  /* line 206: */
-if ( ((*NL(MNFAOSF_n))==(*NL(KNFAOSF_ans)).upb) )
+if ( ((*NL(SMFAOSF_n))==(*NL(QMFAOSF_ans)).upb) )
 { 
-A_CLOSURE( SNFAOSF_generator, TNFAOSF_generator, UNFAOSF_generator );
-(( UNFAOSF_generator * ) ( SNFAOSF_generator.nonlocals )) -> KNFAOSF_ans = NL(KNFAOSF_ans);
-A_CALLPROC(SNFAOSF_generator,(A68_FALSE, &XNFAOSF),(A68_FALSE, &XNFAOSF,(SNFAOSF_generator).nonlocals));
-YNFAOSF_new = XNFAOSF;
+A_CLOSURE( YMFAOSF_generator, ZMFAOSF_generator, ANFAOSF_generator );
+(( ANFAOSF_generator * ) ( YMFAOSF_generator.nonlocals )) -> QMFAOSF_ans = NL(QMFAOSF_ans);
+A_CALLPROC(YMFAOSF_generator,(A68_FALSE, &DNFAOSF),(A68_FALSE, &DNFAOSF,(YMFAOSF_generator).nonlocals));
+ENFAOSF_new = DNFAOSF;
  /* line 207: */
-AOFAOSF = A_VTRIM(ZNFAOSF,(YNFAOSF_new),A_VTSCRIPT(&(ZNFAOSF.upb),(YNFAOSF_new).upb,1,(*NL(MNFAOSF_n)))) ;
-A_VASSIGN2((*NL(KNFAOSF_ans)),AOFAOSF,A68_120 );
+GNFAOSF = A_VTRIM(FNFAOSF,(ENFAOSF_new),A_VTSCRIPT(&(FNFAOSF.upb),(ENFAOSF_new).upb,1,(*NL(SMFAOSF_n)))) ;
+A_VASSIGN2((*NL(QMFAOSF_ans)),GNFAOSF,A68_120 );
  /* line 208: */
  /* line 209: */
-(*NL(KNFAOSF_ans)) = YNFAOSF_new;
+(*NL(QMFAOSF_ans)) = ENFAOSF_new;
 } 
  /* line 210: */
  /* line 211: */
-BOFAOSF = (*NL(MNFAOSF_n))+=1 ;
-COFAOSF = (&A_VINDEX((*NL(KNFAOSF_ans)),BOFAOSF)) ;
-(*COFAOSF) = V;
+HNFAOSF = (*NL(SMFAOSF_n))+=1 ;
+INFAOSF = (&A_VINDEX((*NL(QMFAOSF_ans)),HNFAOSF)) ;
+(*INFAOSF) = V;
 } 
 A_PROC_EXIT(add);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  FOFAOSF_simplify(A68_126  Param, void *NonLocals)
-#define NL(x) (((GOFAOSF_simplify *)NonLocals)->x)
+A_STATIC A68_VOID  LNFAOSF_simplify(A68_126  Param, void *NonLocals)
+#define NL(x) (((MNFAOSF_simplify *)NonLocals)->x)
 { 
-A68_126  HOFAOSF;  /* united object - for case conformity */
-A68_120  IOFAOSF_value;
-A68_124  JOFAOSF_choice;
-A68_126 * KOFAOSF_p;
-A68_125  LOFAOSF;  /* forall yield */
-A68_INT  MOFAOSF;  /* forall loop counter */
+A68_126  NNFAOSF;  /* united object - for case conformity */
+A68_120  ONFAOSF_value;
+A68_124  PNFAOSF_choice;
+A68_126 * QNFAOSF_p;
+A68_125  RNFAOSF;  /* forall yield */
+A68_INT  SNFAOSF;  /* forall loop counter */
 A_PROC_ENTRY(simplify);
  /* line 214: */
  /* line 215: */
-HOFAOSF = Param ;
-switch ( HOFAOSF.mode )
+NNFAOSF = Param ;
+switch ( NNFAOSF.mode )
 { 
 case 2: /* STRUCT(INT,REF MODE26)  */
-IOFAOSF_value = (HOFAOSF.data.mode2);
+ONFAOSF_value = (NNFAOSF.data.mode2);
  /* line 216: */
-if ( (IOFAOSF_value.Sort>0) )
+if ( (ONFAOSF_value.Sort>0) )
 { 
  /* line 217: */
-A_CALLPROC(NL(ONFAOSF_add),(IOFAOSF_value),(IOFAOSF_value,(NL(ONFAOSF_add)).nonlocals));
+A_CALLPROC(NL(UMFAOSF_add),(ONFAOSF_value),(ONFAOSF_value,(NL(UMFAOSF_add)).nonlocals));
 } 
 break;
 case 1: /* STRUCT(INT,REF MODE125)  */
-JOFAOSF_choice = (HOFAOSF.data.mode1);
+PNFAOSF_choice = (NNFAOSF.data.mode1);
  /* line 218: */
-LOFAOSF = JOFAOSF_choice.Params ;
-MOFAOSF = LOFAOSF.upb -1;
-KOFAOSF_p = LOFAOSF.data;
-for (;MOFAOSF-- >= 0;
-(KOFAOSF_p++
+RNFAOSF = PNFAOSF_choice.Params ;
+SNFAOSF = RNFAOSF.upb -1;
+QNFAOSF_p = RNFAOSF.data;
+for (;SNFAOSF-- >= 0;
+(QNFAOSF_p++
 ) )
 {
-A_CALLPROC(NL(EOFAOSF_simplify),((*KOFAOSF_p)),((*KOFAOSF_p),(NL(EOFAOSF_simplify)).nonlocals));
+A_CALLPROC(NL(KNFAOSF_simplify),((*QNFAOSF_p)),((*QNFAOSF_p),(NL(KNFAOSF_simplify)).nonlocals));
 }
  /* line 219: */
 break;
@@ -841,443 +841,443 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  ROFAOSF_generator(A68_BOOL  POFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals)
-#define NL(x) (((SOFAOSF_generator *)NonLocals)->x)
+A_STATIC A68_VOID  XNFAOSF_generator(A68_BOOL  VNFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals)
+#define NL(x) (((YNFAOSF_generator *)NonLocals)->x)
 { 
-A68_122  TOFAOSF;  /* clause result */
-A68_122  UOFAOSF;  /* OPERATORS - dynamic generator */
+A68_122  ZNFAOSF;  /* clause result */
+A68_122  AOFAOSF;  /* OPERATORS - dynamic generator */
 { 
-UOFAOSF.upb = 1 ;
-( POFAOSF_anonymous? A_VLOC(A68_120 ,UOFAOSF): A_VHEAP(A68_120 ,UOFAOSF) );
-TOFAOSF = UOFAOSF;
+AOFAOSF.upb = 1 ;
+( VNFAOSF_anonymous? A_VLOC(A68_120 ,AOFAOSF): A_VHEAP(A68_120 ,AOFAOSF) );
+ZNFAOSF = AOFAOSF;
 } 
-*ReturnedValue = (TOFAOSF);
+*ReturnedValue = (ZNFAOSF);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  BPFAOSF_generator(A68_BOOL  ZOFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals)
-#define NL(x) (((CPFAOSF_generator *)NonLocals)->x)
+A_STATIC A68_VOID  HOFAOSF_generator(A68_BOOL  FOFAOSF_anonymous, A68_122  *ReturnedValue, void *NonLocals)
+#define NL(x) (((IOFAOSF_generator *)NonLocals)->x)
 { 
-A68_122  DPFAOSF;  /* clause result */
-A68_122  EPFAOSF;  /* OPERATORS - dynamic generator */
+A68_122  JOFAOSF;  /* clause result */
+A68_122  KOFAOSF;  /* OPERATORS - dynamic generator */
 { 
-EPFAOSF.upb = 1 ;
-( ZOFAOSF_anonymous? A_VLOC(A68_120 ,EPFAOSF): A_VHEAP(A68_120 ,EPFAOSF) );
-DPFAOSF = EPFAOSF;
+KOFAOSF.upb = 1 ;
+( FOFAOSF_anonymous? A_VLOC(A68_120 ,KOFAOSF): A_VHEAP(A68_120 ,KOFAOSF) );
+JOFAOSF = KOFAOSF;
 } 
-*ReturnedValue = (DPFAOSF);
+*ReturnedValue = (JOFAOSF);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  IFFAOSF_generator(A68_BOOL  HFFAOSF_anonymous, A68_VC  *ReturnedValue)
+A_STATIC A68_VOID  OEFAOSF_generator(A68_BOOL  NEFAOSF_anonymous, A68_VC  *ReturnedValue)
 { 
-A68_VC  JFFAOSF;  /* clause result */
-A68_VC  KFFAOSF;  /* OPERATORS - dynamic generator */
+A68_VC  PEFAOSF;  /* clause result */
+A68_VC  QEFAOSF;  /* OPERATORS - dynamic generator */
 { 
-KFFAOSF.upb = 0 ;
-( HFFAOSF_anonymous? A_VLOC(A68_CHAR ,KFFAOSF): A_VHEAP(A68_CHAR ,KFFAOSF) );
-JFFAOSF = KFFAOSF;
+QEFAOSF.upb = 0 ;
+( NEFAOSF_anonymous? A_VLOC(A68_CHAR ,QEFAOSF): A_VHEAP(A68_CHAR ,QEFAOSF) );
+PEFAOSF = QEFAOSF;
 } 
-*ReturnedValue = (JFFAOSF);
+*ReturnedValue = (PEFAOSF);
 return;
 } 
 #undef NL
 
-A68_BOOL  TFFAOSF_is_alt(A68_117  Rule)
+A68_BOOL  ZEFAOSF_is_alt(A68_117  Rule)
 { 
-A68_BOOL  UFFAOSF;  /* clause result */
+A68_BOOL  AFFAOSF;  /* clause result */
 A_PROC_ENTRY(is_alt);
-UFFAOSF = ((A68_BITS )(Rule.Type&PFFAOSF_alt_syn)==PFFAOSF_alt_syn);
+AFFAOSF = ((A68_BITS )(Rule.Type&VEFAOSF_alt_syn)==VEFAOSF_alt_syn);
 A_PROC_EXIT(is_alt);
-return( UFFAOSF );
+return( AFFAOSF );
 } 
 #undef NL
 
-A68_BOOL  WFFAOSF_is_opt(A68_117  Rule)
+A68_BOOL  CFFAOSF_is_opt(A68_117  Rule)
 { 
-A68_BOOL  XFFAOSF;  /* clause result */
+A68_BOOL  DFFAOSF;  /* clause result */
 A_PROC_ENTRY(is_opt);
-XFFAOSF = ((A68_BITS )(Rule.Type&QFFAOSF_opt_syn)==QFFAOSF_opt_syn);
+DFFAOSF = ((A68_BITS )(Rule.Type&WEFAOSF_opt_syn)==WEFAOSF_opt_syn);
 A_PROC_EXIT(is_opt);
-return( XFFAOSF );
+return( DFFAOSF );
 } 
 #undef NL
 
-A68_BOOL  ZFFAOSF_is_star(A68_117  Rule)
+A68_BOOL  FFFAOSF_is_star(A68_117  Rule)
 { 
-A68_BOOL  AGFAOSF;  /* clause result */
+A68_BOOL  GFFAOSF;  /* clause result */
 A_PROC_ENTRY(is_star);
-AGFAOSF = ((A68_BITS )(Rule.Type&RFFAOSF_star_syn)==RFFAOSF_star_syn);
+GFFAOSF = ((A68_BITS )(Rule.Type&XEFAOSF_star_syn)==XEFAOSF_star_syn);
 A_PROC_EXIT(is_star);
-return( AGFAOSF );
+return( GFFAOSF );
 } 
 #undef NL
 
-A68_VOID  CGFAOSF_alt(A68_118  Cs, A68_117  *ReturnedValue)
+A68_VOID  IFFAOSF_alt(A68_118  Cs, A68_117  *ReturnedValue)
 { 
-A68_117  DGFAOSF;  /* collateral clause result */
-A68_133  FGFAOSF_generator;   /* proc value of non-global proc */
-A68_118  KGFAOSF;  /* avoid structure result */
-A68_117  LGFAOSF;  /* clause result */
+A68_117  JFFAOSF;  /* collateral clause result */
+A68_133  LFFAOSF_generator;   /* proc value of non-global proc */
+A68_118  QFFAOSF;  /* avoid structure result */
+A68_117  RFFAOSF;  /* clause result */
 A_PROC_ENTRY(alt);
  /* line 88: */
-DGFAOSF.Type = 0X8U;
-A_CLOSURE( FGFAOSF_generator, GGFAOSF_generator, HGFAOSF_generator );
-(( HGFAOSF_generator * ) ( FGFAOSF_generator.nonlocals )) -> Cs = Cs;
-A_CALLPROC(FGFAOSF_generator,(A68_FALSE, &KGFAOSF),(A68_FALSE, &KGFAOSF,(FGFAOSF_generator).nonlocals));
-A_VASSIGN2(Cs,KGFAOSF,A68_119 ) ;
-DGFAOSF.Elements = KGFAOSF;
-LGFAOSF = DGFAOSF;
+JFFAOSF.Type = 0X8U;
+A_CLOSURE( LFFAOSF_generator, MFFAOSF_generator, NFFAOSF_generator );
+(( NFFAOSF_generator * ) ( LFFAOSF_generator.nonlocals )) -> Cs = Cs;
+A_CALLPROC(LFFAOSF_generator,(A68_FALSE, &QFFAOSF),(A68_FALSE, &QFFAOSF,(LFFAOSF_generator).nonlocals));
+A_VASSIGN2(Cs,QFFAOSF,A68_119 ) ;
+JFFAOSF.Elements = QFFAOSF;
+RFFAOSF = JFFAOSF;
 A_PROC_EXIT(alt);
-*ReturnedValue = (LGFAOSF);
+*ReturnedValue = (RFFAOSF);
 return;
 } 
 #undef NL
 
-A68_VOID  NGFAOSF_prod(A68_118  Cs, A68_117  *ReturnedValue)
+A68_VOID  TFFAOSF_prod(A68_118  Cs, A68_117  *ReturnedValue)
 { 
-A68_117  OGFAOSF;  /* collateral clause result */
-A68_133  QGFAOSF_generator;   /* proc value of non-global proc */
-A68_118  VGFAOSF;  /* avoid structure result */
-A68_117  WGFAOSF;  /* clause result */
+A68_117  UFFAOSF;  /* collateral clause result */
+A68_133  WFFAOSF_generator;   /* proc value of non-global proc */
+A68_118  BGFAOSF;  /* avoid structure result */
+A68_117  CGFAOSF;  /* clause result */
 A_PROC_ENTRY(prod);
  /* line 91: */
-OGFAOSF.Type = 0X0U;
-A_CLOSURE( QGFAOSF_generator, RGFAOSF_generator, SGFAOSF_generator );
-(( SGFAOSF_generator * ) ( QGFAOSF_generator.nonlocals )) -> Cs = Cs;
-A_CALLPROC(QGFAOSF_generator,(A68_FALSE, &VGFAOSF),(A68_FALSE, &VGFAOSF,(QGFAOSF_generator).nonlocals));
-A_VASSIGN2(Cs,VGFAOSF,A68_119 ) ;
-OGFAOSF.Elements = VGFAOSF;
-WGFAOSF = OGFAOSF;
+UFFAOSF.Type = 0X0U;
+A_CLOSURE( WFFAOSF_generator, XFFAOSF_generator, YFFAOSF_generator );
+(( YFFAOSF_generator * ) ( WFFAOSF_generator.nonlocals )) -> Cs = Cs;
+A_CALLPROC(WFFAOSF_generator,(A68_FALSE, &BGFAOSF),(A68_FALSE, &BGFAOSF,(WFFAOSF_generator).nonlocals));
+A_VASSIGN2(Cs,BGFAOSF,A68_119 ) ;
+UFFAOSF.Elements = BGFAOSF;
+CGFAOSF = UFFAOSF;
 A_PROC_EXIT(prod);
-*ReturnedValue = (WGFAOSF);
+*ReturnedValue = (CGFAOSF);
 return;
 } 
 #undef NL
 
-A68_VOID  YGFAOSF_opt(A68_119  Cs, A68_117  *ReturnedValue)
+A68_VOID  EGFAOSF_opt(A68_119  Cs, A68_117  *ReturnedValue)
 { 
-A68_119  ZGFAOSF;  /* united object - for case conformity */
-A68_117  AHFAOSF_rule;
-A68_117  BHFAOSF;  /* collateral clause result */
-A68_117  CHFAOSF;  /* clause result */
-A68_INT * DHFAOSF_terminal_symbol;
-A68_117  EHFAOSF;  /* collateral clause result */
-A68_133  GHFAOSF_generator;   /* proc value of non-global proc */
-A68_118  LHFAOSF;  /* avoid structure result */
-A68_119  MHFAOSF;  /* OPERATORS - mode -> union mode */
-A68_118  NHFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_118  OHFAOSF;  /* OPERATORS - assign op */
+A68_119  FGFAOSF;  /* united object - for case conformity */
+A68_117  GGFAOSF_rule;
+A68_117  HGFAOSF;  /* collateral clause result */
+A68_117  IGFAOSF;  /* clause result */
+A68_INT * JGFAOSF_terminal_symbol;
+A68_117  KGFAOSF;  /* collateral clause result */
+A68_133  MGFAOSF_generator;   /* proc value of non-global proc */
+A68_118  RGFAOSF;  /* avoid structure result */
+A68_119  SGFAOSF;  /* OPERATORS - mode -> union mode */
+A68_118  TGFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_118  UGFAOSF;  /* OPERATORS - assign op */
 A_PROC_ENTRY(opt);
  /* line 94: */
  /* line 95: */
-ZGFAOSF = Cs ;
-switch ( ZGFAOSF.mode )
+FGFAOSF = Cs ;
+switch ( FGFAOSF.mode )
 { 
 case 2: /* STRUCT(BITS,REF MODE118)  */
-AHFAOSF_rule = (ZGFAOSF.data.mode2);
+GGFAOSF_rule = (FGFAOSF.data.mode2);
  /* line 96: */
-BHFAOSF.Type = (A68_BITS )(AHFAOSF_rule.Type|0X2U);
+HGFAOSF.Type = (A68_BITS )(GGFAOSF_rule.Type|0X2U);
  /* line 97: */
-BHFAOSF.Elements = AHFAOSF_rule.Elements;
-CHFAOSF = BHFAOSF;
+HGFAOSF.Elements = GGFAOSF_rule.Elements;
+IGFAOSF = HGFAOSF;
 break;
 case 1: /* REF INT */
-DHFAOSF_terminal_symbol = (ZGFAOSF.data.mode1);
+JGFAOSF_terminal_symbol = (FGFAOSF.data.mode1);
  /* line 98: */
-EHFAOSF.Type = 0X2U;
-A_CLOSURE( GHFAOSF_generator, HHFAOSF_generator, IHFAOSF_generator );
+KGFAOSF.Type = 0X2U;
+A_CLOSURE( MGFAOSF_generator, NGFAOSF_generator, OGFAOSF_generator );
  /* line 99: */
-A_CALLPROC(GHFAOSF_generator,(A68_FALSE, &LHFAOSF),(A68_FALSE, &LHFAOSF,(GHFAOSF_generator).nonlocals));
-OHFAOSF = A_HVEC(NHFAOSF,A_UNITE(MHFAOSF,mode1,1,DHFAOSF_terminal_symbol),A68_119 ) ;
-A_VASSIGN2(OHFAOSF,LHFAOSF,A68_119 ) ;
-EHFAOSF.Elements = LHFAOSF;
-CHFAOSF = EHFAOSF;
+A_CALLPROC(MGFAOSF_generator,(A68_FALSE, &RGFAOSF),(A68_FALSE, &RGFAOSF,(MGFAOSF_generator).nonlocals));
+UGFAOSF = A_HVEC(TGFAOSF,A_UNITE(SGFAOSF,mode1,1,JGFAOSF_terminal_symbol),A68_119 ) ;
+A_VASSIGN2(UGFAOSF,RGFAOSF,A68_119 ) ;
+KGFAOSF.Elements = RGFAOSF;
+IGFAOSF = KGFAOSF;
 break;
 default: 
 A_IMP_SKIP ;
 break;
 } 
 A_PROC_EXIT(opt);
-*ReturnedValue = (CHFAOSF);
+*ReturnedValue = (IGFAOSF);
 return;
 } 
 #undef NL
 
-A68_VOID  QHFAOSF_star(A68_119  Cs, A68_117  *ReturnedValue)
+A68_VOID  WGFAOSF_star(A68_119  Cs, A68_117  *ReturnedValue)
 { 
-A68_119  RHFAOSF;  /* united object - for case conformity */
-A68_117  SHFAOSF_rule;
-A68_117  THFAOSF;  /* collateral clause result */
-A68_117  UHFAOSF;  /* clause result */
-A68_INT * VHFAOSF_terminal_symbol;
-A68_117  WHFAOSF;  /* collateral clause result */
-A68_133  YHFAOSF_generator;   /* proc value of non-global proc */
-A68_118  DIFAOSF;  /* avoid structure result */
-A68_119  EIFAOSF;  /* OPERATORS - mode -> union mode */
-A68_118  FIFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_118  GIFAOSF;  /* OPERATORS - assign op */
+A68_119  XGFAOSF;  /* united object - for case conformity */
+A68_117  YGFAOSF_rule;
+A68_117  ZGFAOSF;  /* collateral clause result */
+A68_117  AHFAOSF;  /* clause result */
+A68_INT * BHFAOSF_terminal_symbol;
+A68_117  CHFAOSF;  /* collateral clause result */
+A68_133  EHFAOSF_generator;   /* proc value of non-global proc */
+A68_118  JHFAOSF;  /* avoid structure result */
+A68_119  KHFAOSF;  /* OPERATORS - mode -> union mode */
+A68_118  LHFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_118  MHFAOSF;  /* OPERATORS - assign op */
 A_PROC_ENTRY(star);
  /* line 102: */
  /* line 103: */
-RHFAOSF = Cs ;
-switch ( RHFAOSF.mode )
+XGFAOSF = Cs ;
+switch ( XGFAOSF.mode )
 { 
 case 2: /* STRUCT(BITS,REF MODE118)  */
-SHFAOSF_rule = (RHFAOSF.data.mode2);
+YGFAOSF_rule = (XGFAOSF.data.mode2);
  /* line 104: */
-THFAOSF.Type = (A68_BITS )(SHFAOSF_rule.Type|0X4U);
+ZGFAOSF.Type = (A68_BITS )(YGFAOSF_rule.Type|0X4U);
  /* line 105: */
-THFAOSF.Elements = SHFAOSF_rule.Elements;
-UHFAOSF = THFAOSF;
+ZGFAOSF.Elements = YGFAOSF_rule.Elements;
+AHFAOSF = ZGFAOSF;
 break;
 case 1: /* REF INT */
-VHFAOSF_terminal_symbol = (RHFAOSF.data.mode1);
+BHFAOSF_terminal_symbol = (XGFAOSF.data.mode1);
  /* line 106: */
-WHFAOSF.Type = 0X4U;
-A_CLOSURE( YHFAOSF_generator, ZHFAOSF_generator, AIFAOSF_generator );
+CHFAOSF.Type = 0X4U;
+A_CLOSURE( EHFAOSF_generator, FHFAOSF_generator, GHFAOSF_generator );
  /* line 107: */
-A_CALLPROC(YHFAOSF_generator,(A68_FALSE, &DIFAOSF),(A68_FALSE, &DIFAOSF,(YHFAOSF_generator).nonlocals));
-GIFAOSF = A_HVEC(FIFAOSF,A_UNITE(EIFAOSF,mode1,1,VHFAOSF_terminal_symbol),A68_119 ) ;
-A_VASSIGN2(GIFAOSF,DIFAOSF,A68_119 ) ;
-WHFAOSF.Elements = DIFAOSF;
-UHFAOSF = WHFAOSF;
+A_CALLPROC(EHFAOSF_generator,(A68_FALSE, &JHFAOSF),(A68_FALSE, &JHFAOSF,(EHFAOSF_generator).nonlocals));
+MHFAOSF = A_HVEC(LHFAOSF,A_UNITE(KHFAOSF,mode1,1,BHFAOSF_terminal_symbol),A68_119 ) ;
+A_VASSIGN2(MHFAOSF,JHFAOSF,A68_119 ) ;
+CHFAOSF.Elements = JHFAOSF;
+AHFAOSF = CHFAOSF;
 break;
 default: 
 A_IMP_SKIP ;
 break;
 } 
 A_PROC_EXIT(star);
-*ReturnedValue = (UHFAOSF);
+*ReturnedValue = (AHFAOSF);
 return;
 } 
 #undef NL
  /* line 111: */
 
-A68_VOID  JIFAOSF_show_syntax(A68_119  Syntax, A68_135  Analysers, A68_VC  *ReturnedValue)
+A68_VOID  PHFAOSF_show_syntax(A68_119  Syntax, A68_135  Analysers, A68_VC  *ReturnedValue)
 { 
-A68_119  KIFAOSF;  /* united object - for case conformity */
-A68_INT * LIFAOSF_symbol_number;
-A68_VC  MIFAOSF;  /* clause result */
-A68_BOOL  NIFAOSF;  /* optbool result */
-A68_VC  QIFAOSF;  /* avoid structure result */
-A68_117  RIFAOSF_rule;
-A68_VC  DJFAOSF_ans;
-A68_VC  FJFAOSF;  /* clause result */
-A68_VC  HJFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_VC  IJFAOSF_alt;
-A68_INT  JJFAOSF_n;
-A68_INT  KJFAOSF_l;
-A68_119 * LJFAOSF_r;
-A68_118  MJFAOSF;  /* forall yield */
-A68_INT  NJFAOSF;  /* forall loop counter */
-A68_VC  OJFAOSF;  /* avoid structure result */
-A68_VC  PJFAOSF_phrase;
-A68_BOOL  QJFAOSF;  /* optbool result */
-A68_140  RJFAOSF;  /* collateral clause result */
-A68_52  SJFAOSF;  /* OPERATORS - mode -> union mode */
-A68_CHAR  TJFAOSF;  /* YIELD */
+A68_119  QHFAOSF;  /* united object - for case conformity */
+A68_INT * RHFAOSF_symbol_number;
+A68_VC  SHFAOSF;  /* clause result */
+A68_BOOL  THFAOSF;  /* optbool result */
+A68_VC  WHFAOSF;  /* avoid structure result */
+A68_117  XHFAOSF_rule;
+A68_VC  JIFAOSF_ans;
+A68_VC  LIFAOSF;  /* clause result */
+A68_VC  NIFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_VC  OIFAOSF_alt;
+A68_INT  PIFAOSF_n;
+A68_INT  QIFAOSF_l;
+A68_119 * RIFAOSF_r;
+A68_118  SIFAOSF;  /* forall yield */
+A68_INT  TIFAOSF;  /* forall loop counter */
+A68_VC  UIFAOSF;  /* avoid structure result */
+A68_VC  VIFAOSF_phrase;
+A68_BOOL  WIFAOSF;  /* optbool result */
+A68_140  XIFAOSF;  /* collateral clause result */
+A68_52  YIFAOSF;  /* OPERATORS - mode -> union mode */
+A68_CHAR  ZIFAOSF;  /* YIELD */
+A68_52  AJFAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  BJFAOSF;  /* OPERATORS - mode -> union mode */
+A68_CHAR  CJFAOSF;  /* YIELD */
+A68_VC  DJFAOSF;  /* clause result */
+A68_85  EJFAOSF;  /* OPERATORS - istruct -> vector */
+A68_VC  FJFAOSF;  /* avoid structure result */
+A68_VC  GJFAOSF_brk;
+A68_141  HJFAOSF;  /* collateral clause result */
+A68_52  IJFAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  JJFAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  KJFAOSF;  /* clause result */
+A68_85  LJFAOSF;  /* OPERATORS - istruct -> vector */
+A68_VC  MJFAOSF;  /* avoid structure result */
+A68_140  NJFAOSF;  /* collateral clause result */
+A68_52  OJFAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  PJFAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  QJFAOSF;  /* OPERATORS - mode -> union mode */
+A68_85  RJFAOSF;  /* OPERATORS - istruct -> vector */
+A68_VC  SJFAOSF;  /* avoid structure result */
+A68_140  TJFAOSF;  /* collateral clause result */
 A68_52  UJFAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  VJFAOSF;  /* OPERATORS - mode -> union mode */
-A68_CHAR  WJFAOSF;  /* YIELD */
-A68_VC  XJFAOSF;  /* clause result */
-A68_85  YJFAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  ZJFAOSF;  /* avoid structure result */
-A68_VC  AKFAOSF_brk;
-A68_141  BKFAOSF;  /* collateral clause result */
-A68_52  CKFAOSF;  /* OPERATORS - mode -> union mode */
+A68_CHAR  VJFAOSF;  /* YIELD */
+A68_52  WJFAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  XJFAOSF;  /* OPERATORS - mode -> union mode */
+A68_CHAR  YJFAOSF;  /* YIELD */
+A68_85  ZJFAOSF;  /* OPERATORS - istruct -> vector */
+A68_VC  AKFAOSF;  /* avoid structure result */
+A68_BOOL  BKFAOSF;  /* optbool result */
+A68_140  CKFAOSF;  /* collateral clause result */
 A68_52  DKFAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  EKFAOSF;  /* clause result */
-A68_85  FKFAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  GKFAOSF;  /* avoid structure result */
-A68_140  HKFAOSF;  /* collateral clause result */
-A68_52  IKFAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  JKFAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  KKFAOSF;  /* OPERATORS - mode -> union mode */
-A68_85  LKFAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  MKFAOSF;  /* avoid structure result */
-A68_140  NKFAOSF;  /* collateral clause result */
-A68_52  OKFAOSF;  /* OPERATORS - mode -> union mode */
-A68_CHAR  PKFAOSF;  /* YIELD */
-A68_52  QKFAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  RKFAOSF;  /* OPERATORS - mode -> union mode */
-A68_CHAR  SKFAOSF;  /* YIELD */
-A68_85  TKFAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  UKFAOSF;  /* avoid structure result */
-A68_BOOL  VKFAOSF;  /* optbool result */
-A68_140  WKFAOSF;  /* collateral clause result */
-A68_52  XKFAOSF;  /* OPERATORS - mode -> union mode */
-A68_CHAR  YKFAOSF;  /* YIELD */
-A68_52  ZKFAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  ALFAOSF;  /* OPERATORS - mode -> union mode */
-A68_CHAR  BLFAOSF;  /* YIELD */
-A68_85  CLFAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  DLFAOSF;  /* avoid structure result */
-A68_141  ELFAOSF;  /* collateral clause result */
-A68_52  FLFAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  GLFAOSF;  /* OPERATORS - mode -> union mode */
-A68_CHAR  HLFAOSF;  /* YIELD */
-A68_85  ILFAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  JLFAOSF;  /* avoid structure result */
+A68_CHAR  EKFAOSF;  /* YIELD */
+A68_52  FKFAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  GKFAOSF;  /* OPERATORS - mode -> union mode */
+A68_CHAR  HKFAOSF;  /* YIELD */
+A68_85  IKFAOSF;  /* OPERATORS - istruct -> vector */
+A68_VC  JKFAOSF;  /* avoid structure result */
+A68_141  KKFAOSF;  /* collateral clause result */
+A68_52  LKFAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  MKFAOSF;  /* OPERATORS - mode -> union mode */
+A68_CHAR  NKFAOSF;  /* YIELD */
+A68_85  OKFAOSF;  /* OPERATORS - istruct -> vector */
+A68_VC  PKFAOSF;  /* avoid structure result */
 A_PROC_ENTRY(show_syntax);
  /* line 112: */
  /* line 113: */
-KIFAOSF = Syntax ;
-switch ( KIFAOSF.mode )
+QHFAOSF = Syntax ;
+switch ( QHFAOSF.mode )
 { 
 case 1: /* REF INT */
-LIFAOSF_symbol_number = (KIFAOSF.data.mode1);
+RHFAOSF_symbol_number = (QHFAOSF.data.mode1);
  /* line 114: */
  /* line 115: */
  /* line 116: */
-if ( ((*LIFAOSF_symbol_number)==0) )
+if ( ((*RHFAOSF_symbol_number)==0) )
 { 
-MIFAOSF = CIDAOSF_nullstr;
+SHFAOSF = IHDAOSF_nullstr;
 } 
 else
 { 
-NIFAOSF = ((*LIFAOSF_symbol_number)<0);
-if ( ! NIFAOSF )
+THFAOSF = ((*RHFAOSF_symbol_number)<0);
+if ( ! THFAOSF )
 { /* line 117: */
-NIFAOSF = ((*LIFAOSF_symbol_number)>Analysers.upb);
+THFAOSF = ((*RHFAOSF_symbol_number)>Analysers.upb);
 }
  /* line 118: */
-if ( NIFAOSF )
+if ( THFAOSF )
 { 
-ZCAAOSF_makervc( PIFAOSF, &QIFAOSF );
-MIFAOSF = QIFAOSF;
+ZCAAOSF_makervc( VHFAOSF, &WHFAOSF );
+SHFAOSF = WHFAOSF;
 } 
 else
 { 
  /* line 119: */
  /* line 120: */
-MIFAOSF = (*(&((&A_VINDEX(Analysers,(*LIFAOSF_symbol_number)))->Description)));
+SHFAOSF = (*(&((&A_VINDEX(Analysers,(*RHFAOSF_symbol_number)))->Description)));
 } 
 } 
 break;
 case 2: /* STRUCT(BITS,REF MODE118)  */
-RIFAOSF_rule = (KIFAOSF.data.mode2);
+XHFAOSF_rule = (QHFAOSF.data.mode2);
  /* line 121: */
 { 
  /* line 136: */
-DJFAOSF_ans = CIDAOSF_nullstr;
+JIFAOSF_ans = IHDAOSF_nullstr;
  /* line 137: */
-if ( TFFAOSF_is_alt(RIFAOSF_rule) )
+if ( ZEFAOSF_is_alt(XHFAOSF_rule) )
 { 
-FJFAOSF = GJFAOSF;
+LIFAOSF = MIFAOSF;
 } 
 else
 { 
-FJFAOSF = A_HVEC(HJFAOSF,' ',A68_CHAR );
+LIFAOSF = A_HVEC(NIFAOSF,' ',A68_CHAR );
 } 
-IJFAOSF_alt = FJFAOSF;
+OIFAOSF_alt = LIFAOSF;
  /* line 138: */
-JJFAOSF_n = 0;
-KJFAOSF_l = RIFAOSF_rule.Elements.upb;
+PIFAOSF_n = 0;
+QIFAOSF_l = XHFAOSF_rule.Elements.upb;
  /* line 139: */
  /* line 140: */
-MJFAOSF = RIFAOSF_rule.Elements ;
-NJFAOSF = MJFAOSF.upb -1;
-LJFAOSF_r = MJFAOSF.data;
-for (;NJFAOSF-- >= 0;
-(LJFAOSF_r++
+SIFAOSF = XHFAOSF_rule.Elements ;
+TIFAOSF = SIFAOSF.upb -1;
+RIFAOSF_r = SIFAOSF.data;
+for (;TIFAOSF-- >= 0;
+(RIFAOSF_r++
 ) )
 {
-JIFAOSF_show_syntax( (*LJFAOSF_r), Analysers, &OJFAOSF );
-PJFAOSF_phrase = OJFAOSF;
+PHFAOSF_show_syntax( (*RIFAOSF_r), Analysers, &UIFAOSF );
+VIFAOSF_phrase = UIFAOSF;
  /* line 141: */
-QJFAOSF = (KJFAOSF_l>1);
-if ( QJFAOSF )
+WIFAOSF = (QIFAOSF_l>1);
+if ( WIFAOSF )
 { /* line 142: */
-QJFAOSF = UIFAOSF_needs_brackets(PJFAOSF_phrase);
+WIFAOSF = AIFAOSF_needs_brackets(VIFAOSF_phrase);
 }
-if ( QJFAOSF )
+if ( WIFAOSF )
 { 
-TJFAOSF = '{' ;
-RJFAOSF.data[0] = A_UNITE(SJFAOSF,mode6,6,TJFAOSF);
-RJFAOSF.data[1] = A_UNITE(UJFAOSF,mode7,7,PJFAOSF_phrase);
-WJFAOSF = '}' ;
-RJFAOSF.data[2] = A_UNITE(VJFAOSF,mode6,6,WJFAOSF);
+ZIFAOSF = '{' ;
+XIFAOSF.data[0] = A_UNITE(YIFAOSF,mode6,6,ZIFAOSF);
+XIFAOSF.data[1] = A_UNITE(AJFAOSF,mode7,7,VIFAOSF_phrase);
+CJFAOSF = '}' ;
+XIFAOSF.data[2] = A_UNITE(BJFAOSF,mode6,6,CJFAOSF);
  /* line 143: */
  /* line 144: */
-SDEAOSF_oneline( A_HISVEC(YJFAOSF,RJFAOSF,3,A68_52 ), &ZJFAOSF );
-XJFAOSF = ZJFAOSF;
+YCEAOSF_oneline( A_HISVEC(EJFAOSF,XIFAOSF,3,A68_52 ), &FJFAOSF );
+DJFAOSF = FJFAOSF;
 } 
 else
 { 
-XJFAOSF = PJFAOSF_phrase;
+DJFAOSF = VIFAOSF_phrase;
 } 
-AKFAOSF_brk = XJFAOSF;
+GJFAOSF_brk = DJFAOSF;
  /* line 145: */
  /* line 146: */
-if ( ((JJFAOSF_n+=1)==KJFAOSF_l) )
+if ( ((PIFAOSF_n+=1)==QIFAOSF_l) )
 { 
-BKFAOSF.data[0] = A_UNITE(CKFAOSF,mode7,7,DJFAOSF_ans);
-BKFAOSF.data[1] = A_UNITE(DKFAOSF,mode7,7,AKFAOSF_brk);
+HJFAOSF.data[0] = A_UNITE(IJFAOSF,mode7,7,JIFAOSF_ans);
+HJFAOSF.data[1] = A_UNITE(JJFAOSF,mode7,7,GJFAOSF_brk);
  /* line 147: */
-SDEAOSF_oneline( A_HISVEC(FKFAOSF,BKFAOSF,2,A68_52 ), &GKFAOSF );
-EKFAOSF = GKFAOSF;
+YCEAOSF_oneline( A_HISVEC(LJFAOSF,HJFAOSF,2,A68_52 ), &MJFAOSF );
+KJFAOSF = MJFAOSF;
 } 
 else
 { 
-HKFAOSF.data[0] = A_UNITE(IKFAOSF,mode7,7,DJFAOSF_ans);
-HKFAOSF.data[1] = A_UNITE(JKFAOSF,mode7,7,AKFAOSF_brk);
-HKFAOSF.data[2] = A_UNITE(KKFAOSF,mode7,7,IJFAOSF_alt);
+NJFAOSF.data[0] = A_UNITE(OJFAOSF,mode7,7,JIFAOSF_ans);
+NJFAOSF.data[1] = A_UNITE(PJFAOSF,mode7,7,GJFAOSF_brk);
+NJFAOSF.data[2] = A_UNITE(QJFAOSF,mode7,7,OIFAOSF_alt);
  /* line 148: */
  /* line 149: */
-SDEAOSF_oneline( A_HISVEC(LKFAOSF,HKFAOSF,3,A68_52 ), &MKFAOSF );
-EKFAOSF = MKFAOSF;
+YCEAOSF_oneline( A_HISVEC(RJFAOSF,NJFAOSF,3,A68_52 ), &SJFAOSF );
+KJFAOSF = SJFAOSF;
 } 
-DJFAOSF_ans = EKFAOSF;
+JIFAOSF_ans = KJFAOSF;
 }
  /* line 151: */
  /* line 152: */
-if ( WFFAOSF_is_opt(RIFAOSF_rule) )
+if ( CFFAOSF_is_opt(XHFAOSF_rule) )
 { 
-PKFAOSF = '[' ;
-NKFAOSF.data[0] = A_UNITE(OKFAOSF,mode6,6,PKFAOSF);
-NKFAOSF.data[1] = A_UNITE(QKFAOSF,mode7,7,DJFAOSF_ans);
-SKFAOSF = ']' ;
-NKFAOSF.data[2] = A_UNITE(RKFAOSF,mode6,6,SKFAOSF);
+VJFAOSF = '[' ;
+TJFAOSF.data[0] = A_UNITE(UJFAOSF,mode6,6,VJFAOSF);
+TJFAOSF.data[1] = A_UNITE(WJFAOSF,mode7,7,JIFAOSF_ans);
+YJFAOSF = ']' ;
+TJFAOSF.data[2] = A_UNITE(XJFAOSF,mode6,6,YJFAOSF);
  /* line 153: */
-SDEAOSF_oneline( A_HISVEC(TKFAOSF,NKFAOSF,3,A68_52 ), &UKFAOSF );
-DJFAOSF_ans = UKFAOSF;
+YCEAOSF_oneline( A_HISVEC(ZJFAOSF,TJFAOSF,3,A68_52 ), &AKFAOSF );
+JIFAOSF_ans = AKFAOSF;
 } 
 else
 { 
-VKFAOSF = ZFFAOSF_is_star(RIFAOSF_rule);
-if ( VKFAOSF )
+BKFAOSF = FFFAOSF_is_star(XHFAOSF_rule);
+if ( BKFAOSF )
 { /* line 154: */
-VKFAOSF = UIFAOSF_needs_brackets(DJFAOSF_ans);
+BKFAOSF = AIFAOSF_needs_brackets(JIFAOSF_ans);
 }
-if ( VKFAOSF )
+if ( BKFAOSF )
 { 
-YKFAOSF = '{' ;
-WKFAOSF.data[0] = A_UNITE(XKFAOSF,mode6,6,YKFAOSF);
-WKFAOSF.data[1] = A_UNITE(ZKFAOSF,mode7,7,DJFAOSF_ans);
-BLFAOSF = '}' ;
-WKFAOSF.data[2] = A_UNITE(ALFAOSF,mode6,6,BLFAOSF);
+EKFAOSF = '{' ;
+CKFAOSF.data[0] = A_UNITE(DKFAOSF,mode6,6,EKFAOSF);
+CKFAOSF.data[1] = A_UNITE(FKFAOSF,mode7,7,JIFAOSF_ans);
+HKFAOSF = '}' ;
+CKFAOSF.data[2] = A_UNITE(GKFAOSF,mode6,6,HKFAOSF);
  /* line 155: */
-SDEAOSF_oneline( A_HISVEC(CLFAOSF,WKFAOSF,3,A68_52 ), &DLFAOSF );
-DJFAOSF_ans = DLFAOSF;
+YCEAOSF_oneline( A_HISVEC(IKFAOSF,CKFAOSF,3,A68_52 ), &JKFAOSF );
+JIFAOSF_ans = JKFAOSF;
 } 
 } 
  /* line 157: */
-if ( ZFFAOSF_is_star(RIFAOSF_rule) )
+if ( FFFAOSF_is_star(XHFAOSF_rule) )
 { 
-ELFAOSF.data[0] = A_UNITE(FLFAOSF,mode7,7,DJFAOSF_ans);
-HLFAOSF = '*' ;
-ELFAOSF.data[1] = A_UNITE(GLFAOSF,mode6,6,HLFAOSF);
-SDEAOSF_oneline( A_HISVEC(ILFAOSF,ELFAOSF,2,A68_52 ), &JLFAOSF );
-MIFAOSF = JLFAOSF;
+KKFAOSF.data[0] = A_UNITE(LKFAOSF,mode7,7,JIFAOSF_ans);
+NKFAOSF = '*' ;
+KKFAOSF.data[1] = A_UNITE(MKFAOSF,mode6,6,NKFAOSF);
+YCEAOSF_oneline( A_HISVEC(OKFAOSF,KKFAOSF,2,A68_52 ), &PKFAOSF );
+SHFAOSF = PKFAOSF;
 } 
 else
 { 
  /* line 158: */
  /* line 159: */
-MIFAOSF = DJFAOSF_ans;
+SHFAOSF = JIFAOSF_ans;
 } 
 } 
 break;
@@ -1286,74 +1286,74 @@ A_IMP_SKIP ;
 break;
 } 
 A_PROC_EXIT(show_syntax);
-*ReturnedValue = (MIFAOSF);
+*ReturnedValue = (SHFAOSF);
 return;
 } 
 #undef NL
 
-A68_VOID  MLFAOSF_show_readers(A68_34 * Out, A68_135  Readers)
+A68_VOID  SKFAOSF_show_readers(A68_34 * Out, A68_135  Readers)
 { 
-A68_129 * NLFAOSF_reader;
-A68_INT  OLFAOSF;  /* forall loop counter */
-A68_52  PLFAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  QLFAOSF;  /* YIELD */
-A68_85  RLFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_127  SLFAOSF;  /* united object - for case conformity */
-A68_119  TLFAOSF_syntax;
-A68_119  ULFAOSF;  /* united object - for case conformity */
-A68_140  VLFAOSF;  /* collateral clause result */
-A68_60  WLFAOSF;  /* avoid structure result */
-A68_52  XLFAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  AMFAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  BMFAOSF;  /* YIELD */
-A68_VC  CMFAOSF;  /* avoid structure result */
-A68_52  DMFAOSF;  /* OPERATORS - mode -> union mode */
-A68_85  EMFAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  FMFAOSF;  /* == */
-A68_BOOL  GMFAOSF;  /* optbool result */
-A68_140  HMFAOSF;  /* collateral clause result */
-A68_52  IMFAOSF;  /* OPERATORS - mode -> union mode */
-A68_56  JMFAOSF;  /* procedure value */
-A68_52  KMFAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  LMFAOSF;  /* YIELD */
-A68_64  MMFAOSF;  /* avoid structure result */
-A68_52  NMFAOSF;  /* OPERATORS - mode -> union mode */
-A68_85  OMFAOSF;  /* OPERATORS - istruct -> vector */
+A68_129 * TKFAOSF_reader;
+A68_INT  UKFAOSF;  /* forall loop counter */
+A68_52  VKFAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  WKFAOSF;  /* YIELD */
+A68_85  XKFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_127  YKFAOSF;  /* united object - for case conformity */
+A68_119  ZKFAOSF_syntax;
+A68_119  ALFAOSF;  /* united object - for case conformity */
+A68_140  BLFAOSF;  /* collateral clause result */
+A68_60  CLFAOSF;  /* avoid structure result */
+A68_52  DLFAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  GLFAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  HLFAOSF;  /* YIELD */
+A68_VC  ILFAOSF;  /* avoid structure result */
+A68_52  JLFAOSF;  /* OPERATORS - mode -> union mode */
+A68_85  KLFAOSF;  /* OPERATORS - istruct -> vector */
+A68_VC  LLFAOSF;  /* == */
+A68_BOOL  MLFAOSF;  /* optbool result */
+A68_140  NLFAOSF;  /* collateral clause result */
+A68_52  OLFAOSF;  /* OPERATORS - mode -> union mode */
+A68_56  PLFAOSF;  /* procedure value */
+A68_52  QLFAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  RLFAOSF;  /* YIELD */
+A68_64  SLFAOSF;  /* avoid structure result */
+A68_52  TLFAOSF;  /* OPERATORS - mode -> union mode */
+A68_85  ULFAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(show_readers);
  /* line 164: */
  /* line 165: */
-OLFAOSF = Readers.upb -1;
-NLFAOSF_reader = Readers.data;
-for (;OLFAOSF-- >= 0;
-(NLFAOSF_reader++
+UKFAOSF = Readers.upb -1;
+TKFAOSF_reader = Readers.data;
+for (;UKFAOSF-- >= 0;
+(TKFAOSF_reader++
 ) )
 {
-QLFAOSF = (*(&(NLFAOSF_reader->Description))) ;
-EZDAOSF_put(Out, A_HVEC(RLFAOSF,A_UNITE(PLFAOSF,mode7,7,QLFAOSF),A68_52 ));
+WKFAOSF = (*(&(TKFAOSF_reader->Description))) ;
+KYDAOSF_put(Out, A_HVEC(XKFAOSF,A_UNITE(VKFAOSF,mode7,7,WKFAOSF),A68_52 ));
  /* line 166: */
  /* line 167: */
-SLFAOSF = (*(&(NLFAOSF_reader->Reader))) ;
-switch ( SLFAOSF.mode )
+YKFAOSF = (*(&(TKFAOSF_reader->Reader))) ;
+switch ( YKFAOSF.mode )
 { 
 case 2: /* REF INT */
 case 3: /* STRUCT(BITS,REF MODE118)  */
-A_UNCPY(TLFAOSF_syntax,SLFAOSF);
-TLFAOSF_syntax.mode -= 1;
+A_UNCPY(ZKFAOSF_syntax,YKFAOSF);
+ZKFAOSF_syntax.mode -= 1;
  /* line 168: */
  /* line 169: */
-ULFAOSF = TLFAOSF_syntax ;
-switch ( ULFAOSF.mode )
+ALFAOSF = ZKFAOSF_syntax ;
+switch ( ALFAOSF.mode )
 { 
 case 2: /* STRUCT(BITS,REF MODE118)  */
-LSDAOSF_tab( 12, &WLFAOSF );
-VLFAOSF.data[0] = A_UNITE(XLFAOSF,mode16,16,WLFAOSF);
-BMFAOSF = ZLFAOSF ;
-VLFAOSF.data[1] = A_UNITE(AMFAOSF,mode7,7,BMFAOSF);
-JIFAOSF_show_syntax( TLFAOSF_syntax, Readers, &CMFAOSF );
-VLFAOSF.data[2] = A_UNITE(DMFAOSF,mode7,7,CMFAOSF);
+RRDAOSF_tab( 12, &CLFAOSF );
+BLFAOSF.data[0] = A_UNITE(DLFAOSF,mode16,16,CLFAOSF);
+HLFAOSF = FLFAOSF ;
+BLFAOSF.data[1] = A_UNITE(GLFAOSF,mode7,7,HLFAOSF);
+PHFAOSF_show_syntax( ZKFAOSF_syntax, Readers, &ILFAOSF );
+BLFAOSF.data[2] = A_UNITE(JLFAOSF,mode7,7,ILFAOSF);
  /* line 170: */
  /* line 171: */
-EZDAOSF_put(Out, A_HISVEC(EMFAOSF,VLFAOSF,3,A68_52 ));
+KYDAOSF_put(Out, A_HISVEC(KLFAOSF,BLFAOSF,3,A68_52 ));
 break;
 default: 
  /* line 172: */
@@ -1367,29 +1367,29 @@ default:
 break;
 } 
  /* line 174: */
-FMFAOSF = (*(&(NLFAOSF_reader->Help))) ;
-GMFAOSF = A_VSTRUCTCOMP(FMFAOSF,WHDAOSF_nilstr);
-if ( ! GMFAOSF )
+LLFAOSF = (*(&(TKFAOSF_reader->Help))) ;
+MLFAOSF = A_VSTRUCTCOMP(LLFAOSF,CHDAOSF_nilstr);
+if ( ! MLFAOSF )
 { /* line 175: */
-GMFAOSF = ((*(&(NLFAOSF_reader->Help))).upb==0);
+MLFAOSF = ((*(&(TKFAOSF_reader->Help))).upb==0);
 }
-if ( GMFAOSF )
+if ( MLFAOSF )
 { 
  /* line 176: */
-JLDAOSF_newline(Out);
+PKDAOSF_newline(Out);
 } 
 else
 { 
-JMFAOSF.fn.fn_global = JLDAOSF_newline;
-JMFAOSF.nonlocals = A68_NIL;
-HMFAOSF.data[0] = A_UNITE(IMFAOSF,mode12,12,JMFAOSF);
-LMFAOSF = (*(&(NLFAOSF_reader->Help))) ;
-HMFAOSF.data[1] = A_UNITE(KMFAOSF,mode7,7,LMFAOSF);
-FTDAOSF_lines( 2, &MMFAOSF );
-HMFAOSF.data[2] = A_UNITE(NMFAOSF,mode20,20,MMFAOSF);
+PLFAOSF.fn.fn_global = PKDAOSF_newline;
+PLFAOSF.nonlocals = A68_NIL;
+NLFAOSF.data[0] = A_UNITE(OLFAOSF,mode12,12,PLFAOSF);
+RLFAOSF = (*(&(TKFAOSF_reader->Help))) ;
+NLFAOSF.data[1] = A_UNITE(QLFAOSF,mode7,7,RLFAOSF);
+LSDAOSF_lines( 2, &SLFAOSF );
+NLFAOSF.data[2] = A_UNITE(TLFAOSF,mode20,20,SLFAOSF);
  /* line 177: */
  /* line 178: */
-EZDAOSF_put(Out, A_HISVEC(OMFAOSF,HMFAOSF,3,A68_52 ));
+KYDAOSF_put(Out, A_HISVEC(ULFAOSF,NLFAOSF,3,A68_52 ));
 } 
 }
 A_PROC_EXIT(show_readers);
@@ -1398,126 +1398,126 @@ return;
 #undef NL
  /* line 186: */
 
-A68_130 * RMFAOSF_add_readers(A68_130 * Readers, A68_145  New_rules)
+A68_130 * XLFAOSF_add_readers(A68_130 * Readers, A68_145  New_rules)
 { 
-A68_130 * SMFAOSF_rptr;
-A68_144  TMFAOSF_rule;
-A68_144 * UMFAOSF;  /* forall control - []x */
-A68_INT  VMFAOSF;  /* forall loop counter */
-A68_INT * WMFAOSF;  /* YIELD */
-A68_130  XMFAOSF;  /* collateral clause result */
-A68_VC  YMFAOSF;  /* avoid structure result */
-A68_VC  ZMFAOSF;  /* avoid structure result */
-A68_130 * ANFAOSF;  /* YIELD */
-A68_130 * BNFAOSF;  /* clause result */
+A68_130 * YLFAOSF_rptr;
+A68_144  ZLFAOSF_rule;
+A68_144 * AMFAOSF;  /* forall control - []x */
+A68_INT  BMFAOSF;  /* forall loop counter */
+A68_INT * CMFAOSF;  /* YIELD */
+A68_130  DMFAOSF;  /* collateral clause result */
+A68_VC  EMFAOSF;  /* avoid structure result */
+A68_VC  FMFAOSF;  /* avoid structure result */
+A68_130 * GMFAOSF;  /* YIELD */
+A68_130 * HMFAOSF;  /* clause result */
 A_PROC_ENTRY(add_readers);
  /* line 187: */
  /* line 188: */
 { 
-SMFAOSF_rptr = Readers;
+YLFAOSF_rptr = Readers;
  /* line 189: */
  /* line 190: */
-VMFAOSF = New_rules.upb -1;
-UMFAOSF = New_rules.data;
-for (;VMFAOSF-- >= 0;
-(UMFAOSF++
+BMFAOSF = New_rules.upb -1;
+AMFAOSF = New_rules.data;
+for (;BMFAOSF-- >= 0;
+(AMFAOSF++
 ) )
 {
-TMFAOSF_rule = *UMFAOSF;
-WMFAOSF = TMFAOSF_rule.No ;
-(*WMFAOSF) = ((*(*(&((&(SMFAOSF_rptr->Rule))->Sort))))+1);
+ZLFAOSF_rule = *AMFAOSF;
+CMFAOSF = ZLFAOSF_rule.No ;
+(*CMFAOSF) = ((*(*(&((&(YLFAOSF_rptr->Rule))->Sort))))+1);
  /* line 191: */
-XMFAOSF.Rule.Sort = TMFAOSF_rule.No;
-XMFAOSF.Rule.Reader = TMFAOSF_rule.New;
+DMFAOSF.Rule.Sort = ZLFAOSF_rule.No;
+DMFAOSF.Rule.Reader = ZLFAOSF_rule.New;
  /* line 192: */
-ZCAAOSF_makervc( TMFAOSF_rule.Name, &YMFAOSF );
-XMFAOSF.Rule.Description = YMFAOSF;
-ZCAAOSF_makervc( TMFAOSF_rule.Help, &ZMFAOSF );
-XMFAOSF.Rule.Help = ZMFAOSF;
+ZCAAOSF_makervc( ZLFAOSF_rule.Name, &EMFAOSF );
+DMFAOSF.Rule.Description = EMFAOSF;
+ZCAAOSF_makervc( ZLFAOSF_rule.Help, &FMFAOSF );
+DMFAOSF.Rule.Help = FMFAOSF;
  /* line 193: */
-XMFAOSF.Rest = SMFAOSF_rptr;
-ANFAOSF = A_HEAP(A68_130 ) ;
-(*ANFAOSF) = XMFAOSF ;
-SMFAOSF_rptr = ANFAOSF;
+DMFAOSF.Rest = YLFAOSF_rptr;
+GMFAOSF = A_HEAP(A68_130 ) ;
+(*GMFAOSF) = DMFAOSF ;
+YLFAOSF_rptr = GMFAOSF;
 }
  /* line 194: */
  /* line 195: */
-BNFAOSF = SMFAOSF_rptr;
+HMFAOSF = YLFAOSF_rptr;
 } 
 A_PROC_EXIT(add_readers);
-return( BNFAOSF );
+return( HMFAOSF );
 } 
 #undef NL
 
-A68_VOID  DNFAOSF_simplify_params(A68_126  Param, A68_122  *ReturnedValue)
+A68_VOID  JMFAOSF_simplify_params(A68_126  Param, A68_122  *ReturnedValue)
 { 
-A68_148  FNFAOSF_generator;   /* proc value of non-global proc */
-A68_122  LNFAOSF;  /* avoid structure result */
-A68_122  KNFAOSF_ans;
-A68_INT  MNFAOSF_n;
-A68_149  ONFAOSF_add;   /* proc value of non-global proc */
-A68_150  EOFAOSF_simplify;   /* proc value of non-global proc */
-A68_126  NOFAOSF;  /* united object - for case conformity */
-A68_120  OOFAOSF_v;
-A68_148  QOFAOSF_generator;   /* proc value of non-global proc */
-A68_122  VOFAOSF;  /* clause result */
-A68_122  WOFAOSF;  /* avoid structure result */
-A68_122  XOFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_122  YOFAOSF;  /* OPERATORS - assign op */
-A68_148  APFAOSF_generator;   /* proc value of non-global proc */
-A68_120  FPFAOSF;  /* collateral clause result */
-A68_122  GPFAOSF;  /* avoid structure result */
-A68_122  HPFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_122  IPFAOSF;  /* OPERATORS - assign op */
-A68_122  JPFAOSF;  /* OPERATORS - trim index */
+A68_148  LMFAOSF_generator;   /* proc value of non-global proc */
+A68_122  RMFAOSF;  /* avoid structure result */
+A68_122  QMFAOSF_ans;
+A68_INT  SMFAOSF_n;
+A68_149  UMFAOSF_add;   /* proc value of non-global proc */
+A68_150  KNFAOSF_simplify;   /* proc value of non-global proc */
+A68_126  TNFAOSF;  /* united object - for case conformity */
+A68_120  UNFAOSF_v;
+A68_148  WNFAOSF_generator;   /* proc value of non-global proc */
+A68_122  BOFAOSF;  /* clause result */
+A68_122  COFAOSF;  /* avoid structure result */
+A68_122  DOFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_122  EOFAOSF;  /* OPERATORS - assign op */
+A68_148  GOFAOSF_generator;   /* proc value of non-global proc */
+A68_120  LOFAOSF;  /* collateral clause result */
+A68_122  MOFAOSF;  /* avoid structure result */
+A68_122  NOFAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_122  OOFAOSF;  /* OPERATORS - assign op */
+A68_122  POFAOSF;  /* OPERATORS - trim index */
 A_PROC_ENTRY(simplify_params);
  /* line 199: */
  /* line 200: */
 { 
-A_CLOSURE( FNFAOSF_generator, GNFAOSF_generator, HNFAOSF_generator );
-A_CALLPROC(FNFAOSF_generator,(A68_FALSE, &LNFAOSF),(A68_FALSE, &LNFAOSF,(FNFAOSF_generator).nonlocals));
-KNFAOSF_ans = LNFAOSF;
+A_CLOSURE( LMFAOSF_generator, MMFAOSF_generator, NMFAOSF_generator );
+A_CALLPROC(LMFAOSF_generator,(A68_FALSE, &RMFAOSF),(A68_FALSE, &RMFAOSF,(LMFAOSF_generator).nonlocals));
+QMFAOSF_ans = RMFAOSF;
  /* line 201: */
-MNFAOSF_n = 0;
+SMFAOSF_n = 0;
  /* line 203: */
-A_CLOSURE( ONFAOSF_add, PNFAOSF_add, QNFAOSF_add );
-(( QNFAOSF_add * ) ( ONFAOSF_add.nonlocals )) -> MNFAOSF_n = (&MNFAOSF_n);
-(( QNFAOSF_add * ) ( ONFAOSF_add.nonlocals )) -> KNFAOSF_ans = (&KNFAOSF_ans);
+A_CLOSURE( UMFAOSF_add, VMFAOSF_add, WMFAOSF_add );
+(( WMFAOSF_add * ) ( UMFAOSF_add.nonlocals )) -> SMFAOSF_n = (&SMFAOSF_n);
+(( WMFAOSF_add * ) ( UMFAOSF_add.nonlocals )) -> QMFAOSF_ans = (&QMFAOSF_ans);
  /* line 213: */
-A_CLOSURE( EOFAOSF_simplify, FOFAOSF_simplify, GOFAOSF_simplify );
-(( GOFAOSF_simplify * ) ( EOFAOSF_simplify.nonlocals )) -> ONFAOSF_add = ONFAOSF_add;
-(( GOFAOSF_simplify * ) ( EOFAOSF_simplify.nonlocals )) -> EOFAOSF_simplify = EOFAOSF_simplify;
+A_CLOSURE( KNFAOSF_simplify, LNFAOSF_simplify, MNFAOSF_simplify );
+(( MNFAOSF_simplify * ) ( KNFAOSF_simplify.nonlocals )) -> UMFAOSF_add = UMFAOSF_add;
+(( MNFAOSF_simplify * ) ( KNFAOSF_simplify.nonlocals )) -> KNFAOSF_simplify = KNFAOSF_simplify;
  /* line 221: */
  /* line 222: */
-NOFAOSF = Param ;
-switch ( NOFAOSF.mode )
+TNFAOSF = Param ;
+switch ( TNFAOSF.mode )
 { 
 case 2: /* STRUCT(INT,REF MODE26)  */
-OOFAOSF_v = (NOFAOSF.data.mode2);
+UNFAOSF_v = (TNFAOSF.data.mode2);
  /* line 224: */
-A_CLOSURE( QOFAOSF_generator, ROFAOSF_generator, SOFAOSF_generator );
+A_CLOSURE( WNFAOSF_generator, XNFAOSF_generator, YNFAOSF_generator );
  /* line 225: */
-A_CALLPROC(QOFAOSF_generator,(A68_FALSE, &WOFAOSF),(A68_FALSE, &WOFAOSF,(QOFAOSF_generator).nonlocals));
-YOFAOSF = A_HVEC(XOFAOSF,OOFAOSF_v,A68_120 ) ;
-A_VASSIGN2(YOFAOSF,WOFAOSF,A68_120 ) ;
-VOFAOSF = WOFAOSF;
+A_CALLPROC(WNFAOSF_generator,(A68_FALSE, &COFAOSF),(A68_FALSE, &COFAOSF,(WNFAOSF_generator).nonlocals));
+EOFAOSF = A_HVEC(DOFAOSF,UNFAOSF_v,A68_120 ) ;
+A_VASSIGN2(EOFAOSF,COFAOSF,A68_120 ) ;
+BOFAOSF = COFAOSF;
 break;
 case 1: /* STRUCT(INT,REF MODE125)  */
  /* line 226: */
 { 
-A_CALLPROC(EOFAOSF_simplify,(Param),(Param,(EOFAOSF_simplify).nonlocals));
+A_CALLPROC(KNFAOSF_simplify,(Param),(Param,(KNFAOSF_simplify).nonlocals));
  /* line 227: */
  /* line 228: */
-if ( (MNFAOSF_n==0) )
+if ( (SMFAOSF_n==0) )
 { 
-A_CLOSURE( APFAOSF_generator, BPFAOSF_generator, CPFAOSF_generator );
-FPFAOSF.Sort = 0;
+A_CLOSURE( GOFAOSF_generator, HOFAOSF_generator, IOFAOSF_generator );
+LOFAOSF.Sort = 0;
  /* line 229: */
-FPFAOSF.Value = CIDAOSF_nullstr;
-A_CALLPROC(APFAOSF_generator,(A68_FALSE, &GPFAOSF),(A68_FALSE, &GPFAOSF,(APFAOSF_generator).nonlocals));
-IPFAOSF = A_HVEC(HPFAOSF,FPFAOSF,A68_120 ) ;
-A_VASSIGN2(IPFAOSF,GPFAOSF,A68_120 ) ;
-VOFAOSF = GPFAOSF;
+LOFAOSF.Value = IHDAOSF_nullstr;
+A_CALLPROC(GOFAOSF_generator,(A68_FALSE, &MOFAOSF),(A68_FALSE, &MOFAOSF,(GOFAOSF_generator).nonlocals));
+OOFAOSF = A_HVEC(NOFAOSF,LOFAOSF,A68_120 ) ;
+A_VASSIGN2(OOFAOSF,MOFAOSF,A68_120 ) ;
+BOFAOSF = MOFAOSF;
 } 
 else
 { 
@@ -1526,7 +1526,7 @@ else
  /* line 232: */
  /* line 233: */
  /* line 237: */
-VOFAOSF = A_VTRIM(JPFAOSF,(KNFAOSF_ans),A_VTSCRIPT(&(JPFAOSF.upb),(KNFAOSF_ans).upb,1,MNFAOSF_n));
+BOFAOSF = A_VTRIM(POFAOSF,(QMFAOSF_ans),A_VTSCRIPT(&(POFAOSF.upb),(QMFAOSF_ans).upb,1,SMFAOSF_n));
 } 
 } 
 break;
@@ -1536,54 +1536,54 @@ break;
 } 
 } 
 A_PROC_EXIT(simplify_params);
-*ReturnedValue = (VOFAOSF);
+*ReturnedValue = (BOFAOSF);
 return;
 } 
 #undef NL
  /* line 1: */
  /* line 4: */
-void YEFAOSF(void)   /* initialise DECS commandsyntax */
+void EEFAOSF(void)   /* initialise DECS commandsyntax */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","commandsyntax.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/messageproc.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/putstrings.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","commandsyntax.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/messageproc.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/putstrings.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
-A68_INT * DFFAOSF;  /* YIELD */
-A68_119  EFFAOSF;  /* OPERATORS - mode -> union mode */
-A68_120  GFFAOSF;  /* collateral clause result */
-A68_VC  LFFAOSF;  /* avoid structure result */
-A68_126  MFFAOSF;  /* OPERATORS - mode -> union mode */
+A68_INT * JEFAOSF;  /* YIELD */
+A68_119  KEFAOSF;  /* OPERATORS - mode -> union mode */
+A68_120  MEFAOSF;  /* collateral clause result */
+A68_VC  REFAOSF;  /* avoid structure result */
+A68_126  SEFAOSF;  /* OPERATORS - mode -> union mode */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
 ZRAAOSF();   /* USE messageproc */
-KNDAOSF();   /* USE putstrings */
+QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/liba68prel/commandsyntax.a68";
-A_config.translation_time = "Mon Jan 28 20:24:31 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/commandsyntax.a68";
+A_config.translation_time = "Wed Apr 21 16:34:02 2021";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "XEFAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.name_seed = "DEFAOSF (from seed file) ";
+A_config.spec_change_time = "Wed Apr 21 16:34:02 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS commandsyntax);
-UEAALIB_a68config(LGAALIB_configinfo, CFFAOSF);
+UEAALIB_a68config(LGAALIB_configinfo, IEFAOSF);
  /* line 47: */
  /* line 73: */
  /* line 75: */
-DFFAOSF = A_HEAP(A68_INT ) ;
-(*DFFAOSF) = 0 ;
-FFFAOSF_noparameters = A_UNITE(EFFAOSF,mode1,1,DFFAOSF);
+JEFAOSF = A_HEAP(A68_INT ) ;
+(*JEFAOSF) = 0 ;
+LEFAOSF_noparameters = A_UNITE(KEFAOSF,mode1,1,JEFAOSF);
  /* line 76: */
-GFFAOSF.Sort = 0;
-IFFAOSF_generator( A68_FALSE, &LFFAOSF );
-GFFAOSF.Value = LFFAOSF;
-NFFAOSF_no_parameters = A_UNITE(MFFAOSF,mode2,2,GFFAOSF);
+MEFAOSF.Sort = 0;
+OEFAOSF_generator( A68_FALSE, &REFAOSF );
+MEFAOSF.Value = REFAOSF;
+TEFAOSF_no_parameters = A_UNITE(SEFAOSF,mode2,2,MEFAOSF);
  /* line 81: */
  /* line 83: */
  /* line 84: */

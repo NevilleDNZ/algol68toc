@@ -35,7 +35,7 @@ a68toc : $(LBD)/Afirst.o $(ACD)/a68config.o a68toc.o \
 Translate : $(a68toc_c) a68toc.c
 
 install :
-	$(INSTALLPROG) -p $(STRIP) a68toc $(BINDIR)
+	$(INSTALLPROG) -p -s a68toc $(BINDIR)
 
 clean :
-	$(RM) -v $(a68toc_o) a68toc
+	$(RM) -v $(a68toc_o) a68toc.o a68toc

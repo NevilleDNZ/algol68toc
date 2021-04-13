@@ -23,7 +23,7 @@ liba68s.a : $(ACD)/a68config.o $(qad_o)
 nameseed : rctr
 	cp rctr nameseed
 
-Translate : remove
+Translate : remove nameseed $(qad_c)
 
 clean :
 	$(RM) -v nameseed $(qad_c) $(qad_o) *.m liba68s.a

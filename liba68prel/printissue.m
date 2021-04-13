@@ -1,6 +1,6 @@
 8
 mod_info
-JQGAOSF
+PPGAOSF
 printissue                      
                                 
                                 
@@ -18,8 +18,8 @@ printissue
 1
 43
 0700640005010007010b7072696e745f7469746c6500640600650005010b7072696e745f69737375650065
-KQGAOSF
-1359404672
+QPGAOSF
+1619019242
 2
-VUGAOSFfftfff
-XUGAOSFfftfff
+BUGAOSFfftfff
+DUGAOSFfftfff

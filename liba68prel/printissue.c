@@ -1,4 +1,4 @@
-/* UNAME:IQGAOSF */
+/* UNAME:OPGAOSF */
 #include <algol68/Asupport.h>
 
 A_PROCEDURE(A68_VOID ,A68t31,(A68_BOOL ,A68_VC *),(A68_BOOL ,A68_VC *,void *));
@@ -85,7 +85,7 @@ A68_INT  mode2;
 A68_SBITS  mode3;
 A68_SINT  mode4;
 A68_CHAR  mode5;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t50  A68_50 ;    /* UNION(BITS,INT,SHORT BITS,SHORT INT,CHAR)  */
 
 A_PROCEDURE(A68_VOID ,A68t51,(A68_INT ,A68_VC *),(A68_INT ,A68_VC *,void *));
@@ -173,7 +173,7 @@ struct A68t63  mode19;
 struct A68t64  mode20;
 struct A68t65  mode21;
 struct A68t66  mode22;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t52  A68_52 ;    /* UNION(INT,MODE32,BITS,MODE53,SHORT BITS,CHAR,MODE26,BOOL,MODE54,REAL,MODE55,MODE56,MODE57,MODE58,MODE59,MODE60,MODE61,MODE62,MODE63,MODE64,MODE65,MODE66)  */
 
 A_PROCEDURE(A68_VOID ,A68t67,(A68_BOOL ,struct A68t58 *),(A68_BOOL ,struct A68t58 *,void *));
@@ -240,12 +240,12 @@ typedef struct A68t86  A68_86 ;    /* PROC(MODE87,MODE88) REF MODE34 */
 struct A68t87 { A68_INT mode; union {
 A68_INT  mode1;
 A68_VC  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t87  A68_87 ;    /* UNION(INT,REF MODE26)  */
 struct A68t88 { A68_INT mode; union {
 struct A68t36  mode1;
 struct A68t37  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t88  A68_88 ;    /* UNION(MODE36,MODE37)  */
 
 A_PROCEDURE(A68_VOID ,A68t89,(A68_VC ,struct A68t85 ,A68_VC *),(A68_VC ,struct A68t85 ,A68_VC *,void *));
@@ -341,7 +341,7 @@ typedef struct A68t107  A68_107 ;    /* PROC(MODE108,MODE97) REF MODE106 */
 struct A68t108 { A68_INT mode; union {
 struct A68t92 * mode1;
 A68_VC  mode2;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t108  A68_108 ;    /* UNION(REF MODE92,MODE26)  */
 
 A_PROCEDURE(A68_VOID ,A68t109,(struct A68t92 *,A68_LINT *,struct A68t97 ,struct A68t35 *),(struct A68t92 *,A68_LINT *,struct A68t97 ,struct A68t35 *,void *));
@@ -371,150 +371,147 @@ typedef struct A68t116  A68_116 ;    /* PROC(MODE26,MODE97) INT */
 A_PROCEDURE(A68_INT ,A68t117,(void),(void *));
 typedef struct A68t117  A68_117 ;    /* PROC INT */
 
-A_PROCEDURE(A68_VOID ,A68t118,(A68_VC ,A68_VC ,struct A68t97 ,A68_VC *),(A68_VC ,A68_VC ,struct A68t97 ,A68_VC *,void *));
-typedef struct A68t118  A68_118 ;    /* PROC(MODE26,MODE26,MODE97) MODE26 */
-
-A_PROCEDURE(A68_VOID ,A68t119,(A68_VC ,A68_VC ,struct A68t97 ,struct A68t35 *),(A68_VC ,A68_VC ,struct A68t97 ,struct A68t35 *,void *));
-typedef struct A68t119  A68_119 ;    /* PROC(MODE26,MODE26,MODE97) MODE35 */
-struct A68t120{
+A_PROCEDURE(A68_VOID ,A68t118,(A68_VC ,A68_VC ,struct A68t97 ,struct A68t35 *),(A68_VC ,A68_VC ,struct A68t97 ,struct A68t35 *,void *));
+typedef struct A68t118  A68_118 ;    /* PROC(MODE26,MODE26,MODE97) MODE35 */
+struct A68t119{
 A68_VC  Filename;
 A68_VC  Directory;
 A68_VC  Name;
 A68_VC  Type;
 };
-typedef struct A68t120  A68_120 ;    /* STRUCT(REF MODE26,REF MODE26,REF MODE26,REF MODE26)  */
+typedef struct A68t119  A68_119 ;    /* STRUCT(REF MODE26,REF MODE26,REF MODE26,REF MODE26)  */
 
-A_PROCEDURE(A68_VOID ,A68t121,(A68_VC ,A68_VC ,struct A68t97 ,struct A68t120 *),(A68_VC ,A68_VC ,struct A68t97 ,struct A68t120 *,void *));
-typedef struct A68t121  A68_121 ;    /* PROC(MODE26,MODE26,MODE97) MODE120 */
+A_PROCEDURE(A68_VOID ,A68t120,(A68_VC ,A68_VC ,struct A68t97 ,struct A68t119 *),(A68_VC ,A68_VC ,struct A68t97 ,struct A68t119 *,void *));
+typedef struct A68t120  A68_120 ;    /* PROC(MODE26,MODE26,MODE97) MODE119 */
 
-A_PROCEDURE(A68_VOID ,A68t122,(A68_VC *),(A68_VC *,void *));
-typedef struct A68t122  A68_122 ;    /* PROC MODE26 */
+A_PROCEDURE(A68_VOID ,A68t121,(A68_VC *),(A68_VC *,void *));
+typedef struct A68t121  A68_121 ;    /* PROC MODE26 */
 
-A_PROCEDURE(A68_VOID ,A68t123,(struct A68t46 *),(struct A68t46 *,void *));
-typedef struct A68t123  A68_123 ;    /* PROC MODE46 */
+A_PROCEDURE(A68_VOID ,A68t122,(struct A68t46 *),(struct A68t46 *,void *));
+typedef struct A68t122  A68_122 ;    /* PROC MODE46 */
 
-A_PROCEDURE(A68_VOID ,A68t124,(A68_VC ,struct A68t97 ,struct A68t46 *),(A68_VC ,struct A68t97 ,struct A68t46 *,void *));
-typedef struct A68t124  A68_124 ;    /* PROC(MODE26,MODE97) MODE46 */
+A_PROCEDURE(A68_VOID ,A68t123,(A68_VC ,struct A68t97 ,struct A68t46 *),(A68_VC ,struct A68t97 ,struct A68t46 *,void *));
+typedef struct A68t123  A68_123 ;    /* PROC(MODE26,MODE97) MODE46 */
 
-A_PROCEDURE(A68_BOOL ,A68t125,(void),(void *));
-typedef struct A68t125  A68_125 ;    /* PROC BOOL */
-struct A68t127 ;
+A_PROCEDURE(A68_BOOL ,A68t124,(void),(void *));
+typedef struct A68t124  A68_124 ;    /* PROC BOOL */
+struct A68t126 ;
 
-A_PROCEDURE(A68_VOID ,A68t126,(struct A68t127 ,struct A68t97 ),(struct A68t127 ,struct A68t97 ,void *));
-typedef struct A68t126  A68_126 ;    /* PROC(MODE127,MODE97) VOID */
-A_VECTOR(struct A68t128 ,A68t127);
-typedef struct A68t127  A68_127 ;    /* VECTOR [] MODE128 */
-struct A68t128{
+A_PROCEDURE(A68_VOID ,A68t125,(struct A68t126 ,struct A68t97 ),(struct A68t126 ,struct A68t97 ,void *));
+typedef struct A68t125  A68_125 ;    /* PROC(MODE126,MODE97) VOID */
+A_VECTOR(struct A68t127 ,A68t126);
+typedef struct A68t126  A68_126 ;    /* VECTOR [] MODE127 */
+struct A68t127{
 A68_VC  Name;
 A68_INT  Value;
 A_PAD_INT(PAD_33)
 };
-typedef struct A68t128  A68_128 ;    /* STRUCT(MODE26,INT)  */
+typedef struct A68t127  A68_127 ;    /* STRUCT(MODE26,INT)  */
 
-A_PROCEDURE(A68_VOID ,A68t129,(void),(void *));
-typedef struct A68t129  A68_129 ;    /* PROC VOID */
+A_PROCEDURE(A68_VOID ,A68t128,(void),(void *));
+typedef struct A68t128  A68_128 ;    /* PROC VOID */
 
-A_PROCEDURE(A68_VOID ,A68t130,(A68_BITS ),(A68_BITS ,void *));
-typedef struct A68t130  A68_130 ;    /* PROC(BITS) VOID */
+A_PROCEDURE(A68_VOID ,A68t129,(A68_BITS ),(A68_BITS ,void *));
+typedef struct A68t129  A68_129 ;    /* PROC(BITS) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t131,(struct A68t36 ),(struct A68t36 ,void *));
-typedef struct A68t131  A68_131 ;    /* PROC(MODE36) VOID */
+A_PROCEDURE(A68_VOID ,A68t130,(struct A68t36 ),(struct A68t36 ,void *));
+typedef struct A68t130  A68_130 ;    /* PROC(MODE36) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t132,(A68_VC ,A68_VC *),(A68_VC ,A68_VC *,void *));
-typedef struct A68t132  A68_132 ;    /* PROC(REF MODE26) REF MODE26 */
+A_PROCEDURE(A68_VOID ,A68t131,(A68_VC ,A68_VC *),(A68_VC ,A68_VC *,void *));
+typedef struct A68t131  A68_131 ;    /* PROC(REF MODE26) REF MODE26 */
 
-A_PROCEDURE(A68_REAL ,A68t133,(A68_REAL ),(A68_REAL ,void *));
-typedef struct A68t133  A68_133 ;    /* PROC(REAL) REAL */
-struct A68t134{
+A_PROCEDURE(A68_REAL ,A68t132,(A68_REAL ),(A68_REAL ,void *));
+typedef struct A68t132  A68_132 ;    /* PROC(REAL) REAL */
+struct A68t133{
 A68_VC  Name;
 A68_VC  Version;
 A68_VC  Date;
 A68_VC  Msg;
 A68_VC  Sys_fault;
 };
-typedef struct A68t134  A68_134 ;    /* STRUCT(MODE26,MODE26,MODE26,MODE26,MODE26)  */
+typedef struct A68t133  A68_133 ;    /* STRUCT(MODE26,MODE26,MODE26,MODE26,MODE26)  */
 
-A_PROCEDURE(A68_VOID ,A68t135,(A68_BOOL ,struct A68t134 *),(A68_BOOL ,struct A68t134 *,void *));
-typedef struct A68t135  A68_135 ;    /* PROC(BOOL) MODE134 */
+A_PROCEDURE(A68_VOID ,A68t134,(A68_BOOL ,struct A68t133 *),(A68_BOOL ,struct A68t133 *,void *));
+typedef struct A68t134  A68_134 ;    /* PROC(BOOL) MODE133 */
 
-A_PROCEDURE(A68_VOID ,A68t136,(struct A68t134 ,A68_BOOL ),(struct A68t134 ,A68_BOOL ,void *));
-typedef struct A68t136  A68_136 ;    /* PROC(MODE134,BOOL) VOID */
+A_PROCEDURE(A68_VOID ,A68t135,(struct A68t133 ,A68_BOOL ),(struct A68t133 ,A68_BOOL ,void *));
+typedef struct A68t135  A68_135 ;    /* PROC(MODE133,BOOL) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t137,(struct A68t134 *),(struct A68t134 *,void *));
-typedef struct A68t137  A68_137 ;    /* PROC MODE134 */
+A_PROCEDURE(A68_VOID ,A68t136,(struct A68t133 *),(struct A68t133 *,void *));
+typedef struct A68t136  A68_136 ;    /* PROC MODE133 */
 
-A_PROCEDURE(A68_BOOL ,A68t138,(A68_VC ,A68_VC ,A68_VC ,A68_VC *,A68_BOOL ),(A68_VC ,A68_VC ,A68_VC ,A68_VC *,A68_BOOL ,void *));
-typedef struct A68t138  A68_138 ;    /* PROC(MODE26,MODE26,MODE26,REF REF MODE26,BOOL) BOOL */
+A_PROCEDURE(A68_BOOL ,A68t137,(A68_VC ,A68_VC ,A68_VC ,A68_VC *,A68_BOOL ),(A68_VC ,A68_VC ,A68_VC ,A68_VC *,A68_BOOL ,void *));
+typedef struct A68t137  A68_137 ;    /* PROC(MODE26,MODE26,MODE26,REF REF MODE26,BOOL) BOOL */
+struct A68t139 ;
 struct A68t140 ;
-struct A68t141 ;
 
-A_PROCEDURE(A68_VOID ,A68t139,(A68_VC ,struct A68t129 ,struct A68t140 ,struct A68t141 ),(A68_VC ,struct A68t129 ,struct A68t140 ,struct A68t141 ,void *));
-typedef struct A68t139  A68_139 ;    /* PROC(MODE26,MODE129,MODE140,MODE141) VOID */
+A_PROCEDURE(A68_VOID ,A68t138,(A68_VC ,struct A68t128 ,struct A68t139 ,struct A68t140 ),(A68_VC ,struct A68t128 ,struct A68t139 ,struct A68t140 ,void *));
+typedef struct A68t138  A68_138 ;    /* PROC(MODE26,MODE128,MODE139,MODE140) VOID */
 
-A_PROCEDURE(A68_BOOL ,A68t140,(A68_VC ,struct A68t122 ),(A68_VC ,struct A68t122 ,void *));
-typedef struct A68t140  A68_140 ;    /* PROC(MODE26,MODE122) BOOL */
+A_PROCEDURE(A68_BOOL ,A68t139,(A68_VC ,struct A68t121 ),(A68_VC ,struct A68t121 ,void *));
+typedef struct A68t139  A68_139 ;    /* PROC(MODE26,MODE121) BOOL */
 
-A_PROCEDURE(A68_BOOL ,A68t141,(A68_BOOL ),(A68_BOOL ,void *));
-typedef struct A68t141  A68_141 ;    /* PROC(BOOL) BOOL */
+A_PROCEDURE(A68_BOOL ,A68t140,(A68_BOOL ),(A68_BOOL ,void *));
+typedef struct A68t140  A68_140 ;    /* PROC(BOOL) BOOL */
 
-A_PROCEDURE(A68_VOID ,A68t142,(struct A68t97 ),(struct A68t97 ,void *));
-typedef struct A68t142  A68_142 ;    /* PROC(MODE97) VOID */
+A_PROCEDURE(A68_VOID ,A68t141,(struct A68t97 ),(struct A68t97 ,void *));
+typedef struct A68t141  A68_141 ;    /* PROC(MODE97) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t143,(struct A68t142 ,struct A68t97 ),(struct A68t142 ,struct A68t97 ,void *));
-typedef struct A68t143  A68_143 ;    /* PROC(MODE142,MODE97) VOID */
+A_PROCEDURE(A68_VOID ,A68t142,(struct A68t141 ,struct A68t97 ),(struct A68t141 ,struct A68t97 ,void *));
+typedef struct A68t142  A68_142 ;    /* PROC(MODE141,MODE97) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t144,(struct A68t129 ),(struct A68t129 ,void *));
-typedef struct A68t144  A68_144 ;    /* PROC(MODE129) VOID */
+A_PROCEDURE(A68_VOID ,A68t143,(struct A68t128 ),(struct A68t128 ,void *));
+typedef struct A68t143  A68_143 ;    /* PROC(MODE128) VOID */
 
-A_PROCEDURE(A68_VOID ,A68t145,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
-typedef struct A68t145  A68_145 ;    /* PROC(MODE26,MODE26) VOID */
-A_ISTRUCT(A68_CHAR ,60,A68t146);
-typedef struct A68t146  A68_146 ;    /* STRUCT 60 CHAR */
-A_ISTRUCT(struct A68t52 ,2,A68t147);
-typedef struct A68t147  A68_147 ;    /* STRUCT 2 MODE52 */
-A_ISTRUCT(A68_CHAR ,17,A68t148);
-typedef struct A68t148  A68_148 ;    /* STRUCT 17 CHAR */
-A_ISTRUCT(A68_CHAR ,33,A68t149);
-typedef struct A68t149  A68_149 ;    /* STRUCT 33 CHAR */
-A_ISTRUCT(A68_CHAR ,56,A68t150);
-typedef struct A68t150  A68_150 ;    /* STRUCT 56 CHAR */
-A_ISTRUCT(A68_CHAR ,18,A68t151);
-typedef struct A68t151  A68_151 ;    /* STRUCT 18 CHAR */
-A_ISTRUCT(A68_VC ,2,A68t152);
-typedef struct A68t152  A68_152 ;    /* STRUCT 2 MODE26 */
-A_ISTRUCT(A68_CHAR ,49,A68t153);
-typedef struct A68t153  A68_153 ;    /* STRUCT 49 CHAR */
-A_ISTRUCT(A68_CHAR ,45,A68t154);
-typedef struct A68t154  A68_154 ;    /* STRUCT 45 CHAR */
-A_ISTRUCT(A68_CHAR ,7,A68t155);
-typedef struct A68t155  A68_155 ;    /* STRUCT 7 CHAR */
-A_ISTRUCT(A68_VC ,3,A68t156);
-typedef struct A68t156  A68_156 ;    /* STRUCT 3 MODE26 */
-A_ISTRUCT(A68_CHAR ,118,A68t157);
-typedef struct A68t157  A68_157 ;    /* STRUCT 118 CHAR */
-A_ISTRUCT(A68_CHAR ,121,A68t158);
-typedef struct A68t158  A68_158 ;    /* STRUCT 121 CHAR */
-A_ISTRUCT(A68_VC ,4,A68t159);
-typedef struct A68t159  A68_159 ;    /* STRUCT 4 MODE26 */
-A_ISTRUCT(A68_CHAR ,405,A68t160);
-typedef struct A68t160  A68_160 ;    /* STRUCT 405 CHAR */
-A_ISTRUCT(A68_CHAR ,117,A68t161);
-typedef struct A68t161  A68_161 ;    /* STRUCT 117 CHAR */
-A_ISTRUCT(A68_CHAR ,23,A68t162);
-typedef struct A68t162  A68_162 ;    /* STRUCT 23 CHAR */
-A_ISTRUCT(A68_CHAR ,15,A68t163);
-typedef struct A68t163  A68_163 ;    /* STRUCT 15 CHAR */
-A_ISTRUCT(A68_CHAR ,11,A68t164);
-typedef struct A68t164  A68_164 ;    /* STRUCT 11 CHAR */
-A_ISTRUCT(A68_CHAR ,13,A68t165);
-typedef struct A68t165  A68_165 ;    /* STRUCT 13 CHAR */
-A_ISTRUCT(A68_CHAR ,14,A68t166);
-typedef struct A68t166  A68_166 ;    /* STRUCT 14 CHAR */
-A_ISTRUCT(struct A68t52 ,21,A68t167);
-typedef struct A68t167  A68_167 ;    /* STRUCT 21 MODE52 */
+A_PROCEDURE(A68_VOID ,A68t144,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
+typedef struct A68t144  A68_144 ;    /* PROC(MODE26,MODE26) VOID */
+A_ISTRUCT(A68_CHAR ,60,A68t145);
+typedef struct A68t145  A68_145 ;    /* STRUCT 60 CHAR */
+A_ISTRUCT(struct A68t52 ,2,A68t146);
+typedef struct A68t146  A68_146 ;    /* STRUCT 2 MODE52 */
+A_ISTRUCT(A68_CHAR ,17,A68t147);
+typedef struct A68t147  A68_147 ;    /* STRUCT 17 CHAR */
+A_ISTRUCT(A68_CHAR ,33,A68t148);
+typedef struct A68t148  A68_148 ;    /* STRUCT 33 CHAR */
+A_ISTRUCT(A68_CHAR ,56,A68t149);
+typedef struct A68t149  A68_149 ;    /* STRUCT 56 CHAR */
+A_ISTRUCT(A68_CHAR ,18,A68t150);
+typedef struct A68t150  A68_150 ;    /* STRUCT 18 CHAR */
+A_ISTRUCT(A68_VC ,2,A68t151);
+typedef struct A68t151  A68_151 ;    /* STRUCT 2 MODE26 */
+A_ISTRUCT(A68_CHAR ,49,A68t152);
+typedef struct A68t152  A68_152 ;    /* STRUCT 49 CHAR */
+A_ISTRUCT(A68_CHAR ,45,A68t153);
+typedef struct A68t153  A68_153 ;    /* STRUCT 45 CHAR */
+A_ISTRUCT(A68_CHAR ,7,A68t154);
+typedef struct A68t154  A68_154 ;    /* STRUCT 7 CHAR */
+A_ISTRUCT(A68_VC ,3,A68t155);
+typedef struct A68t155  A68_155 ;    /* STRUCT 3 MODE26 */
+A_ISTRUCT(A68_CHAR ,118,A68t156);
+typedef struct A68t156  A68_156 ;    /* STRUCT 118 CHAR */
+A_ISTRUCT(A68_CHAR ,121,A68t157);
+typedef struct A68t157  A68_157 ;    /* STRUCT 121 CHAR */
+A_ISTRUCT(A68_VC ,4,A68t158);
+typedef struct A68t158  A68_158 ;    /* STRUCT 4 MODE26 */
+A_ISTRUCT(A68_CHAR ,405,A68t159);
+typedef struct A68t159  A68_159 ;    /* STRUCT 405 CHAR */
+A_ISTRUCT(A68_CHAR ,117,A68t160);
+typedef struct A68t160  A68_160 ;    /* STRUCT 117 CHAR */
+A_ISTRUCT(A68_CHAR ,23,A68t161);
+typedef struct A68t161  A68_161 ;    /* STRUCT 23 CHAR */
+A_ISTRUCT(A68_CHAR ,15,A68t162);
+typedef struct A68t162  A68_162 ;    /* STRUCT 15 CHAR */
+A_ISTRUCT(A68_CHAR ,11,A68t163);
+typedef struct A68t163  A68_163 ;    /* STRUCT 11 CHAR */
+A_ISTRUCT(A68_CHAR ,13,A68t164);
+typedef struct A68t164  A68_164 ;    /* STRUCT 13 CHAR */
+A_ISTRUCT(A68_CHAR ,14,A68t165);
+typedef struct A68t165  A68_165 ;    /* STRUCT 14 CHAR */
+A_ISTRUCT(struct A68t52 ,21,A68t166);
+typedef struct A68t166  A68_166 ;    /* STRUCT 21 MODE52 */
 
-A_PROCEDURE(A68_VOID ,A68t168,(A68_BOOL ),(A68_BOOL ,void *));
-typedef struct A68t168  A68_168 ;    /* PROC(BOOL) VOID */
+A_PROCEDURE(A68_VOID ,A68t167,(A68_BOOL ),(A68_BOOL ,void *));
+typedef struct A68t167  A68_167 ;    /* PROC(BOOL) VOID */
 
 /* --- Imports from a68config --- */
 extern A68_VOID  UEAALIB_a68config(A68_VC ,A68_VC );
@@ -528,10 +525,10 @@ static A68_VC  A_configinfo;
 
 
 /* --- Imports from osinterface --- */
-extern A68_94  NTBAOSF_update_access;
-extern A68_94  RTBAOSF_update_truncate_access;
-#define UQEAOSF_block_update_access NTBAOSF_update_access
-#define VQEAOSF_block_update_truncate_access RTBAOSF_update_truncate_access
+extern A68_94  MTBAOSF_update_access;
+extern A68_94  QTBAOSF_update_truncate_access;
+#define AQEAOSF_block_update_access MTBAOSF_update_access
+#define BQEAOSF_block_update_truncate_access QTBAOSF_update_truncate_access
 #include <unistd.h>
 #define EXIT(status) exit(A_INT_int(status))
 
@@ -539,59 +536,59 @@ extern A68_94  RTBAOSF_update_truncate_access;
 extern int A_argc;
 extern char **A_argv;
 extern char **A_envp;
-#define A_prelude(argc,argv,envp) A_argc=argc; A_argv = argv; A_envp = envp
+#define A_prelude(argc,argv,envp) A_argc = argc; A_argv = argv; A_envp = envp
 
-#define XHCAOSF_prelude A_prelude
+#define DHCAOSF_prelude A_prelude
 #include <algol68/Alibrary.h>
 
 #define GMBAOSF_garbage_collect Agc_collect
 #include <math.h>
 
-#define TDFAOSF_sqrt sqrt
-extern A68_VOID  HSEAOSF_facility(A68_VC *);
-extern A68_VOID  JSEAOSF_version(A68_134 *);
-extern A68_VOID  MSEAOSF_give_version(A68_VC *);
-extern A68_34 * XREAOSF_screen;
+#define ZCFAOSF_sqrt sqrt
+extern A68_VOID  NREAOSF_facility(A68_VC *);
+extern A68_VOID  PREAOSF_version(A68_133 *);
+extern A68_VOID  SREAOSF_give_version(A68_VC *);
+extern A68_34 * DREAOSF_screen;
 /* --- End of imports from osinterface --- */
 
 
 /* --- Imports from putstrings --- */
 extern A68_VOID  JDAAOSF_concat(struct A68t46 ,A68_VC *);
-extern A68_VOID  ATDAOSF_spaces(A68_INT ,A68_63 *);
-extern A68_VOID  FTDAOSF_lines(A68_INT ,A68_64 *);
-extern A68_VOID  JLDAOSF_newline(struct A68t34 *);
-extern A68_VOID  EZDAOSF_put(struct A68t34 *,struct A68t85 );
+extern A68_VOID  GSDAOSF_spaces(A68_INT ,A68_63 *);
+extern A68_VOID  LSDAOSF_lines(A68_INT ,A68_64 *);
+extern A68_VOID  PKDAOSF_newline(struct A68t34 *);
+extern A68_VOID  KYDAOSF_put(struct A68t34 *,struct A68t85 );
 /* --- End of imports from putstrings --- */
 
 
 /* --- DECS initialisation functions --- */
 extern void BAAALIB(void);   /* a68config */
-extern void CQEAOSF(void);   /* osinterface */
-extern void KNDAOSF(void);   /* putstrings */
+extern void IPEAOSF(void);   /* osinterface */
+extern void QMDAOSF(void);   /* putstrings */
 /* --- end of DECS initialisation functions --- */
-static A68_146   MQGAOSF = {"$Id: printissue.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
-A_GISVEC(A68_VC ,NQGAOSF,MQGAOSF,60)
-static A68_148   BRGAOSF = {"E L L A   2 0 0 0"}; 
-A_GISVEC(A68_VC ,CRGAOSF,BRGAOSF,17)
-static A68_149   DRGAOSF = {"Defence Research Agency (Malvern)"}; 
-A_GISVEC(A68_VC ,ERGAOSF,DRGAOSF,33)
-static A68_150   FRGAOSF = {"UK Crown Copyright, (c) 1985, 1993.  All rights reserved"}; 
-A_GISVEC(A68_VC ,GRGAOSF,FRGAOSF,56)
-static A68_151   LRGAOSF = {"Version details:  "}; 
-A_GISVEC(A68_VC ,MRGAOSF,LRGAOSF,18)
-static A68_153   QRGAOSF = {"This software may only be used for study purposes"}; 
-A_GISVEC(A68_VC ,RRGAOSF,QRGAOSF,49)
-static A68_154   TRGAOSF = {"- invoke the \"printissue\" command for details"}; 
-A_GISVEC(A68_VC ,URGAOSF,TRGAOSF,45)
-static A68_155   WRGAOSF = {"*****  "}; 
-A_GISVEC(A68_VC ,XRGAOSF,WRGAOSF,7)
-static A68_155   YRGAOSF = {"  *****"}; 
-A_GISVEC(A68_VC ,ZRGAOSF,YRGAOSF,7)
-static A68_157   HSGAOSF = {" has United Kingdom Crown Copyright (c) 1993.  All rights are reserved. Permission is granted for this version of the "}; 
-A_GISVEC(A68_VC ,ISGAOSF,HSGAOSF,118)
-static A68_158   KSGAOSF = {" software to be copied for personal use, or given to third parties subject to the conditions given in the release notice."}; 
-A_GISVEC(A68_VC ,LSGAOSF,KSGAOSF,121)
-static A68_160   RSGAOSF = 
+static A68_145   SPGAOSF = {"$Id: printissue.a68,v 1.1.1.1 2001-05-07 10:16:11 sian Exp $"}; 
+A_GISVEC(A68_VC ,TPGAOSF,SPGAOSF,60)
+static A68_147   HQGAOSF = {"E L L A   2 0 0 0"}; 
+A_GISVEC(A68_VC ,IQGAOSF,HQGAOSF,17)
+static A68_148   JQGAOSF = {"Defence Research Agency (Malvern)"}; 
+A_GISVEC(A68_VC ,KQGAOSF,JQGAOSF,33)
+static A68_149   LQGAOSF = {"UK Crown Copyright, (c) 1985, 1993.  All rights reserved"}; 
+A_GISVEC(A68_VC ,MQGAOSF,LQGAOSF,56)
+static A68_150   RQGAOSF = {"Version details:  "}; 
+A_GISVEC(A68_VC ,SQGAOSF,RQGAOSF,18)
+static A68_152   WQGAOSF = {"This software may only be used for study purposes"}; 
+A_GISVEC(A68_VC ,XQGAOSF,WQGAOSF,49)
+static A68_153   ZQGAOSF = {"- invoke the \"printissue\" command for details"}; 
+A_GISVEC(A68_VC ,ARGAOSF,ZQGAOSF,45)
+static A68_154   CRGAOSF = {"*****  "}; 
+A_GISVEC(A68_VC ,DRGAOSF,CRGAOSF,7)
+static A68_154   ERGAOSF = {"  *****"}; 
+A_GISVEC(A68_VC ,FRGAOSF,ERGAOSF,7)
+static A68_156   NRGAOSF = {" has United Kingdom Crown Copyright (c) 1993.  All rights are reserved. Permission is granted for this version of the "}; 
+A_GISVEC(A68_VC ,ORGAOSF,NRGAOSF,118)
+static A68_157   QRGAOSF = {" software to be copied for personal use, or given to third parties subject to the conditions given in the release notice."}; 
+A_GISVEC(A68_VC ,RRGAOSF,QRGAOSF,121)
+static A68_159   XRGAOSF = 
 {  'T', 'h', 'e', ' ', 'S', 'e', 'c', 'r',
    'e', 't', 'a', 'r', 'y', ' ', 'o', 'f',
    ' ', 'S', 't', 'a', 't', 'e', ' ', 'f',
@@ -644,127 +641,127 @@ static A68_160   RSGAOSF =
    'e', 'n', 't', 's', ' ', 't', 'h', 'e',
    'r', 'e', 'o', 'f', '.' 
 } ; 
-A_GISVEC(A68_VC ,SSGAOSF,RSGAOSF,405)
-static A68_161   XSGAOSF = {"Any queries, comments or suggestions relating to this Software should be addressed to the ELLA office at DRA Malvern:"}; 
-A_GISVEC(A68_VC ,YSGAOSF,XSGAOSF,117)
-static A68_162   DTGAOSF = {"Email:  ella@dra.hmg.gb"}; 
-A_GISVEC(A68_VC ,ETGAOSF,DTGAOSF,23)
-static A68_163   JTGAOSF = {"The ELLA Office"}; 
-A_GISVEC(A68_VC ,KTGAOSF,JTGAOSF,15)
-static A68_164   PTGAOSF = {"DRA Malvern"}; 
-A_GISVEC(A68_VC ,QTGAOSF,PTGAOSF,11)
-static A68_163   VTGAOSF = {"St Andrews Road"}; 
-A_GISVEC(A68_VC ,WTGAOSF,VTGAOSF,15)
-static A68_165   BUGAOSF = {"Great Malvern"}; 
-A_GISVEC(A68_VC ,CUGAOSF,BUGAOSF,13)
-static A68_166   HUGAOSF = {"Worcestershire"}; 
-A_GISVEC(A68_VC ,IUGAOSF,HUGAOSF,14)
-static A68_165   NUGAOSF = {"WR14 3PS,  UK"}; 
-A_GISVEC(A68_VC ,OUGAOSF,NUGAOSF,13)
+A_GISVEC(A68_VC ,YRGAOSF,XRGAOSF,405)
+static A68_160   DSGAOSF = {"Any queries, comments or suggestions relating to this Software should be addressed to the ELLA office at DRA Malvern:"}; 
+A_GISVEC(A68_VC ,ESGAOSF,DSGAOSF,117)
+static A68_161   JSGAOSF = {"Email:  ella@dra.hmg.gb"}; 
+A_GISVEC(A68_VC ,KSGAOSF,JSGAOSF,23)
+static A68_162   PSGAOSF = {"The ELLA Office"}; 
+A_GISVEC(A68_VC ,QSGAOSF,PSGAOSF,15)
+static A68_163   VSGAOSF = {"DRA Malvern"}; 
+A_GISVEC(A68_VC ,WSGAOSF,VSGAOSF,11)
+static A68_162   BTGAOSF = {"St Andrews Road"}; 
+A_GISVEC(A68_VC ,CTGAOSF,BTGAOSF,15)
+static A68_164   HTGAOSF = {"Great Malvern"}; 
+A_GISVEC(A68_VC ,ITGAOSF,HTGAOSF,13)
+static A68_165   NTGAOSF = {"Worcestershire"}; 
+A_GISVEC(A68_VC ,OTGAOSF,NTGAOSF,14)
+static A68_164   TTGAOSF = {"WR14 3PS,  UK"}; 
+A_GISVEC(A68_VC ,UTGAOSF,TTGAOSF,13)
 
-A_STATIC A68_VOID  PQGAOSF_title(A68_INT  Mode);
+A_STATIC A68_VOID  VPGAOSF_title(A68_INT  Mode);
 
-A_STATIC A68_VOID  SQGAOSF_centred(A68_VC  Str);
+A_STATIC A68_VOID  YPGAOSF_centred(A68_VC  Str);
 
-A68_VOID  VUGAOSF_print_title(A68_BOOL  Silent);
+A68_VOID  BUGAOSF_print_title(A68_BOOL  Silent);
 
-A68_VOID  XUGAOSF_print_issue(void);
+A68_VOID  DUGAOSF_print_issue(void);
 
-A_STATIC A68_VOID  SQGAOSF_centred(A68_VC  Str)
+A_STATIC A68_VOID  YPGAOSF_centred(A68_VC  Str)
 { 
-A68_63  TQGAOSF;  /* avoid structure result */
-A68_52  UQGAOSF;  /* OPERATORS - mode -> union mode */
-A68_85  VQGAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_147  WQGAOSF;  /* collateral clause result */
-A68_52  XQGAOSF;  /* OPERATORS - mode -> union mode */
-A68_52  YQGAOSF;  /* OPERATORS - mode -> union mode */
-A68_56  ZQGAOSF;  /* procedure value */
-A68_85  ARGAOSF;  /* OPERATORS - istruct -> vector */
+A68_63  ZPGAOSF;  /* avoid structure result */
+A68_52  AQGAOSF;  /* OPERATORS - mode -> union mode */
+A68_85  BQGAOSF;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_146  CQGAOSF;  /* collateral clause result */
+A68_52  DQGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  EQGAOSF;  /* OPERATORS - mode -> union mode */
+A68_56  FQGAOSF;  /* procedure value */
+A68_85  GQGAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(centred);
  /* line 48: */
  /* line 49: */
 { 
  /* line 50: */
-if ( (Str.upb<((*(&(XREAOSF_screen->Width)))-1)) )
+if ( (Str.upb<((*(&(DREAOSF_screen->Width)))-1)) )
 { 
  /* line 51: */
-ATDAOSF_spaces( (((*(&(XREAOSF_screen->Width)))-Str.upb)/2), &TQGAOSF );
-EZDAOSF_put(XREAOSF_screen, A_HVEC(VQGAOSF,A_UNITE(UQGAOSF,mode19,19,TQGAOSF),A68_52 ));
+GSDAOSF_spaces( (((*(&(DREAOSF_screen->Width)))-Str.upb)/2), &ZPGAOSF );
+KYDAOSF_put(DREAOSF_screen, A_HVEC(BQGAOSF,A_UNITE(AQGAOSF,mode19,19,ZPGAOSF),A68_52 ));
 } 
  /* line 52: */
-WQGAOSF.data[0] = A_UNITE(XQGAOSF,mode7,7,Str);
-ZQGAOSF.fn.fn_global = JLDAOSF_newline;
-ZQGAOSF.nonlocals = A68_NIL;
-WQGAOSF.data[1] = A_UNITE(YQGAOSF,mode12,12,ZQGAOSF);
+CQGAOSF.data[0] = A_UNITE(DQGAOSF,mode7,7,Str);
+FQGAOSF.fn.fn_global = PKDAOSF_newline;
+FQGAOSF.nonlocals = A68_NIL;
+CQGAOSF.data[1] = A_UNITE(EQGAOSF,mode12,12,FQGAOSF);
  /* line 53: */
-EZDAOSF_put(XREAOSF_screen, A_HISVEC(ARGAOSF,WQGAOSF,2,A68_52 ));
+KYDAOSF_put(DREAOSF_screen, A_HISVEC(GQGAOSF,CQGAOSF,2,A68_52 ));
 } 
 A_PROC_EXIT(centred);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  PQGAOSF_title(A68_INT  Mode)
+A_STATIC A68_VOID  VPGAOSF_title(A68_INT  Mode)
 { 
+A68_VC  NQGAOSF;  /* avoid structure result */
+A68_BOOL  OQGAOSF;  /* optbool result */
+A68_133  PQGAOSF;  /* avoid structure result */
+A68_151  QQGAOSF;  /* collateral clause result */
+A68_133  TQGAOSF;  /* avoid structure result */
+A68_46  UQGAOSF;  /* OPERATORS - istruct -> vector */
+A68_VC  VQGAOSF;  /* avoid structure result */
+A68_VC  YQGAOSF_study;
+A68_155  BRGAOSF;  /* collateral clause result */
+A68_46  GRGAOSF;  /* OPERATORS - istruct -> vector */
 A68_VC  HRGAOSF;  /* avoid structure result */
-A68_BOOL  IRGAOSF;  /* optbool result */
-A68_134  JRGAOSF;  /* avoid structure result */
-A68_152  KRGAOSF;  /* collateral clause result */
-A68_134  NRGAOSF;  /* avoid structure result */
-A68_46  ORGAOSF;  /* OPERATORS - istruct -> vector */
+A68_166  IRGAOSF;  /* collateral clause result */
+A68_52  JRGAOSF;  /* OPERATORS - mode -> union mode */
+A68_56  KRGAOSF;  /* procedure value */
+A68_158  LRGAOSF;  /* collateral clause result */
+A68_VC  MRGAOSF;  /* avoid structure result */
 A68_VC  PRGAOSF;  /* avoid structure result */
-A68_VC  SRGAOSF_study;
-A68_156  VRGAOSF;  /* collateral clause result */
-A68_46  ASGAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  BSGAOSF;  /* avoid structure result */
-A68_167  CSGAOSF;  /* collateral clause result */
-A68_52  DSGAOSF;  /* OPERATORS - mode -> union mode */
-A68_56  ESGAOSF;  /* procedure value */
-A68_159  FSGAOSF;  /* collateral clause result */
-A68_VC  GSGAOSF;  /* avoid structure result */
-A68_VC  JSGAOSF;  /* avoid structure result */
-A68_46  MSGAOSF;  /* OPERATORS - istruct -> vector */
-A68_VC  NSGAOSF;  /* avoid structure result */
+A68_46  SRGAOSF;  /* OPERATORS - istruct -> vector */
+A68_VC  TRGAOSF;  /* avoid structure result */
+A68_52  URGAOSF;  /* OPERATORS - mode -> union mode */
+A68_64  VRGAOSF;  /* avoid structure result */
+A68_52  WRGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  ZRGAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  ASGAOSF;  /* YIELD */
+A68_64  BSGAOSF;  /* avoid structure result */
+A68_52  CSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  FSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  GSGAOSF;  /* YIELD */
+A68_64  HSGAOSF;  /* avoid structure result */
+A68_52  ISGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  LSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  MSGAOSF;  /* YIELD */
+A68_64  NSGAOSF;  /* avoid structure result */
 A68_52  OSGAOSF;  /* OPERATORS - mode -> union mode */
-A68_64  PSGAOSF;  /* avoid structure result */
-A68_52  QSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_52  RSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  SSGAOSF;  /* YIELD */
 A68_52  TSGAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  USGAOSF;  /* YIELD */
-A68_64  VSGAOSF;  /* avoid structure result */
-A68_52  WSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_56  USGAOSF;  /* procedure value */
+A68_52  XSGAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  YSGAOSF;  /* YIELD */
 A68_52  ZSGAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  ATGAOSF;  /* YIELD */
-A68_64  BTGAOSF;  /* avoid structure result */
-A68_52  CTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_56  ATGAOSF;  /* procedure value */
+A68_52  DTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  ETGAOSF;  /* YIELD */
 A68_52  FTGAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  GTGAOSF;  /* YIELD */
-A68_64  HTGAOSF;  /* avoid structure result */
-A68_52  ITGAOSF;  /* OPERATORS - mode -> union mode */
+A68_56  GTGAOSF;  /* procedure value */
+A68_52  JTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  KTGAOSF;  /* YIELD */
 A68_52  LTGAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  MTGAOSF;  /* YIELD */
-A68_52  NTGAOSF;  /* OPERATORS - mode -> union mode */
-A68_56  OTGAOSF;  /* procedure value */
+A68_56  MTGAOSF;  /* procedure value */
+A68_52  PTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  QTGAOSF;  /* YIELD */
 A68_52  RTGAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  STGAOSF;  /* YIELD */
-A68_52  TTGAOSF;  /* OPERATORS - mode -> union mode */
-A68_56  UTGAOSF;  /* procedure value */
-A68_52  XTGAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  YTGAOSF;  /* YIELD */
-A68_52  ZTGAOSF;  /* OPERATORS - mode -> union mode */
-A68_56  AUGAOSF;  /* procedure value */
-A68_52  DUGAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  EUGAOSF;  /* YIELD */
-A68_52  FUGAOSF;  /* OPERATORS - mode -> union mode */
-A68_56  GUGAOSF;  /* procedure value */
-A68_52  JUGAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  KUGAOSF;  /* YIELD */
-A68_52  LUGAOSF;  /* OPERATORS - mode -> union mode */
-A68_56  MUGAOSF;  /* procedure value */
-A68_52  PUGAOSF;  /* OPERATORS - mode -> union mode */
-A68_VC  QUGAOSF;  /* YIELD */
-A68_64  RUGAOSF;  /* avoid structure result */
-A68_52  SUGAOSF;  /* OPERATORS - mode -> union mode */
-A68_85  TUGAOSF;  /* OPERATORS - istruct -> vector */
+A68_56  STGAOSF;  /* procedure value */
+A68_52  VTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_VC  WTGAOSF;  /* YIELD */
+A68_64  XTGAOSF;  /* avoid structure result */
+A68_52  YTGAOSF;  /* OPERATORS - mode -> union mode */
+A68_85  ZTGAOSF;  /* OPERATORS - istruct -> vector */
 A_PROC_ENTRY(title);
  /* line 46: */
  /* line 47: */
@@ -773,143 +770,143 @@ A_PROC_ENTRY(title);
  /* line 56: */
 if ( (Mode!=2) )
 { 
-JLDAOSF_newline(XREAOSF_screen);
+PKDAOSF_newline(DREAOSF_screen);
  /* line 57: */
-SQGAOSF_centred(CRGAOSF);
+YPGAOSF_centred(IQGAOSF);
  /* line 58: */
-SQGAOSF_centred(ERGAOSF);
+YPGAOSF_centred(KQGAOSF);
  /* line 59: */
-SQGAOSF_centred(GRGAOSF);
+YPGAOSF_centred(MQGAOSF);
  /* line 60: */
-MSEAOSF_give_version(  &HRGAOSF );
-SQGAOSF_centred(HRGAOSF);
+SREAOSF_give_version(  &NQGAOSF );
+YPGAOSF_centred(NQGAOSF);
  /* line 61: */
  /* line 62: */
-JLDAOSF_newline(XREAOSF_screen);
+PKDAOSF_newline(DREAOSF_screen);
 } 
  /* line 65: */
-IRGAOSF = (Mode==3);
-if ( IRGAOSF )
+OQGAOSF = (Mode==3);
+if ( OQGAOSF )
 { /* line 66: */
-JSEAOSF_version(  &JRGAOSF );
-IRGAOSF = (JRGAOSF.Msg.upb>0);
+PREAOSF_version(  &PQGAOSF );
+OQGAOSF = (PQGAOSF.Msg.upb>0);
 }
-if ( IRGAOSF )
+if ( OQGAOSF )
 { 
-KRGAOSF.data[0] = MRGAOSF;
-JSEAOSF_version(  &NRGAOSF );
-KRGAOSF.data[1] = NRGAOSF.Msg;
-JDAAOSF_concat( A_HISVEC(ORGAOSF,KRGAOSF,2,A68_VC ), &PRGAOSF );
-SQGAOSF_centred(PRGAOSF);
+QQGAOSF.data[0] = SQGAOSF;
+PREAOSF_version(  &TQGAOSF );
+QQGAOSF.data[1] = TQGAOSF.Msg;
+JDAAOSF_concat( A_HISVEC(UQGAOSF,QQGAOSF,2,A68_VC ), &VQGAOSF );
+YPGAOSF_centred(VQGAOSF);
  /* line 67: */
  /* line 68: */
-JLDAOSF_newline(XREAOSF_screen);
+PKDAOSF_newline(DREAOSF_screen);
 } 
  /* line 70: */
-SRGAOSF_study = RRGAOSF;
+YQGAOSF_study = XQGAOSF;
  /* line 72: */
  /* line 73: */
 if ( (Mode==1) )
 { 
-SQGAOSF_centred(SRGAOSF_study);
+YPGAOSF_centred(YQGAOSF_study);
  /* line 74: */
-SQGAOSF_centred(URGAOSF);
+YPGAOSF_centred(ARGAOSF);
  /* line 75: */
  /* line 76: */
-JLDAOSF_newline(XREAOSF_screen);
+PKDAOSF_newline(DREAOSF_screen);
 } 
 else
 { 
  /* line 77: */
 if ( (Mode==3) )
 { 
-VRGAOSF.data[0] = XRGAOSF;
-VRGAOSF.data[1] = SRGAOSF_study;
-VRGAOSF.data[2] = ZRGAOSF;
-JDAAOSF_concat( A_HISVEC(ASGAOSF,VRGAOSF,3,A68_VC ), &BSGAOSF );
-SQGAOSF_centred(BSGAOSF);
+BRGAOSF.data[0] = DRGAOSF;
+BRGAOSF.data[1] = YQGAOSF_study;
+BRGAOSF.data[2] = FRGAOSF;
+JDAAOSF_concat( A_HISVEC(GRGAOSF,BRGAOSF,3,A68_VC ), &HRGAOSF );
+YPGAOSF_centred(HRGAOSF);
  /* line 78: */
  /* line 79: */
  /* line 80: */
-ESGAOSF.fn.fn_global = JLDAOSF_newline;
-ESGAOSF.nonlocals = A68_NIL;
-CSGAOSF.data[0] = A_UNITE(DSGAOSF,mode12,12,ESGAOSF);
+KRGAOSF.fn.fn_global = PKDAOSF_newline;
+KRGAOSF.nonlocals = A68_NIL;
+IRGAOSF.data[0] = A_UNITE(JRGAOSF,mode12,12,KRGAOSF);
  /* line 81: */
-HSEAOSF_facility(  &GSGAOSF );
-FSGAOSF.data[0] = GSGAOSF;
+NREAOSF_facility(  &MRGAOSF );
+LRGAOSF.data[0] = MRGAOSF;
  /* line 82: */
-FSGAOSF.data[1] = ISGAOSF;
+LRGAOSF.data[1] = ORGAOSF;
  /* line 84: */
-HSEAOSF_facility(  &JSGAOSF );
-FSGAOSF.data[2] = JSGAOSF;
+NREAOSF_facility(  &PRGAOSF );
+LRGAOSF.data[2] = PRGAOSF;
  /* line 85: */
  /* line 86: */
-FSGAOSF.data[3] = LSGAOSF;
-JDAAOSF_concat( A_HISVEC(MSGAOSF,FSGAOSF,4,A68_VC ), &NSGAOSF );
-CSGAOSF.data[1] = A_UNITE(OSGAOSF,mode7,7,NSGAOSF);
+LRGAOSF.data[3] = RRGAOSF;
+JDAAOSF_concat( A_HISVEC(SRGAOSF,LRGAOSF,4,A68_VC ), &TRGAOSF );
+IRGAOSF.data[1] = A_UNITE(URGAOSF,mode7,7,TRGAOSF);
  /* line 88: */
-FTDAOSF_lines( 2, &PSGAOSF );
-CSGAOSF.data[2] = A_UNITE(QSGAOSF,mode20,20,PSGAOSF);
+LSDAOSF_lines( 2, &VRGAOSF );
+IRGAOSF.data[2] = A_UNITE(WRGAOSF,mode20,20,VRGAOSF);
  /* line 89: */
  /* line 90: */
  /* line 91: */
  /* line 92: */
  /* line 93: */
  /* line 94: */
-USGAOSF = SSGAOSF ;
-CSGAOSF.data[3] = A_UNITE(TSGAOSF,mode7,7,USGAOSF);
+ASGAOSF = YRGAOSF ;
+IRGAOSF.data[3] = A_UNITE(ZRGAOSF,mode7,7,ASGAOSF);
  /* line 96: */
-FTDAOSF_lines( 2, &VSGAOSF );
-CSGAOSF.data[4] = A_UNITE(WSGAOSF,mode20,20,VSGAOSF);
+LSDAOSF_lines( 2, &BSGAOSF );
+IRGAOSF.data[4] = A_UNITE(CSGAOSF,mode20,20,BSGAOSF);
  /* line 97: */
-ATGAOSF = YSGAOSF ;
-CSGAOSF.data[5] = A_UNITE(ZSGAOSF,mode7,7,ATGAOSF);
+GSGAOSF = ESGAOSF ;
+IRGAOSF.data[5] = A_UNITE(FSGAOSF,mode7,7,GSGAOSF);
  /* line 98: */
-FTDAOSF_lines( 2, &BTGAOSF );
-CSGAOSF.data[6] = A_UNITE(CTGAOSF,mode20,20,BTGAOSF);
-GTGAOSF = ETGAOSF ;
-CSGAOSF.data[7] = A_UNITE(FTGAOSF,mode7,7,GTGAOSF);
+LSDAOSF_lines( 2, &HSGAOSF );
+IRGAOSF.data[6] = A_UNITE(ISGAOSF,mode20,20,HSGAOSF);
+MSGAOSF = KSGAOSF ;
+IRGAOSF.data[7] = A_UNITE(LSGAOSF,mode7,7,MSGAOSF);
  /* line 99: */
-FTDAOSF_lines( 2, &HTGAOSF );
-CSGAOSF.data[8] = A_UNITE(ITGAOSF,mode20,20,HTGAOSF);
-MTGAOSF = KTGAOSF ;
-CSGAOSF.data[9] = A_UNITE(LTGAOSF,mode7,7,MTGAOSF);
+LSDAOSF_lines( 2, &NSGAOSF );
+IRGAOSF.data[8] = A_UNITE(OSGAOSF,mode20,20,NSGAOSF);
+SSGAOSF = QSGAOSF ;
+IRGAOSF.data[9] = A_UNITE(RSGAOSF,mode7,7,SSGAOSF);
  /* line 100: */
-OTGAOSF.fn.fn_global = JLDAOSF_newline;
-OTGAOSF.nonlocals = A68_NIL;
-CSGAOSF.data[10] = A_UNITE(NTGAOSF,mode12,12,OTGAOSF);
-STGAOSF = QTGAOSF ;
-CSGAOSF.data[11] = A_UNITE(RTGAOSF,mode7,7,STGAOSF);
+USGAOSF.fn.fn_global = PKDAOSF_newline;
+USGAOSF.nonlocals = A68_NIL;
+IRGAOSF.data[10] = A_UNITE(TSGAOSF,mode12,12,USGAOSF);
+YSGAOSF = WSGAOSF ;
+IRGAOSF.data[11] = A_UNITE(XSGAOSF,mode7,7,YSGAOSF);
  /* line 101: */
-UTGAOSF.fn.fn_global = JLDAOSF_newline;
-UTGAOSF.nonlocals = A68_NIL;
-CSGAOSF.data[12] = A_UNITE(TTGAOSF,mode12,12,UTGAOSF);
-YTGAOSF = WTGAOSF ;
-CSGAOSF.data[13] = A_UNITE(XTGAOSF,mode7,7,YTGAOSF);
+ATGAOSF.fn.fn_global = PKDAOSF_newline;
+ATGAOSF.nonlocals = A68_NIL;
+IRGAOSF.data[12] = A_UNITE(ZSGAOSF,mode12,12,ATGAOSF);
+ETGAOSF = CTGAOSF ;
+IRGAOSF.data[13] = A_UNITE(DTGAOSF,mode7,7,ETGAOSF);
  /* line 102: */
-AUGAOSF.fn.fn_global = JLDAOSF_newline;
-AUGAOSF.nonlocals = A68_NIL;
-CSGAOSF.data[14] = A_UNITE(ZTGAOSF,mode12,12,AUGAOSF);
-EUGAOSF = CUGAOSF ;
-CSGAOSF.data[15] = A_UNITE(DUGAOSF,mode7,7,EUGAOSF);
+GTGAOSF.fn.fn_global = PKDAOSF_newline;
+GTGAOSF.nonlocals = A68_NIL;
+IRGAOSF.data[14] = A_UNITE(FTGAOSF,mode12,12,GTGAOSF);
+KTGAOSF = ITGAOSF ;
+IRGAOSF.data[15] = A_UNITE(JTGAOSF,mode7,7,KTGAOSF);
  /* line 103: */
-GUGAOSF.fn.fn_global = JLDAOSF_newline;
-GUGAOSF.nonlocals = A68_NIL;
-CSGAOSF.data[16] = A_UNITE(FUGAOSF,mode12,12,GUGAOSF);
-KUGAOSF = IUGAOSF ;
-CSGAOSF.data[17] = A_UNITE(JUGAOSF,mode7,7,KUGAOSF);
+MTGAOSF.fn.fn_global = PKDAOSF_newline;
+MTGAOSF.nonlocals = A68_NIL;
+IRGAOSF.data[16] = A_UNITE(LTGAOSF,mode12,12,MTGAOSF);
+QTGAOSF = OTGAOSF ;
+IRGAOSF.data[17] = A_UNITE(PTGAOSF,mode7,7,QTGAOSF);
  /* line 104: */
-MUGAOSF.fn.fn_global = JLDAOSF_newline;
-MUGAOSF.nonlocals = A68_NIL;
-CSGAOSF.data[18] = A_UNITE(LUGAOSF,mode12,12,MUGAOSF);
-QUGAOSF = OUGAOSF ;
-CSGAOSF.data[19] = A_UNITE(PUGAOSF,mode7,7,QUGAOSF);
+STGAOSF.fn.fn_global = PKDAOSF_newline;
+STGAOSF.nonlocals = A68_NIL;
+IRGAOSF.data[18] = A_UNITE(RTGAOSF,mode12,12,STGAOSF);
+WTGAOSF = UTGAOSF ;
+IRGAOSF.data[19] = A_UNITE(VTGAOSF,mode7,7,WTGAOSF);
  /* line 105: */
-FTDAOSF_lines( 2, &RUGAOSF );
-CSGAOSF.data[20] = A_UNITE(SUGAOSF,mode20,20,RUGAOSF);
+LSDAOSF_lines( 2, &XTGAOSF );
+IRGAOSF.data[20] = A_UNITE(YTGAOSF,mode20,20,XTGAOSF);
  /* line 106: */
  /* line 107: */
-EZDAOSF_put(XREAOSF_screen, A_HISVEC(TUGAOSF,CSGAOSF,21,A68_52 ));
+KYDAOSF_put(DREAOSF_screen, A_HISVEC(ZTGAOSF,IRGAOSF,21,A68_52 ));
 } 
 } 
 } 
@@ -918,62 +915,62 @@ return;
 } 
 #undef NL
 
-A68_VOID  VUGAOSF_print_title(A68_BOOL  Silent)
+A68_VOID  BUGAOSF_print_title(A68_BOOL  Silent)
 { 
-A68_INT  WUGAOSF;  /* clause result */
+A68_INT  CUGAOSF;  /* clause result */
 A_PROC_ENTRY(print_title);
  /* line 110: */
 if ( Silent )
 { 
-WUGAOSF = 2;
+CUGAOSF = 2;
 } 
 else
 { 
-WUGAOSF = 1;
+CUGAOSF = 1;
 } 
-PQGAOSF_title(WUGAOSF);
+VPGAOSF_title(CUGAOSF);
 A_PROC_EXIT(print_title);
 return;
 } 
 #undef NL
 
-A68_VOID  XUGAOSF_print_issue(void)
+A68_VOID  DUGAOSF_print_issue(void)
 { 
 A_PROC_ENTRY(print_issue);
  /* line 115: */
-PQGAOSF_title(3);
+VPGAOSF_title(3);
 A_PROC_EXIT(print_issue);
 return;
 } 
 #undef NL
  /* line 1: */
  /* line 3: */
-void JQGAOSF(void)   /* initialise DECS printissue */
+void PPGAOSF(void)   /* initialise DECS printissue */
 { 
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","printissue.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/osinterface.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/putstrings.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","printissue.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/osinterface.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/putstrings.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 BAAALIB();   /* USE a68config */
-CQEAOSF();   /* USE osinterface */
-KNDAOSF();   /* USE putstrings */
+IPEAOSF();   /* USE osinterface */
+QMDAOSF();   /* USE putstrings */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/liba68prel/printissue.a68";
-A_config.translation_time = "Mon Jan 28 20:24:32 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/printissue.a68";
+A_config.translation_time = "Wed Apr 21 16:34:02 2021";
 A_config.ctrans_version = "Ctrans_34.6";
-A_config.name_seed = "IQGAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.name_seed = "OPGAOSF (from seed file) ";
+A_config.spec_change_time = "Wed Apr 21 16:34:02 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS printissue);
-UEAALIB_a68config(LGAALIB_configinfo, NQGAOSF);
+UEAALIB_a68config(LGAALIB_configinfo, TPGAOSF);
  /* line 45: */
  /* line 109: */
  /* line 112: */

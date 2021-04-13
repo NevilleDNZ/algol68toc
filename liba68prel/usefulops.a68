@@ -183,7 +183,7 @@ BEGIN
           "  A_int_INT(sprintf(A_VC_charptr(s),A_VC_charptr(format),A_INT_int(p1),A_LINT_long(p2)))";
 
   HEAP VECTOR [(width <= 0 | 25 | width + 10)] CHAR result;
-  VOID( sprintf(result, "%*ld"2r"0", width, val));
+  VOID( sprintf(result, "%*lld"2r"0", width, val));
   CSTRINGTORVC CPTRTOCSTRING VCTOCHARPTR result
 END;
 
@@ -196,7 +196,7 @@ BEGIN
           "  A_int_INT(sprintf(A_VC_charptr(s),A_VC_charptr(format),A_INT_int(p1),A_LBITS_ulong(p2)))";
 
   HEAP VECTOR [(width <= 0 | 25 | width + 10)] CHAR result;
-  VOID( sprintf(result, "%.*lx"2r"0", width, b));
+  VOID( sprintf(result, "%.*llx"2r"0", width, b));
 
   CSTRINGTORVC CPTRTOCSTRING VCTOCHARPTR result
 END;

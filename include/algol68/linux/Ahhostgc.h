@@ -60,10 +60,27 @@ extern void *Agc_main_frame;      /* from Ahcollect.c */
  * Added following define from conversation with Greg Nunan
  * <Greg.Nunan@motionmedia.co.uk>
  */
-#define INIT_STATIC_AREA(area) \
+
+/*
+ * First, see if we are pretending to be Linux on a Mac
+ */
+
+#if defined(__MACH__)
+#include <mach-o/getsect.h>
+
+#define INIT_STATIC_AREA(area)						\
+  { (area).addr = (void *)get_etext();					\
+    (area).size = (unsigned long)get_edata() - (unsigned long)get_etext(); }
+
+#else
+
+#define INIT_STATIC_AREA(area)	     \
     { extern int __data_start, _end; \
       (area).addr = &__data_start; \
-      (area).size = (int)&_end - (int)&__data_start; }
+      (area).size = (unsigned long)&_end - (unsigned long)&__data_start; }
+
+#endif
+
 /*
  * This comment by SL/PE61-10-15
  *
