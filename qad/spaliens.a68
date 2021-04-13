@@ -127,7 +127,7 @@ INT  sighup    = ALIEN "SIGHUP"  "#include <signal.h>",
      sigpipe   = ALIEN "SIGPIPE" "/**/",
      sigalrm   = ALIEN "SIGALRM" "/**/",
      sigterm   = ALIEN "SIGTERM" "/**/",
-     sigstkflt = ALIEN "SIGSTKFLT" "/**/",
+     sigstkflt = ALIEN "SIGSTKFLT" "#if !defined(SIGSTKFLT)" "#define SIGSTKFLT 32" "#endif" "/**/",
      sigchld   = ALIEN "SIGCHLD" "/**/",
      sigcont   = ALIEN "SIGCONT" "/**/",
      sigstop   = ALIEN "SIGSTOP" "/**/",
@@ -141,7 +141,7 @@ INT  sighup    = ALIEN "SIGHUP"  "#include <signal.h>",
      sigprof   = ALIEN "SIGPROF" "/**/",
      sigwinch  = ALIEN "SIGWINCH" "/**/",
      sigio     = ALIEN "SIGIO"   "/**/",
-     sigpwr    = ALIEN "SIGPWR"  "/**/";
+     sigpwr    = ALIEN "SIGPWR"  "#if !defined(SIGPWR)" "#define SIGPWR 33" "#endif" "/**/";
 INT
    bytes per bits = ALIEN "BYTESPERBITS"
    "#define BYTESPERBITS A_size_t_INT(sizeof(A68_INT))";
@@ -277,7 +277,11 @@ PROC(CPTR)INT
 
 PROC(CPTR,CSTR)INT
    linux on exit = ALIEN "ON_EXIT"
-   "#define ON_EXIT(p,a) on_exit((void *)p,(void *)a)"; #0=success, -1=failure#
+   "#if defined(__MACH__)"
+   "#define ON_EXIT(p,a) (0)" #0=success, -1=failure#
+   "#else"
+   "#define ON_EXIT(p,a) on_exit((void *)p,(void *)a)" #0=success, -1=failure#
+   "#endif";
 
 PROC(INT,CCHARPTR)INT
    linux tc get attr = ALIEN "TCGETATTR"

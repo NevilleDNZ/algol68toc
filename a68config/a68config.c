@@ -76,33 +76,33 @@ A_PROCEDURE(A68_VOID ,A68t56,(A68_VC ,A68_VC ),(A68_VC ,A68_VC ,void *));
 typedef struct A68t56  A68_56 ;    /* PROC(MODE26,MODE26) VOID */
 A_ISTRUCT(A68_CHAR ,4,A68t57);
 typedef struct A68t57  A68_57 ;    /* STRUCT 4 CHAR */
-static A68_31   CAAALIB = {"$Id: a68config.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
-A_GISVEC(A68_VC ,DAAALIB,CAAALIB,59)
-static A68_VC  EAAALIB_cfs;
+static A68_31   EAAALIB = {"$Id: a68config.a68,v 1.1.1.1 2001-05-07 10:16:10 sian Exp $"}; 
+A_GISVEC(A68_VC ,FAAALIB,EAAALIB,59)
+static A68_VC  GAAALIB_cfs;
 A68_33  HAAALIB_anonymous;
 A68_34  XAAALIB_makervc;
-#define WAAALIB_nilconfigdata (A68_32 *)A68_NIL
-static A68_37   YAAALIB = {"Start of the ALGOL68 RS Module chain - where a Module has been compiled using \"Ctrans\" the final three fields are the Ctrans version number, the seed for the unique name prefix for ALGOL68 identifiers and the translation date.\012"}; 
-A_GISVEC(A68_VC ,ZAAALIB,YAAALIB,227)
-static A68_32  BBAALIB_configdata;
-static A68_32 ** CBAALIB_tail;
-static A68_38  FBAALIB_show_proc;
-static A68_40   IBAALIB = {"Initialisation sequence - configuration information:"}; 
-A_GISVEC(A68_VC ,JBAALIB,IBAALIB,52)
+#define BBAALIB_nilconfigdata (A68_32 *)A68_NIL
+static A68_37   DBAALIB = {"Start of the ALGOL68 RS Module chain - where a Module has been compiled using \"Ctrans\" the final three fields are the Ctrans version number, the seed for the unique name prefix for ALGOL68 identifiers and the translation date.\012"}; 
+A_GISVEC(A68_VC ,EBAALIB,DBAALIB,227)
+static A68_32  GBAALIB_configdata;
+static A68_32 ** HBAALIB_tail;
+static A68_38  KBAALIB_show_proc;
+static A68_40   OBAALIB = {"Initialisation sequence - configuration information:"}; 
+A_GISVEC(A68_VC ,PBAALIB,OBAALIB,52)
 #include <string.h>
 #define STRLEN(cp) (A68_INT)(strlen((char *) cp))
 
-#define JCAALIB_strlen STRLEN
-static A68_50   TCAALIB = {"Ctrans_"}; 
-A_GISVEC(A68_VC ,VCAALIB,TCAALIB,7)
-static A68_53   TDAALIB = {"  "}; 
-A_GISVEC(A68_VC ,UDAALIB,TDAALIB,2)
-static A68_53   IEAALIB = {"  "}; 
-A_GISVEC(A68_VC ,JEAALIB,IEAALIB,2)
-static A68_57   QEAALIB = {"$Id:"}; 
-A_GISVEC(A68_VC ,SEAALIB,QEAALIB,4)
-static A68_57   EFAALIB = {"RSRE"}; 
-A_GISVEC(A68_VC ,GFAALIB,EFAALIB,4)
+#define PCAALIB_strlen STRLEN
+static A68_50   ZCAALIB = {"Ctrans_"}; 
+A_GISVEC(A68_VC ,BDAALIB,ZCAALIB,7)
+static A68_53   ZDAALIB = {"  "}; 
+A_GISVEC(A68_VC ,AEAALIB,ZDAALIB,2)
+static A68_53   OEAALIB = {"  "}; 
+A_GISVEC(A68_VC ,PEAALIB,OEAALIB,2)
+static A68_57   XEAALIB = {"$Id:"}; 
+A_GISVEC(A68_VC ,ZEAALIB,XEAALIB,4)
+static A68_57   LFAALIB = {"RSRE"}; 
+A_GISVEC(A68_VC ,NFAALIB,LFAALIB,4)
 static A68_VC  A_configinfo;
 /* A cheat - pass a REF through the DECS Module restriction via STR */
 #define ACONFIG ( A_configinfo.data = (A68_CHAR*)(&A_config), \
@@ -111,129 +111,129 @@ static A68_VC  A_configinfo;
 #define LGAALIB_configinfo ACONFIG
 /* configinfo without ACONFIG */
 
-#define DGAALIB_a_configinfo A_configinfo
-#define FGAALIB_configinfo DGAALIB_a_configinfo
+#define MGAALIB_a_configinfo A_configinfo
+#define OGAALIB_configinfo MGAALIB_a_configinfo
 typedef struct   /* env of non-global proc */
 {
 A68_VC  S;
-} PAAALIB_generator;
+} SAAALIB_generator;
 typedef struct   /* env of non-global proc */
 {
-A68_INT * MBAALIB_l;
-} TBAALIB_generator;
+A68_INT * SBAALIB_l;
+} ZBAALIB_generator;
 typedef struct   /* env of non-global proc */
 {
-A68_INT  OEAALIB_top;
+A68_INT  VEAALIB_top;
 A_PAD_INT(PAD_1)
-} WEAALIB_generator;
+} DFAALIB_generator;
 
-A_STATIC A68_VOID  GAAALIB_generator(A68_BOOL  FAAALIB_anonymous, A68_VC  *ReturnedValue);
+A_STATIC A68_VOID  JAAALIB_generator(A68_BOOL  IAAALIB_anonymous, A68_VC  *ReturnedValue);
 
-A_STATIC A68_VOID  LAAALIB_anonymous(A68_VC  S, A68_VC  *ReturnedValue);
+A_STATIC A68_VOID  OAAALIB_anonymous(A68_VC  S, A68_VC  *ReturnedValue);
 
-A_STATIC A68_VOID  OAAALIB_generator(A68_BOOL  MAAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  RAAALIB_generator(A68_BOOL  PAAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals);
 
 A68_VOID  ABAALIB_a68init(A68_35  Init_proc);
 
-A_STATIC A68_VOID  EBAALIB_anonymous(A68_VC  S);
+A_STATIC A68_VOID  JBAALIB_anonymous(A68_VC  S);
 
 A68_VOID  NBAALIB_showa68config(A68_38  Show);
 
-A_STATIC A68_VOID  LBAALIB_concat(A68_41  Strs, A68_VC  *ReturnedValue);
+A_STATIC A68_VOID  RBAALIB_concat(A68_41  Strs, A68_VC  *ReturnedValue);
 
-A_STATIC A68_VOID  SBAALIB_generator(A68_BOOL  QBAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  YBAALIB_generator(A68_BOOL  WBAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals);
 
-A_STATIC A68_VOID  GCAALIB_(A68_VC  Config, A68_43 * Td);
+A_STATIC A68_VOID  MCAALIB_(A68_VC  Config, A68_43 * Td);
 
-A_STATIC A68_VOID  ICAALIB_tostr(A68_CHAR * Cp, A68_VC  *ReturnedValue);
+A_STATIC A68_VOID  OCAALIB_tostr(A68_CHAR * Cp, A68_VC  *ReturnedValue);
 
-A_STATIC A68_VOID  RCAALIB_version(A68_VC  V, A68_VC  *ReturnedValue);
+A_STATIC A68_VOID  XCAALIB_version(A68_VC  V, A68_VC  *ReturnedValue);
 
-A_STATIC A68_VOID  ZCAALIB_time(A68_VC  T, A68_VC  *ReturnedValue);
+A_STATIC A68_VOID  FDAALIB_time(A68_VC  T, A68_VC  *ReturnedValue);
 
-A_STATIC A68_VOID  LDAALIB_seed(A68_VC  S, A68_VC  *ReturnedValue);
+A_STATIC A68_VOID  RDAALIB_seed(A68_VC  S, A68_VC  *ReturnedValue);
 
-A_STATIC A68_VOID  QDAALIB_trans_config(A68_VC  C, A68_VC  S, A68_VC  *ReturnedValue);
+A_STATIC A68_VOID  WDAALIB_trans_config(A68_VC  C, A68_VC  S, A68_VC  *ReturnedValue);
 
 A68_VOID  UEAALIB_a68config(A68_VC  C, A68_VC  S);
 
-A_STATIC A68_VOID  VEAALIB_generator(A68_BOOL  TEAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals);
+A_STATIC A68_VOID  CFAALIB_generator(A68_BOOL  AFAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals);
 
 A68_VOID  JGAALIB_show_a68config(A68_38  Show);
 
-A_STATIC A68_VOID  EGAALIB_init(void);
+A_STATIC A68_VOID  NGAALIB_init(void);
 
-A_STATIC A68_VOID  OAAALIB_generator(A68_BOOL  MAAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals)
-#define NL(x) (((PAAALIB_generator *)NonLocals)->x)
+A_STATIC A68_VOID  RAAALIB_generator(A68_BOOL  PAAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals)
+#define NL(x) (((SAAALIB_generator *)NonLocals)->x)
 { 
-A68_VC  QAAALIB;  /* clause result */
-A68_VC  RAAALIB;  /* OPERATORS - dynamic generator */
+A68_VC  TAAALIB;  /* clause result */
+A68_VC  UAAALIB;  /* OPERATORS - dynamic generator */
 { 
-RAAALIB.upb = NL(S).upb ;
-( MAAALIB_anonymous? A_VLOC(A68_CHAR ,RAAALIB): A_VHEAP(A68_CHAR ,RAAALIB) );
-QAAALIB = RAAALIB;
+UAAALIB.upb = NL(S).upb ;
+( PAAALIB_anonymous? A_VLOC(A68_CHAR ,UAAALIB): A_VHEAP(A68_CHAR ,UAAALIB) );
+TAAALIB = UAAALIB;
 } 
-*ReturnedValue = (QAAALIB);
+*ReturnedValue = (TAAALIB);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  SBAALIB_generator(A68_BOOL  QBAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals)
-#define NL(x) (((TBAALIB_generator *)NonLocals)->x)
+A_STATIC A68_VOID  YBAALIB_generator(A68_BOOL  WBAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals)
+#define NL(x) (((ZBAALIB_generator *)NonLocals)->x)
 { 
-A68_VC  UBAALIB;  /* clause result */
-A68_VC  VBAALIB;  /* OPERATORS - dynamic generator */
+A68_VC  ACAALIB;  /* clause result */
+A68_VC  BCAALIB;  /* OPERATORS - dynamic generator */
 { 
-VBAALIB.upb = (*NL(MBAALIB_l)) ;
-( QBAALIB_anonymous? A_VLOC(A68_CHAR ,VBAALIB): A_VHEAP(A68_CHAR ,VBAALIB) );
-UBAALIB = VBAALIB;
+BCAALIB.upb = (*NL(SBAALIB_l)) ;
+( WBAALIB_anonymous? A_VLOC(A68_CHAR ,BCAALIB): A_VHEAP(A68_CHAR ,BCAALIB) );
+ACAALIB = BCAALIB;
 } 
-*ReturnedValue = (UBAALIB);
+*ReturnedValue = (ACAALIB);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  VEAALIB_generator(A68_BOOL  TEAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals)
-#define NL(x) (((WEAALIB_generator *)NonLocals)->x)
+A_STATIC A68_VOID  CFAALIB_generator(A68_BOOL  AFAALIB_anonymous, A68_VC  *ReturnedValue, void *NonLocals)
+#define NL(x) (((DFAALIB_generator *)NonLocals)->x)
 { 
-A68_VC  XEAALIB;  /* clause result */
-A68_VC  YEAALIB;  /* OPERATORS - dynamic generator */
+A68_VC  EFAALIB;  /* clause result */
+A68_VC  FFAALIB;  /* OPERATORS - dynamic generator */
 { 
-YEAALIB.upb = NL(OEAALIB_top) ;
-( TEAALIB_anonymous? A_VLOC(A68_CHAR ,YEAALIB): A_VHEAP(A68_CHAR ,YEAALIB) );
-XEAALIB = YEAALIB;
+FFAALIB.upb = NL(VEAALIB_top) ;
+( AFAALIB_anonymous? A_VLOC(A68_CHAR ,FFAALIB): A_VHEAP(A68_CHAR ,FFAALIB) );
+EFAALIB = FFAALIB;
 } 
-*ReturnedValue = (XEAALIB);
+*ReturnedValue = (EFAALIB);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  GAAALIB_generator(A68_BOOL  FAAALIB_anonymous, A68_VC  *ReturnedValue)
+A_STATIC A68_VOID  JAAALIB_generator(A68_BOOL  IAAALIB_anonymous, A68_VC  *ReturnedValue)
 { 
-A68_VC  HAAALIB;  /* clause result */
-A68_VC  IAAALIB;  /* OPERATORS - dynamic generator */
+A68_VC  KAAALIB;  /* clause result */
+A68_VC  LAAALIB;  /* OPERATORS - dynamic generator */
 { 
  /* line 58: */
-IAAALIB.upb = 0 ;
-( FAAALIB_anonymous? A_VLOC(A68_CHAR ,IAAALIB): A_VHEAP(A68_CHAR ,IAAALIB) );
-HAAALIB = IAAALIB;
+LAAALIB.upb = 0 ;
+( IAAALIB_anonymous? A_VLOC(A68_CHAR ,LAAALIB): A_VHEAP(A68_CHAR ,LAAALIB) );
+KAAALIB = LAAALIB;
 } 
-*ReturnedValue = (HAAALIB);
+*ReturnedValue = (KAAALIB);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  LAAALIB_anonymous(A68_VC  S, A68_VC  *ReturnedValue)
+A_STATIC A68_VOID  OAAALIB_anonymous(A68_VC  S, A68_VC  *ReturnedValue)
 { 
-A68_33  NAAALIB_generator;   /* proc value of non-global proc */
-A68_VC  SAAALIB;  /* clause result */
-A68_VC  TAAALIB;  /* avoid structure result */
-A_CLOSURE( NAAALIB_generator, OAAALIB_generator, PAAALIB_generator );
-(( PAAALIB_generator * ) ( NAAALIB_generator.nonlocals )) -> S = S;
-A_CALLPROC(NAAALIB_generator,(A68_FALSE, &TAAALIB),(A68_FALSE, &TAAALIB,(NAAALIB_generator).nonlocals));
-A_VASSIGN2(S,TAAALIB,A68_CHAR ) ;
-SAAALIB = TAAALIB;
-*ReturnedValue = (SAAALIB);
+A68_33  QAAALIB_generator;   /* proc value of non-global proc */
+A68_VC  VAAALIB;  /* clause result */
+A68_VC  WAAALIB;  /* avoid structure result */
+A_CLOSURE( QAAALIB_generator, RAAALIB_generator, SAAALIB_generator );
+(( SAAALIB_generator * ) ( QAAALIB_generator.nonlocals )) -> S = S;
+A_CALLPROC(QAAALIB_generator,(A68_FALSE, &WAAALIB),(A68_FALSE, &WAAALIB,(QAAALIB_generator).nonlocals));
+A_VASSIGN2(S,WAAALIB,A68_CHAR ) ;
+VAAALIB = WAAALIB;
+*ReturnedValue = (VAAALIB);
 return;
 } 
 #undef NL
@@ -247,7 +247,7 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  EBAALIB_anonymous(A68_VC  S)
+A_STATIC A68_VOID  JBAALIB_anonymous(A68_VC  S)
 { 
 /*SKIP*/;
 return;
@@ -260,80 +260,80 @@ A_PROC_ENTRY(showa68config);
  /* line 83: */
  /* line 87: */
 { 
-FBAALIB_show_proc = Show;
+KBAALIB_show_proc = Show;
  /* line 88: */
  /* line 89: */
-A_CALLPROC(FBAALIB_show_proc,(JBAALIB),(JBAALIB,(FBAALIB_show_proc).nonlocals));
+A_CALLPROC(KBAALIB_show_proc,(PBAALIB),(PBAALIB,(KBAALIB_show_proc).nonlocals));
 } 
 A_PROC_EXIT(showa68config);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  LBAALIB_concat(A68_41  Strs, A68_VC  *ReturnedValue)
+A_STATIC A68_VOID  RBAALIB_concat(A68_41  Strs, A68_VC  *ReturnedValue)
 { 
-A68_INT  MBAALIB_l;
-A68_VC  NBAALIB_st;
-A68_VC * OBAALIB;  /* forall control - []x */
-A68_INT  PBAALIB;  /* forall loop counter */
-A68_33  RBAALIB_generator;   /* proc value of non-global proc */
-A68_VC  WBAALIB;  /* avoid structure result */
-A68_VC  XBAALIB_ans;
-A68_VC  YBAALIB_str;
-A68_VC * ZBAALIB;  /* forall control - []x */
-A68_INT  ACAALIB;  /* forall loop counter */
-A68_VC  BCAALIB;  /* OPERATORS - trim index */
-A68_VC  CCAALIB;  /* YIELD */
-A68_VC  DCAALIB;  /* clause result */
+A68_INT  SBAALIB_l;
+A68_VC  TBAALIB_st;
+A68_VC * UBAALIB;  /* forall control - []x */
+A68_INT  VBAALIB;  /* forall loop counter */
+A68_33  XBAALIB_generator;   /* proc value of non-global proc */
+A68_VC  CCAALIB;  /* avoid structure result */
+A68_VC  DCAALIB_ans;
+A68_VC  ECAALIB_str;
+A68_VC * FCAALIB;  /* forall control - []x */
+A68_INT  GCAALIB;  /* forall loop counter */
+A68_VC  HCAALIB;  /* OPERATORS - trim index */
+A68_VC  ICAALIB;  /* YIELD */
+A68_VC  JCAALIB;  /* clause result */
 A_PROC_ENTRY(concat);
  /* line 92: */
  /* line 94: */
 { 
-MBAALIB_l = 0;
+SBAALIB_l = 0;
  /* line 95: */
  /* line 96: */
-PBAALIB = Strs.upb -1;
-OBAALIB = Strs.data;
-for (;PBAALIB-- >= 0;
-(OBAALIB++
+VBAALIB = Strs.upb -1;
+UBAALIB = Strs.data;
+for (;VBAALIB-- >= 0;
+(UBAALIB++
 ) )
 {
-NBAALIB_st = *OBAALIB;
-MBAALIB_l+=NBAALIB_st.upb;
+TBAALIB_st = *UBAALIB;
+SBAALIB_l+=TBAALIB_st.upb;
 }
  /* line 97: */
-A_CLOSURE( RBAALIB_generator, SBAALIB_generator, TBAALIB_generator );
-(( TBAALIB_generator * ) ( RBAALIB_generator.nonlocals )) -> MBAALIB_l = (&MBAALIB_l);
-A_CALLPROC(RBAALIB_generator,(A68_FALSE, &WBAALIB),(A68_FALSE, &WBAALIB,(RBAALIB_generator).nonlocals));
-XBAALIB_ans = WBAALIB;
+A_CLOSURE( XBAALIB_generator, YBAALIB_generator, ZBAALIB_generator );
+(( ZBAALIB_generator * ) ( XBAALIB_generator.nonlocals )) -> SBAALIB_l = (&SBAALIB_l);
+A_CALLPROC(XBAALIB_generator,(A68_FALSE, &CCAALIB),(A68_FALSE, &CCAALIB,(XBAALIB_generator).nonlocals));
+DCAALIB_ans = CCAALIB;
  /* line 98: */
-MBAALIB_l = 0;
+SBAALIB_l = 0;
  /* line 99: */
  /* line 100: */
-ACAALIB = Strs.upb -1;
-ZBAALIB = Strs.data;
-for (;ACAALIB-- >= 0;
-(ZBAALIB++
+GCAALIB = Strs.upb -1;
+FCAALIB = Strs.data;
+for (;GCAALIB-- >= 0;
+(FCAALIB++
 ) )
 {
-YBAALIB_str = *ZBAALIB;
-CCAALIB = A_VTRIM(BCAALIB,(XBAALIB_ans),A_VTSCRIPT(&(BCAALIB.upb),(XBAALIB_ans).upb,(MBAALIB_l+1),(MBAALIB_l+YBAALIB_str.upb))) ;
-A_VASSIGN2(YBAALIB_str,CCAALIB,A68_CHAR );
+ECAALIB_str = *FCAALIB;
+ICAALIB = A_VTRIM(HCAALIB,(DCAALIB_ans),A_VTSCRIPT(&(HCAALIB.upb),(DCAALIB_ans).upb,(SBAALIB_l+1),(SBAALIB_l+ECAALIB_str.upb))) ;
+A_VASSIGN2(ECAALIB_str,ICAALIB,A68_CHAR );
  /* line 101: */
  /* line 102: */
-MBAALIB_l+=YBAALIB_str.upb;
+SBAALIB_l+=ECAALIB_str.upb;
 }
  /* line 103: */
  /* line 104: */
-DCAALIB = XBAALIB_ans;
+JCAALIB = DCAALIB_ans;
 } 
 A_PROC_EXIT(concat);
-*ReturnedValue = (DCAALIB);
+*ReturnedValue = (JCAALIB);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  GCAALIB_(A68_VC  Config, A68_43 * Td)
+A_STATIC A68_VOID  MCAALIB_(A68_VC  Config, A68_43 * Td)
 { 
 A_PROC_ENTRY(>>>);
  /* line 113: */
@@ -359,17 +359,17 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  ICAALIB_tostr(A68_CHAR * Cp, A68_VC  *ReturnedValue)
+A_STATIC A68_VOID  OCAALIB_tostr(A68_CHAR * Cp, A68_VC  *ReturnedValue)
 { 
-A68_VC  KCAALIB;  /* clause result */
+A68_VC  QCAALIB;  /* clause result */
 union {  /* BIOP 99 */
 A68_CHAR *  source;
 A68_47 *  destination;
-} LCAALIB; 
-A68_VC  MCAALIB;  /* OPERATORS - istruct -> vector */
-A68_47 * NCAALIB;  /* OPERATORS - istruct -> vector */
-A68_VC  OCAALIB;  /* OPERATORS - trim index */
-A68_VC  PCAALIB;  /* OPERATORS - trim index */
+} RCAALIB; 
+A68_VC  SCAALIB;  /* OPERATORS - istruct -> vector */
+A68_47 * TCAALIB;  /* OPERATORS - istruct -> vector */
+A68_VC  UCAALIB;  /* OPERATORS - trim index */
+A68_VC  VCAALIB;  /* OPERATORS - trim index */
 A_PROC_ENTRY(tostr);
  /* line 123: */
  /* line 125: */
@@ -379,85 +379,85 @@ A_PROC_ENTRY(tostr);
  /* line 128: */
  /* line 129: */
  /* line 130: */
-LCAALIB.source = Cp ;
-NCAALIB = (LCAALIB.destination) ;
-OCAALIB = A_ISVEC(MCAALIB,NCAALIB,1000,A68_CHAR ) ;
-KCAALIB = A_VTRIM(PCAALIB,(OCAALIB),A_VTSCRIPT(&(PCAALIB.upb),(OCAALIB).upb,1,JCAALIB_strlen(Cp)));
+RCAALIB.source = Cp ;
+TCAALIB = (RCAALIB.destination) ;
+UCAALIB = A_ISVEC(SCAALIB,TCAALIB,1000,A68_CHAR ) ;
+QCAALIB = A_VTRIM(VCAALIB,(UCAALIB),A_VTSCRIPT(&(VCAALIB.upb),(UCAALIB).upb,1,PCAALIB_strlen(Cp)));
 } 
 A_PROC_EXIT(tostr);
-*ReturnedValue = (KCAALIB);
+*ReturnedValue = (QCAALIB);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  RCAALIB_version(A68_VC  V, A68_VC  *ReturnedValue)
+A_STATIC A68_VOID  XCAALIB_version(A68_VC  V, A68_VC  *ReturnedValue)
 { 
-A68_BOOL  SCAALIB;  /* optbool result */
-A68_VC  UCAALIB;  /* OPERATORS - trim index */
-A68_VC  WCAALIB;  /* clause result */
-A68_VC  XCAALIB;  /* OPERATORS - trim index */
+A68_BOOL  YCAALIB;  /* optbool result */
+A68_VC  ADAALIB;  /* OPERATORS - trim index */
+A68_VC  CDAALIB;  /* clause result */
+A68_VC  DDAALIB;  /* OPERATORS - trim index */
 A_PROC_ENTRY(version);
  /* line 133: */
-SCAALIB = (V.upb>7);
-if ( SCAALIB )
-{SCAALIB = A_VC_EQ(A_VTRIM(UCAALIB,(V),A_VTSCRIPT(&(UCAALIB.upb),(V).upb,1,7)),VCAALIB);
+YCAALIB = (V.upb>7);
+if ( YCAALIB )
+{YCAALIB = A_VC_EQ(A_VTRIM(ADAALIB,(V),A_VTSCRIPT(&(ADAALIB.upb),(V).upb,1,7)),BDAALIB);
 }
-if ( SCAALIB )
+if ( YCAALIB )
 { 
-WCAALIB = A_VTRIM(XCAALIB,(V),A_VTSCRIPT(&(XCAALIB.upb),(V).upb,8,(V).upb));
+CDAALIB = A_VTRIM(DDAALIB,(V),A_VTSCRIPT(&(DDAALIB.upb),(V).upb,8,(V).upb));
 } 
 else
 { 
-WCAALIB = V;
+CDAALIB = V;
 } 
 A_PROC_EXIT(version);
-*ReturnedValue = (WCAALIB);
+*ReturnedValue = (CDAALIB);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  ZCAALIB_time(A68_VC  T, A68_VC  *ReturnedValue)
+A_STATIC A68_VOID  FDAALIB_time(A68_VC  T, A68_VC  *ReturnedValue)
 { 
-A68_51  ADAALIB;  /* collateral clause result */
-A68_VC  BDAALIB;  /* OPERATORS - trim index */
-A68_VC  CDAALIB;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_VC  DDAALIB;  /* OPERATORS - trim index */
-A68_VC  EDAALIB;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_VC  FDAALIB;  /* OPERATORS - trim index */
-A68_VC  GDAALIB;  /* OPERATORS - trim index */
-A68_VC  HDAALIB;  /* clause result */
-A68_41  IDAALIB;  /* OPERATORS - istruct -> vector */
-A68_VC  JDAALIB;  /* avoid structure result */
+A68_51  GDAALIB;  /* collateral clause result */
+A68_VC  HDAALIB;  /* OPERATORS - trim index */
+A68_VC  IDAALIB;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_VC  JDAALIB;  /* OPERATORS - trim index */
+A68_VC  KDAALIB;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_VC  LDAALIB;  /* OPERATORS - trim index */
+A68_VC  MDAALIB;  /* OPERATORS - trim index */
+A68_VC  NDAALIB;  /* clause result */
+A68_41  ODAALIB;  /* OPERATORS - istruct -> vector */
+A68_VC  PDAALIB;  /* avoid structure result */
 A_PROC_ENTRY(time);
  /* line 136: */
  /* line 137: */
 if ( (T.upb==24) )
 { 
-ADAALIB.data[0] = A_VTRIM(BDAALIB,(T),A_VTSCRIPT(&(BDAALIB.upb),(T).upb,9,10));
-ADAALIB.data[1] = A_HVEC(CDAALIB,'-',A68_CHAR );
-ADAALIB.data[2] = A_VTRIM(DDAALIB,(T),A_VTSCRIPT(&(DDAALIB.upb),(T).upb,5,7));
-ADAALIB.data[3] = A_HVEC(EDAALIB,'-',A68_CHAR );
-ADAALIB.data[4] = A_VTRIM(FDAALIB,(T),A_VTSCRIPT(&(FDAALIB.upb),(T).upb,21,24));
-ADAALIB.data[5] = A_VTRIM(GDAALIB,(T),A_VTSCRIPT(&(GDAALIB.upb),(T).upb,11,16));
+GDAALIB.data[0] = A_VTRIM(HDAALIB,(T),A_VTSCRIPT(&(HDAALIB.upb),(T).upb,9,10));
+GDAALIB.data[1] = A_HVEC(IDAALIB,'-',A68_CHAR );
+GDAALIB.data[2] = A_VTRIM(JDAALIB,(T),A_VTSCRIPT(&(JDAALIB.upb),(T).upb,5,7));
+GDAALIB.data[3] = A_HVEC(KDAALIB,'-',A68_CHAR );
+GDAALIB.data[4] = A_VTRIM(LDAALIB,(T),A_VTSCRIPT(&(LDAALIB.upb),(T).upb,21,24));
+GDAALIB.data[5] = A_VTRIM(MDAALIB,(T),A_VTSCRIPT(&(MDAALIB.upb),(T).upb,11,16));
  /* line 138: */
  /* line 139: */
-LBAALIB_concat( A_HISVEC(IDAALIB,ADAALIB,6,A68_VC ), &JDAALIB );
-HDAALIB = JDAALIB;
+RBAALIB_concat( A_HISVEC(ODAALIB,GDAALIB,6,A68_VC ), &PDAALIB );
+NDAALIB = PDAALIB;
 } 
 else
 { 
-HDAALIB = T;
+NDAALIB = T;
 } 
 A_PROC_EXIT(time);
-*ReturnedValue = (HDAALIB);
+*ReturnedValue = (NDAALIB);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  LDAALIB_seed(A68_VC  S, A68_VC  *ReturnedValue)
+A_STATIC A68_VOID  RDAALIB_seed(A68_VC  S, A68_VC  *ReturnedValue)
 { 
-A68_VC  MDAALIB;  /* clause result */
-A68_VC  NDAALIB;  /* OPERATORS - trim index */
+A68_VC  SDAALIB;  /* clause result */
+A68_VC  TDAALIB;  /* OPERATORS - trim index */
 A_PROC_ENTRY(seed);
  /* line 142: */
  /* line 143: */
@@ -465,65 +465,65 @@ if ( (S.upb>7) )
 { 
  /* line 144: */
  /* line 145: */
-MDAALIB = A_VTRIM(NDAALIB,(S),A_VTSCRIPT(&(NDAALIB.upb),(S).upb,1,7));
+SDAALIB = A_VTRIM(TDAALIB,(S),A_VTSCRIPT(&(TDAALIB.upb),(S).upb,1,7));
 } 
 else
 { 
-MDAALIB = S;
+SDAALIB = S;
 } 
 A_PROC_EXIT(seed);
-*ReturnedValue = (MDAALIB);
+*ReturnedValue = (SDAALIB);
 return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  QDAALIB_trans_config(A68_VC  C, A68_VC  S, A68_VC  *ReturnedValue)
+A_STATIC A68_VOID  WDAALIB_trans_config(A68_VC  C, A68_VC  S, A68_VC  *ReturnedValue)
 { 
-A68_43  RDAALIB_td;
-A68_54  SDAALIB;  /* collateral clause result */
-A68_VC  VDAALIB;  /* avoid structure result */
-A68_VC  WDAALIB;  /* avoid structure result */
-A68_VC  XDAALIB;  /* OPERATORS - scalar -> [] or VEC[] */
-A68_VC  YDAALIB;  /* avoid structure result */
-A68_VC  ZDAALIB;  /* avoid structure result */
-A68_VC  AEAALIB;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_43  XDAALIB_td;
+A68_54  YDAALIB;  /* collateral clause result */
 A68_VC  BEAALIB;  /* avoid structure result */
 A68_VC  CEAALIB;  /* avoid structure result */
-A68_VC  DEAALIB;  /* clause result */
-A68_41  EEAALIB;  /* OPERATORS - istruct -> vector */
+A68_VC  DEAALIB;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_VC  EEAALIB;  /* avoid structure result */
 A68_VC  FEAALIB;  /* avoid structure result */
+A68_VC  GEAALIB;  /* OPERATORS - scalar -> [] or VEC[] */
+A68_VC  HEAALIB;  /* avoid structure result */
+A68_VC  IEAALIB;  /* avoid structure result */
+A68_VC  JEAALIB;  /* clause result */
+A68_41  KEAALIB;  /* OPERATORS - istruct -> vector */
+A68_VC  LEAALIB;  /* avoid structure result */
 union {  /* BIOP 99 */
 A68_VC   source;
 A68_VC   destination;
-} GEAALIB; 
-A68_55  HEAALIB;  /* collateral clause result */
-A68_41  KEAALIB;  /* OPERATORS - istruct -> vector */
-A68_VC  LEAALIB;  /* avoid structure result */
+} MEAALIB; 
+A68_55  NEAALIB;  /* collateral clause result */
+A68_41  QEAALIB;  /* OPERATORS - istruct -> vector */
+A68_VC  REAALIB;  /* avoid structure result */
 A_PROC_ENTRY(trans_config);
  /* line 148: */
  /* line 149: */
 if ( (C.upb==(-777)) )
 { 
  /* line 150: */
-GCAALIB_(C, (&RDAALIB_td));
+MCAALIB_(C, (&XDAALIB_td));
  /* line 151: */
-SDAALIB.data[0] = S;
-SDAALIB.data[1] = UDAALIB;
-ICAALIB_tostr( (*(&((&RDAALIB_td)->Version))), &VDAALIB );
-RCAALIB_version( VDAALIB, &WDAALIB );
-SDAALIB.data[2] = WDAALIB;
+YDAALIB.data[0] = S;
+YDAALIB.data[1] = AEAALIB;
+OCAALIB_tostr( (*(&((&XDAALIB_td)->Version))), &BEAALIB );
+XCAALIB_version( BEAALIB, &CEAALIB );
+YDAALIB.data[2] = CEAALIB;
  /* line 152: */
-SDAALIB.data[3] = A_HVEC(XDAALIB,' ',A68_CHAR );
-ICAALIB_tostr( (*(&((&RDAALIB_td)->Seed))), &YDAALIB );
-LDAALIB_seed( YDAALIB, &ZDAALIB );
-SDAALIB.data[4] = ZDAALIB;
-SDAALIB.data[5] = A_HVEC(AEAALIB,' ',A68_CHAR );
-ICAALIB_tostr( (*(&((&RDAALIB_td)->Time))), &BEAALIB );
-ZCAALIB_time( BEAALIB, &CEAALIB );
-SDAALIB.data[6] = CEAALIB;
+YDAALIB.data[3] = A_HVEC(DEAALIB,' ',A68_CHAR );
+OCAALIB_tostr( (*(&((&XDAALIB_td)->Seed))), &EEAALIB );
+RDAALIB_seed( EEAALIB, &FEAALIB );
+YDAALIB.data[4] = FEAALIB;
+YDAALIB.data[5] = A_HVEC(GEAALIB,' ',A68_CHAR );
+OCAALIB_tostr( (*(&((&XDAALIB_td)->Time))), &HEAALIB );
+FDAALIB_time( HEAALIB, &IEAALIB );
+YDAALIB.data[6] = IEAALIB;
  /* line 153: */
-LBAALIB_concat( A_HISVEC(EEAALIB,SDAALIB,7,A68_VC ), &FEAALIB );
-DEAALIB = FEAALIB;
+RBAALIB_concat( A_HISVEC(KEAALIB,YDAALIB,7,A68_VC ), &LEAALIB );
+JEAALIB = LEAALIB;
 } 
 else
 { 
@@ -531,159 +531,159 @@ else
  /* line 155: */
 if ( (C.upb==0) )
 { 
-GEAALIB.source = S ;
-DEAALIB = (GEAALIB.destination);
+MEAALIB.source = S ;
+JEAALIB = (MEAALIB.destination);
 } 
 else
 { 
-HEAALIB.data[0] = S;
-HEAALIB.data[1] = JEAALIB;
-HEAALIB.data[2] = C;
+NEAALIB.data[0] = S;
+NEAALIB.data[1] = PEAALIB;
+NEAALIB.data[2] = C;
  /* line 156: */
-LBAALIB_concat( A_HISVEC(KEAALIB,HEAALIB,3,A68_VC ), &LEAALIB );
-DEAALIB = LEAALIB;
+RBAALIB_concat( A_HISVEC(QEAALIB,NEAALIB,3,A68_VC ), &REAALIB );
+JEAALIB = REAALIB;
 } 
 } 
 A_PROC_EXIT(trans_config);
-*ReturnedValue = (DEAALIB);
+*ReturnedValue = (JEAALIB);
 return;
 } 
 #undef NL
 
 A68_VOID  UEAALIB_a68config(A68_VC  C, A68_VC  S)
 { 
-A68_INT  OEAALIB_top;
-A68_BOOL  PEAALIB;  /* optbool result */
-A68_VC  REAALIB;  /* OPERATORS - trim index */
-A68_33  UEAALIB_generator;   /* proc value of non-global proc */
-A68_VC  AFAALIB;  /* avoid structure result */
-A68_VC  ZEAALIB_ns;
-A68_INT  BFAALIB_p1;
-A68_INT  CFAALIB_p2;
-A68_CHAR  DFAALIB_ch;
-A68_VC  FFAALIB;  /* OPERATORS - trim index */
-A68_VC  HFAALIB;  /* YIELD */
-A68_VC  IFAALIB;  /* OPERATORS - assign op */
-A68_BOOL  JFAALIB;  /* optbool result */
-A68_INT  KFAALIB;  /* YIELD */
-A68_BOOL  LFAALIB;  /* optbool result */
-A68_INT  MFAALIB;  /* YIELD */
-A68_INT  NFAALIB;  /* loop control */
-A68_INT  OFAALIB;  /* YIELD */
-A68_CHAR * PFAALIB;  /* YIELD */
+A68_INT  VEAALIB_top;
+A68_BOOL  WEAALIB;  /* optbool result */
+A68_VC  YEAALIB;  /* OPERATORS - trim index */
+A68_33  BFAALIB_generator;   /* proc value of non-global proc */
+A68_VC  HFAALIB;  /* avoid structure result */
+A68_VC  GFAALIB_ns;
+A68_INT  IFAALIB_p1;
+A68_INT  JFAALIB_p2;
+A68_CHAR  KFAALIB_ch;
+A68_VC  MFAALIB;  /* OPERATORS - trim index */
+A68_VC  OFAALIB;  /* YIELD */
+A68_VC  PFAALIB;  /* OPERATORS - assign op */
 A68_BOOL  QFAALIB;  /* optbool result */
 A68_INT  RFAALIB;  /* YIELD */
-A68_BOOL  SFAALIB;  /* clause result */
-A68_BOOL  TFAALIB;  /* clause result */
-A68_VC  UFAALIB;  /* clause result */
-A68_VC  VFAALIB;  /* OPERATORS - trim index */
-A68_VC  WFAALIB;  /* avoid structure result */
-A68_VC  XFAALIB;  /* avoid structure result */
-A68_VC  YFAALIB_str;
-A68_32  ZFAALIB;  /* collateral clause result */
-A68_32 * AGAALIB;  /* YIELD */
+A68_BOOL  SFAALIB;  /* optbool result */
+A68_INT  TFAALIB;  /* YIELD */
+A68_INT  UFAALIB;  /* loop control */
+A68_INT  VFAALIB;  /* YIELD */
+A68_CHAR * WFAALIB;  /* YIELD */
+A68_BOOL  XFAALIB;  /* optbool result */
+A68_INT  YFAALIB;  /* YIELD */
+A68_BOOL  ZFAALIB;  /* clause result */
+A68_BOOL  AGAALIB;  /* clause result */
+A68_VC  BGAALIB;  /* clause result */
+A68_VC  CGAALIB;  /* OPERATORS - trim index */
+A68_VC  DGAALIB;  /* avoid structure result */
+A68_VC  EGAALIB;  /* avoid structure result */
+A68_VC  FGAALIB_str;
+A68_32  GGAALIB;  /* collateral clause result */
+A68_32 * HGAALIB;  /* YIELD */
 A_PROC_ENTRY(a68config);
  /* line 164: */
  /* line 168: */
 { 
-OEAALIB_top = S.upb;
+VEAALIB_top = S.upb;
  /* line 169: */
-PEAALIB = (OEAALIB_top>4);
-if ( PEAALIB )
+WEAALIB = (VEAALIB_top>4);
+if ( WEAALIB )
 { /* line 170: */
-PEAALIB = A_VC_EQ(A_VTRIM(REAALIB,(S),A_VTSCRIPT(&(REAALIB.upb),(S).upb,1,4)),SEAALIB);
+WEAALIB = A_VC_EQ(A_VTRIM(YEAALIB,(S),A_VTSCRIPT(&(YEAALIB.upb),(S).upb,1,4)),ZEAALIB);
 }
-if ( PEAALIB )
+if ( WEAALIB )
 { 
-A_CLOSURE( UEAALIB_generator, VEAALIB_generator, WEAALIB_generator );
-(( WEAALIB_generator * ) ( UEAALIB_generator.nonlocals )) -> OEAALIB_top = OEAALIB_top;
-A_CALLPROC(UEAALIB_generator,(A68_TRUE, &AFAALIB),(A68_TRUE, &AFAALIB,(UEAALIB_generator).nonlocals));
-ZEAALIB_ns = AFAALIB;
-A_VASSIGN2(S,ZEAALIB_ns,A68_CHAR );
+A_CLOSURE( BFAALIB_generator, CFAALIB_generator, DFAALIB_generator );
+(( DFAALIB_generator * ) ( BFAALIB_generator.nonlocals )) -> VEAALIB_top = VEAALIB_top;
+A_CALLPROC(BFAALIB_generator,(A68_TRUE, &HFAALIB),(A68_TRUE, &HFAALIB,(BFAALIB_generator).nonlocals));
+GFAALIB_ns = HFAALIB;
+A_VASSIGN2(S,GFAALIB_ns,A68_CHAR );
  /* line 171: */
-BFAALIB_p1 = 4;
-CFAALIB_p2 = 4;
+IFAALIB_p1 = 4;
+JFAALIB_p2 = 4;
  /* line 172: */
  /* line 173: */
-HFAALIB = A_VTRIM(FFAALIB,(ZEAALIB_ns),A_VTSCRIPT(&(FFAALIB.upb),(ZEAALIB_ns).upb,1,4)) ;
-IFAALIB = GFAALIB ;
-A_VASSIGN2(IFAALIB,HFAALIB,A68_CHAR );
+OFAALIB = A_VTRIM(MFAALIB,(GFAALIB_ns),A_VTSCRIPT(&(MFAALIB.upb),(GFAALIB_ns).upb,1,4)) ;
+PFAALIB = NFAALIB ;
+A_VASSIGN2(PFAALIB,OFAALIB,A68_CHAR );
  /* line 175: */
 for ( ;; )
 { 
-JFAALIB = (CFAALIB_p2<OEAALIB_top);
-if ( JFAALIB )
-{KFAALIB = CFAALIB_p2+=1 ;
-JFAALIB = (A_VINDEX(S,KFAALIB)!='.');
+QFAALIB = (JFAALIB_p2<VEAALIB_top);
+if ( QFAALIB )
+{RFAALIB = JFAALIB_p2+=1 ;
+QFAALIB = (A_VINDEX(S,RFAALIB)!='.');
 }
-if ( !(JFAALIB) ) break;
+if ( !(QFAALIB) ) break;
 /*SKIP*/;
 }
  /* line 176: */
-BFAALIB_p1 = (CFAALIB_p2-1);
+IFAALIB_p1 = (JFAALIB_p2-1);
  /* line 177: */
 for ( ;; )
 { 
-LFAALIB = (CFAALIB_p2<OEAALIB_top);
-if ( LFAALIB )
-{MFAALIB = CFAALIB_p2+=1 ;
-LFAALIB = (A_VINDEX(S,MFAALIB)!=' ');
+SFAALIB = (JFAALIB_p2<VEAALIB_top);
+if ( SFAALIB )
+{TFAALIB = JFAALIB_p2+=1 ;
+SFAALIB = (A_VINDEX(S,TFAALIB)!=' ');
 }
-if ( !(LFAALIB) ) break;
+if ( !(SFAALIB) ) break;
 /*SKIP*/;
 }
  /* line 178: */
-DFAALIB_ch = ' ';
+KFAALIB_ch = ' ';
  /* line 179: */
  /* line 180: */
-for ( NFAALIB = 1;
-NFAALIB <= 2;
-NFAALIB += 1 )
+for ( UFAALIB = 1;
+UFAALIB <= 2;
+UFAALIB += 1 )
 { 
  /* line 181: */
 for ( ;; )
 { 
 { 
-OFAALIB = BFAALIB_p1+=1 ;
-PFAALIB = (&A_VINDEX(ZEAALIB_ns,OFAALIB)) ;
-(*PFAALIB) = DFAALIB_ch;
+VFAALIB = IFAALIB_p1+=1 ;
+WFAALIB = (&A_VINDEX(GFAALIB_ns,VFAALIB)) ;
+(*WFAALIB) = KFAALIB_ch;
  /* line 182: */
-QFAALIB = (CFAALIB_p2<OEAALIB_top);
-if ( QFAALIB )
-{RFAALIB = CFAALIB_p2+=1 ;
-QFAALIB = ((DFAALIB_ch = A_VINDEX(S,RFAALIB))!=':');
+XFAALIB = (JFAALIB_p2<VEAALIB_top);
+if ( XFAALIB )
+{YFAALIB = JFAALIB_p2+=1 ;
+XFAALIB = ((KFAALIB_ch = A_VINDEX(S,YFAALIB))!=':');
 }
  /* line 183: */
-SFAALIB = QFAALIB;
+ZFAALIB = XFAALIB;
 } 
-TFAALIB = SFAALIB;
-if ( !TFAALIB ) break;
+AGAALIB = ZFAALIB;
+if ( !AGAALIB ) break;
 /*SKIP*/;
 }
  /* line 184: */
 }
  /* line 185: */
  /* line 186: */
-QDAALIB_trans_config( C, A_VTRIM(VFAALIB,(ZEAALIB_ns),A_VTSCRIPT(&(VFAALIB.upb),(ZEAALIB_ns).upb,1,BFAALIB_p1)), &WFAALIB );
-UFAALIB = WFAALIB;
+WDAALIB_trans_config( C, A_VTRIM(CGAALIB,(GFAALIB_ns),A_VTSCRIPT(&(CGAALIB.upb),(GFAALIB_ns).upb,1,IFAALIB_p1)), &DGAALIB );
+BGAALIB = DGAALIB;
 } 
 else
 { 
  /* line 187: */
-QDAALIB_trans_config( C, S, &XFAALIB );
-UFAALIB = XFAALIB;
+WDAALIB_trans_config( C, S, &EGAALIB );
+BGAALIB = EGAALIB;
 } 
-YFAALIB_str = UFAALIB;
+FGAALIB_str = BGAALIB;
  /* line 188: */
  /* line 189: */
-ZFAALIB.Data = YFAALIB_str;
-ZFAALIB.Rest = WAAALIB_nilconfigdata;
-AGAALIB = A_HEAP(A68_32 ) ;
-(*AGAALIB) = ZFAALIB ;
-CBAALIB_tail = (&(((*CBAALIB_tail) = AGAALIB)->Rest));
+GGAALIB.Data = FGAALIB_str;
+GGAALIB.Rest = BBAALIB_nilconfigdata;
+HGAALIB = A_HEAP(A68_32 ) ;
+(*HGAALIB) = GGAALIB ;
+HBAALIB_tail = (&(((*HBAALIB_tail) = HGAALIB)->Rest));
  /* line 190: */
  /* line 191: */
-A_CALLPROC(FBAALIB_show_proc,(YFAALIB_str),(YFAALIB_str,(FBAALIB_show_proc).nonlocals));
+A_CALLPROC(KBAALIB_show_proc,(FGAALIB_str),(FGAALIB_str,(KBAALIB_show_proc).nonlocals));
 } 
 A_PROC_EXIT(a68config);
 return;
@@ -692,19 +692,19 @@ return;
 
 A68_VOID  JGAALIB_show_a68config(A68_38  Show)
 { 
-A68_32 * CGAALIB_ptr;
+A68_32 * KGAALIB_ptr;
 A_PROC_ENTRY(show_a68config);
  /* line 194: */
  /* line 196: */
 { 
-CGAALIB_ptr = (&BBAALIB_configdata);
+KGAALIB_ptr = (&GBAALIB_configdata);
  /* line 197: */
 for ( ;; )
 { 
  /* line 198: */
-if ( !((CGAALIB_ptr!=WAAALIB_nilconfigdata)) ) break;
-A_CALLPROC(Show,((*(&(CGAALIB_ptr->Data)))),((*(&(CGAALIB_ptr->Data))),(Show).nonlocals));
-CGAALIB_ptr = (*(&(CGAALIB_ptr->Rest)));
+if ( !((KGAALIB_ptr!=BBAALIB_nilconfigdata)) ) break;
+A_CALLPROC(Show,((*(&(KGAALIB_ptr->Data)))),((*(&(KGAALIB_ptr->Data))),(Show).nonlocals));
+KGAALIB_ptr = (*(&(KGAALIB_ptr->Rest)));
 }
  /* line 199: */
 } 
@@ -713,12 +713,12 @@ return;
 } 
 #undef NL
 
-A_STATIC A68_VOID  EGAALIB_init(void)
+A_STATIC A68_VOID  NGAALIB_init(void)
 { 
 A_PROC_ENTRY(init);
 { 
  /* line 235: */
-UEAALIB_a68config(FGAALIB_configinfo, EAAALIB_cfs);
+UEAALIB_a68config(OGAALIB_configinfo, GAAALIB_cfs);
  /* line 236: */
  /* line 237: */
 /*SKIP*/;
@@ -734,41 +734,41 @@ void BAAALIB(void)   /* initialise DECS a68config */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir",".","a68config.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/usr/share/algol68toc/a68config.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir",".","a68config.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
-A68_33  JAAALIB;  /* procedure value */
-A68_34  UAAALIB;  /* procedure value */
-A68_32  XAAALIB;  /* collateral clause result */
+A68_33  MAAALIB;  /* procedure value */
+A68_34  YAAALIB;  /* procedure value */
+A68_32  CBAALIB;  /* collateral clause result */
 union {  /* BIOP 99 */
 A68_VC   source;
 A68_VC   destination;
-} ABAALIB; 
-A68_38  GBAALIB;  /* procedure value */
+} FBAALIB; 
+A68_38  LBAALIB;  /* procedure value */
 if( A_invoked ) return;
 A_invoked = A68_TRUE;
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.a68";
-A_config.translation_time = "Mon Jan 28 20:24:31 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.a68";
+A_config.translation_time = "Wed Apr 21 16:34:02 2021";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "AAAALIB (from seed file) ";
-A_config.spec_change_time = "Tue Dec 31 08:13:08 1901";
+A_config.spec_change_time = "Wed Apr 21 16:34:02 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;
 A_PROC_ENTRY(DECS a68config);
-EAAALIB_cfs = DAAALIB;
+GAAALIB_cfs = FAAALIB;
  /* line 56: */
-JAAALIB.fn.fn_global = GAAALIB_generator;
-JAAALIB.nonlocals = A68_NIL;
-HAAALIB_anonymous = JAAALIB;
+MAAALIB.fn.fn_global = JAAALIB_generator;
+MAAALIB.nonlocals = A68_NIL;
+HAAALIB_anonymous = MAAALIB;
  /* line 63: */
  /* line 64: */
-UAAALIB.fn.fn_global = LAAALIB_anonymous;
-UAAALIB.nonlocals = A68_NIL;
-XAAALIB_makervc = (UAAALIB);
+YAAALIB.fn.fn_global = OAAALIB_anonymous;
+YAAALIB.nonlocals = A68_NIL;
+XAAALIB_makervc = (YAAALIB);
  /* line 69: */
  /* line 71: */
  /* line 72: */
@@ -777,16 +777,16 @@ XAAALIB_makervc = (UAAALIB);
  /* line 75: */
  /* line 76: */
  /* line 77: */
-ABAALIB.source = ZAAALIB ;
-XAAALIB.Data = (ABAALIB.destination);
-XAAALIB.Rest = WAAALIB_nilconfigdata;
-BBAALIB_configdata = XAAALIB;
+FBAALIB.source = EBAALIB ;
+CBAALIB.Data = (FBAALIB.destination);
+CBAALIB.Rest = BBAALIB_nilconfigdata;
+GBAALIB_configdata = CBAALIB;
  /* line 78: */
-CBAALIB_tail = (&((&BBAALIB_configdata)->Rest));
+HBAALIB_tail = (&((&GBAALIB_configdata)->Rest));
  /* line 79: */
-GBAALIB.fn.fn_global = EBAALIB_anonymous;
-GBAALIB.nonlocals = A68_NIL;
-FBAALIB_show_proc = (GBAALIB);
+LBAALIB.fn.fn_global = JBAALIB_anonymous;
+LBAALIB.nonlocals = A68_NIL;
+KBAALIB_show_proc = (LBAALIB);
  /* line 82: */
  /* line 91: */
  /* line 109: */
@@ -812,7 +812,7 @@ FBAALIB_show_proc = (GBAALIB);
  /* line 245: */
  /* line 246: */
  /* line 249: */
-#define init EGAALIB_init
+#define init NGAALIB_init
 {ACONFIG;       /* Invoke the macro to setup A_configinfo */
 init();
 }

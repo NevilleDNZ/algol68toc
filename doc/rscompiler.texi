@@ -724,8 +724,7 @@ the required meaning as described in B1.3.
 If a second alphabet is available in the character set, it can be
 defined to be the bold alphabet, and there will be no need to define
 a strop character.  Bold letters must be given type 6 and the value
-field set to the negative number @code{-(n + 1)}, where @code{n} is the
-@code{ABS} either
+field set to the negative number @var{-(n + 1)}, where @var{n} is the @code{ABS} either
 of the bold letter itself, which we shall describe as a `direct
 value' or of the corresponding ordinary letter (`indirect value').
 The choice, which must be the same throughout the alphabet, is
@@ -777,7 +776,7 @@ representation}).
 
 @table @asis
 @item @var{type}
-@code{meaning of type (value)}
+@var{meaning of type (value)}
 
 @item 1
 character which can only be used inside strings or comment (100)

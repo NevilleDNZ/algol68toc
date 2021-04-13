@@ -58,10 +58,10 @@ static char rcs_id[] = "$Id: Ahstats.c,v 1.2 2002-02-23 17:50:44 sian Exp $";
 ** These statistics are always collected.
 */
 
-A68_INT	Agc_collections;		/* number of garbage collections so far */
-A68_INT	Agc_s_grabbed;			/* segments allocated for heap */
-A68_INT	Agc_b_grabbed;			/* bytes allocated for heap */
-A68_INT	Agc_b_allocated;		/* bytes in use in heap */
+A68_INT	Agc_collections = 0;		/* number of garbage collections so far */
+A68_INT	Agc_s_grabbed = 0;		/* segments allocated for heap */
+A68_INT	Agc_b_grabbed = 0;		/* bytes allocated for heap */
+A68_INT	Agc_b_allocated = 0;		/* bytes in use in heap */
 
 #ifdef	A_DEBUG
 /*

@@ -6,7 +6,7 @@ FILE server socket;
 
 IF INT r=establish(server socket,"127.0.0.1",server socket channel,af inet,9734,0);
    r/=0
-THEN put(stand err,("server2: ",error text(r),newline));  exit(r)
+THEN put(stand error,("server2: ",error text(r),newline));  exit(r)
 FI;
 
 DO

@@ -17,7 +17,7 @@ set -e
 
 case "$1" in
     remove|upgrade|deconfigure)
-       install-info --quiet --remove /usr/info/ctrans.info.gz
+       install-info --quiet --remove /usr/share/info/ctrans.info.gz /usr/share/info/dir
         ;;
     failed-upgrade)
         ;;

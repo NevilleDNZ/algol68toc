@@ -114,9 +114,9 @@ BEGIN
                      ESAC;
    STRUCT 100 CHAR  stackbuff;
    RVC  buffer = stackbuff;
-   IF width = 0    THEN sprintfw(buffer, "%*ld"2r"0", 1, value)
-   ELIF width < 0  THEN sprintfw(buffer, "%*ld"2r"0", -width, value)
-                   ELSE sprintfw(buffer, "%+*ld"2r"0", width, value)
+   IF width = 0    THEN sprintfw(buffer, "%*lld"2r"0", 1, value)
+   ELIF width < 0  THEN sprintfw(buffer, "%*lld"2r"0", -width, value)
+                   ELSE sprintfw(buffer, "%+*lld"2r"0", width, value)
    FI;
    INT l = leng(buffer);
    HEAP VECTOR [l] CHAR:= buffer[:l]

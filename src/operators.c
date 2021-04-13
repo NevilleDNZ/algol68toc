@@ -142,7 +142,7 @@ struct A68t76 { A68_INT mode; union {
 A68_CHAR  mode1;
 A68_VC  mode2;
 A68_SINT  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t76  A68_76 ;    /* UNION(CHAR,MODE26,SHORT INT)  */
 struct A68t78 ;
 
@@ -155,7 +155,7 @@ A68_CHAR  mode1;
 A68_VC  mode2;
 A68_INT  mode3;
 A68_SINT  mode4;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t79  A68_79 ;    /* UNION(CHAR,MODE26,INT,SHORT INT)  */
 
 A_PROCEDURE(A68_VOID ,A68t80,(A68_VC ,A68_INT ,A68_VC *),(A68_VC ,A68_INT ,A68_VC *,void *));
@@ -232,7 +232,7 @@ struct A68t101 { A68_INT mode; union {
 struct A68t99  mode1;
 struct A68t100  mode2;
 struct A68t71  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t101  A68_101 ;    /* UNION(MODE99,MODE100,MODE71,VOID)  */
 A_ROW(A68_BOOL ,A68t102,1);
 typedef struct A68t102  A68_102 ;    /* [] BOOL */
@@ -318,7 +318,7 @@ A68_VC  mode6;
 struct A68t72  mode7;
 struct A68t115  mode8;
 struct A68t116  mode9;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t111  A68_111 ;    /* UNION(LONG BITS,MODE112,VOID,MODE113,MODE114,MODE26,MODE72,MODE115,MODE116)  */
 struct A68t110{
 A68_INT  Mode;
@@ -486,7 +486,7 @@ struct A68t155 * mode8;
 struct A68t156 * mode9;
 struct A68t157 * mode10;
 struct A68t158  mode11;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t148  A68_148 ;    /* UNION(INT,REF MODE149,REF MODE150,REF MODE151,REF MODE152,REF MODE153,REF MODE154,REF MODE155,REF MODE156,REF MODE157,MODE158)  */
 struct A68t149{
 A68_INT  Rdenno;
@@ -655,7 +655,7 @@ struct A68t183 { A68_INT mode; union {
 struct A68t110 * mode1;
 A68_VC  mode2;
 struct A68t114  mode3;
-} data; };
+} data __attribute__ ((__aligned__(8))); };
 typedef struct A68t183  A68_183 ;    /* UNION(REF MODE110,MODE26,MODE114)  */
 
 A_PROCEDURE(A68_VOID ,A68t184,(struct A68t183 ,A68_VC *),(struct A68t183 ,A68_VC *,void *));
@@ -5302,9 +5302,9 @@ void DYQACTR(void)   /* initialise DECS operators */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","-dir",".","operators.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","./values.m","./incvalue.m","./modes.m","./incmode.m","./unionaids.m","./uniquenameserver.m","./incoperfn.m","./idtable.m","./evalbase.m","./environment.m","./environ.m","./denotations.m","./coutput.m","./centities.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/cif.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/usefulops.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","-dir",".","operators.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","./values.m","./incvalue.m","./modes.m","./incmode.m","./unionaids.m","./uniquenameserver.m","./incoperfn.m","./idtable.m","./evalbase.m","./environment.m","./environ.m","./denotations.m","./coutput.m","./centities.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/cif.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/usefulops.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 A68_209  GWSACTR;  /* procedure value */
@@ -5329,11 +5329,11 @@ THAACTR();   /* USE centities */
 BAAAOSF();   /* USE cif */
 IKAAOSF();   /* USE usefulops */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/src/operators.a68";
-A_config.translation_time = "Mon Jan 28 20:24:33 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/src/operators.a68";
+A_config.translation_time = "Wed Apr 21 16:34:05 2021";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "CYQACTR (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.spec_change_time = "Wed Apr 21 16:34:05 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

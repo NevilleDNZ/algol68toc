@@ -1042,7 +1042,7 @@ THEN
                )
             FI
          OD;
-         write c stream(("} data; };",cnewline),stream);
+         write c stream(("} data __attribute__ ((__aligned__(8))); };",cnewline),stream);
          emit tag typedef( mode )
       FI
    ELSE  emit deflex typedef (mode, deflex mode)

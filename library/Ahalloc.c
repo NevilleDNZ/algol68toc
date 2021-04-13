@@ -84,7 +84,7 @@ static char rcs_id[] = "$Id: Ahalloc.c,v 1.3 2002-02-23 17:50:44 sian Exp $";
 **    Global data
 */
 
-SEGCTLPTR Agc_segctl_list;	/* root of segment list */
+SEGCTLPTR Agc_segctl_list = (SEGCTLPTR) 0;	/* root of segment list */
 
 /*
 **    Forward declarations
@@ -250,17 +250,17 @@ PTR Agc_nalloc(const A68_INT size, A68_INT elements)
 
     ASSERT( left > elp && left < (ELPTR)SEGEND(segctlp),Agc_nalloc,free list remainder problem);
 
-    REPORT2(8,"Agc_nalloc: pre assign left->next=0x%x, elp->next=0x%x\n",left->next,elp->next);
+    REPORT2(8,"Agc_nalloc: pre assign left->next=0x%lx, elp->next=0x%lx\n",left->next,elp->next);
 
     left->next = elp->next;
     /* MUST access elp->next above before assigning to left-> in case of overlap */
 
-    REPORT2(8,"Agc_nalloc: post assign left->next=0x%x, elp->next=0x%x\n",left->next,elp->next);
+    REPORT2(8,"Agc_nalloc: post assign left->next=0x%lx, elp->next=0x%lx\n",left->next,elp->next);
 
     left->elements = els_left;
     *elpp = ENCODEPTR(left);
 
-    REPORT4(8,"Agc_nalloc: elpp=0x%p, *elpp=0x%x, left=0x%p, left->next=0x%x\n",
+    REPORT4(8,"Agc_nalloc: elpp=0x%p, *elpp=0x%lx, left=0x%p, left->next=0x%lx\n",
 	    (void *)elpp,*elpp,(void *)left,left->next);
 
     ASSERT(DECODEPTR(*elpp) == left,Agc_nalloc,encoding problem);
@@ -273,7 +273,7 @@ PTR Agc_nalloc(const A68_INT size, A68_INT elements)
 
     *elpp = elp->next;
 
-    REPORT2(8,"Agc_nalloc: nothing to return, elpp=0x%p, *elpp=0x%x\n",(void *)elpp,*elpp);
+    REPORT2(8,"Agc_nalloc: nothing to return, elpp=0x%p, *elpp=0x%lx\n",(void *)elpp,*elpp);
   }
 
   Agc_b_allocated += (SIZE)((char *)(PTR)left - (char *)(PTR)elp); /* update by amount used from free list
@@ -439,17 +439,17 @@ PTR Agc_1alloc(A68_INT size)
 
     ASSERT( left > elp && left < (ELPTR)SEGEND(segctlp),Agc_1alloc,free list remainder problem);
 
-    REPORT2(8,"Agc_1alloc: pre assign left->next=0x%x, elp->next=0x%x\n",left->next,elp->next);
+    REPORT2(8,"Agc_1alloc: pre assign left->next=0x%lx, elp->next=0x%lx\n",left->next,elp->next);
 
     left->next = elp->next;
     /* MUST access elp->next above before assigning to left-> in case of overlap */
 
-    REPORT2(8,"Agc_1alloc: post assign left->next=0x%x, elp->next=0x%x\n",left->next,elp->next);
+    REPORT2(8,"Agc_1alloc: post assign left->next=0x%lx, elp->next=0x%lx\n",left->next,elp->next);
 
     left->elements = els_left;
     segctlp->free = ENCODEPTR(left);
 
-    REPORT3(8,"Agc_1alloc: segctlp->free=0x%x, left=0x%p, left->next=0x%x\n",
+    REPORT3(8,"Agc_1alloc: segctlp->free=0x%lx, left=0x%p, left->next=0x%lx\n",
 	    segctlp->free,(void *)left,left->next);
 
     ASSERT(DECODEPTR(segctlp->free) == left,Agc_1alloc,encoding problem);
@@ -462,7 +462,7 @@ PTR Agc_1alloc(A68_INT size)
 
     segctlp->free = elp->next;
 
-    REPORT1(8,"Agc_1alloc: nothing to return, segctlp->free=0x%x\n",segctlp->free);
+    REPORT1(8,"Agc_1alloc: nothing to return, segctlp->free=0x%lx\n",segctlp->free);
   }
 
   Agc_b_allocated += (SIZE)((char *)(PTR)left - (char *)(PTR)elp); /* update by amount used from free list
@@ -636,17 +636,17 @@ PTR Agc_alloc4(A68_INT elements)
 
     ASSERT( left > elp && left < (ELPTR)SEGEND(segctlp),Agc_alloc4,free list remainder problem);
 
-    REPORT2(8,"Agc_alloc4: pre assign left->next=0x%x, elp->next=0x%x\n",left->next,elp->next);
+    REPORT2(8,"Agc_alloc4: pre assign left->next=0x%lx, elp->next=0x%lx\n",left->next,elp->next);
 
     left->next = elp->next;
     /* MUST access elp->next above before assigning to left-> in case of overlap */
 
-    REPORT2(8,"Agc_alloc4: post assign left->next=0x%x, elp->next=0x%x\n",left->next,elp->next);
+    REPORT2(8,"Agc_alloc4: post assign left->next=0x%lx, elp->next=0x%lx\n",left->next,elp->next);
 
     left->elements = els_left;
     *elpp = ENCODEPTR(left);
 
-    REPORT4(8,"Agc_alloc4: elpp=0x%p, *elpp=0x%x, left=0x%p, left->next=0x%x\n",
+    REPORT4(8,"Agc_alloc4: elpp=0x%p, *elpp=0x%lx, left=0x%p, left->next=0x%lx\n",
 	    (void *)elpp,*elpp,(void *)left,left->next);
 
     ASSERT(DECODEPTR(*elpp) == left,Agc_alloc4,encoding problem);
@@ -659,7 +659,7 @@ PTR Agc_alloc4(A68_INT elements)
 
     *elpp = elp->next;
 
-    REPORT2(8,"Agc_alloc4: nothing to return, elpp=0x%p, *elpp=0x%x\n",(void *)elpp,*elpp);
+    REPORT2(8,"Agc_alloc4: nothing to return, elpp=0x%p, *elpp=0x%lx\n",(void *)elpp,*elpp);
   }
 
   Agc_b_allocated += (SIZE)((char *)(PTR)left - (char *)(PTR)elp); /* update by amount used from free list

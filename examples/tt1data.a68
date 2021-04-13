@@ -24,7 +24,7 @@ FILE cmd, ouf;
 STRING oufn;
 
 IF INT r=open(cmd,"",arg channel);  r/=0
-THEN put(stand err,("Cannot open the arg channel",newline));  exit(r)
+THEN put(stand error,("Cannot open the arg channel",newline));  exit(r)
 ELSE
    on logical file end(cmd,(REF FILE f)BOOL: (GOTO lab1;SKIP));
 	get(cmd,(skip terminators,LOC STRING,skip terminators,oufn))
@@ -33,10 +33,10 @@ lab1:
 	oufn:="tt1.data" #default file id#
 FI;
 
-STRUCT 4000 REAL rand;
+[4000] REAL rand;
 FOR i TO UPB rand DO rand[i]:=random OD;
 IF INT r=establish(ouf,oufn,stand back channel,0,0,0);  r/=0
-THEN put(stand err,("Cannot establish ",oufn,newline));  exit(r)
+THEN put(stand error,("Cannot establish ",oufn,newline));  exit(r)
 ELSE put bin(ouf,rand); close(ouf)
 FI
 

@@ -135,16 +135,16 @@ typedef struct A68t75  A68_75 ;    /* PROC(LONG INT,INT) REF MODE26 */
 
 A_PROCEDURE(A68_INT ,A68t76,(A68_VC ,A68_VC ,A68_INT ,A68_LINT ),(A68_VC ,A68_VC ,A68_INT ,A68_LINT ,void *));
 typedef struct A68t76  A68_76 ;    /* PROC(REF MODE26,MODE26,INT,LONG INT) INT */
-A_ISTRUCT(A68_CHAR ,5,A68t77);
-typedef struct A68t77  A68_77 ;    /* STRUCT 5 CHAR */
+A_ISTRUCT(A68_CHAR ,6,A68t77);
+typedef struct A68t77  A68_77 ;    /* STRUCT 6 CHAR */
 
 A_PROCEDURE(A68_VOID ,A68t78,(A68_LBITS ,A68_INT ,A68_VC *),(A68_LBITS ,A68_INT ,A68_VC *,void *));
 typedef struct A68t78  A68_78 ;    /* PROC(LONG BITS,INT) REF MODE26 */
 
 A_PROCEDURE(A68_INT ,A68t79,(A68_VC ,A68_VC ,A68_INT ,A68_LBITS ),(A68_VC ,A68_VC ,A68_INT ,A68_LBITS ,void *));
 typedef struct A68t79  A68_79 ;    /* PROC(REF MODE26,MODE26,INT,LONG BITS) INT */
-A_ISTRUCT(A68_CHAR ,6,A68t80);
-typedef struct A68t80  A68_80 ;    /* STRUCT 6 CHAR */
+A_ISTRUCT(A68_CHAR ,7,A68t80);
+typedef struct A68t80  A68_80 ;    /* STRUCT 7 CHAR */
 
 A_PROCEDURE(A68_BOOL ,A68t81,(A68_INT *,A68_VC ),(A68_INT *,A68_VC ,void *));
 typedef struct A68t81  A68_81 ;    /* PROC(REF INT,MODE26) BOOL */
@@ -213,15 +213,15 @@ A_GISVEC(A68_VC ,DPAAOSF,CPAAOSF,4)
   A_int_INT(sprintf(A_VC_charptr(s),A_VC_charptr(format),A_INT_int(p1),A_LINT_long(p2)))
 
 #define KPAAOSF_sprintf SPRINTF2
-static A68_77   UPAAOSF = {"%*ld\000"}; 
-A_GISVEC(A68_VC ,VPAAOSF,UPAAOSF,5)
+static A68_77   UPAAOSF = {"%*lld\000"}; 
+A_GISVEC(A68_VC ,VPAAOSF,UPAAOSF,6)
 #include <stdio.h>
 #define SPRINTF3(s,format,p1,p2) \
   A_int_INT(sprintf(A_VC_charptr(s),A_VC_charptr(format),A_INT_int(p1),A_LBITS_ulong(p2)))
 
 #define CQAAOSF_sprintf SPRINTF3
-static A68_80   MQAAOSF = {"%.*lx\000"}; 
-A_GISVEC(A68_VC ,NQAAOSF,MQAAOSF,6)
+static A68_80   MQAAOSF = {"%.*llx\000"}; 
+A_GISVEC(A68_VC ,NQAAOSF,MQAAOSF,7)
 typedef struct   /* env of non-global proc */
 {
 A68_VC  String;
@@ -1067,9 +1067,9 @@ void IKAAOSF(void)   /* initialise DECS usefulops */
 static A68_BOOL A_invoked = A68_FALSE;
 
 /* --- Configuration information for this module */
-static char *A_config_arguments[] = {"/usr/bin/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/a68config","-dir","/home/sian/src/algol68/algol68toc-1.17/liba68prel","usefulops.a68",""};
-static char *A_config_environment[] = {"A68_LIB=/home/sian/src/algol68/algol68toc-1.17/a68config","A68_CDIR=","A68_DIR=/usr/share/algol68toc:/home/sian/lib","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
-static char *A_config_modinfo_files[] = {"/home/sian/src/algol68/algol68toc-1.17/a68config/a68config.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/strops.m","/home/sian/src/algol68/algol68toc-1.17/liba68prel/cif.m",""};
+static char *A_config_arguments[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/src/a68toc","-v","-uname","seedfile","-staredit","59LR","-lib","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","-dir","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel","usefulops.a68",""};
+static char *A_config_environment[] = {"A68_LIB=/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config","A68_CDIR=","A68_DIR=","A68_STAREDIT=","A68_NAMESEED=nameseed","CTRANS_NAMESEED=",""};
+static char *A_config_modinfo_files[] = {"/home/neil/Algol-68RS/algol68toc-1.20-debian/a68config/a68config.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/strops.m","/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/cif.m",""};
 static A_CONFIG_INFO A_config;
 /* --- end of configuration information */
 if( A_invoked ) return;
@@ -1078,11 +1078,11 @@ BAAALIB();   /* USE a68config */
 BCAAOSF();   /* USE strops */
 BAAAOSF();   /* USE cif */
 /* --- Initialise configuration information */
-A_config.source_file = "/home/sian/src/algol68/algol68toc-1.17/liba68prel/usefulops.a68";
-A_config.translation_time = "Mon Jan 28 20:24:31 2013";
+A_config.source_file = "/home/neil/Algol-68RS/algol68toc-1.20-debian/liba68prel/usefulops.a68";
+A_config.translation_time = "Wed Apr 21 16:34:02 2021";
 A_config.ctrans_version = "Ctrans_34.6";
 A_config.name_seed = "HKAAOSF (from seed file) ";
-A_config.spec_change_time = "Thu Jan  1 01:00:00 1970";
+A_config.spec_change_time = "Wed Apr 21 16:34:02 2021";
 A_config.arguments = A_config_arguments;
 A_config.environment = A_config_environment;
 A_config.modinfo_files = A_config_modinfo_files;

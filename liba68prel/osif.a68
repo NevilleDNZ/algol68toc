@@ -112,7 +112,7 @@ KEEP
   update_truncate_access, update_append_access,
 
   set_file_position, get_file_position, update_disk,
-  delete_file, rename_file, make_temp_filename,
+  delete_file, rename_file, 
 
   FILEDETAILS, nil_file_details, get_file_details, is_terminal,
 

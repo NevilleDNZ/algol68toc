@@ -67,7 +67,8 @@
 ** Segment header block
 */
 
-typedef unsigned	CODEDPTR;
+/* CODEDPTR must be the size of a pointer */
+typedef unsigned long int	CODEDPTR;
 
 typedef struct	SEGCTL {
 	SIZE		elsize;	/* private to machine dependent modules */
@@ -263,6 +264,7 @@ typedef struct {
 */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 #ifdef A_GROWING_SEGS
 #define	MIN_SEG_SIZE( elsize, segs_for_elsize )							\
@@ -278,8 +280,8 @@ typedef struct {
 
 #ifndef A_GRAB_SEG_ELSIZE_CHECK
 #define	A_GRAB_SEG_ELSIZE_CHECK(elsize)	\
-if ((elsize) > sizeof(short) && !WORDALIGNED(elsize)) \
-  GC_ERROR(HEAP allocation of object whose size is not a word multiple)
+if ((elsize) > sizeof(int) && !WORDALIGNED(elsize)) \
+  { GC_ERROR(HEAP allocation of object whose size is not a word multiple); }
 #endif
 
 #ifndef GRAB_SEG

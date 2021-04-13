@@ -64,6 +64,21 @@
 
 /* set default configuration */
 
+/* ctrans garbage collector needs attention on 64-bit systems */
+
+#if     defined(__LP64__) || defined(__x86_64__) || defined(__aarch64__)
+/* An option is to run with no garbage collector, so the heap simpy grows through calls to calloc(): */
+/*
+#       define  A_NO_GARBAGE_COLLECT
+*/
+
+/* An option is to use the 64-bit patches to the built-in collector provided by Jose Marchesi, not fully tested as yet: */
+
+#       define  A_GARBAGE_COLLECT_64
+#       define  A_FUNNY_STEPAREAPTR
+
+#endif /* 64-bit system specifics */
+
 #if	!defined(A_GARBAGE_COLLECT) && !defined(A_NO_GARBAGE_COLLECT)
 #	define	A_GARBAGE_COLLECT
 #endif
@@ -106,7 +121,8 @@
 #define	A_GC_MARK(dimensions)	(A_GCMRKBASE|(dimensions))
 
 
-#ifdef	A_GARBAGE_COLLECT
+#if defined(A_GARBAGE_COLLECT)
+/* #warning A_GARBAGE_COLLECT configured for standard GC */
 
 #define	A_GC_SETMARK(desc,dims)	((desc).gc = A_GC_MARK(dims))
 
@@ -128,9 +144,15 @@
 
 #define	A_GC_STARTUP(main_param_1)	{Agc_startup((char *) &main_param_1);}
 
-#else
+#else /* !A_GARBAGE_COLLECT */
 
-#define	A_GC_SETMARK(desc,dims)
+/*
+** use no garbage collector, just allocate space with calloc
+**
+*/
+#warning A_NO_GARBAGE_COLLECT configured for no GC
+
+#define	A_GC_SETMARK(desc,dims) (0)
 
 /*
 ** calloc is described in malloc(3)
@@ -143,7 +165,7 @@
 #define	A_GC_NALLOC(size,elems)	calloc(elems,( (size) <= 0 ? 1 : (size) ))
 #define	A_GC_1ALLOC(size)	calloc(size,1)
 
-#define	A_GC_STARTUP(main_param1)
+#define	A_GC_STARTUP(main_param1) /* initialise GC here with main_param1 */
 
 #endif
 /*
